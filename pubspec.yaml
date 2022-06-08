@@ -29,6 +29,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  validators: ^3.0.0
+  carousel_slider: ^4.1.1
+  flutter_inner_drawer: "^0.2.2"
+  fl_chart: ^0.50.6
   es_flutter_component:
     git:
       url: ssh://git@gitlab.com/haniehhojjatzadeh/es_flutter_component.git
