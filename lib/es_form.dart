@@ -16,14 +16,25 @@ class EsForm extends StatefulWidget {
 class _EsForm extends State<EsForm> {
   final _formkey = GlobalKey<FormState>();
 
+
+
   @override
   Widget build(BuildContext context) {
+    // print(AppLocalizations.of(context)?.localeName=='en');
     return Scaffold(
         resizeToAvoidBottomInset: false,
         body: Padding(
-            padding: EdgeInsets.symmetric(vertical: 150, horizontal: 15),
+            padding: EdgeInsets.only(top: 50, right: 15,left: 15),
             child: Column(
               children: [
+                IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(
+                      Icons.close,
+                      color: Colors.black54,
+                    )),
                 Form(
                   key: _formkey,
                   child: Column(
@@ -70,7 +81,7 @@ class _EsForm extends State<EsForm> {
                 ),
                 RaisedButton(
                   textColor: Colors.white,
-                  color: Colors.blue,
+                  color: Colors.green,
                   child: Text(AppLocalizations.of(context)!.login),
                   // child: Text(Translations.of(context).text("login")),
                   onPressed: () {

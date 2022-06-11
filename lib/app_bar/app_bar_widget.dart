@@ -1,4 +1,7 @@
+import 'package:es_flutter_component/es_button/es_drop_down_button.dart';
+import 'package:es_flutter_crm/language_change_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../images/constants.dart';
 import '../images/responsive_layout.dart';
@@ -113,12 +116,23 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               ),
             ),
           Spacer(),
+          EsDropDownButton(items: ["English","Persian"],
+            onTapItems: [(){context.read<LanguageChangeProvider>().changLocale("en");},
+                  (){context.read<LanguageChangeProvider>().changLocale("fa");}],),
+          // ElevatedButton(onPressed: (){
+          //   context.read<LanguageChangeProvider>().changLocale("en");
+          // }, child: Text('English')),
+          // ElevatedButton(onPressed: (){
+          //   context.read<LanguageChangeProvider>().changLocale("fa");
+          // }, child: Text('فارسی')),
           IconButton(
             icon: Icon(Icons.search),
             iconSize: 30,
             color: Colors.white,
             onPressed: () {},
           ),
+          // Spacer(),
+
           Stack(
             children: [
               IconButton(

@@ -7,5 +7,26 @@
   "usernamehint": "Enter your username:",
   "passwordhint": "Enter your password:",
   "password": "Password",
-  "login": "Login"
+  "login": "Login",
+
+  "dashBoard": "Dashbord",
+  "emailBox": "Email Box",
+  "fileManager": "File Manager",
+  "calender": "Calender",
+  "toDo": "To Do",
+  "pages": "Pages",
+  "styles": "Styles",
+  "tabls": "Tables",
+  "elements": "Elements",
+  "components": "Components",
+  "widgets": "Widgets",
+  "forms": "Forms",
+  "charts": "Charts" ,
+  "content": "Content",
+  "menu": "Menu",
+  "headLine": "HeadLine",
+  "documents": "Documents",
+  "changeReport": "ChangeReport"
+
+
 }

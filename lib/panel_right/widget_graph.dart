@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
+
 class LineChartx extends StatelessWidget {
   const LineChartx({required this.isShowingMainData});
 
@@ -8,6 +9,7 @@ class LineChartx extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return LineChart(
       isShowingMainData ? sampleData1 : sampleData2,
       swapAnimationDuration: const Duration(milliseconds: 250),

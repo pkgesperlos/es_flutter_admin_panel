@@ -4,6 +4,24 @@
   "password": "رمزعبور",
   "usernamehint": "نام کاربری خود را وارد نمایید:",
   "passwordhint": "رمزعبور خود را وارد نمایید:",
-  "login": "ثبت نام"
+  "login": "ثبت نام",
+  "dashBoard": "داشبورد",
+  "emailBox": "صندوق ایمیل",
+  "fileManager": "مدیریت فایل",
+  "calender": "تقویم",
+  "toDo": "باید انجام بدم",
+  "pages": "صفحات",
+  "styles": "سبک ها ",
+  "tabls": "جداول",
+  "elements": "عناصر",
+  "components": "اجزا",
+  "widgets": "ابزارک ها",
+  "forms": "فرم ها",
+  "chart": "نمودارها" ,
+  "content": "محتوا",
+  "menu": "منو",
+  "headLine": "سر تیتر",
+  "documents": "مستندات",
+  "changeReport": "تغییر گزارش"
 
 }

@@ -37,10 +37,10 @@ class _PanelLeftPageState extends State<PanelLeftPage> {
             color: Constants.purpleLight,
             width: 50,
             child: Container(
-              decoration: BoxDecoration(
-                  color: Constants.purpleDark,
-                  borderRadius:
-                      BorderRadius.only(topLeft: Radius.circular(50))),
+              // decoration: BoxDecoration(
+              //     color: Colors.white,
+              //     borderRadius:
+              //         BorderRadius.only(topRight: Radius.circular(50))),
             ),
           ),
         SingleChildScrollView(
