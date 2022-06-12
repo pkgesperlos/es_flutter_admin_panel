@@ -19,7 +19,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Constants.purpleLight,
+      color: Constants.grayDark,
       child: Row(
         children: [
           if (ResponsiveLayot.isComputer(context))

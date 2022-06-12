@@ -9,6 +9,14 @@
   "password": "Password",
   "login": "Login",
 
+  "text": "Text",
+  "sampleText": "Dont wait,Do it!",
+
+
+
+
+
+
   "dashBoard": "Dashbord",
   "emailBox": "Email Box",
   "fileManager": "File Manager",

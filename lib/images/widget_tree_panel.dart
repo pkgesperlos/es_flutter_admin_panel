@@ -1,7 +1,7 @@
 
 import 'package:es_flutter_crm/es_form.dart';
 import 'package:es_flutter_crm/images/responsive_layout.dart';
-import 'package:es_flutter_crm/panel/center_computer_screen.dart';
+import 'package:es_flutter_crm/drawer/center_computer_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../app_bar/app_bar_widget.dart';

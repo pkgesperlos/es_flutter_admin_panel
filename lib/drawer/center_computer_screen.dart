@@ -2,6 +2,7 @@ import 'package:es_flutter_component/constants.dart';
 import 'package:es_flutter_component/es_form/es_date_time_picker.dart';
 import 'package:es_flutter_component/es_tab_navigator/es_side_navigator.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_crm/drawer/panelItems/panel_text_sample/panel_text_sample.dart';
 import 'package:es_flutter_crm/es_form.dart';
 
 
@@ -23,7 +24,7 @@ class CenterComputerScreen extends StatefulWidget {
 
 class _CenterComputerScreen extends State<CenterComputerScreen> {
 
-  Widget page=PanelCenterPage();
+  Widget page=PanelTextSample();
 
 
  changePage(currentPage){
