@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import '../../images/panelConstants.dart';
 
-import '../images/constants.dart';
 
 class LineChartSample2 extends StatefulWidget {
   const LineChartSample2({Key? key}) : super(key: key);
@@ -21,12 +21,12 @@ class _LineChartSample2State extends State<LineChartSample2> {
   @override
   Widget build(BuildContext context) {
     return Padding(padding: EdgeInsets.only(
-        left: Constants.kPadding / 2,
-        right: Constants.kPadding / 2,
-        top: Constants.kPadding ,
-        bottom: Constants.kPadding),
+        left: PanelConstants.paddingDimension / 2,
+        right: PanelConstants.paddingDimension / 2,
+        top: PanelConstants.paddingDimension ,
+        bottom: PanelConstants.paddingDimension),
     child:Card(
-      color: Constants.purpleLight,
+      color: PanelConstants.purpleLight,
       shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(20)),
       elevation: 3,
       child: Stack(

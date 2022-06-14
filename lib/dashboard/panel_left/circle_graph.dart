@@ -1,7 +1,9 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-import '../images/constants.dart';
+import '../../images/panelConstants.dart';
+
+
 
 
 
@@ -19,14 +21,14 @@ class PieChart2State extends State {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        left: Constants.kPadding/2,
-        right: Constants.kPadding/2,
-        bottom: Constants.kPadding/2
+        left: PanelConstants.paddingDimension/2,
+        right: PanelConstants.paddingDimension/2,
+        bottom: PanelConstants.paddingDimension/2
       ),
       child: Card(
         shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(20)),
         elevation: 3,
-        color: Constants.purpleLight,
+        color: PanelConstants.purpleLight,
         child: Row(
           children: <Widget>[
             const SizedBox(

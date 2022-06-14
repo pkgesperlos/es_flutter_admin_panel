@@ -34,6 +34,7 @@ dependencies:
   flutter_inner_drawer: "^0.2.2"
   fl_chart: ^0.50.6
   provider: 6.0.3
+  flutter_bootstrap: ^2.0.0
   es_flutter_component:
     git:
       url: ssh://git@gitlab.com/haniehhojjatzadeh/es_flutter_component.git
@@ -72,9 +73,9 @@ flutter:
   generate: true
 
   # To add assets to your application, add an assets section, like this:
-  #  assets:
-  #    - assets/
-  #    - assets/images/
+  assets:
+    - assets/
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

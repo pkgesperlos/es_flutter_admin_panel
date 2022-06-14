@@ -9,8 +9,99 @@
   "password": "Password",
   "login": "Login",
 
+  "adminMenu": "Admin Menu",
   "text": "Text",
-  "sampleText": "Dont wait,Do it!",
+  "sampleText": "Wishing is the reason for talent:)",
+  "button": "Button",
+  "samplButton": "Save",
+
+  "dialogBox": "Dialog Box",
+  "successDialogTitle": "Successful",
+  "successDialogText": "Successful Dialog",
+  "successDialogDesc": "The process was Successful:)",
+
+  "errorDialogTitle": "Error",
+  "errorDialogText": "Error Dialog",
+  "errorDialogDesc": "The process has error!!!",
+
+  "infoDialogTitle": "Info",
+  "infoDialogText": "Info Dialog",
+  "infoDialogDesc": "The process has information",
+
+  "warningDialogTitle": "Warning",
+  "warningDialogText": "Warning Dialog",
+  "warningDialogDesc": "The process has warning",
+
+  "autoHideDialogTitle": "Auto Hide",
+  "autoHideDialogText": "Auto Hide Dialog",
+  "autoHideDialogDesc": "I disapear in 2 sec.",
+
+  "bodyDialogTitle": "Body dialog",
+  "bodyDialogText": "Body dialog",
+  "bodyDialogDesc": "body dialog body dialog body dialog body dialog body dialog",
+
+  "inputDialogTitle": "Input dialog",
+  "inputDialogText": "Input dialog",
+  "inputDialogDesc": "Input dialog",
+  "input1": "Input1",
+  "input2": "Input2",
+
+
+  "form": "Forms",
+  "textFieldType": "TextField",
+  "textFieldHint": "TextField Hint",
+
+  "textAreaType": "TextArea",
+  "textAreaHint": "TextArea Hint",
+
+  "persianDatePickerTitle": "Select",
+  "androidTimePickerTitle": "Select",
+  "cupertinoTimePickerTitle": "Select",
+  "time12hPickerTitle": "Select",
+
+  "openText": "Open file picker",
+  "pickText": "Pick a folder",
+  "clearText": "Clear temporary files",
+
+  "checkBoxTitle": "CheckBox title",
+  "checkBoxWithValidator": "CheckBox with validator",
+  "animatedCheckBoxTitle": "AnimatedCheckBox",
+  "checkBoxErrorText": "CheckBox error text",
+  "checkBoxButtonText": "Save",
+
+  "dropDownButtonItem1": "Item1",
+  "dropDownButtonItem2": "Item2",
+  "dropDownButtonItem3": "Item3",
+
+  "toggleButton": "Toggle Button",
+
+  "carouselSlider": "Carousel Slider",
+  "persPectiveSlider": "PersPective Slider",
+
+  "progressBar": "Progress Bar",
+  "linearProgressBar": "Linear Progress Bar",
+  "circularProgressBar": "Circular Progress Bar",
+
+  "slider": "Slider",
+
+  "images": "Images",
+  "zoominImages": "Zooming Image",
+  "avatarImages": "Avatar Image",
+
+  "tables": "Tables",
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

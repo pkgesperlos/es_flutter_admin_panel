@@ -2,7 +2,10 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-import '../images/constants.dart';
+import '../../images/panelConstants.dart';
+
+
+
 
 
 class BarChartSample2 extends StatefulWidget {
@@ -13,8 +16,8 @@ class BarChartSample2 extends StatefulWidget {
 }
 
 class BarChartSample2State extends State<BarChartSample2> {
-  final Color leftBarColor = Constants.greenDark;
-  final Color rightBarColor = Constants.redLight;
+  final Color leftBarColor = PanelConstants.greenDark;
+  final Color rightBarColor = PanelConstants.redLight;
   final double width = 7;
 
   late List<BarChartGroupData> rawBarGroups;
@@ -52,16 +55,16 @@ class BarChartSample2State extends State<BarChartSample2> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-          left: Constants.kPadding / 2,
-          right: Constants.kPadding / 2,
-          top: Constants.kPadding ,
-          bottom: Constants.kPadding),
+          left: PanelConstants.paddingDimension / 2,
+          right: PanelConstants.paddingDimension / 2,
+          top: PanelConstants.paddingDimension ,
+          bottom: PanelConstants.paddingDimension),
       child: AspectRatio(
         aspectRatio: 1,
         child: Card(
           elevation: 3,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          color: Constants.purpleLight,
+          color: PanelConstants.purpleLight,
 
           child: Padding(
             padding: const EdgeInsets.all(16),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../../images/panelConstants.dart';
 
-import '../images/constants.dart';
+
+
 
 class Product {
   String name;
@@ -37,12 +39,12 @@ class _PanelRightPageState extends State<PanelRightPage> {
           children: [
             Padding(
               padding: EdgeInsets.only(
-                left: Constants.kPadding / 2,
-                right: Constants.kPadding / 2,
-                top: Constants.kPadding / 2,
+                left: PanelConstants.paddingDimension / 2,
+                right: PanelConstants.paddingDimension / 2,
+                top: PanelConstants.paddingDimension / 2,
               ),
               child: Card(
-                color: Constants.purpleLight,
+                color: PanelConstants.purpleLight,
                 elevation: 3,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
@@ -70,13 +72,13 @@ class _PanelRightPageState extends State<PanelRightPage> {
             // ),
             Padding(
               padding: EdgeInsets.only(
-                left: Constants.kPadding / 2,
-                right: Constants.kPadding / 2,
-                top: Constants.kPadding,
-                bottom: Constants.kPadding,
+                left: PanelConstants.paddingDimension / 2,
+                right: PanelConstants.paddingDimension / 2,
+                top: PanelConstants.paddingDimension,
+                bottom: PanelConstants.paddingDimension,
               ),
               child: Card(
-                color: Constants.purpleLight,
+                color: PanelConstants.purpleLight,
                 elevation: 3,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),

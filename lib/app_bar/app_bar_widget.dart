@@ -1,13 +1,13 @@
-import 'package:es_flutter_component/es_button/es_drop_down_button.dart';
+
+import 'package:es_flutter_component/es_form/es_drop_down_button.dart';
 import 'package:es_flutter_crm/language_change_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import '../images/constants.dart';
+import '../images/panelConstants.dart';
 import '../images/responsive_layout.dart';
 
 
-List<String> _buttonNames = ["Overview", "Revenue", "Sales", "Control"];
+// List<String> _buttonNames = ["Overview", "Revenue", "Sales", "Control"];
 int _currentSelectedButton = 0;
 
 class AppBarWidget extends StatefulWidget {
@@ -19,12 +19,15 @@ class _AppBarWidgetState extends State<AppBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Constants.grayDark,
+      decoration: BoxDecoration(
+        color: PanelConstants.appbarBackgroundColor,
+        //boxShadow: [BoxShadow(color: PanelConstants.appbarShadowColor,blurRadius: 2,spreadRadius: 2)]
+      ),
       child: Row(
         children: [
           if (ResponsiveLayot.isComputer(context))
             Container(
-              margin: EdgeInsets.all(Constants.kPadding),
+              margin: EdgeInsets.all(PanelConstants.paddingDimension),
               height: double.infinity,
               decoration: BoxDecoration(boxShadow: [
                 BoxShadow(
@@ -49,72 +52,72 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                   Scaffold.of(context).openDrawer();
                 },
                 iconSize: 30,
-                color: Colors.white,
+                color: PanelConstants.appbarIconColor,
                 icon: Icon(Icons.menu)),
           SizedBox(
-            width: Constants.kPadding,
+            width: PanelConstants.paddingDimension,
           ),
           Spacer(),
-          if (ResponsiveLayot.isComputer(context))
-            ...List.generate(
-                _buttonNames.length,
-                (index) => TextButton(
-                    onPressed: () {
-                      setState(() {
-                        _currentSelectedButton = index;
-                      });
-                    },
-                    child: Padding(
-                      padding: EdgeInsets.all(Constants.kPadding),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            _buttonNames[index],
-                            style: TextStyle(
-                                color: _currentSelectedButton == index
-                                    ? Colors.white
-                                    : Colors.white70),
-                          ),
-                          Container(
-                            margin: EdgeInsets.all(Constants.kPadding / 2),
-                            width: 60,
-                            height: 2,
-                            decoration: BoxDecoration(
-                              gradient: _currentSelectedButton == index
-                                  ? LinearGradient(colors: [
-                                      Constants.redDark,
-                                      Constants.orangeDark
-                                    ])
-                                  : null,
-                            ),
-                          )
-                        ],
-                      ),
-                    )))
-          else
-            Padding(
-              padding: EdgeInsets.all(Constants.kPadding * 2),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    _buttonNames[_currentSelectedButton],
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(Constants.kPadding / 2),
-                    width: 60,
-                    height: 2,
-                    decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                            colors: [Constants.redDark, Constants.orangeDark])),
-                  )
-                ],
-              ),
-            ),
+          // if (ResponsiveLayot.isComputer(context))
+          //   ...List.generate(
+          //       _buttonNames.length,
+          //       (index) => TextButton(
+          //           onPressed: () {
+          //             setState(() {
+          //               _currentSelectedButton = index;
+          //             });
+          //           },
+          //           child: Padding(
+          //             padding: EdgeInsets.all(PanelConstants.paddingDimension),
+          //             child: Column(
+          //               mainAxisAlignment: MainAxisAlignment.center,
+          //               crossAxisAlignment: CrossAxisAlignment.center,
+          //               children: [
+          //                 Text(
+          //                   _buttonNames[index],
+          //                   style: TextStyle(
+          //                       color: _currentSelectedButton == index
+          //                           ? Colors.white
+          //                           : Colors.white70),
+          //                 ),
+          //                 Container(
+          //                   margin: EdgeInsets.all(PanelConstants.paddingDimension / 2),
+          //                   width: 60,
+          //                   height: 2,
+          //                   decoration: BoxDecoration(
+          //                     gradient: _currentSelectedButton == index
+          //                         ? LinearGradient(colors: [
+          //                             PanelConstants.redDark,
+          //                             PanelConstants.orangeDark
+          //                           ])
+          //                         : null,
+          //                   ),
+          //                 )
+          //               ],
+          //             ),
+          //           )))
+          // else
+          //   Padding(
+          //     padding: EdgeInsets.all(PanelConstants.paddingDimension * 2),
+          //     child: Column(
+          //       mainAxisAlignment: MainAxisAlignment.center,
+          //       crossAxisAlignment: CrossAxisAlignment.center,
+          //       children: [
+          //         Text(
+          //           _buttonNames[_currentSelectedButton],
+          //           style: TextStyle(color: Colors.white),
+          //         ),
+          //         Container(
+          //           margin: EdgeInsets.all(PanelConstants.paddingDimension / 2),
+          //           width: 60,
+          //           height: 2,
+          //           decoration: BoxDecoration(
+          //               gradient: LinearGradient(
+          //                   colors: [PanelConstants.redDark, PanelConstants.orangeDark])),
+          //         )
+          //       ],
+          //     ),
+          //   ),
           Spacer(),
           EsDropDownButton(items: ["English","Persian"],
             onTapItems: [(){context.read<LanguageChangeProvider>().changLocale("en");},
@@ -128,7 +131,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
           IconButton(
             icon: Icon(Icons.search),
             iconSize: 30,
-            color: Colors.white,
+            color:PanelConstants.appbarIconColor,
             onPressed: () {},
           ),
           // Spacer(),
@@ -138,7 +141,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               IconButton(
                 icon: Icon(Icons.notifications_none_outlined),
                 iconSize: 30,
-                color: Colors.white,
+                color:PanelConstants.appbarIconColor,
                 onPressed: () {},
               ),
               Positioned(
@@ -160,7 +163,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
           ),
           if (!ResponsiveLayot.isPhone(context))
             Container(
-              margin: EdgeInsets.all(Constants.kPadding),
+              margin: EdgeInsets.all(PanelConstants.paddingDimension),
               height: double.infinity,
               decoration: BoxDecoration(boxShadow: [
                 BoxShadow(
@@ -171,7 +174,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                 )
               ], shape: BoxShape.circle),
               child: CircleAvatar(
-                backgroundColor: Constants.orangeDark,
+                backgroundColor: PanelConstants.orangeDark,
                 radius: 30,
                 // child: Image.asset("assets/images/profile.png"),
                 child: FlutterLogo(),

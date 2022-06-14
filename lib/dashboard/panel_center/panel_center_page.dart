@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../images/constants.dart';
+import '../../images/panelConstants.dart';
 import 'linear_graph.dart';
 
 class Person {
@@ -17,14 +17,14 @@ class PanelCenterPage extends StatefulWidget {
 
 class _PanelCenterPageState extends State<PanelCenterPage> {
   List<Person> _persons = [
-    Person(name: "Thia Bowen", color: Constants.orangeLight),
-    Person(name: "Fariha Odlong", color: Constants.redLight),
-    Person(name: "Viola Willis", color: Constants.blueDark),
-    Person(name: "Nick Jarvis", color: Constants.orangeLight),
-    Person(name: "Amit Claveia", color: Constants.redLight),
-    Person(name: "Compbell Britton", color: Constants.blueDark),
-    Person(name: "Haley Mellor", color: Constants.redLight),
-    Person(name: "Harlen Higgins", color: Constants.greenDark),
+    Person(name: "Thia Bowen", color: PanelConstants.orangeLight),
+    Person(name: "Fariha Odlong", color: PanelConstants.redLight),
+    Person(name: "Viola Willis", color: PanelConstants.blueDark),
+    Person(name: "Nick Jarvis", color: PanelConstants.orangeLight),
+    Person(name: "Amit Claveia", color: PanelConstants.redLight),
+    Person(name: "Compbell Britton", color: PanelConstants.blueDark),
+    Person(name: "Haley Mellor", color: PanelConstants.redLight),
+    Person(name: "Harlen Higgins", color: PanelConstants.greenDark),
   ];
 
   @override
@@ -35,11 +35,11 @@ class _PanelCenterPageState extends State<PanelCenterPage> {
           children: [
             Padding(
               padding: EdgeInsets.only(
-                  left: Constants.kPadding / 2,
-                  right: Constants.kPadding / 2,
-                  top: Constants.kPadding / 2),
+                  left: PanelConstants.paddingDimension / 2,
+                  right: PanelConstants.paddingDimension / 2,
+                  top: PanelConstants.paddingDimension / 2),
               child: Card(
-                color: Constants.purpleLight,
+                color: PanelConstants.purpleLight,
                 elevation: 3,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
@@ -65,13 +65,13 @@ class _PanelCenterPageState extends State<PanelCenterPage> {
             BarChartSample2(),
             Padding(
               padding: EdgeInsets.only(
-                left: Constants.kPadding / 2,
-                right: Constants.kPadding / 2,
-                top: Constants.kPadding,
-                bottom: Constants.kPadding,
+                left: PanelConstants.paddingDimension / 2,
+                right: PanelConstants.paddingDimension / 2,
+                top: PanelConstants.paddingDimension,
+                bottom: PanelConstants.paddingDimension,
               ),
               child: Card(
-                color: Constants.purpleLight,
+                color: PanelConstants.purpleLight,
                 elevation: 3,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),

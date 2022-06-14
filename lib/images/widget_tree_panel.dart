@@ -7,9 +7,7 @@ import 'package:flutter/material.dart';
 import '../app_bar/app_bar_widget.dart';
 import '../drawer/drawer_page.dart';
 
-import '../panel_center/panel_center_page.dart';
-import '../panel_left/Panel_left_page.dart';
-import '../panel_right/panel_right_page.dart';
+
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class WidgetTreePanel extends StatefulWidget {
@@ -32,18 +30,20 @@ class _WidgetTreePanelState extends State<WidgetTreePanel> {
         ),
         body: ResponsiveLayot(
           tiny: Container(),
-          phone: PanelCenterPage(),
+          phone: CenterComputerScreen(),
           tablet: Row(
             children: [
-              Expanded(child: PanelLeftPage()),
-              Expanded(child: PanelCenterPage()),
+              // Expanded(child: PanelLeftPage()),
+              // Expanded(child: PanelCenterPage()),
+              Expanded(child: CenterComputerScreen()),
             ],
           ),
           largTablet: Row(
             children: [
-              Expanded(child: PanelLeftPage()),
-              Expanded(child: PanelCenterPage()),
-              Expanded(child: PanelRightPage()),
+              // Expanded(child: PanelLeftPage()),
+              // Expanded(child: PanelCenterPage()),
+              // Expanded(child: PanelRightPage()),
+              Expanded(child: CenterComputerScreen()),
             ],
           ),
           computer: Row(

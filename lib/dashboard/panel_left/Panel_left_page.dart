@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-
-import '../images/constants.dart';
-import '../images/responsive_layout.dart';
+import '../../images/panelConstants.dart';
+import '../../images/responsive_layout.dart';
 import 'circle_graph.dart';
 import 'curved_chart.dart';
 
@@ -34,7 +33,7 @@ class _PanelLeftPageState extends State<PanelLeftPage> {
       children: [
         if (ResponsiveLayot.isComputer(context))
           Container(
-            color: Constants.purpleLight,
+            color: PanelConstants.purpleLight,
             width: 50,
             child: Container(
               // decoration: BoxDecoration(
@@ -49,12 +48,12 @@ class _PanelLeftPageState extends State<PanelLeftPage> {
 
               Padding(
                 padding: EdgeInsets.only(
-                  left: Constants.kPadding / 2,
-                  right: Constants.kPadding / 2,
-                  top: Constants.kPadding / 2,
+                  left: PanelConstants.paddingDimension / 2,
+                  right: PanelConstants.paddingDimension / 2,
+                  top: PanelConstants.paddingDimension / 2,
                 ),
                 child: Card(
-                  color: Constants.purpleLight,
+                  color: PanelConstants.purpleLight,
                   elevation: 3,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50)),
@@ -81,12 +80,12 @@ class _PanelLeftPageState extends State<PanelLeftPage> {
               PieChartSample2(),
               Padding(
                 padding: EdgeInsets.only(
-                    left: Constants.kPadding / 2,
-                    right: Constants.kPadding / 2,
-                    top: Constants.kPadding / 2,
-                    bottom: Constants.kPadding),
+                    left: PanelConstants.paddingDimension / 2,
+                    right: PanelConstants.paddingDimension / 2,
+                    top: PanelConstants.paddingDimension / 2,
+                    bottom: PanelConstants.paddingDimension),
                 child: Card(
-                  color: Constants.purpleLight,
+                  color: PanelConstants.purpleLight,
                   elevation: 3,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),

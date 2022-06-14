@@ -6,10 +6,86 @@
   "passwordhint": "رمزعبور خود را وارد نمایید:",
   "login": "ثبت نام",
 
+  "adminMenu": "منوی ادمین",
   "text": "متن",
-  "sampleText": "درنگ نکن، انجامش بده!",
+  "sampleText": "آرزو دلیل بر استعداد است:)",
+  "button": "دکمه",
+  "samplButton": "ذخیره",
+
+  "dialogBox": "دیالوگ باکس",
+  "successDialogTitle": "دیالوگ باکس موفقیت آمیز",
+  "successDialogText": "موفقیت آمیز",
+  "successDialogDesc": "عملیات موفقیت آمیزطی شد.",
+
+  "errorDialogTitle": "ارور",
+  "errorDialogText": "دیالوگ باکس ارور",
+  "errorDialogDesc": "عملیات با ارور مواجه شد.",
+
+  "infoDialogTitle": "اطلاعات",
+  "infoDialogText": "دیالوگ باکس اطلاعات",
+  "infoDialogDesc": "عملیات اطلاعات دارد.",
+
+  "warningDialogTitle": "هشدار",
+  "warningDialogText": "دیالوگ باکس هشدار",
+  "warningDialogDesc": "عملیات هشدار دارد",
 
 
+  "autoHideDialogTitle": "پنهان کردن خودکار",
+  "autoHideDialogText": "دیالوگ باکس پنهان کردن خودکار",
+  "autoHideDialogDesc": "من توی 2 ثانیه پنهان می شوم.",
+
+  "bodyDialogTitle": "دیالوگ باکس محتوا",
+  "bodyDialogText": "دیالوگ باکس محتوا",
+  "bodyDialogDesc": "دیالوگ باکس محتوادیالوگ باکس محتوادیالوگ باکس محتوادیالوگ باکس محتوادیالوگ باکس محتوا",
+
+  "inputDialogTitle": "دیالوگ باکس ورودی",
+  "inputDialogText": "دیالوگ باکس ورودی",
+  "inputDialogDesc": "دیالوگ باکس ورودی",
+  "input1": "ورودی1",
+  "input2": "ورودی2",
+
+  "form": "فرم ها",
+  "textFieldType": "تکست فیلد",
+  "textFieldHint": "هینت تکست فیلد",
+
+  "textAreaType": "ناحیه متنی",
+  "textAreaHint": "هینت ناحیه متنی",
+
+  "persianDatePickerTitle": "انتخاب کنید:",
+  "androidTimePickerTitle": "انتخاب کنید:",
+  "cupertinoTimePickerTitle": "انتخاب کنید:",
+  "time12hPickerTitle": "انتخاب کنید:",
+
+  "openText": " انتخاب فایل",
+  "pickText": "انتخاب پوشه",
+  "clearText": "پاک کردن فایل های کنونی",
+
+  "checkBoxTitle": "عنوان چک باکس",
+  "checkBoxWithValidator": "چک باکس با اعتبار سنجی",
+  "animatedCheckBoxTitle": "چک باکس با انیمیشن",
+  "checkBoxErrorText": "متن ارور چک باکس",
+  "checkBoxButtonText": "دخیره",
+
+  "dropDownButtonItem1": "گزینه اول",
+  "dropDownButtonItem2": "گزینه دوم",
+  "dropDownButtonItem3": "گزینه سوم",
+
+  "toggleButton": "دکمه تغییر وضعیت",
+
+  "slider": "اسلایدر",
+  "carouselSlider": "اسلایدر کاروسل",
+  "persPectiveSlider": "اسلایدر پرسپکتیو",
+
+  "progressBar": "نوار پیشرفت",
+  "linearProgressBar": "نوار پیشرفت خطی",
+  "circularProgressBar": "نوار پیشرفت دایروی",
+
+  "tables": "جداول",
+
+
+  "images": "تصاویر",
+  "zoominImages": "تصویر با قابلیت بزرگنمایی",
+  "avatarImages": "تصویر در قالب آواتار",
 
   "dashBoard": "داشبورد",
   "emailBox": "صندوق ایمیل",
