@@ -17,6 +17,11 @@
   "textSampleDescription": " انواع مدل های متن در سایز های مختلف در پنل در دسترس است.",
   "dialogeBoxDescription": " انواع مدل های دیالوگ باکس در عملکرد های مختلف در پنل در دسترس است .",
   "buttonDescription": " انواع مدل های دکمه معمولی ،آیکون دار و لودینگ دار سایزهای مختلف در پنل در دسترس است .",
+  "formDescription": " انواع مدل های فرم درعملکردهای مختلف برای گرفتن اطلاعات از کاربر در پنل در دسترس است .",
+  "imageDescription": " انواع عملکردهای مختلف برای نمایش عکس برای کاربر در پنل در دسترس است .",
+  "progressBarDescription":  " انواع مدل های نوار پیشرفت (خطی و دایروی) در پنل در دسترس است .",
+  "sliderDescription":  " انواع مدل های اسلایدر در پنل در دسترس است .",
+  "notificationsDescription":   " انواع مدل های اعلان در پنل در دسترس است .",
 
 
   "button": "دکمه",
@@ -55,6 +60,27 @@
   "input2": "ورودی2",
 
   "form": "فرم ها",
+
+  "textField": "تکست فیلد",
+  "priceTextField": "تکست فیلد قیمت",
+  "phoneNumbertextField": "تکتس فیلد شماره موبایل",
+  "shabaNumbertextField": "تکتس فیلد شماره شبا",
+  "datePicker": "انتخاب تاریخ شمسی",
+  "datePickerfa": "انتخاب تاریخ شمسی",
+  "datePickeren": "انتخاب تاریخ میلادی",
+  "timePickerHMS": "انتخاب زمان(ساعت/دقیقه/ثانیه)",
+  "timePickerHM": "انتخاب زمان(ساعت/دقیقه)",
+  "ordinarySlider": "اسلایدر معمولی",
+  "rangedSlider": "اسلایدر بازه دار",
+  "radioButons": "دکمه های رادیویی",
+  "textArea": "ناحیه متنی",
+  "starRateBar": "امتیاز دهی ستاره",
+  "dropDownButton": "دکمه کشویی",
+  "ordinaryCheckBox": "چک باکس معمولی",
+  "animationCheckBox": "چک باکس دارای انیمیشن",
+  "validationCheckBox": "چک باکس دارای اعتبار سنجی",
+  "filePicker": "انتخاب پوشه و فایل",
+
   "textFieldType": "تکست فیلد",
   "textFieldHint": "هینت تکست فیلد",
 
@@ -93,7 +119,8 @@
 
 
   "images": "تصاویر",
-  "zoominImages": "تصویر با قابلیت بزرگنمایی",
+  "zoomingImages": "تصویر با قابلیت بزرگنمایی",
+  "lightBixShowingImages": "Light Box Showing Image",
   "avatarImages": "تصویر در قالب آواتار",
 
   "tables": "جداول",
@@ -101,6 +128,7 @@
   "editableTable": "جدول قابل ویرایش",
   "responsiveTable": "جدول ریسپانسیو",
   "notifications": "اعلان ها",
+  "simpleNotifications": "اعلان های معمولی",
 
   "dashBoard": "داشبورد",
   "emailBox": "صندوق ایمیل",

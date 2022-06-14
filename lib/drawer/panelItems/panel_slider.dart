@@ -5,6 +5,7 @@ import 'package:es_flutter_component/es_slider/es_perspective_slider.dart';
 import 'package:es_flutter_component/es_text/es_dotted_text.dart';
 import 'package:es_flutter_component/es_text/es_label_text.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_component/es_text/es_title.dart';
 import 'package:es_flutter_crm/images/panelConstants.dart';
 
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class PanelSlider extends StatelessWidget {
           borderRadius: BorderRadius.all(
               Radius.circular(PanelConstants.paddingDimension))),
       child: Center(
-        child: EsLableText(
+        child: EsTitle(
           data: index.toString(),
           color: PanelConstants.itemcoupleColor,
         ),
@@ -48,6 +49,7 @@ class PanelSlider extends StatelessWidget {
             child: EsDottedText(
               data: AppLocalizations.of(context)!.carouselSlider,
               size: 20,
+              color: PanelConstants.itemColor,
             ),
           ),
           Container(
@@ -67,6 +69,7 @@ class PanelSlider extends StatelessWidget {
             child: EsDottedText(
               data: AppLocalizations.of(context)!.persPectiveSlider,
               size: 20,
+              color: PanelConstants.itemColor,
             ),
           ),
           Container(
@@ -90,7 +93,7 @@ class PanelSlider extends StatelessWidget {
                 margin: EdgeInsets.all(PanelConstants.paddingDimension * 2),
                 width: double.maxFinite,
                 child: EsOrdinaryText(
-                  data: "Hello World:)",
+                  data: AppLocalizations.of(context)!.sliderDescription,
                 ),
                 decoration: BoxDecoration(
                     color: PanelConstants.forGround,

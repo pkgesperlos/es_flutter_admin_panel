@@ -279,7 +279,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "61b5517b3a27365373201cab6245af094505075a"
+      resolved-ref: "92f992ec4976a659e3a97340a0d606a986fd8f73"
       url: "ssh://git@gitlab.com/haniehhojjatzadeh/es_flutter_component.git"
     source: git
     version: "1.0.0+1"

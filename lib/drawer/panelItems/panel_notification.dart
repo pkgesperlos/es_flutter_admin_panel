@@ -31,11 +31,23 @@ class PanelNotification extends StatelessWidget {
   Widget build(BuildContext context) {
     String _data = AppLocalizations.of(context)!.samplButton;
     List list = [
-      Center(child:EsOrdinaryButton(text: "Simple Notification",
-        onPressed: (){
-          // NotificationApi.showNotification();
-        ////////////////////////////
-        },)),
+      Center(child:Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.simpleNotifications,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
+          ),
+          EsOrdinaryButton(text: AppLocalizations.of(context)!.simpleNotifications,
+            onPressed: (){
+              // NotificationApi.showNotification();
+            ////////////////////////////
+            },),
+        ],
+      )),
 
 
 
@@ -52,7 +64,7 @@ class PanelNotification extends StatelessWidget {
 
                 width: double.maxFinite,
                 ////////////////////////
-                child: EsOrdinaryText(data: "Hello World:)",),
+                child: EsOrdinaryText(data: AppLocalizations.of(context)!.notificationsDescription,),
                 decoration: BoxDecoration(
                     color: PanelConstants.forGround,
                     borderRadius: BorderRadius.all(

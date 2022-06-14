@@ -5,6 +5,7 @@ import 'package:es_flutter_component/es_form/es_checkbox_vallidation.dart';
 import 'package:es_flutter_component/es_form/es_date_time_picker/es_android_time_picker.dart';
 import 'package:es_flutter_component/es_form/es_date_time_picker/es_cupertino_12h_time_picker.dart';
 import 'package:es_flutter_component/es_form/es_date_time_picker/es_cupertino_time_picker.dart';
+import 'package:es_flutter_component/es_form/es_date_time_picker/es_english_date_picker.dart';
 import 'package:es_flutter_component/es_form/es_date_time_picker/es_persian_date_picker.dart';
 import 'package:es_flutter_component/es_form/es_drop_down_button.dart';
 import 'package:es_flutter_component/es_form/es_file_picker.dart';
@@ -39,88 +40,313 @@ class PanelForm extends StatelessWidget {
     // String _data = AppLocalizations.of(context)!.samplButton;
     List list = [
       Center(
-        child: EsTextField(
-          type: AppLocalizations.of(context)!.textFieldType,
-          hint: AppLocalizations.of(context)!.textFieldHint,
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: EsDottedText(
+                data: AppLocalizations.of(context)!.textField,
+                size: 20,
+                color: PanelConstants.itemColor,
+              ),
+            ),
+            EsTextField(
+              type: AppLocalizations.of(context)!.textFieldType,
+              hint: AppLocalizations.of(context)!.textFieldHint,
+            ),
+          ],
         ),
       ),
 
-      Center(child: EsPhoneNumberField()),
-      Center(child: EsShabaNumberField()),
-      Center(child: EsPriceField()),
+      Center(child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.phoneNumbertextField,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
+          ),
+          EsPhoneNumberField(),
+        ],
+      )),
+      Center(child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.shabaNumbertextField,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
+          ),
+          EsShabaNumberField(),
+        ],
+      )),
+      Center(child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.priceTextField,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
+          ),
+          EsPriceField(),
+        ],
+      )),
 
       Center(
-          child: EsPersianDatePicker(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: EsDottedText(
+                  data: AppLocalizations.of(context)!.datePickeren,
+                  size: 20,
+                  color: PanelConstants.itemColor,
+                ),
+              ),
+              EsPersianDatePicker(
         title: AppLocalizations.of(context)!.persianDatePickerTitle,
-      )),
+      ),
+            ],
+          )),
       Center(
-          child: EsAndroidTimePicker(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: EsDottedText(
+                  data: AppLocalizations.of(context)!.datePickerfa,
+                  size: 20,
+                  color: PanelConstants.itemColor,
+                ),
+              ),
+              EsEnglishDatePicker(
+        title: AppLocalizations.of(context)!.persianDatePickerTitle,
+      ),
+            ],
+          )),
+      Center(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: EsDottedText(
+                  data: AppLocalizations.of(context)!.timePickerHM,
+                  size: 20,
+                  color: PanelConstants.itemColor,
+                ),
+              ),
+              EsAndroidTimePicker(
         title: AppLocalizations.of(context)!.androidTimePickerTitle,
-      )),
+      ),
+            ],
+          )),
       Center(
-          child: EsCupertinoTimePicker(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: EsDottedText(
+                  data: AppLocalizations.of(context)!.timePickerHMS,
+                  size: 20,
+                  color: PanelConstants.itemColor,
+                ),
+              ),
+              EsCupertinoTimePicker(
         title: AppLocalizations.of(context)!.cupertinoTimePickerTitle,
-      )),
+      ),
+            ],
+          )),
       // Center(
       //     child: EsCupertino12HTimePicker(
       //       title:AppLocalizations.of(context)!.time12hPickerTitle ,
       //     )),
 
-      Center(child: EsOrdinarySlider()),
-      Center(child: EsRengedSlider()),
-      Center(child: EsRadioButton()),
+      Center(child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.ordinarySlider,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
+          ),
+          EsOrdinarySlider(),
+        ],
+      )),
+      Center(child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.rangedSlider,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
+          ),
+          EsRengedSlider(),
+        ],
+      )),
+      Center(child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.radioButons,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
+          ),
+          EsRadioButton(),
+        ],
+      )),
       Center(
-          child: EsTextArea(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: EsDottedText(
+                  data: AppLocalizations.of(context)!.textArea,
+                  size: 20,
+                  color: PanelConstants.itemColor,
+                ),
+              ),
+              EsTextArea(
         type: AppLocalizations.of(context)!.textAreaType,
         hint: AppLocalizations.of(context)!.textAreaHint,
-      )),
-      Center(child: EsRatingBar()),
-      Center(
-          child: IntrinsicWidth(
-        child: EsCheckBox(
-          title: EsOrdinaryText(
-            data: AppLocalizations.of(context)!.checkBoxTitle,
+      ),
+            ],
+          )),
+      Center(child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.starRateBar,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
           ),
-          onSaved: (bool) {},
-          validator: (bool) {},
-        ),
+          EsRatingBar(),
+        ],
       )),
       Center(
-          child: IntrinsicWidth(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: EsDottedText(
+                  data: AppLocalizations.of(context)!.ordinaryCheckBox,
+                  size: 20,
+                  color: PanelConstants.itemColor,
+                ),
+              ),
+              IntrinsicWidth(
+        child: EsCheckBox(
+              title: EsOrdinaryText(
+                data: AppLocalizations.of(context)!.checkBoxTitle,
+              ),
+              onSaved: (bool) {},
+              validator: (bool) {},
+        ),
+      ),
+            ],
+          )),
+      Center(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: EsDottedText(
+                  data: AppLocalizations.of(context)!.validationCheckBox,
+                  size: 20,
+                  color: PanelConstants.itemColor,
+                ),
+              ),
+              IntrinsicWidth(
         child: EsCheckBoxvalidation(
-          title: AppLocalizations.of(context)!.checkBoxWithValidator,
-          errorText: AppLocalizations.of(context)!.checkBoxErrorText,
-          buttonText: AppLocalizations.of(context)!.checkBoxButtonText,
+              title: AppLocalizations.of(context)!.checkBoxWithValidator,
+              errorText: AppLocalizations.of(context)!.checkBoxErrorText,
+              buttonText: AppLocalizations.of(context)!.checkBoxButtonText,
         ),
-      )),
+      ),
+            ],
+          )),
       Center(
-          child: IntrinsicWidth(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: EsDottedText(
+                  data: AppLocalizations.of(context)!.animationCheckBox,
+                  size: 20,
+                  color: PanelConstants.itemColor,
+                ),
+              ),
+              IntrinsicWidth(
         child: EsAnimatedCheckBox(
-            title: AppLocalizations.of(context)!.animatedCheckBoxTitle),
-      )),
+                title: AppLocalizations.of(context)!.animatedCheckBoxTitle),
+      ),
+            ],
+          )),
       Center(
-          child: EsDropDownButton(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: EsDottedText(
+                  data: AppLocalizations.of(context)!.dropDownButton,
+                  size: 20,
+                  color: PanelConstants.itemColor,
+                ),
+              ),
+              EsDropDownButton(
         items: [
-          AppLocalizations.of(context)!.dropDownButtonItem1,
-          AppLocalizations.of(context)!.dropDownButtonItem2,
-          AppLocalizations.of(context)!.dropDownButtonItem3,
+              AppLocalizations.of(context)!.dropDownButtonItem1,
+              AppLocalizations.of(context)!.dropDownButtonItem2,
+              AppLocalizations.of(context)!.dropDownButtonItem3,
         ],
         onTapItems: [() {}, () {}, () {}],
-      )),
-      Center(child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+      ),
+            ],
+          )),
+      Center(child: Column(
         children: [
-
-          EsOrdinaryText(data: AppLocalizations.of(context)!.toggleButton),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.toggleButton,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
+          ),
           ESToggleButton(),
         ],
-      )),
-      Center(
-          child: EsFilePicker(
-        openText: AppLocalizations.of(context)!.openText,
-        pickText: AppLocalizations.of(context)!.pickText,
-        clearText: AppLocalizations.of(context)!.clearText,
-      )),
+      ),),
+      Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.filePicker,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
+          ),
+          Center(
+              child: EsFilePicker(
+            openText: AppLocalizations.of(context)!.openText,
+            pickText: AppLocalizations.of(context)!.pickText,
+            clearText: AppLocalizations.of(context)!.clearText,
+          )),
+        ],
+      ),
     ];
     return Material(
         color: PanelConstants.backGround,
@@ -133,7 +359,7 @@ class PanelForm extends StatelessWidget {
 
                 width: double.maxFinite,
                 ////////////////////////
-                child: EsOrdinaryText(data: "Hello World:)",),
+                child: EsOrdinaryText(data:AppLocalizations.of(context)!.formDescription,),
                 decoration: BoxDecoration(
                     color: PanelConstants.forGround,
                     borderRadius: BorderRadius.all(

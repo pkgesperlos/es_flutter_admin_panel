@@ -17,9 +17,15 @@
   "labledText": "Labled Text",
   "dottedText": "Dotted Text",
   "markedText": "Marked Text",
+
   "textSampleDescription": "different kinds of text with various size are avaiable in panel.",
   "dialogeBoxDescription": "different kinds of dialog Box with various function are avaiable in panel.",
   "buttonDescription": "different kinds of button(Ordinary,with Icon,Loading) with various size are avaiable in panel.",
+  "formDescription": "different kinds of forms with various function for giving data from user are avaiable in panel.",
+  "imageDescription":  "different kinds of  function for image display for user are avaiable in panel.",
+  "progressBarDescription":  "different kinds of  progress bar(linear and Circular) are avaiable in panel.",
+  "sliderDescription":  "different kinds of  Slider are avaiable in panel.",
+  "notificationsDescription":  "different kinds of  notifications are avaiable in panel.",
 
   "button": "Button",
   "samplButton": "Save",
@@ -57,6 +63,27 @@
 
 
   "form": "Forms",
+
+  "textField": "Test Field",
+  "priceTextField": "Price Test Field",
+  "phoneNumbertextField": "Phone Number Test Field",
+  "shabaNumbertextField": "Shaba Number Test Field",
+  "datePickerfa": "Date Picker(Jalali)",
+  "datePickeren": "Date Picker(Gregorian)",
+  "timePickerHMS": "Time Picker(H:M:S)",
+  "timePickerHM": "Time Picker(H:M)",
+  "ordinarySlider": "Ordinary Slider",
+  "rangedSlider": "Ranged Slider",
+  "radioButons": "Radio Buttons",
+  "textArea": "Text Area",
+  "starRateBar": "Star Rate Bar",
+  "dropDownButton": "Drop Down Button",
+  "ordinaryCheckBox": "Ordinary Check Box",
+  "animationCheckBox": "Animation Check Box",
+  "validationCheckBox": "Check Box with validation",
+  "filePicker": "File and Folder Picker",
+
+
   "textFieldType": "TextField",
   "textFieldHint": "TextField Hint",
 
@@ -94,7 +121,8 @@
   "slider": "Slider",
 
   "images": "Images",
-  "zoominImages": "Zooming Image",
+  "zoomingImages": "Zooming Image",
+  "lightBixShowingImages": "Light Box Showing Image",
   "avatarImages": "Avatar Image",
 
   "tables": "Tables",
@@ -103,6 +131,7 @@
   "responsiveTable": "Responsive Table",
 
   "notifications": "Notifications",
+  "simpleNotifications": "Ordinary Notifications",
 
 
 

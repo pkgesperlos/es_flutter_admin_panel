@@ -47,7 +47,7 @@ class PanelProgressBar extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(bottom: 8.0),
-                child: EsDottedText(data:AppLocalizations.of(context)!.linearProgressBar,size: 20,),
+                child: EsDottedText(data:AppLocalizations.of(context)!.linearProgressBar,size: 20,color: PanelConstants.itemColor,),
               ),
               EsLinearProgressbar(),
             ],
@@ -57,7 +57,7 @@ class PanelProgressBar extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(bottom: 8.0),
-                child: EsDottedText(data:AppLocalizations.of(context)!.circularProgressBar,size: 20,),
+                child: EsDottedText(data:AppLocalizations.of(context)!.circularProgressBar,size: 20,color: PanelConstants.itemColor,),
               ),
               EsCircularProgressbar()
             ],
@@ -79,7 +79,7 @@ class PanelProgressBar extends StatelessWidget {
 
                 width: double.maxFinite,
                 ////////////////////////
-                child: EsOrdinaryText(data: "Hello World:)",),
+                child: EsOrdinaryText(data: AppLocalizations.of(context)!.progressBarDescription,),
                 decoration: BoxDecoration(
                     color: PanelConstants.forGround,
                     borderRadius: BorderRadius.all(
