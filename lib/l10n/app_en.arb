@@ -12,6 +12,15 @@
   "adminMenu": "Admin Menu",
   "text": "Text",
   "sampleText": "Wishing is the reason for talent:)",
+  "ordinaryText": "Ordinary Text",
+  "titleText": "Title Text",
+  "labledText": "Labled Text",
+  "dottedText": "Dotted Text",
+  "markedText": "Marked Text",
+  "textSampleDescription": "different kinds of text with various size are avaiable in panel.",
+  "dialogeBoxDescription": "different kinds of dialog Box with various function are avaiable in panel.",
+  "buttonDescription": "different kinds of button(Ordinary,with Icon,Loading) with various size are avaiable in panel.",
+
   "button": "Button",
   "samplButton": "Save",
 
@@ -89,6 +98,11 @@
   "avatarImages": "Avatar Image",
 
   "tables": "Tables",
+  "simpleTable": "Simple Table",
+  "editableTable": "Editable Table",
+  "responsiveTable": "Responsive Table",
+
+  "notifications": "Notifications",
 
 
 

@@ -1,5 +1,6 @@
 
 import 'package:es_flutter_crm/es_form.dart';
+import 'package:es_flutter_crm/images/panelConstants.dart';
 import 'package:es_flutter_crm/images/responsive_layout.dart';
 import 'package:es_flutter_crm/drawer/center_computer_screen.dart';
 import 'package:flutter/material.dart';

@@ -9,6 +9,16 @@
   "adminMenu": "منوی ادمین",
   "text": "متن",
   "sampleText": "آرزو دلیل بر استعداد است:)",
+  "ordinaryText": "متن معمولی",
+  "titleText": "متن عنوان",
+  "labledText": "متن لیبل",
+  "dottedText": "متن نقطه دار",
+  "markedText": "متن علامت دار",
+  "textSampleDescription": " انواع مدل های متن در سایز های مختلف در پنل در دسترس است.",
+  "dialogeBoxDescription": " انواع مدل های دیالوگ باکس در عملکرد های مختلف در پنل در دسترس است .",
+  "buttonDescription": " انواع مدل های دکمه معمولی ،آیکون دار و لودینگ دار سایزهای مختلف در پنل در دسترس است .",
+
+
   "button": "دکمه",
   "samplButton": "ذخیره",
 
@@ -80,12 +90,17 @@
   "linearProgressBar": "نوار پیشرفت خطی",
   "circularProgressBar": "نوار پیشرفت دایروی",
 
-  "tables": "جداول",
 
 
   "images": "تصاویر",
   "zoominImages": "تصویر با قابلیت بزرگنمایی",
   "avatarImages": "تصویر در قالب آواتار",
+
+  "tables": "جداول",
+  "simpleTable": "جدول ساده",
+  "editableTable": "جدول قابل ویرایش",
+  "responsiveTable": "جدول ریسپانسیو",
+  "notifications": "اعلان ها",
 
   "dashBoard": "داشبورد",
   "emailBox": "صندوق ایمیل",

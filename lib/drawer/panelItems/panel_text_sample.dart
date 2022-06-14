@@ -20,86 +20,147 @@ class PanelTextSample extends StatelessWidget {
     String _data = AppLocalizations.of(context)!.sampleText;
     List list = [
       Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: List.generate(
-            5,
-            (index) => Column(
-                  children: [
-                    EsTitle(
-                      data: _data,
-                      size: Constants.titleFontSize - index * 3,
-                    ),
-                    SizedBox(
-                      height: PanelConstants.paddingDimension,
-                    )
-                  ],
-                )),
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.titleText,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: List.generate(
+                5,
+                (index) => Column(
+                      children: [
+                        EsTitle(
+                          data: _data,
+                          size: Constants.titleFontSize - index * 3,
+                        ),
+                        SizedBox(
+                          height: PanelConstants.paddingDimension,
+                        )
+                      ],
+                    )),
+          ),
+        ],
       ),
       Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: List.generate(
-            5,
-            (index) => Column(
-                  children: [
-                    EsOrdinaryText(
-                      data: _data,
-                      size: Constants.ordinaryFontSize - index * 2,
-                    ),
-                    SizedBox(
-                      height: PanelConstants.paddingDimension *
-                          (Constants.titleFontSize *
-                              2.5 /
-                              Constants.ordinaryFontSize),
-                    )
-                  ],
-                )),
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.ordinaryText,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: List.generate(
+                5,
+                (index) => Column(
+                      children: [
+                        EsOrdinaryText(
+                          data: _data,
+                          size: Constants.ordinaryFontSize - index * 2,
+                        ),
+                        SizedBox(
+                          height: PanelConstants.paddingDimension *
+                              (Constants.titleFontSize *
+                                  2.5 /
+                                  Constants.ordinaryFontSize),
+                        )
+                      ],
+                    )),
+          ),
+        ],
       ),
       Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: List.generate(
-            5,
-            (index) => Column(
-                  children: [
-                    EsDottedText(
-                      data: _data,
-                      size: Constants.markedFontSize - index * 3,
-                    ),
-                    SizedBox(height: PanelConstants.paddingDimension)
-                  ],
-                )),
+
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.dottedText,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: List.generate(
+                5,
+                (index) => Column(
+                      children: [
+                        EsDottedText(
+                          data: _data,
+                          size: Constants.markedFontSize - index * 3,
+                        ),
+                        SizedBox(height: PanelConstants.paddingDimension)
+                      ],
+                    )),
+          ),
+        ],
       ),
       Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: List.generate(
-            5,
-            (index) => Column(
-                  children: [
-                    EsMarkedText(
-                      data: _data,
-                      size: Constants.markedFontSize - index * 3,
-                    ),
-                    SizedBox(height: PanelConstants.paddingDimension)
-                  ],
-                )),
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.markedText,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: List.generate(
+                5,
+                (index) => Column(
+                      children: [
+                        EsMarkedText(
+                          data: _data,
+                          size: Constants.markedFontSize - index * 3,
+                        ),
+                        SizedBox(height: PanelConstants.paddingDimension)
+                      ],
+                    )),
+          ),
+        ],
       ),
       Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: List.generate(
-            4,
-            (index) => Column(
-                  children: [
-                    EsLableText(
-                      data: _data,
-                      size: Constants.lableFontSize - index * 3,
-                    ),
-                    SizedBox(
-                      height: PanelConstants.paddingDimension *
-                          (Constants.titleFontSize *
-                              3 /
-                              Constants.ordinaryFontSize),
-                    )
-                  ],
-                )),
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: EsDottedText(
+              data: AppLocalizations.of(context)!.labledText,
+              size: 20,
+              color: PanelConstants.itemColor,
+            ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: List.generate(
+                4,
+                (index) => Column(
+                      children: [
+                        EsLableText(
+                          data: _data,
+                          size: Constants.lableFontSize - index * 3,
+                        ),
+                        SizedBox(
+                          height: PanelConstants.paddingDimension *
+                              (Constants.titleFontSize *
+                                  3 /
+                                  Constants.ordinaryFontSize),
+                        )
+                      ],
+                    )),
+          ),
+        ],
       ),
     ];
     return Material(
@@ -113,7 +174,7 @@ class PanelTextSample extends StatelessWidget {
 
                 width: double.maxFinite,
                 ////////////////////////
-                child: EsOrdinaryText(data: "Hello World:)",),
+                child: EsOrdinaryText(data:AppLocalizations.of(context)!.textSampleDescription ,),
                 decoration: BoxDecoration(
                     color: PanelConstants.forGround,
                     borderRadius: BorderRadius.all(

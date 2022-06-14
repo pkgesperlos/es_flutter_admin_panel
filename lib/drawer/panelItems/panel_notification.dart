@@ -10,6 +10,7 @@ import 'package:es_flutter_component/es_dialog/es_awesome_dialog/es_input_dialog
 import 'package:es_flutter_component/es_dialog/es_awesome_dialog/es_success_dialog.dart';
 import 'package:es_flutter_component/es_dialog/es_awesome_dialog/es_warning_dialog.dart';
 import 'package:es_flutter_component/es_form/es_text_field.dart';
+import 'package:es_flutter_component/es_notification/es_ordinary_notification.dart';
 import 'package:es_flutter_component/es_text/es_dotted_text.dart';
 import 'package:es_flutter_component/es_text/es_label_text.dart';
 import 'package:es_flutter_component/es_text/es_marked_text.dart';
@@ -23,53 +24,19 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../images/panelConstants.dart';
 
-class PanelDialogBox extends StatelessWidget {
-  const PanelDialogBox({Key? key}) : super(key: key);
+class PanelNotification extends StatelessWidget {
+  const PanelNotification({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     String _data = AppLocalizations.of(context)!.samplButton;
     List list = [
-      Center(child: EsSuccessDialog(
-        title:AppLocalizations.of(context)!.successDialogTitle ,
-        text:AppLocalizations.of(context)!.successDialogText ,
-        desc:AppLocalizations.of(context)!.successDialogDesc ,
-      ),),
-      Center(child: EsErrorDialog(
-        title:AppLocalizations.of(context)!.errorDialogTitle ,
-        text:AppLocalizations.of(context)!.errorDialogText ,
-        desc:AppLocalizations.of(context)!.errorDialogDesc ,
-      ),),
-      Center(child: EsWarningDialog(
-        title:AppLocalizations.of(context)!.warningDialogTitle ,
-        text:AppLocalizations.of(context)!.warningDialogText ,
-        desc:AppLocalizations.of(context)!.warningDialogDesc,
-        btnCancelOnPress: () {  }, btnOkOnPress: () {  } ,
-      ),),
-      Center(child: EsInfoDialog(
-        title:AppLocalizations.of(context)!.infoDialogTitle ,
-        text:AppLocalizations.of(context)!.infoDialogText ,
-        desc:AppLocalizations.of(context)!.infoDialogDesc ,
-      ),),
-      Center(child: EsAutoHideDialog(
-        title:AppLocalizations.of(context)!.autoHideDialogTitle ,
-        text:AppLocalizations.of(context)!.autoHideDialogText ,
-        desc:AppLocalizations.of(context)!.autoHideDialogDesc, time: 2 ,
-      ),),
-      Center(child: EsInputDialog(
-        title:AppLocalizations.of(context)!.inputDialogTitle ,
-        text:AppLocalizations.of(context)!.inputDialogText ,
-        desc:AppLocalizations.of(context)!.inputDialogDesc,
-        esTextField1:EsTextField(type:AppLocalizations.of(context)!.input1,
-          hint:AppLocalizations.of(context)!.input1,) ,
-        esTextField2:EsTextField(type:AppLocalizations.of(context)!.input1,
-          hint:AppLocalizations.of(context)!.input2,) ,
-      ),),
-      Center(child: EsBodyDialog(
-        title:AppLocalizations.of(context)!.bodyDialogTitle ,
-        text:AppLocalizations.of(context)!.bodyDialogText ,
-        desc:AppLocalizations.of(context)!.bodyDialogDesc ,
-      ),),
+      Center(child:EsOrdinaryButton(text: "Simple Notification",
+        onPressed: (){
+          // NotificationApi.showNotification();
+        ////////////////////////////
+        },)),
+
 
 
 
@@ -85,7 +52,7 @@ class PanelDialogBox extends StatelessWidget {
 
                 width: double.maxFinite,
                 ////////////////////////
-                child: EsOrdinaryText(data: AppLocalizations.of(context)!.dialogeBoxDescription,),
+                child: EsOrdinaryText(data: "Hello World:)",),
                 decoration: BoxDecoration(
                     color: PanelConstants.forGround,
                     borderRadius: BorderRadius.all(
@@ -106,7 +73,7 @@ class PanelDialogBox extends StatelessWidget {
 
   Widget boxShow(Widget widget) {
     return BootstrapCol(
-        sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-6',
+        sizes: 'col-sm-12 col-ml-12 col-lg-4 col-xl-4',
         child: Container(
           padding: EdgeInsets.symmetric(
               horizontal:PanelConstants.paddingDimension,

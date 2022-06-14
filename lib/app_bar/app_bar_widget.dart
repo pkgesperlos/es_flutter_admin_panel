@@ -1,11 +1,10 @@
-
 import 'package:es_flutter_component/es_form/es_drop_down_button.dart';
+import 'package:es_flutter_component/es_image/es_avatar_image.dart';
 import 'package:es_flutter_crm/language_change_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../images/panelConstants.dart';
 import '../images/responsive_layout.dart';
-
 
 // List<String> _buttonNames = ["Overview", "Revenue", "Sales", "Control"];
 int _currentSelectedButton = 0;
@@ -27,24 +26,24 @@ class _AppBarWidgetState extends State<AppBarWidget> {
         children: [
           if (ResponsiveLayot.isComputer(context))
             Container(
-              margin: EdgeInsets.all(PanelConstants.paddingDimension),
-              height: double.infinity,
-              decoration: BoxDecoration(boxShadow: [
-                BoxShadow(
-                    color: Colors.black45,
-                    offset: Offset(0, 0),
-                    spreadRadius: 1,
-                    blurRadius: 10)
-              ], shape: BoxShape.circle),
-              child: CircleAvatar(
-                backgroundColor: Colors.pink,
-                radius: 30,
-                // child: Image.asset(
-                //   "assets/images/imgbaby.JPG",
-                //   fit: BoxFit.fitWidth,
-                // ),
-                child: FlutterLogo(),
-              ),
+              // margin: EdgeInsets.all(PanelConstants.paddingDimension),
+              // height: double.infinity,
+              // decoration: BoxDecoration(boxShadow: [
+              //   BoxShadow(
+              //       color: Colors.black45,
+              //       offset: Offset(0, 0),
+              //       spreadRadius: 1,
+              //       blurRadius: 10)
+              // ], shape: BoxShape.circle),
+              // child: CircleAvatar(
+              //   backgroundColor: Colors.pink,
+              //   radius: 30,
+              //   // child: Image.asset(
+              //   //   "assets/images/imgbaby.JPG",
+              //   //   fit: BoxFit.fitWidth,
+              //   // ),
+              //   child: FlutterLogo(),
+              // ),
             )
           else
             IconButton(
@@ -119,9 +118,17 @@ class _AppBarWidgetState extends State<AppBarWidget> {
           //     ),
           //   ),
           Spacer(),
-          EsDropDownButton(items: ["English","Persian"],
-            onTapItems: [(){context.read<LanguageChangeProvider>().changLocale("en");},
-                  (){context.read<LanguageChangeProvider>().changLocale("fa");}],),
+          EsDropDownButton(
+            items: ["English", "Persian"],
+            onTapItems: [
+              () {
+                context.read<LanguageChangeProvider>().changLocale("en");
+              },
+              () {
+                context.read<LanguageChangeProvider>().changLocale("fa");
+              }
+            ],
+          ),
           // ElevatedButton(onPressed: (){
           //   context.read<LanguageChangeProvider>().changLocale("en");
           // }, child: Text('English')),
@@ -131,7 +138,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
           IconButton(
             icon: Icon(Icons.search),
             iconSize: 30,
-            color:PanelConstants.appbarIconColor,
+            color: PanelConstants.appbarIconColor,
             onPressed: () {},
           ),
           // Spacer(),
@@ -141,7 +148,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               IconButton(
                 icon: Icon(Icons.notifications_none_outlined),
                 iconSize: 30,
-                color:PanelConstants.appbarIconColor,
+                color: PanelConstants.appbarIconColor,
                 onPressed: () {},
               ),
               Positioned(
@@ -176,10 +183,9 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               child: CircleAvatar(
                 backgroundColor: PanelConstants.orangeDark,
                 radius: 30,
-                // child: Image.asset("assets/images/profile.png"),
-                child: FlutterLogo(),
+                child: AspectRatio(aspectRatio: 1,child: EsAvatarImage(path: "assets/images/img1.jpg"),),
+                // child: FlutterLogo(),
               ),
-
             )
         ],
       ),

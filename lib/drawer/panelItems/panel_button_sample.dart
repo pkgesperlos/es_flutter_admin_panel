@@ -86,7 +86,7 @@ class PanelButtonSample extends StatelessWidget {
 
                 width: double.maxFinite,
                 ////////////////////////
-                child: EsOrdinaryText(data: "Hello World:)",),
+                child: EsOrdinaryText(data: AppLocalizations.of(context)!.buttonDescription,),
                 decoration: BoxDecoration(
                     color: PanelConstants.forGround,
                     borderRadius: BorderRadius.all(

@@ -1,17 +1,16 @@
-import 'package:es_flutter_component/es_dialog/es_awesome_dialog/es_success_dialog.dart';
-import 'package:es_flutter_component/es_form/es_date_time_picker/es_date_time_picker.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_crm/drawer/panelItems/panel_editable_table.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_button_sample.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_dialog_box.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_form.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_image.dart';
+import 'package:es_flutter_crm/drawer/panelItems/panel_notification.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_progressbar.dart';
+import 'package:es_flutter_crm/drawer/panelItems/panel_responsive_table.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_slider.dart';
-import 'package:es_flutter_crm/drawer/panelItems/panel_table.dart';
+import 'package:es_flutter_crm/drawer/panelItems/panel_simple_table.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_text_sample.dart';
 import 'package:flutter/material.dart';
-import '../dashboard/panel_center/panel_center_page.dart';
-import '../es_form.dart';
 import '../images/panelConstants.dart';
 import 'center_computer_screen.dart';
 import '../images/responsive_layout.dart';
@@ -84,13 +83,23 @@ class _DrawerPageState extends State<DrawerPage> {
             page: PanelProgressBar(),
             pageRout: '/progressbar')
       ],
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.tables,
-            icon: Icons.table_chart_outlined,
-            page: PanelTable(),
-            pageRout: '/table')
-      ],
+     [AppLocalizations.of(context)!.tables,
+       buttonsInfo(
+           title: AppLocalizations.of(context)!.simpleTable,
+           icon: Icons.table_chart_outlined,
+           page: PanelSimpleTable(),
+           pageRout: '/simpletable'),
+       buttonsInfo(
+         title: AppLocalizations.of(context)!.editableTable,
+         icon: Icons.table_rows,
+         page: PanelEditableTable(),
+         pageRout: '/editable'),
+       buttonsInfo(
+           title: AppLocalizations.of(context)!.responsiveTable,
+           icon: Icons.table_chart,
+           page: PanelResponsiveTable(),
+           pageRout: '/responsiveTable')
+     ],
       [
         buttonsInfo(
             title: AppLocalizations.of(context)!.slider,
@@ -99,23 +108,13 @@ class _DrawerPageState extends State<DrawerPage> {
             pageRout: '/slider')
       ],
       [
-        "Accardeion",
         buttonsInfo(
-            title: AppLocalizations.of(context)!.text,
-            icon: Icons.edit,
-            page: PanelTextSample(),
-            pageRout: '/textSample'),
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.dialogBox,
-            icon: Icons.check_circle_rounded,
-            page: PanelDialogBox(),
-            pageRout: '/dialog'),
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.emailBox,
-            icon: Icons.inbox_rounded,
-            page: EsDateTimePicker(),
-            pageRout: '/textSmple')
+            title: AppLocalizations.of(context)!.notifications,
+            icon: Icons.notification_important_outlined,
+            page: PanelNotification(),
+            pageRout: '/notification')
       ],
+
     ];
     List _acardionList = [];
     for (int i = 0; i < _buttonNames.length; i++) {
