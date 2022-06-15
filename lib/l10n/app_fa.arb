@@ -7,6 +7,12 @@
   "login": "ثبت نام",
 
   "adminMenu": "منوی ادمین",
+
+  "esCharts": "نمودارها",
+  "linearCharts": "نمودار میله ای",
+  "circularCharts": "نموداردایروی",
+  "pieCharts": "نمودار pie",
+
   "text": "متن",
   "sampleText": "آرزو دلیل بر استعداد است:)",
   "ordinaryText": "متن معمولی",
@@ -22,6 +28,7 @@
   "progressBarDescription":  " انواع مدل های نوار پیشرفت (خطی و دایروی) در پنل در دسترس است .",
   "sliderDescription":  " انواع مدل های اسلایدر در پنل در دسترس است .",
   "notificationsDescription":   " انواع مدل های اعلان در پنل در دسترس است .",
+  "chartDescription":   " مدل های متنوع نمودار در پنل در دسترس است .",
 
 
   "button": "دکمه",
@@ -87,7 +94,7 @@
   "textAreaType": "ناحیه متنی",
   "textAreaHint": "هینت ناحیه متنی",
 
-  "persianDatePickerTitle": "انتخاب کنید:",
+  "datePickerTitle": "انتخاب کنید:",
   "androidTimePickerTitle": "انتخاب کنید:",
   "cupertinoTimePickerTitle": "انتخاب کنید:",
   "time12hPickerTitle": "انتخاب کنید:",
@@ -102,9 +109,9 @@
   "checkBoxErrorText": "متن ارور چک باکس",
   "checkBoxButtonText": "دخیره",
 
-  "dropDownButtonItem1": "گزینه اول",
-  "dropDownButtonItem2": "گزینه دوم",
-  "dropDownButtonItem3": "گزینه سوم",
+  "dropDownButtonItemfirst": "گزینه اول",
+  "dropDownButtonItemsecond": "گزینه دوم",
+  "dropDownButtonItemthird": "گزینه سوم",
 
   "toggleButton": "دکمه تغییر وضعیت",
 
@@ -128,25 +135,8 @@
   "editableTable": "جدول قابل ویرایش",
   "responsiveTable": "جدول ریسپانسیو",
   "notifications": "اعلان ها",
-  "simpleNotifications": "اعلان های معمولی",
+  "simpleNotifications": "اعلان های معمولی"
 
-  "dashBoard": "داشبورد",
-  "emailBox": "صندوق ایمیل",
-  "fileManager": "مدیریت فایل",
-  "calender": "تقویم",
-  "toDo": "باید انجام بدم",
-  "pages": "صفحات",
-  "styles": "سبک ها ",
-  "tabls": "جداول",
-  "elements": "عناصر",
-  "components": "اجزا",
-  "widgets": "ابزارک ها",
-  "forms": "فرم ها",
-  "chart": "نمودارها" ,
-  "content": "محتوا",
-  "menu": "منو",
-  "headLine": "سر تیتر",
-  "documents": "مستندات",
-  "changeReport": "تغییر گزارش"
+
 
 }

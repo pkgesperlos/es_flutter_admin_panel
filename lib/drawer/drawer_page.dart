@@ -1,4 +1,5 @@
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_crm/drawer/panelItems/panel_chart.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_editable_table.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_button_sample.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_dialog_box.dart';
@@ -12,7 +13,7 @@ import 'package:es_flutter_crm/drawer/panelItems/panel_simple_table.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_text_sample.dart';
 import 'package:flutter/material.dart';
 import '../images/panelConstants.dart';
-import 'center_computer_screen.dart';
+import 'center_screen.dart';
 import '../images/responsive_layout.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -43,6 +44,13 @@ class _DrawerPageState extends State<DrawerPage> {
     List<List> _buttonNames = [
       [
         buttonsInfo(
+            title: AppLocalizations.of(context)!.charts,
+            icon: Icons.bar_chart,
+            page: PanelChart(),
+            pageRout: '/chart'),
+      ],
+      [
+        buttonsInfo(
             title: AppLocalizations.of(context)!.text,
             icon: Icons.edit,
             page: PanelTextSample(),
@@ -64,7 +72,7 @@ class _DrawerPageState extends State<DrawerPage> {
       ],
       [
         buttonsInfo(
-            title: AppLocalizations.of(context)!.forms,
+            title: AppLocalizations.of(context)!.form,
             icon: Icons.list_alt,
             page: PanelForm(),
             pageRout: '/form')
@@ -83,23 +91,24 @@ class _DrawerPageState extends State<DrawerPage> {
             page: PanelProgressBar(),
             pageRout: '/progressbar')
       ],
-     [AppLocalizations.of(context)!.tables,
-       buttonsInfo(
-           title: AppLocalizations.of(context)!.simpleTable,
-           icon: Icons.table_chart_outlined,
-           page: PanelSimpleTable(),
-           pageRout: '/simpletable'),
-       buttonsInfo(
-         title: AppLocalizations.of(context)!.editableTable,
-         icon: Icons.table_rows,
-         page: PanelEditableTable(),
-         pageRout: '/editable'),
-       buttonsInfo(
-           title: AppLocalizations.of(context)!.responsiveTable,
-           icon: Icons.table_chart,
-           page: PanelResponsiveTable(),
-           pageRout: '/responsiveTable')
-     ],
+      [
+        AppLocalizations.of(context)!.tables,
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.simpleTable,
+            icon: Icons.table_chart_outlined,
+            page: PanelSimpleTable(),
+            pageRout: '/simpletable'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.editableTable,
+            icon: Icons.table_rows,
+            page: PanelEditableTable(),
+            pageRout: '/editable'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.responsiveTable,
+            icon: Icons.table_chart,
+            page: PanelResponsiveTable(),
+            pageRout: '/responsiveTable')
+      ],
       [
         buttonsInfo(
             title: AppLocalizations.of(context)!.slider,
@@ -114,7 +123,6 @@ class _DrawerPageState extends State<DrawerPage> {
             page: PanelNotification(),
             pageRout: '/notification')
       ],
-
     ];
     List _acardionList = [];
     for (int i = 0; i < _buttonNames.length; i++) {
@@ -122,170 +130,159 @@ class _DrawerPageState extends State<DrawerPage> {
     }
 
     return Drawer(
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(PanelConstants.paddingDimension),
-          child: Column(
-            children: [
-              ListTile(
-                title: EsOrdinaryText(
-                  data: AppLocalizations.of(context)!.adminMenu,
+      child: Container(
+        decoration: BoxDecoration(
+            color: PanelConstants.forGround,
+          //   boxShadow: [
+          // BoxShadow(
+          //     color: PanelConstants.boxshadow, blurRadius: 10, spreadRadius:10)
+        // ]
+            // border:Border(right: BorderSide(color: PanelConstants.itemColor,width: 3))
+            ),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(PanelConstants.paddingDimension),
+            child: Column(
+              children: [
+                ListTile(
+                  title: EsOrdinaryText(
+                    data: AppLocalizations.of(context)!.adminMenu,
+                  ),
+                  trailing: ResponsiveLayot.isComputer(context)
+                      ? null
+                      : IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: Icon(
+                            Icons.close,
+                            color: Colors.black54,
+                          )),
                 ),
-                trailing: ResponsiveLayot.isComputer(context)
-                    ? null
-                    : IconButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        icon: Icon(
-                          Icons.close,
-                          color: Colors.black54,
-                        )),
-              ),
-              ...List.generate(
-                  _buttonNames.length,
-                  (index) => _buttonNames[index].length == 1
-                      ? Column(
-                          children: [
-                            Container(
-                              decoration: (index == _currentIndex)
-                                  ? BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      border: Border.all(
-                                          color:
-                                              PanelConstants.drawerSelectColor1,
-                                          width: 3),
-                                      // gradient: LinearGradient(colors: [
-                                      //   PanelConstants.drawerSelectColor2
-                                      //       .withOpacity(0.9),
-                                      //   PanelConstants.drawerSelectColor1
-                                      //       .withOpacity(0.9),
-                                      // ])
-                                    )
-                                  : null,
-                              child: ListTile(
-                                title: EsOrdinaryText(
-                                  // data: _buttonNames2[index][0].title,
-                                  data: _buttonNames[index][0].title,
-                                  color:(index == _currentIndex) ? PanelConstants
-                                    .drawerSelectColor1
-                                    : PanelConstants
-                                    .drawerFontColor,
-                                  // style: TextStyle(color: Colors.white),
-                                ),
-                                leading: Padding(
-                                  padding: EdgeInsets.all(
-                                      PanelConstants.paddingDimension),
-                                  child: Icon(
-                                    _buttonNames[index][0].icon,
-                                    // _buttonNames2[index][0].icon,
-                                    color:(index == _currentIndex) ? PanelConstants
-                                        .drawerSelectColor1
-                                        : PanelConstants
-                                        .drawerFontColor,
-                                  ),
-                                ),
-                                onTap: () {
-                                  setState(() {
-                                    _currentIndex = index;
-
-                                    !ResponsiveLayot.isComputer(context)
-                                        // ? Navigator.pushNamed(context,
-                                        //     _buttonNames[index][0].pageRout)
-                                        ? CenterComputerScreen
-                                            .globalKey.currentState
-                                            ?.changePage(
-                                                _buttonNames[index][0].page)
-                                        : CenterComputerScreen
-                                            .globalKey.currentState
-                                            ?.changePage(
-                                                _buttonNames[index][0].page);
-                                  });
-                                },
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20)),
-                              ),
-                            ),
-                            Divider(
-                              color: PanelConstants.drawerFontColor,
-                              thickness: 0.2,
-                            )
-                          ],
-                        )
-                      : Column(
-                          children: [
-                            Container(
-                              // decoration: index == _currentIndex
-                              //     ? BoxDecoration(
-                              //         borderRadius: BorderRadius.circular(20),
-                              //         gradient: LinearGradient(colors: [
-                              //           PanelConstants.redDark.withOpacity(0.9),
-                              //           PanelConstants.orangeDark.withOpacity(0.9),
-                              //         ]))
-                              //     : null,
-                              child: ExpansionTile(
-                                title: ListTile(
+                ...List.generate(
+                    _buttonNames.length,
+                    (index) => _buttonNames[index].length == 1
+                        ? Column(
+                            children: [
+                              Container(
+                                decoration: (index == _currentIndex)
+                                    ? BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        border: Border.all(
+                                            color: PanelConstants
+                                                .drawerSelectColor1,
+                                            width: 3),
+                                        // gradient: LinearGradient(colors: [
+                                        //   PanelConstants.drawerSelectColor2
+                                        //       .withOpacity(0.9),
+                                        //   PanelConstants.drawerSelectColor1
+                                        //       .withOpacity(0.9),
+                                        // ])
+                                      )
+                                    : null,
+                                child: ListTile(
                                   title: EsOrdinaryText(
-                                    data: _buttonNames[index][0],
+                                    // data: _buttonNames2[index][0].title,
+                                    data: _buttonNames[index][0].title,
+                                    color: (index == _currentIndex)
+                                        ? PanelConstants.drawerSelectColor1
+                                        : PanelConstants.drawerFontColor,
                                     // style: TextStyle(color: Colors.white),
                                   ),
+                                  leading: Padding(
+                                    padding: EdgeInsets.all(
+                                        PanelConstants.paddingDimension),
+                                    child: Icon(
+                                      _buttonNames[index][0].icon,
+                                      // _buttonNames2[index][0].icon,
+                                      color: (index == _currentIndex)
+                                          ? PanelConstants.drawerSelectColor1
+                                          : PanelConstants.drawerFontColor,
+                                    ),
+                                  ),
+                                  onTap: () {
+                                    setState(() {
+                                      _currentIndex = index;
+
+                                      !ResponsiveLayot.isComputer(context)
+                                          // ? Navigator.pushNamed(context,
+                                          //     _buttonNames[index][0].pageRout)
+                                          ? CenterScreen
+                                              .globalKey.currentState
+                                              ?.changePage(
+                                                  _buttonNames[index][0].page)
+                                          : CenterScreen
+                                              .globalKey.currentState
+                                              ?.changePage(
+                                                  _buttonNames[index][0].page);
+                                    });
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20)),
                                 ),
-                                children: [
-                                  ...List.generate(
-                                      _buttonNames[index].length - 1,
-                                      (index2) => Column(
-                                            children: [
-                                              Container(
-                                                decoration: (index2 ==
-                                                            _currentIndex2 &&
-                                                        _acardionList[
-                                                                _currentIndex] !=
-                                                            0)
-                                                    ? BoxDecoration(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(20),
-                                                        border: Border.all(
-                                                            color: PanelConstants
-                                                                .drawerSelectColor1,
-                                                            width: 3),
-                                                        // gradient:
-                                                        //     LinearGradient(
-                                                        //         colors: [
-                                                        //       PanelConstants
-                                                        //           .drawerSelectColor2
-                                                        //           .withOpacity(
-                                                        //               0.9),
-                                                        //       PanelConstants
-                                                        //           .drawerSelectColor1
-                                                        //           .withOpacity(
-                                                        //               0.9),
-                                                        //     ])
-                                                      )
-                                                    : null,
-                                                child: ListTile(
-                                                  title: EsOrdinaryText(
-                                                    data: _buttonNames[index]
-                                                            [index2 + 1]
-                                                        .title,
-                                                    color: (index2 ==
-                                                                _currentIndex2 &&
-                                                            _acardionList[
-                                                                    _currentIndex] !=
-                                                                0)
-                                                        ? PanelConstants
-                                                            .drawerSelectColor1
-                                                        : PanelConstants
-                                                            .drawerFontColor,
-                                                  ),
-                                                  leading: Padding(
-                                                    padding: EdgeInsets.all(
-                                                        PanelConstants
-                                                            .paddingDimension),
-                                                    child: Icon(
-                                                      _buttonNames[index]
+                              ),
+                              Divider(
+                                color: PanelConstants.drawerFontColor,
+                                thickness: 0.2,
+                              )
+                            ],
+                          )
+                        : Column(
+                            children: [
+                              Container(
+                                // decoration: index == _currentIndex
+                                //     ? BoxDecoration(
+                                //         borderRadius: BorderRadius.circular(20),
+                                //         gradient: LinearGradient(colors: [
+                                //           PanelConstants.redDark.withOpacity(0.9),
+                                //           PanelConstants.orangeDark.withOpacity(0.9),
+                                //         ]))
+                                //     : null,
+                                child: ExpansionTile(
+                                  title: ListTile(
+                                    title: EsOrdinaryText(
+                                      data: _buttonNames[index][0],
+                                      // style: TextStyle(color: Colors.white),
+                                    ),
+                                  ),
+                                  children: [
+                                    ...List.generate(
+                                        _buttonNames[index].length - 1,
+                                        (index2) => Column(
+                                              children: [
+                                                Container(
+                                                  decoration: (index2 ==
+                                                              _currentIndex2 &&
+                                                          _acardionList[
+                                                                  _currentIndex] !=
+                                                              0)
+                                                      ? BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(20),
+                                                          border: Border.all(
+                                                              color: PanelConstants
+                                                                  .drawerSelectColor1,
+                                                              width: 3),
+                                                          // gradient:
+                                                          //     LinearGradient(
+                                                          //         colors: [
+                                                          //       PanelConstants
+                                                          //           .drawerSelectColor2
+                                                          //           .withOpacity(
+                                                          //               0.9),
+                                                          //       PanelConstants
+                                                          //           .drawerSelectColor1
+                                                          //           .withOpacity(
+                                                          //               0.9),
+                                                          //     ])
+                                                        )
+                                                      : null,
+                                                  child: ListTile(
+                                                    title: EsOrdinaryText(
+                                                      data: _buttonNames[index]
                                                               [index2 + 1]
-                                                          .icon,
+                                                          .title,
                                                       color: (index2 ==
                                                                   _currentIndex2 &&
                                                               _acardionList[
@@ -296,60 +293,81 @@ class _DrawerPageState extends State<DrawerPage> {
                                                           : PanelConstants
                                                               .drawerFontColor,
                                                     ),
-                                                  ),
-                                                  onTap: () {
-                                                    setState(() {
-                                                      _currentIndex2 = index2;
-                                                      _currentIndex = index;
+                                                    leading: Padding(
+                                                      padding: EdgeInsets.all(
+                                                          PanelConstants
+                                                              .paddingDimension),
+                                                      child: Icon(
+                                                        _buttonNames[index]
+                                                                [index2 + 1]
+                                                            .icon,
+                                                        color: (index2 ==
+                                                                    _currentIndex2 &&
+                                                                _acardionList[
+                                                                        _currentIndex] !=
+                                                                    0)
+                                                            ? PanelConstants
+                                                                .drawerSelectColor1
+                                                            : PanelConstants
+                                                                .drawerFontColor,
+                                                      ),
+                                                    ),
+                                                    onTap: () {
+                                                      setState(() {
+                                                        _currentIndex2 = index2;
+                                                        _currentIndex = index;
 
-                                                      !ResponsiveLayot
-                                                              .isComputer(
-                                                                  context)
-                                                          // ? Navigator.pushNamed(
-                                                          //     context, '/login')
-                                                          ? CenterComputerScreen
-                                                              .globalKey
-                                                              .currentState
-                                                              ?.changePage(
-                                                                  _buttonNames[index]
-                                                                          [
-                                                                          index2 +
-                                                                              1]
-                                                                      .page)
-                                                          : CenterComputerScreen
-                                                              .globalKey
-                                                              .currentState
-                                                              ?.changePage(
-                                                                  _buttonNames[index]
-                                                                          [
-                                                                          index2 +
-                                                                              1]
-                                                                      .page);
-                                                    });
-                                                  },
-                                                  shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              20)),
+                                                        !ResponsiveLayot
+                                                                .isComputer(
+                                                                    context)
+                                                            // ? Navigator.pushNamed(
+                                                            //     context, '/login')
+                                                            ? CenterScreen
+                                                                .globalKey
+                                                                .currentState
+                                                                ?.changePage(
+                                                                    _buttonNames[index]
+                                                                            [
+                                                                            index2 +
+                                                                                1]
+                                                                        .page)
+                                                            : CenterScreen
+                                                                .globalKey
+                                                                .currentState
+                                                                ?.changePage(
+                                                                    _buttonNames[index]
+                                                                            [
+                                                                            index2 +
+                                                                                1]
+                                                                        .page);
+                                                      });
+                                                    },
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        20)),
+                                                  ),
                                                 ),
-                                              ),
-                                              Divider(
-                                                color: PanelConstants
-                                                    .drawerFontColor,
-                                                thickness: 0.2,
-                                              )
-                                            ],
-                                          ))
-                                ],
+                                                Divider(
+                                                  color: PanelConstants
+                                                      .drawerFontColor,
+                                                  thickness: 0.2,
+                                                )
+                                              ],
+                                            ))
+                                  ],
+                                ),
                               ),
-                            ),
-                            Divider(
-                              color: PanelConstants.drawerFontColor,
-                              thickness: 0.2,
-                            )
-                          ],
-                        ))
-            ],
+                              Divider(
+                                color: PanelConstants.drawerFontColor,
+                                thickness: 0.2,
+                              )
+                            ],
+                          ))
+              ],
+            ),
           ),
         ),
       ),

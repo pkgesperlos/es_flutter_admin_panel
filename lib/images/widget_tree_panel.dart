@@ -2,7 +2,7 @@
 import 'package:es_flutter_crm/es_form.dart';
 import 'package:es_flutter_crm/images/panelConstants.dart';
 import 'package:es_flutter_crm/images/responsive_layout.dart';
-import 'package:es_flutter_crm/drawer/center_computer_screen.dart';
+import 'package:es_flutter_crm/drawer/center_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../app_bar/app_bar_widget.dart';
@@ -31,12 +31,12 @@ class _WidgetTreePanelState extends State<WidgetTreePanel> {
         ),
         body: ResponsiveLayot(
           tiny: Container(),
-          phone: CenterComputerScreen(),
+          phone: CenterScreen(),
           tablet: Row(
             children: [
               // Expanded(child: PanelLeftPage()),
               // Expanded(child: PanelCenterPage()),
-              Expanded(child: CenterComputerScreen()),
+              Expanded(child: CenterScreen()),
             ],
           ),
           largTablet: Row(
@@ -44,14 +44,14 @@ class _WidgetTreePanelState extends State<WidgetTreePanel> {
               // Expanded(child: PanelLeftPage()),
               // Expanded(child: PanelCenterPage()),
               // Expanded(child: PanelRightPage()),
-              Expanded(child: CenterComputerScreen()),
+              Expanded(child: CenterScreen()),
             ],
           ),
           computer: Row(
             children: [
 
               Expanded(flex: 1, child: DrawerPage()),
-              Expanded(flex: 4, child: CenterComputerScreen())
+              Expanded(flex: 4, child: CenterScreen())
             ],
           ),
         ),

@@ -10,6 +10,12 @@
   "login": "Login",
 
   "adminMenu": "Admin Menu",
+
+  "charts": "Charts",
+  "linearCharts": "Linear Charts",
+  "circularCharts": "Circular Charts",
+  "pieCharts": "Pie Charts",
+
   "text": "Text",
   "sampleText": "Wishing is the reason for talent:)",
   "ordinaryText": "Ordinary Text",
@@ -18,14 +24,15 @@
   "dottedText": "Dotted Text",
   "markedText": "Marked Text",
 
-  "textSampleDescription": "different kinds of text with various size are avaiable in panel.",
-  "dialogeBoxDescription": "different kinds of dialog Box with various function are avaiable in panel.",
-  "buttonDescription": "different kinds of button(Ordinary,with Icon,Loading) with various size are avaiable in panel.",
-  "formDescription": "different kinds of forms with various function for giving data from user are avaiable in panel.",
-  "imageDescription":  "different kinds of  function for image display for user are avaiable in panel.",
-  "progressBarDescription":  "different kinds of  progress bar(linear and Circular) are avaiable in panel.",
-  "sliderDescription":  "different kinds of  Slider are avaiable in panel.",
+  "textSampleDescription": "different kinds of text with various size are available in panel.",
+  "dialogeBoxDescription": "different kinds of dialog box with various function are available in panel.",
+  "buttonDescription": "different kinds of button(Ordinary,with Icon,Loading) with various size are available in panel.",
+  "formDescription": "different kinds of forms with various function for giving data from user are available in panel.",
+  "imageDescription":  "different kinds of  function for image display for user are available in panel.",
+  "progressBarDescription":  "different kinds of  progress bar(linear and Circular) are available in panel.",
+  "sliderDescription":  "different kinds of  Slider are available in panel.",
   "notificationsDescription":  "different kinds of  notifications are avaiable in panel.",
+  "chartDescription":   "different kinds of  charts are available in panel.",
 
   "button": "Button",
   "samplButton": "Save",
@@ -90,7 +97,7 @@
   "textAreaType": "TextArea",
   "textAreaHint": "TextArea Hint",
 
-  "persianDatePickerTitle": "Select",
+  "datePickerTitle": "Select",
   "androidTimePickerTitle": "Select",
   "cupertinoTimePickerTitle": "Select",
   "time12hPickerTitle": "Select",
@@ -105,9 +112,9 @@
   "checkBoxErrorText": "CheckBox error text",
   "checkBoxButtonText": "Save",
 
-  "dropDownButtonItem1": "Item1",
-  "dropDownButtonItem2": "Item2",
-  "dropDownButtonItem3": "Item3",
+  "dropDownButtonItemfirst": "First Item",
+  "dropDownButtonItemsecond": "Second Item",
+  "dropDownButtonItemthird": "Third Item",
 
   "toggleButton": "Toggle Button",
 
@@ -131,7 +138,7 @@
   "responsiveTable": "Responsive Table",
 
   "notifications": "Notifications",
-  "simpleNotifications": "Ordinary Notifications",
+  "simpleNotifications": "Ordinary Notifications"
 
 
 
@@ -151,24 +158,6 @@
 
 
 
-  "dashBoard": "Dashbord",
-  "emailBox": "Email Box",
-  "fileManager": "File Manager",
-  "calender": "Calender",
-  "toDo": "To Do",
-  "pages": "Pages",
-  "styles": "Styles",
-  "tabls": "Tables",
-  "elements": "Elements",
-  "components": "Components",
-  "widgets": "Widgets",
-  "forms": "Forms",
-  "charts": "Charts" ,
-  "content": "Content",
-  "menu": "Menu",
-  "headLine": "HeadLine",
-  "documents": "Documents",
-  "changeReport": "ChangeReport"
 
 
 }

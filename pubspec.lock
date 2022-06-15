@@ -279,7 +279,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "92f992ec4976a659e3a97340a0d606a986fd8f73"
+      resolved-ref: "5afd2761bdb9fb32c1d6e0f7b6db7ecd4e932972"
       url: "ssh://git@gitlab.com/haniehhojjatzadeh/es_flutter_component.git"
     source: git
     version: "1.0.0+1"
@@ -888,7 +888,7 @@ packages:
       name: sliver_tools
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.6"
+    version: "0.2.7"
   smooth_page_indicator:
     dependency: transitive
     description:

@@ -104,13 +104,13 @@ class PanelForm extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 8.0),
                 child: EsDottedText(
-                  data: AppLocalizations.of(context)!.datePickeren,
+                  data: AppLocalizations.of(context)!.datePickerfa,
                   size: 20,
                   color: PanelConstants.itemColor,
                 ),
               ),
               EsPersianDatePicker(
-        title: AppLocalizations.of(context)!.persianDatePickerTitle,
+        title: AppLocalizations.of(context)!.datePickerTitle,
       ),
             ],
           )),
@@ -120,13 +120,13 @@ class PanelForm extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 8.0),
                 child: EsDottedText(
-                  data: AppLocalizations.of(context)!.datePickerfa,
+                  data: AppLocalizations.of(context)!.datePickeren,
                   size: 20,
                   color: PanelConstants.itemColor,
                 ),
               ),
               EsEnglishDatePicker(
-        title: AppLocalizations.of(context)!.persianDatePickerTitle,
+        title: AppLocalizations.of(context)!.datePickerTitle,
       ),
             ],
           )),
@@ -308,9 +308,9 @@ class PanelForm extends StatelessWidget {
               ),
               EsDropDownButton(
         items: [
-              AppLocalizations.of(context)!.dropDownButtonItem1,
-              AppLocalizations.of(context)!.dropDownButtonItem2,
-              AppLocalizations.of(context)!.dropDownButtonItem3,
+              AppLocalizations.of(context)!.dropDownButtonItemfirst,
+              AppLocalizations.of(context)!.dropDownButtonItemsecond,
+              AppLocalizations.of(context)!.dropDownButtonItemthird,
         ],
         onTapItems: [() {}, () {}, () {}],
       ),

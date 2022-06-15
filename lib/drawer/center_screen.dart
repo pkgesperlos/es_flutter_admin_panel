@@ -1,23 +1,24 @@
 
 import 'package:es_flutter_component/es_table/es_simple_table.dart';
+import 'package:es_flutter_crm/drawer/panelItems/panel_chart.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_text_sample.dart';
 import 'package:flutter/material.dart';
 
 
-class CenterComputerScreen extends StatefulWidget {
-  static final GlobalKey<_CenterComputerScreen> globalKey = GlobalKey();
-  CenterComputerScreen({Key? key,}) : super(key: globalKey);
+class CenterScreen extends StatefulWidget {
+  static final GlobalKey<_CenterScreen> globalKey = GlobalKey();
+  CenterScreen({Key? key,}) : super(key: globalKey);
 
 
 
   @override
-  _CenterComputerScreen createState() => _CenterComputerScreen();
+  _CenterScreen createState() => _CenterScreen();
 }
 
 
-class _CenterComputerScreen extends State<CenterComputerScreen> {
+class _CenterScreen extends State<CenterScreen> {
 
-  Widget page=PanelTextSample();
+  Widget page=PanelChart();
 
 
  changePage(currentPage){

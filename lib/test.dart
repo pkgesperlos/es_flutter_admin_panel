@@ -4,7 +4,6 @@ import 'package:es_flutter_crm/es_form.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'dashboard/panel_center/panel_center_page.dart';
 
 
 
@@ -62,7 +61,7 @@ Widget page1() {
 }
 
 Widget page2() {
-  return PanelCenterPage();
+  return EsForm();
 }
 
 enum Pages {

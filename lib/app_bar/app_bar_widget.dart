@@ -21,6 +21,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
       decoration: BoxDecoration(
         color: PanelConstants.appbarBackgroundColor,
         //boxShadow: [BoxShadow(color: PanelConstants.appbarShadowColor,blurRadius: 2,spreadRadius: 2)]
+        border:Border(bottom: BorderSide(color: PanelConstants.itemColor,width: 3))
       ),
       child: Row(
         children: [
