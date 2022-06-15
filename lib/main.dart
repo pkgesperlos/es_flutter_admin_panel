@@ -1,15 +1,10 @@
-import 'package:es_flutter_component/es_tab_navigator/es_side_navigator.dart';
-import 'package:es_flutter_component/es_table/es_simple_table.dart';
-import 'package:es_flutter_crm/drawer/drawer_page.dart';
+
 import 'package:es_flutter_crm/drawer/panelItems/panel_chart.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_dialog_box.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_progressbar.dart';
 import 'package:es_flutter_crm/es_form.dart';
 import 'package:es_flutter_crm/images/widget_tree_panel.dart';
 import 'package:es_flutter_crm/language_change_provider.dart';
-import 'package:es_flutter_crm/drawer/center_screen.dart';
-import 'package:es_flutter_crm/test.dart';
-import 'package:es_flutter_crm/test2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -22,7 +17,6 @@ import 'drawer/panelItems/panel_notification.dart';
 import 'drawer/panelItems/panel_slider.dart';
 import 'drawer/panelItems/panel_simple_table.dart';
 import 'drawer/panelItems/panel_text_sample.dart';
-import 'images/panelConstants.dart';
 
 void main() {
   runApp(MyApp());

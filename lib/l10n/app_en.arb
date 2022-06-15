@@ -12,9 +12,9 @@
   "adminMenu": "Admin Menu",
 
   "charts": "Charts",
-  "linearCharts": "Linear Charts",
-  "circularCharts": "Circular Charts",
-  "pieCharts": "Pie Charts",
+  "barCharts": "Bar Chart",
+  "circularCharts": "Circular Chart",
+  "linearChart": "linear Chart",
 
   "text": "Text",
   "sampleText": "Wishing is the reason for talent:)",

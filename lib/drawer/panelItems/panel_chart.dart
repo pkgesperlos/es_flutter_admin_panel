@@ -29,7 +29,7 @@ class PanelChart extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
               child: EsDottedText(
-                  data: AppLocalizations.of(context)!.linearCharts,
+                  data: AppLocalizations.of(context)!.barCharts,
                   size: 20,
                   color: PanelConstants.itemColor),
             ),
@@ -44,7 +44,7 @@ class PanelChart extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 8.0),
                 child: EsDottedText(
-                  data: AppLocalizations.of(context)!.pieCharts,
+                  data: AppLocalizations.of(context)!.linearChart,
                   size: 20,
                   color: PanelConstants.itemColor,
                 ),

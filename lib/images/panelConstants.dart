@@ -5,7 +5,7 @@ class PanelConstants{
 
   static const Color backGround=Color(0xffF3F4F4);
   static const Color forGround=Color(0xffFFFFFF);
-  static const Color boxshadow=Color(0xc1bdbdbd);
+  static const Color boxshadow=Colors.black54;
   static const Color itemColor=Color(0xdd193890);
   static const Color itemcoupleColor=Color(0xffFFFFFF);
   static const Color appbarIconColor=Colors.black54;

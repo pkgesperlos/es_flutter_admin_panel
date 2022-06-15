@@ -20,7 +20,7 @@ class _CenterScreen extends State<CenterScreen> {
 
   Widget page=PanelChart();
 
-
+//function for change page by global key in drawer page
  changePage(currentPage){
    setState(() {
      page=currentPage;

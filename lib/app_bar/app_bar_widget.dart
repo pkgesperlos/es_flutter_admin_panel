@@ -19,12 +19,14 @@ class _AppBarWidgetState extends State<AppBarWidget> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        //set the color of app bar.
         color: PanelConstants.appbarBackgroundColor,
-        //boxShadow: [BoxShadow(color: PanelConstants.appbarShadowColor,blurRadius: 2,spreadRadius: 2)]
+        boxShadow: [BoxShadow(color: PanelConstants.appbarShadowColor,blurRadius: 5,spreadRadius:5)],
         border:Border(bottom: BorderSide(color: PanelConstants.itemColor,width: 3))
       ),
       child: Row(
         children: [
+          //check for drawer icon in non computer devices by ResponsiveLayot
           if (ResponsiveLayot.isComputer(context))
             Container(
               // margin: EdgeInsets.all(PanelConstants.paddingDimension),
@@ -119,6 +121,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
           //     ),
           //   ),
           Spacer(),
+          //Drop down button for selecting languages
           EsDropDownButton(
             items: ["English", "Persian"],
             onTapItems: [
@@ -143,7 +146,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
             onPressed: () {},
           ),
           // Spacer(),
-
+          // notification,
           Stack(
             children: [
               IconButton(
@@ -169,6 +172,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                   ))
             ],
           ),
+          //set profile image for non phone devices
           if (!ResponsiveLayot.isPhone(context))
             Container(
               margin: EdgeInsets.all(PanelConstants.paddingDimension),
@@ -181,12 +185,8 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                   blurRadius: 10,
                 )
               ], shape: BoxShape.circle),
-              child: CircleAvatar(
-                backgroundColor: PanelConstants.orangeDark,
-                radius: 30,
-                child: AspectRatio(aspectRatio: 1,child: EsAvatarImage(path: "assets/images/img1.jpg"),),
-                // child: FlutterLogo(),
-              ),
+              child: AspectRatio(aspectRatio: 1,child: EsAvatarImage(path: "assets/images/img1.jpg"),)
+
             )
         ],
       ),

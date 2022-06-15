@@ -8,10 +8,10 @@
 
   "adminMenu": "منوی ادمین",
 
-  "esCharts": "نمودارها",
-  "linearCharts": "نمودار میله ای",
-  "circularCharts": "نموداردایروی",
-  "pieCharts": "نمودار pie",
+  "charts": "نمودارها",
+  "barCharts": "نمودار میله ای",
+  "circularCharts": "نمودار دایروی",
+  "linearChart": "نمودار خطی",
 
   "text": "متن",
   "sampleText": "آرزو دلیل بر استعداد است:)",
@@ -109,9 +109,9 @@
   "checkBoxErrorText": "متن ارور چک باکس",
   "checkBoxButtonText": "دخیره",
 
-  "dropDownButtonItemfirst": "گزینه اول",
-  "dropDownButtonItemsecond": "گزینه دوم",
-  "dropDownButtonItemthird": "گزینه سوم",
+//  "dropDownButtonItemfirst": "اول",
+//  "dropDownButtonItemsecond": "دوم",
+//  "dropDownButtonItemthird": "سوم",
 
   "toggleButton": "دکمه تغییر وضعیت",
 

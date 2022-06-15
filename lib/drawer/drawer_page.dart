@@ -13,7 +13,7 @@ import 'package:es_flutter_crm/drawer/panelItems/panel_simple_table.dart';
 import 'package:es_flutter_crm/drawer/panelItems/panel_text_sample.dart';
 import 'package:flutter/material.dart';
 import '../images/panelConstants.dart';
-import 'center_screen.dart';
+import '../center_sceen/center_screen.dart';
 import '../images/responsive_layout.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -34,13 +34,16 @@ class buttonsInfo {
       required this.page,
       required this.pageRout});
 }
-
+//index of drawer item
 int _currentIndex = 0;
+//index of accardion item of drawer item
 int _currentIndex2 = 0;
 
 class _DrawerPageState extends State<DrawerPage> {
   @override
   Widget build(BuildContext context) {
+    //We have an array like this List=[buttonsInfo,[string,buttonsInfo,buttonsInfo]]
+    // for acardion and non acardion type
     List<List> _buttonNames = [
       [
         buttonsInfo(
@@ -132,22 +135,27 @@ class _DrawerPageState extends State<DrawerPage> {
     return Drawer(
       child: Container(
         decoration: BoxDecoration(
-            color: PanelConstants.forGround,
-          //   boxShadow: [
-          // BoxShadow(
-          //     color: PanelConstants.boxshadow, blurRadius: 10, spreadRadius:10)
-        // ]
-            // border:Border(right: BorderSide(color: PanelConstants.itemColor,width: 3))
-            ),
+          color: PanelConstants.forGround,
+          // boxShadow: [
+          //   BoxShadow(
+          //       color: PanelConstants.boxshadow,
+          //       blurRadius: 10,
+          //       spreadRadius: 10),
+          // ],
+          // border:Border(right: BorderSide(color: PanelConstants.itemColor,
+          // width: 3))
+        ),
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(PanelConstants.paddingDimension),
             child: Column(
               children: [
+                //title of drawer
                 ListTile(
                   title: EsOrdinaryText(
                     data: AppLocalizations.of(context)!.adminMenu,
                   ),
+                  //place a clse item for non computer drawer mode
                   trailing: ResponsiveLayot.isComputer(context)
                       ? null
                       : IconButton(
@@ -159,12 +167,15 @@ class _DrawerPageState extends State<DrawerPage> {
                             color: Colors.black54,
                           )),
                 ),
+                //creating list items of drawer
                 ...List.generate(
                     _buttonNames.length,
+                    //decide if we have accardion or not
                     (index) => _buttonNames[index].length == 1
                         ? Column(
                             children: [
                               Container(
+                                //deside if the item is selected or not
                                 decoration: (index == _currentIndex)
                                     ? BoxDecoration(
                                         borderRadius: BorderRadius.circular(20),
@@ -207,12 +218,10 @@ class _DrawerPageState extends State<DrawerPage> {
                                       !ResponsiveLayot.isComputer(context)
                                           // ? Navigator.pushNamed(context,
                                           //     _buttonNames[index][0].pageRout)
-                                          ? CenterScreen
-                                              .globalKey.currentState
+                                          ? CenterScreen.globalKey.currentState
                                               ?.changePage(
                                                   _buttonNames[index][0].page)
-                                          : CenterScreen
-                                              .globalKey.currentState
+                                          : CenterScreen.globalKey.currentState
                                               ?.changePage(
                                                   _buttonNames[index][0].page);
                                     });
@@ -247,10 +256,12 @@ class _DrawerPageState extends State<DrawerPage> {
                                   ),
                                   children: [
                                     ...List.generate(
+                                        //_buttonNames[index] is the List of accardion items
                                         _buttonNames[index].length - 1,
                                         (index2) => Column(
                                               children: [
                                                 Container(
+                                                  //deside if the item is selected or not
                                                   decoration: (index2 ==
                                                               _currentIndex2 &&
                                                           _acardionList[
@@ -325,12 +336,12 @@ class _DrawerPageState extends State<DrawerPage> {
                                                             ? CenterScreen
                                                                 .globalKey
                                                                 .currentState
-                                                                ?.changePage(
-                                                                    _buttonNames[index]
-                                                                            [
-                                                                            index2 +
-                                                                                1]
-                                                                        .page)
+                                                                ?.changePage(_buttonNames[
+                                                                            index]
+                                                                        [
+                                                                        index2 +
+                                                                            1]
+                                                                    .page)
                                                             : CenterScreen
                                                                 .globalKey
                                                                 .currentState

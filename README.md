@@ -1,11 +1,8 @@
-#1-Configure(How Manage Folders)
 
-
-
-#2-How to create multi language app(android/ios)
+#1-How to create multi language app(android/ios)
 To use flutter_localizations, add the package as a dependency to your pubspec.yaml file:
 
-#2-1:dependencies:
+#1-1:dependencies:
 flutter:
   sdk: flutter 
 flutter_localizations: # Add this line 
@@ -14,7 +11,7 @@ flutter_localizations: # Add this line
 Next, run pub get packages, then import the flutter_localizations library and specify
 localizationsDelegates and supportedLocales for MaterialApp:
 
-#2-2:import 'package:flutter_localizations/flutter_localizations.dart';
+#1-2:import 'package:flutter_localizations/flutter_localizations.dart';
 
 return const MaterialApp(
 title: 'Localizations Sample App',
@@ -33,7 +30,7 @@ Adding your own localized messages
 
 Once the flutter_localizations package is added, use the following instructions to add localized text to your application.
 
-#2-3:Add the intl package to the pubspec.yaml file:
+#1-3:Add the intl package to the pubspec.yaml file:
 
 dependencies:
 flutter:
@@ -42,13 +39,13 @@ flutter_localizations:
 sdk: flutter
 intl: ^0.17.0 # Add this line
 
-#2-4:Also, in the pubspec.yaml file, enable the generate flag. This is added to the section of 
+#1-4:Also, in the pubspec.yaml file, enable the generate flag. This is added to the section of 
 #the pubspec that is specific to Flutter, and usually comes later in the pubspec file.
 # The following section is specific to Flutter.
 flutter:
 generate: true # Add this line
 
-#2-5:Creat  l10n.yaml with the following content:
+#1-5:Creat  l10n.yaml with the following content:
 
 arb-dir: lib/l10n
 template-arb-file: app_en.arb
@@ -58,7 +55,7 @@ This file configures the localization tool;
 in this example, the input files are located in ${FLUTTER_PROJECT}/lib/l10n,
 the app_en.arb file provides the template, and the generated localizations are placed in the app_localizations.dart file.
 
-#2-6:In ${FLUTTER_PROJECT}/lib/l10n(in l10n), add the app_en.arb template file. For example:
+#1-6:In ${FLUTTER_PROJECT}/lib/l10n(in l10n), add the app_en.arb template file. For example:
 
 {
 "helloWorld": "Hello World!",
@@ -67,7 +64,7 @@ the app_en.arb file provides the template, and the generated localizations are p
 }
 "file": "file",
 },
-#2-7:Next, add an app_fa.arb file in the same directory for persian translation of the same
+#1-7:Next, add an app_fa.arb file in the same directory for persian translation of the same
 #message(in exactly this format):
 
 {
@@ -75,10 +72,10 @@ the app_en.arb file provides the template, and the generated localizations are p
 "file": "پوشه",
 }
 and you shold add all of  the word in your app in this two files.
-#3-How to change the Language Globally 
-#3-1:by adding the file language_change_provider.dart in lib
-#3-2:wrap the MaterialApp in main.dart to builder 
-#3-3:install provider and import 'package:provider/provider.dart';
+#2-How to change the Language Globally 
+#2-1:by adding the file language_change_provider.dart in lib
+#2-2:wrap the MaterialApp in main.dart to builder 
+#2-3:install provider and import 'package:provider/provider.dart';
 #then wrap ChangeNotifierProvider<LanguageChangeProvider> as below
 return ChangeNotifierProvider<LanguageChangeProvider>(
 create: (context) => LanguageChangeProvider(),
@@ -90,7 +87,7 @@ builder: (context) => MaterialApp(
 debugShowCheckedModeBanner: false,...
 
 
-#4-How to responsive 
+#3-How to responsive 
 First by dividing different kinds of devices as their sizes in  lib/images/Responsive_layout.dart
 Then by dividing the pages into three section :
 1-lib/appbar/app_bar_widget.dart,//control icons and avatar by ResponsiveLayout().
@@ -99,13 +96,13 @@ in other case by ResponsiveLayout().
 and 
 3-lib/drawer/center_screen.dart// control showing the content column by flutter bootstrap.
 
-#5-Responsive drawer in computer size with accordion 
+#4-Responsive drawer in computer size with accordion 
 It was not able to use FlutterRailSlider because of (accordion items) so,
-a global key is created in (lib/drawer/center_screen.dart) and it called by current state in 
+a global key is created in (lib/center_screen/center_screen.dart) and it called by current state in 
 (lib/drawer/drawer_page.dart) by changePage() function to change pages.
 as Example:.globalKey.currentState ?.changePage(_buttonNames[index][0].page) in drawer.
-#6-How to add pages in drawer
-We have an array lik this List=[buttonsInfo,[string,buttonsInfo,buttonsInfo]]=[A,B]
+#5-How to add pages in drawer
+We have an array like this List=[buttonsInfo,[string,buttonsInfo,buttonsInfo]]=[A,B]
 If we have an item with accordion items(with page context):
 we should set pages in B (String is title of page and buttonInfo is a function with properties of page.)
 else should set pages in A (buttonInfo is a function with properties of page.))
@@ -114,7 +111,7 @@ else should set pages in A (buttonInfo is a function with properties of page.))
 We divided all font,sizes, and colors into two section :
 
 1-es_flutter_components/Constants.dart//include the  font,sizes, and colors parameters of Components.
-2-es_flutter_CRM/PanelConstants.dart//include the  font,sizes, and colors parameters of Panel.
+2-es_flutter_CRM/PanelConstants.dart//include the  sizes, and colors parameters of Panel.
 
 
 
