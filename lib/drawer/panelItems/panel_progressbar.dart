@@ -1,4 +1,5 @@
 import 'package:es_flutter_component/constants.dart';
+import 'package:es_flutter_component/es_button/es_information_button.dart';
 
 import 'package:es_flutter_component/es_image/es_avatar_image.dart';
 import 'package:es_flutter_component/es_image/es_responsive_image.dart';
@@ -42,26 +43,11 @@ class PanelProgressBar extends StatelessWidget {
           (index) => titleBox(index),
     );
     List list = [
-      Center(
-          child:Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                child: EsDottedText(data:AppLocalizations.of(context)!.linearProgressBar,size: 20,color: PanelConstants.itemColor,),
-              ),
-              EsLinearProgressbar(),
-            ],
-          )),
-      Center(
-          child:Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                child: EsDottedText(data:AppLocalizations.of(context)!.circularProgressBar,size: 20,color: PanelConstants.itemColor,),
-              ),
-              EsCircularProgressbar()
-            ],
-          )),
+      _listItem(EsLinearProgressbar(),
+          AppLocalizations.of(context)!.linearProgressBar, "information"),
+      _listItem(EsCircularProgressbar(),
+          AppLocalizations.of(context)!.circularProgressBar, "information")
+
 
 
 
@@ -92,25 +78,49 @@ class PanelProgressBar extends StatelessWidget {
                     color: PanelConstants.backGround,
                   ),
                   children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
+                      list.length, (index) => _boxShow(list[index])))
             ],
           ),
         ));
   }
 
-  Widget boxShow(Widget widget) {
+  Widget _boxShow(Widget widget) {
     return BootstrapCol(
         sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-6',
         child: Container(
           padding: EdgeInsets.symmetric(
             horizontal: PanelConstants.paddingDimension,
-            vertical: PanelConstants.paddingDimension * 5,
+            vertical: PanelConstants.paddingDimension ,
           ),
           margin: EdgeInsets.all(PanelConstants.paddingDimension),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(15)),
+              borderRadius: BorderRadius.all(Radius.circular(PanelConstants.paddingDimension*2)),
               color: PanelConstants.forGround),
           child: widget,
+        ));
+  }
+  Widget _listItem(Widget widget,String title,String information) {
+    return Center(
+        child:Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  EsDottedText(data:title,
+                    size: 20,color: PanelConstants.itemColor,),
+                  SizedBox(
+                    height: PanelConstants.paddingDimension * 10,
+                  ),
+                  EsInformationButton(
+                    dialogeText: information,
+                  ),
+                ],
+              ),
+            ),
+            widget,
+          ],
         ));
   }
 }

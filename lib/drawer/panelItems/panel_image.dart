@@ -1,4 +1,5 @@
 import 'package:es_flutter_component/constants.dart';
+import 'package:es_flutter_component/es_button/es_information_button.dart';
 
 import 'package:es_flutter_component/es_image/es_avatar_image.dart';
 import 'package:es_flutter_component/es_image/es_lightbox_showing_image.dart';
@@ -18,36 +19,15 @@ class PanelImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // String _data = AppLocalizations.of(context)!.samplButton;
     List list = [
-      Center(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: EsDottedText(
-                  data: AppLocalizations.of(context)!.avatarImages,
-                  size: 20,
-                  color: PanelConstants.itemColor),
-            ),
-            EsAvatarImage(
-              path: "assets/images/img1.jpg",
-              radius: 100,
-            ),
-          ],
-        ),
-      ),
-      Center(
-          child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: EsDottedText(
-              data: AppLocalizations.of(context)!.zoomingImages,
-              size: 20,
-              color: PanelConstants.itemColor,
-            ),
+      _listItem(
+          EsAvatarImage(
+            path: "assets/images/img1.jpg",
+            radius: 100,
           ),
+          AppLocalizations.of(context)!.avatarImages,
+          "information"),
+      _listItem(
           Container(
             child: EsZoomingImage(
               img: AssetImage("assets/images/img1.jpg"),
@@ -55,28 +35,22 @@ class PanelImage extends StatelessWidget {
             width: 300,
             height: 240,
           ),
-        ],
-      )),
-      Center(
-          child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: EsDottedText(
-              data: AppLocalizations.of(context)!.lightBixShowingImages,
-              size: 20,
-              color: PanelConstants.itemColor,
-            ),
-          ),
+          AppLocalizations.of(context)!.zoomingImages,
+          "information"),
+      _listItem(
           Container(
-            child: EsLightBoxShowing(
-               path:"assets/images/img1.jpg",
+            child: Container(
+              child: EsLightBoxShowing(
+                path: "assets/images/img1.jpg",
+              ),
+              width: 300,
+              height: 240,
             ),
             width: 300,
             height: 240,
           ),
-        ],
-      )),
+          AppLocalizations.of(context)!.lightBoxShowingImage,
+          "information"),
     ];
     return Material(
         color: PanelConstants.backGround,
@@ -91,7 +65,7 @@ class PanelImage extends StatelessWidget {
                 width: double.maxFinite,
                 ////////////////////////
                 child: EsOrdinaryText(
-                  data:AppLocalizations.of(context)!.imageDescription ,
+                  data: AppLocalizations.of(context)!.imageDescription,
                 ),
                 decoration: BoxDecoration(
                     color: PanelConstants.forGround,
@@ -105,25 +79,53 @@ class PanelImage extends StatelessWidget {
                     color: PanelConstants.backGround,
                   ),
                   children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
+                      list.length, (index) => _boxShow(list[index])))
             ],
           ),
         ));
   }
 
-  Widget boxShow(Widget widget) {
+  Widget _boxShow(Widget widget) {
     return BootstrapCol(
         sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-6',
         child: Container(
           padding: EdgeInsets.symmetric(
             horizontal: PanelConstants.paddingDimension,
-            vertical: PanelConstants.paddingDimension * 5,
+            vertical: PanelConstants.paddingDimension,
           ),
           margin: EdgeInsets.all(PanelConstants.paddingDimension),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(15)),
+              borderRadius: BorderRadius.all(
+                  Radius.circular(PanelConstants.paddingDimension * 2)),
               color: PanelConstants.forGround),
           child: widget,
         ));
+  }
+
+  Widget _listItem(Widget widget, String title, String information) {
+    return Center(
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                    bottom: PanelConstants.paddingDimension),
+                child: EsDottedText(
+                    data: title, size: 20, color: PanelConstants.itemColor),
+              ),
+              EsInformationButton(
+                dialogeText: information,
+              ),
+            ],
+          ),
+          SizedBox(
+            height: PanelConstants.paddingDimension * 2,
+          ),
+          widget
+        ],
+      ),
+    );
   }
 }

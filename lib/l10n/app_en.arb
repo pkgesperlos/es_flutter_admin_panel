@@ -112,14 +112,14 @@
   "checkBoxErrorText": "CheckBox error text",
   "checkBoxButtonText": "Save",
 
-  "dropDownButtonItemfirst": "First Item",
-  "dropDownButtonItemsecond": "Second Item",
-  "dropDownButtonItemthird": "Third Item",
+  "dropDown1": "First Item",
+  "dropDown2": "Second Item",
+  "dropDown3": "Third Item",
 
   "toggleButton": "Toggle Button",
 
   "carouselSlider": "Carousel Slider",
-  "persPectiveSlider": "PersPective Slider",
+  "perspectiveSlider": "Perspective Slider",
 
   "progressBar": "Progress Bar",
   "linearProgressBar": "Linear Progress Bar",
@@ -129,7 +129,7 @@
 
   "images": "Images",
   "zoomingImages": "Zooming Image",
-  "lightBixShowingImages": "Light Box Showing Image",
+  "lightBoxShowingImage": "Light Box Showing Image",
   "avatarImages": "Avatar Image",
 
   "tables": "Tables",

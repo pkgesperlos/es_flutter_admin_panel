@@ -1,5 +1,7 @@
 import 'package:es_flutter_component/constants.dart';
+import 'package:es_flutter_component/es_button/es_bordered_button.dart';
 import 'package:es_flutter_component/es_button/es_icon_button.dart';
+import 'package:es_flutter_component/es_button/es_information_button.dart';
 import 'package:es_flutter_component/es_button/es_loading_button.dart';
 import 'package:es_flutter_component/es_button/es_ordinary_button.dart';
 import 'package:es_flutter_component/es_text/es_dotted_text.dart';
@@ -22,40 +24,51 @@ class PanelButtonSample extends StatelessWidget {
   Widget build(BuildContext context) {
     String _data = AppLocalizations.of(context)!.samplButton;
     List list = [
-      Column(
+      _listItem(Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: List.generate(
             5,
-            (index) => Column(
-                  children: [
-                    EsOrdinaryButton(
-                      text: _data, onPressed: () {  },
-                      buttonSizeX: Constants.buttonSizeX*5-index*50,
-                    ),
-                    SizedBox(
-                      height: PanelConstants.paddingDimension,
-                    )
-                  ],
-                )),
+                (index) => Column(
+              children: [
+                EsOrdinaryButton(
+                  text: _data, onPressed: () {  },
+                  buttonSizeX: Constants.buttonSizeX*5-index*50,
+                ),
+                SizedBox(
+                  height: PanelConstants.paddingDimension,
+                )
+              ],
+            )),
+      ), "Ordinary Button",
+          "It is an ordinary button located in: \n es_flutter_component>lib>es_button>es_ordinary_button.dart \n and is used as: \n "
+              """ EsOrdinaryButton(
+                  text: _data, onPressed: () {  },
+                  buttonSizeX: Constants.buttonSizeX,)"""
       ),
-      Column(
+      _listItem( Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: List.generate(
             5,
-            (index) => Column(
-                  children: [
-                    EsIconButton(icon: Icons.save_alt,onPressed: (){},
-                      buttonIconSize: Constants.buttonIconSize-index*2,
-                      buttonSizeX: Constants.buttonSizeX*5-index*50,
-                      buttonSizeY: Constants.buttonSizeY*1.5-index*5,
-                    ),
-                    SizedBox(
-                      height: PanelConstants.paddingDimension *2),
-                    
-                  ],
-                )),
+                (index) => Column(
+              children: [
+                EsIconButton(icon: Icons.save_alt,onPressed: (){},
+                  buttonIconSize: Constants.buttonIconSize-index*2,
+                  buttonSizeX: Constants.buttonSizeX*5-index*50,
+                  buttonSizeY: Constants.buttonSizeY*1.5-index*5,
+                ),
+                SizedBox(
+                    height: PanelConstants.paddingDimension *2),
+
+              ],
+            )),
+      ), "Icon Button",
+          "It is an icon button located in: \n es_flutter_component>lib>es_button>es_icon_button.dart \n and is used as: \n "
+              """ EsIconButton(icon: Icons.save_alt,onPressed: (){},
+                  buttonIconSize: Constants.buttonIconSize-index*2,
+                  buttonSizeX: Constants.buttonSizeX,
+                  buttonSizeY: Constants.buttonSizeY,)"""
       ),
-      Column(
+      _listItem( Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: List.generate(
             5,
@@ -72,7 +85,34 @@ class PanelButtonSample extends StatelessWidget {
                 )
               ],
             )),
+      ), "Loading Button",
+          "It is a loading button located in: \n es_flutter_component>lib>es_button>es_loading_button.dart \n and is used as: \n "
+              """EsLoadingButton(onPressed: (){},
+                  buttonSizeX: Constants.buttonSizeX)"""
       ),
+      _listItem( Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: List.generate(
+            5,
+                (index) => Column(
+              children: [
+                EsBorderedButton(
+                  text: _data, onPressed: () {  },
+                  buttonSizeX: Constants.buttonSizeX*5-index*50,
+                ),
+                SizedBox(
+                  height: PanelConstants.paddingDimension,
+                )
+              ],
+            )),
+      ), "Bordered Button",
+          "It is a bordered button located in: \n es_flutter_component>lib>es_button>es_bordered_button.dart \n and is used as: \n "
+              """EsBorderedButton(
+                  text: _data, onPressed: () {  },
+                  buttonSizeX: Constants.buttonSizeX)"""
+      ),
+
+
 
     ];
     return Material(
@@ -99,22 +139,44 @@ class PanelButtonSample extends StatelessWidget {
                     color: PanelConstants.backGround,
                   ),
                   children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
+                      list.length, (index) => _boxShow(list[index])))
             ],
           ),
         ));
   }
 
-  Widget boxShow(Widget widget) {
+  Widget _boxShow(Widget widget) {
     return BootstrapCol(
         sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-6',
         child: Container(
           padding: EdgeInsets.all(PanelConstants.paddingDimension),
           margin: EdgeInsets.all(PanelConstants.paddingDimension),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(15)),
+              borderRadius: BorderRadius.all(Radius.circular(PanelConstants.paddingDimension*2)),
               color: PanelConstants.forGround),
           child: widget,
         ));
+  }
+  Widget _listItem(Widget widget,String title,String information) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(bottom: PanelConstants.paddingDimension),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              EsDottedText(
+                data: title,
+                size: 20,
+                color: PanelConstants.itemColor,
+              ),
+              EsInformationButton(dialogeText: information,),
+            ],
+          ),
+        ),
+        SizedBox(height: PanelConstants.paddingDimension*2,),
+        widget
+      ],
+    );
   }
 }

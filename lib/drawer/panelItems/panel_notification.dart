@@ -1,5 +1,6 @@
 import 'package:es_flutter_component/constants.dart';
 import 'package:es_flutter_component/es_button/es_icon_button.dart';
+import 'package:es_flutter_component/es_button/es_information_button.dart';
 import 'package:es_flutter_component/es_button/es_loading_button.dart';
 import 'package:es_flutter_component/es_button/es_ordinary_button.dart';
 import 'package:es_flutter_component/es_dialog/es_awesome_dialog/es_autohide_dialog.dart';
@@ -31,27 +32,16 @@ class PanelNotification extends StatelessWidget {
   Widget build(BuildContext context) {
     String _data = AppLocalizations.of(context)!.samplButton;
     List list = [
-      Center(child:Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: EsDottedText(
-              data: AppLocalizations.of(context)!.simpleNotifications,
-              size: 20,
-              color: PanelConstants.itemColor,
-            ),
-          ),
-          EsOrdinaryButton(text: AppLocalizations.of(context)!.simpleNotifications,
-            onPressed: (){
+      _listItem(
+          EsOrdinaryButton(
+            text: AppLocalizations.of(context)!.simpleNotifications,
+            onPressed: () {
               // NotificationApi.showNotification();
-            ////////////////////////////
-            },),
-        ],
-      )),
-
-
-
-
+              ////////////////////////////
+            },
+          ),
+          AppLocalizations.of(context)!.simpleNotifications,
+          "information")
     ];
     return Material(
         color: PanelConstants.backGround,
@@ -59,12 +49,15 @@ class PanelNotification extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.symmetric(vertical:PanelConstants.paddingDimension),
+                padding: EdgeInsets.symmetric(
+                    vertical: PanelConstants.paddingDimension),
                 margin: EdgeInsets.all(PanelConstants.paddingDimension * 2),
 
                 width: double.maxFinite,
                 ////////////////////////
-                child: EsOrdinaryText(data: AppLocalizations.of(context)!.notificationsDescription,),
+                child: EsOrdinaryText(
+                  data: AppLocalizations.of(context)!.notificationsDescription,
+                ),
                 decoration: BoxDecoration(
                     color: PanelConstants.forGround,
                     borderRadius: BorderRadius.all(
@@ -77,26 +70,54 @@ class PanelNotification extends StatelessWidget {
                     color: PanelConstants.backGround,
                   ),
                   children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
+                      list.length, (index) => _boxShow(list[index])))
             ],
           ),
         ));
   }
 
-  Widget boxShow(Widget widget) {
+  Widget _boxShow(Widget widget) {
     return BootstrapCol(
         sizes: 'col-sm-12 col-ml-12 col-lg-4 col-xl-4',
         child: Container(
           padding: EdgeInsets.symmetric(
-              horizontal:PanelConstants.paddingDimension,
-              vertical:PanelConstants.paddingDimension*5,
-
+            horizontal: PanelConstants.paddingDimension,
+            vertical: PanelConstants.paddingDimension,
           ),
           margin: EdgeInsets.all(PanelConstants.paddingDimension),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(15)),
+              borderRadius: BorderRadius.all(
+                  Radius.circular(PanelConstants.paddingDimension * 2)),
               color: PanelConstants.forGround),
           child: widget,
         ));
+  }
+
+  Widget _listItem(Widget widget, String title, String information) {
+    return Center(
+        child: Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(bottom: 8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              EsDottedText(
+                data: title,
+                size: 20,
+                color: PanelConstants.itemColor,
+              ),
+              SizedBox(
+                height: PanelConstants.paddingDimension * 5,
+              ),
+              EsInformationButton(
+                dialogeText: information,
+              ),
+            ],
+          ),
+        ),
+        widget
+      ],
+    ));
   }
 }

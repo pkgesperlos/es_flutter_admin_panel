@@ -37,7 +37,7 @@ class PanelResponsiveTable extends StatelessWidget {
       ),
       margin: EdgeInsets.all(PanelConstants.paddingDimension),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(15)),
+          borderRadius: BorderRadius.all(Radius.circular(PanelConstants.paddingDimension*2)),
           color: PanelConstants.forGround),
       child: widget,
     );

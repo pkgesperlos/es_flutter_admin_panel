@@ -1,11 +1,10 @@
 import 'package:es_flutter_component/constants.dart';
-import 'package:es_flutter_component/es-chart/es-circle_graph.dart';
-import 'package:es_flutter_component/es-chart/es-pie-chart.dart';
-import 'package:es_flutter_component/es-chart/linear_graph.dart';
+import 'package:es_flutter_component/es-chart/es-circular_chart.dart';
+import 'package:es_flutter_component/es-chart/es-linear-chart.dart';
+import 'package:es_flutter_component/es-chart/es_bar_chart.dart';
+import 'package:es_flutter_component/es_button/es_information_button.dart';
+import 'package:es_flutter_component/es_button/es_ordinary_button.dart';
 
-import 'package:es_flutter_component/es_image/es_avatar_image.dart';
-import 'package:es_flutter_component/es_image/es_lightbox_showing_image.dart';
-import 'package:es_flutter_component/es_image/es_zooming_image.dart';
 import 'package:es_flutter_component/es_text/es_dotted_text.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_crm/images/panelConstants.dart';
@@ -23,49 +22,13 @@ class PanelChart extends StatelessWidget {
   Widget build(BuildContext context) {
     // String _data = AppLocalizations.of(context)!.samplButton;
     List list = [
-      Center(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: EsDottedText(
-                  data: AppLocalizations.of(context)!.barCharts,
-                  size: 20,
-                  color: PanelConstants.itemColor),
-            ),
-            EsLineargraph(
-            ),
-          ],
-        ),
-      ),
-      Center(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                child: EsDottedText(
-                  data: AppLocalizations.of(context)!.linearChart,
-                  size: 20,
-                  color: PanelConstants.itemColor,
-                ),
-              ),
-              EsPieChart()
-            ],
-          )),
-      Center(
-          child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: EsDottedText(
-              data: AppLocalizations.of(context)!.circularCharts,
-              size: 20,
-              color: PanelConstants.itemColor,
-            ),
-          ),
-          EsCircleGraph()
-        ],
-      )),
+
+      _listitem(EsBarChart(),AppLocalizations.of(context)!.barCharts,
+          "It is a bar chart located in: \n es_flutter_component>lib>es_chart>es_bar_chart.dart \n and is used as EsBarChart()"),
+      _listitem(EsLinearChart(),AppLocalizations.of(context)!.linearChart,
+          "It is a linear chart located in: \n es_flutter_component>lib>es_chart>es_linear_chart.dart \n and is used as EsLinearChart()"),
+      _listitem(EsCircularChart(),AppLocalizations.of(context)!.circularCharts,
+          "It is a circular chart located in: \n es_flutter_component>lib>es_chart>es_circular_chart.dart \n and is used as EsCircularChart()"),
 
     ];
     return Material(
@@ -107,13 +70,35 @@ class PanelChart extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.symmetric(
             horizontal: PanelConstants.paddingDimension,
-            vertical: PanelConstants.paddingDimension * 5,
+            vertical: PanelConstants.paddingDimension ,
           ),
           margin: EdgeInsets.all(PanelConstants.paddingDimension),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(15)),
+              borderRadius: BorderRadius.all(Radius.circular(PanelConstants.paddingDimension*2)),
               color: PanelConstants.forGround),
           child: widget,
         ));
+  }
+  Widget _listitem(Widget widget,String title, String information) {
+    return Center(
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: PanelConstants.paddingDimension/2),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                EsDottedText(
+                    data: title,
+                    size: 20,
+                    color: PanelConstants.itemColor),
+                EsInformationButton(dialogeText:information,),
+              ],
+            ),
+          ),
+          widget,
+        ],
+      ),
+    );
   }
 }

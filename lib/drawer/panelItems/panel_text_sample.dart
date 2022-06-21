@@ -1,4 +1,5 @@
 import 'package:es_flutter_component/constants.dart';
+import 'package:es_flutter_component/es_button/es_information_button.dart';
 import 'package:es_flutter_component/es_text/es_dotted_text.dart';
 import 'package:es_flutter_component/es_text/es_label_text.dart';
 import 'package:es_flutter_component/es_text/es_marked_text.dart';
@@ -19,16 +20,7 @@ class PanelTextSample extends StatelessWidget {
   Widget build(BuildContext context) {
     String _data = AppLocalizations.of(context)!.sampleText;
     List list = [
-      Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: EsDottedText(
-              data: AppLocalizations.of(context)!.titleText,
-              size: 20,
-              color: PanelConstants.itemColor,
-            ),
-          ),
+      _listItem(
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: List.generate(
@@ -37,26 +29,22 @@ class PanelTextSample extends StatelessWidget {
                       children: [
                         EsTitle(
                           data: _data,
-                          size: Constants.titleFontSize - index * 3,
+                          size: Constants.ordinaryFontSize - index * 2,
                         ),
                         SizedBox(
-                          height: PanelConstants.paddingDimension,
+                          height: PanelConstants.paddingDimension *
+                              (Constants.titleFontSize *
+                                  2.5 /
+                                  Constants.ordinaryFontSize),
                         )
                       ],
                     )),
           ),
-        ],
-      ),
-      Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: EsDottedText(
-              data: AppLocalizations.of(context)!.ordinaryText,
-              size: 20,
-              color: PanelConstants.itemColor,
-            ),
-          ),
+          AppLocalizations.of(context)!.titleText,
+          "It is a title located in: \n es_flutter_component>lib>es_text>es_title.dart \n and is used as: \n "
+              """EsTitle(data: _data,size: Constants.ordinaryFontSize, ),"""
+    ),
+      _listItem(
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: List.generate(
@@ -76,19 +64,11 @@ class PanelTextSample extends StatelessWidget {
                       ],
                     )),
           ),
-        ],
+          AppLocalizations.of(context)!.ordinaryText,
+          "It is ordinary text located in: \n es_flutter_component>lib>es_text>es_ordinary_text.dart \n and is used as: \n "
+              """EsOrdinaryText(data: _data,size: Constants.ordinaryFontSize, ),"""
       ),
-      Column(
-
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: EsDottedText(
-              data: AppLocalizations.of(context)!.dottedText,
-              size: 20,
-              color: PanelConstants.itemColor,
-            ),
-          ),
+      _listItem(
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: List.generate(
@@ -103,18 +83,11 @@ class PanelTextSample extends StatelessWidget {
                       ],
                     )),
           ),
-        ],
+          AppLocalizations.of(context)!.dottedText,
+          "It is a dotted text located in: \n es_flutter_component>lib>es_text>es_dotted_text.dart \n and is used as: \n "
+              """EsDottedText(data: _data,size: Constants.ordinaryFontSize, ),"""
       ),
-      Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: EsDottedText(
-              data: AppLocalizations.of(context)!.markedText,
-              size: 20,
-              color: PanelConstants.itemColor,
-            ),
-          ),
+      _listItem(
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: List.generate(
@@ -129,22 +102,15 @@ class PanelTextSample extends StatelessWidget {
                       ],
                     )),
           ),
-        ],
+          AppLocalizations.of(context)!.markedText,
+          "It is a marked text located in: \n es_flutter_component>lib>es_text>es_marked_text.dart \n and is used as: \n "
+              """EsMarkedText(data: _data,size: Constants.ordinaryFontSize, ),"""
       ),
-      Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: EsDottedText(
-              data: AppLocalizations.of(context)!.labledText,
-              size: 20,
-              color: PanelConstants.itemColor,
-            ),
-          ),
+      _listItem(
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: List.generate(
-                4,
+                3,
                 (index) => Column(
                       children: [
                         EsLableText(
@@ -152,15 +118,14 @@ class PanelTextSample extends StatelessWidget {
                           size: Constants.lableFontSize - index * 3,
                         ),
                         SizedBox(
-                          height: PanelConstants.paddingDimension *
-                              (Constants.titleFontSize *
-                                  3 /
-                                  Constants.ordinaryFontSize),
+                          height: PanelConstants.paddingDimension * .5,
                         )
                       ],
                     )),
           ),
-        ],
+          AppLocalizations.of(context)!.labledText,
+          "It is a labeled text located in: \n es_flutter_component>lib>es_text>es_labeled_text.dart \n and is used as: \n "
+              """EsLabeledText(data: _data,size: Constants.ordinaryFontSize, ),"""
       ),
     ];
     return Material(
@@ -169,12 +134,15 @@ class PanelTextSample extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.symmetric(vertical:PanelConstants.paddingDimension),
+                padding: EdgeInsets.symmetric(
+                    vertical: PanelConstants.paddingDimension),
                 margin: EdgeInsets.all(PanelConstants.paddingDimension * 2),
 
                 width: double.maxFinite,
                 ////////////////////////
-                child: EsOrdinaryText(data:AppLocalizations.of(context)!.textSampleDescription ,),
+                child: EsOrdinaryText(
+                  data: AppLocalizations.of(context)!.textSampleDescription,
+                ),
                 decoration: BoxDecoration(
                     color: PanelConstants.forGround,
                     borderRadius: BorderRadius.all(
@@ -195,14 +163,40 @@ class PanelTextSample extends StatelessWidget {
 
   Widget boxShow(Widget widget) {
     return BootstrapCol(
-        sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-4',
+        sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-6',
         child: Container(
           padding: EdgeInsets.all(PanelConstants.paddingDimension),
           margin: EdgeInsets.all(PanelConstants.paddingDimension),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(15)),
+              borderRadius: BorderRadius.all(
+                  Radius.circular(PanelConstants.paddingDimension * 2)),
               color: PanelConstants.forGround),
           child: widget,
         ));
+  }
+
+  Widget _listItem(Widget widget, String title, String information) {
+    return Column(
+      children: [
+        Padding(
+          padding:
+              const EdgeInsets.only(bottom: PanelConstants.paddingDimension),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              EsDottedText(
+                data: title,
+                size: 20,
+                color: PanelConstants.itemColor,
+              ),
+              EsInformationButton(
+                dialogeText: information,
+              ),
+            ],
+          ),
+        ),
+        widget
+      ],
+    );
   }
 }

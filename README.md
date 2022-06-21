@@ -83,8 +83,21 @@ child: Builder(
 builder: (context) => MaterialApp(
 
 
-#3-4:locale:Provider.of<LanguageChangeProvider>(context, listen: true).currentLocale,//change occurs in this line
+#2-4:locale:Provider.of<LanguageChangeProvider>(context, listen: true).currentLocale,//change occurs in this line
 debugShowCheckedModeBanner: false,...
+
+#2-5you can use this dropdown button get the language from user in your appbar or login or anywhere.
+EsDropDownButton(
+            items: ["English", "Persian"],
+            onTapItems: [
+              () {
+                context.read<LanguageChangeProvider>().changLocale("en");
+              },
+              () {
+                context.read<LanguageChangeProvider>().changLocale("fa");
+              }
+            ],
+          ),
 
 
 #3-How to responsive 

@@ -1,4 +1,5 @@
 import 'package:es_flutter_component/constants.dart';
+import 'package:es_flutter_component/es_button/es_information_button.dart';
 
 import 'package:es_flutter_component/es_slider/es_carousel_slider.dart';
 import 'package:es_flutter_component/es_slider/es_perspective_slider.dart';
@@ -41,17 +42,7 @@ class PanelSlider extends StatelessWidget {
       (index) => titleBox(index),
     );
     List list = [
-      Center(
-          child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: EsDottedText(
-              data: AppLocalizations.of(context)!.carouselSlider,
-              size: 20,
-              color: PanelConstants.itemColor,
-            ),
-          ),
+      _listItem(
           Container(
             child: EsCarouselSlider(
               itemList: widgetList,
@@ -59,19 +50,9 @@ class PanelSlider extends StatelessWidget {
             width: 300,
             height: 240,
           ),
-        ],
-      )),
-      Center(
-          child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: EsDottedText(
-              data: AppLocalizations.of(context)!.persPectiveSlider,
-              size: 20,
-              color: PanelConstants.itemColor,
-            ),
-          ),
+          AppLocalizations.of(context)!.carouselSlider,
+          "information"),
+      _listItem(
           Container(
             child: EsPerspectiveSlider(
               itemList: widgetList,
@@ -79,8 +60,8 @@ class PanelSlider extends StatelessWidget {
             width: 300,
             height: 240,
           ),
-        ],
-      )),
+          AppLocalizations.of(context)!.perspectiveSlider,
+          "information"),
     ];
     return Material(
         color: PanelConstants.backGround,
@@ -107,25 +88,56 @@ class PanelSlider extends StatelessWidget {
                     color: PanelConstants.backGround,
                   ),
                   children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
+                      list.length, (index) => _boxShow(list[index])))
             ],
           ),
         ));
   }
 
-  Widget boxShow(Widget widget) {
+  Widget _boxShow(Widget widget) {
     return BootstrapCol(
         sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-6',
         child: Container(
           padding: EdgeInsets.symmetric(
             horizontal: PanelConstants.paddingDimension,
-            vertical: PanelConstants.paddingDimension * 5,
+            vertical: PanelConstants.paddingDimension,
           ),
           margin: EdgeInsets.all(PanelConstants.paddingDimension),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(15)),
+              borderRadius: BorderRadius.all(
+                  Radius.circular(PanelConstants.paddingDimension * 2)),
               color: PanelConstants.forGround),
           child: widget,
         ));
+  }
+
+  Widget _listItem(Widget widget, String title, String information) {
+    return Center(
+        child: Column(
+      children: [
+        Padding(
+          padding:
+              const EdgeInsets.only(bottom: PanelConstants.paddingDimension),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              EsDottedText(
+                data: title,
+                size: 20,
+                color: PanelConstants.itemColor,
+              ),
+
+              EsInformationButton(
+                dialogeText: information,
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: PanelConstants.paddingDimension * 2,
+        ),
+        widget
+      ],
+    ));
   }
 }

@@ -109,15 +109,15 @@
   "checkBoxErrorText": "متن ارور چک باکس",
   "checkBoxButtonText": "دخیره",
 
-//  "dropDownButtonItemfirst": "اول",
-//  "dropDownButtonItemsecond": "دوم",
-//  "dropDownButtonItemthird": "سوم",
+  "dropDown1": "First Item",
+  "dropDown2": "Second Item",
+  "dropDown3": "Third Item",
 
   "toggleButton": "دکمه تغییر وضعیت",
 
   "slider": "اسلایدر",
   "carouselSlider": "اسلایدر کاروسل",
-  "persPectiveSlider": "اسلایدر پرسپکتیو",
+  "perspectiveSlider": "اسلایدر پرسپکتیو",
 
   "progressBar": "نوار پیشرفت",
   "linearProgressBar": "نوار پیشرفت خطی",
@@ -127,7 +127,7 @@
 
   "images": "تصاویر",
   "zoomingImages": "تصویر با قابلیت بزرگنمایی",
-  "lightBixShowingImages": "Light Box Showing Image",
+  "lightBoxShowingImage": "Light Box Showing Image",
   "avatarImages": "تصویر در قالب آواتار",
 
   "tables": "جداول",
