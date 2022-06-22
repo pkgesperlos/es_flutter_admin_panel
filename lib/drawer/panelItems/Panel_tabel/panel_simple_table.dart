@@ -1,9 +1,7 @@
 
 import 'package:es_flutter_component/es_table/es_simple_table.dart';
 import 'package:es_flutter_crm/images/panelConstants.dart';
-
 import 'package:flutter/material.dart';
-
 import '../../../images/panelConstants.dart';
 
 class PanelSimpleTable extends StatelessWidget {
@@ -11,12 +9,6 @@ class PanelSimpleTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // String _data = AppLocalizations.of(context)!.samplButton;
-
-
-
-      
-
     return Material(
         color: PanelConstants.backGround,
         child: Container(

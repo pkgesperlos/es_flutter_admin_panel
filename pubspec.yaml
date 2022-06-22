@@ -36,12 +36,12 @@ dependencies:
   fl_chart: ^0.50.6
   provider: 6.0.3
   flutter_bootstrap: ^2.0.0
-  es_flutter_component:
-    git:
-      url: ssh://git@gitlab.com/haniehhojjatzadeh/es_flutter_component.git
-      ref: main # branch name
 #  es_flutter_component:
 #    git:
+#      url: ssh://git@gitlab.com/haniehhojjatzadeh/es_flutter_component.git
+#      ref: main # branch name
+  es_flutter_component:
+    git: git@github.com:pkgesperlos/es_flutter_component.git
 #      url: ssh://git@github.com:pkgesperlos/es_flutter_component.git
 #      ref: main # branch name
   flutter_localizations:
