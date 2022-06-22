@@ -124,7 +124,7 @@ else should set pages in A (buttonInfo is a function with properties of page.))
 We divided all font,sizes, and colors into two section :
 
 1-es_flutter_components/Constants.dart//include the  font,sizes, and colors parameters of Components.
-2-es_flutter_CRM/PanelConstants.dart//include the  sizes, and colors parameters of Panel.
+2-es_flutter_admin_panel/PanelConstants.dart//include the  sizes, and colors parameters of Panel.
 
 
 

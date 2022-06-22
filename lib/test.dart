@@ -1,5 +1,5 @@
 
-import 'package:es_flutter_crm/es_form.dart';
+import 'package:es_flutter_admin_panel/es_form.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

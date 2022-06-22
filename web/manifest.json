@@ -1,6 +1,6 @@
 {
-    "name": "es_flutter_crm",
-    "short_name": "es_flutter_crm",
+    "name": "es_flutter_admin_panel",
+    "short_name": "es_flutter_admin_panel",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

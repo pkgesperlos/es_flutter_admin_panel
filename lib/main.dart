@@ -1,10 +1,10 @@
 // import 'package:es_flutter_component/es_form/es_file_picker.dart';
-import 'package:es_flutter_crm/drawer/panelItems/panel_chart.dart';
-import 'package:es_flutter_crm/drawer/panelItems/panel_dialog_box.dart';
-import 'package:es_flutter_crm/drawer/panelItems/panel_progressbar.dart';
-import 'package:es_flutter_crm/es_form.dart';
-import 'package:es_flutter_crm/images/widget_tree_panel.dart';
-import 'package:es_flutter_crm/language_change_provider.dart';
+import 'package:es_flutter_admin_panel/drawer/panelItems/panel_chart.dart';
+import 'package:es_flutter_admin_panel/drawer/panelItems/panel_dialog_box.dart';
+import 'package:es_flutter_admin_panel/drawer/panelItems/panel_progressbar.dart';
+import 'package:es_flutter_admin_panel/es_form.dart';
+import 'package:es_flutter_admin_panel/images/widget_tree_panel.dart';
+import 'package:es_flutter_admin_panel/language_change_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';

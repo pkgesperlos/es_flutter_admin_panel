@@ -6,7 +6,7 @@ import 'package:es_flutter_component/es_image/es_lightbox_showing_image.dart';
 import 'package:es_flutter_component/es_image/es_zooming_image.dart';
 import 'package:es_flutter_component/es_text/es_dotted_text.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_crm/images/panelConstants.dart';
+import 'package:es_flutter_admin_panel/images/panelConstants.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';

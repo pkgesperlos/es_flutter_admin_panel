@@ -1,7 +1,7 @@
 
 import 'package:es_flutter_component/es_table/es_simple_table.dart';
-import 'package:es_flutter_crm/drawer/panelItems/panel_chart.dart';
-import 'package:es_flutter_crm/drawer/panelItems/panel_text_sample.dart';
+import 'package:es_flutter_admin_panel/drawer/panelItems/panel_chart.dart';
+import 'package:es_flutter_admin_panel/drawer/panelItems/panel_text_sample.dart';
 import 'package:flutter/material.dart';
 
 

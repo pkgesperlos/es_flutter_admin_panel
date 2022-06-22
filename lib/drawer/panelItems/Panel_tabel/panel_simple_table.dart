@@ -1,6 +1,6 @@
 
 import 'package:es_flutter_component/es_table/es_simple_table.dart';
-import 'package:es_flutter_crm/images/panelConstants.dart';
+import 'package:es_flutter_admin_panel/images/panelConstants.dart';
 import 'package:flutter/material.dart';
 import '../../../images/panelConstants.dart';
 
