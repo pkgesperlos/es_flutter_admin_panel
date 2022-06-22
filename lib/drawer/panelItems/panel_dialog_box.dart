@@ -199,7 +199,7 @@ class PanelDialogBox extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 EsDottedText(
-                    data: title, size: 20, color: PanelConstants.itemColor),
+                    data: title, size: 15, color: PanelConstants.itemColor),
                 EsInformationButton(
                   dialogeText: information,
                 ),

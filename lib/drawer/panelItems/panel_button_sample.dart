@@ -167,7 +167,7 @@ class PanelButtonSample extends StatelessWidget {
             children: [
               EsDottedText(
                 data: title,
-                size: 20,
+                size: 15,
                 color: PanelConstants.itemColor,
               ),
               EsInformationButton(dialogeText: information,),

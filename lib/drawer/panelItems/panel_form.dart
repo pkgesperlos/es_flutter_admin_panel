@@ -272,12 +272,13 @@ class PanelForm extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 8.0),
                 child: EsDottedText(
                   data: title,
-                  size: 20,
+                  size: 15,
                   color: PanelConstants.itemColor,
                 ),
               ),
               EsInformationButton(
                 dialogeText: information,
+
               ),
             ],
           ),

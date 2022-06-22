@@ -26,13 +26,18 @@ class PanelProgressBar extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
       decoration: BoxDecoration(
-        color: PanelConstants.itemColor,
-        borderRadius: BorderRadius.all(Radius.circular(PanelConstants.paddingDimension))
+          color: PanelConstants.itemColor,
+          borderRadius: BorderRadius.all(
+              Radius.circular(PanelConstants.paddingDimension))),
+      child: Center(
+        child: EsLableText(
+          data: index.toString(),
+          color: PanelConstants.itemcoupleColor,
+        ),
       ),
-     child: Center(child: EsLableText(data: index.toString(),color: PanelConstants.itemcoupleColor,),),
     );
   }
-  
+
   const PanelProgressBar({Key? key}) : super(key: key);
 
   @override
@@ -40,19 +45,19 @@ class PanelProgressBar extends StatelessWidget {
     // String _data = AppLocalizations.of(context)!.samplButton;
     List<Widget> widgetList = List.generate(
       20,
-          (index) => titleBox(index),
+      (index) => titleBox(index),
     );
     List list = [
       _listItem(EsLinearProgressbar(),
-          AppLocalizations.of(context)!.linearProgressBar, "information"),
+          AppLocalizations.of(context)!.linearProgressBar,
+          "It is a linear progress bar located in: \n es_flutter_component>lib>es_progressbar>es_linear_progressbar.dart \n and is used as: \n "
+              """EsLinearProgressbar()"""
+      ),
       _listItem(EsCircularProgressbar(),
-          AppLocalizations.of(context)!.circularProgressBar, "information")
-
-
-
-
-
-      
+          AppLocalizations.of(context)!.circularProgressBar,
+          "It is a circular progress bar located in: \n es_flutter_component>lib>es_progressbar>es_circular_progressbar.dart \n and is used as: \n "
+              """EsCircularProgressbar()"""
+      )
     ];
     return Material(
         color: PanelConstants.backGround,
@@ -60,12 +65,15 @@ class PanelProgressBar extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.symmetric(vertical:PanelConstants.paddingDimension),
+                padding: EdgeInsets.symmetric(
+                    vertical: PanelConstants.paddingDimension),
                 margin: EdgeInsets.all(PanelConstants.paddingDimension * 2),
 
                 width: double.maxFinite,
                 ////////////////////////
-                child: EsOrdinaryText(data: AppLocalizations.of(context)!.progressBarDescription,),
+                child: EsOrdinaryText(
+                  data: AppLocalizations.of(context)!.progressBarDescription,
+                ),
                 decoration: BoxDecoration(
                     color: PanelConstants.forGround,
                     borderRadius: BorderRadius.all(
@@ -90,37 +98,42 @@ class PanelProgressBar extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.symmetric(
             horizontal: PanelConstants.paddingDimension,
-            vertical: PanelConstants.paddingDimension ,
+            vertical: PanelConstants.paddingDimension,
           ),
           margin: EdgeInsets.all(PanelConstants.paddingDimension),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(PanelConstants.paddingDimension*2)),
+              borderRadius: BorderRadius.all(
+                  Radius.circular(PanelConstants.paddingDimension * 2)),
               color: PanelConstants.forGround),
           child: widget,
         ));
   }
-  Widget _listItem(Widget widget,String title,String information) {
+
+  Widget _listItem(Widget widget, String title, String information) {
     return Center(
-        child:Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  EsDottedText(data:title,
-                    size: 20,color: PanelConstants.itemColor,),
-                  SizedBox(
-                    height: PanelConstants.paddingDimension * 10,
-                  ),
-                  EsInformationButton(
-                    dialogeText: information,
-                  ),
-                ],
+        child: Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(bottom: 8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              EsDottedText(
+                data: title,
+                size: 15,
+                color: PanelConstants.itemColor,
               ),
-            ),
-            widget,
-          ],
-        ));
+              SizedBox(
+                height: PanelConstants.paddingDimension * 10,
+              ),
+              EsInformationButton(
+                dialogeText: information,
+              ),
+            ],
+          ),
+        ),
+        widget,
+      ],
+    ));
   }
 }

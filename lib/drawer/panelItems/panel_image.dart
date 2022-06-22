@@ -26,7 +26,10 @@ class PanelImage extends StatelessWidget {
             radius: 100,
           ),
           AppLocalizations.of(context)!.avatarImages,
-          "information"),
+          "It is an avatar image located in: \n es_flutter_component>lib>es_image>es_avatar_image.dart \n and is used as: \n "
+              """EsAvatarImage(
+            path: "assets/images/img1.jpg",)"""
+      ),
       _listItem(
           Container(
             child: EsZoomingImage(
@@ -36,7 +39,10 @@ class PanelImage extends StatelessWidget {
             height: 240,
           ),
           AppLocalizations.of(context)!.zoomingImages,
-          "information"),
+          "It is a zooming image located in: \n es_flutter_component>lib>es_image>es_zooming_image.dart \n and is used as: \n "
+              """EsZoomingImage(
+              img: AssetImage("assets/images/img1.jpg"), )"""
+      ),
       _listItem(
           Container(
             child: Container(
@@ -50,7 +56,10 @@ class PanelImage extends StatelessWidget {
             height: 240,
           ),
           AppLocalizations.of(context)!.lightBoxShowingImage,
-          "information"),
+          "It is a light box showing image located in: \n es_flutter_component>lib>es_image>es_lightbox_showing_image.dart \n and is used as: \n "
+              """EsLightBoxShowing(
+                path: "assets/images/img1.jpg",)"""
+      ),
     ];
     return Material(
         color: PanelConstants.backGround,
@@ -113,7 +122,7 @@ class PanelImage extends StatelessWidget {
                 padding: const EdgeInsets.only(
                     bottom: PanelConstants.paddingDimension),
                 child: EsDottedText(
-                    data: title, size: 20, color: PanelConstants.itemColor),
+                    data: title, size: 15, color: PanelConstants.itemColor),
               ),
               EsInformationButton(
                 dialogeText: information,

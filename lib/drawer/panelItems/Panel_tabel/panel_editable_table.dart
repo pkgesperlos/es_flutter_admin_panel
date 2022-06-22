@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../images/panelConstants.dart';
+import '../../../images/panelConstants.dart';
 
 class PanelEditableTable extends StatelessWidget {
   const PanelEditableTable({Key? key}) : super(key: key);

@@ -51,7 +51,10 @@ class PanelSlider extends StatelessWidget {
             height: 240,
           ),
           AppLocalizations.of(context)!.carouselSlider,
-          "information"),
+          "It is a carousel slider located in: \n es_flutter_component>lib>es_slider>es_carousel_slider.dart \n and is used as: \n "
+              """EsCarouselSlider(
+              itemList: widgetList,)"""
+      ),
       _listItem(
           Container(
             child: EsPerspectiveSlider(
@@ -61,7 +64,10 @@ class PanelSlider extends StatelessWidget {
             height: 240,
           ),
           AppLocalizations.of(context)!.perspectiveSlider,
-          "information"),
+          "It is a perspective slider located in: \n es_flutter_component>lib>es_slider>es_perspective_slider.dart \n and is used as: \n "
+              """EsPerspectiveSlider(
+              itemList: widgetList,)"""
+      ),
     ];
     return Material(
         color: PanelConstants.backGround,
@@ -123,7 +129,7 @@ class PanelSlider extends StatelessWidget {
             children: [
               EsDottedText(
                 data: title,
-                size: 20,
+                size:15,
                 color: PanelConstants.itemColor,
               ),
 

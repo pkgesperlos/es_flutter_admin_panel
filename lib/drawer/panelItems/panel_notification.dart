@@ -36,12 +36,16 @@ class PanelNotification extends StatelessWidget {
           EsOrdinaryButton(
             text: AppLocalizations.of(context)!.simpleNotifications,
             onPressed: () {
-              // NotificationApi.showNotification();
-              ////////////////////////////
+              NotificationApi.showNotification();
             },
           ),
           AppLocalizations.of(context)!.simpleNotifications,
-          "information")
+          "It is an ordinary notification located in: \n es_flutter_component>lib>es_notification>es_ordinary_notification.dart \n and is used as: \n "
+              """EsOrdinaryButton(
+            text: AppLocalizations.of(context)!.simpleNotifications,
+            onPressed: () {
+              NotificationApi.showNotification(); },),"""
+      )
     ];
     return Material(
         color: PanelConstants.backGround,
@@ -104,7 +108,7 @@ class PanelNotification extends StatelessWidget {
             children: [
               EsDottedText(
                 data: title,
-                size: 20,
+                size: 15,
                 color: PanelConstants.itemColor,
               ),
               SizedBox(

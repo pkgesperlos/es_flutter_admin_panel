@@ -10,12 +10,12 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
-import 'drawer/panelItems/panel_editable_table.dart';
+import 'drawer/panelItems/Panel_tabel/panel_editable_table.dart';
 import 'drawer/panelItems/panel_form.dart';
 import 'drawer/panelItems/panel_image.dart';
 import 'drawer/panelItems/panel_notification.dart';
 import 'drawer/panelItems/panel_slider.dart';
-import 'drawer/panelItems/panel_simple_table.dart';
+import 'drawer/panelItems/Panel_tabel/panel_simple_table.dart';
 import 'drawer/panelItems/panel_text_sample.dart';
 
 void main() {
