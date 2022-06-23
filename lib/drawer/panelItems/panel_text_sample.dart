@@ -1,3 +1,4 @@
+import 'package:es_flutter_admin_panel/drawer/panelItems/container_items.dart';
 import 'package:es_flutter_component/constants.dart';
 import 'package:es_flutter_component/es_button/es_information_button.dart';
 import 'package:es_flutter_component/es_text/es_dotted_text.dart';
@@ -20,8 +21,8 @@ class PanelTextSample extends StatelessWidget {
   Widget build(BuildContext context) {
     String _data = AppLocalizations.of(context)!.sampleText;
     List list = [
-      _listItem(
-          Column(
+      ContainerItems(
+          widget:Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: List.generate(
                 5,
@@ -40,12 +41,12 @@ class PanelTextSample extends StatelessWidget {
                       ],
                     )),
           ),
-          AppLocalizations.of(context)!.titleText,
-          "It is a title located in: \n es_flutter_component>lib>es_text>es_title.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.titleText,
+          information:"It is a title located in: \n es_flutter_component>lib>es_text>es_title.dart \n and is used as: \n "
               """EsTitle(data: _data,size: Constants.ordinaryFontSize, ),"""
     ),
-      _listItem(
-          Column(
+      ContainerItems(
+          widget:Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: List.generate(
                 5,
@@ -64,15 +65,15 @@ class PanelTextSample extends StatelessWidget {
                       ],
                     )),
           ),
-          AppLocalizations.of(context)!.ordinaryText,
-          "It is ordinary text located in: \n es_flutter_component>lib>es_text>es_ordinary_text.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.ordinaryText,
+          information:"It is ordinary text located in: \n es_flutter_component>lib>es_text>es_ordinary_text.dart \n and is used as: \n "
               """EsOrdinaryText(data: _data,size: Constants.ordinaryFontSize, ),"""
       ),
-      _listItem(
-          Column(
+      ContainerItems(
+          widget:Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: List.generate(
-                5,
+                3,
                 (index) => Column(
                       children: [
                         EsDottedText(
@@ -83,15 +84,15 @@ class PanelTextSample extends StatelessWidget {
                       ],
                     )),
           ),
-          AppLocalizations.of(context)!.dottedText,
-          "It is a dotted text located in: \n es_flutter_component>lib>es_text>es_dotted_text.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.dottedText,
+          information:"It is a dotted text located in: \n es_flutter_component>lib>es_text>es_dotted_text.dart \n and is used as: \n "
               """EsDottedText(data: _data,size: Constants.ordinaryFontSize, ),"""
       ),
-      _listItem(
-          Column(
+      ContainerItems(
+          widget:Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: List.generate(
-                5,
+                3,
                 (index) => Column(
                       children: [
                         EsMarkedText(
@@ -102,12 +103,12 @@ class PanelTextSample extends StatelessWidget {
                       ],
                     )),
           ),
-          AppLocalizations.of(context)!.markedText,
-          "It is a marked text located in: \n es_flutter_component>lib>es_text>es_marked_text.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.markedText,
+          information:"It is a marked text located in: \n es_flutter_component>lib>es_text>es_marked_text.dart \n and is used as: \n "
               """EsMarkedText(data: _data,size: Constants.ordinaryFontSize, ),"""
       ),
-      _listItem(
-          Column(
+      ContainerItems(
+          widget:Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: List.generate(
                 3,
@@ -123,8 +124,8 @@ class PanelTextSample extends StatelessWidget {
                       ],
                     )),
           ),
-          AppLocalizations.of(context)!.labledText,
-          "It is a labeled text located in: \n es_flutter_component>lib>es_text>es_labeled_text.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.labledText,
+          information:"It is a labeled text located in: \n es_flutter_component>lib>es_text>es_labeled_text.dart \n and is used as: \n "
               """EsLabeledText(data: _data,size: Constants.ordinaryFontSize, ),"""
       ),
     ];

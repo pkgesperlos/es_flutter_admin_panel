@@ -5,6 +5,7 @@ import 'package:es_flutter_admin_panel/drawer/panelItems/panel_progressbar.dart'
 import 'package:es_flutter_admin_panel/es_form.dart';
 import 'package:es_flutter_admin_panel/images/widget_tree_panel.dart';
 import 'package:es_flutter_admin_panel/language_change_provider.dart';
+import 'package:es_flutter_admin_panel/my_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -81,21 +82,25 @@ class _MyApp extends State<MyApp> {
 
                 initialRoute: '/',
                 routes: {
+                   '/': (context) => WidgetTreePanel(),
+                  // '/': (context) => MyDrawer(child: PanelChart(),),
+                  '/chart': (context) => MyDrawer(child: PanelChart(),),
+                  '/form': (context) => MyDrawer(child: PanelForm(),),
+                  '/progressbar': (context) => MyDrawer(child: PanelProgressBar(),),
 
-                  '/': (context) => WidgetTreePanel(),
-                  '/notification': (context) => PanelNotification(),
-                  '/chart': (context) => PanelChart(),
-                  '/responsiveTable': (context) => PanelEditableTable(),
-                  '/editableTable': (context) => PanelEditableTable(),
-                  '/simpleTable': (context) => PanelSimpleTable(),
-                  '/progressbar': (context) => PanelProgressBar(),
-                  '/slider': (context) => PanelSlider(),
-                  '/image': (context) => PanelImage(),
-                  '/form': (context) => PanelForm(),
-                  '/dialog': (context) => PanelDialogBox(),
-                  '/textSample': (context) => PanelTextSample(),
-                  '/buttonSample': (context) => PanelTextSample(),
-                  '/login': (context) => EsForm(),
+                //   '/notification': (context) => PanelNotification(),
+                //   '/chart': (context) => PanelChart(),
+                //   '/responsiveTable': (context) => PanelEditableTable(),
+                //   '/editableTable': (context) => PanelEditableTable(),
+                //   '/simpleTable': (context) => PanelSimpleTable(),
+                //   '/progressbar': (context) => PanelProgressBar(),
+                //   '/slider': (context) => PanelSlider(),
+                //   '/image': (context) => PanelImage(),
+                //   '/form': (context) => PanelForm(),
+                //   '/dialog': (context) => PanelDialogBox(),
+                //   '/textSample': (context) => PanelTextSample(),
+                //   '/buttonSample': (context) => PanelTextSample(),
+                //   '/login': (context) => EsForm(),
                 },
                 // home:EsSimpleTable(),
               )),

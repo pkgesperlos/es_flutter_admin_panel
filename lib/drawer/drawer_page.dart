@@ -34,6 +34,7 @@ class buttonsInfo {
       required this.page,
       required this.pageRout});
 }
+
 //index of drawer item
 int _currentIndex = 0;
 //index of accardion item of drawer item
@@ -131,6 +132,38 @@ class _DrawerPageState extends State<DrawerPage> {
     for (int i = 0; i < _buttonNames.length; i++) {
       _acardionList.add(_buttonNames[i].length != 1 ? 1 : 0);
     }
+    Widget drawerItems(item, index,currentIndex,bool con) {
+      return Container(
+        padding: EdgeInsets.only(
+            right: PanelConstants.paddingDimension / 3,
+            left: PanelConstants.paddingDimension / 10),
+        child: Row(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(PanelConstants.paddingDimension / 2),
+              child: Icon(
+                item.icon,
+                size: 20,
+                // _buttonNames2[index][0].icon,
+                color: con
+                    ? PanelConstants.drawerSelectColor1
+                    : PanelConstants.drawerFontColor,
+              ),
+            ),
+            EsOrdinaryText(
+              // data: _buttonNames2[index][0].title,
+              data: item.title,
+              color: con
+                  ? PanelConstants.drawerSelectColor1
+                  : PanelConstants.drawerFontColor,
+              // style: TextStyle(color: Colors.white),
+            ),
+          ],
+        ),
+        decoration:
+            BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(PanelConstants.paddingDimension))),
+      );
+    }
 
     return Drawer(
       child: Container(
@@ -177,57 +210,23 @@ class _DrawerPageState extends State<DrawerPage> {
                               Container(
                                 //deside if the item is selected or not
                                 decoration: (index == _currentIndex)
-                                    ? BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                        border: Border.all(
-                                            color: PanelConstants
-                                                .drawerSelectColor1,
-                                            width: 3),
-                                        // gradient: LinearGradient(colors: [
-                                        //   PanelConstants.drawerSelectColor2
-                                        //       .withOpacity(0.9),
-                                        //   PanelConstants.drawerSelectColor1
-                                        //       .withOpacity(0.9),
-                                        // ])
-                                      )
+                                    ? selectedBoxDecoration()
                                     : null,
-                                child: ListTile(
-                                  title: EsOrdinaryText(
-                                    // data: _buttonNames2[index][0].title,
-                                    data: _buttonNames[index][0].title,
-                                    color: (index == _currentIndex)
-                                        ? PanelConstants.drawerSelectColor1
-                                        : PanelConstants.drawerFontColor,
-                                    // style: TextStyle(color: Colors.white),
-                                  ),
-                                  leading: Padding(
-                                    padding: EdgeInsets.all(
-                                        PanelConstants.paddingDimension),
-                                    child: Icon(
-                                      _buttonNames[index][0].icon,
-                                      // _buttonNames2[index][0].icon,
-                                      color: (index == _currentIndex)
-                                          ? PanelConstants.drawerSelectColor1
-                                          : PanelConstants.drawerFontColor,
-                                    ),
+                                child: GestureDetector(
+                                  child: drawerItems(
+                                      _buttonNames[index][0], index,_currentIndex,
+                                      (index == _currentIndex)
                                   ),
                                   onTap: () {
                                     setState(() {
                                       _currentIndex = index;
 
-                                      !ResponsiveLayot.isComputer(context)
-                                          // ? Navigator.pushNamed(context,
-                                          //     _buttonNames[index][0].pageRout)
-                                          ? CenterScreen.globalKey.currentState
-                                              ?.changePage(
-                                                  _buttonNames[index][0].page)
-                                          : CenterScreen.globalKey.currentState
+                                           CenterScreen.globalKey.currentState
                                               ?.changePage(
                                                   _buttonNames[index][0].page);
+
                                     });
                                   },
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20)),
                                 ),
                               ),
                               Divider(
@@ -248,11 +247,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                 //         ]))
                                 //     : null,
                                 child: ExpansionTile(
-                                  title: ListTile(
-                                    title: EsOrdinaryText(
-                                      data: _buttonNames[index][0],
-                                      // style: TextStyle(color: Colors.white),
-                                    ),
+                                  title: Row(
+                                    children: [
+                                      EsOrdinaryText(
+                                        data: _buttonNames[index][0],
+                                        // style: TextStyle(color: Colors.white),
+                                      ),
+                                    ],
                                   ),
                                   children: [
                                     ...List.generate(
@@ -262,78 +263,46 @@ class _DrawerPageState extends State<DrawerPage> {
                                               children: [
                                                 Container(
                                                   //deside if the item is selected or not
-                                                  decoration: (index2 ==
-                                                              _currentIndex2 &&
-                                                          _acardionList[
-                                                                  _currentIndex] !=
-                                                              0)
-                                                      ? BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(20),
-                                                          border: Border.all(
-                                                              color: PanelConstants
-                                                                  .drawerSelectColor1,
-                                                              width: 3),
-                                                          // gradient:
-                                                          //     LinearGradient(
-                                                          //         colors: [
-                                                          //       PanelConstants
-                                                          //           .drawerSelectColor2
-                                                          //           .withOpacity(
-                                                          //               0.9),
-                                                          //       PanelConstants
-                                                          //           .drawerSelectColor1
-                                                          //           .withOpacity(
-                                                          //               0.9),
-                                                          //     ])
-                                                        )
+                                                  decoration: (index2 == _currentIndex2 &&
+                                                          _acardionList[_currentIndex] != 0)
+                                                      ? selectedBoxDecoration()
                                                       : null,
-                                                  child: ListTile(
-                                                    title: EsOrdinaryText(
-                                                      data: _buttonNames[index]
-                                                              [index2 + 1]
-                                                          .title,
-                                                      color: (index2 ==
-                                                                  _currentIndex2 &&
-                                                              _acardionList[
-                                                                      _currentIndex] !=
-                                                                  0)
-                                                          ? PanelConstants
-                                                              .drawerSelectColor1
-                                                          : PanelConstants
-                                                              .drawerFontColor,
-                                                    ),
-                                                    leading: Padding(
-                                                      padding: EdgeInsets.all(
-                                                          PanelConstants
-                                                              .paddingDimension),
-                                                      child: Icon(
+                                                  child: GestureDetector(
+                                                    child: drawerItems(
                                                         _buttonNames[index]
-                                                                [index2 + 1]
-                                                            .icon,
-                                                        color: (index2 ==
-                                                                    _currentIndex2 &&
-                                                                _acardionList[
-                                                                        _currentIndex] !=
-                                                                    0)
-                                                            ? PanelConstants
-                                                                .drawerSelectColor1
-                                                            : PanelConstants
-                                                                .drawerFontColor,
-                                                      ),
+                                                            [index2 + 1],
+                                                        index2,_currentIndex2,
+                                                        index2 == _currentIndex2 &&
+                                                            _acardionList[_currentIndex] != 0
                                                     ),
+                                                    // leading: Padding(
+                                                    //   padding: EdgeInsets.all(
+                                                    //       PanelConstants
+                                                    //           .paddingDimension),
+                                                    //   child: Icon(
+                                                    //     _buttonNames[index]
+                                                    //             [index2 + 1]
+                                                    //         .icon,
+                                                    //     color: (index2 ==
+                                                    //                 _currentIndex2 &&
+                                                    //             _acardionList[
+                                                    //                     _currentIndex] !=
+                                                    //                 0)
+                                                    //         ? PanelConstants
+                                                    //             .drawerSelectColor1
+                                                    //         : PanelConstants
+                                                    //             .drawerFontColor,
+                                                    //   ),
+                                                    // ),
                                                     onTap: () {
                                                       setState(() {
                                                         _currentIndex2 = index2;
                                                         _currentIndex = index;
 
-                                                        !ResponsiveLayot
-                                                                .isComputer(
-                                                                    context)
+
                                                             // ? Navigator.pushNamed(
                                                             //     context, '/login')
-                                                            ? CenterScreen
+                                                             CenterScreen
                                                                 .globalKey
                                                                 .currentState
                                                                 ?.changePage(_buttonNames[
@@ -341,24 +310,10 @@ class _DrawerPageState extends State<DrawerPage> {
                                                                         [
                                                                         index2 +
                                                                             1]
-                                                                    .page)
-                                                            : CenterScreen
-                                                                .globalKey
-                                                                .currentState
-                                                                ?.changePage(
-                                                                    _buttonNames[index]
-                                                                            [
-                                                                            index2 +
-                                                                                1]
-                                                                        .page);
+                                                                    .page);
+
                                                       });
                                                     },
-                                                    shape:
-                                                        RoundedRectangleBorder(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        20)),
                                                   ),
                                                 ),
                                                 Divider(
@@ -382,6 +337,19 @@ class _DrawerPageState extends State<DrawerPage> {
           ),
         ),
       ),
+    );
+  }
+
+  BoxDecoration selectedBoxDecoration() {
+    return BoxDecoration(
+      borderRadius: BorderRadius.circular(20),
+      border: Border.all(color: PanelConstants.drawerSelectColor1, width: 2),
+      // gradient: LinearGradient(colors: [
+      //   PanelConstants.drawerSelectColor2
+      //       .withOpacity(0.9),
+      //   PanelConstants.drawerSelectColor1
+      //       .withOpacity(0.9),
+      // ])
     );
   }
 }

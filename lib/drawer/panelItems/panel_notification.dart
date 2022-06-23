@@ -1,3 +1,4 @@
+import 'package:es_flutter_admin_panel/drawer/panelItems/container_items.dart';
 import 'package:es_flutter_component/constants.dart';
 import 'package:es_flutter_component/es_button/es_icon_button.dart';
 import 'package:es_flutter_component/es_button/es_information_button.dart';
@@ -32,15 +33,15 @@ class PanelNotification extends StatelessWidget {
   Widget build(BuildContext context) {
     String _data = AppLocalizations.of(context)!.samplButton;
     List list = [
-      _listItem(
-          EsOrdinaryButton(
+      ContainerItems(
+          widget:EsOrdinaryButton(
             text: AppLocalizations.of(context)!.simpleNotifications,
             onPressed: () {
               NotificationApi.showNotification();
             },
           ),
-          AppLocalizations.of(context)!.simpleNotifications,
-          "It is an ordinary notification located in: \n es_flutter_component>lib>es_notification>es_ordinary_notification.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.simpleNotifications,
+          information:"It is an ordinary notification located in: \n es_flutter_component>lib>es_notification>es_ordinary_notification.dart \n and is used as: \n "
               """EsOrdinaryButton(
             text: AppLocalizations.of(context)!.simpleNotifications,
             onPressed: () {
@@ -97,31 +98,4 @@ class PanelNotification extends StatelessWidget {
         ));
   }
 
-  Widget _listItem(Widget widget, String title, String information) {
-    return Center(
-        child: Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(bottom: 8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              EsDottedText(
-                data: title,
-                size: 15,
-                color: PanelConstants.itemColor,
-              ),
-              SizedBox(
-                height: PanelConstants.paddingDimension * 5,
-              ),
-              EsInformationButton(
-                dialogeText: information,
-              ),
-            ],
-          ),
-        ),
-        widget
-      ],
-    ));
-  }
 }

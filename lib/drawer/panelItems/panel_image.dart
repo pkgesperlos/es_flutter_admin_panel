@@ -1,3 +1,4 @@
+import 'package:es_flutter_admin_panel/drawer/panelItems/container_items.dart';
 import 'package:es_flutter_component/constants.dart';
 import 'package:es_flutter_component/es_button/es_information_button.dart';
 
@@ -20,31 +21,31 @@ class PanelImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List list = [
-      _listItem(
-          EsAvatarImage(
+      ContainerItems(
+          widget:EsAvatarImage(
             path: "assets/images/img1.jpg",
             radius: 100,
           ),
-          AppLocalizations.of(context)!.avatarImages,
-          "It is an avatar image located in: \n es_flutter_component>lib>es_image>es_avatar_image.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.avatarImages,
+          information: "It is an avatar image located in: \n es_flutter_component>lib>es_image>es_avatar_image.dart \n and is used as: \n "
               """EsAvatarImage(
             path: "assets/images/img1.jpg",)"""
       ),
-      _listItem(
-          Container(
+      ContainerItems(
+          widget:Container(
             child: EsZoomingImage(
               img: AssetImage("assets/images/img1.jpg"),
             ),
             width: 300,
             height: 240,
           ),
-          AppLocalizations.of(context)!.zoomingImages,
-          "It is a zooming image located in: \n es_flutter_component>lib>es_image>es_zooming_image.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.zoomingImages,
+          information:"It is a zooming image located in: \n es_flutter_component>lib>es_image>es_zooming_image.dart \n and is used as: \n "
               """EsZoomingImage(
               img: AssetImage("assets/images/img1.jpg"), )"""
       ),
-      _listItem(
-          Container(
+      ContainerItems(
+          widget:Container(
             child: Container(
               child: EsLightBoxShowing(
                 path: "assets/images/img1.jpg",
@@ -55,8 +56,8 @@ class PanelImage extends StatelessWidget {
             width: 300,
             height: 240,
           ),
-          AppLocalizations.of(context)!.lightBoxShowingImage,
-          "It is a light box showing image located in: \n es_flutter_component>lib>es_image>es_lightbox_showing_image.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.lightBoxShowingImage,
+          information:"It is a light box showing image located in: \n es_flutter_component>lib>es_image>es_lightbox_showing_image.dart \n and is used as: \n "
               """EsLightBoxShowing(
                 path: "assets/images/img1.jpg",)"""
       ),
@@ -111,30 +112,4 @@ class PanelImage extends StatelessWidget {
         ));
   }
 
-  Widget _listItem(Widget widget, String title, String information) {
-    return Center(
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(
-                    bottom: PanelConstants.paddingDimension),
-                child: EsDottedText(
-                    data: title, size: 15, color: PanelConstants.itemColor),
-              ),
-              EsInformationButton(
-                dialogeText: information,
-              ),
-            ],
-          ),
-          SizedBox(
-            height: PanelConstants.paddingDimension * 2,
-          ),
-          widget
-        ],
-      ),
-    );
-  }
 }

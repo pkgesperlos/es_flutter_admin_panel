@@ -1,5 +1,5 @@
+import 'package:es_flutter_admin_panel/drawer/panelItems/container_items.dart';
 import 'package:es_flutter_component/constants.dart';
-import 'package:es_flutter_component/es_button/es_information_button.dart';
 import 'package:es_flutter_component/es_form/es_animated_checkbox.dart';
 import 'package:es_flutter_component/es_form/es_checkbox.dart';
 import 'package:es_flutter_component/es_form/es_checkbox_vallidation.dart';
@@ -21,11 +21,7 @@ import 'package:es_flutter_component/es_form/es_shaba_number_field.dart';
 import 'package:es_flutter_component/es_form/es_text_area.dart';
 import 'package:es_flutter_component/es_form/es_text_field.dart';
 import 'package:es_flutter_component/es_form/es_toggle_button.dart';
-import 'package:es_flutter_component/es_text/es_dotted_text.dart';
-import 'package:es_flutter_component/es_text/es_label_text.dart';
-import 'package:es_flutter_component/es_text/es_marked_text.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/es_text/es_title.dart';
 import 'package:es_flutter_admin_panel/images/panelConstants.dart';
 
 import 'package:flutter/material.dart';
@@ -40,93 +36,93 @@ class PanelForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List list = [
-      _listItem(
-          EsTextField(
+      ContainerItems(
+          widget:EsTextField(
             type: AppLocalizations.of(context)!.textFieldType,
             hint: AppLocalizations.of(context)!.textFieldHint,
           ),
-          AppLocalizations.of(context)!.textField,
-          "It is a text field located in: \n es_flutter_component>lib>es_form>es_text_field.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.textField,
+          information:"It is a text field located in: \n es_flutter_component>lib>es_form>es_text_field.dart \n and is used as: \n "
               """ EsTextField(
             type: AppLocalizations.of(context)!.textFieldType,
             hint: AppLocalizations.of(context)!.textFieldHint,)"""
       ),
-      _listItem(EsPhoneNumberField(),
-          AppLocalizations.of(context)!.phoneNumbertextField,
-          "It is a phone number field located in: \n es_flutter_component>lib>es_form>es_phone_number_field.dart \n and is used as: \n "
+      ContainerItems(widget:EsPhoneNumberField(),
+          title:AppLocalizations.of(context)!.phoneNumbertextField,
+          information:"It is a phone number field located in: \n es_flutter_component>lib>es_form>es_phone_number_field.dart \n and is used as: \n "
               """ EsPhoneNumberField()"""
       ),
-      _listItem(EsShabaNumberField(),
-          AppLocalizations.of(context)!.shabaNumbertextField,
-          "It is a shaba number field located in: \n es_flutter_component>lib>es_form>es_shaba_number_field.dart \n and is used as: \n "
+      ContainerItems(widget:EsShabaNumberField(),
+          title:AppLocalizations.of(context)!.shabaNumbertextField,
+          information:"It is a shaba number field located in: \n es_flutter_component>lib>es_form>es_shaba_number_field.dart \n and is used as: \n "
               """ EsShabaNumberField()"""
       ),
-      _listItem(EsPriceField(), AppLocalizations.of(context)!.priceTextField,
-          "It is a price field located in: \n es_flutter_component>lib>es_form>es_price_field.dart \n and is used as: \n "
+      ContainerItems(widget:EsPriceField(),title: AppLocalizations.of(context)!.priceTextField,
+          information:"It is a price field located in: \n es_flutter_component>lib>es_form>es_price_field.dart \n and is used as: \n "
               """ EsPriceField()"""),
-      _listItem(
-          EsPersianDatePicker(
+      ContainerItems(
+          widget:EsPersianDatePicker(
             title: AppLocalizations.of(context)!.datePickerTitle,
           ),
-          AppLocalizations.of(context)!.datePickerfa,
-          "It is a jalali date picker located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_persian_date_picker.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.datePickerfa,
+          information:"It is a jalali date picker located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_persian_date_picker.dart \n and is used as: \n "
               """ EsPersianDatePicker()"""),
-      _listItem(
-          EsEnglishDatePicker(
+      ContainerItems(
+          widget:EsEnglishDatePicker(
             title: AppLocalizations.of(context)!.datePickerTitle,
           ),
-          AppLocalizations.of(context)!.datePickeren,
-          "It is a Gregorian date picker located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_English_date_picker.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.datePickeren,
+          information:"It is a Gregorian date picker located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_English_date_picker.dart \n and is used as: \n "
               """ EsEnglishDatePicker()"""
       ),
-      _listItem(
-          EsAndroidTimePicker(
+      ContainerItems(
+          widget:EsAndroidTimePicker(
             title: AppLocalizations.of(context)!.androidTimePickerTitle,
           ),
-          AppLocalizations.of(context)!.timePickerHM,
-          "It is a time picker(H/M)  located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_android_time_picker.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.timePickerHM,
+          information:"It is a time picker(H/M)  located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_android_time_picker.dart \n and is used as: \n "
               """ EsAndroidTimePicker(
             title: AppLocalizations.of(context)!.androidTimePickerTitle,)"""
       ),
-      _listItem(
-          EsCupertinoTimePicker(
+      ContainerItems(
+          widget:EsCupertinoTimePicker(
             title: AppLocalizations.of(context)!.cupertinoTimePickerTitle,
           ),
-          AppLocalizations.of(context)!.timePickerHMS,
-          "It is a time picker(H/M/S) located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_cupertino_12h_time_picker.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.timePickerHMS,
+          information:"It is a time picker(H/M/S) located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_cupertino_12h_time_picker.dart \n and is used as: \n "
               """ EsCupertinoTimePicker(
             title: AppLocalizations.of(context)!.cupertinoTimePickerTitle,)"""
       ),
-      _listItem(EsOrdinarySlider(),
-          AppLocalizations.of(context)!.ordinarySlider,
-          "It is an ordinary slider located in: \n es_flutter_component>lib>es_form>es_ordinary_slider.dart \n and is used as: \n "
+      ContainerItems(widget:EsOrdinarySlider(),
+          title:AppLocalizations.of(context)!.ordinarySlider,
+          information:"It is an ordinary slider located in: \n es_flutter_component>lib>es_form>es_ordinary_slider.dart \n and is used as: \n "
               """EsOrdinarySlider()"""
       ),
-      _listItem(EsRengedSlider(), AppLocalizations.of(context)!.rangedSlider,
-          "It is a ranged slider located in: \n es_flutter_component>lib>es_form>es_ranged_slider.dart \n and is used as: \n "
+      ContainerItems(widget:EsRengedSlider(), title:AppLocalizations.of(context)!.rangedSlider,
+          information:"It is a ranged slider located in: \n es_flutter_component>lib>es_form>es_ranged_slider.dart \n and is used as: \n "
               """EsRengedSlider()"""
       ),
-      _listItem(EsRadioButton(), AppLocalizations.of(context)!.radioButons,
-          "It is a radio button located in: \n es_flutter_component>lib>es_form>es_radio_button.dart \n and is used as: \n "
+      ContainerItems(widget:EsRadioButton(), title:AppLocalizations.of(context)!.radioButons,
+          information:"It is a radio button located in: \n es_flutter_component>lib>es_form>es_radio_button.dart \n and is used as: \n "
               """EsRadioButton()"""
       ),
-      _listItem(
-          EsTextArea(
+      ContainerItems(
+          widget:EsTextArea(
             type: AppLocalizations.of(context)!.textAreaType,
             hint: AppLocalizations.of(context)!.textAreaHint,
           ),
-          AppLocalizations.of(context)!.textArea,
-          "It is a text area located in: \n es_flutter_component>lib>es_form>es_text_area.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.textArea,
+          information:"It is a text area located in: \n es_flutter_component>lib>es_form>es_text_area.dart \n and is used as: \n "
               """EsTextArea(
             type: AppLocalizations.of(context)!.textAreaType,
             hint: AppLocalizations.of(context)!.textAreaHint,)"""
       ),
-      _listItem(EsRatingBar(), AppLocalizations.of(context)!.starRateBar,
-          "It is a rating bar located in: \n es_flutter_component>lib>es_form>es_rating_bar.dart \n and is used as: \n "
+      ContainerItems(widget:EsRatingBar(), title:AppLocalizations.of(context)!.starRateBar,
+          information:"It is a rating bar located in: \n es_flutter_component>lib>es_form>es_rating_bar.dart \n and is used as: \n "
               """EsRatingBar()"""
       ),
-      _listItem(
-          IntrinsicWidth(
+      ContainerItems(
+        widget:IntrinsicWidth(
             child: EsCheckBox(
               title: EsOrdinaryText(
                 data: AppLocalizations.of(context)!.checkBoxTitle,
@@ -135,8 +131,8 @@ class PanelForm extends StatelessWidget {
               validator: (bool) {},
             ),
           ),
-          AppLocalizations.of(context)!.ordinaryCheckBox,
-          "It is a ordinary check box located in: \n es_flutter_component>lib>es_form>es_checkbox.dart \n and is used as: \n "
+        title:AppLocalizations.of(context)!.ordinaryCheckBox,
+        information:"It is a ordinary check box located in: \n es_flutter_component>lib>es_form>es_checkbox.dart \n and is used as: \n "
               """EsCheckBox(
               title: EsOrdinaryText(
                 data: AppLocalizations.of(context)!.checkBoxTitle,
@@ -144,34 +140,34 @@ class PanelForm extends StatelessWidget {
               onSaved: (bool) {},
               validator: (bool) {},)""",
       ),
-      _listItem(
-          IntrinsicWidth(
+      ContainerItems(
+          widget:IntrinsicWidth(
             child: EsCheckBoxvalidation(
               title: AppLocalizations.of(context)!.checkBoxWithValidator,
               errorText: AppLocalizations.of(context)!.checkBoxErrorText,
               buttonText: AppLocalizations.of(context)!.checkBoxButtonText,
             ),
           ),
-          AppLocalizations.of(context)!.validationCheckBox,
-          "It is a check box with validation located in: \n es_flutter_component>lib>es_form>es_checkbox_validation.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.validationCheckBox,
+          information:"It is a check box with validation located in: \n es_flutter_component>lib>es_form>es_checkbox_validation.dart \n and is used as: \n "
               """EsCheckBoxvalidation(
               title: AppLocalizations.of(context)!.checkBoxWithValidator,
               errorText: AppLocalizations.of(context)!.checkBoxErrorText,
               buttonText: AppLocalizations.of(context)!.checkBoxButtonText,
             )"""
       ),
-      _listItem(
-          IntrinsicWidth(
+      ContainerItems(
+          widget:IntrinsicWidth(
             child: EsAnimatedCheckBox(
                 title: AppLocalizations.of(context)!.animatedCheckBoxTitle),
           ),
-          AppLocalizations.of(context)!.animationCheckBox,
-          "It is an animated check box located in: \n es_flutter_component>lib>es_form>es_animated_checkbox.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.animationCheckBox,
+          information:"It is an animated check box located in: \n es_flutter_component>lib>es_form>es_animated_checkbox.dart \n and is used as: \n "
               """EsAnimatedCheckBox(
                 title: AppLocalizations.of(context)!.animatedCheckBoxTitle)"""
       ),
-      _listItem(
-          EsDropDownButton(
+      ContainerItems(
+          widget:EsDropDownButton(
             items: [
               // "گزینه1","گزینه2","گزینه3",
               AppLocalizations.of(context)!.dropDown1,
@@ -180,8 +176,8 @@ class PanelForm extends StatelessWidget {
             ],
             onTapItems: [() {}, () {}, () {}],
           ),
-          AppLocalizations.of(context)!.dropDownButton,
-          "It is dropp down button located in: \n es_flutter_component>lib>es_form>es_drop_down_button.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.dropDownButton,
+          information:"It is dropp down button located in: \n es_flutter_component>lib>es_form>es_drop_down_button.dart \n and is used as: \n "
               """EsDropDownButton(
             items: [
               AppLocalizations.of(context)!.dropDown1,
@@ -191,19 +187,19 @@ class PanelForm extends StatelessWidget {
             onTapItems: [() {}, () {}, () {}],
           )"""
       ),
-      _listItem(ESToggleButton(), AppLocalizations.of(context)!.toggleButton,
-          "It is toggle button located in: \n es_flutter_component>lib>es_form>es_toggle_button.dart \n and is used as: \n "
+      ContainerItems(widget:ESToggleButton(), title:AppLocalizations.of(context)!.toggleButton,
+          information:"It is toggle button located in: \n es_flutter_component>lib>es_form>es_toggle_button.dart \n and is used as: \n "
               """ESToggleButton()"""
       ),
-      _listItem(
-          Center(
+      ContainerItems(
+          widget:Center(
               child: EsFilePicker(
             openText: AppLocalizations.of(context)!.openText,
             pickText: AppLocalizations.of(context)!.pickText,
             clearText: AppLocalizations.of(context)!.clearText,
           )),
-          AppLocalizations.of(context)!.filePicker,
-          "It is file picker located in: \n es_flutter_component>lib>es_form>es_file picker.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.filePicker,
+          information:"It is file picker located in: \n es_flutter_component>lib>es_form>es_file picker.dart \n and is used as: \n "
               """EsFilePicker(
             openText: AppLocalizations.of(context)!.openText,
             pickText: AppLocalizations.of(context)!.pickText,
@@ -259,35 +255,5 @@ class PanelForm extends StatelessWidget {
               color: PanelConstants.forGround),
           child: widget,
         ));
-  }
-
-  Widget _listItem(Widget widget, String title, String information) {
-    return Center(
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                child: EsDottedText(
-                  data: title,
-                  size: 15,
-                  color: PanelConstants.itemColor,
-                ),
-              ),
-              EsInformationButton(
-                dialogeText: information,
-
-              ),
-            ],
-          ),
-          SizedBox(
-            height: PanelConstants.paddingDimension * 2,
-          ),
-          widget
-        ],
-      ),
-    );
   }
 }

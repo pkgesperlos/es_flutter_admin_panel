@@ -1,11 +1,8 @@
+import 'package:es_flutter_admin_panel/drawer/panelItems/container_items.dart';
 import 'package:es_flutter_component/constants.dart';
 import 'package:es_flutter_component/es-chart/es-circular_chart.dart';
 import 'package:es_flutter_component/es-chart/es-linear-chart.dart';
 import 'package:es_flutter_component/es-chart/es_bar_chart.dart';
-import 'package:es_flutter_component/es_button/es_information_button.dart';
-import 'package:es_flutter_component/es_button/es_ordinary_button.dart';
-
-import 'package:es_flutter_component/es_text/es_dotted_text.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_admin_panel/images/panelConstants.dart';
 
@@ -20,15 +17,13 @@ class PanelChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // String _data = AppLocalizations.of(context)!.samplButton;
     List list = [
-
-      _listitem(EsBarChart(),AppLocalizations.of(context)!.barCharts,
-          "It is a bar chart located in: \n es_flutter_component>lib>es_chart>es_bar_chart.dart \n and is used as EsBarChart()"),
-      _listitem(EsLinearChart(),AppLocalizations.of(context)!.linearChart,
-          "It is a linear chart located in: \n es_flutter_component>lib>es_chart>es_linear_chart.dart \n and is used as EsLinearChart()"),
-      _listitem(EsCircularChart(),AppLocalizations.of(context)!.circularCharts,
-          "It is a circular chart located in: \n es_flutter_component>lib>es_chart>es_circular_chart.dart \n and is used as EsCircularChart()"),
+      ContainerItems(widget:EsBarChart(),title:AppLocalizations.of(context)!.barCharts,
+          information: "It is a bar chart located in: \n es_flutter_component>lib>es_chart>es_bar_chart.dart \n and is used as EsBarChart()"),
+      ContainerItems(widget:EsLinearChart(),title:AppLocalizations.of(context)!.linearChart,
+          information:"It is a linear chart located in: \n es_flutter_component>lib>es_chart>es_linear_chart.dart \n and is used as EsLinearChart()"),
+      ContainerItems(widget:EsCircularChart(),title:AppLocalizations.of(context)!.circularCharts,
+          information:"It is a circular chart located in: \n es_flutter_component>lib>es_chart>es_circular_chart.dart \n and is used as EsCircularChart()"),
 
     ];
     return Material(
@@ -78,27 +73,5 @@ class PanelChart extends StatelessWidget {
               color: PanelConstants.forGround),
           child: widget,
         ));
-  }
-  Widget _listitem(Widget widget,String title, String information) {
-    return Center(
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: PanelConstants.paddingDimension/2),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                EsDottedText(
-                    data: title,
-                    size: 15,
-                    color: PanelConstants.itemColor),
-                EsInformationButton(dialogeText:information,),
-              ],
-            ),
-          ),
-          widget,
-        ],
-      ),
-    );
   }
 }

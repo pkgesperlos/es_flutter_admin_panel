@@ -1,3 +1,4 @@
+import 'package:es_flutter_admin_panel/drawer/panelItems/container_items.dart';
 import 'package:es_flutter_component/constants.dart';
 import 'package:es_flutter_component/es_button/es_information_button.dart';
 
@@ -42,29 +43,29 @@ class PanelSlider extends StatelessWidget {
       (index) => titleBox(index),
     );
     List list = [
-      _listItem(
-          Container(
+      ContainerItems(
+          widget:Container(
             child: EsCarouselSlider(
               itemList: widgetList,
             ),
             width: 300,
             height: 240,
           ),
-          AppLocalizations.of(context)!.carouselSlider,
-          "It is a carousel slider located in: \n es_flutter_component>lib>es_slider>es_carousel_slider.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.carouselSlider,
+          information:"It is a carousel slider located in: \n es_flutter_component>lib>es_slider>es_carousel_slider.dart \n and is used as: \n "
               """EsCarouselSlider(
               itemList: widgetList,)"""
       ),
-      _listItem(
-          Container(
+      ContainerItems(
+          widget:Container(
             child: EsPerspectiveSlider(
               itemList: widgetList,
             ),
             width: 300,
             height: 240,
           ),
-          AppLocalizations.of(context)!.perspectiveSlider,
-          "It is a perspective slider located in: \n es_flutter_component>lib>es_slider>es_perspective_slider.dart \n and is used as: \n "
+          title:AppLocalizations.of(context)!.perspectiveSlider,
+          information:"It is a perspective slider located in: \n es_flutter_component>lib>es_slider>es_perspective_slider.dart \n and is used as: \n "
               """EsPerspectiveSlider(
               itemList: widgetList,)"""
       ),
@@ -117,33 +118,4 @@ class PanelSlider extends StatelessWidget {
         ));
   }
 
-  Widget _listItem(Widget widget, String title, String information) {
-    return Center(
-        child: Column(
-      children: [
-        Padding(
-          padding:
-              const EdgeInsets.only(bottom: PanelConstants.paddingDimension),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              EsDottedText(
-                data: title,
-                size:15,
-                color: PanelConstants.itemColor,
-              ),
-
-              EsInformationButton(
-                dialogeText: information,
-              ),
-            ],
-          ),
-        ),
-        SizedBox(
-          height: PanelConstants.paddingDimension * 2,
-        ),
-        widget
-      ],
-    ));
-  }
 }

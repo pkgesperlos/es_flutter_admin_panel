@@ -1,3 +1,4 @@
+import 'package:es_flutter_admin_panel/drawer/panelItems/container_items.dart';
 import 'package:es_flutter_component/constants.dart';
 import 'package:es_flutter_component/es_button/es_information_button.dart';
 
@@ -48,14 +49,14 @@ class PanelProgressBar extends StatelessWidget {
       (index) => titleBox(index),
     );
     List list = [
-      _listItem(EsLinearProgressbar(),
-          AppLocalizations.of(context)!.linearProgressBar,
-          "It is a linear progress bar located in: \n es_flutter_component>lib>es_progressbar>es_linear_progressbar.dart \n and is used as: \n "
+      ContainerItems(widget:EsLinearProgressbar(),
+          title:AppLocalizations.of(context)!.linearProgressBar,
+          information:"It is a linear progress bar located in: \n es_flutter_component>lib>es_progressbar>es_linear_progressbar.dart \n and is used as: \n "
               """EsLinearProgressbar()"""
       ),
-      _listItem(EsCircularProgressbar(),
-          AppLocalizations.of(context)!.circularProgressBar,
-          "It is a circular progress bar located in: \n es_flutter_component>lib>es_progressbar>es_circular_progressbar.dart \n and is used as: \n "
+      ContainerItems(widget:EsCircularProgressbar(),
+          title:AppLocalizations.of(context)!.circularProgressBar,
+          information:"It is a circular progress bar located in: \n es_flutter_component>lib>es_progressbar>es_circular_progressbar.dart \n and is used as: \n "
               """EsCircularProgressbar()"""
       )
     ];
