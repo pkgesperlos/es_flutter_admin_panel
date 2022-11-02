@@ -72,6 +72,10 @@ the app_en.arb file provides the template, and the generated localizations are p
 "file": "پوشه",
 }
 and you shold add all of  the word in your app in this two files.
+#1-8 How to create aditional language in panel
+1-add language in supportedLocales that is declared in step 1-2
+2-add .arb file for your desired language that is declared in step 1-6 
+
 #2-How to change the Language Globally 
 #2-1:by adding the file language_change_provider.dart in lib
 #2-2:wrap the MaterialApp in main.dart to builder 
@@ -114,6 +118,7 @@ It was not able to use FlutterRailSlider because of (accordion items) so,
 a global key is created in (lib/center_screen/center_screen.dart) and it called by current state in 
 (lib/drawer/drawer_page.dart) by changePage() function to change pages.
 as Example:.globalKey.currentState ?.changePage(_buttonNames[index][0].page) in drawer.
+
 #5-How to add pages in drawer
 We have an array like this List=[buttonsInfo,[string,buttonsInfo,buttonsInfo]]=[A,B]
 If we have an item with accordion items(with page context):
@@ -125,6 +130,11 @@ We divided all font,sizes, and colors into two section :
 
 1-es_flutter_components/Constants.dart//include the  font,sizes, and colors parameters of Components.
 2-es_flutter_admin_panel/PanelConstants.dart//include the  sizes, and colors parameters of Panel.
-
+#7- to reduce size of final output file you can comment unused package in pubspec.yaml it is simplify 
+# by adding required package in each components in information section.
+#8-access to StructurBuilder styles! and dims! and configs can maintain the integrity of whole panel 
+you can change the styles! into yor custom style:
+you can change the value of each property:
+you can add desirable property to StructureBuilder:
 
 

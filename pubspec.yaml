@@ -30,28 +30,29 @@ dependencies:
   flutter:
     sdk: flutter
 
-  validators: ^3.0.0
-  carousel_slider: ^4.1.1
-  flutter_inner_drawer: "^0.2.2"
-  fl_chart: ^0.50.6
+
   provider: 6.0.3
-  flutter_bootstrap: ^2.0.0
+
 #  es_flutter_component:
 #    git:
 #      url: ssh://git@gitlab.com/haniehhojjatzadeh/es_flutter_component.git
 #      ref: main # branch name
   es_flutter_component:
     git: git@github.com:pkgesperlos/es_flutter_component.git
+
 #      url: ssh://git@github.com:pkgesperlos/es_flutter_component.git
 #      ref: main # branch name
   flutter_localizations:
     sdk: flutter
   intl: ^0.17.0
+  dropdown_button2: ^1.7.2
+#  group_button: ^5.2.2
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+
 
 dev_dependencies:
   flutter_test:
@@ -81,6 +82,7 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/svgs/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

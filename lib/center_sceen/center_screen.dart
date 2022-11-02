@@ -1,12 +1,13 @@
 
-import 'package:es_flutter_component/es_table/es_simple_table.dart';
-import 'package:es_flutter_admin_panel/drawer/panelItems/panel_chart.dart';
-import 'package:es_flutter_admin_panel/drawer/panelItems/panel_text_sample.dart';
 import 'package:flutter/material.dart';
+
+import '../panelItems/panel_chart.dart';
+
 
 
 class CenterScreen extends StatefulWidget {
   static final GlobalKey<_CenterScreen> globalKey = GlobalKey();
+
   CenterScreen({Key? key,}) : super(key: globalKey);
 
 

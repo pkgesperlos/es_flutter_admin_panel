@@ -1,21 +1,23 @@
+import 'package:es_flutter_admin_panel/panelItems/widgets/es_accardion/es_expansion_tile.dart';
+import 'package:es_flutter_component/es_image/es_svg_icon.dart';
+import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_admin_panel/drawer/panelItems/panel_chart.dart';
-import 'package:es_flutter_admin_panel/drawer/panelItems/Panel_tabel/panel_editable_table.dart';
-import 'package:es_flutter_admin_panel/drawer/panelItems/panel_button_sample.dart';
-import 'package:es_flutter_admin_panel/drawer/panelItems/panel_dialog_box.dart';
-import 'package:es_flutter_admin_panel/drawer/panelItems/panel_form.dart';
-import 'package:es_flutter_admin_panel/drawer/panelItems/panel_image.dart';
-import 'package:es_flutter_admin_panel/drawer/panelItems/panel_notification.dart';
-import 'package:es_flutter_admin_panel/drawer/panelItems/panel_progressbar.dart';
-import 'package:es_flutter_admin_panel/drawer/panelItems/Panel_tabel/panel_responsive_table.dart';
-import 'package:es_flutter_admin_panel/drawer/panelItems/panel_slider.dart';
-import 'package:es_flutter_admin_panel/drawer/panelItems/Panel_tabel/panel_simple_table.dart';
-import 'package:es_flutter_admin_panel/drawer/panelItems/panel_text_sample.dart';
+import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
-import '../images/panelConstants.dart';
 import '../center_sceen/center_screen.dart';
 import '../images/responsive_layout.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../panelItems/Panel_tabel/panel_editable_table.dart';
+import '../panelItems/Panel_tabel/panel_responsive_table.dart';
+import '../panelItems/Panel_tabel/panel_simple_table.dart';
+import '../panelItems/panel_accardion_sample.dart';
+import '../panelItems/panel_alert_sample.dart';
+import '../panelItems/panel_button_sample.dart';
+import '../panelItems/panel_chart.dart';
+import '../panelItems/panel_dialog_box.dart';
+import '../panelItems/panel_form.dart';
+import '../panelItems/panel_group_button_sample.dart';
 
 class DrawerPage extends StatefulWidget {
   @override
@@ -47,146 +49,398 @@ class _DrawerPageState extends State<DrawerPage> {
     // for acardion and non acardion type
     List<List> _buttonNames = [
       [
+    AppLocalizations.of(context)!.components,
+        EsSvgIcon("assets/svgs/GraduationCap.svg",
+          size: StructureBuilder.dims!.h3IconSize,
+          color: StructureBuilder.styles!.primaryLightColor,),
         buttonsInfo(
-            title: AppLocalizations.of(context)!.charts,
-            icon: Icons.bar_chart,
-            page: PanelChart(),
-            pageRout: '/chart'),
-      ],
-      [
+            title: AppLocalizations.of(context)!.accordion,
+            icon: Icons.circle,
+            page: PanelAccardionSample(),
+            pageRout: '/accardionSample'),
         buttonsInfo(
-            title: AppLocalizations.of(context)!.text,
-            icon: Icons.edit,
-            page: PanelTextSample(),
-            pageRout: '/textSample'),
-      ],
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.dialogBox,
-            icon: Icons.messenger_outline,
-            page: PanelDialogBox(),
-            pageRout: '/dialog'),
-      ],
-      [
+            title: AppLocalizations.of(context)!.alert,
+            icon: Icons.circle,
+            page: PanelAlertSample(),
+            pageRout: '/alertSample'),
         buttonsInfo(
             title: AppLocalizations.of(context)!.button,
-            icon: Icons.radio_button_checked_sharp,
+            icon: Icons.circle,
             page: PanelButtonSample(),
             pageRout: '/buttonSample'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.groupbutton,
+            icon: Icons.circle,
+            page: PanelGroupButtonSample(),
+            pageRout: '/groupButtonSample'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.alert,
+            icon: Icons.circle,
+            page: PanelAlertSample(),
+            pageRout: '/alertSample'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.accordion,
+            icon: Icons.circle,
+            page: PanelAccardionSample(),
+            pageRout: '/accardionSample'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.alert,
+            icon: Icons.circle,
+            page: PanelAlertSample(),
+            pageRout: '/alertSample'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.accordion,
+            icon: Icons.circle,
+            page: PanelAccardionSample(),
+            pageRout: '/accardionSample'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.alert,
+            icon: Icons.circle,
+            page: PanelAlertSample(),
+            pageRout: '/alertSample'),
       ],
       [
+        AppLocalizations.of(context)!.components,
+        EsSvgIcon("assets/svgs/GraduationCap.svg",
+          size: StructureBuilder.dims!.h3IconSize,
+          color: StructureBuilder.styles!.primaryLightColor,),
         buttonsInfo(
-            title: AppLocalizations.of(context)!.form,
-            icon: Icons.list_alt,
-            page: PanelForm(),
-            pageRout: '/form')
+            title: AppLocalizations.of(context)!.accordion,
+            icon: Icons.circle,
+            page: PanelAccardionSample(),
+            pageRout: '/accardionSample'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.alert,
+            icon: Icons.circle,
+            page: PanelAlertSample(),
+            pageRout: '/alertSample'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.accordion,
+            icon: Icons.circle,
+            page: PanelAccardionSample(),
+            pageRout: '/accardionSample'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.alert,
+            icon: Icons.circle,
+            page: PanelAlertSample(),
+            pageRout: '/alertSample'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.accordion,
+            icon: Icons.circle,
+            page: PanelAccardionSample(),
+            pageRout: '/accardionSample'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.alert,
+            icon: Icons.circle,
+            page: PanelAlertSample(),
+            pageRout: '/alertSample'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.accordion,
+            icon: Icons.circle,
+            page: PanelAccardionSample(),
+            pageRout: '/accardionSample'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.alert,
+            icon: Icons.circle,
+            page: PanelAlertSample(),
+            pageRout: '/alertSample'),
       ],
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.images,
-            icon: Icons.image_outlined,
-            page: PanelImage(),
-            pageRout: '/image')
-      ],
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.progressBar,
-            icon: Icons.timelapse_rounded,
-            page: PanelProgressBar(),
-            pageRout: '/progressbar')
-      ],
-      [
-        AppLocalizations.of(context)!.tables,
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.simpleTable,
-            icon: Icons.table_chart_outlined,
-            page: PanelSimpleTable(),
-            pageRout: '/simpletable'),
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.editableTable,
-            icon: Icons.table_rows,
-            page: PanelEditableTable(),
-            pageRout: '/editable'),
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.responsiveTable,
-            icon: Icons.table_chart,
-            page: PanelResponsiveTable(),
-            pageRout: '/responsiveTable')
-      ],
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.slider,
-            icon: Icons.slideshow_rounded,
-            page: PanelSlider(),
-            pageRout: '/slider')
-      ],
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.notifications,
-            icon: Icons.notification_important_outlined,
-            page: PanelNotification(),
-            pageRout: '/notification')
-      ],
+      // [
+      //   AppLocalizations.of(context)!.components,
+      //   EsSvgIcon("assets/svgs/GraduationCap.svg",
+      //     size: StructureBuilder.dims!.h3IconSize,
+      //     color: StructureBuilder.styles!.primaryLightColor,),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.accordion,
+      //       icon: Icons.circle,
+      //       page: PanelAccardionSample(),
+      //       pageRout: '/accardionSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.alert,
+      //       icon: Icons.circle,
+      //       page: PanelAlertSample(),
+      //       pageRout: '/alertSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.accordion,
+      //       icon: Icons.circle,
+      //       page: PanelAccardionSample(),
+      //       pageRout: '/accardionSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.alert,
+      //       icon: Icons.circle,
+      //       page: PanelAlertSample(),
+      //       pageRout: '/alertSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.accordion,
+      //       icon: Icons.circle,
+      //       page: PanelAccardionSample(),
+      //       pageRout: '/accardionSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.alert,
+      //       icon: Icons.circle,
+      //       page: PanelAlertSample(),
+      //       pageRout: '/alertSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.accordion,
+      //       icon: Icons.circle,
+      //       page: PanelAccardionSample(),
+      //       pageRout: '/accardionSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.alert,
+      //       icon: Icons.circle,
+      //       page: PanelAlertSample(),
+      //       pageRout: '/alertSample'),
+      // ],
+      // [
+      //   AppLocalizations.of(context)!.components,
+      //   EsSvgIcon("assets/svgs/GraduationCap.svg",
+      //     size: StructureBuilder.dims!.h3IconSize,
+      //     color: StructureBuilder.styles!.primaryLightColor,),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.accordion,
+      //       icon: Icons.circle,
+      //       page: PanelAccardionSample(),
+      //       pageRout: '/accardionSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.alert,
+      //       icon: Icons.circle,
+      //       page: PanelAlertSample(),
+      //       pageRout: '/alertSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.accordion,
+      //       icon: Icons.circle,
+      //       page: PanelAccardionSample(),
+      //       pageRout: '/accardionSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.alert,
+      //       icon: Icons.circle,
+      //       page: PanelAlertSample(),
+      //       pageRout: '/alertSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.accordion,
+      //       icon: Icons.circle,
+      //       page: PanelAccardionSample(),
+      //       pageRout: '/accardionSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.alert,
+      //       icon: Icons.circle,
+      //       page: PanelAlertSample(),
+      //       pageRout: '/alertSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.accordion,
+      //       icon: Icons.circle,
+      //       page: PanelAccardionSample(),
+      //       pageRout: '/accardionSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.alert,
+      //       icon: Icons.circle,
+      //       page: PanelAlertSample(),
+      //       pageRout: '/alertSample'),
+      // ],
+      // [
+      //   AppLocalizations.of(context)!.components,
+      //   EsSvgIcon("assets/svgs/GraduationCap.svg",
+      //     size: StructureBuilder.dims!.h3IconSize,
+      //     color: StructureBuilder.styles!.primaryLightColor,),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.accordion,
+      //       icon: Icons.circle,
+      //       page: PanelAccardionSample(),
+      //       pageRout: '/accardionSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.alert,
+      //       icon: Icons.circle,
+      //       page: PanelAlertSample(),
+      //       pageRout: '/alertSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.accordion,
+      //       icon: Icons.circle,
+      //       page: PanelAccardionSample(),
+      //       pageRout: '/accardionSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.alert,
+      //       icon: Icons.circle,
+      //       page: PanelAlertSample(),
+      //       pageRout: '/alertSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.accordion,
+      //       icon: Icons.circle,
+      //       page: PanelAccardionSample(),
+      //       pageRout: '/accardionSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.alert,
+      //       icon: Icons.circle,
+      //       page: PanelAlertSample(),
+      //       pageRout: '/alertSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.accordion,
+      //       icon: Icons.circle,
+      //       page: PanelAccardionSample(),
+      //       pageRout: '/accardionSample'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.alert,
+      //       icon: Icons.circle,
+      //       page: PanelAlertSample(),
+      //       pageRout: '/alertSample'),
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.charts,
+      //       icon: Icons.circle,
+      //       page: PanelChart(),
+      //       pageRout: '/chart'),
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.text,
+      //       icon: Icons.circle,
+      //       page: PanelTextSample(),
+      //       pageRout: '/textSample'),
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.accordion,
+      //       icon: Icons.circle,
+      //       page: PanelAccardionSample(),
+      //       pageRout: '/accardionSample'),
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.alert,
+      //       icon: Icons.circle,
+      //       page: PanelAlertSample(),
+      //       pageRout: '/alertSample'),
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.dialogBox,
+      //       icon: Icons.circle,
+      //       page: PanelDialogBox(),
+      //       pageRout: '/dialog'),
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.button,
+      //       icon: Icons.circle,
+      //       page: PanelButtonSample(),
+      //       pageRout: '/buttonSample'),
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.form,
+      //       icon: Icons.circle,
+      //       page: PanelForm(),
+      //       pageRout: '/form')
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.images,
+      //       icon: Icons.circle,
+      //       page: PanelImage(),
+      //       pageRout: '/image')
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.progressBar,
+      //       icon: Icons.circle,
+      //       page: PanelProgressBar(),
+      //       pageRout: '/progressbar')
+      // ],
+      // [
+      //   AppLocalizations.of(context)!.tables,
+      //   Icon(Icons.add_a_photo_sharp,color:
+      //     StructureBuilder.styles!.primaryLightColor,),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.simpleTable,
+      //       icon: Icons.circle,
+      //       page: PanelSimpleTable(),
+      //       pageRout: '/simpletable'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.editableTable,
+      //       icon: Icons.circle,
+      //       page: PanelEditableTable(),
+      //       pageRout: '/editable'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.responsiveTable,
+      //       icon: Icons.circle,
+      //       page: PanelResponsiveTable(),
+      //       pageRout: '/responsiveTable')
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.slider,
+      //       icon: Icons.circle,
+      //       page: PanelSlider(),
+      //       pageRout: '/slider')
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.notifications,
+      //       icon: Icons.circle,
+      //       page: PanelNotification(),
+      //       pageRout: '/notification')
+      // ],
     ];
     List _acardionList = [];
     for (int i = 0; i < _buttonNames.length; i++) {
       _acardionList.add(_buttonNames[i].length != 1 ? 1 : 0);
     }
-    Widget drawerItems(item, index,currentIndex,bool con) {
+    Widget drawerItems(item, index, currentIndex, bool condition) {
       return Container(
-        padding: EdgeInsets.only(
-            right: PanelConstants.paddingDimension / 3,
-            left: PanelConstants.paddingDimension / 10),
+        // width: StructureBuilder.dims!.h0Padding*4,
+        // padding: EdgeInsets.only(
+        //     right: StructureBuilder.dims!.h2Padding,
+        //     left: StructureBuilder.dims!.h3Padding),
+
         child: Row(
+          // mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
-              padding: EdgeInsets.all(PanelConstants.paddingDimension / 2),
+              padding: EdgeInsets.all(
+                StructureBuilder.dims!.h1Padding,
+              ),
               child: Icon(
                 item.icon,
-                size: 20,
+                size: 5,
                 // _buttonNames2[index][0].icon,
-                color: con
-                    ? PanelConstants.drawerSelectColor1
-                    : PanelConstants.drawerFontColor,
+                color: condition
+                    ? StructureBuilder.styles!.primaryLightColor
+                    : StructureBuilder.styles!.t3Color,
               ),
             ),
             EsOrdinaryText(
               // data: _buttonNames2[index][0].title,
-              data: item.title,
-              color: con
-                  ? PanelConstants.drawerSelectColor1
-                  : PanelConstants.drawerFontColor,
+              item.title,
+              color: condition
+                  ? StructureBuilder.styles!.primaryLightColor
+                  : StructureBuilder.styles!.t3Color,
+
               // style: TextStyle(color: Colors.white),
             ),
           ],
         ),
-        decoration:
-            BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(PanelConstants.paddingDimension))),
+        decoration: BoxDecoration(
+            // color: Colors.transparent,
+            borderRadius: BorderRadius.all(
+                Radius.circular(StructureBuilder.dims!.h0Padding))),
       );
     }
 
     return Drawer(
       child: Container(
         decoration: BoxDecoration(
-          color: PanelConstants.forGround,
-          // boxShadow: [
-          //   BoxShadow(
-          //       color: PanelConstants.boxshadow,
-          //       blurRadius: 10,
-          //       spreadRadius: 10),
-          // ],
-          // border:Border(right: BorderSide(color: PanelConstants.itemColor,
-          // width: 3))
+          color: StructureBuilder.styles!.primaryDarkColor,
         ),
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(PanelConstants.paddingDimension),
+            padding: EdgeInsets.symmetric(horizontal:StructureBuilder.dims!.h0Padding),
             child: Column(
               children: [
                 //title of drawer
                 ListTile(
                   title: EsOrdinaryText(
-                    data: AppLocalizations.of(context)!.adminMenu,
+                    AppLocalizations.of(context)!.adminMenu,
+                    color: StructureBuilder.styles!.primaryDarkColor,
                   ),
                   //place a clse item for non computer drawer mode
                   trailing: ResponsiveLayot.isComputer(context)
@@ -202,136 +456,111 @@ class _DrawerPageState extends State<DrawerPage> {
                 ),
                 //creating list items of drawer
                 ...List.generate(
-                    _buttonNames.length,
-                    //decide if we have accardion or not
-                    (index) => _buttonNames[index].length == 1
-                        ? Column(
+                  _buttonNames.length,
+                  //decide if we have accardion or not
+                  (index) => _buttonNames[index].length == 1
+                      ? Container(
+                    margin: EdgeInsets.symmetric(
+                      horizontal: StructureBuilder.dims!.h1Padding,
+                      vertical: StructureBuilder.dims!.h1Padding,
+                    ),
+                    //deside if the item is selected or not
+                    decoration:
+                    // BoxDecoration(color: Colors.transparent),
+                    (index == _currentIndex)
+                        ? selectedBoxDecoration()
+                        : null,
+                    child: GestureDetector(
+                      child: drawerItems(
+                          _buttonNames[index][0],
+                          index,
+                          _currentIndex,
+                          (index == _currentIndex)),
+                      onTap: () {
+                        setState(() {
+                          _currentIndex = index;
+
+                          CenterScreen.globalKey.currentState
+                              ?.changePage(
+                              _buttonNames[index][0].page);
+                        });
+                      },
+                    ),
+                  )
+                      : EsExpansionTile(
+                          backGroundImagePath: "assets/images/back2.png",
+                          iconColor: StructureBuilder.styles!.primaryLightColor,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(
+                                  StructureBuilder.dims!.h1BorderRadius))),
+                          title: Row(
                             children: [
-                              Container(
-                                //deside if the item is selected or not
-                                decoration: (index == _currentIndex)
-                                    ? selectedBoxDecoration()
-                                    : null,
-                                child: GestureDetector(
-                                  child: drawerItems(
-                                      _buttonNames[index][0], index,_currentIndex,
-                                      (index == _currentIndex)
-                                  ),
-                                  onTap: () {
-                                    setState(() {
-                                      _currentIndex = index;
-
-                                           CenterScreen.globalKey.currentState
-                                              ?.changePage(
-                                                  _buttonNames[index][0].page);
-
-                                    });
-                                  },
-                                ),
+                              _buttonNames[index][1],
+                              EsHSpacer(big: true,),
+                              EsOrdinaryText(
+                                _buttonNames[index][0],
+                                color:
+                                    StructureBuilder.styles!.primaryLightColor,
                               ),
-                              Divider(
-                                color: PanelConstants.drawerFontColor,
-                                thickness: 0.2,
-                              )
                             ],
-                          )
-                        : Column(
-                            children: [
-                              Container(
-                                // decoration: index == _currentIndex
-                                //     ? BoxDecoration(
-                                //         borderRadius: BorderRadius.circular(20),
-                                //         gradient: LinearGradient(colors: [
-                                //           PanelConstants.redDark.withOpacity(0.9),
-                                //           PanelConstants.orangeDark.withOpacity(0.9),
-                                //         ]))
-                                //     : null,
-                                child: ExpansionTile(
-                                  title: Row(
-                                    children: [
-                                      EsOrdinaryText(
-                                        data: _buttonNames[index][0],
-                                        // style: TextStyle(color: Colors.white),
-                                      ),
-                                    ],
-                                  ),
-                                  children: [
-                                    ...List.generate(
-                                        //_buttonNames[index] is the List of accardion items
-                                        _buttonNames[index].length - 1,
-                                        (index2) => Column(
-                                              children: [
-                                                Container(
-                                                  //deside if the item is selected or not
-                                                  decoration: (index2 == _currentIndex2 &&
-                                                          _acardionList[_currentIndex] != 0)
-                                                      ? selectedBoxDecoration()
-                                                      : null,
-                                                  child: GestureDetector(
-                                                    child: drawerItems(
+                          ),
+                          children: [
+                            ...List.generate(
+                                //_buttonNames[index] is the List of accardion items
+                                _buttonNames[index].length - 2,
+                                (index2) => Column(
+                                      children: [
+                                        Container(
+                                          margin: EdgeInsets.symmetric(
+                                            horizontal:
+                                                StructureBuilder.dims!.h2Padding,
+                                            vertical:
+                                                StructureBuilder.dims!.h1Padding,
+                                          ),
+                                          //deside if the item is selected or not
+                                          padding:
+                                          (index2 == _currentIndex2 &&
+                                              _acardionList[
+                                              _currentIndex] !=
+                                                  0)
+                                              ? EdgeInsets.symmetric(vertical: StructureBuilder.dims!.h2Padding)
+                                              : null,
+                                          decoration:
+                                              (index2 == _currentIndex2 &&
+                                                      _acardionList[
+                                                              _currentIndex] !=
+                                                          0)
+                                                  ? selectedBoxDecoration()
+                                                  : null,
+                                          child: GestureDetector(
+                                            child: drawerItems(
+                                                _buttonNames[index][index2 + 2],
+                                                index2,
+                                                _currentIndex2,
+                                                index2 == _currentIndex2 &&
+                                                    _acardionList[
+                                                            _currentIndex] !=
+                                                        0),
+                                            onTap: () {
+                                              setState(() {
+                                                _currentIndex2 = index2;
+                                                _currentIndex = index;
+
+                                                CenterScreen
+                                                    .globalKey.currentState
+                                                    ?.changePage(
                                                         _buttonNames[index]
-                                                            [index2 + 1],
-                                                        index2,_currentIndex2,
-                                                        index2 == _currentIndex2 &&
-                                                            _acardionList[_currentIndex] != 0
-                                                    ),
-                                                    // leading: Padding(
-                                                    //   padding: EdgeInsets.all(
-                                                    //       PanelConstants
-                                                    //           .paddingDimension),
-                                                    //   child: Icon(
-                                                    //     _buttonNames[index]
-                                                    //             [index2 + 1]
-                                                    //         .icon,
-                                                    //     color: (index2 ==
-                                                    //                 _currentIndex2 &&
-                                                    //             _acardionList[
-                                                    //                     _currentIndex] !=
-                                                    //                 0)
-                                                    //         ? PanelConstants
-                                                    //             .drawerSelectColor1
-                                                    //         : PanelConstants
-                                                    //             .drawerFontColor,
-                                                    //   ),
-                                                    // ),
-                                                    onTap: () {
-                                                      setState(() {
-                                                        _currentIndex2 = index2;
-                                                        _currentIndex = index;
-
-
-                                                            // ? Navigator.pushNamed(
-                                                            //     context, '/login')
-                                                             CenterScreen
-                                                                .globalKey
-                                                                .currentState
-                                                                ?.changePage(_buttonNames[
-                                                                            index]
-                                                                        [
-                                                                        index2 +
-                                                                            1]
-                                                                    .page);
-
-                                                      });
-                                                    },
-                                                  ),
-                                                ),
-                                                Divider(
-                                                  color: PanelConstants
-                                                      .drawerFontColor,
-                                                  thickness: 0.2,
-                                                )
-                                              ],
-                                            ))
-                                  ],
-                                ),
-                              ),
-                              Divider(
-                                color: PanelConstants.drawerFontColor,
-                                thickness: 0.2,
-                              )
-                            ],
-                          ))
+                                                                [index2 + 2]
+                                                            .page);
+                                              });
+                                            },
+                                          ),
+                                        ),
+                                      ],
+                                    ))
+                          ],
+                        ),
+                )
               ],
             ),
           ),
@@ -342,12 +571,22 @@ class _DrawerPageState extends State<DrawerPage> {
 
   BoxDecoration selectedBoxDecoration() {
     return BoxDecoration(
-      borderRadius: BorderRadius.circular(20),
-      border: Border.all(color: PanelConstants.drawerSelectColor1, width: 2),
+      color: StructureBuilder.styles!.primaryColor,
+      // color: Colors.transparent,
+      borderRadius: BorderRadius.circular(StructureBuilder.dims!.h0BorderRadius),
+      // border: Border.all(color: StructureBuilder.styles!.primaryLightColor, width: 2),
+      boxShadow: [
+        BoxShadow(
+          color: StructureBuilder.styles!.primaryLightColor,
+          // blurRadius: 2.0,
+
+          offset: Offset(0, 1.5),
+        ),
+      ],
       // gradient: LinearGradient(colors: [
-      //   PanelConstants.drawerSelectColor2
-      //       .withOpacity(0.9),
-      //   PanelConstants.drawerSelectColor1
+      //   StructureBuilder.styles!.primaryColor
+      //       .withOpacity(0.1),
+      //   StructureBuilder.styles!.primaryColor
       //       .withOpacity(0.9),
       // ])
     );

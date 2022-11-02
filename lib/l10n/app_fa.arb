@@ -5,6 +5,18 @@
   "usernamehint": "نام کاربری خود را وارد نمایید:",
   "passwordhint": "رمزعبور خود را وارد نمایید:",
   "login": "ثبت نام",
+  "search": "جستجو:",
+  "components": "رابط کاربری",
+  "item": "آیتم",
+  "lorm": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.",
+
+  "primary": "اولیه",
+  "secondary": "ثانویه",
+  "error": "اخطار",
+  "success": "موفقیت",
+  "warning": "اضطرار",
+  "information": "اطلاع رسانی",
+  "confidence": "اطمینان از انجام کار",
 
   "adminMenu": "منوی ادمین",
 
@@ -12,6 +24,47 @@
   "barCharts": "نمودار میله ای",
   "circularCharts": "نمودار دایروی",
   "linearChart": "نمودار خطی",
+
+  "accordion": "آکاردئون",
+  "simpleaccordion": "آکاردئون ساده",
+  "scrollableaccordion": "آکاردئون قابل اسکرول",
+  "removableaccordion": "آکاردئون قابل حذف آیتم ها",
+  "solidaccordion": "آکاردئون سالید",
+  "iconaccordion": "آکاردئون با آیکون",
+  "accordionwithdesiredarrowicon": "آکارئون با آیکون باز و بسته شدن دلخواه",
+  "accordionwithbackgroundimage": "آکاردئون با عکس پیش زمینه دلخواه",
+  "accordiontitle": "مدل های متفاوت آکاردئون(منوی باز و بسته شونده) با استفاده از کد های فلاتر در پنل موجود است.",
+
+  "alert": "هشدار",
+  "simplealert": "هشدار ساده",
+  "borderedalert": "هشدار حاشیه دار",
+  "removablealert": "هشدار قابل رد شدن",
+  "alertwithicon": "هشدار با آیکون",
+  "removablealertwithicon": "هشدار با آیکون و قابل حذف شدن",
+  "alertwithdesiredcontent": "هشدار با محتوای دلخواه",
+  "borderedalertwithicon": "هشدار حاشیه دار با آیکن",
+  "alerttitle": "مدل های متفاوت هشدار با استفاده از کد های فلاتر در پنل موجود است، لطفا روی آنها کلیک کنید!",
+
+  "button": "دکمه",
+  "defaultbutton": "دکمه پیشفرض",
+  "borderedbutton": "دکمه حاشیه دار",
+  "iconbutton": "دکمه با آیکون",
+  "icontextbutton": "دکمه با آیکون و متن",
+  "disabledbutton": "دکمه غیر فعال",
+  "socialnetworkbutton": "دکمه شبکه اجتماعی",
+  "roundbutton": "دکمه گرد",
+  "buttonsindifferntsize": "دکمه ها در سایز های متفاوت",
+  "buttontitle": "مدل های متفاوت دکمه با استفاده از کد های فلاتر در پنل موجود است.",
+
+  "groupbutton": "گروه دکمه",
+  "textgroupbutton": "گروه دکمه حاوی متن",
+  "icongroupbutton": "گروه دکمه حاوی آیکن",
+  "radiogroupbutton": "گروه دکمه رادیویی",
+  "groupbuttonwithmaxselection": "گروه دکمه با محدودیت انتخاب ها",
+  "verticalgroupbutton": "گروه دکمه عمودی",
+  "groupbuttonwithdisabledlist": "گروه دکمه با لیست غیر فعال ها",
+  "groupbuttontitle": "مدل های متفاوت گروه دکمه با استفاده از کد های فلاتر در پنل موجود است، شما میتوانید از انواع ویجت ها برای آنها استفاده کنید.",
+
 
   "text": "متن",
   "sampleText": "آرزو دلیل بر استعداد است:)",
@@ -31,8 +84,6 @@
   "chartDescription":   " مدل های متنوع نمودار در پنل در دسترس است .",
 
 
-  "button": "دکمه",
-  "samplButton": "ذخیره",
 
   "dialogBox": "دیالوگ باکس",
   "successDialogTitle": "دیالوگ باکس موفقیت آمیز",
