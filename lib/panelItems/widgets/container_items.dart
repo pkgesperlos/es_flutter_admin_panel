@@ -1,9 +1,10 @@
 
-import 'package:es_flutter_component/es_text/es_dotted_text.dart';
+
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 
 import 'es_information_button.dart';
+import 'es_text/es_dotted_text.dart';
 
 
 class ContainerItems extends StatelessWidget {
@@ -34,6 +35,8 @@ class ContainerItems extends StatelessWidget {
           ],
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          // mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
               padding:
@@ -42,7 +45,8 @@ class ContainerItems extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   EsDottedText(
-                      title, size: 15, color: StructureBuilder.styles!.primaryColor,
+                      title,
+                    // size: 10, color: StructureBuilder.styles!.primaryColor,
                     align: TextAlign.start,
 
                   ),

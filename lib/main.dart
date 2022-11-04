@@ -61,6 +61,8 @@ class _MyApp extends State<MyApp> {
           builder: (context) => StructureBuilder(
                 styles: InitialStyle(
                   primaryColor: Color(0xff092640),
+                  secondaryColor: Color(0xff979797),
+                  tritiaryColor: Colors.pink,
                   primaryDarkColor: Color(0xffF0F4F9),
                   primaryLightColor: Colors.white,
                 ),

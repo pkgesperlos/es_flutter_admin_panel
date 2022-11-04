@@ -18,6 +18,8 @@ import '../panelItems/panel_chart.dart';
 import '../panelItems/panel_dialog_box.dart';
 import '../panelItems/panel_form.dart';
 import '../panelItems/panel_group_button_sample.dart';
+import '../panelItems/panel_label_sample.dart';
+import '../panelItems/panel_text_sample.dart';
 
 class DrawerPage extends StatefulWidget {
   @override
@@ -64,6 +66,11 @@ class _DrawerPageState extends State<DrawerPage> {
             page: PanelAlertSample(),
             pageRout: '/alertSample'),
         buttonsInfo(
+            title: AppLocalizations.of(context)!.text,
+            icon: Icons.circle,
+            page: PanelTextSample(),
+            pageRout: '/textSample'),
+        buttonsInfo(
             title: AppLocalizations.of(context)!.button,
             icon: Icons.circle,
             page: PanelButtonSample(),
@@ -74,10 +81,10 @@ class _DrawerPageState extends State<DrawerPage> {
             page: PanelGroupButtonSample(),
             pageRout: '/groupButtonSample'),
         buttonsInfo(
-            title: AppLocalizations.of(context)!.alert,
+            title: AppLocalizations.of(context)!.label,
             icon: Icons.circle,
-            page: PanelAlertSample(),
-            pageRout: '/alertSample'),
+            page: PanelLabelSample(),
+            pageRout: '/labelSample'),
         buttonsInfo(
             title: AppLocalizations.of(context)!.accordion,
             icon: Icons.circle,

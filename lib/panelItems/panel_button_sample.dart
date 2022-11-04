@@ -49,7 +49,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.defaultbutton,
           information:
-              "It is a default button located in: \n es_flutter_component/es_button/es_button.dart' \n and is used as: \n "
+              "They are default buttons located in: \n es_flutter_component/es_button/es_button.dart' \n and is used as: \n "
               """EsButton(
                   text:AppLocalizations.of(context)!.error,
                   fillColor: StructureBuilder.styles!.buttonColor().danger),"""),
@@ -128,7 +128,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.borderedbutton,
           information:
-              "It is a bordered button located in: \n es_flutter_component/es_button/es_button.dart' \n and is used as: \n "
+              "They are bordered buttons located in: \n es_flutter_component/es_button/es_button.dart' \n and is used as: \n "
               """EsButton(
                 text: AppLocalizations.of(context)!.success,
                 fillColor: StructureBuilder.styles!.successColor().successLight,
@@ -219,7 +219,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.iconbutton,
           information:
-              "It is a icon button located in: \n es_flutter_component/es_button/es_icon_button.dart' \n and is used as: \n "
+              "They are icon buttons located in: \n es_flutter_component/es_button/es_icon_button.dart' \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/danger.svg",
@@ -378,7 +378,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.icontextbutton,
           information:
-              "It is a icon text button located in: \n es_flutter_component/es_button/es_button.dart' \n and is used as: \n "
+              "They are icon text buttons located in: \n es_flutter_component/es_button/es_button.dart' \n and is used as: \n "
               """EsButton(
                 text: AppLocalizations.of(context)!.success,
                 icon: EsSvgIcon(
@@ -446,7 +446,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.disabledbutton,
           information:
-              "It is a disabled button located in: \n es_flutter_component/es_button' \n and is used as: \n "
+              "They are disabled buttons located in: \n es_flutter_component/es_button' \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/Megaphone.svg",
@@ -584,7 +584,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.socialnetworkbutton,
           information:
-              "It is a  social network button located in: \n es_flutter_component/es_button/es_icon_button.dart' \n and is used as: \n "
+              "They are  social network buttons located in: \n es_flutter_component/es_button/es_icon_button.dart' \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/InstagramLogo.svg",
@@ -653,7 +653,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.roundbutton,
           information:
-              "It is a round button located in: \n es_flutter_component/es_button' \n and is used as: \n "
+              "They are round buttons located in: \n es_flutter_component/es_button' \n and is used as: \n "
               """EsButton(
                   text: AppLocalizations.of(context)!.information,
                   borderRadiusSize: StructureBuilder.dims!.h0IconSize,

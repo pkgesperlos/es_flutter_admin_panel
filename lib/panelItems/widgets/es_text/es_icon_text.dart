@@ -1,8 +1,8 @@
 import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/resources/Constants/dims.dart';
-import 'package:es_flutter_component/resources/Constants/styles.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart' as intl;
+
 //
 // import '../resources/Constants/dims.dart';
 // import '../resources/Constants/styles.dart';
@@ -27,6 +27,13 @@ class EsIconText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDirectionRTL(BuildContext context) {
+      return intl.Bidi.isRtlLanguage(
+          Localizations.localeOf(context).languageCode);
+    }
+    bool _rtl = isDirectionRTL(context);
+
+
     return IntrinsicWidth(
 
       child: RichText(
@@ -34,16 +41,37 @@ class EsIconText extends StatelessWidget {
         textAlign: align??TextAlign.center,
         text: TextSpan(
           children: [
-          WidgetSpan(
-              alignment: PlaceholderAlignment.middle,
-              child: icon??Container()),
-                WidgetSpan(child: EsHSpacer(),),
+
+            _rtl
+                ? WidgetSpan(child: Container())
+                : WidgetSpan(
+                alignment: PlaceholderAlignment.middle,
+                child: icon??Container()),
+            _rtl
+                ? WidgetSpan(child: Container())
+                : WidgetSpan(
+                child: EsHSpacer(
+                  big: true,
+                )),
             WidgetSpan(alignment: PlaceholderAlignment.middle,
                 child: EsOrdinaryHeightText(data,
-                  size: size??StructureBuilder.dims!.h3FontSize,
+                  size: size??StructureBuilder.dims!.h2FontSize,
                   color: color??StructureBuilder.styles!.textColor().primary,
-                isBold: isBold,
+                  isBold: isBold,
                 )),
+            _rtl
+                ? WidgetSpan(
+                child: EsHSpacer(
+                  big: true,
+                ))
+                : WidgetSpan(child: Container()),
+            _rtl
+                ? WidgetSpan(
+    alignment: PlaceholderAlignment.middle,
+    child: icon??Container())
+                : WidgetSpan(child: Container()),
+
+
 
           ],
         ),

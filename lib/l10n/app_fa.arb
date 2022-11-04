@@ -67,13 +67,20 @@
 
 
   "text": "متن",
+  "textindifferentposition": "متن در جایگاه های متفاوت",
+  "textforuseinlist": "متن برای استفاده در لیست ها",
+  "textindifferentcolors": "متن در رنگ های متفاوت",
+  "textindifferentemphsizestyles": "متن در استایل های تاکیدی متفاوت",
+  "textindifferentsizes": "متن در اندازه های متفاوت",
+
   "sampleText": "آرزو دلیل بر استعداد است:)",
   "ordinaryText": "متن معمولی",
   "titleText": "متن عنوان",
   "labledText": "متن لیبل",
   "dottedText": "متن نقطه دار",
   "markedText": "متن علامت دار",
-  "textSampleDescription": " انواع مدل های متن در سایز های مختلف در پنل در دسترس است.",
+  "texttitle": " انواع مدل های متن در سایز ها و استایل های متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
   "dialogeBoxDescription": " انواع مدل های دیالوگ باکس در عملکرد های مختلف در پنل در دسترس است .",
   "buttonDescription": " انواع مدل های دکمه معمولی ،آیکون دار و لودینگ دار سایزهای مختلف در پنل در دسترس است .",
   "formDescription": " انواع مدل های فرم درعملکردهای مختلف برای گرفتن اطلاعات از کاربر در پنل در دسترس است .",
@@ -83,6 +90,13 @@
   "notificationsDescription":   " انواع مدل های اعلان در پنل در دسترس است .",
   "chartDescription":   " مدل های متنوع نمودار در پنل در دسترس است .",
 
+  "label": "لیبل",
+  "labelondifferentwidgets": "لیبل بر ویجت های مختلف ",
+  "labelwithdifferentcontents": "لیبل با محتواهای گوناگون",
+  "labelwithsepratorborder": "لیبل با حاشیه جدا کننده",
+  "labelindifferentcolors": "لیبل در رنگ های مختلف",
+  "labelindifferentsizesandborderradiuss": "لیبل در سایز ها و انحناهای متفاوت",
+  "labeltitle": " انواع مدل های لیبل در سایز ها و محتوا های متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
 
 
   "dialogBox": "دیالوگ باکس",

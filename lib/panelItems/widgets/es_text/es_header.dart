@@ -12,15 +12,18 @@ class EsHeader extends StatelessWidget {
   TextAlign align;
   double? size;
   Color? color;
+  TextDecoration? decoration;
+  Color? backgroundColor;
   String? fontFamily;
   bool isBold;
 
   EsHeader(
       this.data,
       {Key? key,
-
         this.align = TextAlign.center,
         this.size,
+        this.backgroundColor,
+        this.decoration,
         this.color ,
         this.fontFamily ,
         this.isBold=false
@@ -34,6 +37,8 @@ class EsHeader extends StatelessWidget {
       data,
       textAlign: align,
       style: TextStyle(
+        decoration: decoration??TextDecoration.none,
+        backgroundColor: backgroundColor??Colors.transparent,
         // height: (size ?? Dims.h1FontSize(context))*0.04,
         color: color??StructureBuilder.styles!.textColor().primary,
         fontSize: size ?? StructureBuilder.dims!.h4FontSize,

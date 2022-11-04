@@ -1,7 +1,4 @@
 
-import 'package:es_flutter_component/resources/Constants/styles.dart';
-import 'package:es_flutter_component/resources/constants/config.dart';
-import 'package:es_flutter_component/resources/constants/dims.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

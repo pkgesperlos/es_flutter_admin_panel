@@ -105,7 +105,7 @@ class EsButtonState extends State<EsButton> {
                           size: widget.size == null
                               ? StructureBuilder.dims!.h3FontSize
                               : widget.size! ,
-                          color: widget.textColor??StructureBuilder.styles!.textColor().primary,
+                          color: widget.textColor??StructureBuilder.styles!.textColor().secondary,
                         )),
                     Visibility(
                         visible: _isLoading,

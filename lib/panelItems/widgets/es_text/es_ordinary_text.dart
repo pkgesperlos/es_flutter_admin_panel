@@ -11,9 +11,12 @@ import 'package:flutter/material.dart';
 class EsOrdinaryText extends StatelessWidget {
   String data;
   TextAlign align;
+  TextDecoration? decoration;
+  Color? backgroundColor;
   double? size;
   double? height;
   Color? color;
+
   String? fontFamily;
   bool overFlowTag;
   int maxLine;
@@ -22,6 +25,8 @@ class EsOrdinaryText extends StatelessWidget {
   EsOrdinaryText(this.data,
       {Key? key,
         this.align = TextAlign.center,
+        this.decoration,
+        this.backgroundColor,
         this.size,
         this.color ,
         this.fontFamily ,
@@ -40,6 +45,8 @@ class EsOrdinaryText extends StatelessWidget {
       textAlign: align,
       maxLines: overFlowTag ? maxLine : null,
       style: TextStyle(
+        backgroundColor: backgroundColor??Colors.transparent,
+   decoration:decoration?? TextDecoration.none,
     height: height==null?null:height,
       textBaseline: TextBaseline.alphabetic,
         color: color??StructureBuilder.styles!.textColor().primary,

@@ -66,7 +66,9 @@ class _EsGroupButtonState extends State<EsGroupButton> {
           spacing: 0,
           unselectedColor:widget.unSelectedColor?? StructureBuilder.styles!.primaryColor,
           selectedColor: widget.selectedColor??StructureBuilder.styles!.t2Color,
-          direction:widget.direction?? Axis.horizontal
+          direction:widget.direction?? Axis.horizontal,
+        borderRadius: BorderRadius.all(Radius.circular(StructureBuilder.dims!.h1BorderRadius)),
+
       ) ,
 
       buttons: List.generate(widget.widgetList.length, (i) => ""),

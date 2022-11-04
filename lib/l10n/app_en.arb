@@ -27,6 +27,8 @@
   "circularCharts": "Circular Chart",
   "linearChart": "linear Chart",
 
+
+
   "accordion": "Accordion",
   "simpleaccordion": "Simple accordion",
   "scrollableaccordion": "Scrollable accordion",
@@ -46,6 +48,7 @@
   "alertwithdesiredcontent": "Alert with Ddesired content",
   "borderedalertwithicon": "Bordered alert with icon",
   "alerttitle": "Different model of alert are available in panel by flutter code,click them !",
+
 
   "button": "Button",
   "defaultbutton": "Default button",
@@ -69,14 +72,28 @@
 
 
   "text": "Text",
+  "textindifferentposition": "Text in different positions",
+  "textforuseinlist": "Text for use in lists",
+  "textindifferentcolors": "Text in Different Colors",
+  "textindifferentemphsizestyles": "Text in different emphsize styles",
+  "textindifferentsizes": "Text in different sizes",
   "sampleText": "Wishing is the reason for talent:)",
   "ordinaryText": "Ordinary Text",
   "titleText": "Title Text",
   "labledText": "Labled Text",
   "dottedText": "Dotted Text",
   "markedText": "Marked Text",
+  "texttitle": "different kinds of text with various sizes and styles are available in panel by flutter code.",
 
-  "textSampleDescription": "different kinds of text with various size are available in panel.",
+  "label": "label",
+  "labelondifferentwidgets": "label on different widgets",
+  "labelwithdifferentcontents": "label with different contents",
+  "labelwithsepratorborder": "label with seprator border",
+  "labelindifferentcolors": "label in different colors",
+  "labelindifferentsizesandborderradiuss": "label in different sizes and border radius's",
+  "labeltitle": "different kinds of label with various sizes and contents are available in panel by flutter code.",
+
+
   "dialogeBoxDescription": "different kinds of dialog box with various function are available in panel.",
   "buttonDescription": "different kinds of button(Ordinary,with Icon,Loading) with various size are available in panel.",
   "formDescription": "different kinds of forms with various function for giving data from user are available in panel.",

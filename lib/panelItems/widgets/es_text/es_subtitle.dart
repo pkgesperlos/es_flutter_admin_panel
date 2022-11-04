@@ -13,6 +13,8 @@ class EsSubtitle extends StatelessWidget {
   TextAlign align;
   double? size;
   Color? color;
+  TextDecoration? decoration;
+  Color? backgroundColor;
   String? fontFamily;
   bool isBold;
 
@@ -21,6 +23,8 @@ class EsSubtitle extends StatelessWidget {
       {Key? key,
         this.align = TextAlign.center,
         this.size,
+        this.backgroundColor,
+        this.decoration,
         this.color ,
         this.fontFamily ,
       this.isBold=false
@@ -34,6 +38,8 @@ class EsSubtitle extends StatelessWidget {
       data,
       textAlign: align,
       style: TextStyle(
+        decoration: decoration??TextDecoration.none,
+        backgroundColor: backgroundColor??Colors.transparent,
         // height: (size ?? Dims.h4FontSize(context))*0.04,
         color: color??StructureBuilder.styles!.textColor().primary,
         fontSize: size ?? StructureBuilder.dims!.h4FontSize,

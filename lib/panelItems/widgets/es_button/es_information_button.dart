@@ -61,7 +61,7 @@ class EsInformationButton extends StatelessWidget {
               EsSvgIcon("assets/svgs/info.svg",
                   color:
                       buttonFontColor ?? StructureBuilder.styles!.primaryColor,
-                  size: size ?? StructureBuilder.dims!.h2FontSize)),
+                  size: size ?? StructureBuilder.dims!.h1FontSize)),
     );
   }
 }

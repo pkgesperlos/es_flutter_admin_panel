@@ -46,6 +46,7 @@ class PanelGroupButtonSample extends StatelessWidget {
             padding: EdgeInsets.all(StructureBuilder.dims!.h1Padding),
             child: EsOrdinaryText(
               "${index + 1}",
+              color: StructureBuilder.styles!.t6Color,
               size: StructureBuilder.dims!.h1FontSize,
             )));
     List<Widget> _widgetList2 = List.generate(
@@ -70,31 +71,13 @@ class PanelGroupButtonSample extends StatelessWidget {
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
                 initialSelectedindex: 1,
-                unSelectedColor: Colors.indigo,
+                unSelectedColor: StructureBuilder.styles!.secondaryColor,
               ),
               EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
                 initialSelectedindex: 2,
-                unSelectedColor: Colors.amber,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList2,
-                // onPressedList[]: ,
-                initialSelectedindex: 3,
-                unSelectedColor: Colors.pink,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList2,
-                // onPressedList[]: ,
-                initialSelectedindex: 4,
-                unSelectedColor: Colors.purple,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList2,
-                // onPressedList[]: ,
-                initialSelectedindex: 0,
-                unSelectedColor: Colors.red,
+                unSelectedColor: StructureBuilder.styles!.tritiaryColor,
               ),
             ],
           )),
@@ -129,37 +112,19 @@ class PanelGroupButtonSample extends StatelessWidget {
                 widgetList: _widgetList1,
                 initialSelectedindex: 1,
                 // onPressedList[]: ,
-                unSelectedColor: Colors.amber,
+                unSelectedColor: StructureBuilder.styles!.secondaryColor,
               ),
               EsGroupButton(
                 widgetList: _widgetList1,
                 initialSelectedindex: 2,
                 // onPressedList[]: ,
-                unSelectedColor: Colors.indigo,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList1,
-                // onPressedList[]: ,
-                initialSelectedindex: 3,
-                unSelectedColor: Colors.pink,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList1,
-                // onPressedList[]: ,
-                initialSelectedindex: 4,
-                unSelectedColor: Colors.purple,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList1,
-                // onPressedList[]: ,
-                initialSelectedindex: 0,
-                unSelectedColor: Colors.red,
+                unSelectedColor: StructureBuilder.styles!.tritiaryColor,
               ),
             ],
           )),
           title: AppLocalizations.of(context)!.textgroupbutton,
           information:
-          "They are text group buttons located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "They are text group buttons located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                 widgetList: _widgetList1,
                 initialSelectedindex: 1,
@@ -192,41 +157,20 @@ class PanelGroupButtonSample extends StatelessWidget {
                 // onPressedList[]: ,
                 maxSelected: 3,
                 initialSelectedindex: 1,
-                unSelectedColor: Colors.indigo,
+                unSelectedColor: StructureBuilder.styles!.secondaryColor,
               ),
               EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
                 maxSelected: 3,
                 initialSelectedindex: 2,
-                unSelectedColor: Colors.amber,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList2,
-                // onPressedList[]: ,
-                initialSelectedindex: 3,
-                maxSelected: 3,
-                unSelectedColor: Colors.pink,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList2,
-                // onPressedList[]: ,
-                initialSelectedindex: 4,
-                maxSelected: 3,
-                unSelectedColor: Colors.purple,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList2,
-                // onPressedList[]: ,
-                initialSelectedindex: 0,
-                maxSelected: 3,
-                unSelectedColor: Colors.red,
+                unSelectedColor: StructureBuilder.styles!.tritiaryColor,
               ),
             ],
           )),
           title: AppLocalizations.of(context)!.groupbuttonwithmaxselection,
           information:
-          "They are group buttons with max selection boundary located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "They are group buttons with max selection boundary located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
@@ -257,41 +201,20 @@ class PanelGroupButtonSample extends StatelessWidget {
                 // onPressedList[]: ,
                 initialSelectedindex: 1,
                 isRadio: true,
-                unSelectedColor: Colors.indigo,
+                unSelectedColor: StructureBuilder.styles!.secondaryColor,
               ),
               EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
                 initialSelectedindex: 2,
                 isRadio: true,
-                unSelectedColor: Colors.amber,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList2,
-                // onPressedList[]: ,
-                initialSelectedindex: 3,
-                isRadio: true,
-                unSelectedColor: Colors.pink,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList2,
-                // onPressedList[]: ,
-                initialSelectedindex: 4,
-                isRadio: true,
-                unSelectedColor: Colors.purple,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList2,
-                // onPressedList[]: ,
-                initialSelectedindex: 0,
-                isRadio: true,
-                unSelectedColor: Colors.red,
+                unSelectedColor: StructureBuilder.styles!.tritiaryColor,
               ),
             ],
           )),
           title: AppLocalizations.of(context)!.radiogroupbutton,
           information:
-          "They are radio group buttons located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "They are radio group buttons located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
@@ -314,49 +237,28 @@ class PanelGroupButtonSample extends StatelessWidget {
               EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
-                disabledIndexes: [0,3],
+                disabledIndexes: [0, 3],
                 initialSelectedindex: 1,
               ),
               EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
-                disabledIndexes: [0,3],
+                disabledIndexes: [0, 3],
                 initialSelectedindex: 1,
-                unSelectedColor: Colors.indigo,
+                unSelectedColor: StructureBuilder.styles!.secondaryColor,
               ),
               EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
-                disabledIndexes: [0,3],
+                disabledIndexes: [0, 3],
                 initialSelectedindex: 2,
-                unSelectedColor: Colors.amber,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList2,
-                // onPressedList[]: ,
-                disabledIndexes: [0,3],
-                initialSelectedindex: 4,
-                unSelectedColor: Colors.pink,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList2,
-                // onPressedList[]: ,
-                disabledIndexes: [0,3],
-                initialSelectedindex: 4,
-                unSelectedColor: Colors.purple,
-              ),
-              EsGroupButton(
-                widgetList: _widgetList2,
-                // onPressedList[]: ,
-                disabledIndexes: [0,3],
-                initialSelectedindex: 0,
-                unSelectedColor: Colors.red,
+                unSelectedColor: StructureBuilder.styles!.tritiaryColor,
               ),
             ],
           )),
           title: AppLocalizations.of(context)!.groupbuttonwithdisabledlist,
           information:
-          "They are group buttons with disabled list located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "They are group buttons with disabled list located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
@@ -373,55 +275,34 @@ class PanelGroupButtonSample extends StatelessWidget {
       ContainerItems(
           widget: Container(
               child: Wrap(
-                spacing: StructureBuilder.dims!.h0Padding,
-                runSpacing: StructureBuilder.dims!.h0Padding,
-                children: [
-                  EsGroupButton(
-                    widgetList: _widgetList2,
-                    // onPressedList[]: ,
-                    direction: Axis.vertical,
-                    initialSelectedindex: 0,
-                  ),
-                  EsGroupButton(
-                    widgetList: _widgetList2,
-                    // onPressedList[]: ,
-                    direction: Axis.vertical,
-                    initialSelectedindex: 1,
-                    unSelectedColor: Colors.indigo,
-                  ),
-                  EsGroupButton(
-                    widgetList: _widgetList2,
-                    // onPressedList[]: ,
-                    direction: Axis.vertical,
-                    initialSelectedindex: 2,
-                    unSelectedColor: Colors.amber,
-                  ),
-                  EsGroupButton(
-                    widgetList: _widgetList2,
-                    // onPressedList[]: ,
-                    direction: Axis.vertical,
-                    initialSelectedindex: 3,
-                    unSelectedColor: Colors.pink,
-                  ),
-                  EsGroupButton(
-                    widgetList: _widgetList2,
-                    // onPressedList[]: ,
-                    direction: Axis.vertical,
-                    initialSelectedindex: 4,
-                    unSelectedColor: Colors.purple,
-                  ),
-                  EsGroupButton(
-                    widgetList: _widgetList2,
-                    // onPressedList[]: ,
-                    direction: Axis.vertical,
-                    initialSelectedindex: 0,
-                    unSelectedColor: Colors.red,
-                  ),
-                ],
-              )),
+            spacing: StructureBuilder.dims!.h0Padding,
+            runSpacing: StructureBuilder.dims!.h0Padding,
+            children: [
+              EsGroupButton(
+                widgetList: _widgetList2,
+                // onPressedList[]: ,
+                direction: Axis.vertical,
+                initialSelectedindex: 0,
+              ),
+              EsGroupButton(
+                widgetList: _widgetList2,
+                // onPressedList[]: ,
+                direction: Axis.vertical,
+                initialSelectedindex: 1,
+                unSelectedColor: StructureBuilder.styles!.secondaryColor,
+              ),
+              EsGroupButton(
+                widgetList: _widgetList2,
+                // onPressedList[]: ,
+                direction: Axis.vertical,
+                initialSelectedindex: 2,
+                unSelectedColor: StructureBuilder.styles!.tritiaryColor,
+              ),
+            ],
+          )),
           title: AppLocalizations.of(context)!.verticalgroupbutton,
           information:
-          "They are vertical group buttons located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "They are vertical group buttons located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                     widgetList: _widgetList2,
                     // onPressedList[]: ,

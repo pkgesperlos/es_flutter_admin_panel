@@ -11,9 +11,11 @@ import 'package:flutter/material.dart';
 
 class EsLabelText extends StatelessWidget {
   String data;
+  TextDecoration? decoration;
   TextAlign align;
   double? size;
   Color? color;
+  Color? backgroundColor;
   String? fontFamily;
   bool isBold;
 
@@ -21,8 +23,10 @@ class EsLabelText extends StatelessWidget {
       {Key? key,
         this.align = TextAlign.center,
 
+        this.decoration ,
         this.size ,
         this.color ,
+        this.backgroundColor ,
         this.fontFamily ,
         this.isBold=false
       })
@@ -33,7 +37,10 @@ class EsLabelText extends StatelessWidget {
     return Text(
       data,
       textAlign: align,
+
       style: TextStyle(
+        decoration: decoration??TextDecoration.none,
+        backgroundColor: backgroundColor??Colors.transparent,
         // height: (size ?? Dims.h3FontSize(context))*0.04,
         color: color??StructureBuilder.styles!.textColor().primary,
         fontSize: size ?? StructureBuilder.dims!.h4FontSize,

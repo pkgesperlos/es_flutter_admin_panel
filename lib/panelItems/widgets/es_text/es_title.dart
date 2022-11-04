@@ -14,6 +14,8 @@ class EsTitle extends StatelessWidget {
   TextAlign? align;
   double? size;
   Color? color;
+  TextDecoration? decoration;
+  Color? backgroundColor;
   String? fontFamily;
   bool isBold;
   bool overFlowTag;
@@ -23,9 +25,10 @@ class EsTitle extends StatelessWidget {
   EsTitle(
       this.data,
       {Key? key,
-
         this.align ,
         this.size,
+        this.decoration,
+        this.backgroundColor,
         this.color ,
         this.fontFamily ,
       this.isBold=false,
@@ -42,6 +45,8 @@ class EsTitle extends StatelessWidget {
       textAlign: align??TextAlign.center,
       maxLines: maxLine??2,
       style: TextStyle(
+        decoration: decoration??TextDecoration.none,
+        backgroundColor: backgroundColor??Colors.transparent,
         // height: (size ?? Dims.h2FontSize(context))*0.04,
         color: color??StructureBuilder.styles!.textColor().primary,
         fontSize: size ?? StructureBuilder.dims!.h2FontSize,
