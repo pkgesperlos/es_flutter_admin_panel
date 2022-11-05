@@ -1,6 +1,7 @@
 // @dart=2.9
 import 'package:es_flutter_admin_panel/panelItems/panel_chart.dart';
 import 'package:es_flutter_admin_panel/panelItems/panel_progressbar.dart';
+import 'package:es_flutter_admin_panel/panelItems/widgets/bread_crumb/app_navigator_observer.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
 import 'package:es_flutter_admin_panel/images/personal_style.dart';
 import 'package:es_flutter_admin_panel/language_change_provider.dart';
@@ -61,7 +62,7 @@ class _MyApp extends State<MyApp> {
           builder: (context) => StructureBuilder(
                 styles: InitialStyle(
                   primaryColor: Color(0xff092640),
-                  secondaryColor: Color(0xff979797),
+                  secondaryColor: Color(0xff737373),
                   tritiaryColor: Colors.pink,
                   primaryDarkColor: Color(0xffF0F4F9),
                   primaryLightColor: Colors.white,
@@ -70,6 +71,7 @@ class _MyApp extends State<MyApp> {
                 configs: InitialConfig(),
                 child: MaterialApp(
                   // locale: Locale("fa"),
+                  navigatorObservers: [AppNavigatorObserver()],//it is initialized for breadcrumb
                   locale:
                       Provider.of<LanguageChangeProvider>(context, listen: true)
                           .currentLocale,

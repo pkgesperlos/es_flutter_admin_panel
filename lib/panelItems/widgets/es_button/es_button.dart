@@ -81,6 +81,7 @@ class EsButtonState extends State<EsButton> {
             hoverColor: widget.disable?Colors.transparent:Colors.black.withOpacity(.1),
             onTap: onTap,
             child: Container(
+
                 padding: EdgeInsets.symmetric(
                     horizontal: widget.size == null
                         ? StructureBuilder.dims!.h0Padding
@@ -99,6 +100,7 @@ class EsButtonState extends State<EsButton> {
                         maintainAnimation: true,
                         maintainState: true,
                         child: EsIconText(
+
                           widget.text ?? "",
                           icon: widget.icon,
                           isBold: widget.isBold,

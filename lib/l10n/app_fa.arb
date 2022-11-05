@@ -98,6 +98,12 @@
   "labelindifferentsizesandborderradiuss": "لیبل در سایز ها و انحناهای متفاوت",
   "labeltitle": " انواع مدل های لیبل در سایز ها و محتوا های متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
 
+  "breadcrumb": "صفحات تو در تو",
+  "breadcrumbwithsolidstructureindifferentcolors": "صفحات تو در تو با ساختار توپر در رنگ های متفاوت",
+  "breadcrumbwithsolidstructureindifferentsizes": "صفحات تو در تو با ساختار توپر در اندازه های متفاوت",
+  "breadcrumbwithiconseparator": "صفحات تو در تو با آیکن جداکننده",
+  "breadcrumbwithtypingelementsseparator": "صفحات تو در تو با المان های تایپی جداکننده",
+  "breadcrumbtitle": " انواع مدل های نمایش مسیر صفحات تو در تو در استایل های متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است، برای اطلاعات بیشتر روی دکمه اطلاعات هر کارد کلیک کنید.",
 
   "dialogBox": "دیالوگ باکس",
   "successDialogTitle": "دیالوگ باکس موفقیت آمیز",

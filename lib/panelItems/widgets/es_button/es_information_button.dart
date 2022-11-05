@@ -45,7 +45,7 @@ class EsInformationButton extends StatelessWidget {
             padding: EdgeInsets.all(StructureBuilder.dims!.h1Padding),
             child: EsOrdinaryText(
               dialogeText,
-              align: align ?? TextAlign.center,
+              align: align ?? TextAlign.left,
             ),
           ),
         ),

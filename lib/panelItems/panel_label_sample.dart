@@ -1,3 +1,4 @@
+import 'package:es_flutter_admin_panel/panelItems/widgets/bread_crumb/bread_crumb_navigator.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_label/es_content_label.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_label/es_label.dart';
@@ -12,6 +13,11 @@ import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class PanelLabelSample extends StatelessWidget {
+
+  static MaterialPageRoute getRoute() => MaterialPageRoute(
+      settings: RouteSettings(name: 'label'),
+      builder: (context) => PanelLabelSample());
+
   const PanelLabelSample({Key? key}) : super(key: key);
 
   @override

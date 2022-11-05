@@ -13,6 +13,7 @@ import '../panelItems/Panel_tabel/panel_responsive_table.dart';
 import '../panelItems/Panel_tabel/panel_simple_table.dart';
 import '../panelItems/panel_accardion_sample.dart';
 import '../panelItems/panel_alert_sample.dart';
+import '../panelItems/panel_bread_crumb_sample.dart';
 import '../panelItems/panel_button_sample.dart';
 import '../panelItems/panel_chart.dart';
 import '../panelItems/panel_dialog_box.dart';
@@ -86,25 +87,11 @@ class _DrawerPageState extends State<DrawerPage> {
             page: PanelLabelSample(),
             pageRout: '/labelSample'),
         buttonsInfo(
-            title: AppLocalizations.of(context)!.accordion,
+            title: AppLocalizations.of(context)!.breadcrumb,
             icon: Icons.circle,
-            page: PanelAccardionSample(),
-            pageRout: '/accardionSample'),
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.alert,
-            icon: Icons.circle,
-            page: PanelAlertSample(),
-            pageRout: '/alertSample'),
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.accordion,
-            icon: Icons.circle,
-            page: PanelAccardionSample(),
-            pageRout: '/accardionSample'),
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.alert,
-            icon: Icons.circle,
-            page: PanelAlertSample(),
-            pageRout: '/alertSample'),
+            page: PanelBreadCrumbSample(),
+            pageRout: '/breadcrumb'),
+
       ],
       [
         AppLocalizations.of(context)!.components,

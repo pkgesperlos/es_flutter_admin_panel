@@ -83,7 +83,7 @@
   "labledText": "Labled Text",
   "dottedText": "Dotted Text",
   "markedText": "Marked Text",
-  "texttitle": "different kinds of text with various sizes and styles are available in panel by flutter code.",
+  "texttitle": "Different kinds of text with various sizes and styles are available in panel by flutter code.",
 
   "label": "label",
   "labelondifferentwidgets": "label on different widgets",
@@ -91,8 +91,14 @@
   "labelwithsepratorborder": "label with seprator border",
   "labelindifferentcolors": "label in different colors",
   "labelindifferentsizesandborderradiuss": "label in different sizes and border radius's",
-  "labeltitle": "different kinds of label with various sizes and contents are available in panel by flutter code.",
+  "labeltitle": "Different kinds of label with various sizes and contents are available in panel by flutter code.",
 
+  "breadcrumb": "Breadcrumb",
+  "breadcrumbwithsolidstructureindifferentcolors": "Breadcrumb with solid structure in different colors",
+  "breadcrumbwithsolidstructureindifferentsizSes": "Breadcrumb with solid structure in different sizes",
+  "breadcrumbwithiconseparator": "Breadcrumb with icon separator",
+  "breadcrumbwithtypingelementsseparator": "Breadcrumb with typing elements separator",
+  "breadcrumbtitle": "Different kinds of breadcrumb styles are available in panel by flutter code, for more information press info button in each card.",
 
   "dialogeBoxDescription": "different kinds of dialog box with various function are available in panel.",
   "buttonDescription": "different kinds of button(Ordinary,with Icon,Loading) with various size are available in panel.",
