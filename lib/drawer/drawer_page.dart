@@ -20,6 +20,7 @@ import '../panelItems/panel_dialog_box.dart';
 import '../panelItems/panel_form.dart';
 import '../panelItems/panel_group_button_sample.dart';
 import '../panelItems/panel_label_sample.dart';
+import '../panelItems/panel_page_indicator_sample.dart';
 import '../panelItems/panel_text_sample.dart';
 
 class DrawerPage extends StatefulWidget {
@@ -91,6 +92,11 @@ class _DrawerPageState extends State<DrawerPage> {
             icon: Icons.circle,
             page: PanelBreadCrumbSample(),
             pageRout: '/breadcrumb'),
+        buttonsInfo(
+            title: "pagIndicator",
+            icon: Icons.circle,
+            page: PanelPageIndicatorSample(),
+            pageRout: '/pageindicator'),
 
       ],
       [

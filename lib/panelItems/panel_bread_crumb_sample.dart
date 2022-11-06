@@ -13,7 +13,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class PanelBreadCrumbSample extends StatelessWidget {
 
   static MaterialPageRoute getRoute() => MaterialPageRoute(
-      settings: RouteSettings(name: 'breadcrumb'),
+      settings: RouteSettings(name: 'components\breadcrumb'),
       builder: (context) => PanelBreadCrumbSample());
 
   const PanelBreadCrumbSample({Key? key}) : super(key: key);
@@ -131,6 +131,14 @@ class PanelBreadCrumbSample extends StatelessWidget {
                 currentRoute: AppLocalizations.of(context)!.breadcrumb,
                 suffix: EsHeader(
                   "  ",
+                  color: StructureBuilder.styles!.primaryColor,
+                ),
+              ),
+              EsVSpacer(big: true,),
+              BreadCrumbNavigator.simple(
+                currentRoute: AppLocalizations.of(context)!.breadcrumb,
+                suffix: EsHeader(
+                  " | ",
                   color: StructureBuilder.styles!.primaryColor,
                 ),
               ),

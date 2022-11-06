@@ -95,10 +95,21 @@
 
   "breadcrumb": "Breadcrumb",
   "breadcrumbwithsolidstructureindifferentcolors": "Breadcrumb with solid structure in different colors",
-  "breadcrumbwithsolidstructureindifferentsizSes": "Breadcrumb with solid structure in different sizes",
+  "breadcrumbwithsolidstructureindifferentsizes": "Breadcrumb with solid structure in different sizes",
   "breadcrumbwithiconseparator": "Breadcrumb with icon separator",
   "breadcrumbwithtypingelementsseparator": "Breadcrumb with typing elements separator",
   "breadcrumbtitle": "Different kinds of breadcrumb styles are available in panel by flutter code, for more information press info button in each card.",
+
+
+
+  "pageindicator": "Page indicator",
+  "simplepageindicator": "Simple page indicator",
+  "simplepageindicatorwithbutton": "Simple page indicator with button",
+  "numberpageindicator": "Number page indicator",
+  "numberpageindicatorwithbutton ": "Number page indicator with button",
+  "numberpageindicatorwithbuttonandlimitation": "Number page indicator with button and limitation",
+  "pageindicatortitle": "Different kinds of Page indicators  are available in panel by flutter code.",
+
 
   "dialogeBoxDescription": "different kinds of dialog box with various function are available in panel.",
   "buttonDescription": "different kinds of button(Ordinary,with Icon,Loading) with various size are available in panel.",

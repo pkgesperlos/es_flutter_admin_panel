@@ -960,7 +960,7 @@ packages:
     source: hosted
     version: "0.2.8"
   smooth_page_indicator:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: smooth_page_indicator
       url: "https://pub.dartlang.org"

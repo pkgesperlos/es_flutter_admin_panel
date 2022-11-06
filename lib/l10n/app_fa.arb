@@ -105,6 +105,17 @@
   "breadcrumbwithtypingelementsseparator": "صفحات تو در تو با المان های تایپی جداکننده",
   "breadcrumbtitle": " انواع مدل های نمایش مسیر صفحات تو در تو در استایل های متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است، برای اطلاعات بیشتر روی دکمه اطلاعات هر کارد کلیک کنید.",
 
+  "pageindicator": "نشانگر صفحه",
+  "simplepageindicator": "نشانگر صفحه ساده",
+  "simplepageindicatorwithbutton": "نشانگر صفحه با دکمه",
+  "numberpageindicator": "نشانگر صفحه دارای عدد ",
+  "numberpageindicatorwithbutton ": "نشانگر صفحه دارای عدد  با دکمه",
+  "numberpageindicatorwithbuttonandlimitation": "نشانگر صفحه دارای عدد،دکمه و محدودیت تعداد ",
+  "pageindicatortitle": " انواع مدل های نشانگر صفحه  متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
+
+
+
   "dialogBox": "دیالوگ باکس",
   "successDialogTitle": "دیالوگ باکس موفقیت آمیز",
   "successDialogText": "موفقیت آمیز",
