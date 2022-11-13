@@ -1,4 +1,4 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/bread_crumb/simple_bread_buttom.dart';
+import 'package:es_flutter_admin_panel/panelItems/widgets/es_bread_crumb/simple_bread_buttom.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

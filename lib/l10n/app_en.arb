@@ -12,13 +12,13 @@
   "components": "Components",
   "item": "Item",
   "lorm": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-  "primary": "primary",
-  "secondary": "secondary",
-  "error": "error",
+  "primary": "Primary",
+  "secondary": "Secondary",
+  "error": "Error",
   "success": "Success",
   "warning": "Warning",
   "confidence": "Confidence",
-  "information": "information",
+  "information": "Information",
 
   "adminMenu": "Admin Menu",
 
@@ -75,7 +75,7 @@
   "textindifferentposition": "Text in different positions",
   "textforuseinlist": "Text for use in lists",
   "textindifferentcolors": "Text in Different Colors",
-  "textindifferentemphsizestyles": "Text in different emphsize styles",
+  "textindifferentemphsizestyles": "Text in different emphasize styles",
   "textindifferentsizes": "Text in different sizes",
   "sampleText": "Wishing is the reason for talent:)",
   "ordinaryText": "Ordinary Text",
@@ -103,12 +103,54 @@
 
 
   "pageindicator": "Page indicator",
-  "simplepageindicator": "Simple page indicator",
-  "simplepageindicatorwithbutton": "Simple page indicator with button",
-  "numberpageindicator": "Number page indicator",
-  "numberpageindicatorwithbutton ": "Number page indicator with button",
-  "numberpageindicatorwithbuttonandlimitation": "Number page indicator with button and limitation",
-  "pageindicatortitle": "Different kinds of Page indicators  are available in panel by flutter code.",
+  "simplepageindicator": "Simple page indicator in different styles",
+  "simplepageindicatorwithbutton": "Simple page indicator with button in different styles",
+  "numberpageindicator": "Number page indicator in different styles",
+  "numberpageindicatorwithbutton": "Number page indicator with button in different styles",
+  "numberpageindicatorwithbuttonandlimitation": "Number page indicator with button and limitation in different styles",
+  "pageindicatortitle": "Different kinds of page indicators  are available in panel by flutter code.",
+
+  "dropdownbutton": "Dropdown button",
+  "dropdownbuttonsindifferentcolors": "Dropdown buttons in different colors",
+  "dropdownbuttonsindifferentsizes": "Dropdown buttons in different sizes",
+  "dropdownbuttonsindifferentpositions": "Dropdown buttons in different positions",
+  "dropdownbuttonsincustomicons": "Dropdown buttons in custom icons",
+  "dropdownbuttonsindifferentmenudecoration": "Dropdown buttons in different menu decoration",
+  "dropdownbuttonsindifferentmenusizes": "Dropdown Buttons in different menu sizes",
+  "dropdownbuttontitle": "Different kinds of dropdown buttons  are available in panel by flutter code.",
+
+  "slider": "Slider",
+  "simplecarouselsliderwithoutanimation": "Simple carousel slider without animation",
+  "carouselsliderwithanimation": "Carousel Slider with animation",
+  "carouselsliderwithindicator": "Carousel slider with indicator",
+  "carouselsliderwithicon": "Carousel Slider with icon",
+  "carouselsliderwithindicatorandicon": "Carousel slider with indicator and icon",
+  "slidertitle": "Different kinds of sliders  are available in panel by flutter code.",
+
+  "colors": "Colors",
+  "color": "Color",
+  "colorstitle": "Different kinds of colors  are defined in panel by flutter code.",
+  "primarycolor": "Primary color",
+  "primarydarkcolor": "Primary dark color",
+  "primarylightcolor": "Primary light color",
+  "secondarycolor": "Secondary color",
+  "tritiarycolor": "Tritiary color",
+
+  "errorregularcolor": "Error regular color",
+  "errorlightcolor": "Error light color",
+  "errordarkcolor":"Error dark color",
+
+  "warningregularcolor": "Warning regular color",
+  "warninglightcolor": "Warning light color",
+  "warningdarkcolor":"Warning dark color",
+
+  "informationregularcolor": "Information regular color",
+  "informationlightcolor": "Information light color",
+  "informationdarkcolor":"Information dark color",
+
+  "successregularcolor": "Success regular color",
+  "successlightcolor": "Success light color",
+  "successdarkcolor":"Success dark color",
 
 
   "dialogeBoxDescription": "different kinds of dialog box with various function are available in panel.",
@@ -210,7 +252,6 @@
   "linearProgressBar": "Linear Progress Bar",
   "circularProgressBar": "Circular Progress Bar",
 
-  "slider": "Slider",
 
   "images": "Images",
   "zoomingImages": "Zooming Image",

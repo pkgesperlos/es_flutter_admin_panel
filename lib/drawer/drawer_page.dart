@@ -16,11 +16,15 @@ import '../panelItems/panel_alert_sample.dart';
 import '../panelItems/panel_bread_crumb_sample.dart';
 import '../panelItems/panel_button_sample.dart';
 import '../panelItems/panel_chart.dart';
+import '../panelItems/panel_color_sample.dart';
 import '../panelItems/panel_dialog_box.dart';
+import '../panelItems/panel_dropdown_sample.dart';
 import '../panelItems/panel_form.dart';
 import '../panelItems/panel_group_button_sample.dart';
 import '../panelItems/panel_label_sample.dart';
 import '../panelItems/panel_page_indicator_sample.dart';
+import '../panelItems/panel_slider_sample.dart';
+import '../panelItems/panel_table_sample.dart';
 import '../panelItems/panel_text_sample.dart';
 
 class DrawerPage extends StatefulWidget {
@@ -93,10 +97,30 @@ class _DrawerPageState extends State<DrawerPage> {
             page: PanelBreadCrumbSample(),
             pageRout: '/breadcrumb'),
         buttonsInfo(
-            title: "pagIndicator",
+            title: AppLocalizations.of(context)!.pageindicator,
             icon: Icons.circle,
             page: PanelPageIndicatorSample(),
             pageRout: '/pageindicator'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.dropdownbutton,
+            icon: Icons.circle,
+            page: PanelDropDownSample(),
+            pageRout: '/dropdown'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.slider,
+            icon: Icons.circle,
+            page: PanelSliderSample(),
+            pageRout: '/slider'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.colors,
+            icon: Icons.circle,
+            page: PanelColorsSample(),
+            pageRout: '/colors'),
+        buttonsInfo(
+            title: "table",
+            icon: Icons.circle,
+            page: PanelTableSample(),
+            pageRout: '/table'),
 
       ],
       [

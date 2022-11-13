@@ -1,6 +1,6 @@
 import 'package:es_flutter_admin_panel/panelItems/panel_label_sample.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/bread_crumb/bread_crumb_navigator.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
+import 'package:es_flutter_admin_panel/panelItems/widgets/es_bread_crumb/bread_crumb_navigator.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_header.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
@@ -51,7 +51,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.breadcrumbwithsolidstructureindifferentcolors,
           information:
-          "They are bredcrumbs in different sizes located in: \n es_flutter_component/bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
+          "They are bredcrumbs in different sizes located in: \n es_flutter_component/es_bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
               "first \n navigatorObservers: [AppNavigatorObserver()], \n "
               "should be added in the MaterialApp of the main.dart file  \n "
               "Then \n set route as \n "
@@ -96,7 +96,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.breadcrumbwithsolidstructureindifferentsizes,
           information:
-              "They are bredcrumbs in different sizes located in: \n es_flutter_component/bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
+              "They are bredcrumbs in different sizes located in: \n es_flutter_component/es_bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
               "first \n navigatorObservers: [AppNavigatorObserver()], \n "
               "should be added in the MaterialApp of the main.dart file  \n "
               "Then \n set route as \n "
@@ -146,7 +146,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.breadcrumbwithtypingelementsseparator,
           information:
-          "They are breadcrumbs with typing elements seprator located in: \n es_flutter_component/bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
+          "They are breadcrumbs with typing elements seprator located in: \n es_flutter_component/es_bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
               "first \n navigatorObservers: [AppNavigatorObserver()], \n "
               "should be added in the MaterialApp of the main.dart file  \n "
               "Then \n set route as \n "
@@ -211,7 +211,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
           ),
           title: AppLocalizations.of(context)!.breadcrumbwithiconseparator,
           information:
-          "They are breadcrumbs with icon separator located in: \n es_flutter_component/bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
+          "They are breadcrumbs with icon separator located in: \n es_flutter_component/es_bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
               "first \n navigatorObservers: [AppNavigatorObserver()], \n "
               "should be added in the MaterialApp of the main.dart file  \n "
               "Then \n set route as \n "

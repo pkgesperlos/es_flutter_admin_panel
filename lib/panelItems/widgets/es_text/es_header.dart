@@ -32,7 +32,7 @@ class EsHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    defaults(context);
+
     return Text(
       data,
       textAlign: align,
@@ -50,7 +50,5 @@ class EsHeader extends StatelessWidget {
 
   }
 
-  void defaults(context) {
-    size=Dims.h1FontSize;
-  }
+
 }

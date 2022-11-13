@@ -17,6 +17,7 @@ class EsNumberPageIndicator extends StatelessWidget {
   final Color? normalColor;
   final Color? selectedColor;
   final Color? disabledColor;
+   Color? fillColor;
   final double? size;
   final double? margin;
   Color? textColor;
@@ -33,6 +34,7 @@ class EsNumberPageIndicator extends StatelessWidget {
     this.selectedColor,
     this.disabledColor,
     this.textColor,
+    this.fillColor,
     this.size,
     this.margin,
     this.hasButton=false,
@@ -46,6 +48,7 @@ class EsNumberPageIndicator extends StatelessWidget {
     this.selectedColor,
     this.disabledColor,
     this.textColor,
+    this.fillColor,
     this.size,
     this.margin,
     this.hasButton=true,
@@ -108,6 +111,8 @@ int _index=(controller.page != null ? controller.page!.round() % totalPage : 0);
     double _size = size ?? StructureBuilder.dims!.h0Padding * 1.5;
     double _margin = _size * 1.2;
     Color _normalColor = normalColor ?? StructureBuilder.styles!.primaryColor;
+    Color _fillColor = fillColor ?? StructureBuilder.styles!.primaryLightColor;
+    Color _textColor = textColor ?? StructureBuilder.styles!.primaryColor;
 
     return InkWell(
       child: new Container(
@@ -117,7 +122,7 @@ int _index=(controller.page != null ? controller.page!.round() % totalPage : 0);
           child: new Material(
             child: new Container(
                 decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryLightColor,
+                    color: _fillColor,
                     borderRadius: BorderRadius.all(Radius.circular(_size)),
                     border: Border.all(
                         color:
@@ -132,7 +137,7 @@ int _index=(controller.page != null ? controller.page!.round() % totalPage : 0);
                    rtl? "assets/svgs/CaretRight.svg"
                     :"assets/svgs/CaretLeft.svg",
 
-                    color: _normalColor,
+                    color: _textColor,
                     size: _size / 2,
                   ),
                 )),
@@ -140,7 +145,6 @@ int _index=(controller.page != null ? controller.page!.round() % totalPage : 0);
         ),
       ),
       onTap: () {
-        // _disabledIndexes.contains(index-1) ? null :
 
         controller.previousPage(
             duration: Duration(milliseconds: 500), curve: Curves.ease);
@@ -152,6 +156,8 @@ int _index=(controller.page != null ? controller.page!.round() % totalPage : 0);
     double _size = size ?? StructureBuilder.dims!.h0Padding * 1.5;
     double _margin = _size * .2;
     Color _normalColor = normalColor ?? StructureBuilder.styles!.primaryColor;
+    Color _textColor = textColor ?? StructureBuilder.styles!.primaryColor;
+    Color _fillColor = fillColor ?? StructureBuilder.styles!.primaryLightColor;
 
     return InkWell(
       child: new Container(
@@ -161,13 +167,11 @@ int _index=(controller.page != null ? controller.page!.round() % totalPage : 0);
           child: new Material(
             child: new Container(
                 decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryLightColor,
+                    color: _fillColor,
                     borderRadius: BorderRadius.all(Radius.circular(_size)),
                     border: Border.all(
-                        color:
-                        // index == totalPage-1 ? _disabledColor :
-                        _normalColor,
-                        width: 1)),
+                        color: _normalColor,
+                        width: 1.2)),
                 width: _size,
                 height: _size,
                 child: Center(
@@ -176,7 +180,7 @@ int _index=(controller.page != null ? controller.page!.round() % totalPage : 0);
                    "assets/svgs/CaretRight.svg",
                     color:
                     // index == totalPage-1 ? _disabledColor :
-                    _normalColor,
+                    _textColor,
                     size: _size / 2,
                   ),
                 )),
@@ -198,8 +202,7 @@ int _index=(controller.page != null ? controller.page!.round() % totalPage : 0);
     Color _textColor = textColor ?? StructureBuilder.styles!.primaryColor;
     Color _selectedColor =
         selectedColor ?? StructureBuilder.styles!.tritiaryColor;
-    Color _disabledColor =
-        disabledColor ?? StructureBuilder.styles!.secondaryColor;
+    Color _fillColor = fillColor ?? StructureBuilder.styles!.primaryLightColor;
     bool isCurrentPageSelected = index ==
         (controller.page != null ? controller.page!.round() % totalPage : 0);
 
@@ -211,19 +214,20 @@ int _index=(controller.page != null ? controller.page!.round() % totalPage : 0);
           child: new Material(
             child: new Container(
                 decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryLightColor,
+                    color: _fillColor,
                     borderRadius: BorderRadius.all(Radius.circular(_size)),
                     border: Border.all(
                         color:  isCurrentPageSelected
                             ? _selectedColor
                             : _normalColor,
-                        width: 1)),
+                        width: 1.2)),
                 width: _size,
                 height: _size,
                 child: Center(
                   child: EsHeader(
                     "${index + 1}",
                     color: _textColor,
+                    size: _size/2,
                   ),
                 )),
           ),

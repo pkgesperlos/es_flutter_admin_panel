@@ -106,14 +106,56 @@
   "breadcrumbtitle": " انواع مدل های نمایش مسیر صفحات تو در تو در استایل های متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است، برای اطلاعات بیشتر روی دکمه اطلاعات هر کارد کلیک کنید.",
 
   "pageindicator": "نشانگر صفحه",
-  "simplepageindicator": "نشانگر صفحه ساده",
-  "simplepageindicatorwithbutton": "نشانگر صفحه با دکمه",
-  "numberpageindicator": "نشانگر صفحه دارای عدد ",
-  "numberpageindicatorwithbutton ": "نشانگر صفحه دارای عدد  با دکمه",
-  "numberpageindicatorwithbuttonandlimitation": "نشانگر صفحه دارای عدد،دکمه و محدودیت تعداد ",
+  "simplepageindicator": "نشانگر صفحه ساده در استایل های متفاوت",
+  "simplepageindicatorwithbutton": "نشانگر صفحه با دکمه در استایل های متفاوت",
+  "numberpageindicator": "نشانگر صفحه دارای عدد در استایل های متفاوت ",
+  "numberpageindicatorwithbutton": "نشانگر صفحه دارای عدد  با دکمه در استایل های متفاوت",
+  "numberpageindicatorwithbuttonandlimitation": "نشانگر صفحه دارای عدد،دکمه و محدودیت تعداد در استایل های متفاوت ",
   "pageindicatortitle": " انواع مدل های نشانگر صفحه  متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
 
+  "dropdownbutton": "دکمه بازشونده",
+  "dropdownbuttonsindifferentcolors": "دکمه باز شونده در رنگ های متفاوت",
+  "dropdownbuttonsindifferentsizes": "دکمه باز شونده در سایزهای متفاوت",
+  "dropdownbuttonsindifferentpositions": "دکمه بازشونده در مکان های متفاوت",
+  "dropdownbuttonsincustomicons": "دکمه باز شونده با آیکون دلخواه",
+  "dropdownbuttonsindifferentmenudecoration": "دکمه بازشونده با استایل منو متفاوت",
+  "dropdownbuttonsindifferentmenusizes": "دکمه بازشونده با سایز های متفاوت منو باز شونده",
+  "dropdownbuttontitle": " انواع مدل های دکمه باز شونده متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
 
+
+  "slider": "اسلایدر",
+  "simplecarouselsliderwithoutanimation": "اسلایدر کاروسل ساده بدون انیمیشن",
+  "carouselsliderwithanimation": "اسلایدر کاروسل با انیمیشن",
+  "carouselsliderwithindicator": "اسلایدر کاروسل با نشانگر",
+  "carouselsliderwithicon": "اسلایدر کاروسل با آیکون",
+  "carouselsliderwithindicatorandicon": "اسلایدر کاروسل با نشانگر و آیکون",
+  "slidertitle": " انواع مدل های اسلایدر متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
+
+  "colors": "رنگ ها",
+  "primarycolor": "رنگ اصلی",
+  "colorstitle": " انواع مدل های رنگ های متفاوت  با استفاده از کدهای فلاتر در پنل در تعریف شده است.",
+
+  "primarydarkcolor": "رنگ اصلی تیره",
+  "primarylightcolor": "رنگ اصلی روشن",
+  "secondarycolor": "رنگ ثانویه",
+  "tritiarycolor": "رنگ سوم",
+
+  "errorregularcolor": "رنگ معمولی خطر",
+  "errorlightcolor": "رنگ روشن خطر",
+  "errordarkcolor": "رنگ تیره خطر",
+
+  "warningregularcolor": "رنگ معمولی هشدار",
+  "warninglightcolor": "رنگ روشن هشدار",
+  "warningdarkcolor": "رنگ تیره هشدار",
+
+  "informationregularcolor": "رنگ معمولی اطلاعات",
+  "informationlightcolor": "رنگ روشن اطلاعات",
+  "informationdarkcolor":"رنگ تیره اطلاعات",
+
+  "successregularcolor": "رنگ معمولی موفقیت",
+  "successlightcolor": "رنگ روشن موفقیت",
+  "successdarkcolor":"رنگ تیره موفقیت",
 
 
   "dialogBox": "دیالوگ باکس",
@@ -197,7 +239,7 @@
 
   "toggleButton": "دکمه تغییر وضعیت",
 
-  "slider": "اسلایدر",
+
   "carouselSlider": "اسلایدر کاروسل",
   "perspectiveSlider": "اسلایدر پرسپکتیو",
 

@@ -1,4 +1,3 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/bread_crumb/bread_crumb_navigator.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_label/es_content_label.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_label/es_label.dart';

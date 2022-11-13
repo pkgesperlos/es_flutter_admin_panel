@@ -1,11 +1,9 @@
 // @dart=2.9
 import 'package:es_flutter_admin_panel/panelItems/panel_chart.dart';
 import 'package:es_flutter_admin_panel/panelItems/panel_progressbar.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/bread_crumb/app_navigator_observer.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-import 'package:es_flutter_admin_panel/images/personal_style.dart';
 import 'package:es_flutter_admin_panel/language_change_provider.dart';
 import 'package:es_flutter_admin_panel/my_drawer.dart';
+import 'package:es_flutter_admin_panel/panelItems/widgets/es_bread_crumb/app_navigator_observer.dart';
 import 'package:es_flutter_admin_panel/test.dart';
 import 'package:es_flutter_component/resources/constants/structure_config.dart';
 import 'package:es_flutter_component/resources/constants/structure_dims.dart';

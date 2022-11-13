@@ -6,9 +6,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:intl/intl.dart' as intl;
-import 'package:intl/intl.dart' as intl;
-// dependencies:
-// smooth_page_indicator: ^1.0.0+2
 
 class EsPageIndicator extends StatelessWidget {
   final PageController controller;
@@ -59,8 +56,8 @@ class EsPageIndicator extends StatelessWidget {
   }
 
   Widget _nextJumpIndicator( bool rtl) {
-    double _size = size ?? StructureBuilder.dims!.h0Padding * 1.5;
-    double _margin = _size * 1.2;
+    double _size = size ?? StructureBuilder.dims!.h1Padding;
+
     Color _normalColor = normalColor ?? StructureBuilder.styles!.primaryColor;
 
     return InkWell(
@@ -70,7 +67,7 @@ class EsPageIndicator extends StatelessWidget {
             :"assets/svgs/CaretLeft.svg",
 
         color: _normalColor,
-        size: _size ,
+        size: _size *3,
       ),
       onTap: () {
 
@@ -81,8 +78,7 @@ class EsPageIndicator extends StatelessWidget {
   }
 
   Widget _preJumpIndicator( bool rtl) {
-    double _size = size ?? StructureBuilder.dims!.h0Padding * 1.5;
-    double _margin = _size * .2;
+    double _size = size ?? StructureBuilder.dims!.h1Padding;
     Color _normalColor = normalColor ?? StructureBuilder.styles!.primaryColor;
 
     return InkWell(
@@ -90,7 +86,7 @@ class EsPageIndicator extends StatelessWidget {
         rtl? "assets/svgs/CaretLeft.svg":
         "assets/svgs/CaretRight.svg",
         color: _normalColor,
-        size: _size ,
+        size: _size*3 ,
       ),
       onTap: () {
         // _disabledIndexes.contains(index+1) ? null:

@@ -43,18 +43,31 @@ class ContainerItems extends StatelessWidget {
                EdgeInsets.only(bottom: StructureBuilder.dims!.h0Padding),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // alignment: WrapAlignment.spaceBetween,
                 children: [
-                  EsDottedText(
-                      title,
-                    // size: 10, color: StructureBuilder.styles!.primaryColor,
-                    align: TextAlign.start,
+                  Expanded(
+                    flex:10,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        EsDottedText(
+                            title,
+                          // size: 10, color: StructureBuilder.styles!.primaryColor,
+                          align: TextAlign.start,
 
+                        ),
+                      ],
+                    ),
                   ),
 
-                  EsInformationButton(
-                    dialogeText: information,
+                  Expanded(
+                    flex:1,
+                    child: EsInformationButton(
+                      dialogeText: information,
 
 
+                    ),
                   ),
                 ],
               ),

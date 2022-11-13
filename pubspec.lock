@@ -149,7 +149,7 @@ packages:
     source: hosted
     version: "1.0.1"
   carousel_slider:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: carousel_slider
       url: "https://pub.dartlang.org"
@@ -960,7 +960,7 @@ packages:
     source: hosted
     version: "0.2.8"
   smooth_page_indicator:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: smooth_page_indicator
       url: "https://pub.dartlang.org"

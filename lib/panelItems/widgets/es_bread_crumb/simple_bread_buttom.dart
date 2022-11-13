@@ -3,7 +3,6 @@ import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'package:intl/intl.dart' as intl;
 
 class SimpleBreadButton extends StatelessWidget {
   final String text;
@@ -17,12 +16,7 @@ class SimpleBreadButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDirectionRTL(BuildContext context) {
-      return intl.Bidi.isRtlLanguage(
-          Localizations.localeOf(context).languageCode);
-    }
 
-    bool _rtl = isDirectionRTL(context);
     return Row(
       children: [
         EsOrdinaryText(
