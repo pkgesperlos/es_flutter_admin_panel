@@ -17,6 +17,10 @@ import '../panelItems/panel_bread_crumb_sample.dart';
 import '../panelItems/panel_button_sample.dart';
 import '../panelItems/panel_chart.dart';
 import '../panelItems/panel_color_sample.dart';
+import '../panelItems/panel_group_list_sample.dart';
+import '../panelItems/panel_progress_bar_sample.dart';
+import '../panelItems/panel_progressbar.dart';
+import '../panelItems/panel_responsive_table_sample.dart';
 import '../panelItems/panel_dialog_box.dart';
 import '../panelItems/panel_dropdown_sample.dart';
 import '../panelItems/panel_form.dart';
@@ -24,7 +28,7 @@ import '../panelItems/panel_group_button_sample.dart';
 import '../panelItems/panel_label_sample.dart';
 import '../panelItems/panel_page_indicator_sample.dart';
 import '../panelItems/panel_slider_sample.dart';
-import '../panelItems/panel_table_sample.dart';
+import '../panelItems/panel_simple_table_sample.dart';
 import '../panelItems/panel_text_sample.dart';
 
 class DrawerPage extends StatefulWidget {
@@ -57,10 +61,12 @@ class _DrawerPageState extends State<DrawerPage> {
     // for acardion and non acardion type
     List<List> _buttonNames = [
       [
-    AppLocalizations.of(context)!.components,
-        EsSvgIcon("assets/svgs/GraduationCap.svg",
+        AppLocalizations.of(context)!.components,
+        EsSvgIcon(
+          "assets/svgs/GraduationCap.svg",
           size: StructureBuilder.dims!.h3IconSize,
-          color: StructureBuilder.styles!.primaryLightColor,),
+          color: StructureBuilder.styles!.primaryLightColor,
+        ),
         buttonsInfo(
             title: AppLocalizations.of(context)!.accordion,
             icon: Icons.circle,
@@ -117,17 +123,33 @@ class _DrawerPageState extends State<DrawerPage> {
             page: PanelColorsSample(),
             pageRout: '/colors'),
         buttonsInfo(
-            title: "table",
+            title: AppLocalizations.of(context)!.simpletables,
             icon: Icons.circle,
-            page: PanelTableSample(),
-            pageRout: '/table'),
-
+            page: PanelSimpleTableSample(),
+            pageRout: '/simpletable'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.responsivetable,
+            icon: Icons.circle,
+            page: PanelResponsiveTableSample(),
+            pageRout: '/responsivetable'),
+        buttonsInfo(
+            title: "Group list",
+            icon: Icons.circle,
+            page: PanelGroupListSample(),
+            pageRout: '/grouplist'),
+        buttonsInfo(
+            title: "ProgressBar",
+            icon: Icons.circle,
+            page: PanelProgressBarSample(),
+            pageRout: '/progress'),
       ],
       [
         AppLocalizations.of(context)!.components,
-        EsSvgIcon("assets/svgs/GraduationCap.svg",
+        EsSvgIcon(
+          "assets/svgs/GraduationCap.svg",
           size: StructureBuilder.dims!.h3IconSize,
-          color: StructureBuilder.styles!.primaryLightColor,),
+          color: StructureBuilder.styles!.primaryLightColor,
+        ),
         buttonsInfo(
             title: AppLocalizations.of(context)!.accordion,
             icon: Icons.circle,
@@ -168,6 +190,7 @@ class _DrawerPageState extends State<DrawerPage> {
             icon: Icons.circle,
             page: PanelAlertSample(),
             pageRout: '/alertSample'),
+
       ],
       // [
       //   AppLocalizations.of(context)!.components,
@@ -411,13 +434,7 @@ class _DrawerPageState extends State<DrawerPage> {
     }
     Widget drawerItems(item, index, currentIndex, bool condition) {
       return Container(
-        // width: StructureBuilder.dims!.h0Padding*4,
-        // padding: EdgeInsets.only(
-        //     right: StructureBuilder.dims!.h2Padding,
-        //     left: StructureBuilder.dims!.h3Padding),
-
         child: Row(
-          // mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
               padding: EdgeInsets.all(
@@ -426,25 +443,20 @@ class _DrawerPageState extends State<DrawerPage> {
               child: Icon(
                 item.icon,
                 size: 5,
-                // _buttonNames2[index][0].icon,
                 color: condition
                     ? StructureBuilder.styles!.primaryLightColor
                     : StructureBuilder.styles!.t3Color,
               ),
             ),
             EsOrdinaryText(
-              // data: _buttonNames2[index][0].title,
               item.title,
               color: condition
                   ? StructureBuilder.styles!.primaryLightColor
                   : StructureBuilder.styles!.t3Color,
-
-              // style: TextStyle(color: Colors.white),
             ),
           ],
         ),
         decoration: BoxDecoration(
-            // color: Colors.transparent,
             borderRadius: BorderRadius.all(
                 Radius.circular(StructureBuilder.dims!.h0Padding))),
       );
@@ -457,7 +469,8 @@ class _DrawerPageState extends State<DrawerPage> {
         ),
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal:StructureBuilder.dims!.h0Padding),
+            padding: EdgeInsets.symmetric(
+                horizontal: StructureBuilder.dims!.h0Padding),
             child: Column(
               children: [
                 //title of drawer
@@ -484,33 +497,29 @@ class _DrawerPageState extends State<DrawerPage> {
                   //decide if we have accardion or not
                   (index) => _buttonNames[index].length == 1
                       ? Container(
-                    margin: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h1Padding,
-                      vertical: StructureBuilder.dims!.h1Padding,
-                    ),
-                    //deside if the item is selected or not
-                    decoration:
-                    // BoxDecoration(color: Colors.transparent),
-                    (index == _currentIndex)
-                        ? selectedBoxDecoration()
-                        : null,
-                    child: GestureDetector(
-                      child: drawerItems(
-                          _buttonNames[index][0],
-                          index,
-                          _currentIndex,
-                          (index == _currentIndex)),
-                      onTap: () {
-                        setState(() {
-                          _currentIndex = index;
+                          margin: EdgeInsets.symmetric(
+                            horizontal: StructureBuilder.dims!.h1Padding,
+                            vertical: StructureBuilder.dims!.h1Padding,
+                          ),
+                          //deside if the item is selected or not
+                          decoration:
+                              // BoxDecoration(color: Colors.transparent),
+                              (index == _currentIndex)
+                                  ? selectedBoxDecoration()
+                                  : null,
+                          child: GestureDetector(
+                            child: drawerItems(_buttonNames[index][0], index,
+                                _currentIndex, (index == _currentIndex)),
+                            onTap: () {
+                              setState(() {
+                                _currentIndex = index;
 
-                          CenterScreen.globalKey.currentState
-                              ?.changePage(
-                              _buttonNames[index][0].page);
-                        });
-                      },
-                    ),
-                  )
+                                CenterScreen.globalKey.currentState
+                                    ?.changePage(_buttonNames[index][0].page);
+                              });
+                            },
+                          ),
+                        )
                       : EsExpansionTile(
                           backGroundImagePath: "assets/images/back2.png",
                           iconColor: StructureBuilder.styles!.primaryLightColor,
@@ -520,7 +529,9 @@ class _DrawerPageState extends State<DrawerPage> {
                           title: Row(
                             children: [
                               _buttonNames[index][1],
-                              EsHSpacer(big: true,),
+                              EsHSpacer(
+                                big: true,
+                              ),
                               EsOrdinaryText(
                                 _buttonNames[index][0],
                                 color:
@@ -536,18 +547,19 @@ class _DrawerPageState extends State<DrawerPage> {
                                       children: [
                                         Container(
                                           margin: EdgeInsets.symmetric(
-                                            horizontal:
-                                                StructureBuilder.dims!.h2Padding,
-                                            vertical:
-                                                StructureBuilder.dims!.h1Padding,
+                                            horizontal: StructureBuilder
+                                                .dims!.h2Padding,
+                                            vertical: StructureBuilder
+                                                .dims!.h1Padding,
                                           ),
                                           //deside if the item is selected or not
-                                          padding:
-                                          (index2 == _currentIndex2 &&
-                                              _acardionList[
-                                              _currentIndex] !=
-                                                  0)
-                                              ? EdgeInsets.symmetric(vertical: StructureBuilder.dims!.h2Padding)
+                                          padding: (index2 == _currentIndex2 &&
+                                                  _acardionList[
+                                                          _currentIndex] !=
+                                                      0)
+                                              ? EdgeInsets.symmetric(
+                                                  vertical: StructureBuilder
+                                                      .dims!.h2Padding)
                                               : null,
                                           decoration:
                                               (index2 == _currentIndex2 &&
@@ -597,7 +609,8 @@ class _DrawerPageState extends State<DrawerPage> {
     return BoxDecoration(
       color: StructureBuilder.styles!.primaryColor,
       // color: Colors.transparent,
-      borderRadius: BorderRadius.circular(StructureBuilder.dims!.h0BorderRadius),
+      borderRadius:
+          BorderRadius.circular(StructureBuilder.dims!.h0BorderRadius),
       // border: Border.all(color: StructureBuilder.styles!.primaryLightColor, width: 2),
       boxShadow: [
         BoxShadow(

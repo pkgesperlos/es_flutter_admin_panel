@@ -12,7 +12,6 @@ import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class PanelLabelSample extends StatelessWidget {
-
   static MaterialPageRoute getRoute() => MaterialPageRoute(
       settings: RouteSettings(name: 'label'),
       builder: (context) => PanelLabelSample());
@@ -30,16 +29,19 @@ class PanelLabelSample extends StatelessWidget {
             runSpacing: StructureBuilder.dims!.h0Padding,
             children: [
               EsLabel(
+                isUnique: false,
                 widget: EsOrdinaryText(
                   AppLocalizations.of(context)!.text,
                 ),
               ),
               EsLabel(
+                isUnique: false,
                 widget: EsButton(
                   text: AppLocalizations.of(context)!.button,
                 ),
               ),
               EsLabel(
+                isUnique: false,
                 widget: EsAvatarImage(
                   path: "assets/images/img1.jpg",
                   radius: StructureBuilder.dims!.h2IconSize,
@@ -52,6 +54,7 @@ class PanelLabelSample extends StatelessWidget {
           information:
               "They are labels on different widgets located in: \n es_flutter_component/es_label\n and is used as: \n "
               """EsLabel(
+              isUnique: false,
                 widget: EsButton(
                    text:AppLocalizations.of(context)!.button,
                 ),
@@ -64,11 +67,50 @@ class PanelLabelSample extends StatelessWidget {
             runSpacing: StructureBuilder.dims!.h0Padding,
             children: [
               EsLabel(
+                isUnique: true,
+              ),
+              EsContentLabel(
+                isUnique: true,
+                size: StructureBuilder.dims!.h3IconSize,
+                text: "1400",
+              ),
+              EsContentLabel(
+                isUnique: true,
+                size: StructureBuilder.dims!.h3IconSize,
+                text: AppLocalizations.of(context)!.error,
+              ),
+              EsContentLabel(
+                isUnique: true,
+                size: StructureBuilder.dims!.h3IconSize,
+                labelContent: EsSvgIcon(
+                  "assets/svgs/Gift.svg",
+                  size: StructureBuilder.dims!.h3IconSize,
+                  color: StructureBuilder.styles!.primaryLightColor,
+                ),
+              ),
+            ],
+          )),
+          title: AppLocalizations.of(context)!.labelinuniquemode,
+          information:
+              "They are labels in unique mode located in: \n es_flutter_component/es_label\n and is used as: \n "
+              """EsLabel(
+                isUnique: true,
+              ),"""),
+      ContainerItems(
+          widget: Container(
+              child: Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            spacing: StructureBuilder.dims!.h1Padding,
+            runSpacing: StructureBuilder.dims!.h0Padding,
+            children: [
+              EsLabel(
+                isUnique: false,
                 widget: EsButton(
                   text: AppLocalizations.of(context)!.button,
                 ),
               ),
               EsContentLabel(
+                isUnique: false,
                 widget: EsButton(
                   text: AppLocalizations.of(context)!.button,
                 ),
@@ -76,6 +118,7 @@ class PanelLabelSample extends StatelessWidget {
                 text: "1400",
               ),
               EsContentLabel(
+                isUnique: false,
                 widget: EsButton(
                   text: AppLocalizations.of(context)!.button,
                 ),
@@ -83,6 +126,7 @@ class PanelLabelSample extends StatelessWidget {
                 text: AppLocalizations.of(context)!.error,
               ),
               EsContentLabel(
+                isUnique: false,
                 widget: EsButton(
                   text: AppLocalizations.of(context)!.button,
                 ),
@@ -99,6 +143,7 @@ class PanelLabelSample extends StatelessWidget {
           information:
               "They are labels with different contents located in: \n es_flutter_component/es_label\n and is used as: \n "
               """EsContentLabel(
+              isUnique: false,
                 widget: EsButton(
                    text:AppLocalizations.of(context)!.button,
                 ),
@@ -113,12 +158,14 @@ class PanelLabelSample extends StatelessWidget {
             runSpacing: StructureBuilder.dims!.h0Padding,
             children: [
               EsLabel(
+                isUnique: false,
                 widget: EsButton(
                   text: AppLocalizations.of(context)!.button,
                 ),
                 hasBorder: true,
               ),
               EsContentLabel(
+                isUnique: false,
                 widget: EsButton(
                   text: AppLocalizations.of(context)!.button,
                 ),
@@ -127,6 +174,7 @@ class PanelLabelSample extends StatelessWidget {
                 hasBorder: true,
               ),
               EsContentLabel(
+                isUnique: false,
                 widget: EsButton(
                   text: AppLocalizations.of(context)!.button,
                 ),
@@ -135,6 +183,7 @@ class PanelLabelSample extends StatelessWidget {
                 hasBorder: true,
               ),
               EsContentLabel(
+                isUnique: false,
                 widget: EsButton(
                   text: AppLocalizations.of(context)!.button,
                 ),
@@ -152,6 +201,7 @@ class PanelLabelSample extends StatelessWidget {
           information:
               "They are labels with seprator border located in: \n es_flutter_component/es_label\n and is used as: \n "
               """ EsLabel(
+              isUnique: false,
                     widget: EsButton(
                        text:AppLocalizations.of(context)!.button,
                     ),
@@ -171,11 +221,13 @@ class PanelLabelSample extends StatelessWidget {
                 direction: Axis.horizontal,
                 children: [
                   EsLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
                   ),
                   EsLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
@@ -183,6 +235,7 @@ class PanelLabelSample extends StatelessWidget {
                         StructureBuilder.styles!.warningColor().warningRegular,
                   ),
                   EsLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
@@ -191,6 +244,7 @@ class PanelLabelSample extends StatelessWidget {
                         .informationRegular,
                   ),
                   EsLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
@@ -206,6 +260,7 @@ class PanelLabelSample extends StatelessWidget {
                 direction: Axis.horizontal,
                 children: [
                   EsContentLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
@@ -213,6 +268,7 @@ class PanelLabelSample extends StatelessWidget {
                     text: "1400",
                   ),
                   EsContentLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
@@ -222,6 +278,7 @@ class PanelLabelSample extends StatelessWidget {
                         StructureBuilder.styles!.warningColor().warningRegular,
                   ),
                   EsContentLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
@@ -232,6 +289,7 @@ class PanelLabelSample extends StatelessWidget {
                         .informationRegular,
                   ),
                   EsContentLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
@@ -249,6 +307,7 @@ class PanelLabelSample extends StatelessWidget {
                 direction: Axis.horizontal,
                 children: [
                   EsContentLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
@@ -260,6 +319,7 @@ class PanelLabelSample extends StatelessWidget {
                     ),
                   ),
                   EsContentLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
@@ -273,6 +333,7 @@ class PanelLabelSample extends StatelessWidget {
                         StructureBuilder.styles!.warningColor().warningRegular,
                   ),
                   EsContentLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
@@ -287,6 +348,7 @@ class PanelLabelSample extends StatelessWidget {
                         .informationRegular,
                   ),
                   EsContentLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
@@ -307,6 +369,7 @@ class PanelLabelSample extends StatelessWidget {
           information:
               "They are labels in different colors located in: \n es_flutter_component/es_label\n and is used as: \n "
               """EsLabel(
+              isUnique: false,
                 widget: EsButton(
                    text:AppLocalizations.of(context)!.button,
                 ),
@@ -326,18 +389,21 @@ class PanelLabelSample extends StatelessWidget {
                 direction: Axis.horizontal,
                 children: [
                   EsLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
                     size: StructureBuilder.dims!.h2IconSize,
                   ),
                   EsLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
                     size: StructureBuilder.dims!.h3IconSize,
                   ),
                   EsLabel(
+                    isUnique: false,
                     widget: EsButton(
                       text: AppLocalizations.of(context)!.button,
                     ),
@@ -351,6 +417,7 @@ class PanelLabelSample extends StatelessWidget {
                 direction: Axis.horizontal,
                 children: [
                   EsContentLabel(
+                      isUnique: false,
                       widget: EsButton(
                         text: AppLocalizations.of(context)!.button,
                       ),
@@ -362,6 +429,7 @@ class PanelLabelSample extends StatelessWidget {
                       ),
                       borderRadius: BorderRadius.all(Radius.circular(0))),
                   EsContentLabel(
+                      isUnique: false,
                       widget: EsButton(
                         text: AppLocalizations.of(context)!.button,
                       ),
@@ -374,6 +442,7 @@ class PanelLabelSample extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(
                           StructureBuilder.dims!.h1IconSize * 0.1))),
                   EsContentLabel(
+                      isUnique: false,
                       widget: EsButton(
                         text: AppLocalizations.of(context)!.button,
                       ),
@@ -394,6 +463,7 @@ class PanelLabelSample extends StatelessWidget {
           information:
               "They are labels in different sizes and border radius's located in: \n es_flutter_component/es_label\n and is used as: \n "
               """EsLabel(
+              isUnique: false,
                     widget: EsButton(
                        text:AppLocalizations.of(context)!.button,
                     ),
@@ -401,6 +471,7 @@ class PanelLabelSample extends StatelessWidget {
                   ),
                   \n and \n 
                   EsContentLabel(
+                  isUnique: false,
                       widget: EsButton(
                          text:AppLocalizations.of(context)!.button,
                       ),

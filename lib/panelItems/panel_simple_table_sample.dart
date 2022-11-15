@@ -1,5 +1,4 @@
 import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_label/es_content_label.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_table/es_simple_table.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_title.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
@@ -11,26 +10,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class PanelTableSample extends StatefulWidget {
-  PanelTableSample({Key? key}) : super(key: key);
+class PanelSimpleTableSample extends StatefulWidget {
+  PanelSimpleTableSample({Key? key}) : super(key: key);
 
   @override
-  State<PanelTableSample> createState() => _PanelTableSampleState();
+  State<PanelSimpleTableSample> createState() => _PanelSimpleTableSampleState();
 }
 
-class _PanelTableSampleState extends State<PanelTableSample> {
-  Widget titleBox(int index) {
-    return Container(
-      clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(
-          color: StructureBuilder.styles!.primaryColor,
-          borderRadius: BorderRadius.all(
-              Radius.circular(StructureBuilder.dims!.h0BorderRadius))),
-      child: Image.asset(
-        "assets/images/img${index + 1}.jpg",
-        fit: BoxFit.cover,
-      ),
-    );
+class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
+@override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
   }
 
   @override
@@ -63,7 +55,7 @@ class _PanelTableSampleState extends State<PanelTableSample> {
                   EsTitle("Profession")
                 ],
               )),
-          title: "Simple table",
+          title: AppLocalizations.of(context)!.simpletable,
           information:
               "it is simple table located in: \n es_flutter_component/es_table/es_simple_table.dart' \n and is used as: \n "
               """EsSimpleTable(
@@ -135,7 +127,7 @@ class _PanelTableSampleState extends State<PanelTableSample> {
                   EsTitle("Profession")
                 ],
               )),
-          title: "Simple table with custom widgets",
+          title: AppLocalizations.of(context)!.simpletablewithcustomwidgets,
           information:
               "it is simple table with custom widgets located in: \n es_flutter_component/es_table/es_simple_table.dart' \n and is used as: \n "
               """EsSimpleTable(
@@ -180,6 +172,88 @@ class _PanelTableSampleState extends State<PanelTableSample> {
               child: EsSimpleTable(
                 decoration: BoxDecoration(
                   color: StructureBuilder.styles!.primaryColor,
+                  borderRadius: BorderRadius.all(Radius.circular(StructureBuilder.dims!.h0BorderRadius*2))
+                ),
+                headingColor: StructureBuilder.styles!.primaryColor,
+                dataRowHeight: StructureBuilder.dims!.h0Padding * 2.5,
+                rowsContent: [
+                  [
+                    Padding(
+                      padding: EdgeInsets.all(StructureBuilder.dims!.h1Padding),
+                      child: EsAvatarImage(
+                        path: "assets/images/img1.jpg",
+                        radius: StructureBuilder.dims!.h0Padding,
+                      ),
+                    ),
+                    EsOrdinaryText(
+                      "Name1",
+                      color: StructureBuilder.styles!.primaryLightColor,
+                    ),
+                    EsButton(
+                      fillColor: StructureBuilder.styles!.secondaryColor,
+                      textColor: StructureBuilder.styles!.primaryColor,
+                      text: AppLocalizations.of(context)!.button,
+                    ),
+                  ],
+                  [
+                    Padding(
+                      padding: EdgeInsets.all(StructureBuilder.dims!.h1Padding),
+                      child: EsAvatarImage(
+                        path: "assets/images/img2.jpg",
+                        radius: StructureBuilder.dims!.h0Padding,
+                      ),
+                    ),
+                    EsOrdinaryText(
+                      "Name2",
+                      color: StructureBuilder.styles!.primaryLightColor,
+                    ),
+                    EsButton(
+                      fillColor: StructureBuilder.styles!.secondaryColor,
+                      textColor: StructureBuilder.styles!.primaryColor,
+                      text: AppLocalizations.of(context)!.button,
+                    ),
+                  ],
+                  [
+                    Padding(
+                      padding: EdgeInsets.all(StructureBuilder.dims!.h1Padding),
+                      child: EsAvatarImage(
+                        path: "assets/images/img3.jpg",
+                        radius: StructureBuilder.dims!.h0Padding,
+                      ),
+                    ),
+                    EsOrdinaryText(
+                      "Name3",
+                      color: StructureBuilder.styles!.primaryLightColor,
+                    ),
+                    EsButton(
+                      fillColor: StructureBuilder.styles!.secondaryColor,
+                      textColor: StructureBuilder.styles!.primaryColor,
+                      text: AppLocalizations.of(context)!.button,
+                    ),
+                  ],
+                ],
+                columnTitle: [
+                  EsTitle(
+                    "ID",
+                    color: StructureBuilder.styles!.primaryLightColor,
+                  ),
+                  EsTitle(
+                    "Name",
+                    color: StructureBuilder.styles!.primaryLightColor,
+                  ),
+                  EsTitle(
+                    "Profession",
+                    color: StructureBuilder.styles!.primaryLightColor,
+                  )
+                ],
+              )),
+          title: AppLocalizations.of(context)!.simpletablewithcustomwidgetsindesiredcolor,
+          information:
+              "it is simple table with custom widgets in desired color located in: \n es_flutter_component/es_table/es_simple_table.dart' \n and is used as: \n "
+              """EsSimpleTable(
+                decoration: BoxDecoration(
+                  color: StructureBuilder.styles!.primaryColor,
+                  borderRadius: BorderRadius.all(Radius.circular(StructureBuilder.dims!.h0BorderRadius))
                 ),
                 headingColor: StructureBuilder.styles!.primaryColor,
                 dataRowHeight: StructureBuilder.dims!.h0Padding * 3,
@@ -253,77 +327,6 @@ class _PanelTableSampleState extends State<PanelTableSample> {
                     color: StructureBuilder.styles!.primaryLightColor,
                   )
                 ],
-              )),
-          title: "Simple table with custom widgets in desired color",
-          information:
-              "it is simple table with custom widgets located in: \n es_flutter_component/es_table/es_simple_table.dart' \n and is used as: \n "
-              """EsSimpleTable(
-                decoration: BoxDecoration(
-                  color: StructureBuilder.styles!.primaryColor,
-                ),
-                headingColor:  StructureBuilder.styles!.primaryColor,
-                dataRowHeight: StructureBuilder.dims!.h0Padding * 3,
-                rowsContent: [
-                  [
-                    Padding(
-                      padding: EdgeInsets.all(StructureBuilder.dims!.h1Padding),
-                      child: EsAvatarImage(
-                        path: "assets/images/img1.jpg",
-                        radius: StructureBuilder.dims!.h0Padding,
-                      ),
-                    ),
-                    EsOrdinaryText("Name1",
-                      color: StructureBuilder.styles!.primaryLightColor,
-                    ),
-                    EsButton(
-                      fillColor: StructureBuilder.styles!.primaryLightColor,
-                      textColor: StructureBuilder.styles!.primaryColor,
-                      text: AppLocalizations.of(context)!.button,
-                    ),
-                  ],
-                  [
-                    Padding(
-                      padding: EdgeInsets.all(StructureBuilder.dims!.h1Padding),
-                      child: EsAvatarImage(
-                        path: "assets/images/img2.jpg",
-                        radius: StructureBuilder.dims!.h0Padding,
-                      ),
-                    ),
-                    EsOrdinaryText("Name2",
-                      color: StructureBuilder.styles!.primaryLightColor,
-                    ),
-                    EsButton(
-                      fillColor: StructureBuilder.styles!.primaryLightColor,
-                      textColor: StructureBuilder.styles!.primaryColor,
-                      text: AppLocalizations.of(context)!.button,
-                    ),
-                  ],
-                  [
-                    Padding(
-                      padding: EdgeInsets.all(StructureBuilder.dims!.h1Padding),
-                      child: EsAvatarImage(
-                        path: "assets/images/img3.jpg",
-                        radius: StructureBuilder.dims!.h0Padding,
-                      ),
-                    ),
-                    EsOrdinaryText("Name3",
-                      color: StructureBuilder.styles!.primaryLightColor,
-                    ),
-                    EsButton(
-                      fillColor: StructureBuilder.styles!.primaryLightColor,
-                      textColor: StructureBuilder.styles!.primaryColor,
-                      text: AppLocalizations.of(context)!.button,
-                    ),
-                  ],
-                ],
-                columnTitle: [
-                  EsTitle("ID",
-                  color: StructureBuilder.styles!.primaryLightColor,),
-                  EsTitle("Name",
-                    color: StructureBuilder.styles!.primaryLightColor,),
-                  EsTitle("Profession",
-                    color: StructureBuilder.styles!.primaryLightColor,
-                  )],
               )"""),
       ContainerItems(
           widget: Container(
@@ -353,7 +356,7 @@ class _PanelTableSampleState extends State<PanelTableSample> {
                   EsTitle("Profession")
                 ],
               )),
-          title: "Simple table with desired heading color",
+          title: AppLocalizations.of(context)!.simpletablewithdesiredheadingcolor,
           information:
               "it is simple table with desired heading color located in: \n es_flutter_component/es_table/es_simple_table.dart' \n and is used as: \n "
               """EsSimpleTable(
@@ -412,7 +415,7 @@ class _PanelTableSampleState extends State<PanelTableSample> {
                   EsTitle("Profession")
                 ],
               )),
-          title: "Simple table in zebra mode",
+          title: AppLocalizations.of(context)!.simpletableinzebramode,
           information:
               "it is simple table in zebra mode located in: \n es_flutter_component/es_table/es_simple_table.dart' \n and is used as: \n "
               """EsSimpleTable(
@@ -511,14 +514,23 @@ class _PanelTableSampleState extends State<PanelTableSample> {
                   ],
                 ],
                 columnTitle: [
-                  EsTitle("ID",color: StructureBuilder.styles!.primaryLightColor,),
-                  EsTitle("Name",color: StructureBuilder.styles!.primaryLightColor,),
-                  EsTitle("Profession",color: StructureBuilder.styles!.primaryLightColor,)
+                  EsTitle(
+                    "ID",
+                    color: StructureBuilder.styles!.primaryLightColor,
+                  ),
+                  EsTitle(
+                    "Name",
+                    color: StructureBuilder.styles!.primaryLightColor,
+                  ),
+                  EsTitle(
+                    "Profession",
+                    color: StructureBuilder.styles!.primaryLightColor,
+                  )
                 ],
               )),
-          title: "Simple table in dark zebra mode",
+          title: AppLocalizations.of(context)!.simpletableindarkzebramode,
           information:
-              "it is simple table in zebra mode located in: \n es_flutter_component/es_table/es_simple_table.dart' \n and is used as: \n "
+              "it is simple table in dark zebra mode located in: \n es_flutter_component/es_table/es_simple_table.dart' \n and is used as: \n "
               """EsSimpleTable(
                 headingColor: StructureBuilder.styles!.primaryColor,
                 zebraColor: StructureBuilder.styles!.primaryColor,
@@ -595,7 +607,9 @@ class _PanelTableSampleState extends State<PanelTableSample> {
               height: 250,
               child: EsSimpleTable(
                 decoration: BoxDecoration(
-                  border: Border.all(color: StructureBuilder.styles!.primaryColor )
+                    border: Border.all(
+                        color: StructureBuilder.styles!.primaryColor),
+
                 ),
                 rowsContent: [
                   [
@@ -620,9 +634,9 @@ class _PanelTableSampleState extends State<PanelTableSample> {
                   EsTitle("Profession")
                 ],
               )),
-          title: "Simple table with line frame",
+          title: AppLocalizations.of(context)!.simpletablewithlineframe,
           information:
-          "it is simple table with line frame located in: \n es_flutter_component/es_table/es_simple_table.dart' \n and is used as: \n "
+              "it is simple table with line frame located in: \n es_flutter_component/es_table/es_simple_table.dart' \n and is used as: \n "
               """EsSimpleTable(
                 decoration: BoxDecoration(
                   border: Border.all(color: StructureBuilder.styles!.primaryColor )
@@ -651,18 +665,23 @@ class _PanelTableSampleState extends State<PanelTableSample> {
                 ],
               )"""),
     ];
+
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(
             children: [
               PageTitleContainer(
-                title: AppLocalizations.of(context)!.slidertitle,
+                title: AppLocalizations.of(context)!.simpletabletitle,
               ),
               BootstrapContainer(
+
                   fluid: true,
                   padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding),
+                      horizontal: StructureBuilder.dims!.h0Padding,),
+
+
                   decoration: BoxDecoration(
                     color: StructureBuilder.styles!.primaryDarkColor,
                   ),
@@ -675,6 +694,7 @@ class _PanelTableSampleState extends State<PanelTableSample> {
 
   Widget boxShow(Widget widget) {
     return BootstrapCol(
+
         sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-6', child: widget);
   }
 

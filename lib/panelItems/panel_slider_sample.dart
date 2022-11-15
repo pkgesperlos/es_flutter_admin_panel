@@ -1,17 +1,12 @@
-import 'dart:math';
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_title.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
 import 'package:intl/intl.dart' as intl;
 
 //carouselSlider and  packages are used
@@ -57,19 +52,22 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
       ContainerItems(
           widget: Container(
             height: 250,
-            child: CarouselSlider(
-              carouselController: carouselController,
-              items: widgetList,
-              options: CarouselOptions(
-                  viewportFraction: 0.8,
-                  // height: 270,
-                  initialPage: 2,
-                  disableCenter: true,
-                  // aspectRatio: 0.1,
-                  enlargeCenterPage: true),
+            child: Center(
+              child: CarouselSlider(
+                carouselController: carouselController,
+                items: widgetList,
+                options: CarouselOptions(
+                    viewportFraction: 0.8,
+                    // height: 270,
+                    initialPage: 2,
+                    disableCenter: true,
+                    // aspectRatio: 0.1,
+                    enlargeCenterPage: true),
+              ),
             ),
           ),
-          title: AppLocalizations.of(context)!.simplecarouselsliderwithoutanimation,
+          title: AppLocalizations.of(context)!
+              .simplecarouselsliderwithoutanimation,
           information:
               "It is a simple carousel slider without animation that the package should be added in pubspec.yaml 's dependencies \n and is used as: \n "
               """CarouselSlider(
@@ -87,18 +85,20 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
       ContainerItems(
           widget: Container(
             height: 250,
-            child: CarouselSlider(
-              carouselController: carouselController,
-              items: widgetList,
-              options: CarouselOptions(
-                  viewportFraction: 0.8,
-                  // height: 270,
-                  initialPage: 2,
-                  disableCenter: true,
-                  autoPlay: true,
-                  autoPlayAnimationDuration: Duration(milliseconds: 100),
-                  // aspectRatio: 0.1,
-                  enlargeCenterPage: true),
+            child: Center(
+              child: CarouselSlider(
+                carouselController: carouselController,
+                items: widgetList,
+                options: CarouselOptions(
+                    viewportFraction: 0.8,
+                    // height: 270,
+                    initialPage: 2,
+                    disableCenter: true,
+                    autoPlay: true,
+                    autoPlayAnimationDuration: Duration(milliseconds: 100),
+                    // aspectRatio: 0.1,
+                    enlargeCenterPage: true),
+              ),
             ),
           ),
           title: AppLocalizations.of(context)!.carouselsliderwithanimation,
@@ -123,23 +123,25 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
             height: 250,
             child: Stack(
               children: [
-                CarouselSlider(
-                  carouselController: carouselController,
-                  items: widgetList,
-                  options: CarouselOptions(
-                      viewportFraction: 0.8,
-                      // height: 270,
-                      initialPage: 2,
-                      disableCenter: true,
-                      autoPlay: true,
-                      autoPlayAnimationDuration: Duration(milliseconds: 100),
-                      // aspectRatio: 0.1,
-                      enlargeCenterPage: true,
-                      onPageChanged: (index, reason) {
-                        setState(() {
-                          _current = index;
-                        });
-                      }),
+                Center(
+                  child: CarouselSlider(
+                    carouselController: carouselController,
+                    items: widgetList,
+                    options: CarouselOptions(
+                        viewportFraction: 0.8,
+                        // height: 270,
+                        initialPage: 2,
+                        disableCenter: true,
+                        autoPlay: true,
+                        autoPlayAnimationDuration: Duration(milliseconds: 100),
+                        // aspectRatio: 0.1,
+                        enlargeCenterPage: true,
+                        onPageChanged: (index, reason) {
+                          setState(() {
+                            _current = index;
+                          });
+                        }),
+                  ),
                 ),
                 EsVSpacer(),
                 Align(
@@ -224,18 +226,20 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
             height: 250,
             child: Stack(
               children: [
-                CarouselSlider(
-                  carouselController: carouselController,
-                  items: widgetList,
-                  options: CarouselOptions(
-                      viewportFraction: 0.8,
-                      // height: 270,
-                      initialPage: 2,
-                      disableCenter: true,
-                      autoPlay: true,
-                      autoPlayAnimationDuration: Duration(milliseconds: 100),
-                      // aspectRatio: 0.1,
-                      enlargeCenterPage: true),
+                Center(
+                  child: CarouselSlider(
+                    carouselController: carouselController,
+                    items: widgetList,
+                    options: CarouselOptions(
+                        viewportFraction: 0.8,
+                        // height: 270,
+                        initialPage: 2,
+                        disableCenter: true,
+                        autoPlay: true,
+                        autoPlayAnimationDuration: Duration(milliseconds: 100),
+                        // aspectRatio: 0.1,
+                        enlargeCenterPage: true),
+                  ),
                 ),
                 Align(
                   alignment: Alignment(0, 0.5),
@@ -331,18 +335,20 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
             height: 250,
             child: Stack(
               children: [
-                CarouselSlider(
-                  carouselController: carouselController,
-                  items: widgetList,
-                  options: CarouselOptions(
-                      viewportFraction: 0.8,
-                      // height: 270,
-                      initialPage: 2,
-                      disableCenter: true,
-                      autoPlay: true,
-                      autoPlayAnimationDuration: Duration(milliseconds: 100),
-                      // aspectRatio: 0.1,
-                      enlargeCenterPage: true),
+                Center(
+                  child: CarouselSlider(
+                    carouselController: carouselController,
+                    items: widgetList,
+                    options: CarouselOptions(
+                        viewportFraction: 0.8,
+                        // height: 270,
+                        initialPage: 2,
+                        disableCenter: true,
+                        autoPlay: true,
+                        autoPlayAnimationDuration: Duration(milliseconds: 100),
+                        // aspectRatio: 0.1,
+                        enlargeCenterPage: true),
+                  ),
                 ),
                 Align(
                   alignment: Alignment(0, 0.8),
@@ -405,7 +411,8 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
               ],
             ),
           ),
-          title: AppLocalizations.of(context)!.carouselsliderwithindicatorandicon,
+          title:
+              AppLocalizations.of(context)!.carouselsliderwithindicatorandicon,
           information:
               "It is a carousel slider with indicator and icon that the package should be added in pubspec.yaml 's dependencies \n and is used as: \n "
               """Stack(

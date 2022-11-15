@@ -92,6 +92,7 @@
 
   "label": "لیبل",
   "labelondifferentwidgets": "لیبل بر ویجت های مختلف ",
+  "labelinuniquemode": "لیبل در حالت یکتا",
   "labelwithdifferentcontents": "لیبل با محتواهای گوناگون",
   "labelwithsepratorborder": "لیبل با حاشیه جدا کننده",
   "labelindifferentcolors": "لیبل در رنگ های مختلف",
@@ -130,6 +131,28 @@
   "carouselsliderwithicon": "اسلایدر کاروسل با آیکون",
   "carouselsliderwithindicatorandicon": "اسلایدر کاروسل با نشانگر و آیکون",
   "slidertitle": " انواع مدل های اسلایدر متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
+
+  "tables": "جداول",
+  "simpletables": "جداول ساده",
+  "responsivetable": "جدول واکنش گرا",
+  "simpletable": "جدول ساده",
+  "simpletablewithcustomwidgets": "جدول ساده با ویجت دلخواه",
+  "simpletablewithcustomwidgetsindesiredcolor": "جدول ساده با ویجت و رنگ دلخواه",
+  "simpletablewithdesiredheadingcolor": "جدول ساده با رنگ هدر دلخواه",
+  "simpletableinzebramode": "جدول ساده راه راه",
+  "simpletableindarkzebramode": "جدول ساده در حالت راه راه تیره",
+  "simpletablewithlineframe": "جدول ساده دور خط دار",
+  "simpletabletitle": " انواع مدل های جداول ساده متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
+  "responsivetabletitle": "  جدول واکنش گرا زیر  با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
+  "grouplists": "گروه لیست",
+  "grouplistwithsimplecontent": "گروه لیست با محتوای ساده",
+  "grouplistwithoutdivider": "گروه لیست بدون جداکننده",
+  "grouplistwithborder": "گروه لیست با حاشیه",
+  "grouplistwithcomplexcontent": "گروه لیست با محتوای مخلوط",
+  "grouplistwithdesireditemscolor": "گروه لیست با رنگ آیتم های دلخواه",
+  "grouplisttitle":  " انواع مدل های گروه لیست متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
 
 
   "colors": "رنگ ها",
@@ -254,10 +277,7 @@
   "lightBoxShowingImage": "Light Box Showing Image",
   "avatarImages": "تصویر در قالب آواتار",
 
-  "tables": "جداول",
-  "simpleTable": "جدول ساده",
-  "editableTable": "جدول قابل ویرایش",
-  "responsiveTable": "جدول ریسپانسیو",
+
   "notifications": "اعلان ها",
   "simpleNotifications": "اعلان های معمولی"
 

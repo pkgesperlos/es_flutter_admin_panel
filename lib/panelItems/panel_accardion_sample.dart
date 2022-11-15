@@ -40,7 +40,7 @@ class PanelAccardionSample extends StatelessWidget {
               """EsAccardion(items: _items,)"""),
       ContainerItems(
           widget: Container(
-              height: StructureBuilder.dims!.h0Padding * 11,
+              height: StructureBuilder.dims!.h0Padding * 11.5,
               child: EsScrollableAccardion(
                 items: _itemsScroll,
               )),
@@ -164,6 +164,7 @@ class PanelAccardionSample extends StatelessWidget {
                     Radius.circular(StructureBuilder.dims!.h1Padding))),
           )"""),
     ];
+
     return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(

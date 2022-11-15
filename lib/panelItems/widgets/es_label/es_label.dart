@@ -10,6 +10,7 @@ class EsLabel extends StatelessWidget {
   Color? borderColor;
   double? size;
   double? widgetSize;
+  bool? isUnique;
 
   EsLabel({
     Key? key,
@@ -17,6 +18,7 @@ class EsLabel extends StatelessWidget {
     this.color,
     this.borderColor,
     this.hasBorder,
+    this.isUnique,
     this.size,
     this.widgetSize,
   }) : super(key: key);
@@ -26,31 +28,40 @@ class EsLabel extends StatelessWidget {
     double _size = size ?? StructureBuilder.dims!.h3IconSize * 0.5;
     double _widgetSize = widgetSize ?? _size;
 
-    return Stack(
+    return isUnique??true
+        ?_label()
+        : Stack(
       children: [
         Container(
             padding: EdgeInsets.all(_size / 2), child: widget ?? Container()),
         Positioned(
           top:widgetSize==null?null:_widgetSize,
           left:widgetSize==null?null: _widgetSize,
-            child: Container(
-                decoration: BoxDecoration(
-                    color: color ??
-                        StructureBuilder.styles!.dangerColor().dangerRegular,
-                    border: hasBorder ?? false
-                        ? Border.all(
-                            color: borderColor ??
-                                StructureBuilder.styles!.primaryLightColor,
-                            width: _size * 0.2)
-                        : null,
-                    borderRadius: BorderRadius.all(Radius.circular(
-                      _size,
-                    ))),
-                child: Icon(Icons.circle,
-                    size: _size,
-                    color: color ??
-                        StructureBuilder.styles!.dangerColor().dangerRegular)))
+            child: _label())
       ],
     );
+  }
+
+
+  Widget _label(){
+    double _size = size ?? StructureBuilder.dims!.h3IconSize * 0.5;
+    double _widgetSize = widgetSize ?? _size;
+    return Container(
+        decoration: BoxDecoration(
+            color: color ??
+                StructureBuilder.styles!.dangerColor().dangerRegular,
+            border: hasBorder ?? false
+                ? Border.all(
+                color: borderColor ??
+                    StructureBuilder.styles!.primaryLightColor,
+                width: _size * 0.2)
+                : null,
+            borderRadius: BorderRadius.all(Radius.circular(
+              _size,
+            ))),
+        child: Icon(Icons.circle,
+            size: _size,
+            color: color ??
+                StructureBuilder.styles!.dangerColor().dangerRegular));
   }
 }

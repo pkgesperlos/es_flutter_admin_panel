@@ -85,12 +85,13 @@
   "markedText": "Marked Text",
   "texttitle": "Different kinds of text with various sizes and styles are available in panel by flutter code.",
 
-  "label": "label",
-  "labelondifferentwidgets": "label on different widgets",
-  "labelwithdifferentcontents": "label with different contents",
-  "labelwithsepratorborder": "label with seprator border",
-  "labelindifferentcolors": "label in different colors",
-  "labelindifferentsizesandborderradiuss": "label in different sizes and border radius's",
+  "label": "Labels",
+  "labelondifferentwidgets": "Label on different widgets",
+  "labelinuniquemode": "Label in unique mode",
+  "labelwithdifferentcontents": "Label with different contents",
+  "labelwithsepratorborder": "Label with seprator border",
+  "labelindifferentcolors": "Label in different colors",
+  "labelindifferentsizesandborderradiuss": "Label in different sizes and border radius's",
   "labeltitle": "Different kinds of label with various sizes and contents are available in panel by flutter code.",
 
   "breadcrumb": "Breadcrumb",
@@ -126,6 +127,28 @@
   "carouselsliderwithicon": "Carousel Slider with icon",
   "carouselsliderwithindicatorandicon": "Carousel slider with indicator and icon",
   "slidertitle": "Different kinds of sliders  are available in panel by flutter code.",
+
+  "tables": "Tables",
+  "simpletables": "Simple tables",
+  "responsivetable": "Responsive table",
+  "simpletable": "Simple table",
+  "simpletablewithcustomwidgets": "Simple table with custom widgets",
+  "simpletablewithcustomwidgetsindesiredcolor": "Simple table with custom widgets in desired color",
+  "simpletablewithdesiredheadingcolor": "Simple table with desired heading color",
+  "simpletableinzebramode": "Simple table in zebra mode",
+  "simpletableindarkzebramode": "Simple table in dark zebra mode",
+  "simpletablewithlineframe": "Simple table with line frame",
+  "simpletabletitle": "Different kinds of simple tables  are available in panel by flutter code.",
+  "responsivetabletitle": "this responsive table  is available in panel by flutter code.",
+
+  "grouplists": "Group lists",
+  "grouplistwithsimplecontent": "Group list with simple content",
+  "grouplistwithoutdivider": "Group list without divider",
+  "grouplistwithborder": "Group list with border",
+  "grouplistwithcomplexcontent": "Group list with complex content",
+  "grouplistwithdesireditemscolor": "Group list with desired items color",
+  "grouplisttitle": "Different kinds of group lists  are available in panel by flutter code.",
+
 
   "colors": "Colors",
   "color": "Color",
@@ -239,9 +262,6 @@
   "checkBoxErrorText": "CheckBox error text",
   "checkBoxButtonText": "Save",
 
-  "dropDown1": "First Item",
-  "dropDown2": "Second Item",
-  "dropDown3": "Third Item",
 
   "toggleButton": "Toggle Button",
 
@@ -258,10 +278,7 @@
   "lightBoxShowingImage": "Light Box Showing Image",
   "avatarImages": "Avatar Image",
 
-  "tables": "Tables",
-  "simpleTable": "Simple Table",
-  "editableTable": "Editable Table",
-  "responsiveTable": "Responsive Table",
+
 
   "notifications": "Notifications",
   "simpleNotifications": "Ordinary Notifications"

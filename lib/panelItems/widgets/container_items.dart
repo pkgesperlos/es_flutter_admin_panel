@@ -20,8 +20,7 @@ class ContainerItems extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
         margin: EdgeInsets.symmetric(
-            horizontal:StructureBuilder.dims!.h3Padding,
-            vertical:StructureBuilder.dims!.h0Padding,
+            vertical:StructureBuilder.dims!.h1Padding,
         ),
         decoration: BoxDecoration(
           color: StructureBuilder.styles!.primaryLightColor,
@@ -36,7 +35,7 @@ class ContainerItems extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          // mainAxisSize: MainAxisSize.min,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
               padding:

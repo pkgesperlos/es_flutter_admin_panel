@@ -13,6 +13,7 @@ class EsContentLabel extends StatelessWidget {
   BorderRadius? borderRadius;
   double size;
   double? widgetSize;
+  bool? isUnique;
 
   EsContentLabel({
     Key? key,
@@ -23,6 +24,7 @@ class EsContentLabel extends StatelessWidget {
     this.color,
     this.borderColor,
     this.hasBorder,
+    this.isUnique,
     this.borderRadius,
     required this.size,
      this.widgetSize,
@@ -31,7 +33,9 @@ class EsContentLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double _widgetSize = widgetSize ?? size;
-    return Stack(
+    return isUnique??true
+        ?_lable()
+        :Stack(
       children: [
         Container(
             padding: EdgeInsets.all(size*0.75),
@@ -39,28 +43,33 @@ class EsContentLabel extends StatelessWidget {
         Positioned(
             top:widgetSize==null?null:_widgetSize,
             left:widgetSize==null?null: _widgetSize,
-            child: Container(
-          decoration: BoxDecoration(
-              color: borderColor ?? StructureBuilder.styles!.primaryLightColor,
-              border:hasBorder??false? Border.all(
-                  color:
-                      borderColor ?? StructureBuilder.styles!.primaryLightColor,
-                  width: size*0.1):null,
-              borderRadius:borderRadius?? BorderRadius.all(Radius.circular(size*0.4))),
-          child:
-               Container(
-                  padding:
-                      EdgeInsets.all(size * 0.2),
-                  decoration: BoxDecoration(
-                      color: color ??
-                          StructureBuilder.styles!.dangerColor().dangerRegular,
-                      borderRadius:borderRadius?? BorderRadius.all(Radius.circular(size*0.3))
-                  ),
-                  child: labelContent??EsLabelText(text??"",
-                  color: textColor??StructureBuilder.styles!.primaryLightColor,),
-                ),
-        ))
+            child: _lable())
       ],
     );
   }
+
+  Widget _lable(){
+    return Container(
+      decoration: BoxDecoration(
+          color: borderColor ?? StructureBuilder.styles!.primaryLightColor,
+          border:hasBorder??false? Border.all(
+              color:
+              borderColor ?? StructureBuilder.styles!.primaryLightColor,
+              width: size*0.1):null,
+          borderRadius:borderRadius?? BorderRadius.all(Radius.circular(size*0.4))),
+      child:
+      Container(
+        padding:
+        EdgeInsets.all(size * 0.2),
+        decoration: BoxDecoration(
+            color: color ??
+                StructureBuilder.styles!.dangerColor().dangerRegular,
+            borderRadius:borderRadius?? BorderRadius.all(Radius.circular(size*0.3))
+        ),
+        child: labelContent??EsLabelText(text??"",
+          color: textColor??StructureBuilder.styles!.primaryLightColor,),
+      ),
+    );
+  }
+
 }

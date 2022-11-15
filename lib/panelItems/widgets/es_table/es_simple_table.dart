@@ -39,7 +39,6 @@ class _EsSimpleTable extends State<EsSimpleTable> {
                   // border: Border.all(color: StructureBuilder.styles!.primaryColor )
                   ),
           dividerThickness: 1,
-
           dataRowHeight:
               widget.dataRowHeight ?? StructureBuilder.dims!.h2IconSize,
           headingRowColor: MaterialStateProperty.resolveWith((states) {
