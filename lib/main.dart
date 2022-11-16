@@ -1,6 +1,5 @@
 // @dart=2.9
 import 'package:es_flutter_admin_panel/panelItems/panel_chart.dart';
-import 'package:es_flutter_admin_panel/panelItems/panel_progressbar.dart';
 import 'package:es_flutter_admin_panel/language_change_provider.dart';
 import 'package:es_flutter_admin_panel/my_drawer.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_bread_crumb/app_navigator_observer.dart';
@@ -96,9 +95,6 @@ class _MyApp extends State<MyApp> {
                         ),
                     '/form': (context) => MyDrawer(
                           child: PanelForm(),
-                        ),
-                    '/progressbar': (context) => MyDrawer(
-                          child: PanelProgressBar(),
                         ),
 
                     //   '/notification': (context) => PanelNotification(),

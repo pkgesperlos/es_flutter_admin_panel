@@ -141,13 +141,23 @@
   "simpletabletitle": "Different kinds of simple tables  are available in panel by flutter code.",
   "responsivetabletitle": "this responsive table  is available in panel by flutter code.",
 
-  "grouplists": "Group lists",
+  "grouplist": "Group list",
   "grouplistwithsimplecontent": "Group list with simple content",
   "grouplistwithoutdivider": "Group list without divider",
   "grouplistwithborder": "Group list with border",
   "grouplistwithcomplexcontent": "Group list with complex content",
   "grouplistwithdesireditemscolor": "Group list with desired items color",
   "grouplisttitle": "Different kinds of group lists  are available in panel by flutter code.",
+
+  "progressbar": "progress bar",
+  "animatedprogressbarfromzero": "Animated progress bar from zero",
+  "simplelinearprogressbarindifferentsizes":  "Simple linear progress bar in different sizes",
+  "simplecircularprogressbarindifferentsizes": "Simple circular progress bar in different sizes",
+  "simplelinearprogressbarindifferentcolors": "Simple linear progress bar in different colors",
+  "gradiantprogressbar": "Gradiant  progress bar",
+  "progressbartitle": "Different kinds of progress bars  are available in panel by flutter code.",
+
+
 
 
   "colors": "Colors",

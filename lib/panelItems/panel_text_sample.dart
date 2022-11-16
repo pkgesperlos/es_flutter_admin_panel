@@ -50,7 +50,7 @@ class PanelTextSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.textindifferentposition,
           information:
-              "They are Text in deifferent positions located in: \n es_flutter_component/es_text;' \n and is used as: \n "
+              "They are text in deifferent positions located in: \n es_flutter_component/es_text;' \n and is used as: \n "
               """EsHeader("Header : "+AppLocalizations.of(context)!.sampleText,),"""),
       ContainerItems(
           widget: Container(

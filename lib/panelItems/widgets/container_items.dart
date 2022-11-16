@@ -20,7 +20,7 @@ class ContainerItems extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
         margin: EdgeInsets.symmetric(
-            vertical:StructureBuilder.dims!.h1Padding,
+            vertical:StructureBuilder.dims!.h0Padding,
         ),
         decoration: BoxDecoration(
           color: StructureBuilder.styles!.primaryLightColor,

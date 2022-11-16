@@ -146,13 +146,21 @@
   "simpletabletitle": " انواع مدل های جداول ساده متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
   "responsivetabletitle": "  جدول واکنش گرا زیر  با استفاده از کدهای فلاتر در پنل در دسترس است.",
 
-  "grouplists": "گروه لیست",
+  "grouplist": "گروه لیست",
   "grouplistwithsimplecontent": "گروه لیست با محتوای ساده",
   "grouplistwithoutdivider": "گروه لیست بدون جداکننده",
   "grouplistwithborder": "گروه لیست با حاشیه",
   "grouplistwithcomplexcontent": "گروه لیست با محتوای مخلوط",
   "grouplistwithdesireditemscolor": "گروه لیست با رنگ آیتم های دلخواه",
   "grouplisttitle":  " انواع مدل های گروه لیست متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
+  "progressbar": "نوار پیشرفت",
+  "animatedprogressbarfromzero": "نوار پیشرفت انیمیشن دار از صفر",
+  "simplelinearprogressbarindifferentsizes":  "نوار پیشرفت خطی در سایز های متفاوت",
+  "simplecircularprogressbarindifferentsizes": "نوار پیشرفت دایروی در سایز های متفاوت",
+  "simplelinearprogressbarindifferentcolors": "نوار پیشرفت خطی در رنگ های متفاوت",
+  "gradiantprogressbar": "نوار پیشرفت با گرادیان",
+  "progressbartitle": " انواع مدل های نوار پیشرفت متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
 
 
   "colors": "رنگ ها",

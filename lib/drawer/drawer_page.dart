@@ -19,7 +19,6 @@ import '../panelItems/panel_chart.dart';
 import '../panelItems/panel_color_sample.dart';
 import '../panelItems/panel_group_list_sample.dart';
 import '../panelItems/panel_progress_bar_sample.dart';
-import '../panelItems/panel_progressbar.dart';
 import '../panelItems/panel_responsive_table_sample.dart';
 import '../panelItems/panel_dialog_box.dart';
 import '../panelItems/panel_dropdown_sample.dart';
@@ -30,6 +29,7 @@ import '../panelItems/panel_page_indicator_sample.dart';
 import '../panelItems/panel_slider_sample.dart';
 import '../panelItems/panel_simple_table_sample.dart';
 import '../panelItems/panel_text_sample.dart';
+import '../panelItems/panel_waiting_indicator_sample.dart';
 
 class DrawerPage extends StatefulWidget {
   @override
@@ -133,14 +133,19 @@ class _DrawerPageState extends State<DrawerPage> {
             page: PanelResponsiveTableSample(),
             pageRout: '/responsivetable'),
         buttonsInfo(
-            title: "Group list",
+            title: AppLocalizations.of(context)!.grouplist,
             icon: Icons.circle,
             page: PanelGroupListSample(),
             pageRout: '/grouplist'),
         buttonsInfo(
-            title: "ProgressBar",
+            title: AppLocalizations.of(context)!.progressBar,
             icon: Icons.circle,
             page: PanelProgressBarSample(),
+            pageRout: '/progress'),
+        buttonsInfo(
+            title: "waitingIndicator",
+            icon: Icons.circle,
+            page: PanelWaitingIndicatorSample(),
             pageRout: '/progress'),
       ],
       [
