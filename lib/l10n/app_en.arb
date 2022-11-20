@@ -157,7 +157,46 @@
   "gradiantprogressbar": "Gradiant  progress bar",
   "progressbartitle": "Different kinds of progress bars  are available in panel by flutter code.",
 
+  "waitingindicator": "Waiting indicator",
+  "waitingindicatorsindifferentcolors": "Waiting indicators in different colors",
+  "waitingindicatorsindifferentsizes": "Waiting indicators in different sizes",
+  "waitingindicatorsonbuttons":"Waiting indicators in buttons",
+  "watingindicatortitle": "Different kinds of Waiting indicators  are available in panel by flutter code.",
 
+  "avatar": "Avatar",
+  "avatarsindifferentsizes": "Avatars in different sizes",
+  "avatarsindifferentstatuses": "Avatars in different statuses",
+  "avatarswithdifferentwidgets": "Avatars with different widgets",
+  "avatarswithdifferentbackgroundcolors": "Avatars with different background colors",
+  "avatarsindifferentshapes": "Avatars in different shapes",
+  "groupavatar": "Group avatar",
+  "avatartitle": "Different kinds of avatars  are available in panel by flutter code.",
+
+
+  "tabbarnavigator": "tab bar navigator",
+  "toptabbarnavigator": "Top tab bar navigator",
+  "tabbarnavigatorwithdesiredtabdecoration": "Tab bar navigator with desired tab decoration",
+  "tabbarnavigatorwithdesiredwidgetintabs": "Tab bar navigator with desired widget in tabs",
+  "bottomtabbarnavigator": "Botton tab bar navigator",
+  "leftsidetabbarnavigator": "Left side tab bar navigator",
+  "rightsidebarnavigator": "Right side tab bar navigator",
+  "tabbartitle": "Different kinds of tab bar navigators  are available in panel by flutter code.",
+
+
+  "zoomableimage": "Zoomable image",
+  "zoomableimagetitle": "Zoomable image is available in panel by flutter code.",
+
+  "lightbox": "Light box",
+  "gallerylightboxshowingimage": "Gallery light box showing image",
+  "uniquelightboxshowingimage": "unique light box showing image",
+  "lightboxtitle": "Light boxs in two mode  are available in panel by flutter code.",
+
+  "modal": "Modal",
+  "modalsindifferentsizes": "modals in different sizes",
+  "modalsindifferentcontents": "modals in different content",
+  "modalsindifferentalignments": "modals in different alignments",
+  "seriesofmodals": "Series of modals",
+  "modaltitle": "Different kinds of modals  are available in panel by flutter code.",
 
 
   "colors": "Colors",

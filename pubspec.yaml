@@ -49,6 +49,8 @@ dependencies:
   carousel_slider: ^4.1.1
   responsive_table: ^0.2.0+2
   percent_indicator: ^4.2.2
+  image_cropper: ^3.0.1
+#  image_crop: ^0.4.1
 #  group_button: ^5.2.2
 
 

@@ -124,6 +124,7 @@ class PanelLabelSample extends StatelessWidget {
                 ),
                 size: StructureBuilder.dims!.h3IconSize,
                 text: AppLocalizations.of(context)!.error,
+
               ),
               EsContentLabel(
                 isUnique: false,

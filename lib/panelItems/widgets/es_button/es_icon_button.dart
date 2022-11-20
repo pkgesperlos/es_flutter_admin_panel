@@ -10,6 +10,7 @@ class EsIconButton extends StatefulWidget {
   VoidCallback? onTap;
   Widget? icon;
   Color? borderColor;
+  Color? hoverColor;
   Color? fillColor;
   Color iconColor;
   Color? loadingColor;
@@ -23,6 +24,7 @@ class EsIconButton extends StatefulWidget {
   EsIconButton(this.icon, {
     this.onTap,
     this.borderColor,
+    this.hoverColor,
     this.iconColor = Styles.t6Color,
     this.fillColor = Styles.primaryColor,
     this.disable = false,
@@ -68,7 +70,7 @@ class EsIconButtonState extends State<EsIconButton> {
         IgnorePointer(
         ignoring: !widget.clickable,
         child: InkWell(
-          hoverColor: widget.disable?Colors.transparent:Colors.black.withOpacity(.1),
+          hoverColor: widget.disable?Colors.transparent:widget.hoverColor??Colors.white.withOpacity(.2),
           onTap: onTap,
           child: Container(
             decoration: BoxDecoration(

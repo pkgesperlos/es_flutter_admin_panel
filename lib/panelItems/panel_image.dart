@@ -35,7 +35,7 @@ class PanelImage extends StatelessWidget {
             height: 240,
           ),
           title:AppLocalizations.of(context)!.zoomingImages,
-          information:"It is a zooming image located in: \n es_flutter_component>lib>es_image>es_zooming_image.dart \n and is used as: \n "
+          information:"It is a zooming image located in: \n es_flutter_component>lib>es_image>es_zoomable_image.dart \n and is used as: \n "
               """EsZoomingImage(
               img: AssetImage("assets/images/img1.jpg"), )"""
       ),

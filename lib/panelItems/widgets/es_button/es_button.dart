@@ -1,11 +1,7 @@
 
 import 'package:es_flutter_component/resources/Constants/enums.dart';
-import 'package:es_flutter_component/resources/Constants/styles.dart';
 import 'package:flutter/material.dart';
 
-
-// import 'package:es_flutter_component/resources/Constants/dims.dart';
-// import 'package:es_flutter_component/resources/Constants/styles.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 
 import '../es_text/es_icon_text.dart';
@@ -16,6 +12,7 @@ class EsButton extends StatefulWidget {
   VoidCallback? onTap;
   Widget? icon;
   Color? textColor ;
+  Color? hoverColor;
   Color? borderColor;
   double? borderRadiusSize;
   Color? fillColor;
@@ -34,6 +31,7 @@ class EsButton extends StatefulWidget {
       required this.text,
       this.icon,
       this.textColor ,
+      this.hoverColor,
       this.borderColor,
       this.borderRadiusSize,
       this.fillColor ,
@@ -78,7 +76,7 @@ class EsButtonState extends State<EsButton> {
         child: IgnorePointer(
           ignoring: !widget.clickable,
           child: InkWell(
-            hoverColor: widget.disable?Colors.transparent:Colors.black.withOpacity(.1),
+            hoverColor: widget.disable?Colors.transparent:widget.hoverColor??Colors.white.withOpacity(.2),
             onTap: onTap,
             child: Container(
 

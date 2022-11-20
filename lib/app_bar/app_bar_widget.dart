@@ -181,7 +181,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
           EsHSpacer(),
           Container(
             child: EsAvatarImage(
-              path: "assets/images/img1.jpg",
+              path: "assets/images/img4.jpg",
               radius: StructureBuilder.dims!.h0BorderRadius * 1.5,
             ),
             decoration: BoxDecoration(

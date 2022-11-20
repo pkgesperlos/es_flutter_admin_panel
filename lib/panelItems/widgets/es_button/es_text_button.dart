@@ -13,6 +13,7 @@ class EsTextButton extends StatefulWidget {
   String? text ;
   Color? textColor ;
   Color? borderColor;
+  Color? hoverColor;
   double? borderRadiusSize;
   Color? fillColor;
   double? size;
@@ -29,6 +30,7 @@ class EsTextButton extends StatefulWidget {
       required this.text,
       this.textColor,
       this.borderColor,
+      this.hoverColor,
       this.borderRadiusSize,
       this.fillColor,
       this.size,
@@ -71,7 +73,7 @@ class EsTextButtonState extends State<EsTextButton> {
         child: IgnorePointer(
           ignoring: !widget.clickable,
           child: InkWell(
-            hoverColor: Colors.black.withOpacity(.1),
+            hoverColor: widget.hoverColor??Colors.white.withOpacity(.2),
             onTap: onTap,
             child: Container(
                 padding: EdgeInsets.symmetric(

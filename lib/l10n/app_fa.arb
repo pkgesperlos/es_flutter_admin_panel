@@ -163,6 +163,49 @@
   "progressbartitle": " انواع مدل های نوار پیشرفت متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
 
 
+  "waitingindicator": "نشانگر انتظار",
+  "waitingindicatorsindifferentcolors": "نشانگر انتظار در رنگ های متفاوت",
+  "waitingindicatorsindifferentsizes": "نشانگر انتظار در اندازه های متفاوت",
+  "waitingindicatorsonbuttons":"نشانگر انتظار روی دکمه",
+  "watingindicatortitle": " انواع مدل های نشانگر انتظار متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
+
+  "tabbarnavigator": "تب بار ناوبری",
+  "toptabbarnavigator": "تب بار ناوبری قسمت بالا",
+  "tabbarnavigatorwithdesiredtabdecoration": "تب بار ناوبری با استایل دلخواه",
+  "tabbarnavigatorwithdesiredwidgetintabs": "تب بار ناوبری با ویجت دلخواه",
+  "bottomtabbarnavigator": "تب بار ناوبری قسمت پایین",
+  "leftsidetabbarnavigator": "تب بار ناوبری قسمت چپ",
+  "rightsidebarnavigator": "تب بار ناوبری قسمت راست",
+  "tabbartitle": " انواع مدل های تب بار ناوبری متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
+  "avatar": "آواتار",
+  "avatarsindifferentsizes": "آواتار در اندازه های متفاوت",
+  "avatarsindifferentstatuses": "آواتار در وضعیت های مختلف",
+  "avatarswithdifferentwidgets": "آواتار با ویجت های مختلف",
+  "avatarswithdifferentbackgroundcolors": "آوتار با رنگ ها ی پس زمینه مختلف",
+  "avatarsindifferentshapes": "آواتار در شکل های مختلف",
+  "groupavatar": "گروه آواتار",
+  "avatartitle": " انواع مدل های آواتار متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
+
+  "zoomableimage": "تصویر قابل زوم",
+  "zoomableimagetitle": " تصویر قابل زوم  با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
+  "lightbox": "لایت باکس",
+  "gallerylightboxshowingimage": "گالری لایت باکس",
+  "uniquelightboxshowingimage": "لایت باکس تکی",
+  "lightboxtitle":" .لایت باکس ها در دو حالت با استفاده از کدهای فلاتر در پنل موجود است",
+
+
+  "modal": "مودال",
+  "modalsindifferentsizes": "مودال ها در اندازه های متفاوت",
+  "modalsindifferentcontents": "مودال ها در محتواهای متفاوت",
+  "modalsindifferentalignments": "مودال ها در تراز های متفاوت",
+  "seriesofmodals": "مودال های سریالی",
+  "modaltitle": " انواع مدل های مودال متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
+
   "colors": "رنگ ها",
   "primarycolor": "رنگ اصلی",
   "colorstitle": " انواع مدل های رنگ های متفاوت  با استفاده از کدهای فلاتر در پنل در تعریف شده است.",

@@ -4,32 +4,33 @@ import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
-import '../center_sceen/center_screen.dart';
-import '../images/responsive_layout.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../panelItems/Panel_tabel/panel_editable_table.dart';
-import '../panelItems/Panel_tabel/panel_responsive_table.dart';
-import '../panelItems/Panel_tabel/panel_simple_table.dart';
+import '../center_sceen/center_screen.dart';
+import '../images/responsive_layout.dart';
 import '../panelItems/panel_accardion_sample.dart';
 import '../panelItems/panel_alert_sample.dart';
+import '../panelItems/panel_avatar_sample.dart';
 import '../panelItems/panel_bread_crumb_sample.dart';
 import '../panelItems/panel_button_sample.dart';
-import '../panelItems/panel_chart.dart';
 import '../panelItems/panel_color_sample.dart';
+import '../panelItems/panel_cropable_image_sample.dart';
+import '../panelItems/panel_dropdown_sample.dart';
+import '../panelItems/panel_group_button_sample.dart';
 import '../panelItems/panel_group_list_sample.dart';
+import '../panelItems/panel_light_box_sample.dart';
+import '../panelItems/panel_label_sample.dart';
+import '../panelItems/panel_modal_sample.dart';
+import '../panelItems/panel_page_indicator_sample.dart';
 import '../panelItems/panel_progress_bar_sample.dart';
 import '../panelItems/panel_responsive_table_sample.dart';
-import '../panelItems/panel_dialog_box.dart';
-import '../panelItems/panel_dropdown_sample.dart';
-import '../panelItems/panel_form.dart';
-import '../panelItems/panel_group_button_sample.dart';
-import '../panelItems/panel_label_sample.dart';
-import '../panelItems/panel_page_indicator_sample.dart';
-import '../panelItems/panel_slider_sample.dart';
 import '../panelItems/panel_simple_table_sample.dart';
+import '../panelItems/panel_slider_sample.dart';
+import '../panelItems/panel_tab_bar_navigation_sample.dart';
 import '../panelItems/panel_text_sample.dart';
+import '../panelItems/panel_tooltip_sample.dart';
 import '../panelItems/panel_waiting_indicator_sample.dart';
+import '../panelItems/panel_zoomable_image_sample.dart';
 
 class DrawerPage extends StatefulWidget {
   @override
@@ -143,10 +144,45 @@ class _DrawerPageState extends State<DrawerPage> {
             page: PanelProgressBarSample(),
             pageRout: '/progress'),
         buttonsInfo(
-            title: "waitingIndicator",
+            title: AppLocalizations.of(context)!.waitingindicator,
             icon: Icons.circle,
             page: PanelWaitingIndicatorSample(),
             pageRout: '/progress'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.tabbarnavigator,
+            icon: Icons.circle,
+            page: PanelTabBarNavigationSample(),
+            pageRout: '/tabbar'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.avatar,
+            icon: Icons.circle,
+            page: PanelAvatarSample(),
+            pageRout: '/avatar'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.lightbox,
+            icon: Icons.circle,
+            page: PanelLightBoxSample(),
+            pageRout: '/Lightbox'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.zoomableimage,
+            icon: Icons.circle,
+            page: PanelZoomableImageSample(),
+            pageRout: '/zoomableimage'),
+        buttonsInfo(
+            title: AppLocalizations.of(context)!.modal,
+            icon: Icons.circle,
+            page: PanelModalSample(),
+            pageRout: '/modal'),
+        buttonsInfo(
+            title:"Tooltip",
+            icon: Icons.circle,
+            page: PanelTooltipSample(),
+            pageRout: '/tooltip'),
+       /* buttonsInfo(
+            title: "cropable image",
+            icon: Icons.circle,
+            page: PanelCropableImageSample(),
+            pageRout: '/cropableimage'),*/
       ],
       [
         AppLocalizations.of(context)!.components,
@@ -513,6 +549,7 @@ class _DrawerPageState extends State<DrawerPage> {
                                   ? selectedBoxDecoration()
                                   : null,
                           child: GestureDetector(
+
                             child: drawerItems(_buttonNames[index][0], index,
                                 _currentIndex, (index == _currentIndex)),
                             onTap: () {
