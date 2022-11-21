@@ -28,7 +28,7 @@ class _Test extends State<Test> {
     return Center(
       child:Container(
 // color: StructureBuilder.styles!.additional().primary2,
-color: MyStyle.primary3,
+// color: MyStyle.primary3,
       )
       /*ClipPath(
           clipper: ShapeBorderClipper(

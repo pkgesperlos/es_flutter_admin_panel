@@ -1,14 +1,11 @@
 import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
 import 'package:es_flutter_component/es_alert/es_alerts.dart';
-import 'package:es_flutter_component/es_button/es_button.dart';
 import 'package:es_flutter_component/es_button/es_icon_button.dart';
 import 'package:es_flutter_component/es_image/es_avatar_image.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/resources/constants/structure_styles.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
@@ -23,8 +20,8 @@ class PanelAlertSample extends StatelessWidget {
     List list = [
       ContainerItems(
           widget: Container(
-              child: Row(
-            // crossAxisAlignment: CrossAxisAlignment.start,
+              child: Wrap(
+                spacing: StructureBuilder.dims!.h2Padding,
             children: [
               EsIconButton(
                 EsSvgIcon(
@@ -40,7 +37,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/CheckCircle.svg",
@@ -55,7 +51,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/infocircle.svg",
@@ -70,7 +65,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/Megaphone.svg",
@@ -85,22 +79,6 @@ class PanelAlertSample extends StatelessWidget {
                     context,
                     "message",
                   );
-                },
-              ),
-              EsHSpacer(
-                big: true,
-              ),
-              EsIconButton(
-                EsSvgIcon(
-                  "assets/svgs/Question.svg",
-                  size: StructureBuilder.dims!.h2IconSize,
-                  color: Colors.white,
-                ),
-                fillColor: StructureBuilder.styles!.primaryColor,
-                onTap: () {
-                  EsAlerts.confidence(context,
-                      title: "عنوان",
-                      content: AppLocalizations.of(context)?.lorm);
                 },
               ),
             ],
@@ -124,8 +102,8 @@ class PanelAlertSample extends StatelessWidget {
               ),"""),
       ContainerItems(
           widget: Container(
-              child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+              child: Wrap(
+                spacing: StructureBuilder.dims!.h2Padding,
             children: [
               EsIconButton(
                 EsSvgIcon(
@@ -146,7 +124,6 @@ class PanelAlertSample extends StatelessWidget {
                               width: 2)));
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/CheckCircle.svg",
@@ -166,7 +143,6 @@ class PanelAlertSample extends StatelessWidget {
                               width: 2)));
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/infocircle.svg",
@@ -186,7 +162,6 @@ class PanelAlertSample extends StatelessWidget {
                               width: 2)));
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/Megaphone.svg",
@@ -208,7 +183,6 @@ class PanelAlertSample extends StatelessWidget {
                               width: 2)));
                 },
               ),
-              EsHSpacer(),
             ],
           )),
           title: AppLocalizations.of(context)!.borderedalert,
@@ -233,8 +207,8 @@ class PanelAlertSample extends StatelessWidget {
               ),"""),
       ContainerItems(
           widget: Container(
-              child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+              child: Wrap(
+                spacing: StructureBuilder.dims!.h2Padding,
             children: [
               EsIconButton(
                 EsSvgIcon(
@@ -247,7 +221,6 @@ class PanelAlertSample extends StatelessWidget {
                   EsAlerts.error(context, "message", hasClose: true);
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/CheckCircle.svg",
@@ -259,7 +232,6 @@ class PanelAlertSample extends StatelessWidget {
                   EsAlerts.success(context, "message", hasClose: true);
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/infocircle.svg",
@@ -271,7 +243,6 @@ class PanelAlertSample extends StatelessWidget {
                   EsAlerts.warning(context, "message", hasClose: true);
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/Megaphone.svg",
@@ -285,7 +256,6 @@ class PanelAlertSample extends StatelessWidget {
                   EsAlerts.information(context, "message", hasClose: true);
                 },
               ),
-              EsHSpacer(),
             ],
           )),
           title: AppLocalizations.of(context)!.removablealert,
@@ -300,8 +270,8 @@ class PanelAlertSample extends StatelessWidget {
               ),"""),
       ContainerItems(
           widget: Container(
-              child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+              child: Wrap(
+                spacing: StructureBuilder.dims!.h2Padding,
             children: [
               EsIconButton(
                 EsSvgIcon(
@@ -322,7 +292,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/CheckCircle.svg",
@@ -343,7 +312,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/infocircle.svg",
@@ -364,7 +332,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/Megaphone.svg",
@@ -388,7 +355,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
             ],
           )),
           title: AppLocalizations.of(context)!.alertwithicon,
@@ -415,8 +381,8 @@ class PanelAlertSample extends StatelessWidget {
               ),"""),
       ContainerItems(
           widget: Container(
-              child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+              child: Wrap(
+                spacing: StructureBuilder.dims!.h2Padding,
             children: [
               EsIconButton(
                 EsSvgIcon(
@@ -438,7 +404,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/CheckCircle.svg",
@@ -460,7 +425,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/infocircle.svg",
@@ -482,7 +446,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/Megaphone.svg",
@@ -507,7 +470,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
             ],
           )),
           title: AppLocalizations.of(context)!.removablealertwithicon,
@@ -535,8 +497,8 @@ class PanelAlertSample extends StatelessWidget {
               ),"""),
       ContainerItems(
           widget: Container(
-              child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+              child: Wrap(
+                spacing: StructureBuilder.dims!.h2Padding,
             children: [
               EsIconButton(
                 EsSvgIcon(
@@ -566,7 +528,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/CheckCircle.svg",
@@ -594,7 +555,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/infocircle.svg",
@@ -622,7 +582,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
               EsIconButton(
                 EsSvgIcon(
                   "assets/svgs/Megaphone.svg",
@@ -652,7 +611,6 @@ class PanelAlertSample extends StatelessWidget {
                   );
                 },
               ),
-              EsHSpacer(),
             ],
           )),
 
@@ -688,8 +646,8 @@ class PanelAlertSample extends StatelessWidget {
               ),"""),
       ContainerItems(
           widget: Container(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: Wrap(
+                spacing: StructureBuilder.dims!.h2Padding,
                 children: [
                   EsIconButton(
                     EsSvgIcon(
@@ -717,7 +675,6 @@ class PanelAlertSample extends StatelessWidget {
                           ));
                     },
                   ),
-                  EsHSpacer(),
                   EsIconButton(
                     EsSvgIcon(
                       "assets/svgs/CheckCircle.svg",
@@ -744,7 +701,6 @@ class PanelAlertSample extends StatelessWidget {
                           ));
                     },
                   ),
-                  EsHSpacer(),
                   EsIconButton(
                     EsSvgIcon(
                       "assets/svgs/infocircle.svg",
@@ -771,7 +727,6 @@ class PanelAlertSample extends StatelessWidget {
                           ));
                     },
                   ),
-                  EsHSpacer(),
                   EsIconButton(
                     EsSvgIcon(
                       "assets/svgs/Megaphone.svg",
@@ -802,7 +757,6 @@ class PanelAlertSample extends StatelessWidget {
                       );
                     },
                   ),
-                  EsHSpacer(),
                 ],
               )),
           title: AppLocalizations.of(context)!.borderedalertwithicon,

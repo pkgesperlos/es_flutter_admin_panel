@@ -4,6 +4,7 @@ import 'package:es_flutter_admin_panel/language_change_provider.dart';
 import 'package:es_flutter_admin_panel/my_drawer.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_bread_crumb/app_navigator_observer.dart';
 import 'package:es_flutter_admin_panel/test.dart';
+import 'package:es_flutter_admin_panel/test3.dart';
 import 'package:es_flutter_component/resources/constants/structure_config.dart';
 import 'package:es_flutter_component/resources/constants/structure_dims.dart';
 import 'package:es_flutter_component/resources/constants/structure_styles.dart';
@@ -89,13 +90,12 @@ class _MyApp extends State<MyApp> {
                   initialRoute: '/',
                   routes: {
                     '/': (context) => WidgetTreePanel(),
-                    // '/': (context) => Test(),
-                    '/chart': (context) => MyDrawer(
-                          child: PanelChart(),
-                        ),
-                    '/form': (context) => MyDrawer(
-                          child: PanelForm(),
-                        ),
+                    // '/chart': (context) => MyDrawer(
+                    //       child: PanelChart(),
+                    //     ),
+                    // '/form': (context) => MyDrawer(
+                    //       child: PanelForm(),
+                    //     ),
 
                     //   '/notification': (context) => PanelNotification(),
                     //   '/chart': (context) => PanelChart(),
@@ -119,8 +119,7 @@ class _MyApp extends State<MyApp> {
 }
 
 class MyStyle extends StructureStyles {
-  static const primary2 = Colors.red;
-  static const primary3= Colors.purple;
+  static const cardColor = Color(0xffF2F2F2);
 
 
   MyStyle(

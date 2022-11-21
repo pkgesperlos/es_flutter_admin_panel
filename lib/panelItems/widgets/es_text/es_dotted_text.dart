@@ -15,9 +15,17 @@ class EsDottedText extends StatelessWidget {
   double? size;
   Color? color;
   bool isBold;
+  bool? overFlowTag;
+  int? maxLine;
 
   EsDottedText(this.data,
-      {Key? key, this.align, this.size, this.color, this.isBold = false})
+      {Key? key,
+        this.align,
+        this.size,
+        this.color,
+        this.overFlowTag,
+        this.maxLine,
+        this.isBold = false})
       : super(key: key);
 
   @override
@@ -57,6 +65,8 @@ class EsDottedText extends StatelessWidget {
                   size: size ?? StructureBuilder.dims!.h2FontSize,
                   color: color ?? StructureBuilder.styles!.textColor().primary,
                   isBold: isBold,
+                  overFlowTag: overFlowTag??false,
+                  maxLine: maxLine??2,
                 )),
             _rtl
                 ? WidgetSpan(

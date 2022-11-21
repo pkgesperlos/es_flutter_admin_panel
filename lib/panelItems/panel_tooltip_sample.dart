@@ -1,7 +1,10 @@
 import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_button/es_button.dart';
+import 'package:es_flutter_admin_panel/panelItems/widgets/es_image/es_avatar_image.dart';
+import 'package:es_flutter_admin_panel/panelItems/widgets/es_label/es_label.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_tooltip/es_tooltip.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
+import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
 
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
@@ -13,12 +16,72 @@ class PanelTooltipSample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     List list = [
+
       ContainerItems(
           widget: Container(
               child: Wrap(
             spacing: StructureBuilder.dims!.h0Padding,
+            runSpacing: StructureBuilder.dims!.h0Padding,
+            children: [
+              EsTooltip(
+                  message: 'message',
+                  widget: EsButton(
+                    text: AppLocalizations.of(context)!.button,
+                    fillColor: StructureBuilder.styles!.buttonColor().primary,
+                  ),
+                  rightOffset: 150,
+                  boxDecoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(
+                              StructureBuilder.dims!.h1BorderRadius)),
+                      color: StructureBuilder.styles!.t2Color)),
+              EsTooltip(
+                message: 'message',
+                widget: EsButton(
+                  text: AppLocalizations.of(context)!.button,
+                  fillColor: StructureBuilder.styles!.buttonColor().primary,
+                ),
+                leftOffset: 150,
+              ),
+              EsTooltip(
+                message: 'message',
+                widget: EsButton(
+                  text: AppLocalizations.of(context)!.button,
+                  fillColor: StructureBuilder.styles!.buttonColor().primary,
+                ),
+                preferBelow: false,
+                leftOffset: 150,
+              ),
+              EsTooltip(
+                  message: 'message',
+                  widget: EsButton(
+                    text: AppLocalizations.of(context)!.button,
+                    fillColor: StructureBuilder.styles!.buttonColor().primary,
+                  ),
+                  preferBelow: false,
+                  rightOffset: 150,
+                  boxDecoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(
+                              StructureBuilder.dims!.h1BorderRadius)),
+                      color: StructureBuilder.styles!.t2Color)),
+            ],
+          )),
+          title: AppLocalizations.of(context)!.tooltipindifferentalignments,
+          information:
+              "They are  tooltip in different alignments located in: \n es_flutter_component/es_tooltip/es_tooltip.dart \n and is used as: \n "
+              """EsTooltip(
+                message: 'message',
+                widget: EsButton(
+                  text: AppLocalizations.of(context)!.button,
+                  fillColor: StructureBuilder.styles!.buttonColor().primary,
+                ),
+                leftMargin: 150,),"""),
+      ContainerItems(
+          widget: Container(
+              child: Wrap(
+            spacing: StructureBuilder.dims!.h0Padding*2,
             runSpacing: StructureBuilder.dims!.h0Padding,
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -26,24 +89,119 @@ class PanelTooltipSample extends StatelessWidget {
               EsTooltip(
                 message: 'message',
                 widget: EsButton(
-
-                text: 'tooltip',
-                fillColor: StructureBuilder.styles!.buttonColor().primary,
+                  text: AppLocalizations.of(context)!.button,
+                  fillColor: StructureBuilder.styles!.buttonColor().primary,
+                ),
 
               ),
-                preferBelow: false,)
+              EsTooltip(
+                message: 'message',
+                widget: EsButton(
+                  text: AppLocalizations.of(context)!.button,
+                  fillColor: StructureBuilder.styles!.buttonColor().secondary,
+                  clickable: false,
+                ),
+
+              ),
+
+              EsTooltip(
+                message: 'message',
+                widget: EsOrdinaryText("Text"),
+                verticalOffset: 10,
+                leftOffset: 50,
+
+              ),
+
+              EsTooltip(
+                message: 'message',
+                widget:  EsLabel(
+                  isUnique: false,
+                  widget: EsAvatarImage(
+                    path: "assets/images/img4.jpg",
+                  ),
+                  hasBorder: true,
+                  widgetSize: StructureBuilder.dims!.h2IconSize * 0.1,
+                ),
+                leftOffset: 50,
+
+              ),
+
+
             ],
           )),
-          title: AppLocalizations.of(context)!.modalsindifferentsizes,
+          title: AppLocalizations.of(context)!.tooltipfordifferentwidgets,
           information:
-              "They are  tooltips in different positions located in: \n es_flutter_component/es_modal/es_modal.dart \n and is used as: \n "
-              """EsButton(
-                text: 'Modal',
-                fillColor: StructureBuilder.styles!.buttonColor().primary,
-                onTap: () {
-                  EsModal.simple(context,);
-                },
+              "They are  tooltip on different widgets located in: \n es_flutter_component/es_tooltip/es_tooltip.dart \n and is used as: \n "
+              """ EsTooltip(
+                message: 'message',
+                widget:  EsLabel(
+                  isUnique: false,
+                  widget: EsAvatarImage(
+                    path: "assets/images/img4.jpg",
+                  ),
+                  hasBorder: true,
+                  widgetSize: StructureBuilder.dims!.h2IconSize * 0.1,
+                ),
+                leftOffset: 50,
+
               ),"""),
+      ContainerItems(
+          widget: Container(
+              child: Wrap(
+                spacing: StructureBuilder.dims!.h0Padding,
+                runSpacing: StructureBuilder.dims!.h0Padding,
+                // crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  EsTooltip(
+                    message: 'message',
+                    widget: EsButton(
+                      text: AppLocalizations.of(context)!.button,
+                      fillColor: StructureBuilder.styles!.buttonColor().primary,
+                    ),
+                    showDuration: Duration(milliseconds: 0),
+                    preferBelow: false,
+                  ),
+                  EsTooltip(
+                      message: 'message',
+                      widget: EsButton(
+                        text: AppLocalizations.of(context)!.button,
+                        fillColor: StructureBuilder.styles!.buttonColor().primary,
+                      ),
+                      showDuration: Duration(milliseconds: 500),
+                      preferBelow: false,
+                     ),
+                  EsTooltip(
+                      message: 'message',
+                      widget: EsButton(
+                        text: AppLocalizations.of(context)!.button,
+                        fillColor: StructureBuilder.styles!.buttonColor().primary,
+                      ),
+                      showDuration: Duration(milliseconds: 1500),
+                      preferBelow: false,
+                     ),
+                  EsTooltip(
+                    message: 'message',
+                    widget: EsButton(
+                      text: AppLocalizations.of(context)!.button,
+                      fillColor: StructureBuilder.styles!.buttonColor().primary,
+                    ),
+                    preferBelow: false,
+                  ),
+
+                ],
+              )),
+          title: AppLocalizations.of(context)!.tooltipindifferentshowduration,
+          information:
+          "They are  tooltip in different show duration located in: \n es_flutter_component/es_tooltip/es_tooltip.dart \n and is used as: \n "
+              """EsTooltip(
+                      message: 'message',
+                      widget: EsButton(
+                        text: AppLocalizations.of(context)!.button,
+                        fillColor: StructureBuilder.styles!.buttonColor().primary,
+                      ),
+                      showDuration: Duration(milliseconds: 500),
+                      preferBelow: false,
+                     ),"""),
 
     ];
     return Material(
@@ -52,7 +210,7 @@ class PanelTooltipSample extends StatelessWidget {
           child: Column(
             children: [
               PageTitleContainer(
-                title: AppLocalizations.of(context)!.modaltitle,
+                title: AppLocalizations.of(context)!.tooltiptitle,
               ),
               BootstrapContainer(
                   fluid: true,
@@ -69,7 +227,7 @@ class PanelTooltipSample extends StatelessWidget {
 
   Widget boxShow(Widget widget) {
     return BootstrapCol(
-        sizes: 'col-sm-12 col-ml-12 col-lg-12 col-xl-12', child: widget);
+        sizes: 'col-sm-12 col-ml-12 col-lg-12 col-xl-6', child: widget);
   }
 
   Widget listShow(Widget widget) {

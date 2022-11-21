@@ -6,11 +6,15 @@ import 'package:flutter/material.dart';
 import '../es_button/es_button.dart';
 
 class EsTooltip extends StatelessWidget {
+
   Widget widget;
   String message;
   Duration? waitDuration;
   Duration? showDuration;
   bool? preferBelow;
+  double? leftOffset;
+  double? rightOffset;
+  double? verticalOffset;
   TextStyle? textStyle;
   BoxDecoration? boxDecoration;
   EdgeInsetsGeometry? padding;
@@ -23,24 +27,33 @@ class EsTooltip extends StatelessWidget {
     this.waitDuration,
     this.showDuration,
     this.preferBelow,
+    this.leftOffset,
+    this.rightOffset,
+    this.verticalOffset,
     this.boxDecoration,
     this.padding,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
+
     return Tooltip(
         message: message,
         waitDuration: waitDuration ?? Duration(milliseconds: 0),
         showDuration: showDuration ?? Duration(seconds: 2),
         padding: padding ?? EdgeInsets.all(StructureBuilder.dims!.h1Padding),
         margin: EdgeInsets.only(
-            left: 300),
-        verticalOffset: StructureBuilder.dims!.h0Padding,
+            left:leftOffset==null
+                ?0:leftOffset??200,
+          right:rightOffset==null
+              ?0:rightOffset??200,
+        ) ,
+        verticalOffset: verticalOffset??StructureBuilder.dims!.h0Padding,
         preferBelow: preferBelow ?? true,
         textStyle: textStyle ??
             TextStyle(
-                fontSize: 15,
+                fontSize: 12,
                 color: StructureBuilder.styles!.primaryLightColor,
                 fontWeight: FontWeight.normal),
         decoration: boxDecoration ??

@@ -15,6 +15,8 @@ class EsIconText extends StatelessWidget {
   double? size;
   Color? color;
   bool isBold;
+  bool? overFlowTag;
+  int? maxLine;
 
   EsIconText(this.data,
       {Key? key,
@@ -22,6 +24,8 @@ class EsIconText extends StatelessWidget {
       this.align,
       this.size,
       this.color,
+      this.overFlowTag,
+      this.maxLine,
       this.isBold = false})
       : super(key: key);
 
@@ -36,22 +40,22 @@ class EsIconText extends StatelessWidget {
 
     return IntrinsicWidth(
       child: RichText(
-        textAlign: align ?? TextAlign.center,
+        textAlign: align ?? TextAlign.start,
         text: TextSpan(
           children: [
             _rtl
                 ? WidgetSpan(child: Container())
                 : WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: icon ?? Container()),
+                alignment: PlaceholderAlignment.middle,
+                child: icon ?? Container()),
             _rtl
                 ? WidgetSpan(child: Container())
                 : WidgetSpan(
-                    child: icon == null
-                        ? Container()
-                        : EsHSpacer(
-                            big: true,
-                          )),
+                child: icon == null
+                    ? Container()
+                    : EsHSpacer(
+                  big: true,
+                )),
             WidgetSpan(
                 alignment: PlaceholderAlignment.middle,
                 child: EsOrdinaryHeightText(
@@ -59,19 +63,21 @@ class EsIconText extends StatelessWidget {
                   size: size ?? StructureBuilder.dims!.h2FontSize,
                   color: color ?? StructureBuilder.styles!.textColor().primary,
                   isBold: isBold,
+                  overFlowTag: overFlowTag??false,
+                  maxLine: maxLine??2,
                 )),
             _rtl
                 ? WidgetSpan(
-                    child: icon == null
-                        ? Container()
-                        : EsHSpacer(
-                            big: true,
-                          ))
+                child: icon == null
+                    ? Container()
+                    : EsHSpacer(
+                  big: true,
+                ))
                 : WidgetSpan(child: Container()),
             _rtl
                 ? WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: icon ?? Container())
+                alignment: PlaceholderAlignment.middle,
+                child: icon ?? Container())
                 : WidgetSpan(child: Container()),
           ],
         ),

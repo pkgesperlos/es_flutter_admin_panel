@@ -32,7 +32,7 @@ class EsMarkedText extends StatelessWidget {
 
     return IntrinsicWidth(
       child: RichText(
-        textAlign: align??TextAlign.center,
+        textAlign: align??TextAlign.start,
         text: TextSpan(
           children: [
             _rtl

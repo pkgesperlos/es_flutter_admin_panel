@@ -22,10 +22,12 @@ import '../panelItems/panel_light_box_sample.dart';
 import '../panelItems/panel_label_sample.dart';
 import '../panelItems/panel_modal_sample.dart';
 import '../panelItems/panel_page_indicator_sample.dart';
+import '../panelItems/panel_primary_card_sample.dart';
 import '../panelItems/panel_progress_bar_sample.dart';
 import '../panelItems/panel_responsive_table_sample.dart';
 import '../panelItems/panel_simple_table_sample.dart';
 import '../panelItems/panel_slider_sample.dart';
+import '../panelItems/panel_sweet_alert_sample.dart';
 import '../panelItems/panel_tab_bar_navigation_sample.dart';
 import '../panelItems/panel_text_sample.dart';
 import '../panelItems/panel_tooltip_sample.dart';
@@ -174,10 +176,20 @@ class _DrawerPageState extends State<DrawerPage> {
             page: PanelModalSample(),
             pageRout: '/modal'),
         buttonsInfo(
-            title:"Tooltip",
+            title:AppLocalizations.of(context)!.tooltip,
             icon: Icons.circle,
             page: PanelTooltipSample(),
             pageRout: '/tooltip'),
+        buttonsInfo(
+            title:AppLocalizations.of(context)!.sweetalert,
+            icon: Icons.circle,
+            page: PanelSweetAlertSample(),
+            pageRout: '/sweetalert'),
+        buttonsInfo(
+            title:"Primary card",
+            icon: Icons.circle,
+            page: PanelPrimaryCardSample(),
+            pageRout: '/primarycard'),
        /* buttonsInfo(
             title: "cropable image",
             icon: Icons.circle,

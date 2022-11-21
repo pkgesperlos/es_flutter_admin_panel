@@ -215,7 +215,7 @@ class PanelModalSample extends StatelessWidget {
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               EsButton(
-                text: 'Small modal',
+                text: AppLocalizations.of(context)!.smallmodal,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.simple(
@@ -224,7 +224,7 @@ class PanelModalSample extends StatelessWidget {
                 },
               ),
               EsButton(
-                text: 'Medium modal',
+                text: AppLocalizations.of(context)!.mediummodal,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.simple(
@@ -235,7 +235,7 @@ class PanelModalSample extends StatelessWidget {
                 },
               ),
               EsButton(
-                text: 'Full screen modal',
+                text: AppLocalizations.of(context)!.fullscreenmodal,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.fullScreen(context,
@@ -262,7 +262,7 @@ class PanelModalSample extends StatelessWidget {
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               EsButton(
-                text: 'information modal',
+                text: AppLocalizations.of(context)!.informationmodal,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.simple(context,
@@ -272,7 +272,7 @@ class PanelModalSample extends StatelessWidget {
                 },
               ),
               EsButton(
-                text: 'Confirm modal',
+                text: AppLocalizations.of(context)!.confirmmodal,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.simple(context,
@@ -281,7 +281,7 @@ class PanelModalSample extends StatelessWidget {
                 },
               ),
               EsButton(
-                text: 'Form modal',
+                text: AppLocalizations.of(context)!.formmodal,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.simple(context,
@@ -290,7 +290,7 @@ class PanelModalSample extends StatelessWidget {
                 },
               ),
               EsButton(
-                text: 'Grid modal',
+                text: AppLocalizations.of(context)!.gridmodal,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.simple(context,
@@ -321,7 +321,7 @@ class PanelModalSample extends StatelessWidget {
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               EsButton(
-                text: 'Center modal',
+                text: AppLocalizations.of(context)!.centermodal,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.position(
@@ -330,7 +330,7 @@ class PanelModalSample extends StatelessWidget {
                 },
               ),
               EsButton(
-                text: 'Bottom screen modal',
+                text: AppLocalizations.of(context)!.bottomscreenmodal,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.bottom(
@@ -340,35 +340,35 @@ class PanelModalSample extends StatelessWidget {
                 },
               ),
               EsButton(
-                text: 'TopLeft modal',
+                text: AppLocalizations.of(context)!.topleftmodal,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.position(context, alignment: Alignment.topLeft);
                 },
               ),
               EsButton(
-                text: 'TopRight modal',
+                text: AppLocalizations.of(context)!.toprightmodal,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.position(context, alignment: Alignment.topRight);
                 },
               ),
               EsButton(
-                text: 'BottomRight modal',
+                text: AppLocalizations.of(context)!.bottomrightmodal,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.position(context, alignment: Alignment.bottomRight);
                 },
               ),
               EsButton(
-                text: 'BottomLeft modal',
+                text: AppLocalizations.of(context)!.bottomleftmodal,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.position(context, alignment: Alignment.bottomLeft);
                 },
               ),
               EsButton(
-                text: 'Custom alignment modal',
+                text: AppLocalizations.of(context)!.customalignmmentmodal,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.position(context, alignment: Alignment(0.8, -0.5));
@@ -394,7 +394,7 @@ class PanelModalSample extends StatelessWidget {
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               EsButton(
-                text: 'Series of modals',
+                text: AppLocalizations.of(context)!.seriesofmodals,
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
                 onTap: () {
                   EsModal.simple(context,
