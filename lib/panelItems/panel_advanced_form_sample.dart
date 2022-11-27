@@ -3,6 +3,8 @@ import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_checkbox/es
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_checkbox/es_custom_check_box.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_checkbox/es_custom_checkbox_form.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_drop_down/es_drop_down.dart';
+import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_drop_down/es_label_input.dart';
+import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_drop_down/es_label_input_seprated_drop_down.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_radio_button/es_radio_button_group.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_radio_button/es_radio_button_group_form.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_slider/es_slider.dart';
@@ -23,13 +25,30 @@ class PanelAdvancedFormSample extends StatefulWidget {
   PanelAdvancedFormSample({Key? key}) : super(key: key);
 
   @override
-  State<PanelAdvancedFormSample> createState() => _PanelAdvancedFormSampleState();
+  State<PanelAdvancedFormSample> createState() =>
+      _PanelAdvancedFormSampleState();
 }
 
-bool _value1 = true;
-bool isChecked = true;
+
+
+
 
 class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
+
+  List labelList = [
+    {"title": "item1", "_id": "1"},
+    {"title": "item2", "_id": "2"},
+    {"title": "item3", "_id": "3"},
+    {"title": "item4", "_id": "4"},
+    {"title": "item5", "_id": "5"},
+  ];
+  List labelList2 = [
+    {"title": "item1", "_id": "1"},
+    {"title": "item2", "_id": "2"},
+    {"title": "item3", "_id": "3"},
+    {"title": "item4", "_id": "4"},
+    {"title": "item5", "_id": "5"},
+  ];
   @override
   void initState() {
     // TODO: implement initState
@@ -45,119 +64,21 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
   Widget build(BuildContext context) {
     double _height = 700;
     List list = [
-
       ContainerItems(
           widget: Container(
-            height: _height,
             child: Wrap(
               spacing: StructureBuilder.dims!.h0Padding,
-              runSpacing: StructureBuilder.dims!.h0Padding,
+              direction: Axis.vertical,
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    EsOrdinaryText(
-                      AppLocalizations.of(context)!.textField +
-                          " - " +
-                          AppLocalizations.of(context)!.disabled,
-                      color: StructureBuilder.styles!.t1Color,
-                    ),
-                    EsVSpacer(
-                      big: true,
-                    ),
-                    EsTextField(
-                      hint: AppLocalizations.of(context)!.emailadress,
-                      customController: EditTextController(),
-                      disabled: true,
-                    ),
-                  ],
-                ),
-                Wrap(
-                  spacing: StructureBuilder.dims!.h1Padding,
-                  runSpacing: StructureBuilder.dims!.h1Padding,
-                  children: [
-                    EsCustomCheckBox(
-                        disabled: true,
-                        value: isChecked,
-                        onChanged: (value) {
-                          setState(() {
-                            isChecked = value;
-                          });
-                        }),
-                    EsOrdinaryText(
-                      AppLocalizations.of(context)!.checkbox +
-                          " - " +
-                          AppLocalizations.of(context)!.disabled,
-                    )
-                  ],
-                ),
-                Wrap(
-                  spacing: StructureBuilder.dims!.h1Padding,
-                  runSpacing: StructureBuilder.dims!.h1Padding,
-                  children: [
 
-                    EsOrdinaryText(
-                      AppLocalizations.of(context)!.radioButons +
-                          " - " +
-                          AppLocalizations.of(context)!.disabled,
-                    ),
-                    RadioListTile(
-                      activeColor: StructureBuilder.styles!.secondaryColor,
-                      tileColor: StructureBuilder.styles!.secondaryColor,
-                      value: isChecked,
-                      onChanged: (value) {
-                        null;
-                      },
-                      groupValue: false,
-                    ),
-
-                  ],
-                ),
-                Wrap(
-                  spacing: StructureBuilder.dims!.h0Padding,
-                  runSpacing: StructureBuilder.dims!.h1Padding,
-                  children: [
-                    EsOrdinaryText(
-                      AppLocalizations.of(context)!.sliderinput +
-                          " - " +
-                          AppLocalizations.of(context)!.disabled,
-                    ),
-                    EsSlider(
-                      disabled: true,
-                    ),
-                  ],
-                ),
-                Wrap(
-                  spacing: StructureBuilder.dims!.h1Padding,
-                  runSpacing: StructureBuilder.dims!.h1Padding,
-                  children: [
-                    Transform.scale(
-                      scale: 0.7,
-                      child: CupertinoSwitch(
-                        activeColor: StructureBuilder.styles!.secondaryColor,
-                        onChanged: (bool value) {
-                          null;
-                        },
-                        value: _value1,
-                      ),
-                    ),
-                    EsOrdinaryText(
-                      AppLocalizations.of(context)!.switchbutton +
-                          " - " +
-                          AppLocalizations.of(context)!.disabled,
-                    )
-                  ],
-                ),
-                EsButton(
-                  text: AppLocalizations.of(context)!.register,
-                  fillColor: StructureBuilder.styles!.secondaryColor,
-                  clickable: false,
-                )
+                EsLabelInput(labelList: labelList2),
+                EsLabelInputSepratedDropDown(labelList: labelList),
               ],
             ),
           ),
-          title: "disabled items",
-          information: "They are disabled items in this panel by flutter code.  "
+          title: "Label input",
+          information:
+              "They are disabled items in this panel by flutter code.  "
               "Some of the components are located in: \n es_flutter_component>lib/es_form \n  ."),
     ];
     return Material(
@@ -165,7 +86,6 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-
               PageTitleContainer(
                 title: AppLocalizations.of(context)!.customformtitle,
               ),
@@ -185,7 +105,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
 
   Widget boxShow(Widget widget) {
     return BootstrapCol(
-        sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-4', child: widget);
+        sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-6', child: widget);
   }
 
   Widget listShow(Widget widget) {

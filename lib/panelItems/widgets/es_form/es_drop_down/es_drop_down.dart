@@ -15,6 +15,7 @@ class EsDropDown extends StatefulWidget {
   Widget? subTitleWidget;
   List list;
   Function(String id)? onChanged;
+  TextEditingController? controller;
 
   Widget? buttonWidget;
   Offset? menuOffset;
@@ -33,6 +34,7 @@ class EsDropDown extends StatefulWidget {
       this.value = "",
       required this.list,
       this.onChanged,
+      this.controller,
       this.idName = "_id",
       this.valueName = "title",
       this.subTitleWidget,
@@ -109,6 +111,7 @@ class _EsDropDownState extends State<EsDropDown> {
                 _value = value.toString();
 
                 widget.onChanged!(value.toString());
+                widget.controller==null?null:widget.controller!.text=value!;
               });
             },
             itemHeight:

@@ -16,7 +16,7 @@ class EsDropDownForm extends FormField<String> {
       required FormFieldValidator<String> validator,
         String initialValue ="",
       required String value ,
-       ValueChanged<bool>? onSelect,
+       ValueChanged<String>? onSelect,
 
         Widget? buttonWidget,
         Offset? menuOffset,

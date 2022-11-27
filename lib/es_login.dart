@@ -120,7 +120,6 @@ class _EsLogin extends State<EsLogin> {
                                 return "It is neccessary";
                               }
                             },
-                            onSelect: (bool value) {},
                           ),
                         ),
                         EsCustomCheckBoxGroupForm(
