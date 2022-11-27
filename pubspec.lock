@@ -273,7 +273,7 @@ packages:
       name: dropdown_button2
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.8.9"
+    version: "1.9.0"
   editable:
     dependency: transitive
     description:
@@ -293,7 +293,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: d14a2b462e5f3a5f5288cbea7d07faa9210bf98b
+      resolved-ref: bb0a0548de50e3e33ac5ec7eb46a516b37e1248d
       url: "git@github.com:pkgesperlos/es_flutter_component.git"
     source: git
     version: "1.0.0+1"
@@ -485,6 +485,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  fluttertoast:
+    dependency: "direct main"
+    description:
+      name: fluttertoast
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "8.1.1"
   frontend_server_client:
     dependency: transitive
     description:
@@ -632,6 +639,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
+  list_treeview:
+    dependency: "direct main"
+    description:
+      name: list_treeview
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.1"
   logging:
     dependency: transitive
     description:
@@ -897,7 +911,7 @@ packages:
       name: rxdart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.27.6"
+    version: "0.27.7"
   shared_preferences:
     dependency: transitive
     description:
@@ -1092,6 +1106,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.1"
+  tutorial_coach_mark:
+    dependency: "direct main"
+    description:
+      name: tutorial_coach_mark
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.4"
   typed_data:
     dependency: transitive
     description:
@@ -1126,7 +1147,7 @@ packages:
       name: video_player
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.4.7"
+    version: "2.4.8"
   video_player_android:
     dependency: transitive
     description:

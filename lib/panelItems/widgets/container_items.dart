@@ -11,8 +11,9 @@ class ContainerItems extends StatelessWidget {
   Widget widget;
   String title;
   String information;
+  GlobalKey? informationKey;
 
-  ContainerItems({Key? key,required this.widget,required this.title,required this.information}) : super(key: key);
+  ContainerItems({Key? key,required this.widget,required this.title,required this.information,this.informationKey}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -63,6 +64,7 @@ class ContainerItems extends StatelessWidget {
                   Expanded(
                     flex:1,
                     child: EsInformationButton(
+                      key: informationKey,
                       dialogeText: information,
 
 

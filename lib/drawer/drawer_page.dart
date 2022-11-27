@@ -9,28 +9,36 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../center_sceen/center_screen.dart';
 import '../images/responsive_layout.dart';
 import '../panelItems/panel_accardion_sample.dart';
+import '../panelItems/panel_advanced_form_sample.dart';
 import '../panelItems/panel_alert_sample.dart';
 import '../panelItems/panel_avatar_sample.dart';
 import '../panelItems/panel_bread_crumb_sample.dart';
 import '../panelItems/panel_button_sample.dart';
 import '../panelItems/panel_color_sample.dart';
 import '../panelItems/panel_cropable_image_sample.dart';
+import '../panelItems/panel_custom_form_sample.dart';
 import '../panelItems/panel_dropdown_sample.dart';
 import '../panelItems/panel_group_button_sample.dart';
 import '../panelItems/panel_group_list_sample.dart';
+import '../panelItems/panel_image_card_sample.dart';
 import '../panelItems/panel_light_box_sample.dart';
 import '../panelItems/panel_label_sample.dart';
 import '../panelItems/panel_modal_sample.dart';
 import '../panelItems/panel_page_indicator_sample.dart';
 import '../panelItems/panel_primary_card_sample.dart';
+import '../panelItems/panel_primary_form_sample.dart';
 import '../panelItems/panel_progress_bar_sample.dart';
 import '../panelItems/panel_responsive_table_sample.dart';
+import '../panelItems/panel_scrollable_card_sample.dart';
 import '../panelItems/panel_simple_table_sample.dart';
 import '../panelItems/panel_slider_sample.dart';
 import '../panelItems/panel_sweet_alert_sample.dart';
 import '../panelItems/panel_tab_bar_navigation_sample.dart';
 import '../panelItems/panel_text_sample.dart';
+import '../panelItems/panel_toast_sample.dart';
 import '../panelItems/panel_tooltip_sample.dart';
+import '../panelItems/panel_tree_list_sample.dart';
+import '../panelItems/panel_tutorial_sample.dart';
 import '../panelItems/panel_waiting_indicator_sample.dart';
 import '../panelItems/panel_zoomable_image_sample.dart';
 
@@ -149,7 +157,7 @@ class _DrawerPageState extends State<DrawerPage> {
             title: AppLocalizations.of(context)!.waitingindicator,
             icon: Icons.circle,
             page: PanelWaitingIndicatorSample(),
-            pageRout: '/progress'),
+            pageRout: '/indiacator'),
         buttonsInfo(
             title: AppLocalizations.of(context)!.tabbarnavigator,
             icon: Icons.circle,
@@ -175,6 +183,46 @@ class _DrawerPageState extends State<DrawerPage> {
             icon: Icons.circle,
             page: PanelModalSample(),
             pageRout: '/modal'),
+
+        buttonsInfo(
+            title:"Primary card",
+            icon: Icons.circle,
+            page: PanelPrimaryCardSample(),
+            pageRout: '/primarycard'),
+        buttonsInfo(
+            title:"Scrollable card",
+            icon: Icons.circle,
+            page: PanelScrollableCardSample(),
+            pageRout: '/scrollableard'),
+        buttonsInfo(
+            title:"Image card",
+            icon: Icons.circle,
+            page: PanelImageCardSample(),
+            pageRout: '/imagecard'),
+
+       /* buttonsInfo(
+            title: "cropable image",
+            icon: Icons.circle,
+            page: PanelCropableImageSample(),
+            pageRout: '/cropableimage'),*/
+      ],
+      [
+        "Special components",
+        EsSvgIcon(
+          "assets/svgs/GraduationCap.svg",
+          size: StructureBuilder.dims!.h3IconSize,
+          color: StructureBuilder.styles!.primaryLightColor,
+        ),
+        buttonsInfo(
+            title:"toast",
+            icon: Icons.circle,
+            page: PanelToastSample(),
+            pageRout: '/toast'),
+        buttonsInfo(
+            title:"tutorial",
+            icon: Icons.circle,
+            page: PanelTutorialSample(),
+            pageRout: '/toast'),
         buttonsInfo(
             title:AppLocalizations.of(context)!.tooltip,
             icon: Icons.circle,
@@ -186,300 +234,40 @@ class _DrawerPageState extends State<DrawerPage> {
             page: PanelSweetAlertSample(),
             pageRout: '/sweetalert'),
         buttonsInfo(
-            title:"Primary card",
+            title:"Tree list",
             icon: Icons.circle,
-            page: PanelPrimaryCardSample(),
-            pageRout: '/primarycard'),
-       /* buttonsInfo(
-            title: "cropable image",
-            icon: Icons.circle,
-            page: PanelCropableImageSample(),
-            pageRout: '/cropableimage'),*/
+            page: PanelTreeListSample(),
+            pageRout: '/treelist'),
+
+
       ],
       [
-        AppLocalizations.of(context)!.components,
+        "Forms",
         EsSvgIcon(
           "assets/svgs/GraduationCap.svg",
           size: StructureBuilder.dims!.h3IconSize,
           color: StructureBuilder.styles!.primaryLightColor,
         ),
         buttonsInfo(
-            title: AppLocalizations.of(context)!.accordion,
+            title:"Primary form",
             icon: Icons.circle,
-            page: PanelAccardionSample(),
-            pageRout: '/accardionSample'),
+            page: PanelPrimaryFormSample(),
+            pageRout: '/form'),
         buttonsInfo(
-            title: AppLocalizations.of(context)!.alert,
+            title:"Custom form",
             icon: Icons.circle,
-            page: PanelAlertSample(),
-            pageRout: '/alertSample'),
+            page: PanelCustomFormSample(),
+            pageRout: '/form'),
         buttonsInfo(
-            title: AppLocalizations.of(context)!.accordion,
+            title:"Advanced form",
             icon: Icons.circle,
-            page: PanelAccardionSample(),
-            pageRout: '/accardionSample'),
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.alert,
-            icon: Icons.circle,
-            page: PanelAlertSample(),
-            pageRout: '/alertSample'),
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.accordion,
-            icon: Icons.circle,
-            page: PanelAccardionSample(),
-            pageRout: '/accardionSample'),
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.alert,
-            icon: Icons.circle,
-            page: PanelAlertSample(),
-            pageRout: '/alertSample'),
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.accordion,
-            icon: Icons.circle,
-            page: PanelAccardionSample(),
-            pageRout: '/accardionSample'),
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.alert,
-            icon: Icons.circle,
-            page: PanelAlertSample(),
-            pageRout: '/alertSample'),
+            page: PanelAdvancedFormSample(),
+            pageRout: '/form'),
+
+
 
       ],
-      // [
-      //   AppLocalizations.of(context)!.components,
-      //   EsSvgIcon("assets/svgs/GraduationCap.svg",
-      //     size: StructureBuilder.dims!.h3IconSize,
-      //     color: StructureBuilder.styles!.primaryLightColor,),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.accordion,
-      //       icon: Icons.circle,
-      //       page: PanelAccardionSample(),
-      //       pageRout: '/accardionSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.alert,
-      //       icon: Icons.circle,
-      //       page: PanelAlertSample(),
-      //       pageRout: '/alertSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.accordion,
-      //       icon: Icons.circle,
-      //       page: PanelAccardionSample(),
-      //       pageRout: '/accardionSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.alert,
-      //       icon: Icons.circle,
-      //       page: PanelAlertSample(),
-      //       pageRout: '/alertSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.accordion,
-      //       icon: Icons.circle,
-      //       page: PanelAccardionSample(),
-      //       pageRout: '/accardionSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.alert,
-      //       icon: Icons.circle,
-      //       page: PanelAlertSample(),
-      //       pageRout: '/alertSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.accordion,
-      //       icon: Icons.circle,
-      //       page: PanelAccardionSample(),
-      //       pageRout: '/accardionSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.alert,
-      //       icon: Icons.circle,
-      //       page: PanelAlertSample(),
-      //       pageRout: '/alertSample'),
-      // ],
-      // [
-      //   AppLocalizations.of(context)!.components,
-      //   EsSvgIcon("assets/svgs/GraduationCap.svg",
-      //     size: StructureBuilder.dims!.h3IconSize,
-      //     color: StructureBuilder.styles!.primaryLightColor,),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.accordion,
-      //       icon: Icons.circle,
-      //       page: PanelAccardionSample(),
-      //       pageRout: '/accardionSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.alert,
-      //       icon: Icons.circle,
-      //       page: PanelAlertSample(),
-      //       pageRout: '/alertSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.accordion,
-      //       icon: Icons.circle,
-      //       page: PanelAccardionSample(),
-      //       pageRout: '/accardionSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.alert,
-      //       icon: Icons.circle,
-      //       page: PanelAlertSample(),
-      //       pageRout: '/alertSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.accordion,
-      //       icon: Icons.circle,
-      //       page: PanelAccardionSample(),
-      //       pageRout: '/accardionSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.alert,
-      //       icon: Icons.circle,
-      //       page: PanelAlertSample(),
-      //       pageRout: '/alertSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.accordion,
-      //       icon: Icons.circle,
-      //       page: PanelAccardionSample(),
-      //       pageRout: '/accardionSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.alert,
-      //       icon: Icons.circle,
-      //       page: PanelAlertSample(),
-      //       pageRout: '/alertSample'),
-      // ],
-      // [
-      //   AppLocalizations.of(context)!.components,
-      //   EsSvgIcon("assets/svgs/GraduationCap.svg",
-      //     size: StructureBuilder.dims!.h3IconSize,
-      //     color: StructureBuilder.styles!.primaryLightColor,),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.accordion,
-      //       icon: Icons.circle,
-      //       page: PanelAccardionSample(),
-      //       pageRout: '/accardionSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.alert,
-      //       icon: Icons.circle,
-      //       page: PanelAlertSample(),
-      //       pageRout: '/alertSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.accordion,
-      //       icon: Icons.circle,
-      //       page: PanelAccardionSample(),
-      //       pageRout: '/accardionSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.alert,
-      //       icon: Icons.circle,
-      //       page: PanelAlertSample(),
-      //       pageRout: '/alertSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.accordion,
-      //       icon: Icons.circle,
-      //       page: PanelAccardionSample(),
-      //       pageRout: '/accardionSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.alert,
-      //       icon: Icons.circle,
-      //       page: PanelAlertSample(),
-      //       pageRout: '/alertSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.accordion,
-      //       icon: Icons.circle,
-      //       page: PanelAccardionSample(),
-      //       pageRout: '/accardionSample'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.alert,
-      //       icon: Icons.circle,
-      //       page: PanelAlertSample(),
-      //       pageRout: '/alertSample'),
-      // ],
-      // [
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.charts,
-      //       icon: Icons.circle,
-      //       page: PanelChart(),
-      //       pageRout: '/chart'),
-      // ],
-      // [
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.text,
-      //       icon: Icons.circle,
-      //       page: PanelTextSample(),
-      //       pageRout: '/textSample'),
-      // ],
-      // [
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.accordion,
-      //       icon: Icons.circle,
-      //       page: PanelAccardionSample(),
-      //       pageRout: '/accardionSample'),
-      // ],
-      // [
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.alert,
-      //       icon: Icons.circle,
-      //       page: PanelAlertSample(),
-      //       pageRout: '/alertSample'),
-      // ],
-      // [
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.dialogBox,
-      //       icon: Icons.circle,
-      //       page: PanelDialogBox(),
-      //       pageRout: '/dialog'),
-      // ],
-      // [
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.button,
-      //       icon: Icons.circle,
-      //       page: PanelButtonSample(),
-      //       pageRout: '/buttonSample'),
-      // ],
-      // [
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.form,
-      //       icon: Icons.circle,
-      //       page: PanelForm(),
-      //       pageRout: '/form')
-      // ],
-      // [
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.images,
-      //       icon: Icons.circle,
-      //       page: PanelImage(),
-      //       pageRout: '/image')
-      // ],
-      // [
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.progressBar,
-      //       icon: Icons.circle,
-      //       page: PanelProgressBar(),
-      //       pageRout: '/progressbar')
-      // ],
-      // [
-      //   AppLocalizations.of(context)!.tables,
-      //   Icon(Icons.add_a_photo_sharp,color:
-      //     StructureBuilder.styles!.primaryLightColor,),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.simpleTable,
-      //       icon: Icons.circle,
-      //       page: PanelSimpleTable(),
-      //       pageRout: '/simpletable'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.editableTable,
-      //       icon: Icons.circle,
-      //       page: PanelEditableTable(),
-      //       pageRout: '/editable'),
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.responsiveTable,
-      //       icon: Icons.circle,
-      //       page: PanelResponsiveTable(),
-      //       pageRout: '/responsiveTable')
-      // ],
-      // [
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.slider,
-      //       icon: Icons.circle,
-      //       page: PanelSlider(),
-      //       pageRout: '/slider')
-      // ],
-      // [
-      //   buttonsInfo(
-      //       title: AppLocalizations.of(context)!.notifications,
-      //       icon: Icons.circle,
-      //       page: PanelNotification(),
-      //       pageRout: '/notification')
-      // ],
+
     ];
     List _acardionList = [];
     for (int i = 0; i < _buttonNames.length; i++) {

@@ -49,8 +49,8 @@ class _WidgetTreePanelState extends State<WidgetTreePanel> {
           computer: Row(
             children: [
 
-              Expanded(flex: 1, child: DrawerPage()),
-              Expanded(flex: 5, child: CenterScreen()),
+              Expanded(flex: 3, child: DrawerPage()),
+              Expanded(flex: 12, child: CenterScreen()),
 
             ],
           ),

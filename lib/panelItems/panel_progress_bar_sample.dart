@@ -232,7 +232,8 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                   ),
                 ],
               )),
-          title: AppLocalizations.of(context)!.simplelinearprogressbarindifferentsizes,
+          title: AppLocalizations.of(context)!
+              .simplelinearprogressbarindifferentsizes,
           information:
               "It is a simple linear progress bar in different sizes that the percent_indicator package is added in pubspec.yaml 's dependencies \n and is used as: \n "
               """LinearPercentIndicator(
@@ -319,7 +320,8 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                   ),
                 ],
               )),
-          title: AppLocalizations.of(context)!.simplecircularprogressbarindifferentsizes,
+          title: AppLocalizations.of(context)!
+              .simplecircularprogressbarindifferentsizes,
           information:
               "It is a simple linear progress bar in different sizes that the percent_indicator package is added in pubspec.yaml 's dependencies \n and is used as: \n "
               """CircularPercentIndicator(
@@ -426,7 +428,8 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                   ),
                 ],
               )),
-          title: AppLocalizations.of(context)!.simplelinearprogressbarindifferentcolors,
+          title:
+              AppLocalizations.of(context)!.simpleprogressbarindifferentcolors,
           information:
               "It is a simple linear progress bar in different colors that the percent_indicator package is added in pubspec.yaml 's dependencies \n and is used as: \n "
               """LinearPercentIndicator(

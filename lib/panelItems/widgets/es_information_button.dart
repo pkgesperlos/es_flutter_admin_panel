@@ -18,6 +18,7 @@ class EsInformationButton extends StatelessWidget {
   TextAlign? align;
 
   EsInformationButton({
+    Key? key,
     this.text="i",
     this.icon,
     this.dialogeText="",
@@ -28,7 +29,7 @@ class EsInformationButton extends StatelessWidget {
     this.size ,
     this.align ,
 
-  });
+  }): super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -5,7 +5,7 @@ import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'menu_dropdown_widget.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class EsDropdownButton extends StatefulWidget {
   List<Widget>? menuWidgetList;
@@ -56,10 +56,12 @@ class _EsDropdownButtonState extends State<EsDropdownButton> {
                 buttonWidget: widget.menuWidgetList![index],
                 onTap: () {
                   Navigator.pop(dropdownKey.currentContext!);
-                  widget.menufunctionList![index];
+
                   setState(() {
                     selectedValue = index.toString();
+                    widget.menufunctionList![index];
                   });
+
                 },
               ),
               value: index.toString(),
@@ -94,7 +96,7 @@ class _EsDropdownButtonState extends State<EsDropdownButton> {
                   ),
                   EsHSpacer(),
                   EsOrdinaryText(
-                    selectedValue,
+                    AppLocalizations.of(context)!.dropdownbutton,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
                 ],

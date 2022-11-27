@@ -3,14 +3,7 @@
   "@helloWorld": {
     "description": "The conventional newborn programmer greeting"
   },
-  "username": "Username",
-  "usernamehint": "Enter your username:",
-  "passwordhint": "Enter your password:",
-  "password": "Password",
-  "login": "Login",
-  "search": "Search",
-  "components": "Components",
-  "item": "Item",
+
   "lorm": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
   "primary": "Primary",
   "secondary": "Secondary",
@@ -153,7 +146,7 @@
   "animatedprogressbarfromzero": "Animated progress bar from zero",
   "simplelinearprogressbarindifferentsizes":  "Simple linear progress bar in different sizes",
   "simplecircularprogressbarindifferentsizes": "Simple circular progress bar in different sizes",
-  "simplelinearprogressbarindifferentcolors": "Simple linear progress bar in different colors",
+  "simpleprogressbarindifferentcolors": "Simple progress bar in different colors",
   "gradiantprogressbar": "Gradiant  progress bar",
   "progressbartitle": "Different kinds of progress bars  are available in panel by flutter code.",
 
@@ -228,6 +221,62 @@
   "footer": "Footer",
   "header": "header",
   "quotation": "Quotation",
+  "primarycard": "Primary card",
+  "primarycardtitle": "Different kinds of primary cards  are available in panel by flutter code.",
+
+  "scrollablecard": "Scrollable card",
+  "scrollablecardtitle": "Different kinds of scrollable cards  are available in panel by flutter code.",
+
+  "imagecard": "Image card",
+  "imagecardtitle": "Different kinds of image cards  are available in panel by flutter code.",
+
+  "toastmessage": "Toast message",
+  "toasttitle": "Different kinds of toast message  are available in panel by flutter code.",
+
+
+  "tutorial": "Tutorial",
+  "start": "Start",
+  "tutorialintro": "It is tutorial click bottom below and start it.",
+  "tutorialtitle": "Tutorial by flutter code is available in panel for introduction.",
+
+  "defaulttreelistview": "Default tree list view",
+  "treelistviewwithdesiredicon": "Tree list view with desired icon",
+  "treelistviewtitle": "Tree listview by flutter code is available in panel.",
+
+"overview": "Overview",
+"horizontalform": "Horizontal form",
+"formcontrols": "Form controls",
+"textfieldindifferentwidthandheight": "Text field in different width and height",
+"dropdownbuttonsindifferentwidthandheight": "Drop down buttons in different width and height",
+"onlyreadablefield": "Only readable field",
+"sliderinput": "Slider input",
+"dropdownsample": "Drop down sample",
+"textareasample": "Text area sample",
+"multiselectsample": "Multi select sample",
+"checkboxsample": "Checkbox sample",
+"radiobuttonsgroup": "Radio buttons group",
+  "primaryformtitle": "Different types of primary Forms are available in panel by flutter code.",
+  "customformtitle": "Different types of custom Forms are available in panel by flutter code.",
+
+  "switchbutton": "Switch Button",
+  "checkbox": "Check box",
+  "disabled": "Disabled",
+
+  "username": "Username",
+  "usernamehint": "Enter your username:",
+  "passwordhint": "Enter your password:",
+  "login": "Login",
+  "search": "Search",
+  "components": "Components",
+  "item": "Item number",
+
+  "emailadress": "Email address",
+  "password": "Password",
+  "register": "Register",
+  "select": "Select",
+  "pleaseenteremail": "Please enter email",
+  "pleaseenterpassword": "Please enter password",
+  "pleaseselectme": "Please select me",
 
   "colors": "Colors",
   "color": "Color",

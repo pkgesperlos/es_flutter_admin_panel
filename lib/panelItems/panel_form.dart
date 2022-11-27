@@ -36,7 +36,7 @@ class PanelForm extends StatelessWidget {
             hint: AppLocalizations.of(context)!.textFieldHint,
           ),
           title:AppLocalizations.of(context)!.textField,
-          information:"It is a text field located in: \n es_flutter_component>lib>es_form>es_text_field.dart \n and is used as: \n "
+          information:"It is a text field located in: \n es_flutter_component>lib>es_form>es_text_field_pre.dart \n and is used as: \n "
               """ EsTextField(
             type: AppLocalizations.of(context)!.textFieldType,
             hint: AppLocalizations.of(context)!.textFieldHint,)"""
@@ -89,7 +89,7 @@ class PanelForm extends StatelessWidget {
       ),
       ContainerItems(widget:EsOrdinarySlider(),
           title:AppLocalizations.of(context)!.ordinarySlider,
-          information:"It is an ordinary slider located in: \n es_flutter_component>lib>es_form>es_ordinary_slider.dart \n and is used as: \n "
+          information:"It is an ordinary slider located in: \n es_flutter_component>lib>es_form>es_slider.dart \n and is used as: \n "
               """EsOrdinarySlider()"""
       ),
       ContainerItems(widget:EsRengedSlider(), title:AppLocalizations.of(context)!.rangedSlider,
@@ -126,7 +126,7 @@ class PanelForm extends StatelessWidget {
             ),
           ),
         title:AppLocalizations.of(context)!.ordinaryCheckBox,
-        information:"It is a ordinary check box located in: \n es_flutter_component>lib>es_form>es_checkbox.dart \n and is used as: \n "
+        information:"It is a ordinary check box located in: \n es_flutter_component>lib>es_form>es_checkbox_form.dart \n and is used as: \n "
               """EsCheckBox(
               title: EsOrdinaryText(
                 data: AppLocalizations.of(context)!.checkBoxTitle,

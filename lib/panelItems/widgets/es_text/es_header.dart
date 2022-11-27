@@ -41,7 +41,7 @@ class EsHeader extends StatelessWidget {
         backgroundColor: backgroundColor??Colors.transparent,
         // height: (size ?? Dims.h1FontSize(context))*0.04,
         color: color??StructureBuilder.styles!.textColor().primary,
-        fontSize: size ?? StructureBuilder.dims!.h4FontSize,
+        fontSize: size ?? StructureBuilder.dims!.h1FontSize,
         fontFamily:fontFamily??StructureBuilder.configs!.fontFamily,
         fontWeight:isBold?FontWeight.bold:FontWeight.normal,
         // overflow: TextOverflow.ellipsis,

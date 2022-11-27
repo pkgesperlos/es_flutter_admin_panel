@@ -4,6 +4,8 @@ import 'package:es_flutter_admin_panel/panelItems/widgets/es_drop_down/es_drop_d
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_header.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
+import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_component/es_text/es_title.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
@@ -16,6 +18,15 @@ class PanelDropDownSample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+   List<Widget> _menuWidgetList=List.generate(
+        num,
+            (index) => EsOrdinaryText(
+          "item$index",
+          color: StructureBuilder.styles!.primaryLightColor,
+        ));
+
     List list = [
       ContainerItems(
           widget: Container(
@@ -34,12 +45,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
               ),
               EsDropdownButton(
@@ -56,12 +62,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
               ),
               EsDropdownButton(
@@ -96,12 +97,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
               ),
               EsDropdownButton(
@@ -117,12 +113,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
               ),
             ],
@@ -159,12 +150,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
                 menuOffset: Offset(StructureBuilder.dims!.h0Padding, 0),
               ),
@@ -200,12 +186,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
                 menuOffset: Offset(StructureBuilder.dims!.h0Padding * -4,
                     StructureBuilder.dims!.h0Padding),
@@ -254,12 +235,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
               ),
               EsDropdownButton(
@@ -276,12 +252,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
               ),
               EsDropdownButton(
@@ -296,12 +267,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
               ),
               EsDropdownButton(
@@ -316,12 +282,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
               ),
               EsDropdownButton(
@@ -337,12 +298,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
               ),
             ],
@@ -386,12 +342,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
               ),
               EsDropdownButton(
@@ -409,12 +360,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
               ),
               EsDropdownButton(
@@ -433,12 +379,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
               ),
               EsDropdownButton(
@@ -460,12 +401,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
               ),
             ],
@@ -515,12 +451,7 @@ class PanelDropDownSample extends StatelessWidget {
                       size: StructureBuilder.dims!.h0FontSize,
                       clickable: false,
                     ),
-                    menuWidgetList: List.generate(
-                        num,
-                            (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                    menuWidgetList: _menuWidgetList,
                     menufunctionList: List.generate(num, (index) => () {}),
                   ),
                   EsDropdownButton(
@@ -535,12 +466,7 @@ class PanelDropDownSample extends StatelessWidget {
                       size: StructureBuilder.dims!.h1FontSize,
                       clickable: false,
                     ),
-                    menuWidgetList: List.generate(
-                        num,
-                            (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                    menuWidgetList: _menuWidgetList,
                     menufunctionList: List.generate(num, (index) => () {}),
                   ),
                   EsDropdownButton(
@@ -555,12 +481,7 @@ class PanelDropDownSample extends StatelessWidget {
                       size: StructureBuilder.dims!.h2FontSize,
                       clickable: false,
                     ),
-                    menuWidgetList: List.generate(
-                        num,
-                            (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                    menuWidgetList: _menuWidgetList,
                     menufunctionList: List.generate(num, (index) => () {}),
                   ),
                   EsDropdownButton(
@@ -575,12 +496,7 @@ class PanelDropDownSample extends StatelessWidget {
                       size: StructureBuilder.dims!.h4FontSize,
                       clickable: false,
                     ),
-                    menuWidgetList: List.generate(
-                        num,
-                            (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                    menuWidgetList: _menuWidgetList,
                     menufunctionList: List.generate(num, (index) => () {}),
                   ),
 
@@ -626,12 +542,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
                 dropdownWidth: StructureBuilder.dims!.h0Padding * 3,
               ),
@@ -646,12 +557,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
                 dropdownWidth: StructureBuilder.dims!.h0Padding * 5,
               ),
@@ -666,12 +572,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
                 dropdownWidth: StructureBuilder.dims!.h0Padding * 10,
               ),
@@ -686,12 +587,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
                 dropdownWidth: StructureBuilder.dims!.h0Padding * 10,
                 dropdownItemsHeight: StructureBuilder.dims!.h0Padding * 1,
@@ -707,12 +603,7 @@ class PanelDropDownSample extends StatelessWidget {
                   ),
                   clickable: false,
                 ),
-                menuWidgetList: List.generate(
-                    num,
-                    (index) => EsHeader(
-                          "item$index",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
+                menuWidgetList: _menuWidgetList,
                 menufunctionList: List.generate(num, (index) => () {}),
                 dropdownWidth: StructureBuilder.dims!.h0Padding * 10,
                 dropdownItemsHeight: StructureBuilder.dims!.h0Padding * 5,
