@@ -58,7 +58,7 @@ class EsCustomToastContainer extends StatelessWidget {
               children: [
                 icon ??
                     EsSvgIcon(
-                      "assets/svgs/CheckCircle.svg",
+                      "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color: contentColor ??
                           StructureBuilder.styles!.successColor().successDark,

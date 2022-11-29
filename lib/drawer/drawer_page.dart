@@ -8,6 +8,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../center_sceen/center_screen.dart';
 import '../images/responsive_layout.dart';
+import '../panelItems/panel_Icons_sample.dart';
 import '../panelItems/panel_accardion_sample.dart';
 import '../panelItems/panel_advanced_form_sample.dart';
 import '../panelItems/panel_alert_sample.dart';
@@ -32,13 +33,16 @@ import '../panelItems/panel_responsive_table_sample.dart';
 import '../panelItems/panel_scrollable_card_sample.dart';
 import '../panelItems/panel_simple_table_sample.dart';
 import '../panelItems/panel_slider_sample.dart';
+import '../panelItems/panel_stepper_form_sample.dart';
 import '../panelItems/panel_sweet_alert_sample.dart';
 import '../panelItems/panel_tab_bar_navigation_sample.dart';
+import '../panelItems/panel_text_editor_sample.dart';
 import '../panelItems/panel_text_sample.dart';
 import '../panelItems/panel_toast_sample.dart';
 import '../panelItems/panel_tooltip_sample.dart';
 import '../panelItems/panel_tree_list_sample.dart';
 import '../panelItems/panel_tutorial_sample.dart';
+import '../panelItems/panel_validate_form_sample.dart';
 import '../panelItems/panel_waiting_indicator_sample.dart';
 import '../panelItems/panel_zoomable_image_sample.dart';
 
@@ -73,8 +77,7 @@ class _DrawerPageState extends State<DrawerPage> {
     List<List> _buttonNames = [
       [
         AppLocalizations.of(context)!.components,
-        EsSvgIcon(
-          "assets/svgs/GraduationCap.svg",
+        EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
           size: StructureBuilder.dims!.h3IconSize,
           color: StructureBuilder.styles!.primaryLightColor,
         ),
@@ -208,8 +211,7 @@ class _DrawerPageState extends State<DrawerPage> {
       ],
       [
         "Special components",
-        EsSvgIcon(
-          "assets/svgs/GraduationCap.svg",
+        EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
           size: StructureBuilder.dims!.h3IconSize,
           color: StructureBuilder.styles!.primaryLightColor,
         ),
@@ -243,8 +245,7 @@ class _DrawerPageState extends State<DrawerPage> {
       ],
       [
         "Forms",
-        EsSvgIcon(
-          "assets/svgs/GraduationCap.svg",
+        EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
           size: StructureBuilder.dims!.h3IconSize,
           color: StructureBuilder.styles!.primaryLightColor,
         ),
@@ -262,6 +263,26 @@ class _DrawerPageState extends State<DrawerPage> {
             title:"Advanced form",
             icon: Icons.circle,
             page: PanelAdvancedFormSample(),
+            pageRout: '/form'),
+        buttonsInfo(
+            title:"Validate form",
+            icon: Icons.circle,
+            page: PanelValidateFormSample(),
+            pageRout: '/form'),
+        buttonsInfo(
+            title:"Stepper form",
+            icon: Icons.circle,
+            page: PanelStepperFormSample(),
+            pageRout: '/form'),
+        buttonsInfo(
+            title:"Text editor",
+            icon: Icons.circle,
+            page: PanelTextEditorSample(),
+            pageRout: '/form'),
+        buttonsInfo(
+            title:"Icons",
+            icon: Icons.circle,
+            page: PanelIconsSample(),
             pageRout: '/form'),
 
 

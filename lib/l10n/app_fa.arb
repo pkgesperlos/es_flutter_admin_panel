@@ -266,6 +266,23 @@
   "checkbox": "چک باکس",
   "disabled": "غیر فعال",
 
+  "colorpicker": "انتخاب رنگ",
+  "ringcolorpicker": "انتخاب رنگ حلقوی",
+  "labelinput": "ورودی لیبل",
+  "maskedinput": "ورودی ماسک شده",
+  "dateinput": "ورودی تاریخ",
+  "timeinput": "ورودی زمان",
+  "phonenumberinput": "ورودی شماره تلفن",
+  "shabanumberinput": "ورودی شماره شبا",
+  "currencyinput": "ورودی پول",
+  "ipaddressinput": "ورودی آدرس IP",
+  "sliderwithjustintegerselect": "اسلایدر با امکان انتخاب تنها عدد صحیح",
+  "sliderwithdoubleselect": "اسلایدر با امکان انتخاب عدد اعشاری",
+  "sliderwithcurrencylabel": "اسلایدر با برچسب واحد پول",
+  "sliderwithstringchoice": "اسلایدر با امکان انتخاب رشته",
+  "advancedformtitle": " انواع مدل های فرم پیشرفته با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
+
   "username": "نام کاربری",
   "password": "رمزعبور",
   "usernamehint": "نام کاربری خود را وارد نمایید:",
@@ -275,6 +292,23 @@
   "components": "رابط کاربری",
   "item": "آیتم شماره",
   "lorm": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.",
+
+  "theinputlengthistooshort": "ورودی با کاراکتر های بیشتری وارد کنید.",
+  "youshouldacceptthetermsandconditionsbeforeregister": "قبل از ثبت نام بایستی با قوانین و مقررات موافقت نمایید.",
+  "pleaseselectoneitem": "لطفا یک مورد را انتخاب نمایید.",
+  "pleaseselectavalue": "لطفا یک مقدار را انتخاب نمایید.",
+  "pleaseselectatleastoneitem": "لطفا حداقل یک مورد را انتخاب نمایید.",
+
+  "validationforms": "اعتبارسنجی فرم ها",
+  "validationformstitle": " انواع مدل های اعتبارسنجی فرم ها با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
+  "stepperwithoutvalidationfield": "فرم مرحله ای بدون فیلد اعتبارسنجی",
+  "stepperformwithvalidationfields": "فرم مرحله ای با فیلد های اعتبار سنجی",
+  "verticalstepperform": "فرم مرحله ای عمودی",
+  "stepperformtitle": " انواع مدل های فرم مرحله ای ها با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
+  "quilltexteditor": "ویرایشگر متن Quill",
+  "quilltexteditortitle": " ویرایشگر متن Quill با استفاده از کدهای فلاتر در پنل در دسترس است.",
 
   "emailadress": "آدرس ایمیل",
   "register": "ثبت",

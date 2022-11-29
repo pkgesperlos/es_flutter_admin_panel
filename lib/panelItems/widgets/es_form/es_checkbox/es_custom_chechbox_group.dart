@@ -1,5 +1,6 @@
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 
 import 'es_custom_check_box.dart';
@@ -12,6 +13,7 @@ class EsCustomCheckboxGroup extends StatefulWidget {
   void Function(List<TextEditingController>?)? onChanged;
   TextEditingController? controller;
   List<TextEditingController> controllerList;
+  bool? isScrollable;
 
   EsCustomCheckboxGroup(
       {Key? key,
@@ -21,6 +23,7 @@ class EsCustomCheckboxGroup extends StatefulWidget {
       this.onChanged,
       required this.controllerList,
       this.controller,
+      this.isScrollable,
       required this.valueList})
       : super(key: key);
 
@@ -41,27 +44,44 @@ class _EsRadioButton extends State<EsCustomCheckboxGroup> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Wrap(
-            direction: widget.axis ?? Axis.horizontal,
-            children: List.generate(
-                widget.titleList.length,
-                (index) => IntrinsicWidth(
-                      child: Row(
-                        children: [
-                          EsOrdinaryText(
-                            widget.titleList[index],
-                          ),
-                          checkboxWidget(index, _valueList[index])
-                        ],
-                      ),
-                    ))),
-        EsVSpacer(),
-        widget.subTitleWidget ?? Container()
-      ],
+    return IntrinsicWidth(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          widget.isScrollable ?? true
+              ? Container(
+            height: 100,
+            padding: EdgeInsets.all(StructureBuilder.dims!.h1BorderRadius),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(
+                    Radius.circular(StructureBuilder.dims!.h1BorderRadius)),
+                border: Border.all(
+                    color: StructureBuilder.styles!.primaryColor)),
+            child: SingleChildScrollView(
+              child: Column(children: content()),
+            ),
+          )
+              : Wrap(
+              direction: widget.axis ?? Axis.horizontal, children: content()),
+          widget.subTitleWidget ?? Container()
+        ],
+      ),
     );
+  }
+
+  List<Widget> content(){
+    return List.generate(
+        widget.titleList.length,
+            (index) => IntrinsicWidth(
+          child: Row(
+            children: [
+              EsOrdinaryText(
+                widget.titleList[index],
+              ),
+              checkboxWidget(index, _valueList[index])
+            ],
+          ),
+        ));
   }
 
   Widget checkboxWidget(int index, bool value) {

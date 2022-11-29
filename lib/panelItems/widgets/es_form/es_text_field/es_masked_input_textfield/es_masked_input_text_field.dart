@@ -4,15 +4,18 @@ import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart' as intl;
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
+
 ///this class is a customized text field that use in whole of app
-class EsTextFieldForm extends StatefulWidget {
+class EsMaskedInputTextField extends StatefulWidget {
   String? hint = "";
-  String? label ;
+  String? label = "";
+  TextInputFormatter maskTextInputFormatter;
+
   Widget? suffixIcon;
   Widget? prefixIcon;
   TextInputType? textInput = TextInputType.text;
 
-  String? Function(String?)? validator;
   TextEditingController? controller = TextEditingController();
   EditTextController? customController = EditTextController();
   ValueChanged<String>? onChanged;
@@ -21,8 +24,6 @@ class EsTextFieldForm extends StatefulWidget {
   // String Function(String value)? checkRepeat;////////////////////
 
   FocusNode? focusNode;
-
-  FocusNode? nextFocusNode;
   bool? checkRegex ;
   bool? isObscure;
   bool? disabled;
@@ -30,52 +31,48 @@ class EsTextFieldForm extends StatefulWidget {
   TextAlign? textAlign;
   TextDirection? textDirection;
   int? maxLength;
-  int? maxLines = 1;
+  int? maxLines ;
   Size? textFieldSize;
   Color? fillColor;
   Color? borderColor;
   TextStyle? textStyle;
   TextStyle? labelStyle;
-  TextStyle? hintStyle;
 
   InputBorder? focusedBorder;
   InputBorder? focusedErrorBorder;
   InputBorder? disabledBorder;
   InputBorder? borderStyle;
 
-  EsTextFieldForm(
+  EsMaskedInputTextField(
       {Key? key,
-        this.hint,
-        this.label,
-        this.validator,
-        this.textInput,
-        this.suffixIcon,
-        this.prefixIcon,
-        this.onEditingComplete,
-         this.customController,
-        this.focusNode,
-        this.isObscure,
-        this.disabled,
-        this.nextFocusNode,
-        this.textAlign,
-        this.textDirection,
-        this.maxLength,
-        this.maxLines,
-        this.textFieldSize,
-        this.checkRegex,
-        this.fillColor,
-        this.borderColor,
-        this.textStyle,
-        this.labelStyle,
-        this.hintStyle,
-        this.controller,
-        this.onChanged,
-        this.disabledBorder,
-        this.borderStyle,
-        this.focusedBorder,
-        this.focusedErrorBorder})
-      // :assert(customController != null)
-  ;
+        required this.maskTextInputFormatter,
+      this.hint,
+      this.label,
+      this.textInput,
+      this.suffixIcon,
+      this.prefixIcon,
+      this.onEditingComplete,
+      required this.customController,
+      this.focusNode,
+      this.isObscure,
+      this.disabled,
+      this.textAlign,
+      this.textDirection,
+      this.maxLength,
+      this.maxLines,
+      this.textFieldSize,
+      this.checkRegex,
+      this.fillColor,
+      this.borderColor,
+      this.labelStyle,
+      this.textStyle,
+      this.controller,
+      this.onChanged,
+      this.disabledBorder,
+      this.borderStyle,
+      this.focusedBorder,
+      this.focusedErrorBorder})
+      : assert(customController != null);
 
   @override
   State<StatefulWidget> createState() {
@@ -84,7 +81,8 @@ class EsTextFieldForm extends StatefulWidget {
   }
 }
 
-class _EsSpecificTextField extends State<EsTextFieldForm> {
+class _EsSpecificTextField extends State<EsMaskedInputTextField> {
+
   Color borderColor = StructureBuilder.styles!.t7Color;
 
   @override
@@ -118,29 +116,25 @@ class _EsSpecificTextField extends State<EsTextFieldForm> {
       child: SizedBox(
         height:_size.height,
         width: _size.width,
-        child: TextFormField(
-
+        child: TextField(
           enabled: !((widget.disabled)??false),
-
           readOnly: widget.disabled??false,
-          validator: widget.validator,
+          inputFormatters: [widget.maskTextInputFormatter],
           maxLength: widget.maxLength,
           controller: widget.controller,
           onChanged: checkChange,
           keyboardType: widget.textInput,
-          maxLines: widget.maxLines,
-          textAlign: widget.textAlign ?? ( _rtl?TextAlign.right:TextAlign.left),
+          maxLines: widget.maxLines??1,
+
+          textAlign: widget.textAlign ?? TextAlign.right,
           style: widget.textStyle?? TextStyle(color: StructureBuilder.styles!.primaryColor,
               fontSize: StructureBuilder.dims!.h2FontSize),
           onEditingComplete: widget.onEditingComplete,
           focusNode: widget.focusNode,
           obscureText: widget.isObscure ?? false,
-           onFieldSubmitted: (v) {
-            if (widget.nextFocusNode != null)
-              FocusScope.of(context).requestFocus(widget.nextFocusNode);
-          },
           cursorColor: StructureBuilder.styles!.primaryColor,
           decoration: decoration(),
+
         ),
       ),
     );
@@ -151,7 +145,6 @@ class _EsSpecificTextField extends State<EsTextFieldForm> {
 
     if (_isObscure) {
       return InputDecoration(
-          prefixIcon: widget.prefixIcon,
           suffixIcon: widget.suffixIcon ??
               InkWell(
                 onTap: () {
@@ -164,6 +157,7 @@ class _EsSpecificTextField extends State<EsTextFieldForm> {
                     _isObscure ? Icons.visibility : Icons.visibility_off,
                     color: Colors.black38),
               ),
+          prefixIcon: widget.prefixIcon,
           filled: widget.fillColor == null ? false : true,
           fillColor: widget.fillColor ?? StructureBuilder.styles!.t6Color,
           enabledBorder: widget.borderStyle ??
@@ -176,14 +170,14 @@ class _EsSpecificTextField extends State<EsTextFieldForm> {
           focusedBorder: widget.focusedBorder ??
               OutlineInputBorder(
                   borderSide:
-                  BorderSide(color: StructureBuilder.styles!.primaryColor),
+                      BorderSide(color: StructureBuilder.styles!.primaryColor),
                   borderRadius: BorderRadius.all(
                       Radius.circular(StructureBuilder.dims!.h2BorderRadius))),
           focusedErrorBorder: widget.focusedErrorBorder ??
               OutlineInputBorder(
                   borderSide: BorderSide(
                       color:
-                      StructureBuilder.styles!.dangerColor().dangerRegular),
+                          StructureBuilder.styles!.dangerColor().dangerRegular),
                   borderRadius: BorderRadius.all(
                       Radius.circular(StructureBuilder.dims!.h2BorderRadius))),
           border: widget.borderStyle ??
@@ -195,17 +189,15 @@ class _EsSpecificTextField extends State<EsTextFieldForm> {
               OutlineInputBorder(borderSide: BorderSide(color: widget.borderColor ?? Styles.t7Color), borderRadius: BorderRadius.all(Radius.circular(StructureBuilder.dims!.h2BorderRadius))),
           contentPadding: EdgeInsets.all(StructureBuilder.dims!.h1Padding),
           alignLabelWithHint: false,
+
           labelText: widget.label,
           hintText: widget.hint,
-          labelStyle: widget.labelStyle
-              ?? TextStyle(fontSize: Dims.h2FontSize, color: StructureBuilder.styles!.primaryColor),
-          hintStyle: widget.hintStyle ?? TextStyle(fontSize: Dims.h2FontSize,
-          color: StructureBuilder.styles!.primaryColor)
-      );
+          labelStyle: widget.labelStyle ?? TextStyle(fontSize: Dims.h2FontSize,
+              color: StructureBuilder.styles!.primaryColor));
     } else {
       return InputDecoration(
 
-        suffixIcon: widget.suffixIcon ,
+        suffixIcon: widget.suffixIcon,
         prefixIcon: widget.prefixIcon,
         filled: widget.fillColor == null ? false : true,
         fillColor: widget.fillColor ?? StructureBuilder.styles!.t6Color,
@@ -213,20 +205,20 @@ class _EsSpecificTextField extends State<EsTextFieldForm> {
             OutlineInputBorder(
                 borderSide: BorderSide(
                     color:
-                    widget.borderColor ?? StructureBuilder.styles!.t4Color),
+                        widget.borderColor ?? StructureBuilder.styles!.t4Color),
                 borderRadius: BorderRadius.all(
                     Radius.circular(StructureBuilder.dims!.h2BorderRadius))),
         focusedBorder: widget.focusedBorder ??
             OutlineInputBorder(
                 borderSide:
-                BorderSide(color: StructureBuilder.styles!.primaryColor),
+                    BorderSide(color: StructureBuilder.styles!.primaryColor),
                 borderRadius: BorderRadius.all(
                     Radius.circular(StructureBuilder.dims!.h2BorderRadius))),
         focusedErrorBorder: widget.focusedErrorBorder ??
             OutlineInputBorder(
                 borderSide: BorderSide(
                     color:
-                    StructureBuilder.styles!.dangerColor().dangerRegular),
+                        StructureBuilder.styles!.dangerColor().dangerRegular),
                 borderRadius: BorderRadius.all(
                     Radius.circular(StructureBuilder.dims!.h2BorderRadius))),
         border: widget.borderStyle ??
@@ -237,19 +229,17 @@ class _EsSpecificTextField extends State<EsTextFieldForm> {
         disabledBorder: widget.disabledBorder ??
             OutlineInputBorder(
                 borderSide:
-                BorderSide(color: widget.borderColor ?? Styles.t7Color),
+                    BorderSide(color: widget.borderColor ?? Styles.t7Color),
                 borderRadius: BorderRadius.all(
                     Radius.circular(StructureBuilder.dims!.h2BorderRadius))),
         contentPadding: EdgeInsets.all(StructureBuilder.dims!.h1Padding),
         alignLabelWithHint: false,
-        labelText: widget.label,
         hintText: widget.hint,
+        labelText: widget.label,
         labelStyle: widget.labelStyle ??
             TextStyle(
                 fontSize: Dims.h2FontSize,
                 color: StructureBuilder.styles!.primaryColor),
-          hintStyle: widget.hintStyle ?? TextStyle(fontSize: Dims.h2FontSize,
-              color: StructureBuilder.styles!.primaryColor)
       );
     }
   }

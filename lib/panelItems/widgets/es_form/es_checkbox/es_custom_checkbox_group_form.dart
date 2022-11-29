@@ -7,25 +7,25 @@ import 'es_custom_chechbox_group.dart';
 
 class EsCustomCheckBoxGroupForm extends FormField<List<TextEditingController>> {
   EsCustomCheckBoxGroupForm(
-      {
-  required List<String> titleList,
-  Axis? axis,
-  required List<bool> valueList,
-   TextEditingController? controller,
-  required List<TextEditingController> controllerList,
-
-       FormFieldSetter<List<TextEditingController>>? onSaved,
+      {required List<String> titleList,
+      Axis? axis,
+        bool? isScrollable,
+      required List<bool> valueList,
+      TextEditingController? controller,
+      required List<TextEditingController> controllerList,
+      FormFieldSetter<List<TextEditingController>>? onSaved,
       required FormFieldValidator<List<TextEditingController>> validator,
-       ValueChanged<bool>? onSelect})
+      ValueChanged<bool>? onSelect})
       : super(
             onSaved: onSaved,
             validator: validator,
             // initialValue: initialValue,
             builder: (FormFieldState<List<TextEditingController>> state) {
               return EsCustomCheckboxGroup(
+                isScrollable: isScrollable,
                 titleList: titleList,
                 valueList: valueList,
-                axis:axis,
+                axis: axis,
                 // value: state.value??value,
                 onChanged: state.didChange,
                 subTitleWidget: state.hasError
@@ -37,8 +37,8 @@ class EsCustomCheckBoxGroupForm extends FormField<List<TextEditingController>> {
                                 .dangerRegular),
                       )
                     : null,
-                controller:controller,
-                controllerList:controllerList ,
+                controller: controller,
+                controllerList: controllerList,
               );
             });
 }

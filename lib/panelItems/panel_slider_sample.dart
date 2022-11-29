@@ -251,8 +251,8 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
                         InkWell(
                           child: EsSvgIcon(
                             _rtl
-                                ? "assets/svgs/CaretRight.svg"
-                                : "assets/svgs/CaretLeft.svg",
+                                ? "packages/es_flutter_component/assets/svgs/CaretRight.svg"
+                                : "packages/es_flutter_component/assets/svgs/CaretLeft.svg",
                             color: StructureBuilder.styles!.primaryLightColor,
                             size: StructureBuilder.dims!.h0Padding * 2,
                           ),
@@ -263,8 +263,8 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
                         InkWell(
                           child: EsSvgIcon(
                             _rtl
-                                ? "assets/svgs/CaretLeft.svg"
-                                : "assets/svgs/CaretRight.svg",
+                                ? "packages/es_flutter_component/assets/svgs/CaretLeft.svg"
+                                : "packages/es_flutter_component/assets/svgs/CaretRight.svg",
                             color: StructureBuilder.styles!.primaryLightColor,
                             size: StructureBuilder.dims!.h0Padding * 2,
                           ),
@@ -308,8 +308,8 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
                         InkWell(
 
                             child: EsSvgIcon(
-                              _rtl?"assets/svgs/CaretRight.svg"
-                                :"assets/svgs/CaretLeft.svg",
+                              _rtl?"packages/es_flutter_component/assets/svgs/CaretRight.svg"
+                                :"packages/es_flutter_component/assets/svgs/CaretLeft.svg",
                             color: StructureBuilder.styles!.primaryLightColor,
                               size: StructureBuilder.dims!.h0Padding*2,
                             ),
@@ -317,8 +317,8 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
                         ),
                         InkWell(
 
-                          child: EsSvgIcon(_rtl?"assets/svgs/CaretLeft.svg"
-                              :"assets/svgs/CaretRight.svg",
+                          child: EsSvgIcon(_rtl?"packages/es_flutter_component/assets/svgs/CaretLeft.svg"
+                              :"packages/es_flutter_component/assets/svgs/CaretRight.svg",
                             color: StructureBuilder.styles!.primaryLightColor,
                             size: StructureBuilder.dims!.h0Padding*2,
                           ),
@@ -360,8 +360,8 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
                         InkWell(
                           child: EsSvgIcon(
                             _rtl
-                                ? "assets/svgs/CaretRight.svg"
-                                : "assets/svgs/CaretLeft.svg",
+                                ? "packages/es_flutter_component/assets/svgs/CaretRight.svg"
+                                : "packages/es_flutter_component/assets/svgs/CaretLeft.svg",
                             color: StructureBuilder.styles!.primaryLightColor,
                             size: StructureBuilder.dims!.h0Padding,
                           ),
@@ -372,8 +372,8 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
                         InkWell(
                           child: EsSvgIcon(
                             _rtl
-                                ? "assets/svgs/CaretLeft.svg"
-                                : "assets/svgs/CaretRight.svg",
+                                ? "packages/es_flutter_component/assets/svgs/CaretLeft.svg"
+                                : "packages/es_flutter_component/assets/svgs/CaretRight.svg",
                             color: StructureBuilder.styles!.primaryLightColor,
                             size: StructureBuilder.dims!.h0Padding,
                           ),
@@ -441,8 +441,8 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
                         InkWell(
 
                             child: EsSvgIcon(
-                              _rtl?"assets/svgs/CaretRight.svg"
-                                :"assets/svgs/CaretLeft.svg",
+                              _rtl?"packages/es_flutter_component/assets/svgs/CaretRight.svg"
+                                :"packages/es_flutter_component/assets/svgs/CaretLeft.svg",
                             color: StructureBuilder.styles!.primaryLightColor,
                               size: StructureBuilder.dims!.h0Padding,
                             ),
@@ -450,8 +450,8 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
                         ),
                         InkWell(
 
-                          child: EsSvgIcon(_rtl?"assets/svgs/CaretLeft.svg"
-                              :"assets/svgs/CaretRight.svg",
+                          child: EsSvgIcon(_rtl?"packages/es_flutter_component/assets/svgs/CaretLeft.svg"
+                              :"packages/es_flutter_component/assets/svgs/CaretRight.svg",
                             color: StructureBuilder.styles!.primaryLightColor,
                             size: StructureBuilder.dims!.h0Padding,
                           ),

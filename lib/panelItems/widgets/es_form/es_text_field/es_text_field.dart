@@ -8,6 +8,7 @@ import 'package:intl/intl.dart' as intl;
 ///this class is a customized text field that use in whole of app
 class EsTextField extends StatefulWidget {
   String? hint = "";
+  String? label = "";
   Widget? suffixIcon;
   Widget? prefixIcon;
   TextInputType? textInput = TextInputType.text;
@@ -33,6 +34,7 @@ class EsTextField extends StatefulWidget {
   Color? borderColor;
   TextStyle? textStyle;
   TextStyle? labelStyle;
+  TextStyle? hintStyle;
 
   InputBorder? focusedBorder;
   InputBorder? focusedErrorBorder;
@@ -42,11 +44,12 @@ class EsTextField extends StatefulWidget {
   EsTextField(
       {Key? key,
       this.hint,
+      this.label,
       this.textInput,
       this.suffixIcon,
       this.prefixIcon,
       this.onEditingComplete,
-      required this.customController,
+       this.customController,
       this.focusNode,
       this.isObscure,
       this.disabled,
@@ -59,6 +62,7 @@ class EsTextField extends StatefulWidget {
       this.fillColor,
       this.borderColor,
       this.labelStyle,
+      this.hintStyle,
       this.textStyle,
       this.controller,
       this.onChanged,
@@ -66,7 +70,8 @@ class EsTextField extends StatefulWidget {
       this.borderStyle,
       this.focusedBorder,
       this.focusedErrorBorder})
-      : assert(customController != null);
+      // : assert(customController != null)
+  ;
 
   @override
   State<StatefulWidget> createState() {
@@ -112,6 +117,7 @@ class _EsSpecificTextField extends State<EsTextField> {
         height:_size.height,
         width: _size.width,
         child: TextField(
+
           enabled: !((widget.disabled)??false),
           readOnly: widget.disabled??false,
           maxLength: widget.maxLength,
@@ -120,7 +126,7 @@ class _EsSpecificTextField extends State<EsTextField> {
           keyboardType: widget.textInput,
           maxLines: widget.maxLines??1,
 
-          textAlign: widget.textAlign ?? TextAlign.right,
+          textAlign: widget.textAlign ?? ( _rtl?TextAlign.right:TextAlign.left),
           style: widget.textStyle?? TextStyle(color: StructureBuilder.styles!.primaryColor,
               fontSize: StructureBuilder.dims!.h2FontSize),
           onEditingComplete: widget.onEditingComplete,
@@ -183,9 +189,11 @@ class _EsSpecificTextField extends State<EsTextField> {
           contentPadding: EdgeInsets.all(StructureBuilder.dims!.h1Padding),
           alignLabelWithHint: false,
 
-          labelText: widget.hint,
-          // hintText: widget.hint,
+          labelText: widget.label,
+          hintText: widget.hint,
           labelStyle: widget.labelStyle ?? TextStyle(fontSize: Dims.h2FontSize,
+              color: StructureBuilder.styles!.primaryColor),
+          hintStyle: widget.hintStyle ?? TextStyle(fontSize: Dims.h2FontSize,
               color: StructureBuilder.styles!.primaryColor));
     } else {
       return InputDecoration(
@@ -227,11 +235,14 @@ class _EsSpecificTextField extends State<EsTextField> {
                     Radius.circular(StructureBuilder.dims!.h2BorderRadius))),
         contentPadding: EdgeInsets.all(StructureBuilder.dims!.h1Padding),
         alignLabelWithHint: false,
-        labelText: widget.hint,
+        labelText: widget.label,
+        hintText: widget.hint,
         labelStyle: widget.labelStyle ??
             TextStyle(
                 fontSize: Dims.h2FontSize,
                 color: StructureBuilder.styles!.primaryColor),
+          hintStyle: widget.hintStyle ?? TextStyle(fontSize: Dims.h2FontSize,
+              color: StructureBuilder.styles!.primaryColor)
       );
     }
   }

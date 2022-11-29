@@ -10,6 +10,7 @@ class EsRadioButtonGroupForm extends FormField<TextEditingController> {
   EsRadioButtonGroupForm(
       {Widget? subTitleWidget,
         Axis? axis,
+  bool? isScrollable,
       void Function(TextEditingController?)? onChanged,
       required List<String> titleList,
       required TextEditingController controller,
@@ -24,6 +25,7 @@ class EsRadioButtonGroupForm extends FormField<TextEditingController> {
               return EsRadioButtonGroup(
                 titleList: titleList,
                 axis: axis,
+                isScrollable: isScrollable,
                 // value: state.value??value,
                 onChanged: state.didChange,
                 subTitleWidget: state.hasError

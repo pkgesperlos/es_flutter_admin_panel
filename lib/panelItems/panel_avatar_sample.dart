@@ -138,7 +138,7 @@ class PanelAvatarSample extends StatelessWidget {
                   )),
                   EsAvatarWidget(
                       widget: EsSvgIcon(
-                    "assets/svgs/GraduationCap.svg",
+                    "packages/es_flutter_component/assets/svgs/GraduationCap.svg",
                     size: StructureBuilder.dims!.h2IconSize,
                     color: StructureBuilder.styles!.primaryLightColor,
                   )),
@@ -147,7 +147,7 @@ class PanelAvatarSample extends StatelessWidget {
                     isUnique: true,
                     size: StructureBuilder.dims!.h3IconSize,
                     labelContent: EsSvgIcon(
-                      "assets/svgs/Gift.svg",
+                      "packages/es_flutter_component/assets/svgs/Gift.svg",
                       size: StructureBuilder.dims!.h3IconSize,
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),

@@ -39,7 +39,7 @@ class _PanelToastSampleState extends State<PanelToastSample> {
             spacing: StructureBuilder.dims!.h2Padding,
             children: [
               EsIconButton(
-                EsSvgIcon("assets/svgs/infocircle.svg",
+                EsSvgIcon("packages/es_flutter_component/assets/svgs/infocircle.svg",
                     size: StructureBuilder.dims!.h2IconSize,
                     color: StructureBuilder.styles!.primaryLightColor),
                 // fillColor: StructureBuilder.styles!.alertColor().danger,
@@ -55,7 +55,7 @@ class _PanelToastSampleState extends State<PanelToastSample> {
               ),
               EsIconButton(
                   EsSvgIcon(
-                    "assets/svgs/danger.svg",
+                    "packages/es_flutter_component/assets/svgs/danger.svg",
                     size: StructureBuilder.dims!.h2IconSize,
                     color: StructureBuilder.styles!.dangerColor().dangerDark,
                   ),
@@ -64,7 +64,7 @@ class _PanelToastSampleState extends State<PanelToastSample> {
                 fToast.showToast(
                   child: EsCustomToastContainer(
                     icon: EsSvgIcon(
-                      "assets/svgs/danger.svg",
+                      "packages/es_flutter_component/assets/svgs/danger.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color: StructureBuilder.styles!.dangerColor().dangerDark,
                     ),
@@ -79,7 +79,7 @@ class _PanelToastSampleState extends State<PanelToastSample> {
               }),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -94,7 +94,7 @@ class _PanelToastSampleState extends State<PanelToastSample> {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/infocircle.svg",
+                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -102,8 +102,7 @@ class _PanelToastSampleState extends State<PanelToastSample> {
                 onTap: () {
                   fToast.showToast(
                     child: EsCustomToastContainer(
-                      icon: EsSvgIcon(
-                        "assets/svgs/infocircle.svg",
+                      icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/infocircle.svg",
                         size: StructureBuilder.dims!.h2IconSize,
                         color:
                             StructureBuilder.styles!.warningColor().warningDark,
@@ -120,7 +119,7 @@ class _PanelToastSampleState extends State<PanelToastSample> {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!
                       .informationColor()
@@ -130,8 +129,7 @@ class _PanelToastSampleState extends State<PanelToastSample> {
                 onTap: () {
                   fToast.showToast(
                     child: EsCustomToastContainer(
-                      icon: EsSvgIcon(
-                        "assets/svgs/Megaphone.svg",
+                      icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/Megaphone.svg",
                         size: StructureBuilder.dims!.h2IconSize,
                         color: StructureBuilder.styles!
                             .informationColor()
@@ -160,8 +158,7 @@ class _PanelToastSampleState extends State<PanelToastSample> {
                onTap: () {
                   fToast.showToast(
                     child: EsCustomToastContainer(
-                      icon: EsSvgIcon(
-                        "assets/svgs/Megaphone.svg",
+                      icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/Megaphone.svg",
                         size: StructureBuilder.dims!.h2IconSize,
                         color: StructureBuilder.styles!.informationColor().informationDark,
                       ),

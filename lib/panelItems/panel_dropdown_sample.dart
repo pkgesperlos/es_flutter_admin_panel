@@ -39,7 +39,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -56,7 +56,7 @@ class PanelDropDownSample extends StatelessWidget {
                   textColor: StructureBuilder.styles!.primaryColor,
                   fillColor: StructureBuilder.styles!.primaryLightColor,
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryColor,
                   ),
@@ -71,7 +71,7 @@ class PanelDropDownSample extends StatelessWidget {
                   text: "Dropdown",
                   fillColor: StructureBuilder.styles!.secondaryColor,
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -91,7 +91,7 @@ class PanelDropDownSample extends StatelessWidget {
                   text: "Dropdown",
                   fillColor: StructureBuilder.styles!.tritiaryColor,
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -107,7 +107,7 @@ class PanelDropDownSample extends StatelessWidget {
                   fillColor:
                       StructureBuilder.styles!.dangerColor().dangerRegular,
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -124,7 +124,7 @@ class PanelDropDownSample extends StatelessWidget {
               """EsDropdownButton(
                     num:num,
                     buttonWidget: EsButton(text: "Dropdown",
-                      icon: EsSvgIcon("assets/svgs/down.svg",
+                      icon: EsSvgIcon('packages/es_flutter_component/assets/svgs/down.svg",
                         size: StructureBuilder.dims!.h3IconSize*0.7,
                         color:StructureBuilder.styles!.primaryLightColor,),
                       clickable: false,),
@@ -144,7 +144,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -159,7 +159,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/CaretRight.svg",
+                    "packages/es_flutter_component/assets/svgs/CaretRight.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -180,7 +180,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/CaretLeft.svg",
+                    "packages/es_flutter_component/assets/svgs/CaretLeft.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.8,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -202,7 +202,7 @@ class PanelDropDownSample extends StatelessWidget {
 
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/CaretLeft.svg",
+                    "packages/es_flutter_component/assets/svgs/CaretLeft.svg",
                     size: StructureBuilder.dims!.h3IconSize *0.8,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -229,7 +229,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/infocircle.svg",
+                    "packages/es_flutter_component/assets/svgs/infocircle.svg",
                     size: StructureBuilder.dims!.h3IconSize,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -246,7 +246,7 @@ class PanelDropDownSample extends StatelessWidget {
                   textColor: StructureBuilder.styles!.primaryColor,
                   fillColor: StructureBuilder.styles!.primaryLightColor,
                   icon: EsSvgIcon(
-                    "assets/svgs/infocircle.svg",
+                    "packages/es_flutter_component/assets/svgs/infocircle.svg",
                     size: StructureBuilder.dims!.h3IconSize,
                     color: StructureBuilder.styles!.primaryColor,
                   ),
@@ -261,7 +261,7 @@ class PanelDropDownSample extends StatelessWidget {
                   text: "Dropdown",
                   fillColor: StructureBuilder.styles!.secondaryColor,
                   icon: EsSvgIcon(
-                    "assets/svgs/infocircle.svg",
+                    "packages/es_flutter_component/assets/svgs/infocircle.svg",
                     size: StructureBuilder.dims!.h3IconSize,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -276,7 +276,7 @@ class PanelDropDownSample extends StatelessWidget {
                   text: "Dropdown",
                   fillColor: StructureBuilder.styles!.tritiaryColor,
                   icon: EsSvgIcon(
-                    "assets/svgs/infocircle.svg",
+                    "packages/es_flutter_component/assets/svgs/infocircle.svg",
                     size: StructureBuilder.dims!.h3IconSize,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -292,7 +292,7 @@ class PanelDropDownSample extends StatelessWidget {
                   fillColor:
                       StructureBuilder.styles!.dangerColor().dangerRegular,
                   icon: EsSvgIcon(
-                    "assets/svgs/infocircle.svg",
+                    "packages/es_flutter_component/assets/svgs/infocircle.svg",
                     size: StructureBuilder.dims!.h3IconSize,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -311,7 +311,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/infocircle.svg",
+                    "packages/es_flutter_component/assets/svgs/infocircle.svg",
                     size: StructureBuilder.dims!.h3IconSize ,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -336,7 +336,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -354,7 +354,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -373,7 +373,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -395,7 +395,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -418,7 +418,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -443,8 +443,7 @@ class PanelDropDownSample extends StatelessWidget {
                     num: num,
                     buttonWidget: EsButton(
                       text: "Dropdown",
-                      icon: EsSvgIcon(
-                        "assets/svgs/down.svg",
+                      icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/down.svg",
                         size: StructureBuilder.dims!.h3IconSize * 0.7,
                         color: StructureBuilder.styles!.primaryLightColor,
                       ),
@@ -458,8 +457,7 @@ class PanelDropDownSample extends StatelessWidget {
                     num: num,
                     buttonWidget: EsButton(
                       text: "Dropdown",
-                      icon: EsSvgIcon(
-                        "assets/svgs/down.svg",
+                      icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/down.svg",
                         size: StructureBuilder.dims!.h3IconSize * 0.7,
                         color: StructureBuilder.styles!.primaryLightColor,
                       ),
@@ -473,8 +471,7 @@ class PanelDropDownSample extends StatelessWidget {
                     num: num,
                     buttonWidget: EsButton(
                       text: "Dropdown",
-                      icon: EsSvgIcon(
-                        "assets/svgs/down.svg",
+                      icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/down.svg",
                         size: StructureBuilder.dims!.h3IconSize * 0.7,
                         color: StructureBuilder.styles!.primaryLightColor,
                       ),
@@ -488,8 +485,7 @@ class PanelDropDownSample extends StatelessWidget {
                     num: num,
                     buttonWidget: EsButton(
                       text: "Dropdown",
-                      icon: EsSvgIcon(
-                        "assets/svgs/down.svg",
+                      icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/down.svg",
                         size: StructureBuilder.dims!.h3IconSize * 0.7,
                         color: StructureBuilder.styles!.primaryLightColor,
                       ),
@@ -509,8 +505,7 @@ class PanelDropDownSample extends StatelessWidget {
                     num: num,
                     buttonWidget: EsButton(
                       text: "Dropdown",
-                      icon: EsSvgIcon(
-                        "assets/svgs/down.svg",
+                      icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/down.svg",
                         size: StructureBuilder.dims!.h3IconSize * 0.7,
                         color: StructureBuilder.styles!.primaryLightColor,
                       ),
@@ -536,7 +531,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -551,7 +546,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -566,7 +561,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -581,7 +576,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -597,7 +592,7 @@ class PanelDropDownSample extends StatelessWidget {
                 buttonWidget: EsButton(
                   text: "Dropdown",
                   icon: EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
@@ -616,7 +611,7 @@ class PanelDropDownSample extends StatelessWidget {
               """EsDropdownButton(
                     num:num,
                     buttonWidget: EsButton(text: "Dropdown",
-                      icon: EsSvgIcon("assets/svgs/down.svg",
+                      icon: EsSvgIcon('packages/es_flutter_component/assets/svgs/down.svg",
                         size: StructureBuilder.dims!.h3IconSize*0.7,
                         color:StructureBuilder.styles!.primaryLightColor,),
                       clickable: false,),

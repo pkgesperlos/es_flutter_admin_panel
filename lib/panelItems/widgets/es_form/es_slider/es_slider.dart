@@ -65,11 +65,12 @@ class _EsSliderState extends State<EsSlider> {
                 widget.disabled??false
                     ?null
                     :
-
                   _value = value;
-                  widget.onChanged;
+
 
               });
+              widget.onChanged!(value);
+
             }),
         widget.subTitleWidget??EsTitle(_value.round().toString())
       ],

@@ -87,7 +87,7 @@ class PanelAccardionSample extends StatelessWidget {
               child: EsAccardion(
             items: _items,
             icon: EsSvgIcon(
-              "assets/svgs/GraduationCap.svg",
+              "packages/es_flutter_component/assets/svgs/GraduationCap.svg",
               size: StructureBuilder.dims!.h3IconSize,
               color: StructureBuilder.styles!.primaryColor,
             ),
@@ -99,7 +99,7 @@ class PanelAccardionSample extends StatelessWidget {
               """EsAccardion(
             items: _items,
             icon: EsSvgIcon(
-              "assets/svgs/GraduationCap.svg",
+              "packages/es_flutter_component/assets/svgs/GraduationCap.svg",
               size: StructureBuilder.dims!.h3IconSize,
               color: StructureBuilder.styles!.primaryColor,
             ),
@@ -112,7 +112,7 @@ class PanelAccardionSample extends StatelessWidget {
               child: EsAccardion(
             items: _items,
             icon: EsSvgIcon(
-              "assets/svgs/GraduationCap.svg",
+              "packages/es_flutter_component/assets/svgs/GraduationCap.svg",
               size: StructureBuilder.dims!.h3IconSize,
               color: StructureBuilder.styles!.primaryColor,
             ),
@@ -123,7 +123,7 @@ class PanelAccardionSample extends StatelessWidget {
               """EsAccardion(
             items: _items,
             icon: EsSvgIcon(
-              "assets/svgs/GraduationCap.svg",
+              "packages/es_flutter_component/assets/svgs/GraduationCap.svg",
               size: StructureBuilder.dims!.h3IconSize,
               color: StructureBuilder.styles!.primaryColor,
             ),

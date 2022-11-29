@@ -1,6 +1,5 @@
 
 import 'dart:convert';
-import 'package:es_flutter_component/resources/Constants/dims.dart';
 import 'package:es_flutter_component/resources/Constants/styles.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';

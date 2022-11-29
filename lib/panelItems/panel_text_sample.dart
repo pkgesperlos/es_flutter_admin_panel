@@ -89,7 +89,7 @@ class PanelTextSample extends StatelessWidget {
                 children: [
                   EsIconText(
                     AppLocalizations.of(context)!.sampleText,
-                    icon: EsSvgIcon("assets/svgs/GraduationCap.svg",
+                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
                         color: StructureBuilder.styles!.textColor().primary,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),
@@ -98,7 +98,7 @@ class PanelTextSample extends StatelessWidget {
                   ),
                   EsIconText(
                     AppLocalizations.of(context)!.sampleText,
-                    icon: EsSvgIcon("assets/svgs/GraduationCap.svg",
+                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
                         color: StructureBuilder.styles!.textColor().primary,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),
@@ -107,7 +107,7 @@ class PanelTextSample extends StatelessWidget {
                   ),
                   EsIconText(
                     AppLocalizations.of(context)!.sampleText,
-                    icon: EsSvgIcon("assets/svgs/GraduationCap.svg",
+                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
                         color: StructureBuilder.styles!.textColor().primary,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),
@@ -116,7 +116,7 @@ class PanelTextSample extends StatelessWidget {
                   ),
                   EsIconText(
                     AppLocalizations.of(context)!.sampleText,
-                    icon: EsSvgIcon("assets/svgs/GraduationCap.svg",
+                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
                         color: StructureBuilder.styles!.textColor().primary,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),
@@ -221,7 +221,7 @@ class PanelTextSample extends StatelessWidget {
                 children: [
                   EsIconText(
                     "IconText : " + AppLocalizations.of(context)!.sampleText,
-                    icon: EsSvgIcon("assets/svgs/GraduationCap.svg",
+                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
                         color: StructureBuilder.styles!.textColor().primary,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),
@@ -231,7 +231,7 @@ class PanelTextSample extends StatelessWidget {
                   EsIconText(
                     "IconText : " + AppLocalizations.of(context)!.sampleText,
                     color: StructureBuilder.styles!.textColor().danger,
-                    icon: EsSvgIcon("assets/svgs/GraduationCap.svg",
+                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
                         color: StructureBuilder.styles!.textColor().danger,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),
@@ -241,7 +241,7 @@ class PanelTextSample extends StatelessWidget {
                   EsIconText(
                     "IconText : " + AppLocalizations.of(context)!.sampleText,
                     color: StructureBuilder.styles!.textColor().tritiary,
-                    icon: EsSvgIcon("assets/svgs/GraduationCap.svg",
+                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
                         color: StructureBuilder.styles!.textColor().tritiary,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),

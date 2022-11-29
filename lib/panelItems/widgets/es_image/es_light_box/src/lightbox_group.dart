@@ -174,8 +174,8 @@ class _LightBoxGroupState extends State<LightBoxGroup> {
                           },
                           child: EsSvgIcon(
                             _rtl
-                                ?"assets/svgs/CaretRight.svg"
-                                : "assets/svgs/CaretLeft.svg",color: Colors.white,))),
+                                ?"packages/es_flutter_component/assets/svgs/CaretRight.svg"
+                                : "packages/es_flutter_component/assets/svgs/CaretLeft.svg",color: Colors.white,))),
                       EsHSpacer(),
                       Container(
                           height: (MediaQuery.of(context).size.height / 100) * 70,
@@ -196,8 +196,8 @@ class _LightBoxGroupState extends State<LightBoxGroup> {
                             changePageViewPosition((controller.page! + 1).round());
                           },
                           child: EsSvgIcon(_rtl
-                              ?"assets/svgs/CaretLeft.svg"
-                              : "assets/svgs/CaretRight.svg",color: Colors.white,))),
+                              ?"packages/es_flutter_component/assets/svgs/CaretLeft.svg"
+                              : "packages/es_flutter_component/assets/svgs/CaretRight.svg",color: Colors.white,))),
 
                     ],
                   ),

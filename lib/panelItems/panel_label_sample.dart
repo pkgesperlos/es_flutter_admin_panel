@@ -83,7 +83,7 @@ class PanelLabelSample extends StatelessWidget {
                 isUnique: true,
                 size: StructureBuilder.dims!.h3IconSize,
                 labelContent: EsSvgIcon(
-                  "assets/svgs/Gift.svg",
+                  "packages/es_flutter_component/assets/svgs/Gift.svg",
                   size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryLightColor,
                 ),
@@ -133,7 +133,7 @@ class PanelLabelSample extends StatelessWidget {
                 ),
                 size: StructureBuilder.dims!.h3IconSize,
                 labelContent: EsSvgIcon(
-                  "assets/svgs/Gift.svg",
+                  "packages/es_flutter_component/assets/svgs/Gift.svg",
                   size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryLightColor,
                 ),
@@ -190,7 +190,7 @@ class PanelLabelSample extends StatelessWidget {
                 ),
                 size: StructureBuilder.dims!.h3IconSize,
                 labelContent: EsSvgIcon(
-                  "assets/svgs/Gift.svg",
+                  "packages/es_flutter_component/assets/svgs/Gift.svg",
                   size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryLightColor,
                 ),
@@ -314,7 +314,7 @@ class PanelLabelSample extends StatelessWidget {
                     ),
                     size: StructureBuilder.dims!.h3IconSize,
                     labelContent: EsSvgIcon(
-                      "assets/svgs/Gift.svg",
+                      "packages/es_flutter_component/assets/svgs/Gift.svg",
                       size: StructureBuilder.dims!.h3IconSize,
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
@@ -326,7 +326,7 @@ class PanelLabelSample extends StatelessWidget {
                     ),
                     size: StructureBuilder.dims!.h3IconSize,
                     labelContent: EsSvgIcon(
-                      "assets/svgs/Gift.svg",
+                      "packages/es_flutter_component/assets/svgs/Gift.svg",
                       size: StructureBuilder.dims!.h3IconSize,
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
@@ -340,7 +340,7 @@ class PanelLabelSample extends StatelessWidget {
                     ),
                     size: StructureBuilder.dims!.h3IconSize,
                     labelContent: EsSvgIcon(
-                      "assets/svgs/Gift.svg",
+                      "packages/es_flutter_component/assets/svgs/Gift.svg",
                       size: StructureBuilder.dims!.h3IconSize,
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
@@ -355,7 +355,7 @@ class PanelLabelSample extends StatelessWidget {
                     ),
                     size: StructureBuilder.dims!.h3IconSize,
                     labelContent: EsSvgIcon(
-                      "assets/svgs/Gift.svg",
+                      "packages/es_flutter_component/assets/svgs/Gift.svg",
                       size: StructureBuilder.dims!.h3IconSize,
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
@@ -423,8 +423,7 @@ class PanelLabelSample extends StatelessWidget {
                         text: AppLocalizations.of(context)!.button,
                       ),
                       size: StructureBuilder.dims!.h3IconSize,
-                      labelContent: EsSvgIcon(
-                        "assets/svgs/Gift.svg",
+                      labelContent: EsSvgIcon("packages/es_flutter_component/assets/svgs/Gift.svg",
                         size: StructureBuilder.dims!.h3IconSize,
                         color: StructureBuilder.styles!.primaryLightColor,
                       ),
@@ -435,8 +434,7 @@ class PanelLabelSample extends StatelessWidget {
                         text: AppLocalizations.of(context)!.button,
                       ),
                       size: StructureBuilder.dims!.h3IconSize,
-                      labelContent: EsSvgIcon(
-                        "assets/svgs/Gift.svg",
+                      labelContent: EsSvgIcon("packages/es_flutter_component/assets/svgs/Gift.svg",
                         size: StructureBuilder.dims!.h3IconSize,
                         color: StructureBuilder.styles!.primaryLightColor,
                       ),
@@ -448,8 +446,7 @@ class PanelLabelSample extends StatelessWidget {
                         text: AppLocalizations.of(context)!.button,
                       ),
                       size: StructureBuilder.dims!.h3IconSize,
-                      labelContent: EsSvgIcon(
-                        "assets/svgs/Gift.svg",
+                      labelContent: EsSvgIcon("packages/es_flutter_component/assets/svgs/Gift.svg",
                         size: StructureBuilder.dims!.h3IconSize,
                         color: StructureBuilder.styles!.primaryLightColor,
                       ),
@@ -477,8 +474,7 @@ class PanelLabelSample extends StatelessWidget {
                          text:AppLocalizations.of(context)!.button,
                       ),
                       size: StructureBuilder.dims!.h3IconSize,
-                      labelContent: EsSvgIcon(
-                        "assets/svgs/Gift.svg",
+                      labelContent: EsSvgIcon("packages/es_flutter_component/assets/svgs/Gift.svg",
                         size: StructureBuilder.dims!.h3IconSize,
                         color: StructureBuilder.styles!.primaryLightColor,
                       ),

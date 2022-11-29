@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class EsRangeSlider extends StatefulWidget {
   RangeValues? initialvalue;
   Widget? subTitleWidget;
-  void Function(RangeValues?)? onChanged;
+  void Function(RangeValues)? onChanged;
   void Function(RangeValues?)? onChangeStart;
   void Function(RangeValues?)? onChangeEnd;
   double? max;
@@ -54,6 +54,7 @@ class _EsRangeSliderState extends State<EsRangeSlider> {
         RangeSlider(
           min: widget.min ?? 0.0,
           max: widget.max ?? 100.0,
+
           divisions: widget.divisions,
           values:widget.initialvalue?? RangeValues(_startValue, _endValue),
           onChangeStart: widget.onChangeStart,
@@ -66,8 +67,9 @@ class _EsRangeSliderState extends State<EsRangeSlider> {
             setState(() {
               _startValue = values.start;
               _endValue = values.end;
-              widget.onChanged;
+
             });
+            widget.onChanged!(values);
           },
         ),
         widget.subTitleWidget??Row(

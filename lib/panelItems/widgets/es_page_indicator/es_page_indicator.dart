@@ -63,8 +63,8 @@ class EsPageIndicator extends StatelessWidget {
     return InkWell(
       child: EsSvgIcon(
 
-        rtl? "assets/svgs/CaretRight.svg"
-            :"assets/svgs/CaretLeft.svg",
+        rtl? "packages/es_flutter_component/assets/svgs/CaretRight.svg"
+            :"packages/es_flutter_component/assets/svgs/CaretLeft.svg",
 
         color: _normalColor,
         size: _size *3,
@@ -83,8 +83,8 @@ class EsPageIndicator extends StatelessWidget {
 
     return InkWell(
       child: EsSvgIcon(
-        rtl? "assets/svgs/CaretLeft.svg":
-        "assets/svgs/CaretRight.svg",
+        rtl? "packages/es_flutter_component/assets/svgs/CaretLeft.svg":
+        "packages/es_flutter_component/assets/svgs/CaretRight.svg",
         color: _normalColor,
         size: _size*3 ,
       ),

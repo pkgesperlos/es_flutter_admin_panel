@@ -67,6 +67,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     ),
                     EsTextField(
                       hint: AppLocalizations.of(context)!.emailadress,
+                      label: AppLocalizations.of(context)!.emailadress,
                       customController: EditTextController(),
                     ),
                     EsVSpacer(),
@@ -92,6 +93,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     ),
                     EsTextField(
                       hint:AppLocalizations.of(context)!.pleaseenterpassword,
+                      label:AppLocalizations.of(context)!.pleaseenterpassword,
                       customController: EditTextController(),
                     ),
                   ],
@@ -137,6 +139,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     ),
                     EsTextField(
                       hint: AppLocalizations.of(context)!.pleaseenteremail,
+                      label: AppLocalizations.of(context)!.pleaseenteremail,
                       customController: EditTextController(),
                     ),
                   ],
@@ -155,6 +158,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     ),
                     EsTextField(
                       hint: AppLocalizations.of(context)!.pleaseenterpassword,
+                      label: AppLocalizations.of(context)!.pleaseenterpassword,
                       customController: EditTextController(),
                     ),
                   ],
@@ -173,6 +177,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                       color: StructureBuilder.styles!.t1Color,
                     ),
                     EsRadioButtonGroupForm(
+                      isScrollable: false,
                       titleList: List.generate(
                           3, (index) => AppLocalizations.of(context)!.item+"${index + 1}"),
                       axis: Axis.horizontal,
@@ -234,6 +239,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     ),
                     EsTextField(
                       hint: "Enter Email:",
+                      label: "Enter Email:",
                       customController: EditTextController(),
                     ),
                   ],
@@ -252,6 +258,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     ),
                     EsTextField(
                       hint: "Enter password:",
+                      label: "Enter password:",
                       customController: EditTextController(),
                     ),
                   ],
@@ -270,6 +277,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                       color: StructureBuilder.styles!.t1Color,
                     ),
                     EsRadioButtonGroupForm(
+                    isScrollable: false,
                       titleList: List.generate(
                           3, (index) => "Item number"),
                       axis: Axis.horizontal,
@@ -328,6 +336,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     ),
                     EsTextField(
                       hint: AppLocalizations.of(context)!.pleaseenteremail,
+                      label: AppLocalizations.of(context)!.pleaseenteremail,
                       customController: EditTextController(),
                     ),
                     EsVSpacer(),
@@ -382,29 +391,13 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     EsVSpacer(
                       big: true,
                     ),
-                    Container(
-                      height: 100,
-                      padding:
-                          EdgeInsets.all(StructureBuilder.dims!.h1BorderRadius),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(
-                              StructureBuilder.dims!.h1BorderRadius)),
-                          border: Border.all(
-                              color: StructureBuilder.styles!.primaryColor)),
-                      child: SingleChildScrollView(
-                        child: Column(
-                          children: [
-                            EsCustomCheckboxGroup(
-                              titleList: List.generate(
-                                  9, (index) => AppLocalizations.of(context)!.item+"${index + 1}"),
-                              controller: _controller,
-                              controllerList: _controllerList,
-                              axis: Axis.vertical,
-                              valueList: List.generate(9, (index) => false),
-                            ),
-                          ],
-                        ),
-                      ),
+                    EsCustomCheckboxGroup(
+                      titleList: List.generate(
+                          9, (index) => AppLocalizations.of(context)!.item+"${index + 1}"),
+                      controller: _controller,
+                      controllerList: _controllerList,
+                      axis: Axis.vertical,
+                      valueList: List.generate(9, (index) => false),
                     ),
                   ],
                 ),
@@ -418,28 +411,11 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     EsVSpacer(
                       big: true,
                     ),
-                    Container(
-                      height: 100,
-                      padding:
-                          EdgeInsets.all(StructureBuilder.dims!.h1BorderRadius),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(
-                              StructureBuilder.dims!.h1BorderRadius)),
-                          border: Border.all(
-                              color: StructureBuilder.styles!.primaryColor)),
-                      child: SingleChildScrollView(
-                        child: Column(
-                          children: [
-                            EsRadioButtonGroup(
-                              titleList: List.generate(
-                                  9, (index) => AppLocalizations.of(context)!.item+"${index + 1}"),
-                              controller: TextEditingController(),
-                              axis: Axis.vertical,
-                            ),
-                            EsVSpacer(),
-                          ],
-                        ),
-                      ),
+                    EsRadioButtonGroup(
+                      titleList: List.generate(
+                          9, (index) => AppLocalizations.of(context)!.item+"${index + 1}"),
+                      controller: TextEditingController(),
+                      axis: Axis.vertical,
                     ),
                   ],
                 ),
@@ -456,6 +432,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     IntrinsicHeight(
                       child: EsTextField(
                         hint: AppLocalizations.of(context)!.textArea,
+                        label: AppLocalizations.of(context)!.textArea,
                         customController: EditTextController(),
                         maxLines: 7,
                       ),
@@ -484,6 +461,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     ),
                     EsTextField(
                       hint: "Enter Email:",
+                      label: "Enter Email:",
                       customController: EditTextController(),
                     ),
                     EsVSpacer(),
@@ -538,19 +516,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     EsVSpacer(
                       big: true,
                     ),
-                    Container(
-                      height: 100,
-                      padding:
-                          EdgeInsets.all(StructureBuilder.dims!.h1BorderRadius),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(
-                              StructureBuilder.dims!.h1BorderRadius)),
-                          border: Border.all(
-                              color: StructureBuilder.styles!.primaryColor)),
-                      child: SingleChildScrollView(
-                        child: Column(
-                          children: [
-                            EsCustomCheckboxGroup(
+                     EsCustomCheckboxGroup(
                               titleList: List.generate(
                                   9, (index) => "Item number"),
                               controller: _controller,
@@ -558,10 +524,6 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                               axis: Axis.vertical,
                               valueList: List.generate(9, (index) => false),
                             ),
-                          ],
-                        ),
-                      ),
-                    ),
                   ],
                 ),
                 Column(
@@ -612,6 +574,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     IntrinsicHeight(
                       child: EsTextField(
                         hint: AppLocalizations.of(context)!.textArea,
+                        label: AppLocalizations.of(context)!.textArea,
                         customController: EditTextController(),
                         maxLines: 7,
                       ),
@@ -629,34 +592,40 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
               children: [
                 EsTextField(
                   hint: AppLocalizations.of(context)!.textFieldHint,
+                  label: AppLocalizations.of(context)!.textFieldHint,
                   customController: EditTextController(),
                   textFieldSize: Size(StructureBuilder.dims!.h0Padding * 20,
                       StructureBuilder.dims!.h0Padding * 2),
                 ),
                 EsTextField(
                   hint: AppLocalizations.of(context)!.textFieldHint,
+                  label: AppLocalizations.of(context)!.textFieldHint,
                   customController: EditTextController(),
                 ),
                 EsTextField(
                   hint: AppLocalizations.of(context)!.textFieldHint,
+                  label: AppLocalizations.of(context)!.textFieldHint,
                   customController: EditTextController(),
                   textFieldSize: Size(StructureBuilder.dims!.h0Padding * 7,
                       StructureBuilder.dims!.h0Padding * 2),
                 ),
                 EsTextField(
                   hint: AppLocalizations.of(context)!.textFieldHint,
+                  label: AppLocalizations.of(context)!.textFieldHint,
                   customController: EditTextController(),
                   textFieldSize: Size(StructureBuilder.dims!.h0Padding * 14,
                       StructureBuilder.dims!.h0Padding * 2.5),
                 ),
                 EsTextField(
                   hint: AppLocalizations.of(context)!.textFieldHint,
+                  label: AppLocalizations.of(context)!.textFieldHint,
                   customController: EditTextController(),
                   // textFieldSize: Size(StructureBuilder.dims!.h0Padding * 14,
                   //     StructureBuilder.dims!.h0Padding *2.5),
                 ),
                 EsTextField(
                   hint: AppLocalizations.of(context)!.textFieldHint,
+                  label: AppLocalizations.of(context)!.textFieldHint,
                   customController: EditTextController(),
                   textFieldSize: Size(StructureBuilder.dims!.h0Padding * 14,
                       StructureBuilder.dims!.h0Padding * 1.5),
@@ -669,6 +638,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
               "they are text fields in different widths and heights located in: \n es_flutter_component>lib/es_form/es_text_field/es_text_field.dart \n and is used as: \n "
               """ EsTextField(
                   hint: AppLocalizations.of(context)!.textFieldHint,
+                  label: AppLocalizations.of(context)!.textFieldHint,
                   customController: EditTextController(),
                   textFieldSize: Size(StructureBuilder.dims!.h0Padding * 20,
                       StructureBuilder.dims!.h0Padding * 2),
@@ -842,6 +812,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     ),
                     EsTextField(
                       hint: "Enter password:",
+                      label: "Enter password:",
                       customController: EditTextController(),
                     ),
                   ],
@@ -892,6 +863,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     ),
                     EsTextField(
                       hint: "Enter password:",
+                      label: "Enter password:",
                       customController: EditTextController(),
                     ),
                   ],
@@ -913,140 +885,14 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
 
 ///////////////////////////////////////////////////////////
 
-      // ContainerItems(widget:EsPhoneNumberField(),
-      //     title:AppLocalizations.of(context)!.phoneNumbertextField,
-      //     information:"It is a phone number field located in: \n es_flutter_component>lib>es_form>es_phone_number_field.dart \n and is used as: \n "
-      //         """ EsPhoneNumberField()"""
-      // ),
-      // ContainerItems(widget:EsShabaNumberFieldForm(),
-      //     title:AppLocalizations.of(context)!.shabaNumbertextField,
-      //     information:"It is a shaba number field located in: \n es_flutter_component>lib>es_form>es_shaba_number_field.dart \n and is used as: \n "
-      //         """ EsShabaNumberField()"""
-      // ),
-      // ContainerItems(widget:EsPriceField(),title: AppLocalizations.of(context)!.priceTextField,
-      //     information:"It is a price field located in: \n es_flutter_component>lib>es_form>es_price_field.dart \n and is used as: \n "
-      //         """ EsPriceField()"""),
-      // ContainerItems(
-      //     widget:EsPersianDatePicker(
-      //       title: AppLocalizations.of(context)!.datePickerTitle,
-      //     ),
-      //     title:AppLocalizations.of(context)!.datePickerfa,
-      //     information:"It is a jalali date picker located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_persian_date_picker.dart \n and is used as: \n "
-      //         """ EsPersianDatePicker()"""),
-      // ContainerItems(
-      //     widget:EsEnglishDatePicker(
-      //       title: AppLocalizations.of(context)!.datePickerTitle,
-      //     ),
-      //     title:AppLocalizations.of(context)!.datePickeren,
-      //     information:"It is a Gregorian date picker located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_English_date_picker.dart \n and is used as: \n "
-      //         """ EsEnglishDatePicker()"""
-      // ),
-      // ContainerItems(
-      //     widget:EsAndroidTimePicker(
-      //       title: AppLocalizations.of(context)!.androidTimePickerTitle,
-      //     ),
-      //     title:AppLocalizations.of(context)!.timePickerHM,
-      //     information:"It is a time picker(H/M)  located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_android_time_picker.dart \n and is used as: \n "
-      //         """ EsAndroidTimePicker(
-      //       title: AppLocalizations.of(context)!.androidTimePickerTitle,)"""
-      // ),
-      // ContainerItems(
-      //     widget:EsCupertinoTimePicker(
-      //       title: AppLocalizations.of(context)!.cupertinoTimePickerTitle,
-      //     ),
-      //     title:AppLocalizations.of(context)!.timePickerHMS,
-      //     information:"It is a time picker(H/M/S) located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_cupertino_12h_time_picker.dart \n and is used as: \n "
-      //         """ EsCupertinoTimePicker(
-      //       title: AppLocalizations.of(context)!.cupertinoTimePickerTitle,)"""
-      // ),
-      // ContainerItems(widget:EsOrdinarySlider(),
-      //     title:AppLocalizations.of(context)!.ordinarySlider,
-      //     information:"It is an ordinary slider located in: \n es_flutter_component>lib>es_form>es_ordinary_slider.dart \n and is used as: \n "
-      //         """EsOrdinarySlider()"""
-      // ),
-      // ContainerItems(widget:EsRengedSlider(), title:AppLocalizations.of(context)!.rangedSlider,
-      //     information:"It is a ranged slider located in: \n es_flutter_component>lib>es_form>es_ranged_slider.dart \n and is used as: \n "
-      //         """EsRengedSlider()"""
-      // ),
-      // ContainerItems(widget:EsRadioButton(), title:AppLocalizations.of(context)!.radioButons,
-      //     information:"It is a radio button located in: \n es_flutter_component>lib>es_form>es_radio_button.dart \n and is used as: \n "
-      //         """EsRadioButton()"""
-      // ),
-      //
+
+
       // ContainerItems(widget:EsRatingBar(), title:AppLocalizations.of(context)!.starRateBar,
       //     information:"It is a rating bar located in: \n es_flutter_component>lib>es_form>es_rating_bar.dart \n and is used as: \n "
       //         """EsRatingBar()"""
       // ),
-      // ContainerItems(
-      //   widget:IntrinsicWidth(
-      //     child: EsCheckBox(
-      //       title: EsOrdinaryText(
-      //         AppLocalizations.of(context)!.checkBoxTitle,
-      //       ),
-      //       onSaved: (bool) {},
-      //       validator: (bool) {},
-      //     ),
-      //   ),
-      //   title:AppLocalizations.of(context)!.ordinaryCheckBox,
-      //   information:"It is a ordinary check box located in: \n es_flutter_component>lib>es_form>es_checkbox.dart \n and is used as: \n "
-      //       """EsCheckBox(
-      //         title: EsOrdinaryText(
-      //           data: AppLocalizations.of(context)!.checkBoxTitle,
-      //         ),
-      //         onSaved: (bool) {},
-      //         validator: (bool) {},)""",
-      // ),
-      // ContainerItems(
-      //     widget:IntrinsicWidth(
-      //       child: EsCheckBoxvalidation(
-      //         title: AppLocalizations.of(context)!.checkBoxWithValidator,
-      //         errorText: AppLocalizations.of(context)!.checkBoxErrorText,
-      //         buttonText: AppLocalizations.of(context)!.checkBoxButtonText,
-      //       ),
-      //     ),
-      //     title:AppLocalizations.of(context)!.validationCheckBox,
-      //     information:"It is a check box with validation located in: \n es_flutter_component>lib>es_form>es_checkbox_validation.dart \n and is used as: \n "
-      //         """EsCheckBoxvalidation(
-      //         title: AppLocalizations.of(context)!.checkBoxWithValidator,
-      //         errorText: AppLocalizations.of(context)!.checkBoxErrorText,
-      //         buttonText: AppLocalizations.of(context)!.checkBoxButtonText,
-      //       )"""
-      // ),
-      // ContainerItems(
-      //     widget:IntrinsicWidth(
-      //       child: EsAnimatedCheckBox(
-      //           title: AppLocalizations.of(context)!.animatedCheckBoxTitle),
-      //     ),
-      //     title:AppLocalizations.of(context)!.animationCheckBox,
-      //     information:"It is an animated check box located in: \n es_flutter_component>lib>es_form>es_animated_checkbox.dart \n and is used as: \n "
-      //         """EsAnimatedCheckBox(
-      //           title: AppLocalizations.of(context)!.animatedCheckBoxTitle)"""
-      // ),
-      // ContainerItems(
-      //     widget:EsDropDownButton(
-      //       items: [
-      //         // "گزینه1","گزینه2","گزینه3",
-      //         AppLocalizations.of(context)!.dropDown1,
-      //         AppLocalizations.of(context)!.dropDown2,
-      //         AppLocalizations.of(context)!.dropDown3,
-      //       ],
-      //       onTapItems: [() {}, () {}, () {}],
-      //     ),
-      //     title:AppLocalizations.of(context)!.dropDownButton,
-      //     information:"It is dropp down button located in: \n es_flutter_component>lib>es_form>es_drop_down_button.dart \n and is used as: \n "
-      //         """EsDropDownButton(
-      //       items: [
-      //         AppLocalizations.of(context)!.dropDown1,
-      //         AppLocalizations.of(context)!.dropDown2,
-      //         AppLocalizations.of(context)!.dropDown3,
-      //       ],
-      //       onTapItems: [() {}, () {}, () {}],
-      //     )"""
-      // ),
-      // ContainerItems(widget:ESToggleButton(), title:AppLocalizations.of(context)!.toggleButton,
-      //     information:"It is toggle button located in: \n es_flutter_component>lib>es_form>es_toggle_button.dart \n and is used as: \n "
-      //         """ESToggleButton()"""
-      // ),
+
+
       // ContainerItems(
       //     widget:Center(
       //         child:Container()

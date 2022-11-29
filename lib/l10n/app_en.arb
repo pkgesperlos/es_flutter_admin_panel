@@ -255,12 +255,28 @@
 "multiselectsample": "Multi select sample",
 "checkboxsample": "Checkbox sample",
 "radiobuttonsgroup": "Radio buttons group",
-  "primaryformtitle": "Different types of primary Forms are available in panel by flutter code.",
-  "customformtitle": "Different types of custom Forms are available in panel by flutter code.",
+  "primaryformtitle": "Different types of primary forms are available in panel by flutter code.",
+  "customformtitle": "Different types of custom forms are available in panel by flutter code.",
 
   "switchbutton": "Switch Button",
   "checkbox": "Check box",
   "disabled": "Disabled",
+
+  "colorpicker": "Color picker",
+  "ringcolorpicker": "Ring Color picker",
+  "labelinput": "Label input",
+  "maskedinput": "Masked input",
+  "dateinput": "Date input",
+  "timeinput": "Time input",
+  "phonenumberinput": "Phone number input",
+  "shabanumberinput": "Shaba number input",
+  "currencyinput": "Currency input",
+  "ipaddressinput": "IP Address input",
+  "sliderwithjustintegerselect": "Slider with just integer select",
+  "sliderwithdoubleselect": "Slider with double select",
+  "sliderwithcurrencylabel": "Slider with currency unit label",
+  "sliderwithstringchoice": "Slider with string choice",
+  "advancedformtitle": "Different types of advanced forms are available in panel by flutter code.",
 
   "username": "Username",
   "usernamehint": "Enter your username:",
@@ -269,6 +285,24 @@
   "search": "Search",
   "components": "Components",
   "item": "Item number",
+
+  "theinputlengthistooshort": "The input length is too short!",
+  "youshouldacceptthetermsandconditionsbeforeregister": "You should accept the Terms and Conditions before register.",
+  "pleaseselectoneitem": "Please select one item.",
+  "pleaseselectavalue": "Please select a value.",
+  "pleaseselectatleastoneitem": "Please select at least one item.",
+
+  "validationforms": "Validation forms",
+  "validationformstitle": "Different types of validation forms are available in panel by flutter code.",
+
+  "stepperwithoutvalidationfield": "Stepper without validation field",
+  "stepperformwithvalidationfields": "Stepper form with validation fields",
+  "verticalstepperform": "Vertical stepper form",
+  "stepperformtitle": "Different types of stepper forms are available in panel by flutter code.",
+
+
+  "quilltexteditor": "Quill text editor",
+  "quilltexteditortitle": "Quill text editor is available in panel by flutter code.",
 
   "emailadress": "Email address",
   "password": "Password",

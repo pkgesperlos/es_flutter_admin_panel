@@ -39,7 +39,7 @@ class EsDropDownForm extends FormField<String> {
                 dropdownWidth: dropdownWidth,
                 dropdownItemsHeight: dropdownItemsHeight,
                 initialTitle: initialTitle??"انتخاب کنید:",
-                value: value,
+                value: state.value??"",
                 // value: state.value??value,
                 onChanged: state.didChange,
                 subTitleWidget: state.hasError

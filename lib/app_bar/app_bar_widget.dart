@@ -126,8 +126,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                EsSvgIcon(
-                  "assets/svgs/setting.svg",
+                EsSvgIcon("packages/es_flutter_component/assets/svgs/setting.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                 ),
                 EsHSpacer(
@@ -135,7 +134,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                   factor: 2,
                 ),
                 EsSvgIcon(
-                  "assets/svgs/message.svg",
+                  "packages/es_flutter_component/assets/svgs/message.svg",
                   size: StructureBuilder.dims!.h2IconSize*0.9,
                 ),
                 EsHSpacer(
@@ -143,7 +142,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                   factor: 2,
                 ),
                 EsSvgIcon(
-                  "assets/svgs/notification.svg",
+                  "packages/es_flutter_component/assets/svgs/notification.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                 ),
                 EsHSpacer(
@@ -238,7 +237,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
           child: Row(
             children: [
               EsSvgIcon(
-                "assets/svgs/down.svg",
+                "packages/es_flutter_component/assets/svgs/down.svg",
                 color: StructureBuilder.styles!.primaryLightColor,
                 size: StructureBuilder.dims!.h3IconSize * 0.5,
               ),

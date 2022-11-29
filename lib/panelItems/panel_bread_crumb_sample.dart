@@ -170,11 +170,11 @@ class PanelBreadCrumbSample extends StatelessWidget {
               BreadCrumbNavigator.icon(
                 currentRoute: AppLocalizations.of(context)!.breadcrumb,
                 breadButtonType: BreadButtonType.icon,
-                rtlSuffixIcon: EsSvgIcon("assets/svgs/CaretLeft.svg",
+                rtlSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretLeft.svg",
                 size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryColor,
                 ),
-                ltrSuffixIcon: EsSvgIcon("assets/svgs/CaretRight.svg",
+                ltrSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretRight.svg",
                   size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryColor,),
 
@@ -183,12 +183,12 @@ class PanelBreadCrumbSample extends StatelessWidget {
               BreadCrumbNavigator.icon(
                 currentRoute: AppLocalizations.of(context)!.breadcrumb,
                 breadButtonType: BreadButtonType.icon,
-                rtlSuffixIcon: EsSvgIcon("assets/svgs/CaretCircleLeft.svg",
+                rtlSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretCircleLeft.svg",
                 size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryColor,
                 ),
 
-                ltrSuffixIcon: EsSvgIcon("assets/svgs/CaretCircleRight.svg",
+                ltrSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretCircleRight.svg",
                   size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryColor,),
 
@@ -197,11 +197,11 @@ class PanelBreadCrumbSample extends StatelessWidget {
               BreadCrumbNavigator.icon(
                 currentRoute: AppLocalizations.of(context)!.breadcrumb,
                 breadButtonType: BreadButtonType.icon,
-                rtlSuffixIcon: EsSvgIcon("assets/svgs/CaretDoubleLeft.svg",
+                rtlSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretDoubleLeft.svg",
                 size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryColor,
                 ),
-                ltrSuffixIcon: EsSvgIcon("assets/svgs/CaretDoubleRight.svg",
+                ltrSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretDoubleRight.svg",
                   size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryColor,),
 
@@ -222,11 +222,11 @@ class PanelBreadCrumbSample extends StatelessWidget {
               """ BreadCrumbNavigator.icon(
                 currentRoute: AppLocalizations.of(context)!.breadcrumb,
                 breadButtonType: BreadButtonType.icon,
-                rtlSuffixIcon: EsSvgIcon("assets/svgs/CaretLeft.svg",
+                rtlSuffixIcon: EsSvgIcon('packages/es_flutter_component/assets/svgs/CaretLeft.svg",
                 size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.primaryColor,
                 ),
-                ltrSuffixIcon: EsSvgIcon("assets/svgs/CaretRight.svg",
+                ltrSuffixIcon: EsSvgIcon('packages/es_flutter_component/assets/svgs/CaretRight.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.primaryColor,),
 

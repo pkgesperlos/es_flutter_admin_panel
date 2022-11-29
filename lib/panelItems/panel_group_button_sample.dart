@@ -15,27 +15,27 @@ class PanelGroupButtonSample extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Widget> _iconList = [
       EsSvgIcon(
-        "assets/svgs/home.svg",
+        "packages/es_flutter_component/assets/svgs/home.svg",
         color: StructureBuilder.styles!.t6Color,
         size: StructureBuilder.dims!.h2IconSize,
       ),
       EsSvgIcon(
-        "assets/svgs/bookmarks.svg",
+        "packages/es_flutter_component/assets/svgs/bookmarks.svg",
         color: StructureBuilder.styles!.t6Color,
         size: StructureBuilder.dims!.h2IconSize,
       ),
       EsSvgIcon(
-        "assets/svgs/Gift.svg",
+        "packages/es_flutter_component/assets/svgs/Gift.svg",
         color: StructureBuilder.styles!.t6Color,
         size: StructureBuilder.dims!.h2IconSize,
       ),
       EsSvgIcon(
-        "assets/svgs/setting2.svg",
+        "packages/es_flutter_component/assets/svgs/setting2.svg",
         color: StructureBuilder.styles!.t6Color,
         size: StructureBuilder.dims!.h2IconSize,
       ),
       EsSvgIcon(
-        "assets/svgs/exit.svg",
+        "packages/es_flutter_component/assets/svgs/exit.svg",
         color: StructureBuilder.styles!.t6Color,
         size: StructureBuilder.dims!.h2IconSize,
       ),

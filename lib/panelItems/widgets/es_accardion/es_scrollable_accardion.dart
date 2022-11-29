@@ -110,14 +110,12 @@ class _EsScrollableAccardionState extends State<EsScrollableAccardion> {
 
                   trailing: isExpanded[index]
                       ? widget.closeIcon ??
-                      EsSvgIcon(
-                        "assets/svgs/up.svg",
+                      EsSvgIcon("packages/es_flutter_component/assets/svgs/up.svg",
                         size: StructureBuilder.dims!.h3IconSize,
                         color:widget.contentColor?? StructureBuilder.styles!.primaryColor,
                       )
                       : widget.openIcon ??
-                      EsSvgIcon(
-                        "assets/svgs/down.svg",
+                      EsSvgIcon("packages/es_flutter_component/assets/svgs/down.svg",
                         size: StructureBuilder.dims!.h3IconSize,
                         color:widget.contentColor?? StructureBuilder.styles!.primaryColor,
                       ),

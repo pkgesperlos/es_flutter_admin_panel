@@ -89,8 +89,7 @@ class _EsDropdownButtonState extends State<EsDropdownButton> {
                       Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
               child: Row(
                 children: [
-                  EsSvgIcon(
-                    "assets/svgs/down.svg",
+                  EsSvgIcon("packages/es_flutter_component/assets/svgs/down.svg",
                     color: StructureBuilder.styles!.primaryLightColor,
                     size: StructureBuilder.dims!.h3IconSize * 0.5,
                   ),

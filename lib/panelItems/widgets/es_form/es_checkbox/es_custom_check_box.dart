@@ -61,13 +61,13 @@
 //               (widget.value
 //                       ? (widget.selectedIcon ??
 //                           EsSvgIcon(
-//                             "assets/svgs/ticksquare.svg",
+//                             "packages/es_flutter_component/assets/svgs/ticksquare.svg",
 //                             size: StructureBuilder.dims!.h3IconSize,
 //                             color: StructureBuilder.styles!.primaryLightColor,
 //                           ))
 //                       : (widget.nonSelectedIcon ??
 //                           EsSvgIcon(
-//                             "assets/svgs/square.svg",
+//                             "packages/es_flutter_component/assets/svgs/square.svg",
 //                             size: StructureBuilder.dims!.h3IconSize,
 //                             color: StructureBuilder.styles!.primaryLightColor,
 //                           ))) ,
@@ -163,21 +163,21 @@ class _EsCustomCheckBoxState extends State<EsCustomCheckBox> {
                       ),
                       widget.disabled ?? false
                           ? EsSvgIcon(
-                              "assets/svgs/square.svg",
+                              "packages/es_flutter_component/assets/svgs/square.svg",
                               size: StructureBuilder.dims!.h3IconSize,
                               color: StructureBuilder.styles!.secondaryColor,
                             )
                           : _selected
                               ? (widget.selectedIcon ??
                                   EsSvgIcon(
-                                    "assets/svgs/ticksquare.svg",
+                                    "packages/es_flutter_component/assets/svgs/ticksquare.svg",
                                     size: StructureBuilder.dims!.h3IconSize,
                                     color:
                                         StructureBuilder.styles!.primaryColor,
                                   ))
                               : (widget.nonSelectedIcon ??
                                   EsSvgIcon(
-                                    "assets/svgs/square.svg",
+                                    "packages/es_flutter_component/assets/svgs/square.svg",
                                     size: StructureBuilder.dims!.h3IconSize,
                                     color:
                                         StructureBuilder.styles!.primaryColor,

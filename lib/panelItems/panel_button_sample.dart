@@ -145,7 +145,7 @@ class PanelButtonSample extends StatelessWidget {
             children: [
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/danger.svg",
+                  "packages/es_flutter_component/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -153,7 +153,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -161,7 +161,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/infocircle.svg",
+                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -169,7 +169,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!
                       .informationColor()
@@ -181,7 +181,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/danger.svg",
+                  "packages/es_flutter_component/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -189,7 +189,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -198,7 +198,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/infocircle.svg",
+                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -207,7 +207,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -222,7 +222,7 @@ class PanelButtonSample extends StatelessWidget {
               "They are icon buttons located in: \n es_flutter_component/es_button/es_icon_button.dart' \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/danger.svg",
+                  "packages/es_flutter_component/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -238,7 +238,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.error,
                 icon: EsSvgIcon(
-                  "assets/svgs/danger.svg",
+                  "packages/es_flutter_component/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -248,7 +248,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.success,
                 icon: EsSvgIcon(
-                  "assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -258,7 +258,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.warning,
                 icon: EsSvgIcon(
-                  "assets/svgs/infocircle.svg",
+                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -268,7 +268,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.information,
                 icon: EsSvgIcon(
-                  "assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!
                       .informationColor()
@@ -283,7 +283,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.error,
                 icon: EsSvgIcon(
-                  "assets/svgs/danger.svg",
+                  "packages/es_flutter_component/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -293,7 +293,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.success,
                 icon: EsSvgIcon(
-                  "assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -304,7 +304,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.warning,
                 icon: EsSvgIcon(
-                  "assets/svgs/infocircle.svg",
+                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -315,7 +315,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.information,
                 icon: EsSvgIcon(
-                  "assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -327,7 +327,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.error,
                 icon: EsSvgIcon(
-                  "assets/svgs/danger.svg",
+                  "packages/es_flutter_component/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -338,7 +338,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.success,
                 icon: EsSvgIcon(
-                  "assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -350,7 +350,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.warning,
                 icon: EsSvgIcon(
-                  "assets/svgs/infocircle.svg",
+                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -362,7 +362,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.information,
                 icon: EsSvgIcon(
-                  "assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!
                       .informationColor()
@@ -382,7 +382,7 @@ class PanelButtonSample extends StatelessWidget {
               """EsButton(
                 text: AppLocalizations.of(context)!.success,
                 icon: EsSvgIcon(
-                  "assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -400,7 +400,7 @@ class PanelButtonSample extends StatelessWidget {
             children: [
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.disableColor().disableDark,
                 ),
@@ -422,7 +422,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.information,
                 icon: EsSvgIcon(
-                  "assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.disableColor().disableDark,
                 ),
@@ -433,7 +433,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.information,
                 icon: EsSvgIcon(
-                  "assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -449,7 +449,7 @@ class PanelButtonSample extends StatelessWidget {
               "They are disabled buttons located in: \n es_flutter_component/es_button' \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.disableColor().disableDark,
                 ),
@@ -467,7 +467,7 @@ class PanelButtonSample extends StatelessWidget {
             children: [
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/InstagramLogo.svg",
+                  "packages/es_flutter_component/assets/svgs/InstagramLogo.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color:
                       StructureBuilder.styles!.socialNetworkColor().instagram,
@@ -478,7 +478,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/LinkedinLogo.svg",
+                  "packages/es_flutter_component/assets/svgs/LinkedinLogo.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.socialNetworkColor().linkedin,
                 ),
@@ -488,7 +488,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/TwitterLogo.svg",
+                  "packages/es_flutter_component/assets/svgs/TwitterLogo.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.socialNetworkColor().tweeter,
                 ),
@@ -498,7 +498,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/WhatsappLogo.svg",
+                  "packages/es_flutter_component/assets/svgs/WhatsappLogo.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.socialNetworkColor().whatsapp,
                 ),
@@ -508,7 +508,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/YoutubeLogo.svg",
+                  "packages/es_flutter_component/assets/svgs/YoutubeLogo.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.socialNetworkColor().youtube,
                 ),
@@ -518,7 +518,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/FacebookLogo.svg",
+                  "packages/es_flutter_component/assets/svgs/FacebookLogo.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.socialNetworkColor().facebook,
                 ),
@@ -528,7 +528,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/InstagramLogo.svg",
+                  "packages/es_flutter_component/assets/svgs/InstagramLogo.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -537,7 +537,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/LinkedinLogo.svg",
+                  "packages/es_flutter_component/assets/svgs/LinkedinLogo.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -546,7 +546,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/TwitterLogo.svg",
+                  "packages/es_flutter_component/assets/svgs/TwitterLogo.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -555,7 +555,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/WhatsappLogo.svg",
+                  "packages/es_flutter_component/assets/svgs/WhatsappLogo.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -564,7 +564,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/YoutubeLogo.svg",
+                  "packages/es_flutter_component/assets/svgs/YoutubeLogo.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -573,7 +573,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/FacebookLogo.svg",
+                  "packages/es_flutter_component/assets/svgs/FacebookLogo.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -587,7 +587,7 @@ class PanelButtonSample extends StatelessWidget {
               "They are  social network buttons located in: \n es_flutter_component/es_button/es_icon_button.dart' \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/InstagramLogo.svg",
+                  "packages/es_flutter_component/assets/svgs/InstagramLogo.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color:
                       StructureBuilder.styles!.socialNetworkColor().instagram,
@@ -607,7 +607,7 @@ class PanelButtonSample extends StatelessWidget {
             children: [
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.disableColor().disableDark,
                 ),
@@ -629,7 +629,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.information,
                 icon: EsSvgIcon(
-                  "assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.disableColor().disableDark,
                 ),
@@ -640,7 +640,7 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.information,
                 icon: EsSvgIcon(
-                  "assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.t6Color,
                 ),
@@ -669,7 +669,7 @@ class PanelButtonSample extends StatelessWidget {
                 children: [
                   EsIconButton(
                     EsSvgIcon(
-                      "assets/svgs/Megaphone.svg",
+                      "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                       size: StructureBuilder.dims!.h1IconSize,
                       color:
                           StructureBuilder.styles!.disableColor().disableDark,
@@ -708,7 +708,7 @@ class PanelButtonSample extends StatelessWidget {
                   EsButton(
                     text: AppLocalizations.of(context)!.information,
                     icon: EsSvgIcon(
-                      "assets/svgs/Megaphone.svg",
+                      "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                       size: StructureBuilder.dims!.h1IconSize,
                       color:
                           StructureBuilder.styles!.disableColor().disableDark,
@@ -726,7 +726,7 @@ class PanelButtonSample extends StatelessWidget {
                   EsButton(
                     text: AppLocalizations.of(context)!.information,
                     icon: EsSvgIcon(
-                      "assets/svgs/Megaphone.svg",
+                      "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                       size: StructureBuilder.dims!.h1IconSize,
                       color: StructureBuilder.styles!.t6Color,
                     ),
@@ -745,7 +745,7 @@ class PanelButtonSample extends StatelessWidget {
                 children: [
                   EsIconButton(
                     EsSvgIcon(
-                      "assets/svgs/Megaphone.svg",
+                      "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color:
                           StructureBuilder.styles!.disableColor().disableDark,
@@ -781,7 +781,7 @@ class PanelButtonSample extends StatelessWidget {
                   EsButton(
                     text: AppLocalizations.of(context)!.information,
                     icon: EsSvgIcon(
-                      "assets/svgs/Megaphone.svg",
+                      "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color:
                           StructureBuilder.styles!.disableColor().disableDark,
@@ -798,7 +798,7 @@ class PanelButtonSample extends StatelessWidget {
                   EsButton(
                     text: AppLocalizations.of(context)!.information,
                     icon: EsSvgIcon(
-                      "assets/svgs/Megaphone.svg",
+                      "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color: StructureBuilder.styles!.t6Color,
                     ),
@@ -816,7 +816,7 @@ class PanelButtonSample extends StatelessWidget {
                 children: [
                   EsIconButton(
                     EsSvgIcon(
-                      "assets/svgs/Megaphone.svg",
+                      "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                       size: StructureBuilder.dims!.h3IconSize,
                       color:
                           StructureBuilder.styles!.disableColor().disableDark,
@@ -852,7 +852,7 @@ class PanelButtonSample extends StatelessWidget {
                   EsButton(
                     text: AppLocalizations.of(context)!.information,
                     icon: EsSvgIcon(
-                      "assets/svgs/Megaphone.svg",
+                      "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                       size: StructureBuilder.dims!.h3IconSize,
                       color:
                           StructureBuilder.styles!.disableColor().disableDark,
@@ -870,7 +870,7 @@ class PanelButtonSample extends StatelessWidget {
                   EsButton(
                     text: AppLocalizations.of(context)!.information,
                     icon: EsSvgIcon(
-                      "assets/svgs/Megaphone.svg",
+                      "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                       size: StructureBuilder.dims!.h3IconSize,
                       color: StructureBuilder.styles!.t6Color,
                     ),

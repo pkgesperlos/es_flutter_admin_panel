@@ -58,7 +58,7 @@ class EsInformationButton extends StatelessWidget {
             showDialog(context: context, builder: (context) => customDialog());
           },
           child: icon ??
-              EsSvgIcon("assets/svgs/info.svg",
+              EsSvgIcon("packages/es_flutter_component/assets/svgs/info.svg",
                   color:
                       buttonFontColor ?? StructureBuilder.styles!.primaryColor,
                   size: size ?? StructureBuilder.dims!.h1FontSize)),

@@ -98,13 +98,13 @@ class _EsExpansionTileState extends State<EsExpansionTile> {
             trailing: isExpanded
                 ? widget.closeIcon ??
                 EsSvgIcon(
-                  "assets/svgs/up.svg",
+                  "packages/es_flutter_component/assets/svgs/up.svg",
                   size: StructureBuilder.dims!.h3IconSize*0.8,
                   color:widget.iconColor?? StructureBuilder.styles!.primaryColor,
                 )
                 : widget.openIcon ??
                 EsSvgIcon(
-                  "assets/svgs/down.svg",
+                  "packages/es_flutter_component/assets/svgs/down.svg",
                   size: StructureBuilder.dims!.h3IconSize*0.8,
                   color:widget.iconColor?? StructureBuilder.styles!.primaryColor,
                 ),

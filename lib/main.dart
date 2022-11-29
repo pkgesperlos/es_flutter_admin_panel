@@ -2,9 +2,10 @@
 import 'package:es_flutter_admin_panel/panelItems/panel_chart.dart';
 import 'package:es_flutter_admin_panel/language_change_provider.dart';
 import 'package:es_flutter_admin_panel/my_drawer.dart';
+import 'package:es_flutter_admin_panel/panelItems/panel_text_editor_sample.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_bread_crumb/app_navigator_observer.dart';
 
-import 'package:es_flutter_admin_panel/test.dart';
+import 'package:es_flutter_admin_panel/test0/test.dart';
 import 'package:es_flutter_admin_panel/panelItems/widgets/es_tree_list/tree_list_view.dart';
 import 'package:es_flutter_component/resources/constants/structure_config.dart';
 import 'package:es_flutter_component/resources/constants/structure_dims.dart';
@@ -92,7 +93,7 @@ class _MyApp extends State<MyApp> {
                   initialRoute: '/',
                   routes: {
                     '/': (context) => WidgetTreePanel(),
-                    // '/': (context) => EsLogin(),
+                    // '/': (context) => PanelTextEditorSample(),
 
                     // '/chart': (context) => MyDrawer(
                     //       child: PanelChart(),

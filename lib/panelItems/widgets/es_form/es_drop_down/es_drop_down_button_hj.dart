@@ -100,7 +100,7 @@ class _EsDropdownButtonSelectHjState extends State<EsDropdownButtonSelectHj> {
               child: Row(
                 children: [
                   EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     color: StructureBuilder.styles!.primaryLightColor,
                     size: StructureBuilder.dims!.h3IconSize * 0.5,
                   ),

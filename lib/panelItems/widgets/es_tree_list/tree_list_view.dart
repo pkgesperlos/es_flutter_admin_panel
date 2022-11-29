@@ -208,12 +208,12 @@ class _TreeListViewState extends State<TreeListView>
                             child: data.isSelected
                                 ? widget.favoriteIcon ??
                                     EsSvgIcon(
-                                      "assets/svgs/folderfavorite.svg",
+                                      "packages/es_flutter_component/assets/svgs/folderfavorite.svg",
                                       size: StructureBuilder.dims!.h3IconSize,
                                     )
                                 : widget.indicatorIcon ??
                                     EsSvgIcon(
-                                      "assets/svgs/folder.svg",
+                                      "packages/es_flutter_component/assets/svgs/folder.svg",
                                       size: StructureBuilder.dims!.h3IconSize,
                                     )),
                       ),
@@ -241,7 +241,7 @@ class _TreeListViewState extends State<TreeListView>
                     },
                     child: widget.addIcon ??
                         EsSvgIcon(
-                          "assets/svgs/add.svg",
+                          "packages/es_flutter_component/assets/svgs/add.svg",
                           size: StructureBuilder.dims!.h3IconSize,
                         )),
               )

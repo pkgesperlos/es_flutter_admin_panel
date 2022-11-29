@@ -8,8 +8,11 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class EsLabelInputSepratedDropDown extends StatefulWidget {
   List labelList;
+  ValueChanged<List<String>>? onChanged;
+  Widget? subTitleWidget;
 
-  EsLabelInputSepratedDropDown({Key? key, required this.labelList}) : super(key: key);
+  EsLabelInputSepratedDropDown({Key? key, required this.labelList,
+    this.onChanged,this.subTitleWidget}) : super(key: key);
 
   @override
   _EsLabelInputSepratedDropDownState createState() => _EsLabelInputSepratedDropDownState();
@@ -17,9 +20,9 @@ class EsLabelInputSepratedDropDown extends StatefulWidget {
 //
 
 String _value1 = "";
-List _List = [];
+List<String> _List = [];
 
-List stringList(list) {
+List<String> stringList(list) {
   List<String> _stringList = [];
   for (int i = 0; i < list.length; i++) {
     _stringList.add(list[i]["title"]);
@@ -71,6 +74,7 @@ class _EsLabelInputSepratedDropDownState extends State<EsLabelInputSepratedDropD
                   ["title"]);
                 }
               });
+              widget.onChanged!(_List);
             },
           ),
         ),
@@ -79,8 +83,8 @@ class _EsLabelInputSepratedDropDownState extends State<EsLabelInputSepratedDropD
             vertical: StructureBuilder.dims!.h1Padding,
             horizontal: StructureBuilder.dims!.h1Padding,
           ),
-          // width: StructureBuilder.dims!.h0Padding * 20,
-          // height: StructureBuilder.dims!.h0Padding * 2,
+          // width: MediaQuery.of(context).size.width/3.5,
+          height: StructureBuilder.dims!.h0Padding * 2,
           decoration: BoxDecoration(
             border:
             Border.all(color: StructureBuilder.styles!.primaryColor),
@@ -123,6 +127,7 @@ class _EsLabelInputSepratedDropDownState extends State<EsLabelInputSepratedDropD
                 ),
               )),
         ),
+        widget.subTitleWidget??Container()
 
 
 

@@ -84,7 +84,7 @@ class _EsDropDownState extends State<EsDropDown> {
               child: Row(
                 children: [
                   EsSvgIcon(
-                    "assets/svgs/down.svg",
+                    "packages/es_flutter_component/assets/svgs/down.svg",
                     color: StructureBuilder.styles!.primaryLightColor,
                     size: StructureBuilder.dims!.h3IconSize * 0.5,
                   ),
@@ -108,10 +108,12 @@ class _EsDropDownState extends State<EsDropDown> {
             value: _value,
             onChanged: (value) {
               setState(() {
-                _value = value.toString();
+             if(value!=""){
+               _value = value.toString();
 
-                widget.onChanged!(value.toString());
-                widget.controller==null?null:widget.controller!.text=value!;
+               widget.onChanged!(value.toString());
+               widget.controller==null?null:widget.controller!.text=value!;
+             }
               });
             },
             itemHeight:

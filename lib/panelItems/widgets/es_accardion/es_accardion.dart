@@ -110,13 +110,13 @@ class _EsAccardionState extends State<EsAccardion> {
                 trailing: isExpanded[index]
                     ? widget.closeIcon ??
                         EsSvgIcon(
-                          "assets/svgs/up.svg",
+                          "packages/es_flutter_component/assets/svgs/up.svg",
                           size: StructureBuilder.dims!.h3IconSize,
                           color:widget.contentColor?? StructureBuilder.styles!.primaryColor,
                         )
                     : widget.openIcon ??
                         EsSvgIcon(
-                          "assets/svgs/down.svg",
+                          "packages/es_flutter_component/assets/svgs/down.svg",
                           size: StructureBuilder.dims!.h3IconSize,
                           color:widget.contentColor?? StructureBuilder.styles!.primaryColor,
                         ),

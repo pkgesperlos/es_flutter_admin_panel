@@ -134,8 +134,8 @@ int _index=(controller.page != null ? controller.page!.round() % totalPage : 0);
                 child: Center(
                   child: EsSvgIcon(
 
-                   rtl? "assets/svgs/CaretRight.svg"
-                    :"assets/svgs/CaretLeft.svg",
+                   rtl? "packages/es_flutter_component/assets/svgs/CaretRight.svg"
+                    :"packages/es_flutter_component/assets/svgs/CaretLeft.svg",
 
                     color: _textColor,
                     size: _size / 2,
@@ -176,8 +176,8 @@ int _index=(controller.page != null ? controller.page!.round() % totalPage : 0);
                 height: _size,
                 child: Center(
                   child: EsSvgIcon(
-                   rtl? "assets/svgs/CaretLeft.svg":
-                   "assets/svgs/CaretRight.svg",
+                   rtl? "packages/es_flutter_component/assets/svgs/CaretLeft.svg":
+                   "packages/es_flutter_component/assets/svgs/CaretRight.svg",
                     color:
                     // index == totalPage-1 ? _disabledColor :
                     _textColor,

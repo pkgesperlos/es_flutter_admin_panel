@@ -47,10 +47,10 @@ class _PanelTreeListSampleState extends State<PanelTreeListSample> {
               height: 500,
               child: TreeListView(
                 favoriteIcon:  EsSvgIcon(
-                "assets/svgs/ticksquare.svg",
+                "packages/es_flutter_component/assets/svgs/ticksquare.svg",
                 size: StructureBuilder.dims!.h3IconSize,
               ),indicatorIcon:  EsSvgIcon(
-                "assets/svgs/square.svg",
+                "packages/es_flutter_component/assets/svgs/square.svg",
                 size: StructureBuilder.dims!.h3IconSize,
               ),
               )),
@@ -62,10 +62,10 @@ class _PanelTreeListSampleState extends State<PanelTreeListSample> {
               """
               TreeListView(
                 favoriteIcon:  EsSvgIcon(
-                "assets/svgs/ticksquare.svg",
+                "packages/es_flutter_component/assets/svgs/ticksquare.svg",
                 size: StructureBuilder.dims!.h3IconSize,
               ),indicatorIcon:  EsSvgIcon(
-                "assets/svgs/square.svg",
+                "packages/es_flutter_component/assets/svgs/square.svg",
                 size: StructureBuilder.dims!.h3IconSize,
               ),
               )

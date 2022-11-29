@@ -62,7 +62,7 @@ class _PanelTabBarNavigationSampleState
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          EsSvgIcon("assets/svgs/GraduationCap.svg",
+          EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
           color: StructureBuilder.styles!.primaryColor,
             size: StructureBuilder.dims!.h2IconSize,
           ),

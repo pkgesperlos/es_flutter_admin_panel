@@ -260,7 +260,7 @@ class _PanelResponsiveTableSampleState extends State<PanelResponsiveTableSample>
                                                 }),
                                             suffixIcon: IconButton(
                                                 icon:EsSvgIcon(
-                                                  "assets/svgs/search.svg"
+                                                  "packages/es_flutter_component/assets/svgs/search.svg"
                                                   ,size: StructureBuilder.dims!.h3IconSize,
                                                 ), onPressed: () {})),
                                         onSubmitted: (value) {
@@ -272,7 +272,7 @@ class _PanelResponsiveTableSampleState extends State<PanelResponsiveTableSample>
                                     children: [
                                       IconButton(
                                           icon: EsSvgIcon(
-                                            "assets/svgs/search.svg"
+                                            "packages/es_flutter_component/assets/svgs/search.svg"
                                                 ,size: StructureBuilder.dims!.h3IconSize,
                                           ),
                                           onPressed: () {
@@ -282,7 +282,7 @@ class _PanelResponsiveTableSampleState extends State<PanelResponsiveTableSample>
                                           }),
                                       EsHSpacer(),
                                       EsSvgIcon(
-                                        "assets/svgs/refresh.svg"
+                                        "packages/es_flutter_component/assets/svgs/refresh.svg"
                                         ,size: StructureBuilder.dims!.h3IconSize,
                                       ),
                                     ],
@@ -465,7 +465,7 @@ class _PanelResponsiveTableSampleState extends State<PanelResponsiveTableSample>
                                                 }),
                                             suffixIcon: IconButton(
                                                 icon:EsSvgIcon(
-                                                  "assets/svgs/search.svg"
+                                                  "packages/es_flutter_component/assets/svgs/search.svg"
                                                   ,size: StructureBuilder.dims!.h3IconSize,
                                                 ), onPressed: () {})),
                                         onSubmitted: (value) {
@@ -477,7 +477,7 @@ class _PanelResponsiveTableSampleState extends State<PanelResponsiveTableSample>
                                     children: [
                                       IconButton(
                                           icon: EsSvgIcon(
-                                            "assets/svgs/search.svg"
+                                            "packages/es_flutter_component/assets/svgs/search.svg"
                                                 ,size: StructureBuilder.dims!.h3IconSize,
                                           ),
                                           onPressed: () {
@@ -487,7 +487,7 @@ class _PanelResponsiveTableSampleState extends State<PanelResponsiveTableSample>
                                           }),
                                       EsHSpacer(),
                                       EsSvgIcon(
-                                        "assets/svgs/refresh.svg"
+                                        "packages/es_flutter_component/assets/svgs/refresh.svg"
                                         ,size: StructureBuilder.dims!.h3IconSize,
                                       ),
                                     ],

@@ -32,7 +32,7 @@ class PanelSweetAlertSample extends StatelessWidget {
             children: [
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/danger.svg",
+                  "packages/es_flutter_component/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -50,7 +50,7 @@ class PanelSweetAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -67,7 +67,7 @@ class PanelSweetAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/infocircle.svg",
+                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -103,7 +103,7 @@ class PanelSweetAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!
                       .informationColor()
@@ -200,7 +200,7 @@ class PanelSweetAlertSample extends StatelessWidget {
               "They are sweet alerts that the art_sweetalert package is added in pubspec.yaml 's dependencies \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
-                  "assets/svgs/danger.svg",
+                  "packages/es_flutter_component/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
