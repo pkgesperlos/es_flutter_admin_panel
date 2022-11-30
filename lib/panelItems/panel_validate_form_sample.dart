@@ -1,18 +1,18 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_checkbox/es_custom_chechbox_group.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_checkbox/es_custom_checkbox_form.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_checkbox/es_custom_checkbox_group_form.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_drop_down/es_drop_down.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_drop_down/es_drop_down_form.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_drop_down/es_label_input_form.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_radio_button/es_radio_button_group.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_radio_button/es_radio_button_group_form.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_slider/es_slider.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_slider/es_slider_form.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_text_field/es_text_field.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_text_field/es_text_field_form.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
+import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_chechbox_group.dart';
+import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_checkbox_form.dart';
+import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_checkbox_group_form.dart';
+import 'package:es_flutter_component/components/es_form/es_drop_down/es_drop_down.dart';
+import 'package:es_flutter_component/components/es_form/es_drop_down/es_drop_down_form.dart';
+import 'package:es_flutter_component/components/es_form/es_drop_down/es_label_input_form.dart';
+import 'package:es_flutter_component/components/es_form/es_radio_button/es_radio_button_group.dart';
+import 'package:es_flutter_component/components/es_form/es_radio_button/es_radio_button_group_form.dart';
+import 'package:es_flutter_component/components/es_form/es_slider/es_slider.dart';
+import 'package:es_flutter_component/components/es_form/es_slider/es_slider_form.dart';
+import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field.dart';
+import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field_form.dart';
+import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
+import 'components/container_items.dart';
+import 'components/page_title_container.dart';
 import 'package:es_flutter_component/es_button/es_button.dart';
 import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
@@ -31,21 +31,21 @@ class PanelValidateFormSample extends StatefulWidget {
       _PanelValidateFormSampleState();
 }
 
-bool _value1 = false;
-List labelList2 = [
-  {"title": "item1", "_id": "1"},
-  {"title": "item2", "_id": "2"},
-  {"title": "item3", "_id": "3"},
-  {"title": "item4", "_id": "4"},
-  {"title": "item5", "_id": "5"},
-];
-String _value3 = "";
-TextEditingController _controller = TextEditingController();
-List<TextEditingController> _controllerList =
-    List.generate(9, (index) => TextEditingController());
-
 class _PanelValidateFormSampleState extends State<PanelValidateFormSample> {
   final _formkey = GlobalKey<FormState>();
+
+  bool _value1 = false;
+  List _labelList2 = [
+    {"title": "item1", "_id": "1"},
+    {"title": "item2", "_id": "2"},
+    {"title": "item3", "_id": "3"},
+    {"title": "item4", "_id": "4"},
+    {"title": "item5", "_id": "5"},
+  ];
+  String _value3 = "";
+  TextEditingController _controller = TextEditingController();
+  List<TextEditingController> _controllerList =
+      List.generate(9, (index) => TextEditingController());
 
   @override
   void initState() {
@@ -76,7 +76,6 @@ class _PanelValidateFormSampleState extends State<PanelValidateFormSample> {
                     spacing: StructureBuilder.dims!.h0Padding,
                     runSpacing: StructureBuilder.dims!.h0Padding,
                     children: [
-
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -191,7 +190,6 @@ class _PanelValidateFormSampleState extends State<PanelValidateFormSample> {
                           ),
                         ],
                       ),
-
                       EsCustomCheckBoxForm(
                         titleWidget: EsTitle(
                           AppLocalizations.of(context)!.pleaseselectme,
@@ -206,10 +204,12 @@ class _PanelValidateFormSampleState extends State<PanelValidateFormSample> {
                       ),
                       Column(
                         children: [
-                          EsOrdinaryText(AppLocalizations.of(context)!.labelinput,),
+                          EsOrdinaryText(
+                            AppLocalizations.of(context)!.labelinput,
+                          ),
                           EsVSpacer(),
                           EsLabelInputForm(
-                            labelList: labelList2,
+                            labelList: _labelList2,
                             validator: (value) {
                               if (value == null) {
                                 return AppLocalizations.of(context)!
@@ -229,7 +229,6 @@ class _PanelValidateFormSampleState extends State<PanelValidateFormSample> {
                           }
                         },
                       ),
-
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -240,7 +239,6 @@ class _PanelValidateFormSampleState extends State<PanelValidateFormSample> {
                           EsVSpacer(
                             big: true,
                           ),
-
                           EsTextFieldForm(
                             hint: AppLocalizations.of(context)!.textArea,
                             label: AppLocalizations.of(context)!.textArea,
@@ -252,8 +250,6 @@ class _PanelValidateFormSampleState extends State<PanelValidateFormSample> {
                               }
                             },
                           ),
-
-
                         ],
                       ),
                     ],

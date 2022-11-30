@@ -1,8 +1,9 @@
 import 'dart:math';
 
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_tree_list/tree_list_view.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
+
+import 'package:es_flutter_component/components/es_tree_list/tree_list_view.dart';
+import 'components/container_items.dart';
+import 'components/page_title_container.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';

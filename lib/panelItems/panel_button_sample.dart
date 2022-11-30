@@ -1,8 +1,7 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_button/es_button.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_button/es_icon_button.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_group_button/group_button.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
+import 'components/container_items.dart';
+import 'components/page_title_container.dart';
+import 'package:es_flutter_component/components/es_button/es_button.dart';
+import 'package:es_flutter_component/components/es_button/es_icon_button.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
@@ -525,6 +524,16 @@ class PanelButtonSample extends StatelessWidget {
                 fillColor: StructureBuilder.styles!.t6Color,
                 borderColor:
                     StructureBuilder.styles!.socialNetworkColor().facebook,
+              ),
+              EsIconButton(
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/GoogleLogo.svg",
+                  size: StructureBuilder.dims!.h2IconSize,
+                  color: StructureBuilder.styles!.socialNetworkColor().google,
+                ),
+                fillColor: StructureBuilder.styles!.t6Color,
+                borderColor:
+                    StructureBuilder.styles!.socialNetworkColor().google,
               ),
               EsIconButton(
                 EsSvgIcon(

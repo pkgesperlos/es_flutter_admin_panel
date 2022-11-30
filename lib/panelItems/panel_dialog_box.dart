@@ -1,4 +1,4 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
+
 import 'package:es_flutter_component/es_dialog/es_awesome_dialog/es_autohide_dialog.dart';
 import 'package:es_flutter_component/es_dialog/es_awesome_dialog/es_body_dialog.dart';
 import 'package:es_flutter_component/es_dialog/es_awesome_dialog/es_error_dialog.dart';
@@ -14,6 +14,8 @@ import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'components/container_items.dart';
 
 class PanelDialogBox extends StatelessWidget {
   const PanelDialogBox({Key? key}) : super(key: key);

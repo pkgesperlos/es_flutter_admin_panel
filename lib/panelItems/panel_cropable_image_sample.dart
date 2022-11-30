@@ -1,9 +1,10 @@
 // import 'dart:io';
 //
-// import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-// import 'package:es_flutter_admin_panel/panelItems/widgets/es_image/es_dialog_cropper.dart';
-// import 'package:es_flutter_admin_panel/panelItems/widgets/es_image/es_zoomable_image.dart';
-// import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
+// 
+// import 'package:es_flutter_component/components/es_image/es_dialog_cropper.dart';
+// import 'package:es_flutter_component/components/es_image/es_zoomable_image.dart';
+// import 'components/container_items.dart';
+import 'components/page_title_container.dart';
 // import 'package:es_flutter_component/resources/structure_builder.dart';
 // import 'package:flutter/material.dart';
 // import 'package:flutter_bootstrap/flutter_bootstrap.dart';

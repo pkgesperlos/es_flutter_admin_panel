@@ -1,4 +1,4 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_accardion/es_expansion_tile.dart';
+import 'package:es_flutter_component/components/es_accardion/es_expansion_tile.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
@@ -15,6 +15,7 @@ import '../panelItems/panel_alert_sample.dart';
 import '../panelItems/panel_avatar_sample.dart';
 import '../panelItems/panel_bread_crumb_sample.dart';
 import '../panelItems/panel_button_sample.dart';
+import '../panelItems/panel_chart_sample.dart';
 import '../panelItems/panel_color_sample.dart';
 import '../panelItems/panel_cropable_image_sample.dart';
 import '../panelItems/panel_custom_form_sample.dart';
@@ -283,6 +284,11 @@ class _DrawerPageState extends State<DrawerPage> {
             title:"Icons",
             icon: Icons.circle,
             page: PanelIconsSample(),
+            pageRout: '/form'),
+        buttonsInfo(
+            title:"Charts",
+            icon: Icons.circle,
+            page: PaneChartSample(),
             pageRout: '/form'),
 
 

@@ -45,19 +45,19 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: ^0.17.0
-  dropdown_button2: ^1.7.2
-  carousel_slider: ^4.1.1
-  responsive_table: ^0.2.0+2
-  percent_indicator: ^4.2.2
-  image_cropper: ^3.0.1
-  art_sweetalert: ^0.0.2
-  fluttertoast: ^8.1.1
-  tutorial_coach_mark: ^1.2.4
-  list_treeview: ^0.3.1
-  flutter_colorpicker: ^1.0.3
-  flutter_quill: 6.0.0
-  delta_markdown: ^0.8.0
-  markdown: ^6.0.1
+#  dropdown_button2: ^1.7.2
+#  carousel_slider: ^4.1.1
+#  responsive_table: ^0.2..2
+#  image_cropper: ^3.0.1
+#  art_sweetalert: ^0.0.2
+#  fluttertoast: ^8.1.1
+#  tutorial_coach_mark: ^1.2.4
+#  list_treeview: ^0.3.10+2
+#  percent_indicator: ^4.2
+#  flutter_colorpicker: ^1.0.3
+#  flutter_quill: 6.0.0
+#  delta_markdown: ^0.8.0
+#  markdown: ^6.0.1
 
 #  html_editor_enhanced: ^2.0.0
 #  webview_flutter: ^2.0.7
@@ -100,7 +100,7 @@ flutter:
   assets:
     - assets/
     - assets/images/
-#    - assets/svgs/
+    - assets/svgs/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

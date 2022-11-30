@@ -1,14 +1,15 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_checkbox/es_custom_chechbox_group.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_checkbox/es_custom_check_box.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_checkbox/es_custom_checkbox_form.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_drop_down/es_drop_down.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_radio_button/es_radio_button_group.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_radio_button/es_radio_button_group_form.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_slider/es_slider.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_text_field/es_text_field.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
+
+import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_chechbox_group.dart';
+import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_check_box.dart';
+import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_checkbox_form.dart';
+import 'package:es_flutter_component/components/es_form/es_drop_down/es_drop_down.dart';
+import 'package:es_flutter_component/components/es_form/es_radio_button/es_radio_button_group.dart';
+import 'package:es_flutter_component/components/es_form/es_radio_button/es_radio_button_group_form.dart';
+import 'package:es_flutter_component/components/es_form/es_slider/es_slider.dart';
+import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field.dart';
+import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
+import 'components/container_items.dart';
+import 'components/page_title_container.dart';
 import 'package:es_flutter_component/es_button/es_button.dart';
 import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';

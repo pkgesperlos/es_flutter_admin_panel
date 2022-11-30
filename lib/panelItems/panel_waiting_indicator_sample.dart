@@ -1,12 +1,13 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_waiting_indicator/es_blink_waiting_indicator.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
+
+import 'package:es_flutter_component/components/es_button/es_button.dart';
+import 'package:es_flutter_component/components/es_waiting_indicator/es_blink_waiting_indicator.dart';
+import 'components/container_items.dart';
+import 'components/page_title_container.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'widgets/es_button/es_button.dart';
 
 class PanelWaitingIndicatorSample extends StatefulWidget {
   PanelWaitingIndicatorSample({Key? key}) : super(key: key);

@@ -1,13 +1,15 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_accardion/es_accardion.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_accardion/es_scrollable_accardion.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
+
+import 'package:es_flutter_component/components/es_accardion/es_accardion.dart';
+import 'package:es_flutter_component/components/es_accardion/es_scrollable_accardion.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'components/container_items.dart';
+import 'components/page_title_container.dart';
 
 class PanelAccardionSample extends StatelessWidget {
   const PanelAccardionSample({Key? key}) : super(key: key);

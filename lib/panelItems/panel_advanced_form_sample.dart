@@ -1,15 +1,16 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_date_time_picker/es_android_time_picker.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_date_time_picker/es_cupertino_time_picker.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_date_time_picker/es_english_date_picker.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_date_time_picker/es_persian_date_picker.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_drop_down/es_label_input.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_drop_down/es_label_input_seprated_drop_down.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_file_picker/es_file_picker.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_slider/es_range_slider.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_slider/es_slider.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_text_field/es_masked_input_textfield/es_masked_input_text_field.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
+import 'components/container_items.dart';
+import 'components/page_title_container.dart';
+import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_android_time_picker.dart';
+import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_cupertino_time_picker.dart';
+import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_english_date_picker.dart';
+import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_persian_date_picker.dart';
+import 'package:es_flutter_component/components/es_form/es_drop_down/es_label_input.dart';
+import 'package:es_flutter_component/components/es_form/es_drop_down/es_label_input_seprated_drop_down.dart';
+import 'package:es_flutter_component/components/es_form/es_file_picker/es_file_picker.dart';
+import 'package:es_flutter_component/components/es_form/es_slider/es_range_slider.dart';
+import 'package:es_flutter_component/components/es_form/es_slider/es_slider.dart';
+import 'package:es_flutter_component/components/es_form/es_text_field/es_masked_input_textfield/es_masked_input_text_field.dart';
+
 import 'package:es_flutter_component/es_button/es_button.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
@@ -32,8 +33,8 @@ class PanelAdvancedFormSample extends StatefulWidget {
 }
 
 class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
-  EsFilePickerController filePickerController = EsFilePickerController();
-  TextEditingController textController = TextEditingController(
+  EsFilePickerController _filePickerController = EsFilePickerController();
+  TextEditingController _textController = TextEditingController(
   text:
   '#2F19DB');
   double _value1 = 0;
@@ -42,13 +43,13 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
   RangeValues _value3 = RangeValues(2000, 8000);
   Color _value4 = StructureBuilder.styles!.primaryColor;
   Color _value5 = StructureBuilder.styles!.primaryColor;
-  List<String> mounthList=["اسفند",
+  List<String> _mounthList=["اسفند",
     "فروردین","اردیبهشت","خرداد",
     "تیر","مرداد","شهریور",
     "مهر","آبان","آذر",
     "دی","بهمن",
   ];
-  List labelList = [
+  List _labelList = [
     {"title": "item1", "_id": "1"},
     {"title": "item2", "_id": "2"},
     {"title": "item3", "_id": "3"},
@@ -323,7 +324,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
                       max: 11,
                       // divisions: 11,
                       subTitleWidget: EsTitle(
-                       mounthList[(_value6.round())]
+                       _mounthList[(_value6.round())]
                       ),
                       onChanged: (value) {
                         setState(() {
@@ -406,7 +407,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
               direction: Axis.vertical,
               children: [
                 EsLabelInput(labelList: labelList2),
-                EsLabelInputSepratedDropDown(labelList: labelList),
+                EsLabelInputSepratedDropDown(labelList: _labelList),
               ],
             ),
           ),
@@ -477,7 +478,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
                       content: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          EsFilePicker(controller: filePickerController,),
+                          EsFilePicker(controller: _filePickerController,),
                         ],
                       ),
                     );

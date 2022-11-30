@@ -1,6 +1,7 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_form/es_text_editor/es_text_editor.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
+
+import 'package:es_flutter_component/components/es_form/es_text_editor/es_text_editor.dart';
+import 'components/container_items.dart';
+import 'components/page_title_container.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

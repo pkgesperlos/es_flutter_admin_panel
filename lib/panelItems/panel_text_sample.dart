@@ -1,13 +1,14 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_dotted_text.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_header.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_icon_text.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_label_text.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_marked_text.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_subtitle.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_title.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
+
+import 'package:es_flutter_component/components/es_text/es_dotted_text.dart';
+import 'package:es_flutter_component/components/es_text/es_header.dart';
+import 'package:es_flutter_component/components/es_text/es_icon_text.dart';
+import 'package:es_flutter_component/components/es_text/es_label_text.dart';
+import 'package:es_flutter_component/components/es_text/es_marked_text.dart';
+import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_component/components/es_text/es_subtitle.dart';
+import 'package:es_flutter_component/components/es_text/es_title.dart';
+import 'components/container_items.dart';
+import 'components/page_title_container.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/resources/Constants/styles.dart';

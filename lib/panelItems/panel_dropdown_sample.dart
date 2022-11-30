@@ -1,8 +1,9 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_button/es_button.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_drop_down/es_drop_down_button.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_text/es_header.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
+
+import 'package:es_flutter_component/components/es_button/es_button.dart';
+import 'package:es_flutter_component/components/es_drop_down/es_drop_down_button.dart';
+import 'package:es_flutter_component/components/es_text/es_header.dart';
+import 'components/container_items.dart';
+import 'components/page_title_container.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/es_text/es_title.dart';

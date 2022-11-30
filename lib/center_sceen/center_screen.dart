@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
-
-import '../panelItems/panel_chart.dart';
+import '../panelItems/panel_chart_sample.dart';
 
 
 
@@ -19,7 +18,7 @@ class CenterScreen extends StatefulWidget {
 
 class _CenterScreen extends State<CenterScreen> {
 
-  Widget page=PanelChart();
+  Widget page=PaneChartSample();
 
 //function for change page by global key in drawer page
  changePage(currentPage){

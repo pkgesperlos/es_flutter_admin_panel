@@ -1,4 +1,4 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
+
 import 'package:es_flutter_component/es_button/es_button.dart';
 import 'package:es_flutter_component/es_notification/es_ordinary_notification.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
@@ -6,6 +6,8 @@ import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'components/container_items.dart';
 
 class PanelNotification extends StatelessWidget {
   const PanelNotification({Key? key}) : super(key: key);

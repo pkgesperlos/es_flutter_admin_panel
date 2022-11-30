@@ -1,4 +1,4 @@
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
+
 import 'package:es_flutter_component/es_form/es_animated_checkbox.dart';
 import 'package:es_flutter_component/es_form/es_checkbox.dart';
 import 'package:es_flutter_component/es_form/es_checkbox_vallidation.dart';
@@ -22,6 +22,8 @@ import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'components/container_items.dart';
 
 
 class PanelForm extends StatelessWidget {

@@ -1,12 +1,9 @@
 // @dart=2.9
-import 'package:es_flutter_admin_panel/panelItems/panel_chart.dart';
 import 'package:es_flutter_admin_panel/language_change_provider.dart';
-import 'package:es_flutter_admin_panel/my_drawer.dart';
-import 'package:es_flutter_admin_panel/panelItems/panel_text_editor_sample.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_bread_crumb/app_navigator_observer.dart';
-
-import 'package:es_flutter_admin_panel/test0/test.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/es_tree_list/tree_list_view.dart';
+import 'package:es_flutter_admin_panel/panelItems/es_register/es_lock_screen.dart';
+import 'package:es_flutter_admin_panel/panelItems/es_register/es_login.dart';
+import 'package:es_flutter_admin_panel/panelItems/es_register/es_recover_password.dart';
+import 'package:es_flutter_component/components/es_bread_crumb/app_navigator_observer.dart';
 import 'package:es_flutter_component/resources/constants/structure_config.dart';
 import 'package:es_flutter_component/resources/constants/structure_dims.dart';
 import 'package:es_flutter_component/resources/constants/structure_styles.dart';
@@ -16,9 +13,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 
-import 'es_login.dart';
-import 'images/widget_tree_panel.dart';
-import 'panelItems/panel_form.dart';
+import 'panelItems/es_register/es_signin.dart';
 
 void main() {
   // [
@@ -92,31 +87,16 @@ class _MyApp extends State<MyApp> {
 
                   initialRoute: '/',
                   routes: {
-                    '/': (context) => WidgetTreePanel(),
-                    // '/': (context) => PanelTextEditorSample(),
+                    // '/': (context) => WidgetTreePanel(),
+                    '/': (context) => EsLogin(),
+                    '/locksceen': (context) => EsLockScreen(),
+                    '/recoverpass': (context) => EsRecoverPassword(),
+                    '/signin': (context) => EsSignin(),
+                    '/login': (context) => EsLogin(),
 
-                    // '/chart': (context) => MyDrawer(
-                    //       child: PanelChart(),
-                    //     ),
-                    // '/form': (context) => MyDrawer(
-                    //       child: PanelForm(),
-                    //     ),
 
-                    //   '/notification': (context) => PanelNotification(),
-                    //   '/chart': (context) => PanelChart(),
-                    //   '/responsiveTable': (context) => PanelEditableTable(),
-                    //   '/editableTable': (context) => PanelEditableTable(),
-                    //   '/simpleTable': (context) => PanelSimpleTable(),
-                    //   '/progressbar': (context) => PanelProgressBar(),
-                    //   '/slider': (context) => PanelSlider(),
-                    //   '/image': (context) => PanelImage(),
-                    //   '/form': (context) => PanelForm(),
-                    //   '/dialog': (context) => PanelDialogBox(),
-                    //   '/textSample': (context) => PanelTextSample(),
-                    //   '/buttonSample': (context) => PanelTextSample(),
-                    //   '/login': (context) => EsForm(),
                   },
-                  // home:EsSimpleTable(),
+                  // home:EsLogin(),
                 ),
               )),
     );

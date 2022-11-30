@@ -1,6 +1,7 @@
 import 'package:art_sweetalert/art_sweetalert.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/container_items.dart';
-import 'package:es_flutter_admin_panel/panelItems/widgets/page_title_container.dart';
+
+import 'components/container_items.dart';
+import 'components/page_title_container.dart';
 import 'package:es_flutter_component/es_alert/es_alerts.dart';
 import 'package:es_flutter_component/es_button/es_button.dart';
 import 'package:es_flutter_component/es_button/es_icon_button.dart';
