@@ -527,7 +527,7 @@ class PanelButtonSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/GoogleLogo.svg",
+                  "packages/es_flutter_component/assets/svgs/Google.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.socialNetworkColor().google,
                 ),
@@ -588,6 +588,14 @@ class PanelButtonSample extends StatelessWidget {
                 ),
                 fillColor:
                     StructureBuilder.styles!.socialNetworkColor().facebook,
+              ),EsIconButton(
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/Google.svg",
+                  size: StructureBuilder.dims!.h2IconSize,
+                  color: StructureBuilder.styles!.t6Color,
+                ),
+                fillColor:
+                    StructureBuilder.styles!.socialNetworkColor().google,
               ),
             ],
           )),

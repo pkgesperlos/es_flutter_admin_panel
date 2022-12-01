@@ -349,7 +349,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: c3e51426872d9c5e97205d0d9f2c805545332e50
+      resolved-ref: be17e8afee33dfb1c33e5840bc383695e44468ad
       url: "git@github.com:pkgesperlos/es_flutter_component.git"
     source: git
     version: "1.0.0+1"
@@ -1225,6 +1225,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.9"
+  timelines:
+    dependency: "direct main"
+    description:
+      name: timelines
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.0"
   timezone:
     dependency: transitive
     description:

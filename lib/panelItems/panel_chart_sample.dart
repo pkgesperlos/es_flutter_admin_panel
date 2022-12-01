@@ -10,14 +10,14 @@ import 'components/container_items.dart';
 import 'components/es-chart/es_bar_chart.dart';
 import 'components/page_title_container.dart';
 
-class PaneChartSample extends StatefulWidget {
-  PaneChartSample({Key? key}) : super(key: key);
+class PanelChartSample extends StatefulWidget {
+  PanelChartSample({Key? key}) : super(key: key);
 
   @override
-  State<PaneChartSample> createState() => _PaneChartSampleState();
+  State<PanelChartSample> createState() => _PanelChartSampleState();
 }
 
-class _PaneChartSampleState extends State<PaneChartSample> {
+class _PanelChartSampleState extends State<PanelChartSample> {
   @override
   void initState() {
     // TODO: implement initState

@@ -13,6 +13,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 
+import 'images/widget_tree_panel.dart';
 import 'panelItems/es_register/es_signin.dart';
 
 void main() {
@@ -87,8 +88,8 @@ class _MyApp extends State<MyApp> {
 
                   initialRoute: '/',
                   routes: {
-                    // '/': (context) => WidgetTreePanel(),
-                    '/': (context) => EsLogin(),
+                    '/': (context) => WidgetTreePanel(),
+                    // '/': (context) => EsLogin(),
                     '/locksceen': (context) => EsLockScreen(),
                     '/recoverpass': (context) => EsRecoverPassword(),
                     '/signin': (context) => EsSignin(),

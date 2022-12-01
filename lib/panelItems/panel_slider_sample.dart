@@ -20,6 +20,7 @@ class PanelSliderSample extends StatefulWidget {
 
 class _PanelSliderSampleState extends State<PanelSliderSample> {
   CarouselController carouselController = CarouselController();
+  CarouselController carouselController2 = CarouselController();
   int _current = 0;
 
   Widget titleBox(int index) {
@@ -229,7 +230,7 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
               children: [
                 Center(
                   child: CarouselSlider(
-                    carouselController: carouselController,
+                    carouselController: carouselController2,
                     items: widgetList,
                     options: CarouselOptions(
                         viewportFraction: 0.8,
@@ -258,7 +259,7 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
                             size: StructureBuilder.dims!.h0Padding * 2,
                           ),
                           onTap: () {
-                            carouselController.previousPage();
+                            carouselController2.previousPage();
                           },
                         ),
                         InkWell(
@@ -270,7 +271,7 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
                             size: StructureBuilder.dims!.h0Padding * 2,
                           ),
                           onTap: () {
-                            carouselController.nextPage();
+                            carouselController2.nextPage();
                           },
                         ),
                       ],

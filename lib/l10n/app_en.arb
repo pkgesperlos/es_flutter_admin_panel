@@ -221,6 +221,7 @@
   "footer": "Footer",
   "header": "header",
   "quotation": "Quotation",
+  "card": "card",
   "primarycard": "Primary card",
   "primarycardtitle": "Different kinds of primary cards  are available in panel by flutter code.",
 
@@ -239,9 +240,17 @@
   "tutorialintro": "It is tutorial click bottom below and start it.",
   "tutorialtitle": "Tutorial by flutter code is available in panel for introduction.",
 
+  "treelist": "Tree list",
   "defaulttreelistview": "Default tree list view",
   "treelistviewwithdesiredicon": "Tree list view with desired icon",
   "treelistviewtitle": "Tree listview by flutter code is available in panel.",
+
+"primaryform": "Primary form",
+"customform": "Custom form",
+"advancedform": "Advanced form",
+"validateform": "Validate form",
+"stepperform": "Stepper form",
+"texteditor": "Text editor",
 
 "overview": "Overview",
 "horizontalform": "Horizontal form",
@@ -284,6 +293,7 @@
   "login": "Login",
   "search": "Search",
   "components": "Components",
+  "advancedcomponents": "Advanced components",
   "item": "Item number",
 
   "theinputlengthistooshort": "The input length is too short!",

@@ -18,7 +18,7 @@ class CenterScreen extends StatefulWidget {
 
 class _CenterScreen extends State<CenterScreen> {
 
-  Widget page=PaneChartSample();
+  Widget page=PanelChartSample();
 
 //function for change page by global key in drawer page
  changePage(currentPage){

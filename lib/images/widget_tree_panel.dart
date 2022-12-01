@@ -5,10 +5,12 @@ import 'package:es_flutter_admin_panel/center_sceen/center_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../app_bar/app_bar_widget.dart';
-import '../drawer/drawer_page.dart';
+import '../drawer/drawer_page2.dart';
 
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../drawer/drawer_page.dart';
 
 class WidgetTreePanel extends StatefulWidget {
   @override
@@ -49,17 +51,17 @@ class _WidgetTreePanelState extends State<WidgetTreePanel> {
           computer: Row(
             children: [
 
-              Expanded(flex: 3, child: DrawerPage()),
-              Expanded(flex: 12, child: CenterScreen()),
+              Expanded(flex: 7, child: DrawerPage()),
+              Expanded(flex: 24, child: CenterScreen()),
 
             ],
           ),
         ),
         drawer: ResponsiveLayot(
-          tiny: DrawerPage(),
-          phone: DrawerPage(),
-          tablet: DrawerPage(),
-          largTablet: DrawerPage(),
+          tiny: DrawerPage2(),
+          phone: DrawerPage2(),
+          tablet: DrawerPage2(),
+          largTablet: DrawerPage2(),
           computer: Container(),
         ));
   }

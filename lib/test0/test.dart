@@ -1,13 +1,51 @@
-// import 'dart:convert';
-//
-// import 'package:delta_markdown/delta_markdown.dart';
-// import 'package:flutter_quill/flutter_quill.dart';
-// import 'package:markdown/markdown.dart';
-//
-// String quillDeltaToHtml(Delta delta) {
-//   final convertedValue = jsonEncode(delta.toJson());
-//   final markdown = deltaToMarkdown(convertedValue);
-//   final html = markdownToHtml(markdown);
-//
-//   return html;
-// }
+import 'package:flutter/material.dart';
+import 'package:timelines/timelines.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Timelines Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(title: 'Timelines Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key? key, required this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Timeline.tileBuilder(
+        builder: TimelineTileBuilder.fromStyle(
+
+          contentsAlign: ContentsAlign.alternating,
+          contentsBuilder: (context, index) => Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Text('Timeline Event $index'),
+          ),
+          itemCount: 10,
+        ),
+      ),
+    );
+  }
+}

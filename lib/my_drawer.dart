@@ -3,7 +3,7 @@ import 'package:es_flutter_admin_panel/center_sceen/center_screen.dart';
 import 'package:es_flutter_admin_panel/images/responsive_layout.dart';
 import 'package:flutter/material.dart';
 
-import 'drawer/drawer_page.dart';
+import 'drawer/drawer_page2.dart';
 
 class MyDrawer extends StatelessWidget {
   List<Map>? routes;
@@ -61,17 +61,17 @@ class MyDrawer extends StatelessWidget {
             computer: Row(
               children: [
 
-                Expanded(flex: 1, child: DrawerPage()),
+                Expanded(flex: 1, child: DrawerPage2()),
                 Expanded(flex: 5, child: child as Widget),
 
               ],
             ),
           ),
           drawer: ResponsiveLayot(
-            tiny: DrawerPage(),
-            phone: DrawerPage(),
-            tablet: DrawerPage(),
-            largTablet: DrawerPage(),
+            tiny: DrawerPage2(),
+            phone: DrawerPage2(),
+            tablet: DrawerPage2(),
+            largTablet: DrawerPage2(),
             computer: Container(),
           )),
 

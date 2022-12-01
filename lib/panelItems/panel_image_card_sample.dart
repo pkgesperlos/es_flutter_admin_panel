@@ -297,9 +297,19 @@ class PanelImageCardSample extends StatelessWidget {
                             big: true,
                             factor: 2,
                           ),
-                          Image.asset(
-                            "assets/images/img2.jpg",
-                            fit: BoxFit.cover,
+                          Container(
+                            clipBehavior: Clip.antiAlias,
+                            margin: EdgeInsets.symmetric(
+                              vertical: StructureBuilder.dims!.h1Padding,
+                            ),
+                            decoration: BoxDecoration(
+                                color: MyStyle.cardColor,
+                                borderRadius: BorderRadius.all(Radius.circular(
+                                    StructureBuilder.dims!.h0BorderRadius))),
+                            child: Image.asset(
+                              "assets/images/img2.jpg",
+                              fit: BoxFit.cover,
+                            ),
                           ),
                           EsVSpacer(
                             big: true,
