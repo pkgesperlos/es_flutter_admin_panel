@@ -1,12 +1,14 @@
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
+import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../panel_ui/components/es_profile/es_information_card.dart';
+import '../../main.dart';
+import '../../panel_ui/components/es_profile/es_profile_information_card.dart';
 import '../../panel_ui/components/es_profile/es_profile_card.dart';
 import '../../panel_ui/components/es_profile/es_profile_tab_bar_card/es_profile_tab_bar_card.dart';
 import '../../panel_ui/components/es_profile/es_progress_profile_card.dart';
@@ -34,7 +36,7 @@ class _PanelProfileSampleState extends State<PanelProfileSample> {
 
   @override
   Widget build(BuildContext context) {
-    double _height=500;
+
     List<String> _titleList=[
       AppLocalizations.of(context)!.software,
       AppLocalizations.of(context)!.design,
@@ -45,91 +47,101 @@ class _PanelProfileSampleState extends State<PanelProfileSample> {
       StructureBuilder.styles!.tritiaryColor,
       StructureBuilder.styles!.dangerColor().dangerDark,
     ];
+
+    Widget _cardShow(Widget widget) {
+      return BootstrapCol(
+          sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-4', child: widget);
+    }
+    Widget _cardShow2(Widget widget) {
+
+      return BootstrapCol(
+
+          sizes: 'col-sm-12 col-ml-12 col-lg-12 col-xl-12', child: widget);
+    }
     List list = [
 
       ContainerItems(
           widget: Container(
-            // height: _height,
-            width: double.infinity,
 
-            child: EsProfileCard(),
-          ),
-          title: AppLocalizations.of(context)!.pricecard,
-          information: "It is price card "
-              "and located in:"
-              " \n es_flutter_component/lib/components/es_profile/es_progress_profile_card.dart "
-              "\n and is used as: \n "
-              """ EsProfileCard(),"""),
-      ContainerItems(
-          widget: Container(
-              width: double.infinity,
-              // height: _height,
-              child: EsShareCard()
-          ),
-          title: AppLocalizations.of(context)!.pricecard,
-          information: "It is price card "
-              "and located in:"
-              " \n es_flutter_component/lib/components/es_price_card/es_price_card.dart "
-              "\n and is used as: \n "
-              """ EsProfileCard(),"""),
-      ContainerItems(
-          widget: Container(
-            width: double.infinity,
-              height: _height,
-            child: EsProfileTabBarCard(
-            )
-          ),
-          title: AppLocalizations.of(context)!.pricecard,
-          information: "It is price card "
-              "and located in:"
-              " \n es_flutter_component/lib/components/es_price_card/es_price_card.dart "
-              "\n and is used as: \n "
-              """ EsProfileCard(),"""),
-      ContainerItems(
-          widget: Container(
-            width: double.infinity,
-              // height: _height,
-            child: EsInformationCard(
-              editFunction: (){},
-            )
-          ),
-          title: AppLocalizations.of(context)!.pricecard,
-          information: "It is price card "
-              "and located in:"
-              " \n es_flutter_component/lib/components/es_price_card/es_price_card.dart "
-              "\n and is used as: \n "
-              """ EsProfileCard(),"""),
-      ContainerItems(
-          widget: Container(
-            width: double.infinity,
-              // height: _height,
-            child: EsProgressListCard(
-              titleList: _titleList,
-              colorList: _colorList,
-              percentList: _percentList,
+            child: BootstrapContainer(
+              padding: EdgeInsets.symmetric(
+                vertical: StructureBuilder.dims!.h0Padding,
+                horizontal: StructureBuilder.dims!.h0Padding,
+              ),
+                fluid: true,
+              children:[
+                _cardShow2(Container(
+                    height: StructureBuilder.dims!.h0Padding*30,
+                    child: EsProfileTabBarCard()),),
 
-            )
+                _cardShow(EsProfileCard(),),
+                _cardShow(Column(
+                  children: [
+                    EsProgressProfileCard(),
+                    EsVSpacer(big: true,),
+                    EsProgressListCard(
+                      titleList: _titleList,
+                      colorList: _colorList,
+                      percentList: _percentList,
+                    ),
+                  ],
+                ),),
+                _cardShow(Column(
+                  children: [
+                    EsProfileInformationCard(),
+                    EsVSpacer(big: true,),
+                    EsShareCard(),
+                  ],
+                ),),
+
+
+              ]
+            ),
           ),
-          title: AppLocalizations.of(context)!.pricecard,
-          information: "It is price card "
+          title: AppLocalizations.of(context)!.profilepage,
+          information: "It is a profile page "
               "and located in:"
-              " \n es_flutter_component/lib/components/es_price_card/es_price_card.dart "
+              " \n es_flutter_component/lib/components/es_profile "
               "\n and is used as: \n "
-              """ EsProfileCard(),"""),
-      ContainerItems(
-          widget: Container(
-              width: double.infinity,
-              // height: _height,
-              child: EsProgressProfileCard(
-                editFunction: (){},
-              )
-          ),
-          title: AppLocalizations.of(context)!.pricecard,
-          information: "It is price card "
-              "and located in:"
-              " \n es_flutter_component/lib/components/es_price_card/es_price_card.dart "
-              "\n and is used as: \n "
-              """ EsProfileCard(),"""),
+              """ Container(
+
+            child: BootstrapContainer(
+              padding: EdgeInsets.symmetric(
+                vertical: StructureBuilder.dims!.h0Padding,
+                horizontal: StructureBuilder.dims!.h0Padding,
+              ),
+                fluid: true,
+              children:[
+                _cardShow2(Container(
+                    height: StructureBuilder.dims!.h0Padding*30,
+                    child: EsProfileTabBarCard()),),
+
+                _cardShow(EsProfileCard(),),
+                _cardShow(Column(
+                  children: [
+                    EsProgressProfileCard(),
+                    EsVSpacer(big: true,),
+                    EsProgressListCard(
+                      titleList: _titleList,
+                      colorList: _colorList,
+                      percentList: _percentList,
+                    ),
+                  ],
+                ),),
+                _cardShow(Column(
+                  children: [
+                    EsProfileInformationCard(),
+                    EsVSpacer(big: true,),
+                    EsShareCard(),
+                  ],
+                ),),
+
+
+              ]
+            ),
+          ),"""),
+
+
     ];
     return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
@@ -137,7 +149,7 @@ class _PanelProfileSampleState extends State<PanelProfileSample> {
           child: Column(
             children: [
               PageTitleContainer(
-                title: AppLocalizations.of(context)!.pricecardtitle,
+                title: AppLocalizations.of(context)!.profilepagetitle,
               ),
               BootstrapContainer(
                   fluid: true,
@@ -147,14 +159,9 @@ class _PanelProfileSampleState extends State<PanelProfileSample> {
                     color: StructureBuilder.styles!.primaryDarkColor,
                   ),
                   children: List.generate(list.length, (index) {
-                    if(index==1){
-                      return boxShow3(list[index]);
-                    }if(index==2){
-                      return boxShow2(list[index]);
-                    }
+
                     return boxShow(list[index]);
                   })
-                  // children: [boxShow(list[0]),boxShow2(list[1]),],
 
                   )
             ],
@@ -164,18 +171,10 @@ class _PanelProfileSampleState extends State<PanelProfileSample> {
 
   Widget boxShow(Widget widget) {
     return BootstrapCol(
-        sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-4', child: widget);
-  }
-
-  Widget boxShow2(Widget widget) {
-    return BootstrapCol(
         sizes: 'col-sm-12 col-ml-12 col-lg-12 col-xl-12', child: widget);
   }
 
-  Widget boxShow3(Widget widget) {
-    return BootstrapCol(
-        sizes: 'col-sm-12 col-ml-12 col-lg-8 col-xl-8', child: widget);
-  }
+
 
   Widget listShow(Widget widget) {
     return Column(

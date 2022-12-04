@@ -421,6 +421,8 @@
   "followers": "Followers",
   "income": "Income",
   "date": "Date",
+  "profilepage": "Profile page",
+  "profilepagetitle": "Different kinds of profile cards  are available in panel by flutter code.",
   "numberofsales": "Number of sales",
   "sharesomthing": "Share something ...",
   "shareanactivity": "Share an activity",

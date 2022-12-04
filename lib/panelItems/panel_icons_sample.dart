@@ -5,11 +5,11 @@ import 'package:es_flutter_component/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'package:es_flutter_component/es_button/es_information_button.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 class PanelIconsSample extends StatefulWidget {
   PanelIconsSample({Key? key}) : super(key: key);
 
@@ -161,13 +161,70 @@ class _PanelIconsSampleState extends State<PanelIconsSample> {
                 EsSvgIcon("packages/es_flutter_component/assets/svgs/YoutubeLogo.svg",
                   color: _color,
                   size: _size,),
+                EsSvgIcon("packages/es_flutter_component/assets/svgs/advanced.svg",
+                  color: _color,
+                  size: _size,),
+                EsSvgIcon("packages/es_flutter_component/assets/svgs/chart.svg",
+                  color: _color,
+                  size: _size,),
+
+                EsSvgIcon("packages/es_flutter_component/assets/svgs/emojihappy.svg",
+                  color: _color,
+                  size: _size,),
+                EsSvgIcon("packages/es_flutter_component/assets/svgs/form.svg",
+                  color: _color,
+                  size: _size,),
+                EsSvgIcon("packages/es_flutter_component/assets/svgs/gallery.svg",
+                  color: _color,
+                  size: _size,),
+                EsSvgIcon("packages/es_flutter_component/assets/svgs/layer.svg",
+                  color: _color,
+                  size: _size,),
+                EsSvgIcon("packages/es_flutter_component/assets/svgs/map.svg",
+                  color: _color,
+                  size: _size,),
+                EsSvgIcon("packages/es_flutter_component/assets/svgs/pages.svg",
+                  color: _color,
+                  size: _size,),
+                EsSvgIcon("packages/es_flutter_component/assets/svgs/profilecircle.svg",
+                  color: _color,
+                  size: _size,),
+                EsSvgIcon("packages/es_flutter_component/assets/svgs/send.svg",
+                  color: _color,
+                  size: _size,),
+                EsSvgIcon("packages/es_flutter_component/assets/svgs/send.svg",
+                  color: _color,
+                  size: _size,),
+                EsSvgIcon("packages/es_flutter_component/assets/svgs/video.svg",
+                  color: _color,
+                  size: _size,),
 
 
               ],
             )
 
           ),
-          title:"Icons",
+          title:"Panel icons",
+          information:
+          "It is a Panel icons located in: \n es_flutter_component>assets/svgs"
+              " \n and is used as: \n "
+              """EsSvgIcon("packages/es_flutter_component/assets/svgs/video.svg",
+                  color: _color,
+                  size: _size,),"""),
+      ContainerItems(
+          widget: Container(
+              width: double.infinity,
+            // height: 500,
+            child: Wrap(
+              spacing: StructureBuilder.dims!.h0Padding,
+              runSpacing: StructureBuilder.dims!.h0Padding*2,
+              children: [
+
+              ]
+            )
+
+          ),
+          title:"Panel icons",
           information:
           "It is a quill Text Editor located in: \n es_flutter_component>lib/es_form/es_text_editor/es_text_editor.dart"
               " \n and is used as: \n "
@@ -197,7 +254,7 @@ class _PanelIconsSampleState extends State<PanelIconsSample> {
 
   Widget boxShow(Widget widget) {
     return BootstrapCol(
-        sizes: 'col-sm-12 col-ml-12 col-lg-12 col-xl-12', child: widget);
+        sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-6', child: widget);
   }
 
   Widget listShow(Widget widget) {

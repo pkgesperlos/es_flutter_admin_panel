@@ -8,6 +8,7 @@ import 'package:es_flutter_admin_panel/panelItems/es_pages/panel_timeline_sample
 import 'package:es_flutter_admin_panel/panelItems/es_register/es_lock_screen.dart';
 import 'package:es_flutter_admin_panel/panelItems/es_register/es_login.dart';
 import 'package:es_flutter_admin_panel/panelItems/es_register/es_recover_password.dart';
+import 'package:es_flutter_admin_panel/panelItems/panel_Icons_sample.dart';
 import 'package:es_flutter_admin_panel/panelItems/panel_image_card_sample.dart';
 import 'package:es_flutter_admin_panel/panelItems/panel_simple_table_sample.dart';
 import 'package:es_flutter_admin_panel/panel_ui/images/widget_tree_panel.dart';
@@ -78,7 +79,7 @@ class _MyApp extends State<MyApp> {
                   initialRoute: '/',
                   routes: {
                     // '/': (context) => WidgetTreePanel(),
-                    '/': (context) => PanelProfileSample(),
+                    '/': (context) => PanelIconsSample(),
                     '/locksceen': (context) => EsLockScreen(),
                     '/recoverpass': (context) => EsRecoverPassword(),
                     '/signin': (context) => EsSignin(),

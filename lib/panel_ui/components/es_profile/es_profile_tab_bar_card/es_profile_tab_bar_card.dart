@@ -32,7 +32,6 @@ class EsProfileTabBarCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    // double _height = 1000;
 
     int num = 4;
     List<String> _titleList = [
@@ -76,6 +75,7 @@ class EsProfileTabBarCard extends StatelessWidget {
     ];
     Widget _content1() {
       return Container(
+
         padding: EdgeInsets.symmetric(
           vertical: StructureBuilder.dims!.h0Padding,
           horizontal: StructureBuilder.dims!.h0Padding,
@@ -265,6 +265,7 @@ class EsProfileTabBarCard extends StatelessWidget {
     ];
 
     return Container(
+
     width: double.infinity,
     // height: _height,
     child: EsTopTabBarNavigation(

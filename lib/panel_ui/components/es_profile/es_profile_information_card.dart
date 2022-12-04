@@ -8,7 +8,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../main.dart';
 
-class EsInformationCard extends StatelessWidget {
+class EsProfileInformationCard extends StatelessWidget {
   String? name;
   String? lastName;
   String? job;
@@ -19,7 +19,7 @@ class EsInformationCard extends StatelessWidget {
   String? email;
   void Function()? editFunction;
 
-  EsInformationCard({
+  EsProfileInformationCard({
     Key? key,
     this.name,
     this.lastName,

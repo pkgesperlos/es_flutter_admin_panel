@@ -22,7 +22,7 @@ import '../../panelItems/es_pages/panel_empty_screen_sample.dart';
 import '../../panelItems/es_register/es_login.dart';
 import '../../panelItems/es_register/es_recover_password.dart';
 import '../../panelItems/es_register/es_signin.dart';
-import '../../panelItems/panel_Icons_sample.dart';
+import '../../panelItems/panel_icons_sample.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 
