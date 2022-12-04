@@ -1,4 +1,6 @@
 
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/components/es_accardion/es_accardion.dart';
 import 'package:es_flutter_component/components/es_accardion/es_scrollable_accardion.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
@@ -8,8 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+ import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 
 class PanelAccardionSample extends StatelessWidget {
   const PanelAccardionSample({Key? key}) : super(key: key);
@@ -38,7 +39,7 @@ class PanelAccardionSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.simpleaccordion,
           information:
-              "They are simple accordions located in: \n es_flutter_component>lib>es_accardion>es_accardion.dart \n and is used as: \n "
+              "They are simple accordions located in: \n es_flutter_component/lib/components/es_accardion>es_accardion.dart \n and is used as: \n "
               """EsAccardion(items: _items,)"""),
       ContainerItems(
           widget: Container(
@@ -48,7 +49,7 @@ class PanelAccardionSample extends StatelessWidget {
               )),
           title: AppLocalizations.of(context)!.scrollableaccordion,
           information:
-              "They are scrollable accordions located in: \n es_flutter_component>lib>es_accardion>es_scrollable_accardion.dart\n and is used as: \n "
+              "They are scrollable accordions located in: \n es_flutter_component/lib/components/es_accardion>es_scrollable_accardion.dart\n and is used as: \n "
               """EsScrollableAccardion(items: _itemsScroll,)"""),
       ContainerItems(
           widget: Container(
@@ -60,7 +61,7 @@ class PanelAccardionSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.removableaccordion,
           information:
-              "IThey are removable accordions located in: \n es_flutter_component>lib>es_accardion>es_accardion.dart \n and is used as: \n "
+              "IThey are removable accordions located in: \n es_flutter_component/lib/components/es_accardion>es_accardion.dart \n and is used as: \n "
               """EsAccardion(items: _items,isremovable: true,)"""),
       ContainerItems(
           widget: Container(
@@ -75,7 +76,7 @@ class PanelAccardionSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.solidaccordion,
           information:
-              "They are solid accordions located in: \n es_flutter_component>lib>es_accardion>es_accardion.dart \n and is used as: \n "
+              "They are solid accordions located in: \n es_flutter_component/lib/components/es_accardion>es_accardion.dart \n and is used as: \n "
               """EsAccardion(
                 items: _items,
               decoration: BoxDecoration(
@@ -97,7 +98,7 @@ class PanelAccardionSample extends StatelessWidget {
           ),
           title: AppLocalizations.of(context)!.iconaccordion,
           information:
-              "They are icon accordions located in: \n es_flutter_component>lib>es_accardion>es_accardion.dart \n and is used as: \n "
+              "They are icon accordions located in: \n es_flutter_component/lib/components/es_accardion>es_accardion.dart \n and is used as: \n "
               """EsAccardion(
             items: _items,
             icon: EsSvgIcon(
@@ -121,7 +122,7 @@ class PanelAccardionSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.accordionwithdesiredarrowicon,
           information:
-              "They are icon accordions located in: \n es_flutter_component>lib>es_accardion>es_accardion.dart \n and is used as: \n "
+              "They are icon accordions located in: \n es_flutter_component/lib/components/es_accardion>es_accardion.dart \n and is used as: \n "
               """EsAccardion(
             items: _items,
             icon: EsSvgIcon(
@@ -150,7 +151,7 @@ class PanelAccardionSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.accordionwithbackgroundimage,
           information:
-              "They are solid accordions located in: \n es_flutter_component>lib>es_accardion>es_accardion.dart \n and is used as: \n "
+              "They are solid accordions located in: \n es_flutter_component/lib/components/es_accardion>es_accardion.dart \n and is used as: \n "
               """EsAccardion(
             backGroundImagePath: "assets/images/back2.png",
             contentColor: StructureBuilder.styles!.primaryLightColor,

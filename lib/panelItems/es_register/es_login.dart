@@ -1,5 +1,7 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:es_flutter_admin_panel/panelItems/components/es_block_button.dart';
+
+import 'package:es_flutter_admin_panel/panel_ui/app_bar/menu_drop_down_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/es_block_button.dart';
 import 'package:es_flutter_component/components/es_button/es_button.dart';
 import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_check_box.dart';
 import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field_form.dart';
@@ -14,8 +16,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
-import '../../app_bar/menu_drop_down_items.dart';
-import '../../images/responsive_layout.dart';
+import 'package:es_flutter_admin_panel/panel_ui/images/responsive_layout.dart';
 import '../../language_change_provider.dart';
 
 

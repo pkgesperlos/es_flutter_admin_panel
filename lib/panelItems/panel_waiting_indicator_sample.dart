@@ -1,8 +1,8 @@
 
 import 'package:es_flutter_component/components/es_button/es_button.dart';
 import 'package:es_flutter_component/components/es_waiting_indicator/es_blink_waiting_indicator.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
@@ -76,7 +76,7 @@ class _PanelWaitingIndicatorSampleState
               )),
           title: AppLocalizations.of(context)!.waitingindicatorsindifferentcolors,
           information:
-              "They are waiting indicators in different colors that blink type  located in: \n es_flutter_component/es_waiting_indicator/es_blink_waiting_indicator.dart;' \n and is used as: \n "
+              "They are waiting indicators in different colors that blink type  located in: \n es_flutter_component/lib/components/es_waiting_indicator/es_blink_waiting_indicator.dart;' \n and is used as: \n "
               """EsBlinkWaitingIndicator(
                     color: StructureBuilder.styles!.tritiaryColor,
                   ),"""),
@@ -132,7 +132,7 @@ class _PanelWaitingIndicatorSampleState
               )),
           title: AppLocalizations.of(context)!.waitingindicatorsindifferentsizes,
           information:
-              "They are waiting indicators in different sizes that blink type  located in: \n es_flutter_component/es_waiting_indicator/es_blink_waiting_indicator.dart;' \n and is used as: \n "
+              "They are waiting indicators in different sizes that blink type  located in: \n es_flutter_component/lib/components/es_waiting_indicator/es_blink_waiting_indicator.dart;' \n and is used as: \n "
               """EsBlinkWaitingIndicator(size: StructureBuilder.dims!.h0Padding*2,),"""),
       ContainerItems(
           widget: Container(
@@ -158,7 +158,7 @@ class _PanelWaitingIndicatorSampleState
               )),
           title: AppLocalizations.of(context)!.waitingindicatorsonbuttons,
           information:
-          "They are waiting indicators on buttons that blink type  located in: \n es_flutter_component/es_waiting_indicator/es_blink_waiting_indicator.dart;' \n and is used as: \n "
+          "They are waiting indicators on buttons that blink type  located in: \n es_flutter_component/lib/components/es_waiting_indicator/es_blink_waiting_indicator.dart;' \n and is used as: \n "
               """EsButton(text: "button",icon: SizedBox(
                     width: StructureBuilder.dims!.h0Padding,
                     height: StructureBuilder.dims!.h0Padding,

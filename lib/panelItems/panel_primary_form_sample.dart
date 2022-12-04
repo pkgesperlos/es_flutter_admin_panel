@@ -7,8 +7,8 @@ import 'package:es_flutter_component/components/es_form/es_radio_button/es_radio
 import 'package:es_flutter_component/components/es_form/es_slider/es_slider.dart';
 import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field.dart';
 import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/es_button/es_button.dart';
 import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
@@ -890,7 +890,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
 
 
       // ContainerItems(widget:EsRatingBar(), title:AppLocalizations.of(context)!.starRateBar,
-      //     information:"It is a rating bar located in: \n es_flutter_component>lib>es_form>es_rating_bar.dart \n and is used as: \n "
+      //     information:"It is a rating bar located in: \n es_flutter_component/lib/components/es_form>es_rating_bar.dart \n and is used as: \n "
       //         """EsRatingBar()"""
       // ),
 
@@ -905,7 +905,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
       //       // )
       //     ),
       //     title:AppLocalizations.of(context)!.filePicker,
-      //     information:"It is file picker located in: \n es_flutter_component>lib>es_form>es_file picker.dart \n and is used as: \n "
+      //     information:"It is file picker located in: \n es_flutter_component/lib/components/es_form>es_file picker.dart \n and is used as: \n "
       //         """EsFilePicker(
       //       openText: AppLocalizations.of(context)!.openText,
       //       pickText: AppLocalizations.of(context)!.pickText,

@@ -1,7 +1,7 @@
 
 import 'package:es_flutter_component/components/es_group_button/group_button.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
@@ -84,7 +84,7 @@ class PanelGroupButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.icongroupbutton,
           information:
-              "They are icon group buttons  located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "They are icon group buttons  located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
@@ -125,7 +125,7 @@ class PanelGroupButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.textgroupbutton,
           information:
-              "They are text group buttons located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "They are text group buttons located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                 widgetList: _widgetList1,
                 initialSelectedindex: 1,
@@ -171,7 +171,7 @@ class PanelGroupButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.groupbuttonwithmaxselection,
           information:
-              "They are group buttons with max selection boundary located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "They are group buttons with max selection boundary located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
@@ -215,7 +215,7 @@ class PanelGroupButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.radiogroupbutton,
           information:
-              "They are radio group buttons located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "They are radio group buttons located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
@@ -259,7 +259,7 @@ class PanelGroupButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.groupbuttonwithdisabledlist,
           information:
-              "They are group buttons with disabled list located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "They are group buttons with disabled list located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
@@ -303,7 +303,7 @@ class PanelGroupButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.verticalgroupbutton,
           information:
-              "They are vertical group buttons located in: \n es_flutter_component/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "They are vertical group buttons located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                     widgetList: _widgetList2,
                     // onPressedList[]: ,

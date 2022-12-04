@@ -2,8 +2,8 @@
 import 'package:es_flutter_component/components/es_button/es_button.dart';
 import 'package:es_flutter_component/components/es_drop_down/es_drop_down_button.dart';
 import 'package:es_flutter_component/components/es_text/es_header.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/es_text/es_title.dart';
@@ -121,7 +121,7 @@ class PanelDropDownSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.dropdownbuttonsindifferentcolors,
           information:
-              "They are dropdown Buttons in different colors located in: \n es_flutter_component>lib>es_drop_down/es_drop_down_button.dart \n and is used as: \n "
+              "They are dropdown Buttons in different colors located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
               """EsDropdownButton(
                     num:num,
                     buttonWidget: EsButton(text: "Dropdown",
@@ -196,7 +196,7 @@ class PanelDropDownSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.dropdownbuttonsindifferentpositions,
           information:
-              "They are dropdown Buttons in different positions located in: \n es_flutter_component>lib>es_drop_down/es_drop_down_button.dart \n and is used as: \n "
+              "They are dropdown Buttons in different positions located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
               """EsDropdownButton(
                 num: num,
                 buttonWidget: EsButton(
@@ -306,7 +306,7 @@ class PanelDropDownSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.dropdownbuttonsincustomicons,
           information:
-              "They are dropdown Buttons in custom icons located in: \n es_flutter_component>lib>es_drop_down/es_drop_down_button.dart \n and is used as: \n "
+              "They are dropdown Buttons in custom icons located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
               """EsDropdownButton(
                 num: num,
                 buttonWidget: EsButton(
@@ -409,7 +409,7 @@ class PanelDropDownSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.dropdownbuttonsindifferentmenudecoration,
           information:
-              "They are dropdown buttons in different menu decoration located in: \n es_flutter_component>lib>es_drop_down/es_drop_down_button.dart \n and is used as: \n "
+              "They are dropdown buttons in different menu decoration located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
               """EsDropdownButton(
                 num: num,
                 dropdownDecoration: BoxDecoration(
@@ -501,7 +501,7 @@ class PanelDropDownSample extends StatelessWidget {
               )),
           title: AppLocalizations.of(context)!.dropdownbuttonsindifferentsizes,
           information:
-          "They are dropdown Buttons in different sizes located in: \n es_flutter_component>lib>es_drop_down/es_drop_down_button.dart \n and is used as: \n "
+          "They are dropdown Buttons in different sizes located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
               """EsDropdownButton(
                     num: num,
                     buttonWidget: EsButton(
@@ -608,7 +608,7 @@ class PanelDropDownSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.dropdownbuttonsindifferentmenusizes,
           information:
-              "They are dropdown Buttons in different menu sizes located in: \n es_flutter_component>lib>es_drop_down/es_drop_down_button.dart \n and is used as: \n "
+              "They are dropdown Buttons in different menu sizes located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
               """EsDropdownButton(
                     num:num,
                     buttonWidget: EsButton(text: "Dropdown",

@@ -9,8 +9,8 @@ import 'package:es_flutter_component/components/es_tab_bar/es_top_tab_bar_naviga
 import 'package:es_flutter_component/components/es_text/es_header.dart';
 import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/components/es_text/es_title.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
@@ -88,7 +88,7 @@ class _PanelTabBarNavigationSampleState
           ),
           title: AppLocalizations.of(context)!.toptabbarnavigator,
           information:
-              "It is top tab bar navigator located in: \n es_flutter_component/es_tab_bar/es_top_tab_bar_navigation.dart' \n and is used as: \n "
+              "It is top tab bar navigator located in: \n es_flutter_component/lib/components/es_tab_bar/es_top_tab_bar_navigation.dart' \n and is used as: \n "
               """EsTopTabBarNavigation(
                   pageWidgets:_pageList,
                   tabWidgets: _tabList
@@ -115,7 +115,7 @@ class _PanelTabBarNavigationSampleState
           ),
           title: AppLocalizations.of(context)!.tabbarnavigatorwithdesiredtabdecoration,
           information:
-          "It is tab bar navigator with desired tab decoration located in: \n es_flutter_component/es_tab_bar/es_top_tab_bar_navigation.dart' \n and is used as: \n "
+          "It is tab bar navigator with desired tab decoration located in: \n es_flutter_component/lib/components/es_tab_bar/es_top_tab_bar_navigation.dart' \n and is used as: \n "
               """EsTopTabBarNavigation(
                   pageWidgets:_pageList,
                   tabWidgets: _tabList,
@@ -143,7 +143,7 @@ class _PanelTabBarNavigationSampleState
           ),
           title: AppLocalizations.of(context)!.tabbarnavigatorwithdesiredwidgetintabs,
           information:
-          "It is tab bar navigator with desired widget in tabs located in: \n es_flutter_component/es_tab_bar/es_top_tab_bar_navigation.dart' \n and is used as: \n "
+          "It is tab bar navigator with desired widget in tabs located in: \n es_flutter_component/lib/components/es_tab_bar/es_top_tab_bar_navigation.dart' \n and is used as: \n "
               """EsTopTabBarNavigation(
                   pageWidgets:_pageList,l
                   tabWidgets: _tabList,
@@ -170,7 +170,7 @@ class _PanelTabBarNavigationSampleState
           ),
           title: AppLocalizations.of(context)!.bottomtabbarnavigator,
           information:
-          "It is Bottom tab navigator located in: \n es_flutter_component/es_tab_bar/es_Bottom_tab_bar_navigation.dart' \n and is used as: \n "
+          "It is Bottom tab navigator located in: \n es_flutter_component/lib/components/es_tab_bar/es_Bottom_tab_bar_navigation.dart' \n and is used as: \n "
               """EsBottomTabBarNavigation(
                   pageWidgets:_pageList,
                   tabWidgets: _tabList
@@ -188,7 +188,7 @@ class _PanelTabBarNavigationSampleState
           ),
     title: AppLocalizations.of(context)!.leftsidetabbarnavigator,
     information:
-    "It is Left side tab bar navigator located in: \n es_flutter_component/es_tab_bar/es_Side_tab_bar_navigation.dart' \n and is used as: \n "
+    "It is Left side tab bar navigator located in: \n es_flutter_component/lib/components/es_tab_bar/es_Side_tab_bar_navigation.dart' \n and is used as: \n "
     """EsSideTabBarNavigation(
                   pageWidgets:_pageList,
                   tabWidgets: _tabList
@@ -207,7 +207,7 @@ class _PanelTabBarNavigationSampleState
           ),
           title: AppLocalizations.of(context)!.rightsidebarnavigator,
           information:
-          "It is Right side tab bar navigator located in: \n es_flutter_component/es_tab_bar/es_Side_tab_bar_navigation.dart' \n and is used as: \n "
+          "It is Right side tab bar navigator located in: \n es_flutter_component/lib/components/es_tab_bar/es_Side_tab_bar_navigation.dart' \n and is used as: \n "
               """EsSideTabBarNavigation(
                   isleft: false,
                   pageWidgets:_pageList,

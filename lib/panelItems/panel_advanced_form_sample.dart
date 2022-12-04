@@ -1,5 +1,5 @@
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_android_time_picker.dart';
 import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_cupertino_time_picker.dart';
 import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_english_date_picker.dart';
@@ -426,7 +426,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
           ),
           title: AppLocalizations.of(context)!.datePickerfa,
           information:
-              "It is a jalali date picker located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_persian_date_picker.dart \n and is used as: \n "
+              "It is a jalali date picker located in: \n es_flutter_component/lib/components/es_form>es_date_time_picker>es_persian_date_picker.dart \n and is used as: \n "
               """ EsPersianDatePicker()"""),
       ContainerItems(
           widget: Container(
@@ -437,7 +437,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
           ),
           title: AppLocalizations.of(context)!.datePickeren,
           information:
-              "It is a Gregorian date picker located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_English_date_picker.dart \n and is used as: \n "
+              "It is a Gregorian date picker located in: \n es_flutter_component/lib/components/es_form>es_date_time_picker>es_English_date_picker.dart \n and is used as: \n "
               """ EsEnglishDatePicker()"""),
       ContainerItems(
           widget: Container(
@@ -448,7 +448,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
           ),
           title: AppLocalizations.of(context)!.timePickerHM,
           information:
-              "It is a time picker(H/M)  located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_android_time_picker.dart \n and is used as: \n "
+              "It is a time picker(H/M)  located in: \n es_flutter_component/lib/components/es_form>es_date_time_picker>es_android_time_picker.dart \n and is used as: \n "
               """ EsAndroidTimePicker(
             title: AppLocalizations.of(context)!.androidTimePickerTitle,)"""),
       ContainerItems(
@@ -460,12 +460,13 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
           ),
           title: AppLocalizations.of(context)!.timePickerHMS,
           information:
-              "It is a time picker(H/M/S) located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_cupertino_12h_time_picker.dart \n and is used as: \n "
+              "It is a time picker(H/M/S) located in: \n es_flutter_component/lib/components/es_form>es_date_time_picker>es_cupertino_12h_time_picker.dart \n and is used as: \n "
               """ EsCupertinoTimePicker(
             title: AppLocalizations.of(context)!.cupertinoTimePickerTitle,)"""),
       ContainerItems(
           widget: Container(
             height: _height2,
+            alignment: Alignment.center,
             child: EsButton(
               text: AppLocalizations.of(context)!.select,
               onTap: () {
@@ -489,7 +490,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
           ),
           title: AppLocalizations.of(context)!.filePicker,
           information:
-              "It is a time picker(H/M/S) located in: \n es_flutter_component>lib>es_form>es_date_time_picker>es_cupertino_12h_time_picker.dart \n and is used as: \n "
+              "It is a time picker(H/M/S) located in: \n es_flutter_component/lib/components/es_form>es_date_time_picker>es_cupertino_12h_time_picker.dart \n and is used as: \n "
               """ EsCupertinoTimePicker(
             title: AppLocalizations.of(context)!.cupertinoTimePickerTitle,)"""),
 

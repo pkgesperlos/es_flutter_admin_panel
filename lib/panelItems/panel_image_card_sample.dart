@@ -2,8 +2,8 @@ import 'package:es_flutter_admin_panel/main.dart';
 
 import 'package:es_flutter_component/components/es_text/es_icon_text.dart';
 import 'package:es_flutter_component/components/es_text/es_subtitle.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/es_button/es_button.dart';
 import 'package:es_flutter_component/es_spacer/es_h_divider.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
@@ -15,8 +15,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../panel_ui/components/es_card/es_image_card/es_image_card_1.dart';
+import '../panel_ui/components/es_card/es_image_card/es_image_card_2.dart';
+import '../panel_ui/components/es_card/es_image_card/es_image_card_3.dart';
+import '../panel_ui/components/es_card/es_image_card/es_image_card_4.dart';
+import '../panel_ui/components/es_card/es_image_card/es_image_card_5.dart';
+import '../panel_ui/components/es_card/es_image_card/es_image_card_6.dart';
+import '../panel_ui/components/es_card/es_image_card/es_image_card_7.dart';
+
 class PanelImageCardSample extends StatelessWidget {
   const PanelImageCardSample({Key? key}) : super(key: key);
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,365 +42,29 @@ class PanelImageCardSample extends StatelessWidget {
                   fluid: true,
                   // padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
                   children: [
-                    cardShow(Container(
-                      clipBehavior: Clip.antiAlias,
-                      margin: EdgeInsets.symmetric(
-                        vertical: StructureBuilder.dims!.h1Padding,
-                      ),
-                      decoration: BoxDecoration(
-                          color: MyStyle.cardColor,
-                          borderRadius: BorderRadius.all(Radius.circular(
-                              StructureBuilder.dims!.h0BorderRadius))),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            "assets/images/img2.jpg",
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: StructureBuilder.dims!.h0Padding,
-                              vertical: StructureBuilder.dims!.h0Padding,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                EsTitle(
-                                  AppLocalizations.of(context)!.title,
-                                ),
-                                EsVSpacer(
-                                  big: true,
-                                  factor: 2,
-                                ),
-                                EsOrdinaryText(
-                                  StructureBuilder.configs!.lorm,
-                                  align: TextAlign.justify,
-                                  overFlowTag: true,
-                                  maxLine: 3,
-                                ),
-                                EsVSpacer(
-                                  big: true,
-                                  factor: 2,
-                                ),
-                                EsLabelText(
-                                  "last update was 3min ago ",
-                                  color: StructureBuilder.styles!.t3Color,
-                                )
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    )),
-                    cardShow(Container(
-                      clipBehavior: Clip.antiAlias,
-                      margin: EdgeInsets.symmetric(
-                        vertical: StructureBuilder.dims!.h1Padding,
-                      ),
-                      decoration: BoxDecoration(
-                          color: MyStyle.cardColor,
-                          borderRadius: BorderRadius.all(Radius.circular(
-                              StructureBuilder.dims!.h0BorderRadius))),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: StructureBuilder.dims!.h0Padding,
-                              vertical: StructureBuilder.dims!.h0Padding,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                EsTitle(
-                                  AppLocalizations.of(context)!.title,
-                                ),
-                                EsVSpacer(
-                                  big: true,
-                                  factor: 2,
-                                ),
-                                EsOrdinaryText(
-                                  StructureBuilder.configs!.lorm,
-                                  align: TextAlign.justify,
-                                  overFlowTag: true,
-                                  maxLine: 3,
-                                ),
-                                EsVSpacer(
-                                  big: true,
-                                  factor: 2,
-                                ),
-                                EsLabelText(
-                                  "last update was 3min ago ",
-                                  color: StructureBuilder.styles!.t3Color,
-                                )
-                              ],
-                            ),
-                          ),
-                          Image.asset(
-                            "assets/images/img2.jpg",
-                          ),
-                        ],
-                      ),
-                    )),
-                    cardShow(Container(
-                      clipBehavior: Clip.antiAlias,
-                      margin: EdgeInsets.symmetric(
-                        vertical: StructureBuilder.dims!.h1Padding,
-                      ),
-                      decoration: BoxDecoration(
-                          color: MyStyle.cardColor,
-                          borderRadius: BorderRadius.all(Radius.circular(
-                              StructureBuilder.dims!.h0BorderRadius))),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            "assets/images/img2.jpg",
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: StructureBuilder.dims!.h0Padding,
-                              vertical: StructureBuilder.dims!.h0Padding,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                EsVSpacer(
-                                  big: true,
-                                  factor: 2,
-                                ),
-                                EsOrdinaryText(
-                                  StructureBuilder.configs!.lorm,
-                                  align: TextAlign.justify,
-                                  overFlowTag: true,
-                                  maxLine: 3,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    )),
-                    cardShow(Container(
-                      clipBehavior: Clip.antiAlias,
-                      margin: EdgeInsets.symmetric(
-                        vertical: StructureBuilder.dims!.h1Padding,
-                      ),
-                      decoration: BoxDecoration(
-                          color: MyStyle.cardColor,
-                          borderRadius: BorderRadius.all(Radius.circular(
-                              StructureBuilder.dims!.h0BorderRadius))),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            "assets/images/img2.jpg",
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: StructureBuilder.dims!.h0Padding,
-                              vertical: StructureBuilder.dims!.h0Padding,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                EsVSpacer(
-                                  big: true,
-                                  factor: 2,
-                                ),
-                                EsOrdinaryText(
-                                  StructureBuilder.configs!.lorm,
-                                  align: TextAlign.justify,
-                                  overFlowTag: true,
-                                  maxLine: 3,
-                                ),
-                                EsVSpacer(
-                                  big: true,
-                                  factor: 2,
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: [
-                                    EsButton(
-                                      text: AppLocalizations.of(context)!.button,
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    )),
-                    cardShow(Container(
-                      clipBehavior: Clip.antiAlias,
-                      margin: EdgeInsets.symmetric(
-                        vertical: StructureBuilder.dims!.h1Padding,
-                      ),
-                      decoration: BoxDecoration(
-                          color: MyStyle.cardColor,
-                          borderRadius: BorderRadius.all(Radius.circular(
-                              StructureBuilder.dims!.h0BorderRadius))),
-                      child: Stack(
-                        children: [
-                          Positioned.fill(
-                            child: Image.asset(
-                              "assets/images/img2.jpg",
-                              fit: BoxFit.cover,
-                            ),),
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: StructureBuilder.dims!.h0Padding,
-                              vertical: StructureBuilder.dims!.h0Padding,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                EsTitle(
-                                  AppLocalizations.of(context)!.title,
-                                ),
-                                EsVSpacer(
-                                  big: true,
-                                  factor: 2,
-                                ),
-                                EsOrdinaryText(
-                                  StructureBuilder.configs!.lorm,
-                                  align: TextAlign.justify,
-                                  overFlowTag: true,
-                                  maxLine: 3,
-                                ),
-                                EsVSpacer(
-                                  big: true,
-                                  factor: 2,
-                                ),
-                                EsLabelText(
-                                  "last update was 3min ago ",
-                                  color: StructureBuilder.styles!.t3Color,
-                                )
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    )),
-                    cardShow(Container(
-                      decoration: BoxDecoration(
-                          color: MyStyle.cardColor,
-                          borderRadius: BorderRadius.all(Radius.circular(
-                              StructureBuilder.dims!.h0BorderRadius))),
-                      margin: EdgeInsets.symmetric(
-                        vertical: StructureBuilder.dims!.h1Padding,
-                      ),
-                      padding: EdgeInsets.symmetric(
-                        horizontal: StructureBuilder.dims!.h0Padding,
-                        vertical: StructureBuilder.dims!.h0Padding,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          EsTitle(
-                            AppLocalizations.of(context)!.header,
-                          ),
-                          EsVSpacer(),
-                          EsHDivider(),
-                          EsVSpacer(
-                            big: true,
-                            factor: 2,
-                          ),
-                          Container(
-                            clipBehavior: Clip.antiAlias,
-                            margin: EdgeInsets.symmetric(
-                              vertical: StructureBuilder.dims!.h1Padding,
-                            ),
-                            decoration: BoxDecoration(
-                                color: MyStyle.cardColor,
-                                borderRadius: BorderRadius.all(Radius.circular(
-                                    StructureBuilder.dims!.h0BorderRadius))),
-                            child: Image.asset(
-                              "assets/images/img2.jpg",
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          EsVSpacer(
-                            big: true,
-                            factor: 2,
-                          ),
-                          EsOrdinaryText(
-                            StructureBuilder.configs!.lorm,
-                            align: TextAlign.justify,
-                            overFlowTag: true,
-                            maxLine: 3,
-                          ),
-                        ],
-                      ),
-                    )),
-                    cardShow(Container(
-                      clipBehavior: Clip.antiAlias,
-                      margin: EdgeInsets.symmetric(
-                        vertical: StructureBuilder.dims!.h1Padding,
-                      ),
-                      decoration: BoxDecoration(
-                          color: MyStyle.cardColor,
-                          borderRadius: BorderRadius.all(Radius.circular(
-                              StructureBuilder.dims!.h0BorderRadius))),
-                      child: Image.asset(
-                        "assets/images/img2.jpg",
-                        fit: BoxFit.cover,
-                      ),
-                    )),
+                    cardShow(EsImageCard1()),
+                    cardShow(EsImageCard2()),
+                    cardShow(EsImageCard3()),
+                    cardShow(EsImageCard4()),
+                    cardShow(EsImageCard5()),
+                    cardShow(EsImageCard6()),
+                    cardShow(EsImageCard7()),
                   ],),),
           title: AppLocalizations.of(context)!.imagecard,
-          information: "They are primary cards in panel:"
+          information: "They are image cards in panel:"
               """Container(
-                      clipBehavior: Clip.antiAlias,
-                      margin: EdgeInsets.symmetric(
-                        vertical: StructureBuilder.dims!.h1Padding,
-                      ),
-                      decoration: BoxDecoration(
-                          color: MyStyle.cardColor,
-                          borderRadius: BorderRadius.all(Radius.circular(
-                              StructureBuilder.dims!.h0BorderRadius))),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            "assets/images/img2.jpg",
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: StructureBuilder.dims!.h0Padding,
-                              vertical: StructureBuilder.dims!.h0Padding,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                EsTitle(
-                                  AppLocalizations.of(context)!.title,
-                                ),
-                                EsVSpacer(
-                                  big: true,
-                                  factor: 2,
-                                ),
-                                EsOrdinaryText(
-                                  StructureBuilder.configs!.lorm,
-                                  align: TextAlign.justify,
-                                  overFlowTag: true,
-                                  maxLine: 3,
-                                ),
-                                EsVSpacer(
-                                  big: true,
-                                  factor: 2,
-                                ),
-                                EsLabelText(
-                                  "last update was 3min ago ",
-                                  color: StructureBuilder.styles!.t3Color,
-                                )
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    )"""),
+              child: BootstrapContainer(
+                  fluid: true,
+                  // padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+                  children: [
+                    cardShow(EsImageCard1()),
+                    cardShow(EsImageCard2()),
+                    cardShow(EsImageCard3()),
+                    cardShow(EsImageCard4()),
+                    cardShow(EsImageCard5()),
+                    cardShow(EsImageCard6()),
+                    cardShow(EsImageCard7()),
+                  ],),),"""),
     ];
     return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
@@ -424,3 +98,5 @@ class PanelImageCardSample extends StatelessWidget {
     );
   }
 }
+
+

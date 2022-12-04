@@ -1,14 +1,16 @@
 
-import 'package:es_flutter_admin_panel/panelItems/components/es-chart/es-circular_chart.dart';
-import 'package:es_flutter_admin_panel/panelItems/components/es-chart/es-linear-chart.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'components/container_items.dart';
-import 'components/es-chart/es_bar_chart.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
+
+import '../panel_ui/components/es-chart/es-circular_chart.dart';
+import '../panel_ui/components/es-chart/es-linear-chart.dart';
+import '../panel_ui/components/es-chart/es_bar_chart.dart';
 
 class PanelChartSample extends StatefulWidget {
   PanelChartSample({Key? key}) : super(key: key);
@@ -31,17 +33,17 @@ class _PanelChartSampleState extends State<PanelChartSample> {
           widget: EsBarChart(),
           title: AppLocalizations.of(context)!.barCharts,
           information:
-              "It is a bar chart located in: \n es_flutter_component>lib>es_chart>es_bar_chart.dart \n and is used as EsBarChart()"),
+              "It is a bar chart located in: \n es_flutter_component/lib/components/es_chart>es_bar_chart.dart \n and is used as EsBarChart()"),
       ContainerItems(
           widget: EsLinearChart(),
           title: AppLocalizations.of(context)!.linearChart,
           information:
-              "It is a linear chart located in: \n es_flutter_component>lib>es_chart>es_linear_chart.dart \n and is used as EsLinearChart()"),
+              "It is a linear chart located in: \n es_flutter_component/lib/components/es_chart>es_linear_chart.dart \n and is used as EsLinearChart()"),
       ContainerItems(
           widget: EsCircularChart(),
           title: AppLocalizations.of(context)!.circularCharts,
           information:
-              "It is a circular chart located in: \n es_flutter_component>lib>es_chart>es_circular_chart.dart \n and is used as EsCircularChart()"),
+              "It is a circular chart located in: \n es_flutter_component/lib/components/es_chart>es_circular_chart.dart \n and is used as EsCircularChart()"),
     ];
 
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);

@@ -1,7 +1,7 @@
 
 import 'package:es_flutter_component/components/es_image/es_zoomable_image.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
@@ -33,7 +33,7 @@ class _PanelZoomableImageSampleState extends State<PanelZoomableImageSample> {
           ),
           title: AppLocalizations.of(context)!.zoomableimage,
           information:
-          "It is a Zoomable image located in: \n es_flutter_component>lib>es_image/es_zoomable_image.dart\n and is used as: \n "
+          "It is a Zoomable image located in: \n es_flutter_component/lib/components/es_image/es_zoomable_image.dart\n and is used as: \n "
               """EsZoomingImage(
                 imageProvider:  AssetImage("assets/images/img1.jpg"),) \n the photo_view package should be added in pubspec.yaml 's dependencies"""),
 

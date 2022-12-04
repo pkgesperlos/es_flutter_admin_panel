@@ -1,6 +1,15 @@
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
+import 'package:es_flutter_component/components/es_button/es_button.dart';
+import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/components/es_table/es_simple_table.dart';
+import 'package:es_flutter_component/components/es_text/es_header.dart';
+
 import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/components/es_text/es_title.dart';
+import 'package:es_flutter_component/es_spacer/es_h_divider.dart';
+import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
@@ -8,8 +17,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../components/container_items.dart';
-import '../components/page_title_container.dart';
+import '../../panel_ui/components/es_bill/es_bill.dart';
+
 
 class PanelBillSample extends StatefulWidget {
   PanelBillSample({Key? key}) : super(key: key);
@@ -36,78 +45,16 @@ class _PanelBillSampleState extends State<PanelBillSample> {
       ContainerItems(
           widget: Container(
 
-            child: Column(
-              children: [
-                Container(
-                  width: double.infinity,
-                  height: 200,
-                  padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding),
-                  child: EsSimpleTable(
-                    zebraMode: true,
-                    headingColor: StructureBuilder.styles!.primaryColor,
-                    rowsContent: [
-                      [
-                        EsOrdinaryText("1"),
-                        EsOrdinaryText("طراحی بروشور"),
-                        EsOrdinaryText("2"),
-                        EsOrdinaryText("20000 تومان"),
-                        EsOrdinaryText("40000تومان"),
-                      ],
-                      [
-                        EsOrdinaryText("2"),
-                        EsOrdinaryText("طراحی لوگو"),
-                        EsOrdinaryText("2"),
-                        EsOrdinaryText("20000 تومان"),
-                        EsOrdinaryText("40000تومان"),
-                      ],
-                      [
-                        EsOrdinaryText("3"),
-                        EsOrdinaryText("پرینت آگهی"),
-                        EsOrdinaryText("3"),
-                        EsOrdinaryText("20000 تومان"),
-                        EsOrdinaryText("60000تومان"),
-                      ],
-                      [
-                        EsOrdinaryText("4"),
-                        EsOrdinaryText("طراحی اپلیکیشن"),
-                        EsOrdinaryText("2"),
-                        EsOrdinaryText("100000 تومان"),
-                        EsOrdinaryText("200000تومان"),
-                      ],
-                    ],
-                    columnTitle: [
-                      EsTitle(
-                        "#",
-                        color: StructureBuilder.styles!.primaryLightColor,
-                      ),
-                      EsTitle("توضیحات",
-                          color: StructureBuilder.styles!.primaryLightColor),
-                      EsTitle("تعداد",
-                          color: StructureBuilder.styles!.primaryLightColor),
-                      EsTitle("قیمت",
-                          color: StructureBuilder.styles!.primaryLightColor),
-                      EsTitle("جمع کل",
-                          color: StructureBuilder.styles!.primaryLightColor)
-                    ],
-                  ),
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    EsOrdinaryText("جمع مبالغ: 12,348,000 تومان",
-                      color: StructureBuilder.styles!.secondaryColor,)
-                  ],
-                )
-              ],
-            ),
+            child: EsBill()
           ),
-          title: "Bill",
+          title: AppLocalizations.of(context)!.bill,
           information:
-              "It is a quill Text Editor located in: \n es_flutter_component>lib/es_form/es_text_editor/es_text_editor.dart"
+              "It is a Bill "
               " \n and is used as: \n "
-              """EsTextEditor(),"""),
+              """Container(
+
+            child: EsBill()
+          ),"""),
     ];
     return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
@@ -115,7 +62,7 @@ class _PanelBillSampleState extends State<PanelBillSample> {
           child: Column(
             children: [
               PageTitleContainer(
-                title: AppLocalizations.of(context)!.quilltexteditortitle,
+                title: AppLocalizations.of(context)!.billtitle,
               ),
               BootstrapContainer(
                   fluid: true,

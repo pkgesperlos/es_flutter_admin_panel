@@ -3,8 +3,8 @@ import 'package:es_flutter_component/components/es_button/es_button.dart';
 import 'package:es_flutter_component/components/es_image/es_avatar_image.dart';
 import 'package:es_flutter_component/components/es_label/es_label.dart';
 import 'package:es_flutter_component/components/es_tooltip/es_tooltip.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
 
 import 'package:es_flutter_component/resources/structure_builder.dart';
@@ -71,7 +71,7 @@ class PanelTooltipSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.tooltipindifferentalignments,
           information:
-              "They are  tooltip in different alignments located in: \n es_flutter_component/es_tooltip/es_tooltip.dart \n and is used as: \n "
+              "They are  tooltip in different alignments located in: \n es_flutter_component/lib/components/es_tooltip/es_tooltip.dart \n and is used as: \n "
               """EsTooltip(
                 message: 'message',
                 widget: EsButton(
@@ -132,7 +132,7 @@ class PanelTooltipSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.tooltipfordifferentwidgets,
           information:
-              "They are  tooltip on different widgets located in: \n es_flutter_component/es_tooltip/es_tooltip.dart \n and is used as: \n "
+              "They are  tooltip on different widgets located in: \n es_flutter_component/lib/components/es_tooltip/es_tooltip.dart \n and is used as: \n "
               """ EsTooltip(
                 message: 'message',
                 widget:  EsLabel(
@@ -193,7 +193,7 @@ class PanelTooltipSample extends StatelessWidget {
               )),
           title: AppLocalizations.of(context)!.tooltipindifferentshowduration,
           information:
-          "They are  tooltip in different show duration located in: \n es_flutter_component/es_tooltip/es_tooltip.dart \n and is used as: \n "
+          "They are  tooltip in different show duration located in: \n es_flutter_component/lib/components/es_tooltip/es_tooltip.dart \n and is used as: \n "
               """EsTooltip(
                       message: 'message',
                       widget: EsButton(

@@ -3,8 +3,8 @@ import 'package:es_flutter_component/components/es_label/es_label.dart';
 import 'package:es_flutter_component/components/es_modal/es_modal.dart';
 import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/components/es_text/es_title.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/es_button/es_button.dart';
 import 'package:es_flutter_component/es_form/es_text_field/es_text_field.dart';
 import 'package:es_flutter_component/es_image/es_avatar_image.dart';
@@ -247,7 +247,7 @@ class PanelModalSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.modalsindifferentsizes,
           information:
-              "They are  modals in different sizes located in: \n es_flutter_component/es_modal/es_modal.dart \n and is used as: \n "
+              "They are  modals in different sizes located in: \n es_flutter_component/lib/components/es_modal/es_modal.dart \n and is used as: \n "
               """EsButton(
                 text: 'Modal',
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
@@ -303,7 +303,7 @@ class PanelModalSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.modalsindifferentcontents,
           information:
-              "They are  modals in different contents located in: \n es_flutter_component/es_modal/es_modal.dart \n and is used as: \n "
+              "They are  modals in different contents located in: \n es_flutter_component/lib/components/es_modal/es_modal.dart \n and is used as: \n "
               """EsButton(
                 text: 'information modal',
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
@@ -379,7 +379,7 @@ class PanelModalSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.modalsindifferentalignments,
           information:
-              "They are  modals in different alignments located in: \n es_flutter_component/es_modal/es_modal.dart \n and is used as: \n "
+              "They are  modals in different alignments located in: \n es_flutter_component/lib/components/es_modal/es_modal.dart \n and is used as: \n "
               """EsButton(
                 text: 'TopLeft modal',
                 fillColor: StructureBuilder.styles!.buttonColor().primary,
@@ -442,7 +442,7 @@ class PanelModalSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.seriesofmodals,
           information:
-              "They are  Series of modals located in: \n es_flutter_component/es_modal/es_modal.dart \n and is used as: \n "
+              "They are  Series of modals located in: \n es_flutter_component/lib/components/es_modal/es_modal.dart \n and is used as: \n "
               """EsButton(
                 text: 'Series of modals',
                 fillColor: StructureBuilder.styles!.buttonColor().primary,

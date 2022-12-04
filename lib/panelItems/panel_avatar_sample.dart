@@ -1,5 +1,5 @@
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/components/es_image/es_avatar_image.dart';
 import 'package:es_flutter_component/components/es_image/es_avatar_widget.dart';
 import 'package:es_flutter_component/components/es_label/es_content_label.dart';
@@ -51,7 +51,7 @@ class PanelAvatarSample extends StatelessWidget {
               )),
           title: AppLocalizations.of(context)!.avatarsindifferentsizes,
           information:
-              "They are avatars in different sizes located in: \n es_flutter_component/es_image/es_avatar_image.dart\n and is used as: \n "
+              "They are avatars in different sizes located in: \n es_flutter_component/lib/components/es_image/es_avatar_image.dart\n and is used as: \n "
               """   EsAvatarImage(
                 path: _imagePath,
                 radius: StructureBuilder.dims!.h1IconSize / 2,
@@ -115,7 +115,7 @@ class PanelAvatarSample extends StatelessWidget {
               )),
           title: AppLocalizations.of(context)!.avatarsindifferentstatuses,
           information:
-              "They are avatars in different statuses located in: \n es_flutter_component/es_image/es_avatar_image.dart\n and is used as: \n "
+              "They are avatars in different statuses located in: \n es_flutter_component/lib/components/es_image/es_avatar_image.dart\n and is used as: \n "
               """ EsLabel(
                   isUnique: false,
                   widget: EsAvatarImage(path: "assets/images/img1.jpg",),
@@ -156,7 +156,7 @@ class PanelAvatarSample extends StatelessWidget {
               )),
           title: AppLocalizations.of(context)!.avatarswithdifferentwidgets,
           information:
-              "They are avatars with different widgets located in: \n es_flutter_component/es_image/es_avatar_image.dart\n and is used as: \n "
+              "They are avatars with different widgets located in: \n es_flutter_component/lib/components/es_image/es_avatar_image.dart\n and is used as: \n "
               """EsAvatarWidget(
                   widget: EsTitle(
                 "FA",
@@ -223,7 +223,7 @@ class PanelAvatarSample extends StatelessWidget {
           title: AppLocalizations.of(context)!
               .avatarswithdifferentbackgroundcolors,
           information:
-              "They are avatars with different background colors located in: \n es_flutter_component/es_image/es_avatar_image.dart\n and is used as: \n "
+              "They are avatars with different background colors located in: \n es_flutter_component/lib/components/es_image/es_avatar_image.dart\n and is used as: \n "
               """ EsAvatarWidget(
                 backGroundColor: StructureBuilder.styles!.tritiaryColor,
                   widget: EsTitle(
@@ -311,7 +311,7 @@ class PanelAvatarSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.avatarsindifferentshapes,
           information:
-              "They are avatars in different shapes and shapes located in: \n es_flutter_component/es_image\n and is used as: \n "
+              "They are avatars in different shapes and shapes located in: \n es_flutter_component/lib/components/es_image\n and is used as: \n "
               """EsAvatarImage.rectangle(
                    isrectangle: true,
                     path: "assets/images/img1.jpg",
@@ -359,7 +359,7 @@ class PanelAvatarSample extends StatelessWidget {
           ),
           title: AppLocalizations.of(context)!.groupavatar,
           information:
-              "It is group avatar located in: \n es_flutter_component/es_image\n and is used as: \n "
+              "It is group avatar located in: \n es_flutter_component/lib/components/es_image\n and is used as: \n "
               """SizedBox(
                     width: StructureBuilder.dims!.h0Padding*10,
                     child: Stack(

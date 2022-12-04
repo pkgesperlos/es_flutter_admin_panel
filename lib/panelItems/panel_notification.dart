@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 
 class PanelNotification extends StatelessWidget {
   const PanelNotification({Key? key}) : super(key: key);
@@ -24,7 +24,7 @@ class PanelNotification extends StatelessWidget {
             },
           ),
           title:AppLocalizations.of(context)!.simpleNotifications,
-          information:"It is an ordinary notification located in: \n es_flutter_component>lib>es_notification>es_ordinary_notification.dart \n and is used as: \n "
+          information:"It is an ordinary notification located in: \n es_flutter_component/lib/components/es_notification>es_ordinary_notification.dart \n and is used as: \n "
               """EsOrdinaryButton(
             text: AppLocalizations.of(context)!.simpleNotifications,
             onPressed: () {

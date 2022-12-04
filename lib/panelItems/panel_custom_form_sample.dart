@@ -8,8 +8,8 @@ import 'package:es_flutter_component/components/es_form/es_radio_button/es_radio
 import 'package:es_flutter_component/components/es_form/es_slider/es_slider.dart';
 import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field.dart';
 import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/es_button/es_button.dart';
 import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';

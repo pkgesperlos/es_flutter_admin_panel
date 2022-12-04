@@ -15,7 +15,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 
 class PanelDialogBox extends StatelessWidget {
   const PanelDialogBox({Key? key}) : super(key: key);
@@ -30,7 +30,7 @@ class PanelDialogBox extends StatelessWidget {
             desc: AppLocalizations.of(context)!.successDialogDesc,
           ),
          title: AppLocalizations.of(context)!.successDialogText,
-          information: "It is a success dialog sample located in: \n es_flutter_component>lib>es_modal>es_success_dialog.dart \n and is used as: \n "
+          information: "It is a success dialog sample located in: \n es_flutter_component/lib/components/es_modal>es_success_dialog.dart \n and is used as: \n "
               """ EsSuccessDialog(
             title: AppLocalizations.of(context)!.successDialogTitle,
             text: AppLocalizations.of(context)!.successDialogText,
@@ -42,7 +42,7 @@ class PanelDialogBox extends StatelessWidget {
             desc: AppLocalizations.of(context)!.errorDialogDesc,
           ),
           title:AppLocalizations.of(context)!.errorDialogText,
-          information:"It is a error dialog sample located in: \n es_flutter_component>lib>es_modal>es_error_dialog.dart \n and is used as: \n "
+          information:"It is a error dialog sample located in: \n es_flutter_component/lib/components/es_modal>es_error_dialog.dart \n and is used as: \n "
               """ EsErrorDialog(
             title: AppLocalizations.of(context)!.errorDialogTitle,
             text: AppLocalizations.of(context)!.errorDialogText,
@@ -56,7 +56,7 @@ class PanelDialogBox extends StatelessWidget {
             btnOkOnPress: () {},
           ),
           title:AppLocalizations.of(context)!.warningDialogText,
-          information:"It is a warning dialog sample located in: \n es_flutter_component>lib>es_modal>es_warning_dialog.dart \n and is used as: \n "
+          information:"It is a warning dialog sample located in: \n es_flutter_component/lib/components/es_modal>es_warning_dialog.dart \n and is used as: \n "
               """EsWarningDialog(
             title: AppLocalizations.of(context)!.warningDialogTitle,
             text: AppLocalizations.of(context)!.warningDialogText,
@@ -70,7 +70,7 @@ class PanelDialogBox extends StatelessWidget {
             desc: AppLocalizations.of(context)!.infoDialogDesc,
           ),
           title:AppLocalizations.of(context)!.infoDialogText,
-          information:"It is a information dialog sample located in: \n es_flutter_component>lib>es_modal>es_information_dialog.dart \n and is used as: \n "
+          information:"It is a information dialog sample located in: \n es_flutter_component/lib/components/es_modal>es_information_dialog.dart \n and is used as: \n "
               """EsInfoDialog(
             title: AppLocalizations.of(context)!.infoDialogTitle,
             text: AppLocalizations.of(context)!.infoDialogText,
@@ -83,7 +83,7 @@ class PanelDialogBox extends StatelessWidget {
             time: 2,
           ),
           title:AppLocalizations.of(context)!.autoHideDialogText,
-          information:"It is a auto hide dialog sample located in: \n es_flutter_component>lib>es_modal>es_autohide_dialog.dart \n and is used as: \n "
+          information:"It is a auto hide dialog sample located in: \n es_flutter_component/lib/components/es_modal>es_autohide_dialog.dart \n and is used as: \n "
               """EsAutoHideDialog(
             title: AppLocalizations.of(context)!.autoHideDialogTitle,
             text: AppLocalizations.of(context)!.autoHideDialogText,
@@ -104,7 +104,7 @@ class PanelDialogBox extends StatelessWidget {
             ),
           ),
           title:AppLocalizations.of(context)!.inputDialogText,
-          information:"It is a  dialog sample with input field located in: \n es_flutter_component>lib>es_modal>es_input_dialog.dart \n and is used as: \n "
+          information:"It is a  dialog sample with input field located in: \n es_flutter_component/lib/components/es_modal>es_input_dialog.dart \n and is used as: \n "
               """EsInputDialog(
             title: AppLocalizations.of(context)!.inputDialogTitle,
             text: AppLocalizations.of(context)!.inputDialogText,
@@ -124,7 +124,7 @@ class PanelDialogBox extends StatelessWidget {
             desc: AppLocalizations.of(context)!.bodyDialogDesc,
           ),
           title:AppLocalizations.of(context)!.bodyDialogText,
-          information:"It is a  dialog sample with simple body field located in: \n es_flutter_component>lib>es_modal>es_body_dialog.dart \n and is used as: \n "
+          information:"It is a  dialog sample with simple body field located in: \n es_flutter_component/lib/components/es_modal>es_body_dialog.dart \n and is used as: \n "
               """EsBodyDialog(
             title: AppLocalizations.of(context)!.bodyDialogTitle,
             text: AppLocalizations.of(context)!.bodyDialogText,

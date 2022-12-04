@@ -3,8 +3,8 @@ import 'package:es_flutter_component/components/es_image/es_light_box/src/image_
 import 'package:es_flutter_component/components/es_image/es_light_box/src/light_box_unique.dart';
 import 'package:es_flutter_component/components/es_image/es_light_box/src/lightbox_group.dart';
 import 'package:es_flutter_component/components/es_image/es_light_box/src/lightbox_route.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
@@ -67,7 +67,7 @@ class _PanelLightBoxSampleState extends State<PanelLightBoxSample> {
           ),
           title: AppLocalizations.of(context)!.gallerylightboxshowingimage,
           information:
-          "It is a gallery light box showing image located in: \n es_flutter_component>lib>es_image/es_light_box/src/lightbox_group.dart \n and is used as: \n "
+          "It is a gallery light box showing image located in: \n es_flutter_component/lib/components/es_image/es_light_box/src/lightbox_group.dart \n and is used as: \n "
               """ListView.separated(
                 separatorBuilder: (context, index) => SizedBox(width: 10.0),
                 scrollDirection: Axis.horizontal,
@@ -126,7 +126,7 @@ class _PanelLightBoxSampleState extends State<PanelLightBoxSample> {
           ),
           title: AppLocalizations.of(context)!.uniquelightboxshowingimage,
           information:
-          "It is a unique light box showing image located in: \n es_flutter_component>lib>es_image/es_light_box/src/lightbox_group.dart \n and is used as: \n "
+          "It is a unique light box showing image located in: \n es_flutter_component/lib/components/es_image/es_light_box/src/lightbox_group.dart \n and is used as: \n "
               """GestureDetector(
               child: Container(
                   height: 200,

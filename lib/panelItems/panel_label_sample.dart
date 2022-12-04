@@ -1,8 +1,8 @@
 
 import 'package:es_flutter_component/components/es_label/es_content_label.dart';
 import 'package:es_flutter_component/components/es_label/es_label.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/es_button/es_button.dart';
 import 'package:es_flutter_component/es_image/es_avatar_image.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
@@ -53,7 +53,7 @@ class PanelLabelSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.labelondifferentwidgets,
           information:
-              "They are labels on different widgets located in: \n es_flutter_component/es_label\n and is used as: \n "
+              "They are labels on different widgets located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
               """EsLabel(
               isUnique: false,
                 widget: EsButton(
@@ -93,7 +93,7 @@ class PanelLabelSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.labelinuniquemode,
           information:
-              "They are labels in unique mode located in: \n es_flutter_component/es_label\n and is used as: \n "
+              "They are labels in unique mode located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
               """EsLabel(
                 isUnique: true,
               ),"""),
@@ -143,7 +143,7 @@ class PanelLabelSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.labelwithdifferentcontents,
           information:
-              "They are labels with different contents located in: \n es_flutter_component/es_label\n and is used as: \n "
+              "They are labels with different contents located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
               """EsContentLabel(
               isUnique: false,
                 widget: EsButton(
@@ -201,7 +201,7 @@ class PanelLabelSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.labelwithsepratorborder,
           information:
-              "They are labels with seprator border located in: \n es_flutter_component/es_label\n and is used as: \n "
+              "They are labels with seprator border located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
               """ EsLabel(
               isUnique: false,
                     widget: EsButton(
@@ -369,7 +369,7 @@ class PanelLabelSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.labelindifferentcolors,
           information:
-              "They are labels in different colors located in: \n es_flutter_component/es_label\n and is used as: \n "
+              "They are labels in different colors located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
               """EsLabel(
               isUnique: false,
                 widget: EsButton(
@@ -460,7 +460,7 @@ class PanelLabelSample extends StatelessWidget {
           title: AppLocalizations.of(context)!
               .labelindifferentsizesandborderradiuss,
           information:
-              "They are labels in different sizes and border radius's located in: \n es_flutter_component/es_label\n and is used as: \n "
+              "They are labels in different sizes and border radius's located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
               """EsLabel(
               isUnique: false,
                     widget: EsButton(

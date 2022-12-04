@@ -2,8 +2,8 @@ import 'dart:math';
 
 
 import 'package:es_flutter_component/components/es_tree_list/tree_list_view.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
@@ -37,7 +37,7 @@ class _PanelTreeListSampleState extends State<PanelTreeListSample> {
           title: AppLocalizations.of(context)!.defaulttreelistview,
           information:
           "it is Tree list view with desired icon that the list_treeview package is added in pubspec.yaml 's dependencies \n"
-              " and the widget located in: \n es_flutter_component/es_tree_list/tree_list_view.dart \n"
+              " and the widget located in: \n es_flutter_component/lib/components/es_tree_list/tree_list_view.dart \n"
               "and is used as: \n "
               """
              TreeListView()
@@ -58,7 +58,7 @@ class _PanelTreeListSampleState extends State<PanelTreeListSample> {
           title: AppLocalizations.of(context)!.treelistviewwithdesiredicon,
           information:
               "it is Tree list view with desired icon that the list_treeview package is added in pubspec.yaml 's dependencies \n"
-                  " and the widget located in: \n es_flutter_component/es_tree_list/tree_list_view.dart \n"
+                  " and the widget located in: \n es_flutter_component/lib/components/es_tree_list/tree_list_view.dart \n"
                   "and is used as: \n "
               """
               TreeListView(

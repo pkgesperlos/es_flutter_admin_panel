@@ -2,8 +2,8 @@
 import 'package:es_flutter_component/components/es_page_indicator/es_number_page_indicator.dart';
 import 'package:es_flutter_component/components/es_page_indicator/es_page_indicator.dart';
 import 'package:es_flutter_component/components/es_page_indicator/es_sample_page_maker.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
@@ -72,7 +72,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
           ),
           title: AppLocalizations.of(context)!.simplepageindicator,
           information:
-              "It is simple page indicator located in: \n es_flutter_component/es_page_indicator/es_slide_indicator.dart\n and is used as: \n "
+              "It is simple page indicator located in: \n es_flutter_component/lib/components/es_page_indicator/es_slide_indicator.dart\n and is used as: \n "
               """ EsPageIndicator(
                 controller: controller,
                 totalPage: totalPage,
@@ -112,7 +112,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
           ),
           title: AppLocalizations.of(context)!.simplepageindicatorwithbutton,
           information:
-              "It is simple page indicator with button located in: \n es_flutter_component/es_page_indicator/es_slide_indicator.dart\n and is used as: \n "
+              "It is simple page indicator with button located in: \n es_flutter_component/lib/components/es_page_indicator/es_slide_indicator.dart\n and is used as: \n "
               """ EsPageIndicator(
                 controller: controller,
                 totalPage: totalPage,
@@ -150,7 +150,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
           ),
           title: AppLocalizations.of(context)!.numberpageindicator,
           information:
-              "It is number page indicator located in: \n es_flutter_component/es_page_indicator/es_number_page_indicator.dart\n and is used as: \n "
+              "It is number page indicator located in: \n es_flutter_component/lib/components/es_page_indicator/es_number_page_indicator.dart\n and is used as: \n "
               """ EsNumberPageIndicator.simple(
                 controller: controller,
                 totalPage: totalPage,
@@ -190,7 +190,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
           )),
           title: AppLocalizations.of(context)!.numberpageindicatorwithbutton,
           information:
-              "It is number page indicator with button located in: \n es_flutter_component/es_page_indicator/es_number_page_indicator.dart\n and is used as: \n "
+              "It is number page indicator with button located in: \n es_flutter_component/lib/components/es_page_indicator/es_number_page_indicator.dart\n and is used as: \n "
               """ EsPageIndicator(
                 controller: controller,
                 totalPage: totalPage,
@@ -229,7 +229,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
           title: AppLocalizations.of(context)!
               .numberpageindicatorwithbuttonandlimitation,
           information:
-              "It is number page indicator with button and limitation located in: \n es_flutter_component/es_page_indicator/es_number_page_indicator.dart\n and is used as: \n "
+              "It is number page indicator with button and limitation located in: \n es_flutter_component/lib/components/es_page_indicator/es_number_page_indicator.dart\n and is used as: \n "
               """ EsNumberPageIndicator.limited(
                 controller: controller,
                 totalPage: totalPage,

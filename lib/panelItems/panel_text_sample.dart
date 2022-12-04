@@ -7,8 +7,8 @@ import 'package:es_flutter_component/components/es_text/es_marked_text.dart';
 import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/components/es_text/es_subtitle.dart';
 import 'package:es_flutter_component/components/es_text/es_title.dart';
-import 'components/container_items.dart';
-import 'components/page_title_container.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/resources/Constants/styles.dart';
@@ -51,7 +51,7 @@ class PanelTextSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.textindifferentposition,
           information:
-              "They are text in deifferent positions located in: \n es_flutter_component/es_text;' \n and is used as: \n "
+              "They are text in deifferent positions located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
               """EsHeader("Header : "+AppLocalizations.of(context)!.sampleText,),"""),
       ContainerItems(
           widget: Container(
@@ -152,7 +152,7 @@ class PanelTextSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.textforuseinlist,
           information:
-              "They are Texts for use in list located in: \n es_flutter_component/es_text;' \n and is used as: \n "
+              "They are Texts for use in list located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
               """Column(
                     children: [
                       EsDottedText(AppLocalizations.of(context)!.sampleText,),
@@ -315,7 +315,7 @@ class PanelTextSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.textindifferentcolors,
           information:
-              "They are texts in different colors located in: \n es_flutter_component/es_text;' \n and is used as: \n "
+              "They are texts in different colors located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
               """Column(
                     children: [
                       EsHeader("Header : "+AppLocalizations.of(context)!.sampleText,),
@@ -496,7 +496,7 @@ class PanelTextSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.textindifferentemphsizestyles,
           information:
-              "They are Text in deifferent sizes located in: \n es_flutter_component/es_text;' \n and is used as: \n "
+              "They are Text in deifferent sizes located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
               """ EsHeader("Header : "+AppLocalizations.of(context)!.sampleText,
                       backgroundColor: StructureBuilder.styles!.warningColor().warningLight,),
                       \n and \n
@@ -605,7 +605,7 @@ class PanelTextSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.textindifferentsizes,
           information:
-              "They are Text in deifferent sizes located in: \n es_flutter_component/es_text;' \n and is used as: \n "
+              "They are Text in deifferent sizes located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
               """EsOrdinaryText(
                         "OrdinaryText : " + AppLocalizations.of(context)!.sampleText,
                         size: StructureBuilder.dims!.h1FontSize,
