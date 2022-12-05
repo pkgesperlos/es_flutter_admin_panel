@@ -18,9 +18,12 @@
   "adminMenu": "Admin Menu",
 
   "charts": "Charts",
-  "barCharts": "Bar Chart",
-  "circularCharts": "Circular Chart",
-  "linearChart": "linear Chart",
+  "barChart": "Bar chart",
+  "circularChart": "Circular chart",
+  "linearChart": "Linear chart",
+  "radarChart": "Radar chart",
+  "scatterChart": "Scatter chart",
+  "charttitle": "Different model of charts are available in panel by flutter code.",
 
 
 
@@ -46,6 +49,7 @@
 
 
   "button": "Button",
+  "blocbutton": "Bloc button",
   "defaultbutton": "Default button",
   "borderedbutton": "Bordered button",
   "iconbutton": "Icon button",
@@ -426,6 +430,14 @@
   "numberofsales": "Number of sales",
   "sharesomthing": "Share something ...",
   "shareanactivity": "Share an activity",
+
+  "icontitle": "Different kinds of icons  are available in panel by flutter code.",
+  "panelicons": "Panel icons",
+  "fontawesomefluttericons": "Font awesome flutter icons",
+  "fluttericons": "Flutter icons",
+
+  "map": "Map",
+  "maptitle": "Location is available in panel by flutter code.",
 
   "colors": "Colors",
   "color": "Color",

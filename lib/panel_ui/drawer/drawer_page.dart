@@ -40,6 +40,7 @@ import '../../panelItems/panel_group_list_sample.dart';
 import '../../panelItems/panel_image_card_sample.dart';
 import '../../panelItems/panel_label_sample.dart';
 import '../../panelItems/panel_light_box_sample.dart';
+import '../../panelItems/panel_map_sample.dart';
 import '../../panelItems/panel_modal_sample.dart';
 import '../../panelItems/panel_page_indicator_sample.dart';
 import '../../panelItems/panel_primary_card_sample.dart';
@@ -464,11 +465,17 @@ class _DrawerPageState extends State<DrawerPage> {
                           index: _indexList[45],
                           isSelected: _isSelectedList[45]),
                       nextLevel(
-                          title: AppLocalizations.of(context)!.emptyscreen,
-                          pageWidget: PanelEmptyScreenSample(),
+                          title: "Map",
+                          pageWidget: PanelMapSample(),
                           onSelect: _onSelectedList[46],
                           index: _indexList[46],
                           isSelected: _isSelectedList[46]),
+                      nextLevel(
+                          title: AppLocalizations.of(context)!.emptyscreen,
+                          pageWidget: PanelEmptyScreenSample(),
+                          onSelect: _onSelectedList[47],
+                          index: _indexList[47],
+                          isSelected: _isSelectedList[47]),
                       nextLevelExpandedComplex(
                           expansionTitle: AppLocalizations.of(context)!.errors,
                           expansionWidgetList: [
@@ -477,13 +484,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                 pageWidget: Es404Error(),
                                 onSelect: _onSelectedList[_currentIndex],
                                 index: _indexList[_currentIndex],
-                                isSelected: _isSelectedList[47]),
+                                isSelected: _isSelectedList[48]),
                             nextLevelNavigate(
                                 title: AppLocalizations.of(context)!.repairs,
                                 pageWidget: EsRepairs(),
                                 onSelect: _onSelectedList[_currentIndex],
                                 index: _indexList[_currentIndex],
-                                isSelected: _isSelectedList[48]),
+                                isSelected: _isSelectedList[49]),
 
                           ]),
 

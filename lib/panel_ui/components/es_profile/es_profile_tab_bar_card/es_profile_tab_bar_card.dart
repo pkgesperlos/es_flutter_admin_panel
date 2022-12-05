@@ -61,7 +61,7 @@ class EsProfileTabBarCard extends StatelessWidget {
           )),
       EsAvatarWidget(
           widget: EsSvgIcon(
-            "assets/svgs/gallery.svg",
+            "packages/es_flutter_component/assets/svgs/gallery.svg",
             size: StructureBuilder.dims!.h3IconSize,
             color: StructureBuilder.styles!.primaryLightColor,
           )),

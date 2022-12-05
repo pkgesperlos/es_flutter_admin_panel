@@ -1,4 +1,5 @@
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/components/es_block_button.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/components/es_button/es_button.dart';
 import 'package:es_flutter_component/components/es_button/es_icon_button.dart';
@@ -726,7 +727,7 @@ class PanelButtonSample extends StatelessWidget {
                     text: AppLocalizations.of(context)!.information,
                     icon: EsSvgIcon(
                       "packages/es_flutter_component/assets/svgs/Megaphone.svg",
-                      size: StructureBuilder.dims!.h1IconSize,
+                      size: StructureBuilder.dims!.h2IconSize,
                       color:
                           StructureBuilder.styles!.disableColor().disableDark,
                     ),
@@ -744,7 +745,7 @@ class PanelButtonSample extends StatelessWidget {
                     text: AppLocalizations.of(context)!.information,
                     icon: EsSvgIcon(
                       "packages/es_flutter_component/assets/svgs/Megaphone.svg",
-                      size: StructureBuilder.dims!.h1IconSize,
+                      size: StructureBuilder.dims!.h2IconSize,
                       color: StructureBuilder.styles!.t6Color,
                     ),
                     size: StructureBuilder.dims!.h0Padding,
@@ -913,6 +914,37 @@ class PanelButtonSample extends StatelessWidget {
                       disable: true,
                       fillColor:
                           StructureBuilder.styles!.buttonColor().disable),"""),
+      ContainerItems(
+          widget: Container(
+              child: Column(
+                children: [
+                  EsBlockButton(
+                    text: AppLocalizations.of(context)!.blocbutton,
+                  ),
+                  EsVSpacer(),
+                  EsBlockButton(
+                    text: AppLocalizations.of(context)!.blocbutton,
+                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+                      color: StructureBuilder.styles!.primaryLightColor,
+                      size: StructureBuilder.dims!.h3IconSize,
+                    ),
+                  ),
+                  EsVSpacer(),
+                  EsBlockButton(
+                    text: "",
+                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+                      color: StructureBuilder.styles!.primaryLightColor,
+                      size: StructureBuilder.dims!.h3IconSize,
+                    ),
+                  ),
+                ],
+              )),
+          title: AppLocalizations.of(context)!.blocbutton,
+          information:
+              "They are bloc buttons located in: \n es_flutter_component/lib/components/es_button' \n and is used as: \n "
+              """ EsBlockButton(
+                text: AppLocalizations.of(context)!.blocbutton,
+              )"""),
     ];
     return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
@@ -929,7 +961,12 @@ class PanelButtonSample extends StatelessWidget {
                     color: StructureBuilder.styles!.primaryDarkColor,
                   ),
                   children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
+                      list.length, (index)
+                  {
+                    if (index == list.length - 1) {
+                      return boxShow2(list[index]);
+                    }
+                    return boxShow(list[index]);}))
             ],
           ),
         ));
@@ -938,6 +975,10 @@ class PanelButtonSample extends StatelessWidget {
   Widget boxShow(Widget widget) {
     return BootstrapCol(
         sizes: 'col-sm-12 col-ml-12 col-lg-12 col-xl-12', child: widget);
+  }
+  Widget boxShow2(Widget widget) {
+    return BootstrapCol(
+        sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-6', child: widget);
   }
 
   Widget listShow(Widget widget) {

@@ -22,55 +22,60 @@ class _EsLinearChartState extends State<EsLinearChart> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(padding: EdgeInsets.only(
-        left: StructureBuilder.dims!.h1Padding,
-        right: StructureBuilder.dims!.h1Padding,
-        top: StructureBuilder.dims!.h0Padding,
-        bottom: StructureBuilder.dims!.h0Padding,),
-    child:Card(
-      color: StructureBuilder.styles!.primaryColor,
-      shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(20)),
-      elevation: 3,
-      child: Stack(
-        children: <Widget>[
-          AspectRatio(
-            aspectRatio: 1.00,
-            child: Container(
-              decoration: const BoxDecoration(
+    return AspectRatio(
+      aspectRatio: 1.66,
+      child: Center(
+        child: Padding(
+          padding: EdgeInsets.only(
+            left: StructureBuilder.dims!.h1Padding,
+            right: StructureBuilder.dims!.h1Padding,
+            top: StructureBuilder.dims!.h0Padding,
+            bottom: StructureBuilder.dims!.h0Padding,
+          ),
+        child:Card(
+          color: StructureBuilder.styles!.primaryColor,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+
+
+          child: Stack(
+            children: <Widget>[
+              Container(
+                decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(
                     Radius.circular(18),
                   ),
-                 ),
-              child: Padding(
-                padding: const EdgeInsets.only(
-                    right: 18.0, left: 12.0, top: 24, bottom: 12),
-                child: LineChart(
-                  showAvg ? avgData() : mainData(),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      right: 18.0, left: 12.0, top: 24, bottom: 12),
+                  child: LineChart(
+                    showAvg ? avgData() : mainData(),
+                  ),
                 ),
               ),
-            ),
-          ),
-          SizedBox(
-            width: 60,
-            height: 34,
-            child: TextButton(
-              onPressed: () {
-                setState(() {
-                  showAvg = !showAvg;
-                });
-              },
-              child: Text(
-                'avg',
-                style: TextStyle(
-                    fontSize: 12,
-                    color:
-                    showAvg ? Colors.white.withOpacity(0.5) : Colors.white),
-              ),
-            ),
-          ),
-        ],
-      ) ,
-    ),);
+              // SizedBox(
+              //   width: 60,
+              //   height: 34,
+              //   child: TextButton(
+              //     onPressed: () {
+              //       setState(() {
+              //         showAvg = !showAvg;
+              //       });
+              //     },
+              //     child: Text(
+              //       'avg',
+              //       style: TextStyle(
+              //           fontSize: 12,
+              //           color:
+              //           showAvg ? Colors.white.withOpacity(0.5) : Colors.white),
+              //     ),
+              //   ),
+              // ),
+            ],
+          ) ,
+        ),),
+      ),
+    );
   }
 
   // Widget bottomTitleWidgets(double value, TitleMeta meta) {
@@ -154,14 +159,14 @@ class _EsLinearChartState extends State<EsLinearChart> {
         topTitles: AxisTitles(
           sideTitles: SideTitles(showTitles: false),
         ),
-        bottomTitles: AxisTitles(
-          sideTitles: SideTitles(
-            showTitles: true,
-            reservedSize: 30,
-            interval: 1,
-            // getTitlesWidget: bottomTitleWidgets,
-          ),
-        ),
+        // bottomTitles: AxisTitles(
+        //   sideTitles: SideTitles(
+        //     showTitles: true,
+        //     reservedSize: 30,
+        //     interval: 1,
+        //     getTitlesWidget: bottomTitleWidgets,
+        //   ),
+        // ),
         leftTitles: AxisTitles(
           sideTitles: SideTitles(
             showTitles: true,

@@ -59,7 +59,7 @@ class _PanelTabBarNavigationSampleState
 
     List<Widget> _pageList=List.generate(num, (index) => Container(
       height: double.infinity,
-      color: StructureBuilder.styles!.t3Color,
+      color: StructureBuilder.styles!.primaryLightColor,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
