@@ -10,7 +10,7 @@ import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:responsive_table/responsive_table.dart';
 
-import '../panel_ui/components/es_map/es_show_location.dart';
+import 'package:es_flutter_component/components/es_map/es_show_location.dart';
 
 class PanelMapSample extends StatefulWidget {
   PanelMapSample({Key? key}) : super(key: key);
@@ -42,8 +42,8 @@ class _PanelMapSampleState extends State<PanelMapSample> {
             height: 700,
             width: double.infinity,
             child: EsShowLocation(
-              latitude: 29.619307268182446,
-              longitude: 52.524025272119665,
+              latitude: 30.291314113953575,
+              longitude: 57.067726807889755,
             ),
           ),
           title: AppLocalizations.of(context)!.map,
@@ -55,7 +55,7 @@ class _PanelMapSampleState extends State<PanelMapSample> {
         longitude: 52.524025272119665,
       ),"""),
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(

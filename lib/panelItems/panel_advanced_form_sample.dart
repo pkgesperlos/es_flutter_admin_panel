@@ -1,17 +1,19 @@
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
+import 'package:es_flutter_component/components/es_form/es_color_picker/es_color_picker.dart';
+import 'package:es_flutter_component/components/es_form/es_color_picker/es_ring_color_picker.dart';
 import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_android_time_picker.dart';
+import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_cupertino_12h_time_picker.dart';
 import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_cupertino_time_picker.dart';
 import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_english_date_picker.dart';
 import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_persian_date_picker.dart';
-import 'package:es_flutter_component/components/es_form/es_drop_down/es_label_input.dart';
-import 'package:es_flutter_component/components/es_form/es_drop_down/es_label_input_seprated_drop_down.dart';
 import 'package:es_flutter_component/components/es_form/es_file_picker/es_file_picker.dart';
+import 'package:es_flutter_component/components/es_form/es_label_input/es_label_input.dart';
+import 'package:es_flutter_component/components/es_form/es_label_input/es_label_input_seprated_drop_down.dart';
 import 'package:es_flutter_component/components/es_form/es_slider/es_range_slider.dart';
 import 'package:es_flutter_component/components/es_form/es_slider/es_slider.dart';
 import 'package:es_flutter_component/components/es_form/es_text_field/es_masked_input_textfield/es_masked_input_text_field.dart';
 
-import 'package:es_flutter_component/es_button/es_button.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/es_text/es_title.dart';
@@ -19,10 +21,11 @@ import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
-import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:pattern_formatter/numeric_formatter.dart';
+
+import 'package:intl/intl.dart' as intl;
 
 class PanelAdvancedFormSample extends StatefulWidget {
   PanelAdvancedFormSample({Key? key}) : super(key: key);
@@ -34,20 +37,27 @@ class PanelAdvancedFormSample extends StatefulWidget {
 
 class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
   EsFilePickerController _filePickerController = EsFilePickerController();
-  TextEditingController _textController = TextEditingController(
-  text:
-  '#2F19DB');
+  TextEditingController _textController =
+      TextEditingController(text: '#2F19DB');
   double _value1 = 0;
   double _value2 = 0;
   double _value6 = 0;
   RangeValues _value3 = RangeValues(2000, 8000);
   Color _value4 = StructureBuilder.styles!.primaryColor;
   Color _value5 = StructureBuilder.styles!.primaryColor;
-  List<String> _mounthList=["اسفند",
-    "فروردین","اردیبهشت","خرداد",
-    "تیر","مرداد","شهریور",
-    "مهر","آبان","آذر",
-    "دی","بهمن",
+  List<String> _mounthList = [
+    "اسفند",
+    "فروردین",
+    "اردیبهشت",
+    "خرداد",
+    "تیر",
+    "مرداد",
+    "شهریور",
+    "مهر",
+    "آبان",
+    "آذر",
+    "دی",
+    "بهمن",
   ];
   List _labelList = [
     {"title": "item1", "_id": "1"},
@@ -77,6 +87,13 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
 
   @override
   Widget build(BuildContext context) {
+    bool isDirectionRTL(BuildContext context) {
+      return intl.Bidi.isRtlLanguage(
+          Localizations.localeOf(context).languageCode);
+    }
+
+    bool _rtl = isDirectionRTL(context);
+
     double _height = 600;
     double _height2 = 145;
     List list = [
@@ -220,7 +237,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
               ],
             ),
           ),
-          title:  AppLocalizations.of(context)!.maskedinput,
+          title: AppLocalizations.of(context)!.maskedinput,
           information:
               "They are masked input text fields  in this panel by flutter code. \n "
               "the mask_text_input_formatter and pattern_formatter packages are added in pubspec.yaml dependencies as each utility\n "
@@ -323,13 +340,10 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
                       min: 0,
                       max: 11,
                       // divisions: 11,
-                      subTitleWidget: EsTitle(
-                       _mounthList[(_value6.round())]
-                      ),
+                      subTitleWidget: EsTitle(_mounthList[(_value6.round())]),
                       onChanged: (value) {
                         setState(() {
                           _value6 = value!;
-
                         });
                       },
                     ),
@@ -372,7 +386,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
               ],
             ),
           ),
-          title:  AppLocalizations.of(context)!.sliderinput,
+          title: AppLocalizations.of(context)!.sliderinput,
           information:
               "They are slider input text fields  in this panel by flutter code. \n"
               "located in: \n es_flutter_component>lib/es_form/es_slider/es_slider.dart \n  "
@@ -411,17 +425,15 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
               ],
             ),
           ),
-          title:  AppLocalizations.of(context)!.labelinput,
-          information:
-              "They are label inputs in this panel by flutter code.  "
+          title: AppLocalizations.of(context)!.labelinput,
+          information: "They are label inputs in this panel by flutter code.  "
               "Some of the components are located in: \n es_flutter_component>lib/es_form/es_drop_down \n  and is used as: \n."
-                  """  EsLabelInput(labelList: labelList2),"""
-      ),
+              """  EsLabelInput(labelList: labelList2),"""),
       ContainerItems(
           widget: Container(
             height: _height2,
             child: EsPersianDatePicker(
-              title: AppLocalizations.of(context)!.datePickerTitle,
+              title: AppLocalizations.of(context)!.select,
             ),
           ),
           title: AppLocalizations.of(context)!.datePickerfa,
@@ -432,7 +444,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
           widget: Container(
             height: _height2,
             child: EsEnglishDatePicker(
-              title: AppLocalizations.of(context)!.datePickerTitle,
+              title: AppLocalizations.of(context)!.select,
             ),
           ),
           title: AppLocalizations.of(context)!.datePickeren,
@@ -442,8 +454,9 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
       ContainerItems(
           widget: Container(
             height: _height2,
+            alignment: _rtl ? Alignment.topRight : Alignment.topLeft,
             child: EsAndroidTimePicker(
-              title: AppLocalizations.of(context)!.androidTimePickerTitle,
+              title: AppLocalizations.of(context)!.select,
             ),
           ),
           title: AppLocalizations.of(context)!.timePickerHM,
@@ -455,177 +468,69 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
           widget: Container(
             height: _height2,
             child: EsCupertinoTimePicker(
-              title: AppLocalizations.of(context)!.cupertinoTimePickerTitle,
+              title: AppLocalizations.of(context)!.select,
             ),
           ),
           title: AppLocalizations.of(context)!.timePickerHMS,
           information:
-              "It is a time picker(H/M/S) located in: \n es_flutter_component/lib/components/es_form>es_date_time_picker>es_cupertino_12h_time_picker.dart \n and is used as: \n "
+              "It is a time picker(H/M/S) located in: \n es_flutter_component/lib/components/es_form>es_date_time_picker>es_cupertino_time_picker.dart \n and is used as: \n "
               """ EsCupertinoTimePicker(
             title: AppLocalizations.of(context)!.cupertinoTimePickerTitle,)"""),
       ContainerItems(
           widget: Container(
             height: _height2,
-            alignment: Alignment.center,
-            child: EsButton(
-              text: AppLocalizations.of(context)!.select,
-              onTap: () {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      titlePadding: const EdgeInsets.all(0),
-                      contentPadding: const EdgeInsets.all(0),
-                      content: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          EsFilePicker(controller: _filePickerController,),
-                        ],
-                      ),
-                    );
-                  },
-                );
-              },
+            alignment: _rtl ? Alignment.topRight : Alignment.topLeft,
+            child: EsCupertino12HTimePicker(
+              title: AppLocalizations.of(context)!.select,
+            ),
+          ),
+          title:AppLocalizations.of(context)!.timePickerHM+AppLocalizations.of(context)!.ampm,
+          information:
+              "It is a time picker 12h located in: \n es_flutter_component/lib/components/es_form>es_date_time_picker>es_cupertino_12h_time_picker.dart "
+                  "\n and is used as: \n "
+              """EsCupertino12HTimePicker(
+              title: AppLocalizations.of(context)!.select,
+            ),"""),
+      ContainerItems(
+          widget: Container(
+            height: _height2,
+            alignment: _rtl ? Alignment.topRight : Alignment.topLeft,
+            child:  EsFilePicker(
+              controller: _filePickerController,
             ),
           ),
           title: AppLocalizations.of(context)!.filePicker,
           information:
-              "It is a time picker(H/M/S) located in: \n es_flutter_component/lib/components/es_form>es_date_time_picker>es_cupertino_12h_time_picker.dart \n and is used as: \n "
-              """ EsCupertinoTimePicker(
-            title: AppLocalizations.of(context)!.cupertinoTimePickerTitle,)"""),
-
-
+              "It is a file picker located in: \n es_flutter_component/lib/components/es_form/es_file_picker/es_file_picker.dart \n and is used as: \n "
+              """ EsFilePicker(
+              controller: _filePickerController,
+            ),"""),
       ContainerItems(
-          widget:  EsButton(
-            text:  AppLocalizations.of(context)!.select,
-            fillColor: _value4,
-            onTap: () {
-              showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return AlertDialog(
-                    titlePadding: const EdgeInsets.all(0),
-                    contentPadding: const EdgeInsets.all(0),
-                    content: SingleChildScrollView(
-                      child: ColorPicker(
-                        pickerColor: StructureBuilder.styles!.primaryColor,
-                        onColorChanged: (value){
-                            setState((){
-                              _value4=value;
-                                         });
-                        },
-                        colorPickerWidth: 300,
-                        pickerAreaHeightPercent: 0.7,
-                        enableAlpha: true,
-                        labelTypes: [
-                          ColorLabelType.rgb,
-                          ColorLabelType.hsl,
-                          ColorLabelType.hsv,
-                          ColorLabelType.hex,
-                        ],
-                        displayThumbColor: true,
-                        paletteType: PaletteType.hsl,
-                        pickerAreaBorderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(2),
-                          topRight: Radius.circular(2),
-                        ),
-                        hexInputBar: true,
-                        colorHistory: [Colors.white],
-                        onHistoryChanged: (value){},
-                      ),
-                    ),
-                  );
-                },
-              );
-            },
+        widget: Container(
+            height: _height2,
+            alignment:_rtl?Alignment.topRight:Alignment.topLeft ,
+            child: EsColorPicker(title:  AppLocalizations.of(context)!.selectcolor,)),
 
-          ),
-          title:  AppLocalizations.of(context)!.colorpicker,
+          title: AppLocalizations.of(context)!.colorpicker,
           information:
               "It is a color picker that the flutter_colorpicker package is added in pubspec.yaml 's dependencies"
-                  " \n and is used as: \n "
-              """ ColorPicker(
-                        pickerColor: StructureBuilder.styles!.primaryColor,
-                        onColorChanged: (value){
-                            setState((){
-                              _value4=value;
-                                         });
-                        },
-                        colorPickerWidth: 300,
-                        pickerAreaHeightPercent: 0.7,
-                        enableAlpha: true,
-                        labelTypes: [
-                          ColorLabelType.rgb,
-                          ColorLabelType.hsl,
-                          ColorLabelType.hsv,
-                          ColorLabelType.hex,
-                        ],
-                        displayThumbColor: true,
-                        paletteType: PaletteType.hsl,
-                        pickerAreaBorderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(2),
-                          topRight: Radius.circular(2),
-                        ),
-                        hexInputBar: true,
-                        colorHistory: [Colors.white],
-                        onHistoryChanged: (value){},
-                      ),"""),
-      ContainerItems(
-          widget:  EsButton(
-            text:  AppLocalizations.of(context)!.select,
-            fillColor: _value5,
-            onTap: ()  {
-              showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return AlertDialog(
-                    titlePadding: const EdgeInsets.all(0),
-                    contentPadding: const EdgeInsets.all(0),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: MediaQuery.of(context).orientation ==
-                          Orientation.portrait
-                          ? const BorderRadius.vertical(
-                        top: Radius.circular(500),
-                        bottom: Radius.circular(100),
-                      )
-                          : const BorderRadius.horizontal(
-                          right: Radius.circular(500)),
-                    ),
-                    content: SingleChildScrollView(
-                      child: HueRingPicker(
-
-                        pickerColor: StructureBuilder.styles!.primaryColor,
-                        onColorChanged: (value){
-                          setState((){
-                            _value5=value;
-                          });
-                        },
-                        enableAlpha: true,
-                        displayThumbColor: true,
-                      ),
-                    ),
-                  );
-                },
-              );
-            },
-
-          ),
-          title:  AppLocalizations.of(context)!.ringcolorpicker,
-          information:
-          "It is a color picker that the flutter_colorpicker package is added in pubspec.yaml 's dependencies"
               " \n and is used as: \n "
-              """ HueRingPicker(
-                        pickerColor: StructureBuilder.styles!.primaryColor,
-                        onColorChanged: (value){
-                          setState((){
-                            _value5=value;
-                          });
-                        },
-                        enableAlpha: true,
-                        displayThumbColor: true,
-                      ),"""),
+              """EsColorPicker(title:  AppLocalizations.of(context)!.selectcolor,)),
+"""),
+      ContainerItems(
+          widget: Container(
+            height: _height2,
+              alignment: _rtl ? Alignment.topRight : Alignment.topLeft,
+              child: EsRingColorPicker(
+                title: AppLocalizations.of(context)!.selectcolor,)),
+          title: AppLocalizations.of(context)!.ringcolorpicker,
+          information:
+              "It is a color picker that the flutter_colorpicker package is added in pubspec.yaml 's dependencies"
+              " \n and is used as: \n "
+              """EsRingColorPicker(
+                title: AppLocalizations.of(context)!.selectcolor,)"""),
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(

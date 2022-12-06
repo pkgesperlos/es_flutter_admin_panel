@@ -135,7 +135,7 @@ class _PanelPriceCardSampleState extends State<PanelPriceCardSample> {
               checkList: _checkListTotal,
             ),"""),
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(

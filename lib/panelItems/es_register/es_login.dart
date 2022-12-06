@@ -1,7 +1,7 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 
 import 'package:es_flutter_admin_panel/panel_ui/app_bar/menu_drop_down_items.dart';
-import 'package:es_flutter_admin_panel/panel_ui/components/es_block_button.dart';
+import 'package:es_flutter_component/components/es_button/es_block_button.dart';
 import 'package:es_flutter_component/components/es_button/es_button.dart';
 import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_check_box.dart';
 import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field_form.dart';
@@ -19,7 +19,6 @@ import 'package:provider/provider.dart';
 import 'package:es_flutter_admin_panel/panel_ui/images/responsive_layout.dart';
 import '../../language_change_provider.dart';
 
-
 class EsLogin extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -35,8 +34,6 @@ class _EsLogin extends State<EsLogin> {
   late String selectedValue;
 
   final _formkey = GlobalKey<FormState>();
-
-
 
   @override
   void initState() {
@@ -135,8 +132,8 @@ class _EsLogin extends State<EsLogin> {
                           children: [
                             EsTextFieldForm(
                               hint: "",
-                              label: AppLocalizations.of(context)!
-                                  .emailoruserName,
+                              label:
+                                  AppLocalizations.of(context)!.emailoruserName,
                               validator: (value) {
                                 if (value!.length < 4) {
                                   return AppLocalizations.of(context)!
@@ -158,7 +155,6 @@ class _EsLogin extends State<EsLogin> {
                                 }
                               },
                             ),
-
                           ],
                         ),
                       ),
@@ -168,20 +164,50 @@ class _EsLogin extends State<EsLogin> {
                       ),
                       EsBlockButton(
                         text: AppLocalizations.of(context)!.login,
-
                         onTap: () {
                           if (_formkey.currentState?.validate() == true) {
                             // {Navigator.pushNamed(context, '/tree');}
                           }
-
-
                         },
                       ),
                       EsVSpacer(
                         big: true,
                         factor: 2,
                       ),
-                      Row(
+                     (
+                         MediaQuery.of(context).size.width<=300
+                     )
+                          ?Column(
+                        children: [
+                          InkWell(
+                              onTap: () {
+                                Navigator.pop(context);
+                              },
+                              child: EsOrdinaryText(
+                                AppLocalizations.of(context)!.forgetthepassword,
+                                isBold: true,
+                              )),
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              EsOrdinaryText(
+                                AppLocalizations.of(context)!.rememberme,
+                              ),
+                              EsHSpacer(),
+                              EsCustomCheckBox(
+                                  value: isChecked,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      isChecked = value;
+                                    });
+                                  }),
+                            ],
+                          ),
+                        ],
+                        // mainAxisSize: MainAxisSize.max,
+                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      )
+                          :Row(
                         children: [
                           InkWell(
                               onTap: () {
@@ -219,42 +245,46 @@ class _EsLogin extends State<EsLogin> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          EsButton(
-                            text: AppLocalizations.of(context)!.withgoogle,
-                            icon: EsSvgIcon(
-                              "packages/es_flutter_component/assets/svgs/google.svg",
-                              size: StructureBuilder.dims!.h3IconSize,
-                              color: StructureBuilder.styles!
+                          Expanded(
+                            child: EsBlockButton(
+                              text: AppLocalizations.of(context)!.withgoogle,
+                              // icon: EsSvgIcon(
+                              //   "packages/es_flutter_component/assets/svgs/google.svg",
+                              //   size: StructureBuilder.dims!.h3IconSize,
+                              //   color: StructureBuilder.styles!
+                              //       .socialNetworkColor()
+                              //       .google,
+                              // ),
+                              fillColor:
+                                  StructureBuilder.styles!.primaryLightColor,
+                              borderColor: StructureBuilder.styles!
+                                  .socialNetworkColor()
+                                  .google,
+                              textColor: StructureBuilder.styles!
                                   .socialNetworkColor()
                                   .google,
                             ),
-                            fillColor:
-                                StructureBuilder.styles!.primaryLightColor,
-                            borderColor: StructureBuilder.styles!
-                                .socialNetworkColor()
-                                .google,
-                            textColor: StructureBuilder.styles!
-                                .socialNetworkColor()
-                                .google,
                           ),
                           EsHSpacer(),
-                          EsButton(
-                            text: AppLocalizations.of(context)!.withfacebook,
-                            icon: EsSvgIcon(
-                              "packages/es_flutter_component/assets/svgs/FacebookLogo.svg",
-                              size: StructureBuilder.dims!.h3IconSize,
-                              color: StructureBuilder.styles!
+                          Expanded(
+                            child: EsBlockButton(
+                              text: AppLocalizations.of(context)!.withfacebook,
+                              // icon: EsSvgIcon(
+                              //   "packages/es_flutter_component/assets/svgs/FacebookLogo.svg",
+                              //   size: StructureBuilder.dims!.h3IconSize,
+                              //   color: StructureBuilder.styles!
+                              //       .socialNetworkColor()
+                              //       .facebook,
+                              // ),
+                              fillColor:
+                                  StructureBuilder.styles!.primaryLightColor,
+                              borderColor: StructureBuilder.styles!
+                                  .socialNetworkColor()
+                                  .facebook,
+                              textColor: StructureBuilder.styles!
                                   .socialNetworkColor()
                                   .facebook,
                             ),
-                            fillColor:
-                                StructureBuilder.styles!.primaryLightColor,
-                            borderColor: StructureBuilder.styles!
-                                .socialNetworkColor()
-                                .facebook,
-                            textColor: StructureBuilder.styles!
-                                .socialNetworkColor()
-                                .facebook,
                           ),
                         ],
                       ),
@@ -271,7 +301,7 @@ class _EsLogin extends State<EsLogin> {
                             isBold: true,
                           ),
                           InkWell(
-                            onTap: (){
+                            onTap: () {
                               Navigator.pushNamed(context, '/signin');
                             },
                             child: EsOrdinaryText(
@@ -377,20 +407,19 @@ class _EsLogin extends State<EsLogin> {
 
   Widget _boxShow(Widget widget) {
     return Container(
-      width: StructureBuilder.dims!.h0Padding * 16,
+      width: StructureBuilder.dims!.h0Padding * 14,
       clipBehavior: Clip.antiAlias,
       padding: EdgeInsets.symmetric(
-        horizontal: StructureBuilder.dims!.h0Padding,
-        vertical: StructureBuilder.dims!.h0Padding,
+        horizontal: StructureBuilder.dims!.h2Padding,
+        vertical: StructureBuilder.dims!.h2Padding,
       ),
       margin: EdgeInsets.only(
-        left: StructureBuilder.dims!.h0Padding,
-        right: StructureBuilder.dims!.h0Padding,
+        left: StructureBuilder.dims!.h2Padding,
+        right: StructureBuilder.dims!.h2Padding,
       ),
       decoration:
           BoxDecoration(color: StructureBuilder.styles!.primaryLightColor),
       child: widget,
     );
   }
-
 }

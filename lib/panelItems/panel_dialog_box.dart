@@ -130,7 +130,7 @@ class PanelDialogBox extends StatelessWidget {
             text: AppLocalizations.of(context)!.bodyDialogText,
             desc: AppLocalizations.of(context)!.bodyDialogDesc,)"""),
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryLightColor,
         child: SingleChildScrollView(
           child: Column(

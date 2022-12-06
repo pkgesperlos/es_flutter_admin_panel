@@ -183,6 +183,16 @@
   "tabbartitle": "Different kinds of tab bar navigators  are available in panel by flutter code.",
 
 
+  "simplenavigationbar": "Simple navigation bar",
+  "expandednavigationbar": "Expanded navigation bar",
+  "tabbarnavigationbar": "Tab bar navigation bar",
+  "buttonnavigationbar": "Button navigation bar",
+  "navigationbarwithinactivebutton": "Navigation bar with inactive button",
+  "verticalnavigationbar": "Vertical navigation bar",
+  "navigationbarwithcustomwidget": "Navigation bar with custom widget",
+  "navigationbar": "Navigation bar",
+  "navigationbartitle": "Different kinds of navigation bar  are available in panel by flutter code.",
+
   "zoomableimage": "Zoomable image",
   "zoomableimagetitle": "Zoomable image is available in panel by flutter code.",
 
@@ -328,8 +338,8 @@
   "emailoruserName": "Email or UserName",
   "forgetthepassword": "Forget the password ?",
   "rememberme": "Remember me",
-  "withgoogle": "with Google",
-  "withfacebook": "with Facebook",
+  "withgoogle": "Sign with Google",
+  "withfacebook": "Sign with Facebook",
   "donothaveanaccount": "Do not have an Account ?",
   "haveanaccount": "Do you have an Account ?",
   "create": "create",
@@ -359,6 +369,7 @@
   "errors": "Errors",
   "repairs": "Repairs",
   "wewillbebacksoon": "We will be back soon ...",
+  "lookforsomethingsearchit": "Look for something, Search it:",
   "thesiteiscurrentlyundermaintenance": "The site is currently under maintenance",
 
   "menulevel": "Menu level",
@@ -536,10 +547,9 @@
   "textAreaType": "TextArea",
   "textAreaHint": "TextArea Hint",
 
-  "datePickerTitle": "Select",
-  "androidTimePickerTitle": "Select",
-  "cupertinoTimePickerTitle": "Select",
-  "time12hPickerTitle": "Select",
+
+  "ampm": "AM/PM",
+  "selectcolor": "select color",
 
   "openText": "Open file picker",
   "pickText": "Pick a folder",

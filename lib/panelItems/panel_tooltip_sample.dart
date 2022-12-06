@@ -17,10 +17,12 @@ class PanelTooltipSample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double _height=170;
     List list = [
 
       ContainerItems(
           widget: Container(
+              height: _height,
               child: Wrap(
             spacing: StructureBuilder.dims!.h0Padding,
             runSpacing: StructureBuilder.dims!.h0Padding,
@@ -80,7 +82,9 @@ class PanelTooltipSample extends StatelessWidget {
                 ),
                 leftMargin: 150,),"""),
       ContainerItems(
+
           widget: Container(
+              height: _height,
               child: Wrap(
             spacing: StructureBuilder.dims!.h0Padding*2,
             runSpacing: StructureBuilder.dims!.h0Padding,
@@ -148,6 +152,7 @@ class PanelTooltipSample extends StatelessWidget {
               ),"""),
       ContainerItems(
           widget: Container(
+              height: _height,
               child: Wrap(
                 spacing: StructureBuilder.dims!.h0Padding,
                 runSpacing: StructureBuilder.dims!.h0Padding,
@@ -205,7 +210,7 @@ class PanelTooltipSample extends StatelessWidget {
                      ),"""),
 
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(

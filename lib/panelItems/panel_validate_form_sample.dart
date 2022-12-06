@@ -1,20 +1,22 @@
-import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_chechbox_group.dart';
-import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_checkbox_form.dart';
-import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_checkbox_group_form.dart';
-import 'package:es_flutter_component/components/es_form/es_drop_down/es_drop_down.dart';
-import 'package:es_flutter_component/components/es_form/es_drop_down/es_drop_down_form.dart';
-import 'package:es_flutter_component/components/es_form/es_drop_down/es_label_input_form.dart';
-import 'package:es_flutter_component/components/es_form/es_radio_button/es_radio_button_group.dart';
-import 'package:es_flutter_component/components/es_form/es_radio_button/es_radio_button_group_form.dart';
-import 'package:es_flutter_component/components/es_form/es_slider/es_slider.dart';
-import 'package:es_flutter_component/components/es_form/es_slider/es_slider_form.dart';
-import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field.dart';
-import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field_form.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
+import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_checkbox_form.dart';
+import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_checkbox_group_form.dart';
+import 'package:es_flutter_component/components/es_form/es_color_picker/es_color_picker_form.dart';
+import 'package:es_flutter_component/components/es_form/es_color_picker/es_ring_color_picker_form.dart';
+import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_android_time_picker_form.dart';
+import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_cupertino_time_picker_form.dart';
+import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_english_date_picker_form.dart';
+import 'package:es_flutter_component/components/es_form/es_date_time_picker/es_persian_date_picker_form.dart';
+import 'package:es_flutter_component/components/es_form/es_drop_down/es_drop_down_form.dart';
+import 'package:es_flutter_component/components/es_form/es_file_picker/es_file_picker.dart';
+import 'package:es_flutter_component/components/es_form/es_file_picker/es_file_picker_form.dart';
+import 'package:es_flutter_component/components/es_form/es_label_input/es_label_input_form.dart';
+import 'package:es_flutter_component/components/es_form/es_radio_button/es_radio_button_group_form.dart';
+import 'package:es_flutter_component/components/es_form/es_slider/es_slider_form.dart';
+import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field_form.dart';
+import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/es_button/es_button.dart';
-import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/es_text/es_title.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
@@ -22,6 +24,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class PanelValidateFormSample extends StatefulWidget {
   PanelValidateFormSample({Key? key}) : super(key: key);
@@ -44,6 +47,7 @@ class _PanelValidateFormSampleState extends State<PanelValidateFormSample> {
   ];
   String _value3 = "";
   TextEditingController _controller = TextEditingController();
+  EsFilePickerController _controller2 = EsFilePickerController();
   List<TextEditingController> _controllerList =
       List.generate(9, (index) => TextEditingController());
 
@@ -203,6 +207,87 @@ class _PanelValidateFormSampleState extends State<PanelValidateFormSample> {
                         },
                       ),
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          EsOrdinaryText(
+                              AppLocalizations.of(context)!.filePicker),
+                          EsVSpacer(),
+                          EsFilePickerForm(
+                            onSaved: (String? newValue) {},
+                            validator: (String? value) {
+                              if (value == "")
+                                return AppLocalizations.of(context)!
+                                    .pleaseselectoneitem;
+                            },
+                            controller: _controller2,
+                          ),
+                        ],
+                      ),
+                      EsColorPickerForm(
+                        title: AppLocalizations.of(context)!.selectcolor,
+                        onSaved: (Color? newValue) {},
+                        validator: (Color? value) {
+                          if (value != "")
+                            return AppLocalizations.of(context)!
+                                .pleaseselectoneitem;
+                        },
+                      ),
+                      EsRingColorPickerForm(
+                        title: AppLocalizations.of(context)!.selectcolor,
+                        onSaved: (Color? newValue) {},
+                        validator: (Color? value) {
+                          if (value != "")
+                            return AppLocalizations.of(context)!
+                                .pleaseselectoneitem;
+                        },
+                      ),
+                      EsPersianDatePickerForm(
+                        title: AppLocalizations.of(context)!.select,
+                        onSaved: (String? newValue) {},
+                        validator: (String? value) {
+                          if (value == "")
+                            return AppLocalizations.of(context)!
+                                .pleaseselectoneitem;
+                        },
+                      ),
+                      EsEnglishDatePickerForm(
+                        title: AppLocalizations.of(context)!.select,
+                        onSaved: (String? newValue) {},
+                        validator: (String? value) {
+                          if (value == "")
+                            return AppLocalizations.of(context)!
+                                .pleaseselectoneitem;
+                        },
+                      ),
+                      EsCupertinoTimePickerForm(
+                        title: AppLocalizations.of(context)!.select,
+                        onSaved: (String? newValue) {},
+                        validator: (String? value) {
+                          if (value == "")
+                            return AppLocalizations.of(context)!
+                                .pleaseselectoneitem;
+                        },
+                      ),
+                      EsAndroidTimePickerForm(
+                        title: AppLocalizations.of(context)!.select,
+                        onSaved: (String? newValue) {},
+                        validator: (String? value) {
+                          if (value == "")
+                            return AppLocalizations.of(context)!
+                                .pleaseselectoneitem;
+                        },
+                      ),
+
+                      EsSliderForm(
+                        validator: (value) {
+                          if (value == 0) {
+                            return AppLocalizations.of(context)!
+                                .pleaseselectavalue;
+                          }
+                        },
+                      ),
+                      Column(
                         children: [
                           EsOrdinaryText(
                             AppLocalizations.of(context)!.labelinput,
@@ -220,14 +305,6 @@ class _PanelValidateFormSampleState extends State<PanelValidateFormSample> {
                           ),
                           EsVSpacer()
                         ],
-                      ),
-                      EsSliderForm(
-                        validator: (value) {
-                          if (value == 0) {
-                            return AppLocalizations.of(context)!
-                                .pleaseselectavalue;
-                          }
-                        },
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -478,7 +555,7 @@ class _PanelValidateFormSampleState extends State<PanelValidateFormSample> {
               ],
             ),"""),
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(

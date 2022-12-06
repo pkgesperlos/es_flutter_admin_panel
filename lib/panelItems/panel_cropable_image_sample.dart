@@ -64,7 +64,7 @@ import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.
 //                 imageProvider:  AssetImage("assets/images/img1.jpg"),) \n the photo_view package should be added in pubspec.yaml 's dependencies"""),
 //
 //     ];
-//     return Material(
+//     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
 //         color: StructureBuilder.styles!.primaryDarkColor,
 //         child: SingleChildScrollView(
 //           child: Column(

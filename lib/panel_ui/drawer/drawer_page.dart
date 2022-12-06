@@ -10,6 +10,7 @@ import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 
 import '../../panelItems/es_pages/es_error/es_404_error.dart';
+import '../../panelItems/es_pages/es_error/es_other_404.dart';
 import '../../panelItems/es_pages/es_error/es_repairs.dart';
 import '../../panelItems/es_pages/panel_price_card_sample.dart';
 import '../../panelItems/es_pages/panel_profile_sample.dart';
@@ -42,6 +43,7 @@ import '../../panelItems/panel_label_sample.dart';
 import '../../panelItems/panel_light_box_sample.dart';
 import '../../panelItems/panel_map_sample.dart';
 import '../../panelItems/panel_modal_sample.dart';
+import '../../panelItems/panel_navigation_bar_sample.dart';
 import '../../panelItems/panel_page_indicator_sample.dart';
 import '../../panelItems/panel_primary_card_sample.dart';
 import '../../panelItems/panel_primary_form_sample.dart';
@@ -107,7 +109,7 @@ class _DrawerPageState extends State<DrawerPage> {
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: StructureBuilder.dims!.h0Padding),
+                horizontal: StructureBuilder.dims!.h1Padding),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -156,33 +158,28 @@ class _DrawerPageState extends State<DrawerPage> {
                     nextLevel(
                         title: AppLocalizations.of(context)!.accordion,
                         pageWidget: PanelAccardionSample(),
-                        index: _indexList[1],
-                        onSelect: _onSelectedList[1],
-                        isSelected: _isSelectedList[1]),
-                    nextLevel(
-                        title: AppLocalizations.of(context)!.alert,
-                        pageWidget: PanelAlertSample(),
                         index: _indexList[2],
                         onSelect: _onSelectedList[2],
                         isSelected: _isSelectedList[2]),
                     nextLevel(
-                        title: AppLocalizations.of(context)!.text,
-                        pageWidget: PanelTextSample(),
+                        title: AppLocalizations.of(context)!.alert,
+                        pageWidget: PanelAlertSample(),
                         index: _indexList[3],
                         onSelect: _onSelectedList[3],
                         isSelected: _isSelectedList[3]),
                     nextLevel(
-                        title: AppLocalizations.of(context)!.button,
-                        pageWidget: PanelButtonSample(),
+                        title: AppLocalizations.of(context)!.text,
+                        pageWidget: PanelTextSample(),
                         index: _indexList[4],
                         onSelect: _onSelectedList[4],
                         isSelected: _isSelectedList[4]),
                     nextLevel(
-                        title: AppLocalizations.of(context)!.alert,
+                        title: AppLocalizations.of(context)!.button,
                         pageWidget: PanelButtonSample(),
                         index: _indexList[5],
                         onSelect: _onSelectedList[5],
                         isSelected: _isSelectedList[5]),
+
                     nextLevel(
                         title: AppLocalizations.of(context)!.label,
                         pageWidget: PanelLabelSample(),
@@ -262,29 +259,35 @@ class _DrawerPageState extends State<DrawerPage> {
                         onSelect: _onSelectedList[17],
                         isSelected: _isSelectedList[17]),
                     nextLevel(
-                        title: AppLocalizations.of(context)!.avatar,
-                        pageWidget: PanelAvatarSample(),
+                        title: AppLocalizations.of(context)!.navigationbar,
+                        pageWidget: PanelNavigationBarSample(),
                         index: _indexList[18],
                         onSelect: _onSelectedList[18],
                         isSelected: _isSelectedList[18]),
                     nextLevel(
-                        title: AppLocalizations.of(context)!.lightbox,
-                        pageWidget: PanelLightBoxSample(),
+                        title: AppLocalizations.of(context)!.avatar,
+                        pageWidget: PanelAvatarSample(),
                         index: _indexList[19],
                         onSelect: _onSelectedList[19],
                         isSelected: _isSelectedList[19]),
                     nextLevel(
-                        title: AppLocalizations.of(context)!.zoomableimage,
-                        pageWidget: PanelZoomableImageSample(),
+                        title: AppLocalizations.of(context)!.lightbox,
+                        pageWidget: PanelLightBoxSample(),
                         index: _indexList[20],
                         onSelect: _onSelectedList[20],
                         isSelected: _isSelectedList[20]),
                     nextLevel(
-                        title: AppLocalizations.of(context)!.modal,
-                        pageWidget: PanelModalSample(),
+                        title: AppLocalizations.of(context)!.zoomableimage,
+                        pageWidget: PanelZoomableImageSample(),
                         index: _indexList[21],
                         onSelect: _onSelectedList[21],
                         isSelected: _isSelectedList[21]),
+                    nextLevel(
+                        title: AppLocalizations.of(context)!.modal,
+                        pageWidget: PanelModalSample(),
+                        index: _indexList[22],
+                        onSelect: _onSelectedList[22],
+                        isSelected: _isSelectedList[22]),
 
                     nextLevelExpandedComplex(
                       expansionTitle: AppLocalizations.of(context)!.card,
@@ -486,11 +489,17 @@ class _DrawerPageState extends State<DrawerPage> {
                                 index: _indexList[_currentIndex],
                                 isSelected: _isSelectedList[48]),
                             nextLevelNavigate(
+                                title: "404(2)",
+                                pageWidget: EsOther404(),
+                                onSelect: _onSelectedList[_currentIndex],
+                                index: _indexList[_currentIndex],
+                                isSelected: _isSelectedList[49]),
+                            nextLevelNavigate(
                                 title: AppLocalizations.of(context)!.repairs,
                                 pageWidget: EsRepairs(),
                                 onSelect: _onSelectedList[_currentIndex],
                                 index: _indexList[_currentIndex],
-                                isSelected: _isSelectedList[49]),
+                                isSelected: _isSelectedList[50]),
 
                           ]),
 
@@ -567,6 +576,7 @@ class _DrawerPageState extends State<DrawerPage> {
         decoration: isSelected ?? false
             ? selectedBoxDecoration()
             : BoxDecoration(
+
                 borderRadius: BorderRadius.all(
                     Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
         child:
@@ -624,6 +634,7 @@ class _DrawerPageState extends State<DrawerPage> {
     return InkWell(
       hoverColor: StructureBuilder.styles!.primaryLightColor.withOpacity(.2),
       child: Container(
+
         margin: EdgeInsets.symmetric(
           vertical: StructureBuilder.dims!.h2Padding,
           // horizontal: StructureBuilder.dims!.h1Padding,
@@ -631,7 +642,7 @@ class _DrawerPageState extends State<DrawerPage> {
         decoration: isSelected ?? false
             ? selectedBoxDecoration()
             : BoxDecoration(
-                color: Colors.transparent,
+                // color: Colors.transparent,
                 borderRadius: BorderRadius.all(
                     Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
         child: Container(

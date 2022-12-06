@@ -233,7 +233,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
               and finally navigate to other pages by \n 
                Navigator.push(context, PanelLabelSample.getRoute());"""),
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(

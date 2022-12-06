@@ -176,6 +176,18 @@
   "rightsidebarnavigator": "تب بار ناوبری قسمت راست",
   "tabbartitle": " انواع مدل های تب بار ناوبری متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
 
+  "simplenavigationbar": "ناوبری ساده",
+  "expandednavigationbar": "ناوبری گسترده",
+  "tabbarnavigationbar": "تب های ناوبری",
+  "buttonnavigationbar": "ناوبری با دکمه",
+  "navigationbarwithinactivebutton": "ناوبری با دکمه غیر فعال",
+  "verticalnavigationbar": "ناوبری عمودی",
+  "navigationbarwithcustomwidget": "ناوبری با ویجت دلخواه",
+  "navigationbar": "ناوبری",
+  "navigationbartitle": " انواع مدل های ناوبری متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
+
+
   "avatar": "آواتار",
   "avatarsindifferentsizes": "آواتار در اندازه های متفاوت",
   "avatarsindifferentstatuses": "آواتار در وضعیت های مختلف",
@@ -335,8 +347,8 @@
   "emailoruserName": "ایمیل یا نام کاربری",
   "forgetthepassword": "فراموشی رمز عبور",
   "rememberme": "مرا به خاطر بسپار.",
-  "withgoogle": "با گوگل",
-  "withfacebook": "با فیسبوک",
+  "withgoogle": "ثبت نام با گوگل",
+  "withfacebook": "ثبت نام با فیسبوک",
   "donothaveanaccount": "آیا حساب کاربری ندارید ؟",
   "haveanaccount": "حساب کاربری دارید ؟",
   "create": "ایجاد",
@@ -361,6 +373,7 @@
   "errors": "خطاها",
   "repairs": "تعمیرات",
   "wewillbebacksoon": "به زودی برمیگردیم...",
+  "lookforsomethingsearchit": "دنیال چیزی می گزدید ؟ جستوجو کنید:",
   "thesiteiscurrentlyundermaintenance": "در حال حاضر سایت در دست تعمیرات است.",
 
   "menulevel": "سطح منو",
@@ -526,10 +539,9 @@
   "textAreaType": "ناحیه متنی",
   "textAreaHint": "هینت ناحیه متنی",
 
-  "datePickerTitle": "انتخاب کنید:",
-  "androidTimePickerTitle": "انتخاب کنید:",
-  "cupertinoTimePickerTitle": "انتخاب کنید:",
-  "time12hPickerTitle": "انتخاب کنید:",
+
+  "ampm": "صبح/عصر",
+  "selectcolor": "انتخاب رنگ",
 
   "openText": " انتخاب فایل",
   "pickText": "انتخاب پوشه",

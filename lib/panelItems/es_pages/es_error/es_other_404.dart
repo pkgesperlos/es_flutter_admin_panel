@@ -1,8 +1,7 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:es_flutter_admin_panel/panel_ui/images/responsive_layout.dart';
+import 'package:es_flutter_admin_panel/language_change_provider.dart';
 import 'package:es_flutter_admin_panel/panel_ui/app_bar/menu_drop_down_items.dart';
-import 'package:es_flutter_component/components/es_button/es_block_button.dart';
-import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field_form.dart';
-import 'package:es_flutter_component/components/es_image/es_avatar_image.dart';
 import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/components/es_text/es_header.dart';
 import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
@@ -14,20 +13,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
-import 'package:es_flutter_admin_panel/panel_ui/images/responsive_layout.dart';
-import '../../language_change_provider.dart';
+import '../../../panel_ui/components/search_text_field.dart';
 
 
-class EsLockScreen extends StatefulWidget {
+
+class EsOther404 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _EsLockScreen();
+    return _EsOther404();
   }
 }
 
 bool isChecked = true;
 
-class _EsLockScreen extends State<EsLockScreen> {
+class _EsOther404 extends State<EsOther404> {
   List<DropdownMenuItem<String>> items = [];
   late GlobalKey dropdownKey;
   late String selectedValue;
@@ -111,62 +110,18 @@ class _EsLockScreen extends State<EsLockScreen> {
                         factor: 5,
                       ),
                       EsHeader(
-                        AppLocalizations.of(context)!.youraccessneedsunlocking,
-                        isBold: true,
+                        AppLocalizations.of(context)!.lookforsomethingsearchit,
+                        // isBold: true,
                         color: StructureBuilder.styles!.t1Color,
                       ),
                       EsVSpacer(
                         big: true,
-                        factor: 5,
-                      ),
-                      Form(
-                        key: _formkey,
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                EsAvatarImage(
-                                  path: "assets/images/img4.jpg",
-                                ),
-                                EsHSpacer(),
-                                EsTextFieldForm(
-                                  hint: "",
-                                  label: AppLocalizations.of(context)!.password,
-                                  textFieldSize: Size(
-                                      StructureBuilder.dims!.h0Padding * 11,
-                                      StructureBuilder.dims!.h0Padding * 2),
-                                  validator: (value) {
-                                    if (value!.length < 4) {
-                                      return AppLocalizations.of(context)!
-                                          .theinputlengthistooshort;
-                                    }
-                                  },
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      EsVSpacer(
-                        big: true,
                         factor: 2,
                       ),
-                      EsBlockButton(
-                        text: AppLocalizations.of(context)!.unlocking,
-                        onTap: () {
-                          if (_formkey.currentState?.validate() == true) {
-                            {
-                              Navigator.pushNamed(context, '/tree');
-                            }
-                          }
-                        },
-                      ),
+                      SearchTextField(),
                       EsVSpacer(
-                        big: true,
-                        factor: 2,
                       ),
+
                     ],
                   ),
                 ),
@@ -174,28 +129,26 @@ class _EsLockScreen extends State<EsLockScreen> {
                   big: true,
                   factor: ResponsiveLayot.isLargeTablet(context) ? 1 : 15,
                 ),
-                (ResponsiveLayot.isLargeTablet(context)
-                    ? Image.asset(
-                        "assets/images/signin.png",
-                        width: StructureBuilder.dims!.h0Padding * 16,
-                        height: StructureBuilder.dims!.h0Padding * 16,
-                        fit: BoxFit.contain,
-                      )
-                    : SizedBox(
-                        width: 0,
-                        height: 0,
-                      )),
                 (ResponsiveLayot.isComputer(context)
                     ? Image.asset(
-                        "assets/images/signin.png",
-                        width: StructureBuilder.dims!.h0Padding * 20,
-                        height: StructureBuilder.dims!.h0Padding * 20,
-                        fit: BoxFit.contain,
-                      )
-                    : SizedBox(
-                        width: 0,
-                        height: 0,
-                      )),
+                  "assets/images/404_2.png",
+                  width: StructureBuilder.dims!.h0Padding * 15,
+                  height: StructureBuilder.dims!.h0Padding * 15,
+                  fit: BoxFit.cover,
+                )
+                    :   (ResponsiveLayot.isLargeTablet(context)
+                    ? Image.asset(
+                  "assets/images/404_2.png",
+                  width: StructureBuilder.dims!.h0Padding * 10,
+                  height: StructureBuilder.dims!.h0Padding * 10,
+                  fit: BoxFit.cover,
+                )
+                    :Image.asset(
+                  "assets/images/repairs.png",
+                  width: StructureBuilder.dims!.h0Padding * 10,
+                  height: StructureBuilder.dims!.h0Padding * 10,
+                  fit: BoxFit.cover,
+                ))),
               ]),
             ),
           ),
@@ -211,6 +164,9 @@ class _EsLockScreen extends State<EsLockScreen> {
             vertical: StructureBuilder.dims!.h1Padding,
             horizontal: StructureBuilder.dims!.h1Padding,
           ),
+          // margin: EdgeInsets.symmetric(
+          //   horizontal: StructureBuilder.dims!.h1Padding,
+          // ),
           decoration: BoxDecoration(
               color: StructureBuilder.styles!.primaryColor,
               borderRadius: BorderRadius.all(
@@ -275,4 +231,7 @@ class _EsLockScreen extends State<EsLockScreen> {
       child: widget,
     );
   }
+
+
+
 }

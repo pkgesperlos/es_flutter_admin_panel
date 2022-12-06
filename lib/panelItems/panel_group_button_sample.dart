@@ -319,7 +319,7 @@ class PanelGroupButtonSample extends StatelessWidget {
             child: _iconList[index]));
               """),
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(

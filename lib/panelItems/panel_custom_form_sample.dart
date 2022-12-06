@@ -619,7 +619,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
           information: "They are disabled items in this panel by flutter code.  "
               "Some of the components are located in: \n es_flutter_component>lib/es_form \n  ."),
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(

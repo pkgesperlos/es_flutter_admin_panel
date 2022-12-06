@@ -1,5 +1,5 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:es_flutter_admin_panel/panel_ui/components/es_block_button.dart';
+import 'package:es_flutter_component/components/es_button/es_block_button.dart';
 import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_checkbox_form.dart';
 import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field_form.dart';
 import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
@@ -161,33 +161,38 @@ class _EsSignin extends State<EsSignin> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                EsTextFieldForm(
-                                  hint: "",
-                                  label: AppLocalizations.of(context)!.password,
-                                  textFieldSize: Size(
-                                      StructureBuilder.dims!.h0Padding * 6.5,
-                                      StructureBuilder.dims!.h0Padding * 2),
-                                  validator: (value) {
-                                    if (value!.length < 4) {
-                                      return AppLocalizations.of(context)!
-                                          .theinputlengthistooshort;
-                                    }
-                                  },
+                                Expanded(
+                                  child: EsTextFieldForm(
+                                    hint: "",
+                                    label:
+                                        AppLocalizations.of(context)!.password,
+                                    // textFieldSize: Size(
+                                    //     StructureBuilder.dims!.h0Padding * 6.5,
+                                    //     StructureBuilder.dims!.h0Padding * 2),
+                                    validator: (value) {
+                                      if (value!.length < 4) {
+                                        return AppLocalizations.of(context)!
+                                            .theinputlengthistooshort;
+                                      }
+                                    },
+                                  ),
                                 ),
                                 EsHSpacer(),
-                                EsTextFieldForm(
-                                  hint: "",
-                                  label: AppLocalizations.of(context)!
-                                      .repeatthepassword,
-                                  textFieldSize: Size(
-                                      StructureBuilder.dims!.h0Padding * 6.5,
-                                      StructureBuilder.dims!.h0Padding * 2),
-                                  validator: (value) {
-                                    if (value!.length < 4) {
-                                      return AppLocalizations.of(context)!
-                                          .theinputlengthistooshort;
-                                    }
-                                  },
+                                Expanded(
+                                  child: EsTextFieldForm(
+                                    hint: "",
+                                    label: AppLocalizations.of(context)!
+                                        .repeatthepassword,
+                                    // textFieldSize: Size(
+                                    //     StructureBuilder.dims!.h0Padding * 6.5,
+                                    //     StructureBuilder.dims!.h0Padding * 2),
+                                    validator: (value) {
+                                      if (value!.length < 4) {
+                                        return AppLocalizations.of(context)!
+                                            .theinputlengthistooshort;
+                                      }
+                                    },
+                                  ),
                                 ),
                               ],
                             ),
@@ -197,24 +202,39 @@ class _EsSignin extends State<EsSignin> {
                             ),
                             Row(
                               children: [
-                                Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    EsCustomCheckBoxForm(
-                                      titleWidget: EsTitle(
-                                        AppLocalizations.of(context)!
-                                            .acceptthetermsandconditions,
+                                (MediaQuery.of(context).size.width <= 300)
+                                    ? Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        EsCustomCheckBoxForm(
+                                            titleWidget: Container(),
+                                            value: _value1,
+                                            validator: (value) {
+                                              if (value == false) {
+                                                return AppLocalizations.of(context)!
+                                                    .youshouldacceptthetermsandconditionsbeforeregister;
+                                              }
+                                            },
+                                          ),
+                                        EsOrdinaryText(
+                                          AppLocalizations.of(context)!
+                                              .acceptthetermsandconditions,
+                                        ),
+                                      ],
+                                    )
+                                    : EsCustomCheckBoxForm(
+                                        titleWidget: EsOrdinaryText(
+                                          AppLocalizations.of(context)!
+                                              .acceptthetermsandconditions,
+                                        ),
+                                        value: _value1,
+                                        validator: (value) {
+                                          if (value == false) {
+                                            return AppLocalizations.of(context)!
+                                                .youshouldacceptthetermsandconditionsbeforeregister;
+                                          }
+                                        },
                                       ),
-                                      value: _value1,
-                                      validator: (value) {
-                                        if (value == false) {
-                                          return AppLocalizations.of(context)!
-                                              .youshouldacceptthetermsandconditionsbeforeregister;
-                                        }
-                                      },
-                                    ),
-                                  ],
-                                ),
                               ],
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -350,15 +370,15 @@ class _EsSignin extends State<EsSignin> {
 
   Widget _boxShow(Widget widget) {
     return Container(
-      width: StructureBuilder.dims!.h0Padding * 16,
+      width: StructureBuilder.dims!.h0Padding * 14,
       clipBehavior: Clip.antiAlias,
       padding: EdgeInsets.symmetric(
-        horizontal: StructureBuilder.dims!.h0Padding,
-        vertical: StructureBuilder.dims!.h0Padding,
+        horizontal: StructureBuilder.dims!.h2Padding,
+        vertical: StructureBuilder.dims!.h2Padding,
       ),
       margin: EdgeInsets.only(
-        left: StructureBuilder.dims!.h0Padding,
-        right: StructureBuilder.dims!.h0Padding,
+        left: StructureBuilder.dims!.h2Padding,
+        right: StructureBuilder.dims!.h2Padding,
       ),
       decoration:
           BoxDecoration(color: StructureBuilder.styles!.primaryLightColor),

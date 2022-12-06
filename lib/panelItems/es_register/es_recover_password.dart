@@ -1,5 +1,5 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:es_flutter_admin_panel/panel_ui/components/es_block_button.dart';
+import 'package:es_flutter_component/components/es_button/es_block_button.dart';
 import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field_form.dart';
 import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/components/es_text/es_header.dart';
@@ -265,18 +265,18 @@ class _EsRecoverPassword extends State<EsRecoverPassword> {
 
   Widget _boxShow(Widget widget) {
     return Container(
-      width: StructureBuilder.dims!.h0Padding * 16,
+      width: StructureBuilder.dims!.h0Padding * 14,
       clipBehavior: Clip.antiAlias,
       padding: EdgeInsets.symmetric(
-        horizontal: StructureBuilder.dims!.h0Padding,
-        vertical: StructureBuilder.dims!.h0Padding,
+        horizontal: StructureBuilder.dims!.h2Padding,
+        vertical: StructureBuilder.dims!.h2Padding,
       ),
       margin: EdgeInsets.only(
-        left: StructureBuilder.dims!.h0Padding,
-        right: StructureBuilder.dims!.h0Padding,
+        left: StructureBuilder.dims!.h2Padding,
+        right: StructureBuilder.dims!.h2Padding,
       ),
       decoration:
-          BoxDecoration(color: StructureBuilder.styles!.primaryLightColor),
+      BoxDecoration(color: StructureBuilder.styles!.primaryLightColor),
       child: widget,
     );
   }

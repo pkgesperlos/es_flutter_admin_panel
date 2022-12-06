@@ -45,6 +45,21 @@ class _PanelIconsSampleState extends State<PanelIconsSample> {
                 spacing: StructureBuilder.dims!.h0Padding,
                 runSpacing: StructureBuilder.dims!.h0Padding*2,
                 children: [
+                  EsSvgIcon("packages/es_flutter_component/assets/svgs/ticksquare.svg",
+                    color: _color,
+                    size: _size,),
+                  EsSvgIcon("packages/es_flutter_component/assets/svgs/ChatsCircle.svg",
+                    color: _color,
+                    size: _size,),
+                  EsSvgIcon("packages/es_flutter_component/assets/svgs/menu.svg",
+                    color: _color,
+                    size: _size,),
+                  EsSvgIcon("packages/es_flutter_component/assets/svgs/notificationbing.svg",
+                    color: _color,
+                    size: _size,),
+                  EsSvgIcon("packages/es_flutter_component/assets/svgs/setting.svg",
+                    color: _color,
+                    size: _size,),
 
                   EsSvgIcon("packages/es_flutter_component/assets/svgs/ticksquare.svg",
                     color: _color,
@@ -313,7 +328,7 @@ class _PanelIconsSampleState extends State<PanelIconsSample> {
               " \n and is used as: \n "
               """Icon(Icons.add_a_photo_outlined),"""),
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(

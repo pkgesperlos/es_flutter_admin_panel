@@ -22,12 +22,13 @@ class PanelSweetAlertSample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double _height=400;
     List list = [
       ContainerItems(
           widget: Container(
-            height: 250,
+            height: _height,
               child: Wrap(
-                spacing: StructureBuilder.dims!.h1Padding,
+                spacing: StructureBuilder.dims!.h0Padding,
                 runSpacing
                     : StructureBuilder.dims!.h0Padding,
             children: [
@@ -219,7 +220,7 @@ class PanelSweetAlertSample extends StatelessWidget {
               ),"""),
 
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(
@@ -242,7 +243,7 @@ class PanelSweetAlertSample extends StatelessWidget {
 
   Widget boxShow(Widget widget) {
     return BootstrapCol(
-        sizes: 'col-sm-12 col-ml-12 col-lg-12 col-xl-6', child: widget);
+        sizes: 'col-sm-12 col-ml-12 col-lg-12 col-xl-12', child: widget);
   }
 
   Widget listShow(Widget widget) {

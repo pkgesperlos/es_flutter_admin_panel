@@ -622,7 +622,7 @@ class PanelDropDownSample extends StatelessWidget {
 
                   ), \n this widget uses DropDown2 please add it in pubspec.yaml 's dependencies"""),
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(

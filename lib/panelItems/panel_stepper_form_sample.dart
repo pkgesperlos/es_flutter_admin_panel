@@ -1,8 +1,6 @@
 
 import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_checkbox_form.dart';
 import 'package:es_flutter_component/components/es_form/es_drop_down/es_drop_down_form.dart';
-import 'package:es_flutter_component/components/es_form/es_drop_down/es_label_input_form.dart';
-import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field_form.dart';
 import 'package:es_flutter_component/components/es_stepper/es_stepper.dart';
 import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
@@ -144,7 +142,7 @@ class _PanelStepperFormSampleState extends State<PanelStepperFormSample> {
                 titleList: ["step1","step2","step3"],
               )"""),
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(

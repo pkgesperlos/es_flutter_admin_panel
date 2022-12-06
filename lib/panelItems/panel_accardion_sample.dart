@@ -17,6 +17,7 @@ class PanelAccardionSample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double _height=270;
     final List<Map<String, dynamic>> _items = List.generate(
         3,
         (index) => {
@@ -34,6 +35,7 @@ class PanelAccardionSample extends StatelessWidget {
     List list = [
       ContainerItems(
           widget: Container(
+            height: _height,
               child: EsAccardion(
             items: _items,
           )),
@@ -43,7 +45,7 @@ class PanelAccardionSample extends StatelessWidget {
               """EsAccardion(items: _items,)"""),
       ContainerItems(
           widget: Container(
-              height: StructureBuilder.dims!.h0Padding * 11.5,
+              height: _height,
               child: EsScrollableAccardion(
                 items: _itemsScroll,
               )),
@@ -53,8 +55,7 @@ class PanelAccardionSample extends StatelessWidget {
               """EsScrollableAccardion(items: _itemsScroll,)"""),
       ContainerItems(
           widget: Container(
-
-              // height: StructureBuilder.dims!.h0Padding*8,
+              height: _height,
               child: EsAccardion(
             items: _items,
             isremovable: true,
@@ -65,8 +66,7 @@ class PanelAccardionSample extends StatelessWidget {
               """EsAccardion(items: _items,isremovable: true,)"""),
       ContainerItems(
           widget: Container(
-
-              // height: StructureBuilder.dims!.h0Padding*8,
+              height: _height,
               child: EsAccardion(
             items: _items,
             decoration: BoxDecoration(
@@ -85,8 +85,7 @@ class PanelAccardionSample extends StatelessWidget {
               ),)"""),
       ContainerItems(
           widget: Container(
-
-              // height: StructureBuilder.dims!.h0Padding*8,
+              height: _height,
               child: EsAccardion(
             items: _items,
             icon: EsSvgIcon(
@@ -110,8 +109,7 @@ class PanelAccardionSample extends StatelessWidget {
           ),"""),
       ContainerItems(
           widget: Container(
-
-              // height: StructureBuilder.dims!.h0Padding*8,
+              height: _height,
               child: EsAccardion(
             items: _items,
             icon: EsSvgIcon(
@@ -133,8 +131,7 @@ class PanelAccardionSample extends StatelessWidget {
           )"""),
       ContainerItems(
           widget: Container(
-
-              // height: StructureBuilder.dims!.h0Padding*8,
+              height: _height,
               child: EsAccardion(
             backGroundImagePath: "assets/images/back2.png",
             contentColor: StructureBuilder.styles!.primaryLightColor,
@@ -167,7 +164,7 @@ class PanelAccardionSample extends StatelessWidget {
                     Radius.circular(StructureBuilder.dims!.h1Padding))),
           )"""),
     ];
-
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(

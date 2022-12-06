@@ -1,6 +1,7 @@
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
-import 'package:es_flutter_admin_panel/panel_ui/components/es_block_button.dart';
+
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
+import 'package:es_flutter_component/components/es_button/es_block_button.dart';
 import 'package:es_flutter_component/components/es_button/es_button.dart';
 import 'package:es_flutter_component/components/es_button/es_icon_button.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
@@ -396,6 +397,7 @@ class PanelButtonSample extends StatelessWidget {
             alignment: WrapAlignment.center,
             crossAxisAlignment: WrapCrossAlignment.center,
             spacing: StructureBuilder.dims!.h0Padding * 2,
+            runSpacing: StructureBuilder.dims!.h0Padding ,
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               EsIconButton(
@@ -698,7 +700,7 @@ class PanelButtonSample extends StatelessWidget {
                   ),
                   EsVSpacer(
                     big: true,
-                    factor: 1.5,
+                    factor: 4
                   ),
                   EsButton(
                       text: AppLocalizations.of(context)!.information,
@@ -707,7 +709,7 @@ class PanelButtonSample extends StatelessWidget {
                           StructureBuilder.styles!.buttonColor().disable),
                   EsVSpacer(
                     big: true,
-                    factor: 1.5,
+                    factor: 4
                   ),
                   EsButton(
                     text: AppLocalizations.of(context)!.information,
@@ -721,7 +723,7 @@ class PanelButtonSample extends StatelessWidget {
                   ),
                   EsVSpacer(
                     big: true,
-                    factor: 1.5,
+                    factor: 4
                   ),
                   EsButton(
                     text: AppLocalizations.of(context)!.information,
@@ -739,7 +741,7 @@ class PanelButtonSample extends StatelessWidget {
                   ),
                   EsVSpacer(
                     big: true,
-                    factor: 1.5,
+                    factor: 4
                   ),
                   EsButton(
                     text: AppLocalizations.of(context)!.information,
@@ -755,7 +757,7 @@ class PanelButtonSample extends StatelessWidget {
                   ),
                   EsVSpacer(
                     big: true,
-                    factor: 1.5,
+                    factor:4
                   ),
                 ],
               ),
@@ -946,7 +948,7 @@ class PanelButtonSample extends StatelessWidget {
                 text: AppLocalizations.of(context)!.blocbutton,
               )"""),
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(

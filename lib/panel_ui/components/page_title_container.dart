@@ -16,12 +16,12 @@ class PageTitleContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-          vertical: StructureBuilder.dims!.h0Padding
+          vertical: StructureBuilder.dims!.h0Padding,
       ),
       margin: EdgeInsets.only(
-          top:StructureBuilder.dims!.h0Padding,
-          left:StructureBuilder.dims!.h0Padding*2,
-          right:StructureBuilder.dims!.h0Padding*2,
+          top:StructureBuilder.dims!.h0Padding*1.3,
+          left:StructureBuilder.dims!.h0Padding*1.35,
+          right:StructureBuilder.dims!.h0Padding*1.35,
           bottom:StructureBuilder.dims!.h3Padding,
       ),
 

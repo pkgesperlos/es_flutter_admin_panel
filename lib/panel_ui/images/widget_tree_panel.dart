@@ -8,9 +8,6 @@ import 'package:flutter/material.dart';
 
 
 
-
-
-
 class WidgetTreePanel extends StatefulWidget {
   @override
   _WidgetTreePanelState createState() => _WidgetTreePanelState();
@@ -20,7 +17,9 @@ class _WidgetTreePanelState extends State<WidgetTreePanel> {
 
   @override
   Widget build(BuildContext context) {
-    // print(AppLocalizations.of(context)?.localeName);
+    double _width=MediaQuery.of(context).size.width;
+
+
     return Scaffold(
         appBar: PreferredSize(
           preferredSize: Size(double.infinity, 100),
@@ -34,35 +33,42 @@ class _WidgetTreePanelState extends State<WidgetTreePanel> {
           phone: CenterScreen(),
           tablet: Row(
             children: [
-              // Expanded(child: PanelLeftPage()),
-              // Expanded(child: PanelCenterPage()),
               Expanded(child: CenterScreen()),
             ],
           ),
           largTablet: Row(
             children: [
-              // Expanded(child: PanelLeftPage()),
-              // Expanded(child: PanelCenterPage()),
-              // Expanded(child: PanelRightPage()),
               Expanded(child: CenterScreen()),
             ],
           ),
           computer: Row(
             children: [
 
-              Expanded(flex: 5, child: DrawerPage()),
-              Expanded(flex: 22, child: CenterScreen()),
+              Expanded(flex: _sidebarFlex(_width), child: DrawerPage()),
+              Expanded(flex: 40, child: CenterScreen()),
 
             ],
           ),
         ),
-        drawer: ResponsiveLayot(
-          tiny: DrawerPage(),
-          phone: DrawerPage(),
-          tablet: DrawerPage(),
-          largTablet: DrawerPage(),
-          computer: Container(),
+        drawer: SizedBox(
+          width: 210,
+          child: ResponsiveLayot(
+            tiny: DrawerPage(),
+            phone: DrawerPage(),
+            tablet: DrawerPage(),
+            largTablet: DrawerPage(),
+            computer: Container(),
+          ),
         ));
+  }
+
+  int _sidebarFlex(double width){
+    if(width>1400){return 7;}
+    if(width<=1400 && width>=1300){return 8;}
+    if(width<=1300 && width>=1200){return 9;}
+    if(width<=1200){return 10;}
+    else
+    return 7;
   }
 
 }

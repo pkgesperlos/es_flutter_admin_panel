@@ -4,6 +4,7 @@ import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.
 import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/components/es_tab_bar/es_top_tab_bar_navigation.dart';
 import 'package:es_flutter_component/components/es_text/es_title.dart';
+import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../panel_ui/components/es-search_result/es_article_search_card.dart';
 import '../../panel_ui/components/es-search_result/es_image_search_card.dart';
 import '../../panel_ui/components/es-search_result/es_user_search_card.dart';
+import '../../panel_ui/components/search_text_field.dart';
 
 class PanelSearchResultSample extends StatefulWidget {
   PanelSearchResultSample({Key? key}) : super(key: key);
@@ -88,8 +90,22 @@ class _PanelSearchResultSampleState extends State<PanelSearchResultSample> {
           widget: Container(
             width: double.infinity,
             height: _height,
-            child: EsTopTabBarNavigation(
-                pageWidgets: _pageList, tabWidgets: _tabList),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  flex: 1,
+                    child: SearchTextField(
+                      width: StructureBuilder.dims!.h0Padding * 20,
+                    )),
+                EsVSpacer(big: true,),
+                Expanded(
+                  flex: 20,
+                  child: EsTopTabBarNavigation(
+                      pageWidgets: _pageList, tabWidgets: _tabList),
+                ),
+              ],
+            ),
           ),
           title: AppLocalizations.of(context)!.searchresult,
           information: "They are search results "
@@ -100,7 +116,7 @@ class _PanelSearchResultSampleState extends State<PanelSearchResultSample> {
                 pageWidgets: _pageList, tabWidgets: _tabList),
           ),"""),
     ];
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
         child: SingleChildScrollView(
           child: Column(
