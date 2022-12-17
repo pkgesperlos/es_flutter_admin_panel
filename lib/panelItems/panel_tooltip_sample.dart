@@ -73,7 +73,7 @@ class PanelTooltipSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.tooltipindifferentalignments,
           information:
-              "They are  tooltip in different alignments located in: \n es_flutter_component/lib/components/es_tooltip/es_tooltip.dart \n and is used as: \n "
+              "these are  tooltip in different alignments located in: \n es_flutter_component/lib/components/es_tooltip/es_tooltip.dart \n and is used as: \n "
               """EsTooltip(
                 message: 'message',
                 widget: EsButton(
@@ -136,7 +136,7 @@ class PanelTooltipSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.tooltipfordifferentwidgets,
           information:
-              "They are  tooltip on different widgets located in: \n es_flutter_component/lib/components/es_tooltip/es_tooltip.dart \n and is used as: \n "
+              "these are  tooltip on different widgets located in: \n es_flutter_component/lib/components/es_tooltip/es_tooltip.dart \n and is used as: \n "
               """ EsTooltip(
                 message: 'message',
                 widget:  EsLabel(
@@ -164,7 +164,7 @@ class PanelTooltipSample extends StatelessWidget {
                       text: AppLocalizations.of(context)!.button,
                       fillColor: StructureBuilder.styles!.buttonColor().primary,
                     ),
-                    showDuration: Duration(milliseconds: 0),
+
                     preferBelow: false,
                   ),
                   EsTooltip(
@@ -191,6 +191,7 @@ class PanelTooltipSample extends StatelessWidget {
                       text: AppLocalizations.of(context)!.button,
                       fillColor: StructureBuilder.styles!.buttonColor().primary,
                     ),
+                    showDuration: Duration(milliseconds: 2000),
                     preferBelow: false,
                   ),
 
@@ -198,7 +199,7 @@ class PanelTooltipSample extends StatelessWidget {
               )),
           title: AppLocalizations.of(context)!.tooltipindifferentshowduration,
           information:
-          "They are  tooltip in different show duration located in: \n es_flutter_component/lib/components/es_tooltip/es_tooltip.dart \n and is used as: \n "
+          "these are  tooltip in different show duration located in: \n es_flutter_component/lib/components/es_tooltip/es_tooltip.dart \n and is used as: \n "
               """EsTooltip(
                       message: 'message',
                       widget: EsButton(
@@ -212,21 +213,24 @@ class PanelTooltipSample extends StatelessWidget {
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.tooltiptitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.tooltiptitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

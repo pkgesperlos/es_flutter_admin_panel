@@ -119,30 +119,34 @@ class _AppBarWidgetState extends State<AppBarWidget> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                EsHSpacer(
-                  big: true,
-                ),
-                Container(
-                  width: StructureBuilder.dims!.h0Padding * 10,
-                  // padding:EdgeInsets.all(StructureBuilder.dims!.h1Padding),
-                  // child: EsSearchTextField(
-                  //   borderRadius: BorderRadius.all(Radius.circular(
-                  //       StructureBuilder.dims!.h0BorderRadius * 0.7)),
-                  //   fillColor: StructureBuilder.styles!.primaryColor,
-                  //   border: true,
-                  //   borderColor: StructureBuilder.styles!.primaryColor,
-                  //   hint: AppLocalizations.of(context)!.search,
-                  //   hintStyle: TextStyle(
-                  //       color: StructureBuilder.styles!.primaryLightColor,
-                  //       fontSize: StructureBuilder.dims!.h3FontSize),
-                  // ),
-                  child: SearchTextField(),
-                )
-              ],
-            ),
+            // Row(
+            //   mainAxisSize: MainAxisSize.min,
+            //   children: [
+            //     EsHSpacer(
+            //       big: true,
+            //     ),
+            //     Container(
+            //       // width: StructureBuilder.dims!.h0Padding * 10,
+            //       // padding:EdgeInsets.all(StructureBuilder.dims!.h1Padding),
+            //       // child: EsSearchTextField(
+            //       //   borderRadius: BorderRadius.all(Radius.circular(
+            //       //       StructureBuilder.dims!.h0BorderRadius * 0.7)),
+            //       //   fillColor: StructureBuilder.styles!.primaryColor,
+            //       //   border: true,
+            //       //   borderColor: StructureBuilder.styles!.primaryColor,
+            //       //   hint: AppLocalizations.of(context)!.search,
+            //       //   hintStyle: TextStyle(
+            //       //       color: StructureBuilder.styles!.primaryLightColor,
+            //       //       fontSize: StructureBuilder.dims!.h3FontSize),
+            //       // ),
+            //       child: SearchTextField(),
+            //     )
+            //   ],
+            // ),
+            Expanded(child: Padding(
+              padding:  EdgeInsets.symmetric(horizontal: StructureBuilder.dims!.h1Padding),
+              child: SearchTextField(),
+            ),),
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [

@@ -3,7 +3,6 @@ import 'package:es_flutter_admin_panel/language_change_provider.dart';
 import 'package:es_flutter_admin_panel/panelItems/es_register/es_lock_screen.dart';
 import 'package:es_flutter_admin_panel/panelItems/es_register/es_login.dart';
 import 'package:es_flutter_admin_panel/panelItems/es_register/es_recover_password.dart';
-import 'package:es_flutter_admin_panel/panelItems/panel_validate_form_sample.dart';
 import 'package:es_flutter_admin_panel/panel_ui/images/widget_tree_panel.dart';
 import 'package:es_flutter_component/components/es_bread_crumb/app_navigator_observer.dart';
 import 'package:es_flutter_component/resources/constants/structure_config.dart';
@@ -72,11 +71,14 @@ class _MyApp extends State<MyApp> {
                   initialRoute: '/',
                   routes: {
                     '/': (context) => WidgetTreePanel(),
-                    // '/': (context) => EsRecoverPassword(),
-                    '/locksceen': (context) => EsLockScreen(),
-                    '/recoverpass': (context) => EsRecoverPassword(),
-                    '/signin': (context) => EsSignin(),
-                    '/login': (context) => EsLogin(),
+                    // '/': (context) => PanelAvatarSample(),
+
+
+                      '/locksceen': (context) => EsLockScreen(),
+                      '/recoverpass': (context) => EsRecoverPassword(),
+                      '/signin': (context) => EsSignin(),
+                      '/login': (context) => EsLogin(),
+
 
 
                   },

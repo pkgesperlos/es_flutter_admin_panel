@@ -53,7 +53,7 @@ class PanelPrimaryCardSample extends StatelessWidget {
                 ]),
           ),
           title: AppLocalizations.of(context)!.primarycard,
-          information: "They are primary cards in panel:"
+          information: "these are primary cards in panel:"
               """Container(
                     decoration: BoxDecoration(
                         color: MyStyle.cardColor,
@@ -90,21 +90,24 @@ class PanelPrimaryCardSample extends StatelessWidget {
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.primarycardtitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.primarycardtitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

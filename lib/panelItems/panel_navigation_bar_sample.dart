@@ -21,8 +21,8 @@ class PanelNavigationBarSample extends StatefulWidget {
 }
 
 class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
-
   ScrollController _controller = ScrollController();
+
   @override
   void initState() {
     // TODO: implement initState
@@ -33,9 +33,13 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
   Widget build(BuildContext context) {
     int num = 3;
 
-    List<Function()> _functionList = List.generate(num, (index) =>() {
-    _controller.jumpTo(500, );
-    });
+    List<Function()> _functionList = List.generate(
+        num,
+        (index) => () {
+              _controller.jumpTo(
+                500,
+              );
+            });
     List<Widget> _tabList = List.generate(
         num,
         (index) => EsTitle(
@@ -46,7 +50,7 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
         num,
         (index) => EsButton(
               text: "Tab${index + 1}",
-          clickable: false,
+              clickable: false,
             ));
     List<Widget> _buttonTabList2 = List.generate(num, (index) {
       if (index == 2) {
@@ -79,14 +83,14 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
         );
     });
 
-   BoxDecoration _activeDecoration=BoxDecoration(
+    BoxDecoration _activeDecoration = BoxDecoration(
       border: Border(
         top: BorderSide(color: StructureBuilder.styles!.t4Color),
-        right: BorderSide( color: StructureBuilder.styles!.t4Color),
-        left: BorderSide( color: StructureBuilder.styles!.t4Color),
+        right: BorderSide(color: StructureBuilder.styles!.t4Color),
+        left: BorderSide(color: StructureBuilder.styles!.t4Color),
       ),
     );
-    BoxDecoration _inActiveDecoration=BoxDecoration(
+    BoxDecoration _inActiveDecoration = BoxDecoration(
       border: Border(
         bottom: BorderSide(color: StructureBuilder.styles!.t4Color),
       ),
@@ -98,11 +102,10 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
       ContainerItems(
           widget: Center(
             child: Container(
-              alignment: Alignment.topCenter,
+                alignment: Alignment.topCenter,
                 height: _height,
                 child: EsNavigationBar(
-                    functionList: _functionList,
-                    tabWidgetList: _tabList)),
+                    functionList: _functionList, tabWidgetList: _tabList)),
           ),
           title: AppLocalizations.of(context)!.simplenavigationbar,
           information: "It is a simple navigation bar located in:"
@@ -110,15 +113,32 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
               " and is used as: \n "
               """EsNavigationBar(
                     functionList: _functionList,
-                    tabWidgetList: _tabList)"""),
+                    tabWidgetList: _tabList)"""
+              " \n   where \n"
+              """
+          int num = 3;
+
+          List<Function()> _functionList = List.generate(
+          num,
+              (index) => () {
+            _controller.jumpTo(
+              500,
+            );
+          });
+         List<Widget> _tabList = List.generate(
+         num,
+            (index) => EsTitle(
+          "Tab\${index + 1}",
+          color: StructureBuilder.styles!.primaryColor,
+        ));"""),
       ContainerItems(
           widget: Center(
             child: Container(
                 alignment: Alignment.topCenter,
                 height: _height,
                 child: EsNavigationBar(
-                    functionList: _functionList,
-                    tabWidgetList: _tabList,
+                  functionList: _functionList,
+                  tabWidgetList: _tabList,
                   activeDecoration: _activeDecoration,
                   inActiveDecoration: _inActiveDecoration,
                 )),
@@ -132,7 +152,37 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
                     tabWidgetList: _tabList,
                   activeDecoration: _activeDecoration,
                   inActiveDecoration: _inActiveDecoration,
-                )"""),
+                )""" " \n   where \n"
+              """
+          int num = 3;
+
+          List<Function()> _functionList = List.generate(
+          num,
+              (index) => () {
+            _controller.jumpTo(
+              500,
+            );
+          });
+    List<Widget> _tabList = List.generate(
+        num,
+            (index) => EsTitle(
+          "Tab\${index + 1}",
+          color: StructureBuilder.styles!.primaryColor,
+        ));
+    
+
+    BoxDecoration _activeDecoration = BoxDecoration(
+      border: Border(
+        top: BorderSide(color: StructureBuilder.styles!.t4Color),
+        right: BorderSide(color: StructureBuilder.styles!.t4Color),
+        left: BorderSide(color: StructureBuilder.styles!.t4Color),
+      ),
+    );
+    BoxDecoration _inActiveDecoration = BoxDecoration(
+      border: Border(
+        bottom: BorderSide(color: StructureBuilder.styles!.t4Color),
+      ),
+    );"""),
       ContainerItems(
           widget: Center(
             child: Container(
@@ -148,7 +198,26 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
               " and is used as: \n "
               """EsNavigationBar(
                     functionList: _functionList,
-                    tabWidgetList: _buttonTabList)"""),
+                    tabWidgetList: _buttonTabList)"""
+              " \n   where \n"
+              """
+          int num = 3;
+
+          List<Function()> _functionList = List.generate(
+          num,
+              (index) => () {
+            _controller.jumpTo(
+              500,
+            );
+          });
+   
+    List<Widget> _buttonTabList = List.generate(
+        num,
+            (index) => EsButton(
+          text: "Tab \${index + 1}",
+          clickable: false,
+        ));
+  """),
       ContainerItems(
           widget: Center(
             child: Container(
@@ -165,14 +234,42 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
               """EsNavigationBar(
                     functionList: _functionList,
                     tabWidgetList: _buttonTabList2),
-          ),"""),
+          ),"""
+              " \n   where \n"
+              """
+          int num = 3;
+
+          List<Function()> _functionList = List.generate(
+          num,
+              (index) => () {
+            _controller.jumpTo(
+              500,
+            );
+          });
+   
+    List<Widget> _buttonTabList2 = List.generate(num, (index) {
+      if (index == 2) {
+        return EsButton(
+          disable: true,
+          fillColor: StructureBuilder.styles!.secondaryColor,
+          text: "Tab \${index + 1}",
+          clickable: false,
+        );
+      }
+      return EsButton(
+        text: "Tab \${index + 1}",
+        clickable: false,
+      );
+    });
+
+ """),
       ContainerItems(
           widget: Center(
             child: Container(
                 alignment: Alignment.topCenter,
                 height: _height,
                 child: EsNavigationBar(
-                  isExpanded: true,
+                    isExpanded: true,
                     functionList: _functionList,
                     tabWidgetList: _buttonTabList)),
           ),
@@ -182,7 +279,28 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
               " and is used as: \n "
               """EsNavigationBar(
                     functionList: _functionList,
-                    tabWidgetList: _buttonTabList)"""),
+                    tabWidgetList: _buttonTabList)"""
+              " \n   where \n"
+              """
+          int num = 3;
+
+          List<Function()> _functionList = List.generate(
+          num,
+              (index) => () {
+            _controller.jumpTo(
+              500,
+            );
+          });
+    
+    List<Widget> _buttonTabList = List.generate(
+        num,
+            (index) => EsButton(
+          text: "Tab \${index + 1}",
+          clickable: false,
+        ));
+  
+"""
+      ),
       ContainerItems(
           widget: Center(
             child: Container(
@@ -201,15 +319,34 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
                     direction: Axis.vertical,
                     functionList: _functionList,
                     tabWidgetList: _buttonTabList
-          ),"""),
+          ),"""        " \n   where \n"
+              """
+          int num = 3;
+
+          List<Function()> _functionList = List.generate(
+          num,
+              (index) => () {
+            _controller.jumpTo(
+              500,
+            );
+          });
+    
+    List<Widget> _buttonTabList = List.generate(
+        num,
+            (index) => EsButton(
+          text: "Tab \${index + 1}",
+          clickable: false,
+        ));
+  
+"""),
       ContainerItems(
           widget: Center(
             child: Container(
                 alignment: Alignment.topCenter,
                 height: _height,
                 child: EsNavigationBar(
-                    functionList: _functionList,
-                    tabWidgetList: _complexTabList,
+                  functionList: _functionList,
+                  tabWidgetList: _complexTabList,
                 )),
           ),
           title: AppLocalizations.of(context)!.navigationbarwithcustomwidget,
@@ -218,30 +355,62 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
               " and is used as: \n "
               """EsNavigationBar(
                     functionList: _functionList,
-                    tabWidgetList: _complexTabList)"""),
+                    tabWidgetList: _complexTabList)"""
+              " \n   where \n"
+              """
+          int num = 3;
+
+          List<Function()> _functionList = List.generate(
+          num,
+              (index) => () {
+            _controller.jumpTo(
+              500,
+            );
+          });
+    
+    List<Widget> _complexTabList = List.generate(num, (index) {
+      if (index == 1) {
+        return EsLabel(
+          isUnique: false,
+          widget: EsOrdinaryText(
+            AppLocalizations.of(context)!.text,
+          ),
+        );
+      } else
+        return EsContentLabel(
+          isUnique: true,
+          size: StructureBuilder.dims!.h3IconSize,
+          text: "error",
+        );
+    });
+  
+"""),
     ];
 
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
+    return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          controller: _controller,
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.navigationbartitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: StructureBuilder.dims!.h0Padding,
-                  ),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child: Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            controller: _controller,
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.navigationbartitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: StructureBuilder.dims!.h0Padding,
+                    ),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

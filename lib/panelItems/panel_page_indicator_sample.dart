@@ -76,7 +76,24 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
               """ EsPageIndicator(
                 controller: controller,
                 totalPage: totalPage,
-              ),"""),
+              ),"""  " \n   where \n"
+                  """  final PageController controller = PageController(initialPage: 0);
+  int totalPage = 7;
+  var currentPage;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    currentPage = 0;
+  }
+
+  void _pageChanged(int index) {
+    setState(() {
+      currentPage =
+          controller.page != null ? controller.page!.round() % totalPage : 0;
+    });
+  }"""),
       ContainerItems(
           widget: Container(
             child: Column(
@@ -117,7 +134,24 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
                 controller: controller,
                 totalPage: totalPage,
                 hasButton: true,
-              ),"""),
+              ),"""" \n   where \n"
+                  """  final PageController controller = PageController(initialPage: 0);
+  int totalPage = 7;
+  var currentPage;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    currentPage = 0;
+  }
+
+  void _pageChanged(int index) {
+    setState(() {
+      currentPage =
+          controller.page != null ? controller.page!.round() % totalPage : 0;
+    });
+  }"""),
       ContainerItems(
           widget: Container(
             child: Column(
@@ -154,7 +188,24 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
               """ EsNumberPageIndicator.simple(
                 controller: controller,
                 totalPage: totalPage,
-              ),"""),
+              ),"""" \n   where \n"
+                  """  final PageController controller = PageController(initialPage: 0);
+  int totalPage = 7;
+  var currentPage;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    currentPage = 0;
+  }
+
+  void _pageChanged(int index) {
+    setState(() {
+      currentPage =
+          controller.page != null ? controller.page!.round() % totalPage : 0;
+    });
+  }"""),
       ContainerItems(
           widget: Container(
               child: Column(
@@ -195,7 +246,24 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
                 controller: controller,
                 totalPage: totalPage,
                 hasButton: true,
-              ),"""),
+              ),"""" \n   where \n"
+                  """  final PageController controller = PageController(initialPage: 0);
+  int totalPage = 7;
+  var currentPage;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    currentPage = 0;
+  }
+
+  void _pageChanged(int index) {
+    setState(() {
+      currentPage =
+          controller.page != null ? controller.page!.round() % totalPage : 0;
+    });
+  }"""),
       ContainerItems(
           widget: Container(
             child: Column(
@@ -233,50 +301,71 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
               """ EsNumberPageIndicator.limited(
                 controller: controller,
                 totalPage: totalPage,
-              ),"""),
+              ),"""" \n   where \n"
+                  """  final PageController controller = PageController(initialPage: 0);
+  int totalPage = 7;
+  var currentPage;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    currentPage = 0;
+  }
+
+  void _pageChanged(int index) {
+    setState(() {
+      currentPage =
+          controller.page != null ? controller.page!.round() % totalPage : 0;
+    });
+  }"""),
     ];
 
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
+    return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.pageindicator,
-              ),
-              SizedBox(
-                height: StructureBuilder.dims!.h0Padding * 20,
-                child: Column(
-                  children: [
-                    Expanded(
-                      flex: 7,
-                      child: Padding(
-                        padding: EdgeInsets.all(
-                            StructureBuilder.dims!.h0Padding * 2),
-                        child: PageView.builder(
-                          itemCount: totalPage,
-                          onPageChanged: _pageChanged,
-                          controller: controller,
-                          itemBuilder: (context, index) {
-                            return EsSamplePageMaker(
-                              pageNum: index + 1,
-                            );
-                          },
+        child: Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.pageindicator,
+                ),
+                SizedBox(
+                  height: StructureBuilder.dims!.h0Padding * 20,
+                  child: Column(
+                    children: [
+                      Expanded(
+                        flex: 7,
+                        child: Padding(
+                          padding: EdgeInsets.all(
+                              StructureBuilder.dims!.h0Padding * 2),
+                          child: PageView.builder(
+                            itemCount: totalPage,
+                            onPageChanged: _pageChanged,
+                            controller: controller,
+                            itemBuilder: (context, index) {
+                              return EsSamplePageMaker(
+                                pageNum: index + 1,
+                              );
+                            },
+                          ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
+                    ],
                   ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index]))),
-            ],
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index]))),
+              ],
+            ),
           ),
         ));
   }

@@ -36,7 +36,7 @@ class PanelScrollableCardSample extends StatelessWidget {
             ],
           )),
           title: AppLocalizations.of(context)!.scrollablecard,
-          information: "They are scrollable cards in panel:"
+          information: "these are scrollable cards in panel:"
               """Container(
               child: BootstrapContainer(
             fluid: true,
@@ -47,23 +47,27 @@ class PanelScrollableCardSample extends StatelessWidget {
             ],
           )),"""),
     ];
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
+    return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.scrollablecardtitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child: Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body:SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.scrollablecardtitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

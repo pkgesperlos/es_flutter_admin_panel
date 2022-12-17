@@ -1,3 +1,4 @@
+
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/components/es_bread_crumb/bread_crumb_navigator.dart';
@@ -50,7 +51,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.breadcrumbwithsolidstructureindifferentcolors,
           information:
-          "They are bredcrumbs in different sizes located in: \n es_flutter_component/lib/components/es_bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
+          "these are bredcrumbs in different sizes located in: \n es_flutter_component/lib/components/es_bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
               "first \n navigatorObservers: [AppNavigatorObserver()], \n "
               "should be added in the MaterialApp of the main.dart file  \n "
               "Then \n set route as \n "
@@ -66,6 +67,46 @@ class PanelBreadCrumbSample extends StatelessWidget {
               ),\n 
               and finally navigate to other pages by \n 
                Navigator.push(context, PanelLabelSample.getRoute());"""),
+      // ContainerItems(
+      //     widget: Container(
+      //         child: Column(
+      //       children: [
+      //         BreadCrumbNavigator.static(
+      //
+      //           currentRoute: AppLocalizations.of(context)!.breadcrumb,
+      //           breadButtonType: BreadButtonType.shaped,
+      //           currentRouteStack: [
+      //             MaterialPageRoute(
+      //             builder: (context) =>EsLogin(),
+      //           ),
+      //             MaterialPageRoute(
+      //             builder: (context) =>EsRecoverPassword(),
+      //           ),
+      //             MaterialPageRoute(
+      //             builder: (context) =>EsSignin(),
+      //           ),
+      //           ],
+      //         ),
+      //       ]
+      //     )),
+      //     title: AppLocalizations.of(context)!.breadcrumbwithsolidstructureindifferentcolors,
+      //     information:
+      //     "these are bredcrumbs in different sizes located in: \n es_flutter_component/lib/components/es_bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
+      //         "first \n navigatorObservers: [AppNavigatorObserver()], \n "
+      //         "should be added in the MaterialApp of the main.dart file  \n "
+      //         "Then \n set route as \n "
+      //         """class PanelBreadCrumbSample extends StatelessWidget {
+      //                static MaterialPageRoute getRoute() => MaterialPageRoute(
+      //                settings: RouteSettings(name: 'breadcrumb'),
+      //                builder: (context) => PanelBreadCrumbSample()); ..."""
+      //         """ BreadCrumbNavigator.shaped(
+      //           currentRoute: AppLocalizations.of(context)!.breadcrumb,
+      //           breadButtonType: BreadButtonType.shaped,
+      //           backgroundColor: StructureBuilder.styles!.secondaryColor,
+      //           textColor: StructureBuilder.styles!.textColor().secondary,
+      //         ),\n
+      //         and finally navigate to other pages by \n
+      //          Navigator.push(context, PanelLabelSample.getRoute());"""),
       ContainerItems(
           widget: Container(
               child: Column(
@@ -95,7 +136,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.breadcrumbwithsolidstructureindifferentsizes,
           information:
-              "They are bredcrumbs in different sizes located in: \n es_flutter_component/lib/components/es_bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
+              "these are bredcrumbs in different sizes located in: \n es_flutter_component/lib/components/es_bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
               "first \n navigatorObservers: [AppNavigatorObserver()], \n "
               "should be added in the MaterialApp of the main.dart file  \n "
               "Then \n set route as \n "
@@ -145,7 +186,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.breadcrumbwithtypingelementsseparator,
           information:
-          "They are breadcrumbs with typing elements seprator located in: \n es_flutter_component/lib/components/es_bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
+          "these are breadcrumbs with typing elements seprator located in: \n es_flutter_component/lib/components/es_bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
               "first \n navigatorObservers: [AppNavigatorObserver()], \n "
               "should be added in the MaterialApp of the main.dart file  \n "
               "Then \n set route as \n "
@@ -210,7 +251,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
           ),
           title: AppLocalizations.of(context)!.breadcrumbwithiconseparator,
           information:
-          "They are breadcrumbs with icon separator located in: \n es_flutter_component/lib/components/es_bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
+          "these are breadcrumbs with icon separator located in: \n es_flutter_component/lib/components/es_bread_crumb/bread_crumb_navigator.dart'\n and is used as: \n "
               "first \n navigatorObservers: [AppNavigatorObserver()], \n "
               "should be added in the MaterialApp of the main.dart file  \n "
               "Then \n set route as \n "
@@ -233,24 +274,28 @@ class PanelBreadCrumbSample extends StatelessWidget {
               and finally navigate to other pages by \n 
                Navigator.push(context, PanelLabelSample.getRoute());"""),
     ];
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
+    return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              BreadCrumbNavigator(currentRoute: AppLocalizations.of(context)!.breadcrumb),
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.breadcrumbtitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child: Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                BreadCrumbNavigator(currentRoute: AppLocalizations.of(context)!.breadcrumb),
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.breadcrumbtitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

@@ -81,7 +81,7 @@ class PanelAlertSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.simplealert,
           information:
-              "They are confidence alerts located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
+              "these are confidence alerts located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon("packages/es_flutter_component/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
@@ -178,7 +178,7 @@ class PanelAlertSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.borderedalert,
           information:
-              "They are bordered alerts located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
+              "these are bordered alerts located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon("packages/es_flutter_component/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
@@ -247,7 +247,7 @@ class PanelAlertSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.removablealert,
           information:
-              "They are removable alerts located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
+              "these are removable alerts located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
               """EsButton(
                 text: AppLocalizations.of(context)!.error,
                 fillColor: StructureBuilder.styles!.errorColor,
@@ -346,7 +346,7 @@ class PanelAlertSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.alertwithicon,
           information:
-              "They are alerts with icon located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
+              "these are alerts with icon located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
                   "packages/es_flutter_component/assets/svgs/danger.svg",
@@ -461,7 +461,7 @@ class PanelAlertSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.removablealertwithicon,
           information:
-              "They are removable alerts with icon located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
+              "these are removable alerts with icon located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
                   "packages/es_flutter_component/assets/svgs/danger.svg",
@@ -603,7 +603,7 @@ class PanelAlertSample extends StatelessWidget {
 
           title: AppLocalizations.of(context)!.alertwithdesiredcontent,
           information:
-              "They are alerts with desired content located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
+              "these are alerts with desired content located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
                   "packages/es_flutter_component/assets/svgs/danger.svg",
@@ -748,7 +748,7 @@ class PanelAlertSample extends StatelessWidget {
               )),
           title: AppLocalizations.of(context)!.borderedalertwithicon,
           information:
-          "They are bordered alerts with icon located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
+          "these are bordered alerts with icon located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
               """EsIconButton(
                     EsSvgIcon(
                       "packages/es_flutter_component/assets/svgs/danger.svg",
@@ -778,21 +778,24 @@ class PanelAlertSample extends StatelessWidget {
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.alerttitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.alerttitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

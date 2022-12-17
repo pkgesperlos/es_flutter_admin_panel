@@ -199,7 +199,7 @@ class PanelSweetAlertSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.sweetalert,
           information:
-              "They are sweet alerts that the art_sweetalert package is added in pubspec.yaml 's dependencies \n and is used as: \n "
+              "these are sweet alerts that the art_sweetalert package is added in pubspec.yaml 's dependencies \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
                   "packages/es_flutter_component/assets/svgs/danger.svg",
@@ -222,21 +222,24 @@ class PanelSweetAlertSample extends StatelessWidget {
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.sweetalerttitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.sweetalerttitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

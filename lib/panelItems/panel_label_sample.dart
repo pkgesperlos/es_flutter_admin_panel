@@ -53,7 +53,7 @@ class PanelLabelSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.labelondifferentwidgets,
           information:
-              "They are labels on different widgets located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
+              "these are labels on different widgets located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
               """EsLabel(
               isUnique: false,
                 widget: EsButton(
@@ -91,9 +91,9 @@ class PanelLabelSample extends StatelessWidget {
               ),
             ],
           )),
-          title: AppLocalizations.of(context)!.labelinuniquemode,
+          title: AppLocalizations.of(context)!.labelinsinglemode,
           information:
-              "They are labels in unique mode located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
+              "these are labels in unique mode located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
               """EsLabel(
                 isUnique: true,
               ),"""),
@@ -143,7 +143,7 @@ class PanelLabelSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.labelwithdifferentcontents,
           information:
-              "They are labels with different contents located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
+              "these are labels with different contents located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
               """EsContentLabel(
               isUnique: false,
                 widget: EsButton(
@@ -201,7 +201,7 @@ class PanelLabelSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.labelwithsepratorborder,
           information:
-              "They are labels with seprator border located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
+              "these are labels with seprator border located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
               """ EsLabel(
               isUnique: false,
                     widget: EsButton(
@@ -369,7 +369,7 @@ class PanelLabelSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.labelindifferentcolors,
           information:
-              "They are labels in different colors located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
+              "these are labels in different colors located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
               """EsLabel(
               isUnique: false,
                 widget: EsButton(
@@ -460,7 +460,7 @@ class PanelLabelSample extends StatelessWidget {
           title: AppLocalizations.of(context)!
               .labelindifferentsizesandborderradiuss,
           information:
-              "They are labels in different sizes and border radius's located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
+              "these are labels in different sizes and border radius's located in: \n es_flutter_component/lib/components/es_label\n and is used as: \n "
               """EsLabel(
               isUnique: false,
                     widget: EsButton(
@@ -483,21 +483,24 @@ class PanelLabelSample extends StatelessWidget {
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.labeltitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.labeltitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

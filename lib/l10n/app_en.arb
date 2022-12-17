@@ -86,7 +86,7 @@
 
   "label": "Labels",
   "labelondifferentwidgets": "Label on different widgets",
-  "labelinuniquemode": "Label in unique mode",
+  "labelinsinglemode": "Label in unique mode",
   "labelwithdifferentcontents": "Label with different contents",
   "labelwithsepratorborder": "Label with seprator border",
   "labelindifferentcolors": "Label in different colors",
@@ -198,7 +198,7 @@
 
   "lightbox": "Light box",
   "gallerylightboxshowingimage": "Gallery light box showing image",
-  "uniquelightboxshowingimage": "unique light box showing image",
+  "singlelightboxshowingimage": "single light box showing image",
   "lightboxtitle": "Light boxs in two mode  are available in panel by flutter code.",
 
   "modal": "Modal",
@@ -226,7 +226,7 @@
   "tooltip": "Tooltip",
   "tooltipindifferentalignments": "Tooltip in different alignments",
   "tooltipfordifferentwidgets": "Tooltip on different widgets",
-  "tooltipindifferentshowduration": "tooltip in different show duration",
+  "tooltipindifferentshowduration": "Tooltip in different show duration",
   "tooltiptitle": "Different kinds of tooltips  are available in panel by flutter code.",
 
   "sweetalert": "Sweet alert",
@@ -238,7 +238,7 @@
   "footer": "Footer",
   "header": "header",
   "quotation": "Quotation",
-  "card": "card",
+  "card": "Card",
   "primarycard": "Primary card",
   "primarycardtitle": "Different kinds of primary cards  are available in panel by flutter code.",
 
@@ -274,7 +274,7 @@
 "formcontrols": "Form controls",
 "textfieldindifferentwidthandheight": "Text field in different width and height",
 "dropdownbuttonsindifferentwidthandheight": "Drop down buttons in different width and height",
-"onlyreadablefield": "Only readable field",
+"readonlyfield": "read only field",
 "sliderinput": "Slider input",
 "dropdownsample": "Drop down sample",
 "textareasample": "Text area sample",

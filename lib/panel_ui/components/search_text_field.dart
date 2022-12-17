@@ -13,11 +13,11 @@ class SearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width:width?? StructureBuilder.dims!.h0Padding * 10,
+      width:width,
       height:height,
       alignment: Alignment.center,
       padding: EdgeInsets.only(
-        bottom: StructureBuilder.dims!.h2Padding,
+        // bottom: StructureBuilder.dims!.h2Padding,
         left: StructureBuilder.dims!.h1Padding,
         right: StructureBuilder.dims!.h1Padding,
         // vertical: StructureBuilder.dims!.h3Padding,

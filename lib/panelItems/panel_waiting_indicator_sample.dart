@@ -76,7 +76,7 @@ class _PanelWaitingIndicatorSampleState
               )),
           title: AppLocalizations.of(context)!.waitingindicatorsindifferentcolors,
           information:
-              "They are waiting indicators in different colors that blink type  located in: \n es_flutter_component/lib/components/es_waiting_indicator/es_blink_waiting_indicator.dart;' \n and is used as: \n "
+              "these are waiting indicators in different colors that blink type  located in: \n es_flutter_component/lib/components/es_waiting_indicator/es_blink_waiting_indicator.dart;' \n and is used as: \n "
               """EsBlinkWaitingIndicator(
                     color: StructureBuilder.styles!.tritiaryColor,
                   ),"""),
@@ -132,7 +132,7 @@ class _PanelWaitingIndicatorSampleState
               )),
           title: AppLocalizations.of(context)!.waitingindicatorsindifferentsizes,
           information:
-              "They are waiting indicators in different sizes that blink type  located in: \n es_flutter_component/lib/components/es_waiting_indicator/es_blink_waiting_indicator.dart;' \n and is used as: \n "
+              "these are waiting indicators in different sizes that blink type  located in: \n es_flutter_component/lib/components/es_waiting_indicator/es_blink_waiting_indicator.dart;' \n and is used as: \n "
               """EsBlinkWaitingIndicator(size: StructureBuilder.dims!.h0Padding*2,),"""),
       ContainerItems(
           widget: Container(
@@ -158,7 +158,7 @@ class _PanelWaitingIndicatorSampleState
               )),
           title: AppLocalizations.of(context)!.waitingindicatorsonbuttons,
           information:
-          "They are waiting indicators on buttons that blink type  located in: \n es_flutter_component/lib/components/es_waiting_indicator/es_blink_waiting_indicator.dart;' \n and is used as: \n "
+          "these are waiting indicators on buttons that blink type  located in: \n es_flutter_component/lib/components/es_waiting_indicator/es_blink_waiting_indicator.dart;' \n and is used as: \n "
               """EsButton(text: "button",icon: SizedBox(
                     width: StructureBuilder.dims!.h0Padding,
                     height: StructureBuilder.dims!.h0Padding,
@@ -169,25 +169,31 @@ class _PanelWaitingIndicatorSampleState
     ];
 
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
+    return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.watingindicatortitle,
+        child: Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body:  Scaffold(
+            backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  PageTitleContainer(
+                    title: AppLocalizations.of(context)!.watingindicatortitle,
+                  ),
+                  BootstrapContainer(
+                      fluid: true,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: StructureBuilder.dims!.h0Padding,
+                      ),
+                      decoration: BoxDecoration(
+                        color: StructureBuilder.styles!.primaryDarkColor,
+                      ),
+                      children: List.generate(
+                          list.length, (index) => boxShow(list[index])))
+                ],
               ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: StructureBuilder.dims!.h0Padding,
-                  ),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+            ),
           ),
         ));
   }

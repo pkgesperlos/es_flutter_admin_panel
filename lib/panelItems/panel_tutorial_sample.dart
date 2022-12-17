@@ -93,7 +93,164 @@ class _PanelTutorialSampleState extends State<PanelTutorialSample> {
                   "and is used as: \n "
               """onTap: () {
                         Future.delayed(Duration.zero, showTutorial);
-                      },"""),
+                      },
+                      where \n  
+  late TutorialCoachMark tutorialCoachMark;
+  GlobalKey titleKey = GlobalKey();
+  GlobalKey introCardKey = GlobalKey();
+  GlobalKey imageCardKey = GlobalKey();
+  GlobalKey informationKey = GlobalKey();
+    void showTutorial() {
+    tutorialCoachMark.show(context: context);
+  }
+
+  void createTutorial() {
+    tutorialCoachMark = TutorialCoachMark(
+      targets: _createTargets(),
+      colorShadow: StructureBuilder.styles!.t3Color,
+      textSkip: "Skip",
+      paddingFocus: StructureBuilder.dims!.h1Padding,
+      // opacityShadow: 0.8,
+      pulseEnable: false,
+
+      /*    onFinish: () {
+        print("finish");
+      },
+      onClickTarget: (target) {
+        print('onClickTarget: \$target');
+      },
+      onClickTargetWithTapPosition: (target, tapDetails) {
+        print("target: \$target");
+        print(
+            "clicked at position local: \${tapDetails.localPosition} - global: \$\{tapDetails.globalPosition\}");
+      },
+      onClickOverlay: (target) {
+        print("onClickOverlay:  \$target");
+      },
+      onSkip: () {
+        print("skip");
+      },*/
+    );
+  }
+
+  List<TargetFocus> _createTargets() {
+    List<TargetFocus> targets = [];
+    targets.add(
+      TargetFocus(
+        enableOverlayTab: true,
+        identify: "titleKey",
+        keyTarget: titleKey,
+        alignSkip: Alignment.topRight,
+        contents: [
+          TargetContent(
+            align: ContentAlign.top,
+            builder: (context, controller) {
+              return Container(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    EsTitle(
+                      "It is title card of page",
+                      color: StructureBuilder.styles!.primaryLightColor,
+                    )
+                  ],
+                ),
+              );
+            },
+          ),
+        ],
+        shape: ShapeLightFocus.RRect,
+      ),
+    );
+    targets.add(
+      TargetFocus(
+        enableOverlayTab: true,
+        identify: "introCardKey",
+        keyTarget: introCardKey,
+        alignSkip: Alignment.topRight,
+        contents: [
+          TargetContent(
+            align: ContentAlign.top,
+            builder: (context, controller) {
+              return Container(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    EsTitle(
+                      "It is intro card of tutorial",
+                      color: StructureBuilder.styles!.primaryLightColor,
+                    )
+                  ],
+                ),
+              );
+            },
+          ),
+        ],
+        shape: ShapeLightFocus.RRect,
+      ),
+    );
+    targets.add(
+      TargetFocus(
+        enableOverlayTab: true,
+        identify: "informationKey",
+        keyTarget: informationKey,
+        alignSkip: Alignment.topRight,
+        contents: [
+          TargetContent(
+            align: ContentAlign.top,
+            builder: (context, controller) {
+              return Container(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    EsTitle(
+                      "It is imformation button of card",
+                      color: StructureBuilder.styles!.primaryLightColor,
+                    )
+                  ],
+                ),
+              );
+            },
+          ),
+        ],
+        shape: ShapeLightFocus.Circle,
+      ),
+    );
+    targets.add(
+      TargetFocus(
+        enableOverlayTab: true,
+        identify: "imageCardKey",
+        keyTarget: imageCardKey,
+        alignSkip: Alignment.topRight,
+        contents: [
+          TargetContent(
+            align: ContentAlign.top,
+            builder: (context, controller) {
+              return Container(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    EsTitle(
+                      "It is an image card",
+                      color: StructureBuilder.styles!.primaryLightColor,
+                    )
+                  ],
+                ),
+              );
+            },
+          ),
+        ],
+        shape: ShapeLightFocus.RRect,
+      ),
+    );
+
+    return targets;
+  }
+                      """),
       ContainerItems(
           widget: Container(
             key: imageCardKey,
@@ -147,7 +304,7 @@ class _PanelTutorialSampleState extends State<PanelTutorialSample> {
             ),
           ),
           title: AppLocalizations.of(context)!.imagecard,
-          information: "They are primary cards in panel:"
+          information: "these are primary cards in panel:"
               """Container(
                       clipBehavior: Clip.antiAlias,
                       margin: EdgeInsets.symmetric(
@@ -201,23 +358,26 @@ class _PanelTutorialSampleState extends State<PanelTutorialSample> {
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                key: titleKey,
-                title: AppLocalizations.of(context)!.tutorialtitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  key: titleKey,
+                  title: AppLocalizations.of(context)!.tutorialtitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

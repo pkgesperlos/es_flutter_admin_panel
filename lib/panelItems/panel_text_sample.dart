@@ -51,7 +51,7 @@ class PanelTextSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.textindifferentposition,
           information:
-              "They are text in deifferent positions located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
+              "these are text in deifferent positions located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
               """EsHeader("Header : "+AppLocalizations.of(context)!.sampleText,),"""),
       ContainerItems(
           widget: Container(
@@ -152,7 +152,7 @@ class PanelTextSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.textforuseinlist,
           information:
-              "They are Texts for use in list located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
+              "these are Texts for use in list located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
               """Column(
                     children: [
                       EsDottedText(AppLocalizations.of(context)!.sampleText,),
@@ -315,7 +315,7 @@ class PanelTextSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.textindifferentcolors,
           information:
-              "They are texts in different colors located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
+              "these are texts in different colors located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
               """Column(
                     children: [
                       EsHeader("Header : "+AppLocalizations.of(context)!.sampleText,),
@@ -496,7 +496,7 @@ class PanelTextSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.textindifferentemphsizestyles,
           information:
-              "They are Text in deifferent sizes located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
+              "these are Text in deifferent sizes located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
               """ EsHeader("Header : "+AppLocalizations.of(context)!.sampleText,
                       backgroundColor: StructureBuilder.styles!.warningColor().warningLight,),
                       \n and \n
@@ -605,7 +605,7 @@ class PanelTextSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.textindifferentsizes,
           information:
-              "They are Text in deifferent sizes located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
+              "these are Text in deifferent sizes located in: \n es_flutter_component/lib/components/es_text;' \n and is used as: \n "
               """EsOrdinaryText(
                         "OrdinaryText : " + AppLocalizations.of(context)!.sampleText,
                         size: StructureBuilder.dims!.h1FontSize,
@@ -618,21 +618,24 @@ class PanelTextSample extends StatelessWidget {
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.groupbuttontitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.groupbuttontitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

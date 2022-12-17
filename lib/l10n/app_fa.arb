@@ -25,8 +25,8 @@
   "scrollableaccordion": "آکاردئون قابل اسکرول",
   "removableaccordion": "آکاردئون قابل حذف آیتم ها",
   "solidaccordion": "آکاردئون سالید",
-  "iconaccordion": "آکاردئون با آیکون",
-  "accordionwithdesiredarrowicon": "آکارئون با آیکون باز و بسته شدن دلخواه",
+  "iconaccordion": "آکاردئون با آیکن",
+  "accordionwithdesiredarrowicon": "آکارئون با آیکن باز و بسته شدن دلخواه",
   "accordionwithbackgroundimage": "آکاردئون با عکس پیش زمینه دلخواه",
   "accordiontitle": "مدل های متفاوت آکاردئون(منوی باز و بسته شونده) با استفاده از کد های فلاتر در پنل موجود است.",
 
@@ -34,8 +34,8 @@
   "simplealert": "هشدار ساده",
   "borderedalert": "هشدار حاشیه دار",
   "removablealert": "هشدار قابل رد شدن",
-  "alertwithicon": "هشدار با آیکون",
-  "removablealertwithicon": "هشدار با آیکون و قابل حذف شدن",
+  "alertwithicon": "هشدار با آیکن",
+  "removablealertwithicon": "هشدار با آیکن و قابل حذف شدن",
   "alertwithdesiredcontent": "هشدار با محتوای دلخواه",
   "borderedalertwithicon": "هشدار حاشیه دار با آیکن",
   "alerttitle": "مدل های متفاوت هشدار با استفاده از کد های فلاتر در پنل موجود است، لطفا روی آنها کلیک کنید!",
@@ -44,8 +44,8 @@
   "blocbutton": "دکمه بلاک",
   "defaultbutton": "دکمه پیشفرض",
   "borderedbutton": "دکمه حاشیه دار",
-  "iconbutton": "دکمه با آیکون",
-  "icontextbutton": "دکمه با آیکون و متن",
+  "iconbutton": "دکمه با آیکن",
+  "icontextbutton": "دکمه با آیکن و متن",
   "disabledbutton": "دکمه غیر فعال",
   "socialnetworkbutton": "دکمه شبکه اجتماعی",
   "roundbutton": "دکمه گرد",
@@ -78,7 +78,7 @@
   "texttitle": " انواع مدل های متن در سایز ها و استایل های متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
 
   "dialogeBoxDescription": " انواع مدل های دیالوگ باکس در عملکرد های مختلف در پنل در دسترس است .",
-  "buttonDescription": " انواع مدل های دکمه معمولی ،آیکون دار و لودینگ دار سایزهای مختلف در پنل در دسترس است .",
+  "buttonDescription": " انواع مدل های دکمه معمولی ،آیکن دار و لودینگ دار سایزهای مختلف در پنل در دسترس است .",
   "formDescription": " انواع مدل های فرم درعملکردهای مختلف برای گرفتن اطلاعات از کاربر در پنل در دسترس است .",
   "imageDescription": " انواع عملکردهای مختلف برای نمایش عکس برای کاربر در پنل در دسترس است .",
   "progressBarDescription":  " انواع مدل های نوار پیشرفت (خطی و دایروی) در پنل در دسترس است .",
@@ -88,7 +88,7 @@
 
   "label": "لیبل",
   "labelondifferentwidgets": "لیبل بر ویجت های مختلف ",
-  "labelinuniquemode": "لیبل در حالت یکتا",
+  "labelinsinglemode": "لیبل در حالت یکتا",
   "labelwithdifferentcontents": "لیبل با محتواهای گوناگون",
   "labelwithsepratorborder": "لیبل با حاشیه جدا کننده",
   "labelindifferentcolors": "لیبل در رنگ های مختلف",
@@ -114,7 +114,7 @@
   "dropdownbuttonsindifferentcolors": "دکمه باز شونده در رنگ های متفاوت",
   "dropdownbuttonsindifferentsizes": "دکمه باز شونده در سایزهای متفاوت",
   "dropdownbuttonsindifferentpositions": "دکمه بازشونده در مکان های متفاوت",
-  "dropdownbuttonsincustomicons": "دکمه باز شونده با آیکون دلخواه",
+  "dropdownbuttonsincustomicons": "دکمه باز شونده با آیکن دلخواه",
   "dropdownbuttonsindifferentmenudecoration": "دکمه بازشونده با استایل منو متفاوت",
   "dropdownbuttonsindifferentmenusizes": "دکمه بازشونده با سایز های متفاوت منو باز شونده",
   "dropdownbuttontitle": " انواع مدل های دکمه باز شونده متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
@@ -124,8 +124,8 @@
   "simplecarouselsliderwithoutanimation": "اسلایدر کاروسل ساده بدون انیمیشن",
   "carouselsliderwithanimation": "اسلایدر کاروسل با انیمیشن",
   "carouselsliderwithindicator": "اسلایدر کاروسل با نشانگر",
-  "carouselsliderwithicon": "اسلایدر کاروسل با آیکون",
-  "carouselsliderwithindicatorandicon": "اسلایدر کاروسل با نشانگر و آیکون",
+  "carouselsliderwithicon": "اسلایدر کاروسل با آیکن",
+  "carouselsliderwithindicatorandicon": "اسلایدر کاروسل با نشانگر و آیکن",
   "slidertitle": " انواع مدل های اسلایدر متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است.",
 
 
@@ -203,7 +203,7 @@
 
   "lightbox": "لایت باکس",
   "gallerylightboxshowingimage": "گالری لایت باکس",
-  "uniquelightboxshowingimage": "لایت باکس تکی",
+  "singlelightboxshowingimage": "لایت باکس تکی",
   "lightboxtitle":" .لایت باکس ها در دو حالت با استفاده از کدهای فلاتر در پنل موجود است",
 
 
@@ -263,7 +263,7 @@
 
   "treelist": "لیست درختی",
   "defaulttreelistview": " لیست درختی پیشفرض",
-  "treelistviewwithdesiredicon": "لسیت درختی با آیکون دلخواه",
+  "treelistviewwithdesiredicon": "لسیت درختی با آیکن دلخواه",
   "treelistviewtitle": "لیست درختی با استفاده از کد های فلاتر در پنل موجود است.",
 
   "primaryform": "فرم پایه",
@@ -278,7 +278,7 @@
   "formcontrols": "کنترل های فرم",
   "textfieldindifferentwidthandheight": "فیلد متنی در عرض ها و ارتفاع های متفاوت",
   "dropdownbuttonsindifferentwidthandheight": "منوی کشویی در عرض ها و ارتفاع های متفاوت",
-  "onlyreadablefield": "فیلد فقط خواندنی",
+  "readonlyfieldfield": "فیلد فقط خواندنی",
   "sliderinput": "ورودی لغزنده",
   "dropdownsample": "نمونه منوی کشویی",
   "textareasample": "نمونه ناحیه متنی",
@@ -366,14 +366,14 @@
   "unlocking": "قفل گشایی",
   "youraccessneedsunlocking": "دسترسی شما نیازمند قفل گشایی است.",
 
-  "icons": "آیکون ها",
+  "icons": "آیکن ها",
   "emptyscreen": "صفحه خالی",
   "authentication": "احراز هویت",
   "pages": "صفحات",
   "errors": "خطاها",
   "repairs": "تعمیرات",
   "wewillbebacksoon": "به زودی برمیگردیم...",
-  "lookforsomethingsearchit": "دنیال چیزی می گزدید ؟ جستوجو کنید:",
+  "lookforsomethingsearchit": "دنیال چیزی می گردید ؟ جستوجو کنید:",
   "thesiteiscurrentlyundermaintenance": "در حال حاضر سایت در دست تعمیرات است.",
 
   "menulevel": "سطح منو",
@@ -402,6 +402,7 @@
 
   "forstart": "برای شروع",
   "golden": "طلایی",
+  "free": "رایگان",
   "yearly": "سالانه",
   "teststart": "شروع آزمایشی",
   "pricecard": "کارت قیمت",

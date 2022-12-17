@@ -27,6 +27,7 @@ import 'package:pattern_formatter/numeric_formatter.dart';
 
 import 'package:intl/intl.dart' as intl;
 
+
 class PanelAdvancedFormSample extends StatefulWidget {
   PanelAdvancedFormSample({Key? key}) : super(key: key);
 
@@ -239,7 +240,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
           ),
           title: AppLocalizations.of(context)!.maskedinput,
           information:
-              "They are masked input text fields  in this panel by flutter code. \n "
+              "these are masked input text fields  in this panel by flutter code. \n "
               "the mask_text_input_formatter and pattern_formatter packages are added in pubspec.yaml dependencies as each utility\n "
               "  and is used as: \n "
               """EsMaskedInputTextField(
@@ -388,7 +389,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
           ),
           title: AppLocalizations.of(context)!.sliderinput,
           information:
-              "They are slider input text fields  in this panel by flutter code. \n"
+              "these are slider input text fields  in this panel by flutter code. \n"
               "located in: \n es_flutter_component>lib/es_form/es_slider/es_slider.dart \n  "
               "  and is used as: \n "
               """EsRangeSlider(
@@ -426,7 +427,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
             ),
           ),
           title: AppLocalizations.of(context)!.labelinput,
-          information: "They are label inputs in this panel by flutter code.  "
+          information: "these are label inputs in this panel by flutter code.  "
               "Some of the components are located in: \n es_flutter_component>lib/es_form/es_drop_down \n  and is used as: \n."
               """  EsLabelInput(labelList: labelList2),"""),
       ContainerItems(
@@ -434,54 +435,69 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
             height: _height2,
             child: EsPersianDatePicker(
               title: AppLocalizations.of(context)!.select,
+              initialTime: DateTime(1300,10,1),
             ),
           ),
           title: AppLocalizations.of(context)!.datePickerfa,
           information:
               "It is a jalali date picker located in: \n es_flutter_component/lib/components/es_form>es_date_time_picker>es_persian_date_picker.dart \n and is used as: \n "
-              """ EsPersianDatePicker()"""),
+              """ EsPersianDatePicker(
+              title: AppLocalizations.of(context)!.select,
+              initialTime: DateTime(1300,10,1),
+            ),"""),
       ContainerItems(
           widget: Container(
             height: _height2,
             child: EsEnglishDatePicker(
               title: AppLocalizations.of(context)!.select,
+              initialTime: DateTime(1300,10,1),
             ),
           ),
           title: AppLocalizations.of(context)!.datePickeren,
           information:
               "It is a Gregorian date picker located in: \n es_flutter_component/lib/components/es_form>es_date_time_picker>es_English_date_picker.dart \n and is used as: \n "
-              """ EsEnglishDatePicker()"""),
+              """EsEnglishDatePicker(
+              title: AppLocalizations.of(context)!.select,
+              initialTime: DateTime(1300,10,1),
+            ),"""),
       ContainerItems(
           widget: Container(
             height: _height2,
             alignment: _rtl ? Alignment.topRight : Alignment.topLeft,
             child: EsAndroidTimePicker(
               title: AppLocalizations.of(context)!.select,
+              initialTime: TimeOfDay(hour: 7,minute: 7),
             ),
           ),
           title: AppLocalizations.of(context)!.timePickerHM,
           information:
               "It is a time picker(H/M)  located in: \n es_flutter_component/lib/components/es_form>es_date_time_picker>es_android_time_picker.dart \n and is used as: \n "
-              """ EsAndroidTimePicker(
-            title: AppLocalizations.of(context)!.androidTimePickerTitle,)"""),
+              """  EsAndroidTimePicker(
+              title: AppLocalizations.of(context)!.select,
+              initialTime: TimeOfDay(hour: 10,minute: 30),
+            ),"""),
       ContainerItems(
           widget: Container(
             height: _height2,
             child: EsCupertinoTimePicker(
               title: AppLocalizations.of(context)!.select,
+              initialTime: TimeOfDay(hour: 7,minute: 7),
             ),
           ),
           title: AppLocalizations.of(context)!.timePickerHMS,
           information:
               "It is a time picker(H/M/S) located in: \n es_flutter_component/lib/components/es_form>es_date_time_picker>es_cupertino_time_picker.dart \n and is used as: \n "
               """ EsCupertinoTimePicker(
-            title: AppLocalizations.of(context)!.cupertinoTimePickerTitle,)"""),
+              title: AppLocalizations.of(context)!.select,
+              initialTime: TimeOfDay(hour: 7,minute: 7),
+            ),"""),
       ContainerItems(
           widget: Container(
             height: _height2,
             alignment: _rtl ? Alignment.topRight : Alignment.topLeft,
             child: EsCupertino12HTimePicker(
               title: AppLocalizations.of(context)!.select,
+              initialTime: TimeOfDay(hour: 7,minute: 7),
             ),
           ),
           title:AppLocalizations.of(context)!.timePickerHM+AppLocalizations.of(context)!.ampm,
@@ -490,6 +506,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
                   "\n and is used as: \n "
               """EsCupertino12HTimePicker(
               title: AppLocalizations.of(context)!.select,
+              initialTime: TimeOfDay(hour: 7,minute: 7),
             ),"""),
       ContainerItems(
           widget: Container(
@@ -530,24 +547,28 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
               """EsRingColorPicker(
                 title: AppLocalizations.of(context)!.selectcolor,)"""),
     ];
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
+    return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.advancedformtitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.advancedformtitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

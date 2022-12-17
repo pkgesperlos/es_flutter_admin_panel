@@ -1,4 +1,3 @@
-
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/components/es_group_list/es_group_list.dart';
@@ -12,7 +11,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-
 class PanelGroupListSample extends StatefulWidget {
   PanelGroupListSample({Key? key}) : super(key: key);
 
@@ -21,74 +19,78 @@ class PanelGroupListSample extends StatefulWidget {
 }
 
 class _PanelGroupListSampleState extends State<PanelGroupListSample> {
-@override
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
-
   }
 
   @override
   Widget build(BuildContext context) {
-  double _height=200;
-  List<Widget> _widgetList=List.generate(4, (index) {
-    return Container(
-      child: EsOrdinaryText(AppLocalizations.of(context)!.lormmid,
-        align: TextAlign.start,
-        overFlowTag: true,
-        maxLine: 1,
-      ),
-    );
-  });
-  List<Widget> _widgetList2=List.generate(4, (index) {
-    return Container(
-      child: EsOrdinaryText(AppLocalizations.of(context)!.lormmid,
-        color: StructureBuilder.styles!.primaryLightColor,
-        overFlowTag: true,
-        maxLine: 1,),
-    );
-  });
-  List<Widget> _complexWidgetList=List.generate(4, (index) {
-    return Container(
-      child: Column(
-        // mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                flex: 3,
-                child: EsContentLabel(
-                  isUnique: false,
-                  size: StructureBuilder.dims!.h3IconSize/2,
-                  text: "ok",
-                  widget: EsAvatarImage(
-                    path: "assets/images/img1.jpg",
-                    radius: StructureBuilder.dims!.h3IconSize/2,
+    double _height = 200;
+    List<Widget> _widgetList = List.generate(4, (index) {
+      return Container(
+        child: EsOrdinaryText(
+          AppLocalizations.of(context)!.lormmid,
+          align: TextAlign.start,
+          overFlowTag: true,
+          maxLine: 1,
+        ),
+      );
+    });
+    List<Widget> _widgetList2 = List.generate(4, (index) {
+      return Container(
+        child: EsOrdinaryText(
+          AppLocalizations.of(context)!.lormmid,
+          color: StructureBuilder.styles!.primaryLightColor,
+          overFlowTag: true,
+          maxLine: 1,
+        ),
+      );
+    });
+    List<Widget> _complexWidgetList = List.generate(4, (index) {
+      return Container(
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: EsContentLabel(
+                    isUnique: false,
+                    size: StructureBuilder.dims!.h3IconSize / 2,
+                    text: "ok",
+                    widget: EsAvatarImage(
+                      path: "assets/images/img1.jpg",
+                      radius: StructureBuilder.dims!.h3IconSize / 2,
+                    ),
                   ),
                 ),
-              ),
-
-              Expanded(
-                flex: 5,
-                child: EsTitle(AppLocalizations.of(context)!.lormmid,
-                  overFlowTag: true,
-                  maxLine: 1,),
-              ),
-            ],
-          ),
-          EsOrdinaryText(AppLocalizations.of(context)!.lorm,
-            align: TextAlign.justify,
+                Expanded(
+                  flex: 5,
+                  child: EsTitle(
+                    AppLocalizations.of(context)!.lormmid,
+                    overFlowTag: true,
+                    maxLine: 1,
+                  ),
+                ),
+              ],
+            ),
+            EsOrdinaryText(
+              AppLocalizations.of(context)!.lorm,
+              align: TextAlign.justify,
+            ),
+          ],
         ),
-
-        ],
-      ),
-    );
-  });
-  List<BoxDecoration> _decorationList=List.generate(4, (index) {
-    if(index==1){return BoxDecoration(color: StructureBuilder.styles!.tritiaryColor);}
-    else {
+      );
+    });
+    List<BoxDecoration> _decorationList = List.generate(4, (index) {
+      if (index == 1) {
+        return BoxDecoration(color: StructureBuilder.styles!.tritiaryColor);
+      } else {
         return BoxDecoration(color: StructureBuilder.styles!.secondaryColor);
       }
     });
@@ -98,8 +100,9 @@ class _PanelGroupListSampleState extends State<PanelGroupListSample> {
           widget: Container(
               height: _height,
               alignment: Alignment.topCenter,
-              child: EsGroupList(widgetList: _widgetList,)
-          ),
+              child: EsGroupList(
+                widgetList: _widgetList,
+              )),
           title: AppLocalizations.of(context)!.grouplistwithsimplecontent,
           information:
               "it is a group list with simple content located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
@@ -110,9 +113,8 @@ class _PanelGroupListSampleState extends State<PanelGroupListSample> {
               alignment: Alignment.topCenter,
               child: EsGroupList(
                 widgetList: _widgetList,
-              divider: Container(),
-              )
-          ),
+                divider: Container(),
+              )),
           title: AppLocalizations.of(context)!.grouplistwithoutdivider,
           information:
               "it is a group list without divider located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
@@ -124,77 +126,76 @@ class _PanelGroupListSampleState extends State<PanelGroupListSample> {
           widget: Container(
               height: _height,
               alignment: Alignment.topCenter,
-
               child: EsGroupList(
                 decoration: BoxDecoration(
-                    border: Border.all(color: StructureBuilder.styles!.primaryColor,),
-                borderRadius: BorderRadius.all(Radius.circular(StructureBuilder.dims!.h0BorderRadius))
-                ),
-                widgetList: _widgetList,)
-          ),
+                    border: Border.all(
+                      color: StructureBuilder.styles!.primaryColor,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(
+                        StructureBuilder.dims!.h0BorderRadius))),
+                widgetList: _widgetList,
+              )),
           title: AppLocalizations.of(context)!.grouplistwithborder,
           information:
-          "it is a group list with simple content located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
+              "it is a group list with simple content located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
               """EsGroupList(widgetList: _widgetList,)"""),
       ContainerItems(
           widget: Container(
               height: _height,
               alignment: Alignment.topCenter,
               child: EsGroupList(
-
                 widgetList: _complexWidgetList,
-              itemPadding:EdgeInsets.all(StructureBuilder.dims!.h0Padding),
-              )
-          ),
+                itemPadding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+              )),
           title: AppLocalizations.of(context)!.grouplistwithcomplexcontent,
           information:
               "it is a group list with complex content located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
               """ EsGroupList(widgetList: _complexWidgetList,)"""),
       ContainerItems(
           widget: Container(
-              height: _height,
-              alignment: Alignment.topCenter,
-              child: EsGroupList(
-                widgetList: _widgetList2,
+            height: _height,
+            alignment: Alignment.topCenter,
+            child: EsGroupList(
+              widgetList: _widgetList2,
               decorationList: _decorationList,
-              ),
-
+            ),
           ),
           title: AppLocalizations.of(context)!.grouplistwithdesireditemscolor,
           information:
-          "it is a group list with desired items color located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
+              "it is a group list with desired items color located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
               """EsGroupList(widgetList: _widgetList,)"""),
     ];
 
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
+    return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.grouplisttitle,
-              ),
-              BootstrapContainer(
-
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding,),
-
-
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child: Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.grouplisttitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: StructureBuilder.dims!.h0Padding,
+                    ),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }
 
   Widget boxShow(Widget widget) {
     return BootstrapCol(
-
         sizes: 'col-sm-12 col-ml-6 col-lg-4 col-xl-4', child: widget);
   }
 

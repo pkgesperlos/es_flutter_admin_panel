@@ -1,4 +1,5 @@
 
+import 'package:es_flutter_component/components/es_button/es_button.dart';
 import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_chechbox_group.dart';
 import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_checkbox_form.dart';
 import 'package:es_flutter_component/components/es_form/es_drop_down/es_drop_down.dart';
@@ -9,7 +10,7 @@ import 'package:es_flutter_component/components/es_form/es_text_field/es_text_fi
 import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/es_button/es_button.dart';
+
 import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/es_text/es_title.dart';
@@ -29,12 +30,13 @@ class PanelPrimaryFormSample extends StatefulWidget {
 
 
 class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
-  bool _value1 = false;
 
-  String _value3 = "";
+  bool _value1 = false;
+  List<String> _value=List.generate(10, (index) => "");
   TextEditingController _controller = TextEditingController();
   List<TextEditingController> _controllerList =
   List.generate(9, (index) => TextEditingController());
+
   @override
   void initState() {
     // TODO: implement initState
@@ -48,7 +50,9 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
 
   @override
   Widget build(BuildContext context) {
+
     double _height = 650;
+
     List list = [
       ContainerItems(
           widget: Container(
@@ -119,7 +123,13 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
           ),
           title: AppLocalizations.of(context)!.overview,
           information:"It is an overview of forms in this panel by flutter code  "
-              "the components are located in: \n es_flutter_component>lib/es_form \n  ."),
+              "the components are located in: \n es_flutter_component>lib/es_form \n"
+              " \n   where \n"
+              """  bool _value1 = false;
+  List<String> _value=List.generate(10, (index) => "");
+  TextEditingController _controller = TextEditingController();
+  List<TextEditingController> _controllerList =
+  List.generate(9, (index) => TextEditingController());"""),
       ContainerItems(
           widget: Container(
             height: _height*0.8,
@@ -318,7 +328,14 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                 ),
                 EsButton(text: "Register")
               ],
-            ),"""),
+            ),"""
+                  " \n   where \n"
+                  """  bool _value1 = false;
+  List<String> _value=List.generate(10, (index) => "");
+  TextEditingController _controller = TextEditingController();
+  List<TextEditingController> _controllerList =
+  List.generate(9, (index) => TextEditingController());"""
+      ),
       ContainerItems(
           widget: Container(
             height: _height,
@@ -370,10 +387,10 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                           {"title": "item2", "_id": "2"},
                           {"title": "item3", "_id": "3"},
                         ],
-                        value: _value3,
+                        value: _value[0],
                         onChanged: (value) {
                           setState(() {
-                            _value3 = value;
+                            _value[0] = value;
                           });
                         },
                       ),
@@ -584,7 +601,12 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                   ],
                 ),
               ],
-            ),"""),
+            ),"""  " \n   where \n"
+              """  bool _value1 = false;
+  List<String> _value=List.generate(10, (index) => "");
+  TextEditingController _controller = TextEditingController();
+  List<TextEditingController> _controllerList =
+  List.generate(9, (index) => TextEditingController());"""),
       ContainerItems(
           widget: Container(
             height: _height,
@@ -637,7 +659,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
           ),
           title: AppLocalizations.of(context)!.textfieldindifferentwidthandheight,
           information:
-              "they are text fields in different widths and heights located in: \n es_flutter_component>lib/es_form/es_text_field/es_text_field.dart \n and is used as: \n "
+              "these are text fields in different widths and heights located in: \n es_flutter_component>lib/es_form/es_text_field/es_text_field.dart \n and is used as: \n "
               """ EsTextField(
                   hint: AppLocalizations.of(context)!.textFieldHint,
                   label: AppLocalizations.of(context)!.textFieldHint,
@@ -660,14 +682,14 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                       {"title": "item2", "_id": "2"},
                       {"title": "item3", "_id": "3"},
                     ],
-                    value: _value3,
+                    value: _value[1],
                     buttonPadding: EdgeInsets.symmetric(
                       vertical: StructureBuilder.dims!.h2Padding,
                       horizontal: StructureBuilder.dims!.h1Padding,
                     ),
                     onChanged: (value) {
                       setState(() {
-                        _value3 = value;
+                        _value[1] = value;
                       });
                     },
                   ),
@@ -680,10 +702,10 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                       {"title": "item2", "_id": "2"},
                       {"title": "item3", "_id": "3"},
                     ],
-                    value: _value3,
+                    value: _value[2],
                     onChanged: (value) {
                       setState(() {
-                        _value3 = value;
+                        _value[2] = value;
                       });
                     },
                   ),
@@ -696,14 +718,14 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                       {"title": "item2", "_id": "2"},
                       {"title": "item3", "_id": "3"},
                     ],
-                    value: _value3,
+                    value: _value[3],
                     buttonPadding: EdgeInsets.symmetric(
                       vertical: StructureBuilder.dims!.h1Padding * 1.5,
                       horizontal: StructureBuilder.dims!.h1Padding,
                     ),
                     onChanged: (value) {
                       setState(() {
-                        _value3 = value;
+                        _value[3] = value;
                       });
                     },
                   ),
@@ -716,14 +738,14 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                       {"title": "item2", "_id": "2"},
                       {"title": "item3", "_id": "3"},
                     ],
-                    value: _value3,
+                    value: _value[4],
                     buttonPadding: EdgeInsets.symmetric(
                       vertical: StructureBuilder.dims!.h1Padding,
                       horizontal: StructureBuilder.dims!.h0Padding * 2,
                     ),
                     onChanged: (value) {
                       setState(() {
-                        _value3 = value;
+                        _value[4] = value;
                       });
                     },
                   ),
@@ -736,14 +758,14 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                       {"title": "item2", "_id": "2"},
                       {"title": "item3", "_id": "3"},
                     ],
-                    value: _value3,
+                    value: _value[5],
                     buttonPadding: EdgeInsets.symmetric(
                       vertical: StructureBuilder.dims!.h1Padding,
                       horizontal: StructureBuilder.dims!.h0Padding * 3,
                     ),
                     onChanged: (value) {
                       setState(() {
-                        _value3 = value;
+                        _value[5] = value;
                       });
                     },
                   ),
@@ -753,7 +775,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
           ),
           title: AppLocalizations.of(context)!.dropdownbuttonsindifferentwidthandheight,
           information:
-              "they are Drop down buttons  in different widths and heights located in: \n es_flutter_component>lib/es_form/es_drop_down/es_drop_down.dart \n and is used as: \n "
+              "these are Drop down buttons  in different widths and heights located in: \n es_flutter_component>lib/es_form/es_drop_down/es_drop_down.dart \n and is used as: \n "
               """   IntrinsicWidth(
                   child: EsDropDown(
                   initialTitle: AppLocalizations.of(context)!.select,
@@ -773,8 +795,9 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                       });
                     },
                   ),
-                ),"""),
-
+                ),"""  " \n   where \n"
+                  """  
+  List<String> _value=List.generate(10, (index) => "");"""),
       ContainerItems(
           widget: Container(
             height: _height/2,
@@ -826,9 +849,9 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
               ],
             ),
           ),
-          title: AppLocalizations.of(context)!.onlyreadablefield,
+          title: AppLocalizations.of(context)!.readonlyfield,
           information:
-          "It is only readable field located in: \n es_flutter_component>lib/es_form/es_text_field/es_text_field.dart \n and is used as: \n "
+          "It is read only field located in: \n es_flutter_component>lib/es_form/es_text_field/es_text_field.dart \n and is used as: \n "
               """Wrap(
               spacing: StructureBuilder.dims!.h0Padding,
               runSpacing: StructureBuilder.dims!.h0Padding,
@@ -885,52 +908,28 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
               "It is a text field located in: \n es_flutter_component>lib/es_form/es_slider/es_slider.dart \n and is used as: \n "
               """EsSlider()"""),
 
-///////////////////////////////////////////////////////////
-
-
-
-      // ContainerItems(widget:EsRatingBar(), title:AppLocalizations.of(context)!.starRateBar,
-      //     information:"It is a rating bar located in: \n es_flutter_component/lib/components/es_form>es_rating_bar.dart \n and is used as: \n "
-      //         """EsRatingBar()"""
-      // ),
-
-
-      // ContainerItems(
-      //     widget:Center(
-      //         child:Container()
-      //       //     EsFilePicker(
-      //       //   openText: AppLocalizations.of(context)!.openText,
-      //       //   pickText: AppLocalizations.of(context)!.pickText,
-      //       //   clearText: AppLocalizations.of(context)!.clearText,
-      //       // )
-      //     ),
-      //     title:AppLocalizations.of(context)!.filePicker,
-      //     information:"It is file picker located in: \n es_flutter_component/lib/components/es_form>es_file picker.dart \n and is used as: \n "
-      //         """EsFilePicker(
-      //       openText: AppLocalizations.of(context)!.openText,
-      //       pickText: AppLocalizations.of(context)!.pickText,
-      //       clearText: AppLocalizations.of(context)!.clearText,
-      //     )"""
-      // ),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.primaryformtitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.primaryformtitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

@@ -98,7 +98,16 @@ class _PanelLightBoxSampleState extends State<PanelLightBoxSample> {
                               dismissible: false));
                     },
                   );
-                }),"""),
+                }),"""
+              "\n   where \n"
+          """
+            final List<String> images = [
+    "assets/images/img1.jpg",
+    "assets/images/img2.jpg",
+    "assets/images/img3.jpg",
+  ];
+          """
+      ),
       ContainerItems(
           widget: Container(
             child: GestureDetector(
@@ -124,7 +133,7 @@ class _PanelLightBoxSampleState extends State<PanelLightBoxSample> {
               },
             ),
           ),
-          title: AppLocalizations.of(context)!.uniquelightboxshowingimage,
+          title: AppLocalizations.of(context)!.singlelightboxshowingimage,
           information:
           "It is a unique light box showing image located in: \n es_flutter_component/lib/components/es_image/es_light_box/src/lightbox_group.dart \n and is used as: \n "
               """GestureDetector(
@@ -153,22 +162,25 @@ class _PanelLightBoxSampleState extends State<PanelLightBoxSample> {
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.lightboxtitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body:SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.lightboxtitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

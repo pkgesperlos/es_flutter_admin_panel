@@ -50,7 +50,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.defaultbutton,
           information:
-              "They are default buttons located in: \n es_flutter_component/lib/components/es_button/es_button.dart' \n and is used as: \n "
+              "these are default buttons located in: \n es_flutter_component/lib/components/es_button/es_button.dart' \n and is used as: \n "
               """EsButton(
                   text:AppLocalizations.of(context)!.error,
                   fillColor: StructureBuilder.styles!.buttonColor().danger),"""),
@@ -129,7 +129,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.borderedbutton,
           information:
-              "They are bordered buttons located in: \n es_flutter_component/lib/components/es_button/es_button.dart' \n and is used as: \n "
+              "these are bordered buttons located in: \n es_flutter_component/lib/components/es_button/es_button.dart' \n and is used as: \n "
               """EsButton(
                 text: AppLocalizations.of(context)!.success,
                 fillColor: StructureBuilder.styles!.successColor().successLight,
@@ -220,7 +220,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.iconbutton,
           information:
-              "They are icon buttons located in: \n es_flutter_component/lib/components/es_button/es_icon_button.dart' \n and is used as: \n "
+              "these are icon buttons located in: \n es_flutter_component/lib/components/es_button/es_icon_button.dart' \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
                   "packages/es_flutter_component/assets/svgs/danger.svg",
@@ -379,7 +379,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.icontextbutton,
           information:
-              "They are icon text buttons located in: \n es_flutter_component/lib/components/es_button/es_button.dart' \n and is used as: \n "
+              "these are icon text buttons located in: \n es_flutter_component/lib/components/es_button/es_button.dart' \n and is used as: \n "
               """EsButton(
                 text: AppLocalizations.of(context)!.success,
                 icon: EsSvgIcon(
@@ -448,7 +448,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.disabledbutton,
           information:
-              "They are disabled buttons located in: \n es_flutter_component/lib/components/es_button' \n and is used as: \n "
+              "these are disabled buttons located in: \n es_flutter_component/lib/components/es_button' \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
                   "packages/es_flutter_component/assets/svgs/Megaphone.svg",
@@ -604,7 +604,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.socialnetworkbutton,
           information:
-              "They are  social network buttons located in: \n es_flutter_component/lib/components/es_button/es_icon_button.dart' \n and is used as: \n "
+              "these are  social network buttons located in: \n es_flutter_component/lib/components/es_button/es_icon_button.dart' \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
                   "packages/es_flutter_component/assets/svgs/InstagramLogo.svg",
@@ -673,7 +673,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.roundbutton,
           information:
-              "They are round buttons located in: \n es_flutter_component/lib/components/es_button' \n and is used as: \n "
+              "these are round buttons located in: \n es_flutter_component/lib/components/es_button' \n and is used as: \n "
               """EsButton(
                   text: AppLocalizations.of(context)!.information,
                   borderRadiusSize: StructureBuilder.dims!.h0IconSize,
@@ -909,7 +909,7 @@ class PanelButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.buttonsindifferntsize,
           information:
-              "They are buttons in different sizes button located in: \n es_flutter_component/lib/components/es_button' \n and is used as: \n "
+              "these are buttons in different sizes button located in: \n es_flutter_component/lib/components/es_button' \n and is used as: \n "
               """EsButton(
                       text: "information",
                       size: StructureBuilder.dims!.h0Padding,
@@ -943,33 +943,36 @@ class PanelButtonSample extends StatelessWidget {
               )),
           title: AppLocalizations.of(context)!.blocbutton,
           information:
-              "They are bloc buttons located in: \n es_flutter_component/lib/components/es_button' \n and is used as: \n "
+              "these are bloc buttons located in: \n es_flutter_component/lib/components/es_button' \n and is used as: \n "
               """ EsBlockButton(
                 text: AppLocalizations.of(context)!.blocbutton,
               )"""),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.buttontitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index)
-                  {
-                    if (index == list.length - 1) {
-                      return boxShow2(list[index]);
-                    }
-                    return boxShow(list[index]);}))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.buttontitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index)
+                    {
+                      if (index == list.length - 1) {
+                        return boxShow2(list[index]);
+                      }
+                      return boxShow(list[index]);}))
+              ],
+            ),
           ),
         ));
   }

@@ -27,10 +27,10 @@ class PanelCustomFormSample extends StatefulWidget {
   State<PanelCustomFormSample> createState() => _PanelCustomFormSampleState();
 }
 
-bool _value1 = true;
-bool isChecked = true;
+
 
 class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
+  List<bool> _value=List.generate(20, (index) => true);
   @override
   void initState() {
     // TODO: implement initState
@@ -50,6 +50,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
           widget: Container(
               height: _height,
               child: Wrap(
+                direction: Axis.vertical,
                 spacing: StructureBuilder.dims!.h0Padding * 2,
                 runSpacing: StructureBuilder.dims!.h0Padding,
                 children: [
@@ -63,10 +64,10 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                           checkColor:
                               StructureBuilder.styles!.primaryLightColor,
                           // The color to use for the check icon when this checkbox is checked.
-                          value: isChecked,
+                          value: _value[0],
                           onChanged: (value) {
                             setState(() {
-                              isChecked = value!;
+                              _value[0] = value!;
                             });
                           }),
                       EsOrdinaryText(
@@ -86,10 +87,10 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                           checkColor:
                               StructureBuilder.styles!.primaryLightColor,
                           // The color to use for the check icon when this checkbox is checked.
-                          value: isChecked,
+                          value:  _value[1],
                           onChanged: (value) {
                             setState(() {
-                              isChecked = value!;
+                              _value[1] = value!;
                             });
                           }),
                       EsOrdinaryText(
@@ -110,10 +111,10 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                           checkColor:
                               StructureBuilder.styles!.primaryLightColor,
                           // The color to use for the check icon when this checkbox is checked.
-                          value: isChecked,
+                          value:  _value[2],
                           onChanged: (value) {
                             setState(() {
-                              isChecked = value!;
+                              _value[2] = value!;
                             });
                           }),
                       EsOrdinaryText(
@@ -135,10 +136,10 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                           checkColor:
                               StructureBuilder.styles!.primaryLightColor,
                           // The color to use for the check icon when this checkbox is checked.
-                          value: isChecked,
+                          value:  _value[3],
                           onChanged: (value) {
                             setState(() {
-                              isChecked = value!;
+                              _value[3] = value!;
                             });
                           }),
                       EsOrdinaryText(
@@ -160,10 +161,10 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                           checkColor:
                               StructureBuilder.styles!.primaryLightColor,
                           // The color to use for the check icon when this checkbox is checked.
-                          value: isChecked,
+                          value:  _value[4],
                           onChanged: (value) {
                             setState(() {
-                              isChecked = value!;
+                              _value[4] = value!;
                             });
                           }),
                       EsOrdinaryText(
@@ -185,10 +186,10 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                           checkColor:
                               StructureBuilder.styles!.primaryLightColor,
                           // The color to use for the check icon when this checkbox is checked.
-                          value: isChecked,
+                          value:  _value[5],
                           onChanged: (value) {
                             setState(() {
-                              isChecked = value!;
+                              _value[5] = value!;
                             });
                           }),
                       EsOrdinaryText(
@@ -202,7 +203,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
               )),
           title: AppLocalizations.of(context)!.checkbox,
           information:
-              "They are Checkbox in custom colors  and are used as: \n "
+              "these are Checkbox in custom colors  and are used as: \n "
               """Checkbox(
                           activeColor: StructureBuilder.styles!.primaryColor,
                           //The color to use when this checkbox is checked.
@@ -218,6 +219,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
           widget: Container(
               height: _height,
               child: Wrap(
+                direction: Axis.vertical,
                 spacing: StructureBuilder.dims!.h0Padding,
                 runSpacing: StructureBuilder.dims!.h0Padding,
                 children: [
@@ -327,7 +329,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
               )),
           title: AppLocalizations.of(context)!.sliderinput,
           information:
-              "They are slider inputs in custom colors located in: \n es_flutter_component>lib/es_form/es_slider/es_slider.dart \n and is used as: \n "
+              "these are slider inputs in custom colors located in: \n es_flutter_component>lib/es_form/es_slider/es_slider.dart \n and is used as: \n "
               """EsSlider(
                 activeColor:
                     StructureBuilder.styles!.dangerColor().dangerRegular,
@@ -351,10 +353,10 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                           activeColor: StructureBuilder.styles!.primaryColor,
                           onChanged: (bool value) {
                             setState(() {
-                              _value1 = value;
+                              _value[6] = value;
                             });
                           },
-                          value: _value1,
+                          value:  _value[6],
                         ),
                       ),
                       EsOrdinaryText(
@@ -374,10 +376,10 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                           activeColor: StructureBuilder.styles!.secondaryColor,
                           onChanged: (bool value) {
                             setState(() {
-                              _value1 = value;
+                              _value[7] = value;
                             });
                           },
-                          value: _value1,
+                          value:  _value[7],
                         ),
                       ),
                       EsOrdinaryText(
@@ -399,10 +401,10 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                               .dangerRegular,
                           onChanged: (bool value) {
                             setState(() {
-                              _value1 = value;
+                              _value[8] = value;
                             });
                           },
-                          value: _value1,
+                          value:  _value[8],
                         ),
                       ),
                       EsOrdinaryText(
@@ -424,10 +426,10 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                               .warningRegular,
                           onChanged: (bool value) {
                             setState(() {
-                              _value1 = value;
+                              _value[9] = value;
                             });
                           },
-                          value: _value1,
+                          value:  _value[9],
                         ),
                       ),
                       EsOrdinaryText(
@@ -449,10 +451,10 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                               .informationRegular,
                           onChanged: (bool value) {
                             setState(() {
-                              _value1 = value;
+                              _value[10] = value;
                             });
                           },
-                          value: _value1,
+                          value:  _value[10],
                         ),
                       ),
                       EsOrdinaryText(
@@ -474,10 +476,10 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                               .successRegular,
                           onChanged: (bool value) {
                             setState(() {
-                              _value1 = value;
+                              _value[11] = value;
                             });
                           },
-                          value: _value1,
+                          value:  _value[11],
                         ),
                       ),
                       EsOrdinaryText(
@@ -491,7 +493,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
               )),
           title: AppLocalizations.of(context)!.switchbutton,
           information:
-              "They are Switch inputs in custom colors  and are used as: \n "
+              "these are Switch inputs in custom colors  and are used as: \n "
               """  Transform.scale(
                         scale: 0.7,
                         child: CupertinoSwitch(
@@ -537,10 +539,10 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                   children: [
                     EsCustomCheckBox(
                         disabled: true,
-                        value: isChecked,
+                        value:  _value[12],
                         onChanged: (value) {
                           setState(() {
-                            isChecked = value;
+                            _value[12] = value;
                           });
                         }),
                     EsOrdinaryText(
@@ -563,7 +565,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                     RadioListTile(
                       activeColor: StructureBuilder.styles!.secondaryColor,
                       tileColor: StructureBuilder.styles!.secondaryColor,
-                      value: isChecked,
+                      value:  _value[0],
                       onChanged: (value) {
                         null;
                       },
@@ -597,7 +599,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                         onChanged: (bool value) {
                           null;
                         },
-                        value: _value1,
+                        value:  _value[0],
                       ),
                     ),
                     EsOrdinaryText(
@@ -616,27 +618,30 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
             ),
           ),
           title: "disabled items",
-          information: "They are disabled items in this panel by flutter code.  "
+          information: "these are disabled items in this panel by flutter code.  "
               "Some of the components are located in: \n es_flutter_component>lib/es_form \n  ."),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.customformtitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.customformtitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

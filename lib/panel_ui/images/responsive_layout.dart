@@ -35,6 +35,7 @@ class ResponsiveLayot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
+
         builder: (BuildContext context, BoxConstraints constraints) {
           if(constraints.maxWidth < tinyLimit||constraints.maxHeight<tinyHightLimit){
             return tiny;

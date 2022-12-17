@@ -90,7 +90,29 @@ class _PanelTabBarNavigationSampleState
               """EsTopTabBarNavigation(
                   pageWidgets:_pageList,
                   tabWidgets: _tabList
-                )"""),
+                ),
+             \n   where \n
+    int num=3;
+    List<Widget> _tabList=List.generate(num, (index) => EsTitle("Tab\${index+1}",
+      color: StructureBuilder.styles!.primaryColor,
+    ));
+    List<Widget> _pageList=List.generate(num, (index) => Container(
+      height: double.infinity,
+      color: StructureBuilder.styles!.primaryLightColor,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+          color: StructureBuilder.styles!.primaryColor,
+            size: StructureBuilder.dims!.h2IconSize,
+          ),
+          EsTitle("Page\${index+1}",
+            color: StructureBuilder.styles!.primaryColor,
+          ),
+        ],
+      ),
+    ));
+                """),
       ContainerItems(
           widget: Center(
             child: SizedBox(
@@ -126,7 +148,29 @@ class _PanelTabBarNavigationSampleState
                     color: StructureBuilder.styles!.primaryColor,
                     borderRadius: BorderRadius.all(Radius.circular(StructureBuilder.dims!.h1BorderRadius))
                   ),
-                )"""),
+                )
+                    \n   where \n
+    int num=3;
+    List<Widget> _tabList=List.generate(num, (index) => EsTitle("Tab\${index+1}",
+      color: StructureBuilder.styles!.primaryColor,
+    ));
+    List<Widget> _pageList=List.generate(num, (index) => Container(
+      height: double.infinity,
+      color: StructureBuilder.styles!.primaryLightColor,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+          color: StructureBuilder.styles!.primaryColor,
+            size: StructureBuilder.dims!.h2IconSize,
+          ),
+          EsTitle("Page\${index+1}",
+            color: StructureBuilder.styles!.primaryColor,
+          ),
+        ],
+      ),
+    ));
+               """),
       ContainerItems(
           widget: Center(
             child: SizedBox(
@@ -154,7 +198,40 @@ class _PanelTabBarNavigationSampleState
                     color: StructureBuilder.styles!.primaryColor,
                     borderRadius: BorderRadius.all(Radius.circular(StructureBuilder.dims!.h1BorderRadius))
                   ),
-                )"""),
+                ),
+                   \n   where \n
+                   List<Widget> _complexTabList=List.generate(num, (index) {
+      if(index==1){
+        return EsLabel(
+          isUnique: false,
+          widget: EsOrdinaryText(
+            AppLocalizations.of(context)!.text,
+          ),
+        );
+      }else
+      return EsContentLabel(
+        isUnique: true,
+        size: StructureBuilder.dims!.h3IconSize,
+        text: "error",
+      );
+    }
+    );
+              List<Widget> _pageList=List.generate(num, (index) => Container(
+      height: double.infinity,
+      color: StructureBuilder.styles!.primaryLightColor,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+          color: StructureBuilder.styles!.primaryColor,
+            size: StructureBuilder.dims!.h2IconSize,
+          ),
+          EsTitle("Page\${index+1}",
+            color: StructureBuilder.styles!.primaryColor,
+          ),
+        ],
+      ),
+    ));   """),
       ContainerItems(
           widget: Center(
             child: SizedBox(
@@ -217,23 +294,26 @@ class _PanelTabBarNavigationSampleState
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.tabbartitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: StructureBuilder.dims!.h0Padding,
-                  ),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.tabbartitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: StructureBuilder.dims!.h0Padding,
+                    ),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

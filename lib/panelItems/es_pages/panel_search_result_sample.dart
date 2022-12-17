@@ -108,7 +108,7 @@ class _PanelSearchResultSampleState extends State<PanelSearchResultSample> {
             ),
           ),
           title: AppLocalizations.of(context)!.searchresult,
-          information: "They are search results "
+          information: "these are search results "
               "and located in:"
               " \n es_flutter_component/lib/components/es-search_result/es_search_result.dart "
               "\n and is used as: \n "

@@ -2,13 +2,15 @@ import 'package:carousel_slider/carousel_slider.dart';
 
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
+
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:intl/intl.dart' as intl;
+
+import 'package:es_flutter_component/components/es_slider/es_slider_with_icon.dart';
+import 'package:es_flutter_component/components/es_slider/es_slider_with_icon_indicator.dart';
+import 'package:es_flutter_component/components/es_slider/es_slider_with_indicator.dart';
 
 //carouselSlider and  packages are used
 class PanelSliderSample extends StatefulWidget {
@@ -19,9 +21,11 @@ class PanelSliderSample extends StatefulWidget {
 }
 
 class _PanelSliderSampleState extends State<PanelSliderSample> {
-  CarouselController carouselController = CarouselController();
+  CarouselController carouselController1 = CarouselController();
   CarouselController carouselController2 = CarouselController();
-  int _current = 0;
+  CarouselController carouselController3 = CarouselController();
+  CarouselController carouselController4 = CarouselController();
+  CarouselController carouselController5 = CarouselController();
 
   Widget titleBox(int index) {
     return Container(
@@ -39,13 +43,6 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
 
   @override
   Widget build(BuildContext context) {
-    bool isDirectionRTL(BuildContext context) {
-      return intl.Bidi.isRtlLanguage(
-          Localizations.localeOf(context).languageCode);
-    }
-
-    bool _rtl = isDirectionRTL(context);
-
     List<Widget> widgetList = List.generate(
       3,
       (index) => titleBox(index),
@@ -56,7 +53,7 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
             height: 250,
             child: Center(
               child: CarouselSlider(
-                carouselController: carouselController,
+                carouselController: carouselController1,
                 items: widgetList,
                 options: CarouselOptions(
                     viewportFraction: 0.8,
@@ -83,13 +80,33 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
                   disableCenter: true,
                   // aspectRatio: 0.1,
                   enlargeCenterPage: true),
-            ),"""),
+            ),
+          \n   where \n
+   CarouselController carouselController1 = CarouselController();       
+    Widget titleBox(int index) {
+    return Container(
+      clipBehavior: Clip.antiAlias,
+      decoration: BoxDecoration(
+          color: StructureBuilder.styles!.primaryColor,
+          borderRadius: BorderRadius.all(
+              Radius.circular(StructureBuilder.dims!.h0BorderRadius))),
+      child: Image.asset(
+        "assets/images/img\$\{index \+ 1\}.jpg",
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+       List<Widget> widgetList = List.generate(
+      3,
+      (index) => titleBox(index),
+    );   
+            """),
       ContainerItems(
           widget: Container(
             height: 250,
             child: Center(
               child: CarouselSlider(
-                carouselController: carouselController,
+                carouselController: carouselController2,
                 items: widgetList,
                 options: CarouselOptions(
                     viewportFraction: 0.8,
@@ -119,394 +136,144 @@ class _PanelSliderSampleState extends State<PanelSliderSample> {
                   autoPlayAnimationDuration: Duration(milliseconds: 100),
                   // aspectRatio: 0.1,
                   enlargeCenterPage: true),
-            ),"""),
+            ),
+               \n   where \n
+    CarouselController carouselController2 = CarouselController();            
+    Widget titleBox(int index) {
+    return Container(
+      clipBehavior: Clip.antiAlias,
+      decoration: BoxDecoration(
+          color: StructureBuilder.styles!.primaryColor,
+          borderRadius: BorderRadius.all(
+              Radius.circular(StructureBuilder.dims!.h0BorderRadius))),
+      child: Image.asset(
+        "assets/images/img\$\{index \+ 1\}.jpg",
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+       List<Widget> widgetList = List.generate(
+      3,
+      (index) => titleBox(index),
+    );   
+            """),
       ContainerItems(
           widget: Container(
-            height: 250,
-            child: Stack(
-              children: [
-                Center(
-                  child: CarouselSlider(
-                    carouselController: carouselController,
-                    items: widgetList,
-                    options: CarouselOptions(
-                        viewportFraction: 0.8,
-                        // height: 270,
-                        initialPage: 2,
-                        disableCenter: true,
-                        autoPlay: true,
-                        autoPlayAnimationDuration: Duration(milliseconds: 100),
-                        // aspectRatio: 0.1,
-                        enlargeCenterPage: true,
-                        onPageChanged: (index, reason) {
-                          setState(() {
-                            _current = index;
-                          });
-                        }),
-                  ),
-                ),
-                EsVSpacer(),
-                Align(
-                  alignment: Alignment(0, 0.8),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: widgetList.asMap().entries.map((entry) {
-                      return GestureDetector(
-                        onTap: () =>
-                            carouselController.animateToPage(entry.key),
-                        child: Container(
-                            width: StructureBuilder.dims!.h1Padding,
-                            height: StructureBuilder.dims!.h1Padding,
-                            margin: EdgeInsets.symmetric(
-                                horizontal: StructureBuilder.dims!.h3Padding),
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: _current == entry.key
-                                    ? StructureBuilder.styles!.tritiaryColor
-                                    : StructureBuilder
-                                        .styles!.primaryLightColor)),
-                      );
-                    }).toList(),
-                  ),
-                )
-              ],
-            ),
-          ),
+              height: 250,
+              child: EsSliderWithIndicator(
+                controller: carouselController3,
+                items: widgetList,
+              )),
           title: AppLocalizations.of(context)!.carouselsliderwithindicator,
           information:
               "It is a carousel slider with indicator that the package should be added in pubspec.yaml 's dependencies \n and is used as: \n "
-              """Stack(
-              children: [
-                CarouselSlider(
-                  carouselController: carouselController,
-                  items: widgetList,
-
-                  options: CarouselOptions(
-                      viewportFraction: 0.5,
-                      // height: 270,
-                      initialPage: 2,
-                      disableCenter: true,
-                      autoPlay: true,
-                      autoPlayAnimationDuration: Duration(milliseconds: 100),
-                      // aspectRatio: 0.1,
-                      enlargeCenterPage: true,
-                      onPageChanged: (index, reason) {
-                        setState(() {
-                          _current = index;
-                        });
-                      }
-                  ),
-                ),
-                EsVSpacer(),
-            Align(
-              alignment: Alignment(0,0.8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: widgetList.asMap().entries.map((entry) {
-                  return GestureDetector(
-                    onTap: () => carouselController.animateToPage(entry.key),
-                    child: Container(
-                      width: StructureBuilder.dims!.h1Padding,
-                      height:StructureBuilder.dims!.h1Padding,
-                      margin: EdgeInsets.symmetric(
-                          horizontal: StructureBuilder.dims!.h3Padding
-                      ),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color:_current == entry.key
-                              ? StructureBuilder.styles!.tritiaryColor
-                              : StructureBuilder.styles!.primaryLightColor)
-                    ),
-                  );
-                }).toList(),
-              ),
-            )
-              ],
-            ),"""),
+              """EsSliderWithIndicator(
+              controller: carouselController,
+              items: widgetList,)
+             \n   where \n
+    CarouselController carouselController3 = CarouselController();            
+    Widget titleBox(int index) {
+    return Container(
+      clipBehavior: Clip.antiAlias,
+      decoration: BoxDecoration(
+          color: StructureBuilder.styles!.primaryColor,
+          borderRadius: BorderRadius.all(
+              Radius.circular(StructureBuilder.dims!.h0BorderRadius))),
+      child: Image.asset(
+        "assets/images/img\$\{index \+ 1\}.jpg",
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+       List<Widget> widgetList = List.generate(
+      3,
+      (index) => titleBox(index),
+    );   
+         """),
       ContainerItems(
           widget: Container(
-            height: 250,
-            child: Stack(
-              children: [
-                Center(
-                  child: CarouselSlider(
-                    carouselController: carouselController2,
-                    items: widgetList,
-                    options: CarouselOptions(
-                        viewportFraction: 0.8,
-                        // height: 270,
-                        initialPage: 2,
-                        disableCenter: true,
-                        autoPlay: true,
-                        autoPlayAnimationDuration: Duration(milliseconds: 100),
-                        // aspectRatio: 0.1,
-                        enlargeCenterPage: true),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment(0, 0.5),
-                  child: Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        InkWell(
-                          child: EsSvgIcon(
-                            _rtl
-                                ? "packages/es_flutter_component/assets/svgs/CaretRight.svg"
-                                : "packages/es_flutter_component/assets/svgs/CaretLeft.svg",
-                            color: StructureBuilder.styles!.primaryLightColor,
-                            size: StructureBuilder.dims!.h0Padding * 2,
-                          ),
-                          onTap: () {
-                            carouselController2.previousPage();
-                          },
-                        ),
-                        InkWell(
-                          child: EsSvgIcon(
-                            _rtl
-                                ? "packages/es_flutter_component/assets/svgs/CaretLeft.svg"
-                                : "packages/es_flutter_component/assets/svgs/CaretRight.svg",
-                            color: StructureBuilder.styles!.primaryLightColor,
-                            size: StructureBuilder.dims!.h0Padding * 2,
-                          ),
-                          onTap: () {
-                            carouselController2.nextPage();
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
-                )
-              ],
-            ),
-          ),
+              height: 250,
+              child: EsSliderWithIcon(
+                controller: carouselController4,
+                items: widgetList,
+              )),
           title: AppLocalizations.of(context)!.carouselsliderwithicon,
           information:
               "It is a carousel slider with icon that the package should be added in pubspec.yaml 's dependencies \n and is used as: \n "
-              """Stack(
-              children: [
-                CarouselSlider(
-                  carouselController: carouselController,
-                  items: widgetList,
-
-                  options: CarouselOptions(
-                      viewportFraction: 0.8,
-                      // height: 270,
-                      initialPage: 2,
-                      disableCenter: true,
-                      autoPlay: true,
-                      autoPlayAnimationDuration: Duration(milliseconds: 100),
-                      // aspectRatio: 0.1,
-                      enlargeCenterPage: true),
-                ),
-                Align(
-                  alignment: Alignment(0,0.5),
-                  child: Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        InkWell(
-
-                            child: EsSvgIcon(
-                              _rtl?"packages/es_flutter_component/assets/svgs/CaretRight.svg"
-                                :"packages/es_flutter_component/assets/svgs/CaretLeft.svg",
-                            color: StructureBuilder.styles!.primaryLightColor,
-                              size: StructureBuilder.dims!.h0Padding*2,
-                            ),
-                        onTap: (){carouselController.previousPage();},
-                        ),
-                        InkWell(
-
-                          child: EsSvgIcon(_rtl?"packages/es_flutter_component/assets/svgs/CaretLeft.svg"
-                              :"packages/es_flutter_component/assets/svgs/CaretRight.svg",
-                            color: StructureBuilder.styles!.primaryLightColor,
-                            size: StructureBuilder.dims!.h0Padding*2,
-                          ),
-                          onTap: (){carouselController.nextPage();},
-                        ),
-                      ],
-                    ),
-                  ),
-                )
-              ],
-            ),"""),
+              """ EsSliderWithIcon(
+              controller: carouselController,
+              items: widgetList,)
+               \n   where \n
+    CarouselController carouselController4 = CarouselController();            
+    Widget titleBox(int index) {
+    return Container(
+      clipBehavior: Clip.antiAlias,
+      decoration: BoxDecoration(
+          color: StructureBuilder.styles!.primaryColor,
+          borderRadius: BorderRadius.all(
+              Radius.circular(StructureBuilder.dims!.h0BorderRadius))),
+      child: Image.asset(
+        "assets/images/img\$\{index \+ 1\}.jpg",
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+       List<Widget> widgetList = List.generate(
+      3,
+      (index) => titleBox(index),
+    );   
+         """),
       ContainerItems(
           widget: Container(
-            height: 250,
-            child: Stack(
-              children: [
-                Center(
-                  child: CarouselSlider(
-                    carouselController: carouselController,
-                    items: widgetList,
-                    options: CarouselOptions(
-                        viewportFraction: 0.8,
-                        // height: 270,
-                        initialPage: 2,
-                        disableCenter: true,
-                        autoPlay: true,
-                        autoPlayAnimationDuration: Duration(milliseconds: 100),
-                        // aspectRatio: 0.1,
-                        enlargeCenterPage: true),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment(0, 0.8),
-                  child: Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        InkWell(
-                          child: EsSvgIcon(
-                            _rtl
-                                ? "packages/es_flutter_component/assets/svgs/CaretRight.svg"
-                                : "packages/es_flutter_component/assets/svgs/CaretLeft.svg",
-                            color: StructureBuilder.styles!.primaryLightColor,
-                            size: StructureBuilder.dims!.h0Padding,
-                          ),
-                          onTap: () {
-                            carouselController.previousPage();
-                          },
-                        ),
-                        InkWell(
-                          child: EsSvgIcon(
-                            _rtl
-                                ? "packages/es_flutter_component/assets/svgs/CaretLeft.svg"
-                                : "packages/es_flutter_component/assets/svgs/CaretRight.svg",
-                            color: StructureBuilder.styles!.primaryLightColor,
-                            size: StructureBuilder.dims!.h0Padding,
-                          ),
-                          onTap: () {
-                            carouselController.nextPage();
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment(0, 0.8),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: widgetList.asMap().entries.map((entry) {
-                      return GestureDetector(
-                        onTap: () =>
-                            carouselController.animateToPage(entry.key),
-                        child: Container(
-                            width: StructureBuilder.dims!.h1Padding,
-                            height: StructureBuilder.dims!.h1Padding,
-                            margin: EdgeInsets.symmetric(
-                                horizontal: StructureBuilder.dims!.h3Padding),
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: _current == entry.key
-                                    ? StructureBuilder.styles!.tritiaryColor
-                                    : StructureBuilder
-                                        .styles!.primaryLightColor)),
-                      );
-                    }).toList(),
-                  ),
-                )
-              ],
-            ),
-          ),
+              height: 250,
+              child: EsSliderWithIconIndicator(
+                controller: carouselController5,
+                items: widgetList,
+              )),
           title:
               AppLocalizations.of(context)!.carouselsliderwithindicatorandicon,
           information:
               "It is a carousel slider with indicator and icon that the package should be added in pubspec.yaml 's dependencies \n and is used as: \n "
-              """Stack(
-              children: [
-                CarouselSlider(
-                  carouselController: carouselController,
-                  items: widgetList,
-
-                  options: CarouselOptions(
-                      viewportFraction: 0.8,
-                      // height: 270,
-                      initialPage: 2,
-                      disableCenter: true,
-                      autoPlay: true,
-                      autoPlayAnimationDuration: Duration(milliseconds: 100),
-                      // aspectRatio: 0.1,
-                      enlargeCenterPage: true),
-                ),
-                Align(
-                  alignment: Alignment(0,0.8),
-                  child: Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        InkWell(
-
-                            child: EsSvgIcon(
-                              _rtl?"packages/es_flutter_component/assets/svgs/CaretRight.svg"
-                                :"packages/es_flutter_component/assets/svgs/CaretLeft.svg",
-                            color: StructureBuilder.styles!.primaryLightColor,
-                              size: StructureBuilder.dims!.h0Padding,
-                            ),
-                        onTap: (){carouselController.previousPage();},
-                        ),
-                        InkWell(
-
-                          child: EsSvgIcon(_rtl?"packages/es_flutter_component/assets/svgs/CaretLeft.svg"
-                              :"packages/es_flutter_component/assets/svgs/CaretRight.svg",
-                            color: StructureBuilder.styles!.primaryLightColor,
-                            size: StructureBuilder.dims!.h0Padding,
-                          ),
-                          onTap: (){carouselController.nextPage();},
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment(0,0.8),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: widgetList.asMap().entries.map((entry) {
-                      return GestureDetector(
-                        onTap: () => carouselController.animateToPage(entry.key),
-                        child: Container(
-                            width: StructureBuilder.dims!.h1Padding,
-                            height:StructureBuilder.dims!.h1Padding,
-                            margin: EdgeInsets.symmetric(
-                                horizontal: StructureBuilder.dims!.h3Padding
-                            ),
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color:_current == entry.key
-                                    ? StructureBuilder.styles!.tritiaryColor
-                                    : StructureBuilder.styles!.primaryLightColor)
-                        ),
-                      );
-                    }).toList(),
-                  ),
-                )
-              ],
-            ),"""),
+              """EsSliderWithIconIndicator(
+              controller: carouselController5,
+              items: widgetList,)
+                \n   where \n
+    CarouselController carouselController5 = CarouselController();            
+    Widget titleBox(int index) {
+    return Container(
+      clipBehavior: Clip.antiAlias,
+      decoration: BoxDecoration(
+          color: StructureBuilder.styles!.primaryColor,
+          borderRadius: BorderRadius.all(
+              Radius.circular(StructureBuilder.dims!.h0BorderRadius))),
+      child: Image.asset(
+        "assets/images/img\$\{index \+ 1\}.jpg",
+        fit: BoxFit.cover,
+      ),
+    );"""),
     ];
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
+    return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.slidertitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child: Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.slidertitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

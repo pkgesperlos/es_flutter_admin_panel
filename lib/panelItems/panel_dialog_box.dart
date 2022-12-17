@@ -132,33 +132,36 @@ class PanelDialogBox extends StatelessWidget {
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryLightColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                padding: EdgeInsets.symmetric(
-                    vertical: StructureBuilder.dims!.h0Padding),
-                margin: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                  padding: EdgeInsets.symmetric(
+                      vertical: StructureBuilder.dims!.h0Padding),
+                  margin: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
 
-                width: double.maxFinite,
-                ////////////////////////
-                child: EsOrdinaryText(
-                  AppLocalizations.of(context)!.dialogeBoxDescription,
-                ),
-                decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                    borderRadius: BorderRadius.all(
-                        Radius.circular(StructureBuilder.dims!.h2FontSize))),
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryLightColor,
+                  width: double.maxFinite,
+                  ////////////////////////
+                  child: EsOrdinaryText(
+                    AppLocalizations.of(context)!.dialogeBoxDescription,
                   ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+                  decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                      borderRadius: BorderRadius.all(
+                          Radius.circular(StructureBuilder.dims!.h2FontSize))),
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryLightColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

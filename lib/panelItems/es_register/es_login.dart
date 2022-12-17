@@ -20,6 +20,8 @@ import 'package:es_flutter_admin_panel/panel_ui/images/responsive_layout.dart';
 import '../../language_change_provider.dart';
 
 class EsLogin extends StatefulWidget {
+
+  static const routeName = '/login';
   @override
   State<StatefulWidget> createState() {
     return _EsLogin();

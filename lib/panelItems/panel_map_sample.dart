@@ -57,22 +57,25 @@ class _PanelMapSampleState extends State<PanelMapSample> {
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.maptitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.maptitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }
@@ -85,40 +88,6 @@ class _PanelMapSampleState extends State<PanelMapSample> {
   Widget listShow(Widget widget) {
     return Column(
       children: List.generate(3, (index) => widget),
-    );
-  }
-}
-
-class _DropDownContainer extends StatelessWidget {
-  final Map<String, dynamic> data;
-
-  const _DropDownContainer({Key? key, required this.data}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    List<Widget> _children = data.entries.map<Widget>((entry) {
-      Widget w = Row(
-        children: [
-          Text(entry.key.toString()),
-          Spacer(),
-          Text(entry.value.toString()),
-        ],
-      );
-      return w;
-    }).toList();
-
-    return Container(
-      /// height: 100,
-      child: Column(
-        /// children: [
-        ///   Expanded(
-        ///       child: Container(
-        ///     color: Colors.red,
-        ///     height: 50,
-        ///   )),
-        /// ],
-        children: _children,
-      ),
     );
   }
 }

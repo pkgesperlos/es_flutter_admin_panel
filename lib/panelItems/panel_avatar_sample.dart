@@ -11,6 +11,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import 'package:es_flutter_component/components/es_image/es_avatar_group.dart';
+
 class PanelAvatarSample extends StatelessWidget {
   static MaterialPageRoute getRoute() => MaterialPageRoute(
       settings: RouteSettings(name: 'avatar'),
@@ -23,6 +25,25 @@ class PanelAvatarSample extends StatelessWidget {
     double _alignFactor = 0.4;
 
     String _imagePath = "assets/images/img4.jpg";
+    List<Widget> _avatarList= [
+      EsAvatarImage(
+        path: _imagePath,
+      ),
+      EsAvatarWidget(
+          widget: EsTitle(
+            "FA",
+            color: StructureBuilder.styles!.primaryLightColor,
+          )),
+      EsAvatarImage(
+        path: _imagePath,
+      ),
+      EsAvatarWidget(
+          backGroundColor: StructureBuilder.styles!.tritiaryColor,
+          widget: EsTitle(
+            "FA",
+            color: StructureBuilder.styles!.primaryLightColor,
+          )),
+    ];
     List list = [
       ContainerItems(
           widget: Container(
@@ -51,7 +72,7 @@ class PanelAvatarSample extends StatelessWidget {
               )),
           title: AppLocalizations.of(context)!.avatarsindifferentsizes,
           information:
-              "They are avatars in different sizes located in: \n es_flutter_component/lib/components/es_image/es_avatar_image.dart\n and is used as: \n "
+              "these are avatars in different sizes located in: \n es_flutter_component/lib/components/es_image/es_avatar_image.dart\n and is used as: \n "
               """   EsAvatarImage(
                 path: _imagePath,
                 radius: StructureBuilder.dims!.h1IconSize / 2,
@@ -115,7 +136,7 @@ class PanelAvatarSample extends StatelessWidget {
               )),
           title: AppLocalizations.of(context)!.avatarsindifferentstatuses,
           information:
-              "They are avatars in different statuses located in: \n es_flutter_component/lib/components/es_image/es_avatar_image.dart\n and is used as: \n "
+              "these are avatars in different statuses located in: \n es_flutter_component/lib/components/es_image/es_avatar_image.dart\n and is used as: \n "
               """ EsLabel(
                   isUnique: false,
                   widget: EsAvatarImage(path: "assets/images/img1.jpg",),
@@ -156,7 +177,7 @@ class PanelAvatarSample extends StatelessWidget {
               )),
           title: AppLocalizations.of(context)!.avatarswithdifferentwidgets,
           information:
-              "They are avatars with different widgets located in: \n es_flutter_component/lib/components/es_image/es_avatar_image.dart\n and is used as: \n "
+              "these are avatars with different widgets located in: \n es_flutter_component/lib/components/es_image/es_avatar_image.dart\n and is used as: \n "
               """EsAvatarWidget(
                   widget: EsTitle(
                 "FA",
@@ -223,7 +244,7 @@ class PanelAvatarSample extends StatelessWidget {
           title: AppLocalizations.of(context)!
               .avatarswithdifferentbackgroundcolors,
           information:
-              "They are avatars with different background colors located in: \n es_flutter_component/lib/components/es_image/es_avatar_image.dart\n and is used as: \n "
+              "these are avatars with different background colors located in: \n es_flutter_component/lib/components/es_image/es_avatar_image.dart\n and is used as: \n "
               """ EsAvatarWidget(
                 backGroundColor: StructureBuilder.styles!.tritiaryColor,
                   widget: EsTitle(
@@ -311,7 +332,7 @@ class PanelAvatarSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.avatarsindifferentshapes,
           information:
-              "They are avatars in different shapes and shapes located in: \n es_flutter_component/lib/components/es_image\n and is used as: \n "
+              "these are avatars in different shapes and shapes located in: \n es_flutter_component/lib/components/es_image\n and is used as: \n "
               """EsAvatarImage.rectangle(
                    isrectangle: true,
                     path: "assets/images/img1.jpg",
@@ -319,44 +340,10 @@ class PanelAvatarSample extends StatelessWidget {
                   ),"""),
       ContainerItems(
           widget: Container(
-            height: 100,
-            child: SizedBox(
-              width: StructureBuilder.dims!.h0Padding * 10,
-              child: Stack(
-                children: [
-                  Align(
-                    alignment: Alignment(0, 0),
-                    child: EsAvatarImage(
-                      path: _imagePath,
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment(_alignFactor, 0),
-                    child: EsAvatarWidget(
-                        widget: EsTitle(
-                      "FA",
-                      color: StructureBuilder.styles!.primaryLightColor,
-                    )),
-                  ),
-                  Align(
-                    alignment: Alignment(_alignFactor * 2, 0),
-                    child: EsAvatarImage(
-                      path: _imagePath,
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment(_alignFactor * 3, 0),
-                    child: EsAvatarWidget(
-                        backGroundColor: StructureBuilder.styles!.tritiaryColor,
-                        widget: EsTitle(
-                          "FA",
-                          color: StructureBuilder.styles!.primaryLightColor,
-                        )),
-                  ),
-                ],
-              ),
-            ),
-          ),
+              height: 100,
+              child: EsAvatarGroup(
+                avatarList:_avatarList
+              )),
           title: AppLocalizations.of(context)!.groupavatar,
           information:
               "It is group avatar located in: \n es_flutter_component/lib/components/es_image\n and is used as: \n "
@@ -398,23 +385,27 @@ class PanelAvatarSample extends StatelessWidget {
                     ),
                   ),"""),
     ];
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
+    return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.avatartitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.avatartitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

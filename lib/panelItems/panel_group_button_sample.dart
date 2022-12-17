@@ -84,7 +84,7 @@ class PanelGroupButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.icongroupbutton,
           information:
-              "They are icon group buttons  located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "these are icon group buttons  located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
@@ -125,7 +125,7 @@ class PanelGroupButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.textgroupbutton,
           information:
-              "They are text group buttons located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "these are text group buttons located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                 widgetList: _widgetList1,
                 initialSelectedindex: 1,
@@ -171,7 +171,7 @@ class PanelGroupButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.groupbuttonwithmaxselection,
           information:
-              "They are group buttons with max selection boundary located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "these are group buttons with max selection boundary located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
@@ -215,7 +215,7 @@ class PanelGroupButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.radiogroupbutton,
           information:
-              "They are radio group buttons located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "these are radio group buttons located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
@@ -259,7 +259,7 @@ class PanelGroupButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.groupbuttonwithdisabledlist,
           information:
-              "They are group buttons with disabled list located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "these are group buttons with disabled list located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
@@ -303,7 +303,7 @@ class PanelGroupButtonSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.verticalgroupbutton,
           information:
-              "They are vertical group buttons located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
+              "these are vertical group buttons located in: \n es_flutter_component/lib/components/es_button/es_group_button/group_button.dart' \n and is used as: \n "
               """EsGroupButton(
                     widgetList: _widgetList2,
                     // onPressedList[]: ,
@@ -321,21 +321,24 @@ class PanelGroupButtonSample extends StatelessWidget {
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.groupbuttontitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+            backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+            body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.groupbuttontitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

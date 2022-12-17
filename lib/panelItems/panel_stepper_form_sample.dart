@@ -21,7 +21,7 @@ class PanelStepperFormSample extends StatefulWidget {
 }
 
 class _PanelStepperFormSampleState extends State<PanelStepperFormSample> {
-  final _formkey = GlobalKey<FormState>();
+
 
   @override
   void initState() {
@@ -38,13 +38,7 @@ class _PanelStepperFormSampleState extends State<PanelStepperFormSample> {
   Widget build(BuildContext context) {
     bool _value1 = false;
     String _value3 = "";
-    List labelList2 = [
-      {"title": "item1", "_id": "1"},
-      {"title": "item2", "_id": "2"},
-      {"title": "item3", "_id": "3"},
-      {"title": "item4", "_id": "4"},
-      {"title": "item5", "_id": "5"},
-    ];
+
     List<Widget> _stepWidgets1 = [
       EsOrdinaryText(StructureBuilder.configs!.lorm),
       EsOrdinaryText(StructureBuilder.configs!.lorm),
@@ -108,7 +102,14 @@ class _PanelStepperFormSampleState extends State<PanelStepperFormSample> {
               """EsStepper(
                 stepWidgets: _stepWidgets1,
                 titleList: ["step1","step2","step3"],
-              )"""),
+              ),
+                 \n   where \n
+       List<Widget> _stepWidgets1 = [
+      EsOrdinaryText(StructureBuilder.configs!.lorm),
+      EsOrdinaryText(StructureBuilder.configs!.lorm),
+      EsOrdinaryText(StructureBuilder.configs!.lorm),
+    ];      
+              """),
       ContainerItems(
           widget: Container(
               width: double.infinity,
@@ -123,7 +124,51 @@ class _PanelStepperFormSampleState extends State<PanelStepperFormSample> {
               """ EsStepper(
                 stepWidgets: _stepWidgets2,
                 titleList: ["step1","step2","step3"],
-              )"""),
+              ),
+                 \n   where \n
+                  List<Widget> _stepWidgets2 = [
+      IntrinsicWidth(
+        child: EsDropDownForm(
+          initialTitle: AppLocalizations.of(context)!.select,
+          list: [
+            {"title": "item1", "_id": "1"},
+            {"title": "item2", "_id": "2"},
+            {"title": "item3", "_id": "3"},
+          ],
+          value: _value3,
+          validator: (value) {
+            if (value == "") {
+              return AppLocalizations.of(context)!.pleaseselectoneitem;
+            }
+          },
+        ),
+      ),
+      EsCustomCheckBoxForm(
+        titleWidget: EsTitle(
+          AppLocalizations.of(context)!.pleaseselectme,
+        ),
+        value: _value1,
+        validator: (value) {
+          if (value == false) {
+            return AppLocalizations.of(context)!
+                .youshouldacceptthetermsandconditionsbeforeregister;
+          }
+        },
+      ),
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          EsOrdinaryText(
+            StructureBuilder.configs!.lorm,
+            color: StructureBuilder.styles!.t1Color,
+          ),
+          EsVSpacer(
+            big: true,
+          ),
+        ],
+      ),
+    ];
+              """),
       ContainerItems(
           widget: Container(
               width: double.infinity,
@@ -140,26 +185,36 @@ class _PanelStepperFormSampleState extends State<PanelStepperFormSample> {
                 direction: StepperType.vertical,
                 stepWidgets: _stepWidgets1,
                 titleList: ["step1","step2","step3"],
-              )"""),
+              ),
+                    \n   where \n
+       List<Widget> _stepWidgets1 = [
+      EsOrdinaryText(StructureBuilder.configs!.lorm),
+      EsOrdinaryText(StructureBuilder.configs!.lorm),
+      EsOrdinaryText(StructureBuilder.configs!.lorm),
+    ]; 
+              """),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.stepperformtitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.stepperformtitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

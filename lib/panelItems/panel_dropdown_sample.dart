@@ -121,7 +121,7 @@ class PanelDropDownSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.dropdownbuttonsindifferentcolors,
           information:
-              "They are dropdown Buttons in different colors located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
+              "these are dropdown Buttons in different colors located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
               """EsDropdownButton(
                     num:num,
                     buttonWidget: EsButton(text: "Dropdown",
@@ -196,7 +196,7 @@ class PanelDropDownSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.dropdownbuttonsindifferentpositions,
           information:
-              "They are dropdown Buttons in different positions located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
+              "these are dropdown Buttons in different positions located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
               """EsDropdownButton(
                 num: num,
                 buttonWidget: EsButton(
@@ -306,7 +306,7 @@ class PanelDropDownSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.dropdownbuttonsincustomicons,
           information:
-              "They are dropdown Buttons in custom icons located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
+              "these are dropdown Buttons in custom icons located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
               """EsDropdownButton(
                 num: num,
                 buttonWidget: EsButton(
@@ -409,7 +409,7 @@ class PanelDropDownSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.dropdownbuttonsindifferentmenudecoration,
           information:
-              "They are dropdown buttons in different menu decoration located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
+              "these are dropdown buttons in different menu decoration located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
               """EsDropdownButton(
                 num: num,
                 dropdownDecoration: BoxDecoration(
@@ -501,7 +501,7 @@ class PanelDropDownSample extends StatelessWidget {
               )),
           title: AppLocalizations.of(context)!.dropdownbuttonsindifferentsizes,
           information:
-          "They are dropdown Buttons in different sizes located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
+          "these are dropdown Buttons in different sizes located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
               """EsDropdownButton(
                     num: num,
                     buttonWidget: EsButton(
@@ -608,7 +608,7 @@ class PanelDropDownSample extends StatelessWidget {
           )),
           title: AppLocalizations.of(context)!.dropdownbuttonsindifferentmenusizes,
           information:
-              "They are dropdown Buttons in different menu sizes located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
+              "these are dropdown Buttons in different menu sizes located in: \n es_flutter_component/lib/components/es_drop_down/es_drop_down_button.dart \n and is used as: \n "
               """EsDropdownButton(
                     num:num,
                     buttonWidget: EsButton(text: "Dropdown",
@@ -624,22 +624,25 @@ class PanelDropDownSample extends StatelessWidget {
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.dropdownbuttontitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.dropdownbuttontitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

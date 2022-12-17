@@ -73,7 +73,7 @@ class _PanelColorsSampleState extends State<PanelColorsSample> {
           ),
           title: AppLocalizations.of(context)!.simplecarouselsliderwithoutanimation,
           information:
-              "They are main colors that are used in Panel"),
+              "these are main colors that are used in Panel"),
       ContainerItems(
           widget: Container(
 
@@ -95,7 +95,7 @@ class _PanelColorsSampleState extends State<PanelColorsSample> {
           ),
           title: AppLocalizations.of(context)!.simplecarouselsliderwithoutanimation,
           information:
-              "They are danger colors that are used in Panel"),
+              "these are danger colors that are used in Panel"),
       ContainerItems(
           widget: Container(
 
@@ -119,7 +119,7 @@ class _PanelColorsSampleState extends State<PanelColorsSample> {
           ),
           title: AppLocalizations.of(context)!.simplecarouselsliderwithoutanimation,
           information:
-              "They are warning colors that are used in Panel"),
+              "these are warning colors that are used in Panel"),
       ContainerItems(
           widget: Container(
 
@@ -141,7 +141,7 @@ class _PanelColorsSampleState extends State<PanelColorsSample> {
           ),
           title: AppLocalizations.of(context)!.simplecarouselsliderwithoutanimation,
           information:
-              "They are success colors that are used in Panel"),
+              "these are success colors that are used in Panel"),
       ContainerItems(
           widget: Container(
 
@@ -163,27 +163,30 @@ class _PanelColorsSampleState extends State<PanelColorsSample> {
           ),
           title: AppLocalizations.of(context)!.simplecarouselsliderwithoutanimation,
           information:
-              "They are success colors that are used in Panel"),
+              "these are success colors that are used in Panel"),
 
     ];
     return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.colorstitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.colorstitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }

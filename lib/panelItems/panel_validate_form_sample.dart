@@ -25,7 +25,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-
 class PanelValidateFormSample extends StatefulWidget {
   PanelValidateFormSample({Key? key}) : super(key: key);
 
@@ -278,7 +277,6 @@ class _PanelValidateFormSampleState extends State<PanelValidateFormSample> {
                                 .pleaseselectoneitem;
                         },
                       ),
-
                       EsSliderForm(
                         validator: (value) {
                           if (value == 0) {
@@ -553,26 +551,38 @@ class _PanelValidateFormSampleState extends State<PanelValidateFormSample> {
                   },
                 )
               ],
-            ),"""),
+            ), \n
+            where \n 
+            final _formkey = GlobalKey<FormState>(); \n
+            String _value3 = "";\n
+            TextEditingController _controller = TextEditingController();\n
+            EsFilePickerController _controller2 = EsFilePickerController();\n
+            List<TextEditingController> _controllerList =\n
+            List.generate(9, (index) => TextEditingController());\n
+            bool _value1 = false;"""),
     ];
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
+    return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PageTitleContainer(
-                title: AppLocalizations.of(context)!.validationformstitle,
-              ),
-              BootstrapContainer(
-                  fluid: true,
-                  padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding),
-                  decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
-                  ),
-                  children: List.generate(
-                      list.length, (index) => boxShow(list[index])))
-            ],
+        child: Scaffold(
+          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                PageTitleContainer(
+                  title: AppLocalizations.of(context)!.validationformstitle,
+                ),
+                BootstrapContainer(
+                    fluid: true,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: StructureBuilder.dims!.h0Padding),
+                    decoration: BoxDecoration(
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                    ),
+                    children: List.generate(
+                        list.length, (index) => boxShow(list[index])))
+              ],
+            ),
           ),
         ));
   }
