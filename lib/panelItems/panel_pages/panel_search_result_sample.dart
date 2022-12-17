@@ -1,5 +1,5 @@
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
-import 'package:es_flutter_admin_panel/panel_ui/components/es-search_result/es_search_result.dart';
+import 'package:es_flutter_admin_panel/editable_components/es-search_result/es_search_result.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/components/es_tab_bar/es_top_tab_bar_navigation.dart';
@@ -11,9 +11,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../panel_ui/components/es-search_result/es_article_search_card.dart';
-import '../../panel_ui/components/es-search_result/es_image_search_card.dart';
-import '../../panel_ui/components/es-search_result/es_user_search_card.dart';
+import '../../editable_components/es-search_result/es_article_search_card.dart';
+import '../../editable_components/es-search_result/es_image_search_card.dart';
+import '../../editable_components/es-search_result/es_user_search_card.dart';
 import '../../panel_ui/components/search_text_field.dart';
 
 class PanelSearchResultSample extends StatefulWidget {

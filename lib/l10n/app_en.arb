@@ -308,6 +308,7 @@
   "usernamehint": "Enter your username:",
   "passwordhint": "Enter your password:",
   "login": "Login",
+  "lockscreen": "Lock screen",
   "search": "Search",
   "components": "Components",
   "advancedcomponents": "Advanced components",

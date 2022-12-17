@@ -1,8 +1,11 @@
 import 'package:es_flutter_admin_panel/main.dart';
-import 'package:es_flutter_admin_panel/panel_ui/components/es_card/es_primary_card/es_primary_card_4.dart';
-import 'package:es_flutter_admin_panel/panel_ui/components/es_card/es_primary_card/es_primary_card_5.dart';
-import 'package:es_flutter_admin_panel/panel_ui/components/es_card/es_primary_card/es_primary_card_6.dart';
-import 'package:es_flutter_admin_panel/panel_ui/components/es_card/es_primary_card/es_primary_card_7.dart';
+import 'package:es_flutter_admin_panel/editable_components/es_card/es_primary_card/es_primary_card_1.dart';
+import 'package:es_flutter_admin_panel/editable_components/es_card/es_primary_card/es_primary_card_2.dart';
+import 'package:es_flutter_admin_panel/editable_components/es_card/es_primary_card/es_primary_card_3.dart';
+import 'package:es_flutter_admin_panel/editable_components/es_card/es_primary_card/es_primary_card_4.dart';
+import 'package:es_flutter_admin_panel/editable_components/es_card/es_primary_card/es_primary_card_5.dart';
+import 'package:es_flutter_admin_panel/editable_components/es_card/es_primary_card/es_primary_card_6.dart';
+import 'package:es_flutter_admin_panel/editable_components/es_card/es_primary_card/es_primary_card_7.dart';
 
 import 'package:es_flutter_component/components/es_text/es_icon_text.dart';
 import 'package:es_flutter_component/components/es_text/es_subtitle.dart';
@@ -18,9 +21,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../panel_ui/components/es_card/es_primary_card/es_primary_card_1.dart';
-import '../panel_ui/components/es_card/es_primary_card/es_primary_card_2.dart';
-import '../panel_ui/components/es_card/es_primary_card/es_primary_card_3.dart';
 
 class PanelPrimaryCardSample extends StatelessWidget {
   const PanelPrimaryCardSample({Key? key}) : super(key: key);

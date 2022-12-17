@@ -8,12 +8,12 @@ import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../main.dart';
-import '../../panel_ui/components/es_profile/es_profile_information_card.dart';
-import '../../panel_ui/components/es_profile/es_profile_card.dart';
-import '../../panel_ui/components/es_profile/es_profile_tab_bar_card/es_profile_tab_bar_card.dart';
-import '../../panel_ui/components/es_profile/es_progress_profile_card.dart';
-import '../../panel_ui/components/es_profile/es_progress_list_card.dart';
-import '../../panel_ui/components/es_profile/es_share_card.dart';
+import '../../editable_components/es_profile/es_profile_information_card.dart';
+import '../../editable_components/es_profile/es_profile_card.dart';
+import '../../editable_components/es_profile/es_profile_tab_bar_card/es_profile_tab_bar_card.dart';
+import '../../editable_components/es_profile/es_progress_profile_card.dart';
+import '../../editable_components/es_profile/es_progress_list_card.dart';
+import '../../editable_components/es_profile/es_share_card.dart';
 
 class PanelProfileSample extends StatefulWidget {
   PanelProfileSample({Key? key}) : super(key: key);

@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../panel_ui/components/es_price_card/es_complex_price_card.dart';
-import '../../panel_ui/components/es_price_card/es_price_card.dart';
+import '../../editable_components/es_price_card/es_complex_price_card.dart';
+import '../../editable_components/es_price_card/es_price_card.dart';
 
 class PanelPriceCardSample extends StatefulWidget {
   PanelPriceCardSample({Key? key}) : super(key: key);

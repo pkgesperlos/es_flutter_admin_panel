@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../panel_ui/components/es_card/es_image_card/es_image_card_1.dart';
-import '../panel_ui/components/es_card/es_image_card/es_image_card_2.dart';
-import '../panel_ui/components/es_card/es_image_card/es_image_card_3.dart';
-import '../panel_ui/components/es_card/es_image_card/es_image_card_4.dart';
-import '../panel_ui/components/es_card/es_image_card/es_image_card_5.dart';
-import '../panel_ui/components/es_card/es_image_card/es_image_card_6.dart';
-import '../panel_ui/components/es_card/es_image_card/es_image_card_7.dart';
+import '../../editable_components/es_card/es_image_card/es_image_card_1.dart';
+import '../../editable_components/es_card/es_image_card/es_image_card_2.dart';
+import '../../editable_components/es_card/es_image_card/es_image_card_3.dart';
+import '../../editable_components/es_card/es_image_card/es_image_card_4.dart';
+import '../../editable_components/es_card/es_image_card/es_image_card_5.dart';
+import '../../editable_components/es_card/es_image_card/es_image_card_6.dart';
+import '../../editable_components/es_card/es_image_card/es_image_card_7.dart';
 
 class PanelImageCardSample extends StatelessWidget {
   const PanelImageCardSample({Key? key}) : super(key: key);

@@ -22,18 +22,17 @@ class PanelAvatarSample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double _alignFactor = 0.4;
-
     String _imagePath = "assets/images/img4.jpg";
-    List<Widget> _avatarList= [
+
+    List<Widget> _avatarList = [
       EsAvatarImage(
         path: _imagePath,
       ),
       EsAvatarWidget(
           widget: EsTitle(
-            "FA",
-            color: StructureBuilder.styles!.primaryLightColor,
-          )),
+        "FA",
+        color: StructureBuilder.styles!.primaryLightColor,
+      )),
       EsAvatarImage(
         path: _imagePath,
       ),
@@ -76,7 +75,11 @@ class PanelAvatarSample extends StatelessWidget {
               """   EsAvatarImage(
                 path: _imagePath,
                 radius: StructureBuilder.dims!.h1IconSize / 2,
-              ),"""),
+              ),"""
+              "\n   where \n"
+              """
+      String _imagePath = "assets/images/img4.jpg";
+          """),
       ContainerItems(
           widget: Container(
               height: 100,
@@ -139,11 +142,15 @@ class PanelAvatarSample extends StatelessWidget {
               "these are avatars in different statuses located in: \n es_flutter_component/lib/components/es_image/es_avatar_image.dart\n and is used as: \n "
               """ EsLabel(
                   isUnique: false,
-                  widget: EsAvatarImage(path: "assets/images/img1.jpg",),
+                  widget: EsAvatarImage(path: _imagePath,),
                   hasBorder: true,
                   widgetSize: StructureBuilder.dims!.h2IconSize * 0.2,
                   color: StructureBuilder.styles!.primaryColor
-              ),"""),
+              ),"""
+              "\n   where \n"
+              """
+      String _imagePath = "assets/images/img4.jpg";
+          """),
       ContainerItems(
           widget: Container(
               height: 100,
@@ -335,15 +342,16 @@ class PanelAvatarSample extends StatelessWidget {
               "these are avatars in different shapes and shapes located in: \n es_flutter_component/lib/components/es_image\n and is used as: \n "
               """EsAvatarImage.rectangle(
                    isrectangle: true,
-                    path: "assets/images/img1.jpg",
+                    path: _imagePath,
                     size: StructureBuilder.dims!.h2IconSize,
-                  ),"""),
+                  ),"""
+              "\n   where \n"
+              """
+      String _imagePath = "assets/images/img4.jpg";
+          """),
       ContainerItems(
           widget: Container(
-              height: 100,
-              child: EsAvatarGroup(
-                avatarList:_avatarList
-              )),
+              height: 100, child: EsAvatarGroup(avatarList: _avatarList)),
           title: AppLocalizations.of(context)!.groupavatar,
           information:
               "It is group avatar located in: \n es_flutter_component/lib/components/es_image\n and is used as: \n "
@@ -383,12 +391,16 @@ class PanelAvatarSample extends StatelessWidget {
 
                       ],
                     ),
-                  ),"""),
+                  ),"""
+              "\n   where \n"
+              """
+      String _imagePath = "assets/images/img4.jpg";
+          """),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child:  Scaffold(
+        child: Scaffold(
           backgroundColor: StructureBuilder.styles!.primaryDarkColor,
           body: SingleChildScrollView(
             child: Column(

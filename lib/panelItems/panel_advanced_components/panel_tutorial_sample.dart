@@ -12,7 +12,8 @@ import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 
-import '../main.dart';
+import '../../main.dart';
+
 
 class PanelTutorialSample extends StatefulWidget {
   PanelTutorialSample({Key? key}) : super(key: key);

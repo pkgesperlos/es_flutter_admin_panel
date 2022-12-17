@@ -17,7 +17,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../panel_ui/components/es_bill/es_bill.dart';
+import '../../editable_components/es_bill/es_bill.dart';
 
 
 class PanelBillSample extends StatefulWidget {

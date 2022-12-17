@@ -1,8 +1,9 @@
 // @dart=2.9
 import 'package:es_flutter_admin_panel/language_change_provider.dart';
-import 'package:es_flutter_admin_panel/panelItems/es_register/es_lock_screen.dart';
-import 'package:es_flutter_admin_panel/panelItems/es_register/es_login.dart';
-import 'package:es_flutter_admin_panel/panelItems/es_register/es_recover_password.dart';
+import 'package:es_flutter_admin_panel/panelItems/panel_authenticate/es_lock_screen.dart';
+import 'package:es_flutter_admin_panel/panelItems/panel_authenticate/es_login.dart';
+import 'package:es_flutter_admin_panel/panelItems/panel_authenticate/es_recover_password.dart';
+import 'package:es_flutter_admin_panel/panelItems/panel_authenticate/es_signin.dart';
 import 'package:es_flutter_admin_panel/panel_ui/images/widget_tree_panel.dart';
 import 'package:es_flutter_component/components/es_bread_crumb/app_navigator_observer.dart';
 import 'package:es_flutter_component/resources/constants/structure_config.dart';
@@ -13,8 +14,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
-
-import 'panelItems/es_register/es_signin.dart';
 
 void main() {
 

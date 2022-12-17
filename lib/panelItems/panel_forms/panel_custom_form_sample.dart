@@ -31,6 +31,8 @@ class PanelCustomFormSample extends StatefulWidget {
 
 class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
   List<bool> _value=List.generate(20, (index) => true);
+
+
   @override
   void initState() {
     // TODO: implement initState
@@ -212,9 +214,13 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                           value: isChecked,
                           onChanged: (value) {
                             setState(() {
-                              isChecked = value!;
+                              _value = value!;
                             });
-                          }),"""),
+                          }),"""
+                  "\n   where \n"
+                  """
+      bool _value=true;
+          """),
       ContainerItems(
           widget: Container(
               height: _height,
@@ -335,7 +341,9 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                     StructureBuilder.styles!.dangerColor().dangerRegular,
                 thumbColor:
                     StructureBuilder.styles!.dangerColor().dangerRegular,
-              ),"""),
+              ),"""
+
+      ),
       ContainerItems(
           widget: Container(
               height: _height,
@@ -502,11 +510,16 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                               .successRegular,
                           onChanged: (bool value) {
                             setState(() {
-                              _value1 = value;
+                              _value = value;
                             });
                           },
-                          value: _value1,
-                        ),"""),
+                          value: _value,
+                        ),"""
+                  "\n   where \n"
+                  """
+      bool _value=true;
+          """
+      ),
       ContainerItems(
           widget: Container(
             height: _height,

@@ -4,7 +4,6 @@ import 'package:es_flutter_component/es_alert/es_alerts.dart';
 import 'package:es_flutter_component/es_button/es_icon_button.dart';
 import 'package:es_flutter_component/es_image/es_avatar_image.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';

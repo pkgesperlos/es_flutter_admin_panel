@@ -133,7 +133,17 @@ class PanelDropDownSample extends StatelessWidget {
                         EsHeader("item",color: StructureBuilder.styles!.primaryLightColor,)),
                     menufunctionList: List.generate(num, (index) => (){}),
 
-                  ), \n this widget uses DropDown2 please add it in pubspec.yaml 's dependencies"""),
+                  ), \n this widget uses DropDown2 please add it in pubspec.yaml 's dependencies"""
+                  "\n   where \n"
+          """
+          List<Widget> _menuWidgetList=List.generate(
+        num,
+            (index) => EsOrdinaryText(
+          "item\$index",
+          color: StructureBuilder.styles!.primaryLightColor,
+        ));
+          """
+      ),
       ContainerItems(
           widget: Container(
               child: Wrap(
@@ -218,7 +228,17 @@ class PanelDropDownSample extends StatelessWidget {
                 menufunctionList: List.generate(num, (index) => () {}),
                 menuOffset: Offset(StructureBuilder.dims!.h0Padding*-4,
                     StructureBuilder.dims!.h0Padding),
-              ), \n this widget uses DropDown2 please add it in pubspec.yaml 's dependencies"""),
+              ), \n this widget uses DropDown2 please add it in pubspec.yaml 's dependencies"""
+                  "\n   where \n"
+                  """
+          List<Widget> _menuWidgetList=List.generate(
+        num,
+            (index) => EsOrdinaryText(
+          "item\$index",
+          color: StructureBuilder.styles!.primaryLightColor,
+        ));
+          """
+      ),
       ContainerItems(
           widget: Container(
               child: Wrap(
@@ -325,7 +345,17 @@ class PanelDropDownSample extends StatelessWidget {
                           color: StructureBuilder.styles!.primaryLightColor,
                         )),
                 menufunctionList: List.generate(num, (index) => () {}),
-              ), \n this widget uses DropDown2 please add it in pubspec.yaml 's dependencies"""),
+              ), \n this widget uses DropDown2 please add it in pubspec.yaml 's dependencies"""
+                  "\n   where \n"
+                  """
+          List<Widget> _menuWidgetList=List.generate(
+        num,
+            (index) => EsOrdinaryText(
+          "item\$index",
+          color: StructureBuilder.styles!.primaryLightColor,
+        ));
+          """
+      ),
       ContainerItems(
           widget: Container(
               child: Wrap(
@@ -432,8 +462,17 @@ class PanelDropDownSample extends StatelessWidget {
                           color: StructureBuilder.styles!.primaryLightColor,
                         )),
                 menufunctionList: List.generate(num, (index) => () {}),
-              ), \n this widget uses DropDown2 please add it in pubspec.yaml 's dependencies"""),
-
+              ), \n this widget uses DropDown2 please add it in pubspec.yaml 's dependencies"""
+                  "\n   where \n"
+                  """
+          List<Widget> _menuWidgetList=List.generate(
+        num,
+            (index) => EsOrdinaryText(
+          "item\$index",
+          color: StructureBuilder.styles!.primaryLightColor,
+        ));
+          """
+      ),
       ContainerItems(
           widget: Container(
               child: Wrap(
@@ -520,7 +559,17 @@ class PanelDropDownSample extends StatelessWidget {
                           color: StructureBuilder.styles!.primaryLightColor,
                         )),
                     menufunctionList: List.generate(num, (index) => () {}),
-                  ), \n this widget uses DropDown2 please add it in pubspec.yaml 's dependencies"""),
+                  ), \n this widget uses DropDown2 please add it in pubspec.yaml 's dependencies"""
+              "\n   where \n"
+              """
+          List<Widget> _menuWidgetList=List.generate(
+        num,
+            (index) => EsOrdinaryText(
+          "item\$index",
+          color: StructureBuilder.styles!.primaryLightColor,
+        ));
+          """
+      ),
       ContainerItems(
           widget: Container(
               child: Wrap(
@@ -620,7 +669,17 @@ class PanelDropDownSample extends StatelessWidget {
                         EsHeader("item",color: StructureBuilder.styles!.primaryLightColor,)),
                     menufunctionList: List.generate(num, (index) => (){}),
 
-                  ), \n this widget uses DropDown2 please add it in pubspec.yaml 's dependencies"""),
+                  ), \n this widget uses DropDown2 please add it in pubspec.yaml 's dependencies"""
+                  "\n   where \n"
+                  """
+          List<Widget> _menuWidgetList=List.generate(
+        num,
+            (index) => EsOrdinaryText(
+          "item\$index",
+          color: StructureBuilder.styles!.primaryLightColor,
+        ));
+          """
+      ),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,

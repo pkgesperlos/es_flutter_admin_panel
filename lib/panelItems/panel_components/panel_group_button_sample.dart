@@ -91,7 +91,7 @@ class PanelGroupButtonSample extends StatelessWidget {
                 initialSelectedindex: 1,
                 unSelectedColor: Colors.indigo,
               ),
-              // when 
+                 "\n   where \n"
               List<Widget> _widgetList2 = List.generate(
         5,
         (index) => Padding(
@@ -131,7 +131,7 @@ class PanelGroupButtonSample extends StatelessWidget {
                 initialSelectedindex: 1,
                 // onPressedList[]: ,
               ),
-              // when 
+                 "\n   where \n" 
               List<Widget> _widgetList1 = List.generate(
         5,
         (index) => Padding(
@@ -178,7 +178,7 @@ class PanelGroupButtonSample extends StatelessWidget {
                 maxSelected: 3,
                 initialSelectedindex: 1,
               ),
-              // when 
+                 "\n   where \n"
               List<Widget> _widgetList2 = List.generate(
         5,
         (index) => Padding(
@@ -222,7 +222,7 @@ class PanelGroupButtonSample extends StatelessWidget {
                 initialSelectedindex: 1,
                 isRadio: true,
               ),
-              // when 
+                 "\n   where \n" 
               List<Widget> _widgetList2 = List.generate(
         5,
         (index) => Padding(
@@ -266,7 +266,7 @@ class PanelGroupButtonSample extends StatelessWidget {
                 disabledIndexes: [0,3],
                 initialSelectedindex: 1,
               ),
-              // when 
+                 "\n   where \n" 
               List<Widget> _widgetList2 = List.generate(
         5,
         (index) => Padding(
@@ -311,7 +311,7 @@ class PanelGroupButtonSample extends StatelessWidget {
                     initialSelectedindex: 1,
                     unSelectedColor: Colors.indigo,
                   ),
-              // when 
+                 "\n   where \n"
               List<Widget> _widgetList2 = List.generate(
         5,
         (index) => Padding(

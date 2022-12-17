@@ -1,5 +1,5 @@
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
-import 'package:es_flutter_admin_panel/panel_ui/components/es_timeline/showcase/timeline_status.dart';
+import 'package:es_flutter_admin_panel/editable_components/es_timeline/showcase/timeline_status.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 import 'package:es_flutter_component/components/es_image/es_avatar_image.dart';
 import 'package:es_flutter_component/components/es_image/es_avatar_widget.dart';
@@ -16,9 +16,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../panel_ui/components/es_timeline/showcase/es_custom_timeline.dart';
-import '../../panel_ui/components/es_timeline/showcase/package_delivery_tracking.dart';
-import '../../panel_ui/components/es_timeline/showcase/process_timeline.dart';
+import '../../editable_components/es_timeline/showcase/es_custom_timeline.dart';
+import '../../editable_components/es_timeline/showcase/package_delivery_tracking.dart';
+import '../../editable_components/es_timeline/showcase/process_timeline.dart';
 
 class PanelTimelineSample extends StatefulWidget {
   PanelTimelineSample({Key? key}) : super(key: key);
