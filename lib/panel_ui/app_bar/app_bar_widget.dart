@@ -97,7 +97,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
       tiny: Container(),
       phone: _phoneMainAppBarCard(),
       tablet: _phoneMainAppBarCard(),
-      largTablet: _computerMainAppBarCard(),
+      largTablet: _largTabletMainAppBarCard(),
       computer: _computerMainAppBarCard(),
     );
   }
@@ -192,6 +192,93 @@ class _AppBarWidgetState extends State<AppBarWidget> {
     );
   }
 
+  Widget _largTabletMainAppBarCard() {
+    return Container(
+      margin: EdgeInsets.symmetric(
+        vertical: StructureBuilder.dims!.h0Padding,
+        horizontal: StructureBuilder.dims!.h0Padding*1.3,
+      ),
+      decoration: BoxDecoration(
+          color: StructureBuilder.styles!.primaryLightColor,
+          border: Border.all(color: StructureBuilder.styles!.primaryColor),
+          borderRadius: BorderRadius.all(
+              Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
+      child: Container(
+        padding: EdgeInsets.symmetric(
+            vertical: StructureBuilder.dims!.h1Padding ,
+            horizontal: StructureBuilder.dims!.h1Padding
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  InkWell(
+                    onTap: (){
+
+                      Scaffold.of(context).openDrawer();
+
+                    },
+                    child: EsSvgIcon(
+                      "assets/svgs/menu.svg",
+                      color: StructureBuilder.styles!.primaryColor,
+                      size: StructureBuilder.dims!.h2IconSize,
+                    ),
+                  ),
+                  EsHSpacer(
+                    big: true,
+                  ),
+                  Expanded(child: Padding(
+                    padding:  EdgeInsets.symmetric(horizontal: StructureBuilder.dims!.h1Padding),
+                    child: SearchTextField(),
+                  ),),
+                ],
+              ),
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                InkWell(
+                  onTap: (){},
+                  child: EsSvgIcon(
+                    "assets/svgs/setting.svg",
+                    size: StructureBuilder.dims!.h2IconSize,
+                  ),
+                ),
+                EsHSpacer(
+                  big: true,
+                ),
+                // InkWell(
+                //   onTap: (){},
+                //   child: EsSvgIcon(
+                //     "assets/svgs/ChatsCircle.svg",
+                //     size: StructureBuilder.dims!.h2IconSize * 0.9,
+                //   ),
+                // ),
+                // EsHSpacer(
+                //   big: true,
+                //   factor: 2,
+                // ),
+                InkWell(
+                  onTap: (){},
+                  child: EsSvgIcon(
+                    "assets/svgs/notificationbing.svg",
+                    size: StructureBuilder.dims!.h2IconSize,
+                  ),
+                ),
+                EsHSpacer(
+                  big: true,
+                ),
+                languageDropDownMenu(items)
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
   Widget _phoneMainAppBarCard() {
     return Container(
       margin: EdgeInsets.symmetric(

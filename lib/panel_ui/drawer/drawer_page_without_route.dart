@@ -1,3 +1,4 @@
+
 import 'package:es_flutter_admin_panel/panel_items/panel_pages/panel_bill_sample.dart';
 import 'package:es_flutter_component/components/es_accardion/es_expansion_tile.dart';
 import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
@@ -89,13 +90,13 @@ class _DrawerPageState extends State<DrawerPage> {
     _isSelectedList[_currentIndex] = true;
     _onSelectedList = List.generate(
         num,
-        (index) => () {
-              setState(() {
-                _currentIndex = index;
-                _isSelectedList = List.generate(num, (index) => false);
-                _isSelectedList[_currentIndex] = true;
-              });
-            });
+            (index) => () {
+          setState(() {
+            _currentIndex = index;
+            _isSelectedList = List.generate(num, (index) => false);
+            _isSelectedList[_currentIndex] = true;
+          });
+        });
   }
 
   @override
@@ -118,13 +119,13 @@ class _DrawerPageState extends State<DrawerPage> {
                     ResponsiveLayot.isComputer(context)
                         ? Container()
                         : InkWell(
-                            onTap: () {
-                              Navigator.pop(context);
-                            },
-                            child: Icon(
-                              Icons.close,
-                              color: Colors.black54,
-                            )),
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Icon(
+                          Icons.close,
+                          color: Colors.black54,
+                        )),
                     EsTitle(
                       AppLocalizations.of(context)!.adminMenu,
                       color: StructureBuilder.styles!.primaryColor,
@@ -135,7 +136,7 @@ class _DrawerPageState extends State<DrawerPage> {
                   big: true,
                 ),
                 //creating list items of drawer
-                firstLevelNavigate(
+                firstLevel(
                   tilePadding: EdgeInsets.symmetric(
                     vertical: StructureBuilder.dims!.h1Padding * 1.7,
                     horizontal: StructureBuilder.dims!.h1Padding * 1,
@@ -144,172 +145,172 @@ class _DrawerPageState extends State<DrawerPage> {
                   onSelect: _onSelectedList[0],
                   isSelected: _isSelectedList[0],
                   iconPath:
-                      "packages/es_flutter_component/assets/svgs/chart.svg",
+                  "packages/es_flutter_component/assets/svgs/chart.svg",
                   title: AppLocalizations.of(context)!.charts,
-                  routeName: PanelChartSample.routeName,
+                  pageWidget: PanelChartSample(),
                 ),
 
                 firstLevelExpandedComplex(
                   expansionTitle: AppLocalizations.of(context)!.components,
                   iconPath:
-                      "packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+                  "packages/es_flutter_component/assets/svgs/GraduationCap.svg",
                   expansionWidgetList: [
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.accordion,
-                        routeName: PanelAccardionSample.routeName,
+                        pageWidget: PanelAccardionSample(),
                         index: _indexList[2],
                         onSelect: _onSelectedList[2],
                         isSelected: _isSelectedList[2]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.alert,
-                        routeName: PanelAlertSample.routeName,
+                        pageWidget: PanelAlertSample(),
                         index: _indexList[3],
                         onSelect: _onSelectedList[3],
                         isSelected: _isSelectedList[3]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.text,
-                        routeName: PanelTextSample.routeName,
+                        pageWidget: PanelTextSample(),
                         index: _indexList[4],
                         onSelect: _onSelectedList[4],
                         isSelected: _isSelectedList[4]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.button,
-                        routeName: PanelButtonSample.routeName,
+                        pageWidget: PanelButtonSample(),
                         index: _indexList[5],
                         onSelect: _onSelectedList[5],
                         isSelected: _isSelectedList[5]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.groupbutton,
-                        routeName: PanelGroupButtonSample.routeName,
+                        pageWidget: PanelGroupButtonSample(),
                         index: _indexList[6],
                         onSelect: _onSelectedList[6],
                         isSelected: _isSelectedList[6]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.label,
-                        routeName: PanelLabelSample.routeName,
+                        pageWidget: PanelLabelSample(),
                         index: _indexList[7],
                         onSelect: _onSelectedList[7],
                         isSelected: _isSelectedList[7]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.breadcrumb,
-                        routeName: PanelBreadCrumbSample.routeName,
+                        pageWidget: PanelBreadCrumbSample(),
                         index: _indexList[8],
                         onSelect: _onSelectedList[8],
                         isSelected: _isSelectedList[8]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.pageindicator,
-                        routeName: PanelPageIndicatorSample.routeName,
+                        pageWidget: PanelPageIndicatorSample(),
                         index: _indexList[9],
                         onSelect: _onSelectedList[9],
                         isSelected: _isSelectedList[9]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.dropdownbutton,
-                        routeName: PanelDropDownSample.routeName,
+                        pageWidget: PanelDropDownSample(),
                         index: _indexList[10],
                         onSelect: _onSelectedList[10],
                         isSelected: _isSelectedList[10]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.slider,
-                        routeName: PanelSliderSample.routeName,
+                        pageWidget: PanelSliderSample(),
                         index: _indexList[11],
                         onSelect: _onSelectedList[11],
                         isSelected: _isSelectedList[11]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.color,
-                        routeName: PanelColorsSample.routeName,
+                        pageWidget: PanelColorsSample(),
                         index: _indexList[12],
                         onSelect: _onSelectedList[12],
                         isSelected: _isSelectedList[12]),
                     nextLevelExpandedComplex(
                       expansionTitle: AppLocalizations.of(context)!.tables,
                       expansionWidgetList: [
-                        nextLevelNavigate(
+                        nextLevel(
                             title: AppLocalizations.of(context)!.simpletables,
-                            routeName: PanelSimpleTableSample.routeName,
+                            pageWidget: PanelSimpleTableSample(),
                             index: _indexList[13],
                             onSelect: _onSelectedList[13],
                             isSelected: _isSelectedList[13]),
-                        nextLevelNavigate(
+                        nextLevel(
                             title:
-                                AppLocalizations.of(context)!.responsivetable,
-                            routeName: PanelResponsiveTableSample.routeName,
+                            AppLocalizations.of(context)!.responsivetable,
+                            pageWidget: PanelResponsiveTableSample(),
                             index: _indexList[14],
                             onSelect: _onSelectedList[14],
                             isSelected: _isSelectedList[14]),
                       ],
                     ),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.grouplist,
-                        routeName: PanelGroupListSample.routeName,
+                        pageWidget: PanelGroupListSample(),
                         index: _indexList[15],
                         onSelect: _onSelectedList[15],
                         isSelected: _isSelectedList[15]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.progressBar,
-                        routeName: PanelProgressBarSample.routeName,
+                        pageWidget: PanelProgressBarSample(),
                         index: _indexList[16],
                         onSelect: _onSelectedList[16],
                         isSelected: _isSelectedList[16]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.waitingindicator,
-                        routeName: PanelWaitingIndicatorSample.routeName,
+                        pageWidget: PanelWaitingIndicatorSample(),
                         index: _indexList[17],
                         onSelect: _onSelectedList[17],
                         isSelected: _isSelectedList[17]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.tabbarnavigator,
-                        routeName: PanelTabBarNavigationSample.routeName,
+                        pageWidget: PanelTabBarNavigationSample(),
                         index: _indexList[18],
                         onSelect: _onSelectedList[18],
                         isSelected: _isSelectedList[18]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.navigationbar,
-                        routeName: PanelNavigationBarSample.routeName,
+                        pageWidget: PanelNavigationBarSample(),
                         index: _indexList[19],
                         onSelect: _onSelectedList[19],
                         isSelected: _isSelectedList[19]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.avatar,
-                        routeName: PanelAvatarSample.routeName,
+                        pageWidget: PanelAvatarSample(),
                         index: _indexList[20],
                         onSelect: _onSelectedList[20],
                         isSelected: _isSelectedList[20]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.lightbox,
-                        routeName: PanelLightBoxSample.routeName,
+                        pageWidget: PanelLightBoxSample(),
                         index: _indexList[21],
                         onSelect: _onSelectedList[21],
                         isSelected: _isSelectedList[21]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.zoomableimage,
-                        routeName: PanelZoomableImageSample.routeName,
+                        pageWidget: PanelZoomableImageSample(),
                         index: _indexList[22],
                         onSelect: _onSelectedList[22],
                         isSelected: _isSelectedList[22]),
-                    nextLevelNavigate(
+                    nextLevel(
                         title: AppLocalizations.of(context)!.modal,
-                        routeName: PanelModalSample.routeName,
+                        pageWidget: PanelModalSample(),
                         index: _indexList[23],
                         onSelect: _onSelectedList[23],
                         isSelected: _isSelectedList[23]),
                     nextLevelExpandedComplex(
                       expansionTitle: AppLocalizations.of(context)!.card,
                       expansionWidgetList: [
-                        nextLevelNavigate(
+                        nextLevel(
                             title: AppLocalizations.of(context)!.primarycard,
-                            routeName: PanelPrimaryCardSample.routeName,
+                            pageWidget: PanelPrimaryCardSample(),
                             index: _indexList[24],
                             onSelect: _onSelectedList[24],
                             isSelected: _isSelectedList[24]),
-                        nextLevelNavigate(
+                        nextLevel(
                             title: AppLocalizations.of(context)!.scrollablecard,
-                            routeName: PanelScrollableCardSample.routeName,
+                            pageWidget: PanelScrollableCardSample(),
                             index: _indexList[25],
                             onSelect: _onSelectedList[25],
                             isSelected: _isSelectedList[25]),
-                        nextLevelNavigate(
+                        nextLevel(
                             title: AppLocalizations.of(context)!.imagecard,
-                            routeName: PanelImageCardSample.routeName,
+                            pageWidget: PanelImageCardSample(),
                             index: _indexList[26],
                             onSelect: _onSelectedList[26],
                             isSelected: _isSelectedList[26]),
@@ -319,37 +320,37 @@ class _DrawerPageState extends State<DrawerPage> {
                 ),
                 firstLevelExpandedComplex(
                     expansionTitle:
-                        AppLocalizations.of(context)!.advancedcomponents,
+                    AppLocalizations.of(context)!.advancedcomponents,
                     iconPath:
-                        "packages/es_flutter_component/assets/svgs/advanced.svg",
+                    "packages/es_flutter_component/assets/svgs/advanced.svg",
                     expansionWidgetList: [
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.toastmessage,
-                          routeName: PanelToastSample.routeName,
+                          pageWidget: PanelToastSample(),
                           index: _indexList[27],
                           onSelect: _onSelectedList[27],
                           isSelected: _isSelectedList[27]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.tutorial,
-                          routeName: PanelTutorialSample.routeName,
+                          pageWidget: PanelTutorialSample(),
                           index: _indexList[28],
                           onSelect: _onSelectedList[28],
                           isSelected: _isSelectedList[28]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.tooltip,
-                          routeName: PanelTooltipSample.routeName,
+                          pageWidget: PanelTooltipSample(),
                           index: _indexList[29],
                           onSelect: _onSelectedList[29],
                           isSelected: _isSelectedList[29]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.sweetalert,
-                          routeName: PanelSweetAlertSample.routeName,
+                          pageWidget: PanelSweetAlertSample(),
                           index: _indexList[30],
                           onSelect: _onSelectedList[30],
                           isSelected: _isSelectedList[30]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.treelist,
-                          routeName: PanelTreeListSample.routeName,
+                          pageWidget: PanelTreeListSample(),
                           index: _indexList[31],
                           onSelect: _onSelectedList[31],
                           isSelected: _isSelectedList[31]),
@@ -358,46 +359,46 @@ class _DrawerPageState extends State<DrawerPage> {
                 firstLevelExpandedComplex(
                     expansionTitle: AppLocalizations.of(context)!.form,
                     iconPath:
-                        "packages/es_flutter_component/assets/svgs/form.svg",
+                    "packages/es_flutter_component/assets/svgs/form.svg",
                     expansionWidgetList: [
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.primaryform,
-                          routeName: PanelPrimaryFormSample.routeName,
+                          pageWidget: PanelPrimaryFormSample(),
                           onSelect: _onSelectedList[32],
                           index: _indexList[32],
                           isSelected: _isSelectedList[32]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.customform,
-                          routeName: PanelCustomFormSample.routeName,
+                          pageWidget: PanelCustomFormSample(),
                           onSelect: _onSelectedList[33],
                           index: _indexList[33],
                           isSelected: _isSelectedList[33]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.advancedform,
-                          routeName: PanelAdvancedFormSample.routeName,
+                          pageWidget: PanelAdvancedFormSample(),
                           onSelect: _onSelectedList[34],
                           index: _indexList[34],
                           isSelected: _isSelectedList[34]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.validateform,
-                          routeName: PanelValidateFormSample.routeName,
+                          pageWidget: PanelValidateFormSample(),
                           onSelect: _onSelectedList[35],
                           index: _indexList[35],
                           isSelected: _isSelectedList[35]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.stepperform,
-                          routeName: PanelStepperFormSample.routeName,
+                          pageWidget: PanelStepperFormSample(),
                           onSelect: _onSelectedList[36],
                           index: _indexList[36],
                           isSelected: _isSelectedList[36]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.texteditor,
-                          routeName: PanelTextEditorSample.routeName,
+                          pageWidget: PanelTextEditorSample(),
                           onSelect: _onSelectedList[37],
                           index: _indexList[37],
                           isSelected: _isSelectedList[37]),
                     ]),
-                firstLevelNavigate(
+                firstLevel(
                   tilePadding: EdgeInsets.symmetric(
                     vertical: StructureBuilder.dims!.h1Padding * 1.7,
                     horizontal: StructureBuilder.dims!.h1Padding,
@@ -406,37 +407,37 @@ class _DrawerPageState extends State<DrawerPage> {
                   onSelect: _onSelectedList[38],
                   isSelected: _isSelectedList[38],
                   iconPath:
-                      "packages/es_flutter_component/assets/svgs/emojihappy.svg",
+                  "packages/es_flutter_component/assets/svgs/emojihappy.svg",
                   title: AppLocalizations.of(context)!.icons,
-                  routeName: PanelIconsSample.routeName,
+                  pageWidget: PanelIconsSample(),
                 ),
                 firstLevelExpandedComplex(
                     expansionTitle:
-                        AppLocalizations.of(context)!.authentication,
+                    AppLocalizations.of(context)!.authentication,
                     iconPath:
-                        "packages/es_flutter_component/assets/svgs/profilecircle.svg",
+                    "packages/es_flutter_component/assets/svgs/profilecircle.svg",
                     expansionWidgetList: [
                       nextLevelNavigate(
                           title: AppLocalizations.of(context)!.signin,
-                          routeName: EsSignin.routeName,
+                          pageWidget: EsSignin(),
                           onSelect: _onSelectedList[_currentIndex],
                           index: _indexList[_currentIndex],
                           isSelected: _isSelectedList[39]),
                       nextLevelNavigate(
                           title: AppLocalizations.of(context)!.login,
-                          routeName: EsLogin.routeName,
+                          pageWidget: EsLogin(),
                           onSelect: _onSelectedList[_currentIndex],
                           index: _indexList[_currentIndex],
                           isSelected: _isSelectedList[40]),
                       nextLevelNavigate(
                           title: AppLocalizations.of(context)!.recoverpassword,
-                          routeName: EsRecoverPassword.routeName,
+                          pageWidget: EsRecoverPassword(),
                           onSelect: _onSelectedList[_currentIndex],
                           index: _indexList[_currentIndex],
                           isSelected: _isSelectedList[41]),
                       nextLevelNavigate(
                           title: AppLocalizations.of(context)!.lockscreen,
-                          routeName: EsLockScreen.routeName,
+                          pageWidget: EsLockScreen(),
                           onSelect: _onSelectedList[_currentIndex],
                           index: _indexList[_currentIndex],
                           isSelected: _isSelectedList[42]),
@@ -445,47 +446,47 @@ class _DrawerPageState extends State<DrawerPage> {
                 firstLevelExpandedComplex(
                     expansionTitle: AppLocalizations.of(context)!.pages,
                     iconPath:
-                        "packages/es_flutter_component/assets/svgs/pages.svg",
+                    "packages/es_flutter_component/assets/svgs/pages.svg",
                     expansionWidgetList: [
-                      nextLevelNavigate(
+                      nextLevel(
                           title: "Profile",
-                          routeName: PanelProfileSample.routeName,
+                          pageWidget: PanelProfileSample(),
                           onSelect: _onSelectedList[43],
                           index: _indexList[43],
                           isSelected: _isSelectedList[43]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.bill,
-                          routeName: PanelBillSample.routeName,
+                          pageWidget: PanelBillSample(),
                           onSelect: _onSelectedList[44],
                           index: _indexList[44],
                           isSelected: _isSelectedList[44]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.timeline,
-                          routeName: PanelTimelineSample.routeName,
+                          pageWidget: PanelTimelineSample(),
                           onSelect: _onSelectedList[45],
                           index: _indexList[45],
                           isSelected: _isSelectedList[45]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.pricecard,
-                          routeName: PanelPriceCardSample.routeName,
+                          pageWidget: PanelPriceCardSample(),
                           onSelect: _onSelectedList[46],
                           index: _indexList[46],
                           isSelected: _isSelectedList[46]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.searchresult,
-                          routeName: PanelSearchResultSample.routeName,
+                          pageWidget: PanelSearchResultSample(),
                           onSelect: _onSelectedList[47],
                           index: _indexList[47],
                           isSelected: _isSelectedList[47]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: "Map",
-                          routeName: PanelMapSample.routeName,
+                          pageWidget: PanelMapSample(),
                           onSelect: _onSelectedList[48],
                           index: _indexList[48],
                           isSelected: _isSelectedList[48]),
-                      nextLevelNavigate(
+                      nextLevel(
                           title: AppLocalizations.of(context)!.emptyscreen,
-                          routeName: PanelEmptyScreenSample.routeName,
+                          pageWidget: PanelEmptyScreenSample(),
                           onSelect: _onSelectedList[49],
                           index: _indexList[49],
                           isSelected: _isSelectedList[49]),
@@ -494,19 +495,19 @@ class _DrawerPageState extends State<DrawerPage> {
                           expansionWidgetList: [
                             nextLevelNavigate(
                                 title: "404",
-                                routeName: Es404Error.routeName,
+                                pageWidget: Es404Error(),
                                 onSelect: _onSelectedList[_currentIndex],
                                 index: _indexList[_currentIndex],
                                 isSelected: _isSelectedList[50]),
                             nextLevelNavigate(
                                 title: "404(2)",
-                                routeName: EsOther404.routeName,
+                                pageWidget: EsOther404(),
                                 onSelect: _onSelectedList[_currentIndex],
                                 index: _indexList[_currentIndex],
                                 isSelected: _isSelectedList[51]),
                             nextLevelNavigate(
                                 title: AppLocalizations.of(context)!.repairs,
-                                routeName: EsRepairs.routeName,
+                                pageWidget: EsRepairs(),
                                 onSelect: _onSelectedList[_currentIndex],
                                 index: _indexList[_currentIndex],
                                 isSelected: _isSelectedList[52]),
@@ -516,32 +517,32 @@ class _DrawerPageState extends State<DrawerPage> {
                 firstLevelExpandedComplex(
                     expansionTitle: AppLocalizations.of(context)!.menulevel,
                     iconPath:
-                        "packages/es_flutter_component/assets/svgs/layer.svg",
+                    "packages/es_flutter_component/assets/svgs/layer.svg",
                     expansionWidgetList: [
                       nextLevelExpandedComplex(
                         expansionTitle: AppLocalizations.of(context)!.menulevel,
                         expansionWidgetList: [
                           nextLevelExpandedComplex(
                             expansionTitle:
-                                AppLocalizations.of(context)!.menulevel,
+                            AppLocalizations.of(context)!.menulevel,
                             expansionWidgetList: [
                               nextLevelExpandedComplex(
                                 expansionTitle:
-                                    AppLocalizations.of(context)!.menulevel,
+                                AppLocalizations.of(context)!.menulevel,
                                 expansionWidgetList: [
                                   nextLevelExpandedComplex(
                                     expansionTitle:
-                                        AppLocalizations.of(context)!.menulevel,
+                                    AppLocalizations.of(context)!.menulevel,
                                     expansionWidgetList: [
                                       nextLevelExpandedComplex(
                                         expansionTitle:
-                                            AppLocalizations.of(context)!
-                                                .menulevel,
+                                        AppLocalizations.of(context)!
+                                            .menulevel,
                                         expansionWidgetList: [
                                           nextLevelExpandedComplex(
                                             expansionTitle:
-                                                AppLocalizations.of(context)!
-                                                    .menulevel,
+                                            AppLocalizations.of(context)!
+                                                .menulevel,
                                             expansionWidgetList: [],
                                           ),
                                         ],
@@ -569,14 +570,14 @@ class _DrawerPageState extends State<DrawerPage> {
     );
   }
 
-  Widget firstLevelNavigate(
+  Widget firstLevel(
       {required String iconPath,
-      required String title,
-      required int index,
-      required void Function() onSelect,
-      EdgeInsetsGeometry? tilePadding,
-      String? routeName,
-      bool? isSelected}) {
+        required String title,
+        required int index,
+        required void Function() onSelect,
+        EdgeInsetsGeometry? tilePadding,
+        Widget? pageWidget,
+        bool? isSelected}) {
     return InkWell(
       hoverColor: StructureBuilder.styles!.primaryLightColor.withOpacity(.2),
       child: Container(
@@ -587,8 +588,8 @@ class _DrawerPageState extends State<DrawerPage> {
         decoration: isSelected ?? false
             ? selectedBoxDecoration()
             : BoxDecoration(
-                borderRadius: BorderRadius.all(
-                    Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
+            borderRadius: BorderRadius.all(
+                Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
         child: Stack(
           children: [
             Positioned.fill(
@@ -627,19 +628,19 @@ class _DrawerPageState extends State<DrawerPage> {
       ),
       onTap: () {
         onSelect();
-        routeName == null
+        pageWidget == null
             ? null
-             :Navigator.pushNamed(context, routeName);
+            : CenterScreen.globalKey.currentState?.changePage(pageWidget);
       },
     );
   }
 
   Widget nextLevel(
       {required String title,
-      required int index,
-      required void Function() onSelect,
-      Widget? pageWidget,
-      bool? isSelected}) {
+        required int index,
+        required void Function() onSelect,
+        Widget? pageWidget,
+        bool? isSelected}) {
     return InkWell(
       hoverColor: StructureBuilder.styles!.primaryLightColor.withOpacity(.2),
       child: Container(
@@ -650,9 +651,9 @@ class _DrawerPageState extends State<DrawerPage> {
         decoration: isSelected ?? false
             ? selectedBoxDecoration()
             : BoxDecoration(
-                // color: Colors.transparent,
-                borderRadius: BorderRadius.all(
-                    Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
+          // color: Colors.transparent,
+            borderRadius: BorderRadius.all(
+                Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
         child: Container(
           padding: EdgeInsets.symmetric(
             vertical: StructureBuilder.dims!.h2Padding,
@@ -691,10 +692,10 @@ class _DrawerPageState extends State<DrawerPage> {
 
   Widget nextLevelNavigate(
       {required String title,
-      required int index,
-      required void Function() onSelect,
-      String? routeName,
-      bool? isSelected}) {
+        required int index,
+        required void Function() onSelect,
+        Widget? pageWidget,
+        bool? isSelected}) {
     return InkWell(
       hoverColor: StructureBuilder.styles!.primaryLightColor.withOpacity(.2),
       child: Container(
@@ -705,9 +706,9 @@ class _DrawerPageState extends State<DrawerPage> {
         decoration: isSelected ?? false
             ? selectedBoxDecoration()
             : BoxDecoration(
-                color: Colors.transparent,
-                borderRadius: BorderRadius.all(
-                    Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
+            color: Colors.transparent,
+            borderRadius: BorderRadius.all(
+                Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
         child: Container(
           padding: EdgeInsets.symmetric(
             vertical: StructureBuilder.dims!.h2Padding,
@@ -737,13 +738,12 @@ class _DrawerPageState extends State<DrawerPage> {
       ),
       onTap: () {
         onSelect();
-        routeName == null
+        pageWidget == null
             ? null
-            :Navigator.pushNamed(context, routeName);
-            // : Navigator.push(
-            //     context,
-            //     MaterialPageRoute(builder: (context) => pageWidget),
-            //   );
+            : Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => pageWidget),
+        );
       },
     );
   }
@@ -771,7 +771,7 @@ class _DrawerPageState extends State<DrawerPage> {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
                   Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
-          title: firstLevelNavigate(
+          title: firstLevel(
             index: 0,
             onSelect: () {},
             iconPath: iconPath,
@@ -779,7 +779,7 @@ class _DrawerPageState extends State<DrawerPage> {
           ),
           children: [
             ...List.generate(expansionWidgetList.length,
-                (index) => expansionWidgetList[index])
+                    (index) => expansionWidgetList[index])
           ],
         ),
       ),
@@ -810,7 +810,7 @@ class _DrawerPageState extends State<DrawerPage> {
           ),
           children: [
             ...List.generate(expansionWidgetList.length,
-                (index) => expansionWidgetList[index])
+                    (index) => expansionWidgetList[index])
           ],
         ),
       ),
@@ -822,7 +822,7 @@ class _DrawerPageState extends State<DrawerPage> {
       color: StructureBuilder.styles!.primaryColor,
       // color: Colors.transparent,
       borderRadius:
-          BorderRadius.circular(StructureBuilder.dims!.h0BorderRadius),
+      BorderRadius.circular(StructureBuilder.dims!.h0BorderRadius),
       // border: Border.all(color: StructureBuilder.styles!.primaryLightColor, width: 2),
       boxShadow: [
         BoxShadow(

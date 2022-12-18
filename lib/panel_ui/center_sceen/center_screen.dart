@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../panelItems/panel_components/panel_chart_sample.dart';
+import '../../panel_items/panel_chart_sample.dart';
 
 
 
