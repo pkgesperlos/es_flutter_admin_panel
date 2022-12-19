@@ -46,7 +46,8 @@ class _PanelTextEditorSampleState extends State<PanelTextEditorSample> {
           ),
           title:AppLocalizations.of(context)!.quilltexteditor,
           information:
-          "It is a quill Text Editor located in: \n es_flutter_component>lib/es_form/es_text_editor/es_text_editor.dart"
+          "It is a quill Text Editor located in: \n es_flutter_component/lib/components/es_form/es_text_editor/es_text_editor.dart"
+              "\n the  quill Text Editor package is added in pubspec.yaml 's dependencies \n "
               " \n and is used as: \n "
               """EsTextEditor(),"""),
     ];

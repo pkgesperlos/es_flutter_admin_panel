@@ -20,7 +20,7 @@ import '../../panel_items/panel_pages/panel_search_result_sample.dart';
 import '../../panel_items/panel_pages/panel_timeline_sample.dart';
 import '../../panel_items/panel_components/panel_accardion_sample.dart';
 import 'package:es_flutter_admin_panel/panel_ui/center_sceen/center_screen.dart';
-import 'package:es_flutter_admin_panel/panel_ui/images/responsive_layout.dart';
+import 'package:es_flutter_admin_panel/panel_ui/structure_images/responsive_layout.dart';
 import '../../panel_items/panel_pages/panel_empty_screen_sample.dart';
 import '../../panel_items/panel_authenticate/es_login.dart';
 import '../../panel_items/panel_authenticate/es_recover_password.dart';

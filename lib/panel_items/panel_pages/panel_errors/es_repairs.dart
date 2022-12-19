@@ -1,5 +1,5 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:es_flutter_admin_panel/panel_ui/images/responsive_layout.dart';
+import 'package:es_flutter_admin_panel/panel_ui/structure_images/responsive_layout.dart';
 import 'package:es_flutter_admin_panel/language_change_provider.dart';
 import 'package:es_flutter_admin_panel/panel_ui/app_bar/menu_drop_down_items.dart';
 import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';

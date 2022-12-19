@@ -1,6 +1,6 @@
 
 
-import 'package:es_flutter_admin_panel/panel_ui/images/responsive_layout.dart';
+import 'package:es_flutter_admin_panel/panel_ui/structure_images/responsive_layout.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

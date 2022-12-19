@@ -101,7 +101,7 @@ class _PanelStepperFormSampleState extends State<PanelStepperFormSample> {
               )),
           title: AppLocalizations.of(context)!.stepperwithoutvalidationfield,
           information:
-              "It is a stepper without  validation field located in: \n es_flutter_component>lib/es_stepper/es_stepper.dart \n and is used as: \n "
+              "It is a stepper without  validation field located in: \n es_flutter_component/lib/components/es_stepper/es_stepper.dart \n and is used as: \n "
               """EsStepper(
                 stepWidgets: _stepWidgets1,
                 titleList: ["step1","step2","step3"],
@@ -123,7 +123,7 @@ class _PanelStepperFormSampleState extends State<PanelStepperFormSample> {
               )),
           title: AppLocalizations.of(context)!.stepperformwithvalidationfields,
           information:
-              "It is a stepper form with validation fields located in: \n es_flutter_component>lib/es_stepper/es_stepper.dart \n and is used as: \n "
+              "It is a stepper form with validation fields located in: \n es_flutter_component/lib/components/es_stepper/es_stepper.dart \n and is used as: \n "
               """ EsStepper(
                 stepWidgets: _stepWidgets2,
                 titleList: ["step1","step2","step3"],
@@ -183,7 +183,7 @@ class _PanelStepperFormSampleState extends State<PanelStepperFormSample> {
               )),
           title: AppLocalizations.of(context)!.verticalstepperform,
           information:
-              "It is a vertical stepper form located in: \n es_flutter_component>lib/es_stepper/es_stepper.dart \n and is used as: \n "
+              "It is a vertical stepper form located in: \n es_flutter_component/lib/components/es_stepper/es_stepper.dart \n and is used as: \n "
               """ EsStepper(
                 direction: StepperType.vertical,
                 stepWidgets: _stepWidgets1,

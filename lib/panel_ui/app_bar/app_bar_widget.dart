@@ -13,7 +13,7 @@ import 'package:provider/provider.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'package:es_flutter_admin_panel/panel_ui/images/responsive_layout.dart';
+import 'package:es_flutter_admin_panel/panel_ui/structure_images/responsive_layout.dart';
 import '../components/search_text_field.dart';
 import 'menu_drop_down_items.dart';
 

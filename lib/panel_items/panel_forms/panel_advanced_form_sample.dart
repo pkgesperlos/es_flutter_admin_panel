@@ -13,6 +13,7 @@ import 'package:es_flutter_component/components/es_form/es_label_input/es_label_
 import 'package:es_flutter_component/components/es_form/es_slider/es_range_slider.dart';
 import 'package:es_flutter_component/components/es_form/es_slider/es_slider.dart';
 import 'package:es_flutter_component/components/es_form/es_text_field/es_masked_input_textfield/es_masked_input_text_field.dart';
+import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
@@ -41,6 +42,7 @@ class PanelAdvancedFormSample extends StatefulWidget {
 
 class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
   EsFilePickerController _filePickerController = EsFilePickerController();
+  TextEditingController _controller = TextEditingController();
 
   double _value1 = 0;
   double _value2 = 0;
@@ -190,6 +192,11 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
                           filter: {"#": RegExp(r'[0-9]')},
                           type: MaskAutoCompletionType.lazy),
                       customController: EditTextController(),
+                      // controller: _controller,
+                      // onEditingComplete: (){
+                      //  print("okkkkkkkkkkkkkkkk") ;
+                      //  print(_controller) ;
+                      // },
                     ),
                   ],
                 ),
@@ -203,13 +210,20 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
                       big: true,
                       factor: 2,
                     ),
-                    EsMaskedInputTextField(
-                      textAlign: TextAlign.left,
-                      hint: "",
-                      label: AppLocalizations.of(context)!.currencyinput,
-                      maskTextInputFormatter:
-                          ThousandsFormatter(allowFraction: true),
-                      customController: EditTextController(),
+                    Row(
+                      children: [
+                        EsOrdinaryText(
+                          AppLocalizations.of(context)!.currencyunit,),
+                        EsHSpacer(),
+                        EsMaskedInputTextField(
+                          textAlign: TextAlign.left,
+                          hint: "",
+                          label: AppLocalizations.of(context)!.currencyinput,
+                          maskTextInputFormatter:
+                              ThousandsFormatter(allowFraction: true),
+                          customController: EditTextController(),
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -390,7 +404,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
           title: AppLocalizations.of(context)!.sliderinput,
           information:
               "these are slider input text fields  in this panel by flutter code. \n"
-              "located in: \n es_flutter_component>lib/es_form/es_slider/es_slider.dart \n  "
+              "located in: \n es_flutter_component/lib/components/es_form/es_slider/es_slider.dart \n  "
               "  and is used as: \n "
               """EsRangeSlider(
                     min: 2000,
@@ -433,7 +447,7 @@ class _PanelAdvancedFormSampleState extends State<PanelAdvancedFormSample> {
           ),
           title: AppLocalizations.of(context)!.labelinput,
           information: "these are label inputs in this panel by flutter code.  "
-              "Some of the components are located in: \n es_flutter_component>lib/es_form/es_drop_down \n  and is used as: \n."
+              "Some of the components are located in: \n es_flutter_component/lib/components/es_form/es_drop_down \n  and is used as: \n."
               """  EsLabelInput(labelList: labelList2),"""
               "\n   where \n"
               """ 

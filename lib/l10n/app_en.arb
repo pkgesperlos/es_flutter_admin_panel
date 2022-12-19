@@ -93,10 +93,11 @@
   "labelindifferentsizesandborderradiuss": "Label in different sizes and border radius's",
   "labeltitle": "Different kinds of label with various sizes and contents are available in panel by flutter code.",
 
-  "breadcrumb": "Breadcrumb",
+  "breadcrumb": "Bread crumb",
   "breadcrumbwithsolidstructureindifferentcolors": "Breadcrumb with solid structure in different colors",
   "breadcrumbwithsolidstructureindifferentsizes": "Breadcrumb with solid structure in different sizes",
   "breadcrumbwithiconseparator": "Breadcrumb with icon separator",
+  "staticbreadcrumb": "Static bread crumb",
   "breadcrumbwithtypingelementsseparator": "Breadcrumb with typing elements separator",
   "breadcrumbtitle": "Different kinds of breadcrumb styles are available in panel by flutter code, for more information press info button in each card.",
 
@@ -315,6 +316,7 @@
   "item": "Item number",
 
   "theinputlengthistooshort": "The input length is too short!",
+  "theinputmustberepeated": "The input must be repeated",
   "youshouldacceptthetermsandconditionsbeforeregister": "You should accept the Terms and Conditions before register.",
   "acceptthetermsandconditions": "Accept the Terms and Conditions.",
 
@@ -332,6 +334,8 @@
 
 
   "quilltexteditor": "Quill text editor",
+  "htmltexteditor": "HTML text editor",
+  "htmltexteditortitle": "HTML text editor is available in panel by flutter code.",
   "quilltexteditortitle": "Quill text editor is available in panel by flutter code.",
 
   "panelmanagement": "Panel management",

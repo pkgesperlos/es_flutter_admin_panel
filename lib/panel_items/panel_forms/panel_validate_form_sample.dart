@@ -348,7 +348,7 @@ class _PanelValidateFormSampleState extends State<PanelValidateFormSample> {
           ),
           title: AppLocalizations.of(context)!.validationforms,
           information:
-              "It is form controls located in: \n es_flutter_component>lib/es_form \n and is used as: \n "
+              "It is form controls located in: \n es_flutter_component/lib/components/es_form \n and is used as: \n "
               """Wrap(
               direction: Axis.horizontal,
               spacing: StructureBuilder.dims!.h0Padding,

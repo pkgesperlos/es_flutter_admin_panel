@@ -2,7 +2,7 @@
 
 import 'package:es_flutter_admin_panel/panel_ui/app_bar/app_bar_widget.dart';
 import 'package:es_flutter_admin_panel/panel_ui/drawer/drawer_page.dart';
-import 'package:es_flutter_admin_panel/panel_ui/images/responsive_layout.dart';
+import 'package:es_flutter_admin_panel/panel_ui/structure_images/responsive_layout.dart';
 import 'package:es_flutter_admin_panel/panel_ui/center_sceen/center_screen.dart';
 import 'package:flutter/material.dart';
 

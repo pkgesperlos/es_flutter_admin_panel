@@ -1,24 +1,31 @@
+
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/components/es_map/es_show_location.dart';
+import 'package:es_flutter_component/components/es_form/es_text_editor/es_html_text_editor.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 
-class PanelMapSample extends StatefulWidget {
-  static const routeName = '/panelMapSample';
 
-  PanelMapSample({Key? key}) : super(key: key);
+class PanelHtmlTextEditorSample extends StatefulWidget {
+
+  static const routeName = '/panelHtmlTextEditorSample';
+
+  PanelHtmlTextEditorSample({Key? key}) : super(key: key);
 
   @override
-  State<PanelMapSample> createState() => _PanelMapSampleState();
+  State<PanelHtmlTextEditorSample> createState() => _PanelHtmlTextEditorSampleState();
 }
 
-class _PanelMapSampleState extends State<PanelMapSample> {
+class _PanelHtmlTextEditorSampleState extends State<PanelHtmlTextEditorSample> {
+
+
   @override
   void initState() {
+    // TODO: implement initState
     super.initState();
   }
 
@@ -29,39 +36,31 @@ class _PanelMapSampleState extends State<PanelMapSample> {
 
   @override
   Widget build(BuildContext context) {
+
     List list = [
       ContainerItems(
           widget: Container(
-            clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(
-                    Radius.circular(StructureBuilder.dims!.h0BorderRadius))),
-            height: 700,
             width: double.infinity,
-            child: EsShowLocation(
-              latitude: 30.291314113953575,
-              longitude: 57.067726807889755,
-            ),
+            height: 1000,
+            child: HtmlTextEditor(title: '',),
+
           ),
-          title: AppLocalizations.of(context)!.map,
-          information: "It is a locatin map, \n "
-              "the syncfusion_flutter_maps package is added in pubspec.yaml 's dependencies \n "
-              "\n and is used as"
-              """ EsShowLocation(
-        latitude: 29.619307268182446,
-        longitude: 52.524025272119665,
-      ),"""),
+          title:AppLocalizations.of(context)!.htmltexteditor,
+          information:
+          "It is a html_editor_enhanced Text Editor located in: \n es_flutter_component/lib/components/es_form/es_text_editor/es_html_text_editor.dart"
+              "\n the html_editor_enhanced package is added in pubspec.yaml 's dependencies \n "
+              "\n and is used as: \n "
+              """EsTextEditor(),"""),
     ];
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
-    return Material(
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
-        child: Scaffold(
+        child:  Scaffold(
           backgroundColor: StructureBuilder.styles!.primaryDarkColor,
           body: SingleChildScrollView(
             child: Column(
               children: [
                 PageTitleContainer(
-                  title: AppLocalizations.of(context)!.maptitle,
+                  title: AppLocalizations.of(context)!.htmltexteditortitle,
                 ),
                 BootstrapContainer(
                     fluid: true,

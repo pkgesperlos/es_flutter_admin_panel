@@ -16,6 +16,7 @@ import 'package:es_flutter_component/components/es-chart/es_bar_chart.dart';
 import 'package:es_flutter_component/components/es-chart/es_radar_chart_sample.dart';
 import 'package:es_flutter_component/components/es-chart/es_scatter_chart_sample.dart';
 
+
 class PanelChartSample extends StatefulWidget {
 
   static const routeName = '/panelChartSample';

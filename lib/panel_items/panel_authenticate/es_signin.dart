@@ -1,4 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:es_flutter_admin_panel/panel_ui/app_bar/menu_drop_down_items.dart';
+import 'package:es_flutter_admin_panel/panel_ui/structure_images/responsive_layout.dart';
 import 'package:es_flutter_component/components/es_button/es_block_button.dart';
 import 'package:es_flutter_component/components/es_form/es_checkbox/es_custom_checkbox_form.dart';
 import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field_form.dart';
@@ -7,37 +9,32 @@ import 'package:es_flutter_component/components/es_text/es_header.dart';
 import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
 import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/es_text/es_title.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
-import 'package:es_flutter_admin_panel/panel_ui/app_bar/menu_drop_down_items.dart';
-import 'package:es_flutter_admin_panel/panel_ui/images/responsive_layout.dart';
+
 import '../../language_change_provider.dart';
 
 class EsSignin extends StatefulWidget {
-
-
   static const routeName = '/esSignin';
 
   @override
   State<StatefulWidget> createState() {
     return _EsSignin();
-
   }
 }
 
-bool isChecked = true;
+
 
 class _EsSignin extends State<EsSignin> {
   List<DropdownMenuItem<String>> items = [];
   late GlobalKey dropdownKey;
   late String selectedValue;
-
+  bool isChecked = true;
   final _formkey = GlobalKey<FormState>();
-
+String _repeatedValue="";
   bool _value1 = false;
 
   @override
@@ -175,6 +172,9 @@ class _EsSignin extends State<EsSignin> {
                                     //     StructureBuilder.dims!.h0Padding * 6.5,
                                     //     StructureBuilder.dims!.h0Padding * 2),
                                     validator: (value) {
+                                        setState((){
+                                          _repeatedValue=value??"";
+                                                     });
                                       if (value!.length < 4) {
                                         return AppLocalizations.of(context)!
                                             .theinputlengthistooshort;
@@ -196,6 +196,11 @@ class _EsSignin extends State<EsSignin> {
                                         return AppLocalizations.of(context)!
                                             .theinputlengthistooshort;
                                       }
+
+                                      if (value!=_repeatedValue) {
+                                        return AppLocalizations.of(context)!
+                                            .theinputmustberepeated;
+                                      }
                                     },
                                   ),
                                 ),
@@ -209,24 +214,26 @@ class _EsSignin extends State<EsSignin> {
                               children: [
                                 (MediaQuery.of(context).size.width <= 300)
                                     ? Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        EsCustomCheckBoxForm(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          EsCustomCheckBoxForm(
                                             titleWidget: Container(),
                                             value: _value1,
                                             validator: (value) {
                                               if (value == false) {
-                                                return AppLocalizations.of(context)!
+                                                return AppLocalizations.of(
+                                                        context)!
                                                     .youshouldacceptthetermsandconditionsbeforeregister;
                                               }
                                             },
                                           ),
-                                        EsOrdinaryText(
-                                          AppLocalizations.of(context)!
-                                              .acceptthetermsandconditions,
-                                        ),
-                                      ],
-                                    )
+                                          EsOrdinaryText(
+                                            AppLocalizations.of(context)!
+                                                .acceptthetermsandconditions,
+                                          ),
+                                        ],
+                                      )
                                     : EsCustomCheckBoxForm(
                                         titleWidget: EsOrdinaryText(
                                           AppLocalizations.of(context)!
@@ -271,7 +278,7 @@ class _EsSignin extends State<EsSignin> {
                         children: [
                           InkWell(
                               onTap: () {
-                                Navigator.pushNamed(context, '/login');
+                                Navigator.pushNamed(context, '/esLogin');
                               },
                               child: EsOrdinaryText(
                                 AppLocalizations.of(context)!.haveanaccount,

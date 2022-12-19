@@ -42,15 +42,15 @@ class SearchTextField extends StatelessWidget {
             ),
             border: UnderlineInputBorder(
               borderSide:
-              BorderSide(color: StructureBuilder.styles!.primaryLightColor),
+              BorderSide(color: StructureBuilder.styles!.primaryColor),
             ),
             focusedBorder: UnderlineInputBorder(
               borderSide:
-              BorderSide(color: StructureBuilder.styles!.primaryLightColor),
+              BorderSide(color: StructureBuilder.styles!.primaryColor),
             ),
             enabledBorder: UnderlineInputBorder(
               borderSide:
-              BorderSide(color: StructureBuilder.styles!.primaryLightColor),
+              BorderSide(color: StructureBuilder.styles!.primaryColor),
             )
         ),
 

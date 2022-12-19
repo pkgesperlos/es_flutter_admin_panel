@@ -19,6 +19,7 @@ import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_dialog
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_dropdown_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_group_button_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_group_list_sample.dart';
+import 'package:es_flutter_admin_panel/panel_items/panel_forms/panel_html_text_editor_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_icons_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_cards/panel_image_card_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_label_sample.dart';
@@ -53,7 +54,7 @@ import 'package:es_flutter_admin_panel/panel_items/panel_pages/panel_profile_sam
 import 'package:es_flutter_admin_panel/panel_items/panel_pages/panel_search_result_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_pages/panel_timeline_sample.dart';
 import 'package:es_flutter_admin_panel/panel_ui/drawer/route_maker.dart';
-import 'package:es_flutter_admin_panel/panel_ui/images/widget_tree_panel.dart';
+import 'package:es_flutter_admin_panel/panel_ui/structure_images/widget_tree_panel.dart';
 import 'package:es_flutter_component/components/es_bread_crumb/app_navigator_observer.dart';
 import 'package:es_flutter_component/resources/constants/structure_config.dart';
 import 'package:es_flutter_component/resources/constants/structure_dims.dart';
@@ -176,6 +177,7 @@ class _MyApp extends State<MyApp> {
                       '/panelZoomableImageSample': (context) => RoutMaker(child: PanelZoomableImageSample()),
                       '/panelResponsiveTableSample': (context) => RoutMaker(child: PanelResponsiveTableSample()),
                       '/panelSimpleTableSample': (context) => RoutMaker(child: PanelSimpleTableSample()),
+                      '/panelHtmlTextEditorSample': (context) => RoutMaker(child: PanelHtmlTextEditorSample()),
 
 
 

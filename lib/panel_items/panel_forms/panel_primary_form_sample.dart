@@ -126,7 +126,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
           ),
           title: AppLocalizations.of(context)!.overview,
           information:"It is an overview of forms in this panel by flutter code  "
-              "the components are located in: \n es_flutter_component>lib/es_form \n"
+              "the components are located in: \n es_flutter_component/lib/components/es_form \n"
               " \n   where \n"
               """  bool _value1 = false;
   List<String> _value=List.generate(10, (index) => "");
@@ -235,7 +235,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
           ),
           title: AppLocalizations.of(context)!.horizontalform,
           information:
-              "It is Horizontal form located in: \n es_flutter_component>lib/es_form \n and is used as: \n "
+              "It is Horizontal form located in: \n es_flutter_component/lib/components/es_form \n and is used as: \n "
               """ Wrap(
               spacing: StructureBuilder.dims!.h0Padding,
               runSpacing: StructureBuilder.dims!.h0Padding,
@@ -466,7 +466,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
           ),
           title: AppLocalizations.of(context)!.formcontrols,
           information:
-          "It is form controls located in: \n es_flutter_component>lib/es_form \n and is used as: \n "
+          "It is form controls located in: \n es_flutter_component/lib/components/es_form \n and is used as: \n "
               """Wrap(
               spacing: StructureBuilder.dims!.h0Padding,
               runSpacing: StructureBuilder.dims!.h0Padding,
@@ -662,7 +662,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
           ),
           title: AppLocalizations.of(context)!.textfieldindifferentwidthandheight,
           information:
-              "these are text fields in different widths and heights located in: \n es_flutter_component>lib/es_form/es_text_field/es_text_field.dart \n and is used as: \n "
+              "these are text fields in different widths and heights located in: \n es_flutter_component/lib/components/es_form/es_text_field/es_text_field.dart \n and is used as: \n "
               """ EsTextField(
                   hint: AppLocalizations.of(context)!.textFieldHint,
                   label: AppLocalizations.of(context)!.textFieldHint,
@@ -778,7 +778,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
           ),
           title: AppLocalizations.of(context)!.dropdownbuttonsindifferentwidthandheight,
           information:
-              "these are Drop down buttons  in different widths and heights located in: \n es_flutter_component>lib/es_form/es_drop_down/es_drop_down.dart \n and is used as: \n "
+              "these are Drop down buttons  in different widths and heights located in: \n es_flutter_component/lib/components/es_form/es_drop_down/es_drop_down.dart \n and is used as: \n "
               """   IntrinsicWidth(
                   child: EsDropDown(
                   initialTitle: AppLocalizations.of(context)!.select,
@@ -854,7 +854,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
           ),
           title: AppLocalizations.of(context)!.readonlyfield,
           information:
-          "It is read only field located in: \n es_flutter_component>lib/es_form/es_text_field/es_text_field.dart \n and is used as: \n "
+          "It is read only field located in: \n es_flutter_component/lib/components/es_form/es_text_field/es_text_field.dart \n and is used as: \n "
               """Wrap(
               spacing: StructureBuilder.dims!.h0Padding,
               runSpacing: StructureBuilder.dims!.h0Padding,
@@ -908,7 +908,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
               child: EsSlider()),
           title: AppLocalizations.of(context)!.sliderinput,
           information:
-              "It is a text field located in: \n es_flutter_component>lib/es_form/es_slider/es_slider.dart \n and is used as: \n "
+              "It is a text field located in: \n es_flutter_component/lib/components/es_form/es_slider/es_slider.dart \n and is used as: \n "
               """EsSlider()"""),
 
     ];

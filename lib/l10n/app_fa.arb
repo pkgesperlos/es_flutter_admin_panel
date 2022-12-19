@@ -99,6 +99,7 @@
   "breadcrumbwithsolidstructureindifferentcolors": "صفحات تو در تو با ساختار توپر در رنگ های متفاوت",
   "breadcrumbwithsolidstructureindifferentsizes": "صفحات تو در تو با ساختار توپر در اندازه های متفاوت",
   "breadcrumbwithiconseparator": "صفحات تو در تو با آیکن جداکننده",
+  "staticbreadcrumb": "صفحات تو در تو ثابت",
   "breadcrumbwithtypingelementsseparator": "صفحات تو در تو با المان های تایپی جداکننده",
   "breadcrumbtitle": " انواع مدل های نمایش مسیر صفحات تو در تو در استایل های متفاوت  با استفاده از کدهای فلاتر در پنل در دسترس است، برای اطلاعات بیشتر روی دکمه اطلاعات هر کارد کلیک کنید.",
 
@@ -326,6 +327,7 @@
   "lormmid": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم",
   "lormshort": "لورم ایپسوم متن ساختگی",
   "theinputlengthistooshort": "ورودی با کاراکتر های بیشتری وارد کنید.",
+  "theinputmustberepeated": "ورودی باید تکرار شود.",
   "youshouldacceptthetermsandconditionsbeforeregister": "قبل از ثبت نام بایستی با قوانین و مقررات موافقت نمایید.",
   "acceptthetermsandconditions": "با قوانین و مقررات موافقم.",
   "pleaseselectoneitem": "لطفا یک مورد را انتخاب نمایید.",
@@ -342,6 +344,9 @@
 
   "quilltexteditor": "ویرایشگر متن Quill",
   "quilltexteditortitle": " ویرایشگر متن Quill با استفاده از کدهای فلاتر در پنل در دسترس است.",
+  "htmltexteditor": "ویرایشگر متن HTML",
+  "htmltexteditortitle": " ویرایشگر متن HTML با استفاده از کدهای فلاتر در پنل در دسترس است.",
+
 
   "panelmanagement": "مدیریت پنل",
   "fillfieldstocontinue": "برای ادامه اطلاعات خود را وارد کنید :",

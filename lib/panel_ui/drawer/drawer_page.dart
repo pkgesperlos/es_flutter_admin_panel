@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 
 import '../../panel_items/panel_advanced_components/panel_tutorial_sample.dart';
 import '../../panel_items/panel_authenticate/es_lock_screen.dart';
+import '../../panel_items/panel_forms/panel_html_text_editor_sample.dart';
 import '../../panel_items/panel_pages/panel_errors/es_404_error.dart';
 import '../../panel_items/panel_pages/panel_errors/es_other_404.dart';
 import '../../panel_items/panel_pages/panel_errors/es_repairs.dart';
@@ -19,7 +20,7 @@ import '../../panel_items/panel_pages/panel_search_result_sample.dart';
 import '../../panel_items/panel_pages/panel_timeline_sample.dart';
 import '../../panel_items/panel_components/panel_accardion_sample.dart';
 import 'package:es_flutter_admin_panel/panel_ui/center_sceen/center_screen.dart';
-import 'package:es_flutter_admin_panel/panel_ui/images/responsive_layout.dart';
+import 'package:es_flutter_admin_panel/panel_ui/structure_images/responsive_layout.dart';
 import '../../panel_items/panel_pages/panel_empty_screen_sample.dart';
 import '../../panel_items/panel_authenticate/es_login.dart';
 import '../../panel_items/panel_authenticate/es_recover_password.dart';
@@ -392,10 +393,17 @@ class _DrawerPageState extends State<DrawerPage> {
                           isSelected: _isSelectedList[36]),
                       nextLevelNavigate(
                           title: AppLocalizations.of(context)!.texteditor,
-                          routeName: PanelTextEditorSample.routeName,
+                          routeName: PanelHtmlTextEditorSample.routeName,
                           onSelect: _onSelectedList[37],
                           index: _indexList[37],
                           isSelected: _isSelectedList[37]),
+                   /*   nextLevelNavigate(
+                          title: AppLocalizations.of(context)!.texteditor+"2",
+                          routeName: PanelTextEditorSample.routeName,
+                          onSelect: _onSelectedList[37],
+                          index: _indexList[37],
+                          isSelected: _isSelectedList[37]),*/
+
                     ]),
                 firstLevelNavigate(
                   tilePadding: EdgeInsets.symmetric(
@@ -416,25 +424,25 @@ class _DrawerPageState extends State<DrawerPage> {
                     iconPath:
                         "packages/es_flutter_component/assets/svgs/profilecircle.svg",
                     expansionWidgetList: [
-                      nextLevelNavigate(
+                      nextLevelNavigatenotReplace(
                           title: AppLocalizations.of(context)!.signin,
                           routeName: EsSignin.routeName,
                           onSelect: _onSelectedList[_currentIndex],
                           index: _indexList[_currentIndex],
                           isSelected: _isSelectedList[39]),
-                      nextLevelNavigate(
+                      nextLevelNavigatenotReplace(
                           title: AppLocalizations.of(context)!.login,
                           routeName: EsLogin.routeName,
                           onSelect: _onSelectedList[_currentIndex],
                           index: _indexList[_currentIndex],
                           isSelected: _isSelectedList[40]),
-                      nextLevelNavigate(
+                      nextLevelNavigatenotReplace(
                           title: AppLocalizations.of(context)!.recoverpassword,
                           routeName: EsRecoverPassword.routeName,
                           onSelect: _onSelectedList[_currentIndex],
                           index: _indexList[_currentIndex],
                           isSelected: _isSelectedList[41]),
-                      nextLevelNavigate(
+                      nextLevelNavigatenotReplace(
                           title: AppLocalizations.of(context)!.lockscreen,
                           routeName: EsLockScreen.routeName,
                           onSelect: _onSelectedList[_currentIndex],
@@ -492,19 +500,19 @@ class _DrawerPageState extends State<DrawerPage> {
                       nextLevelExpandedComplex(
                           expansionTitle: AppLocalizations.of(context)!.errors,
                           expansionWidgetList: [
-                            nextLevelNavigate(
+                            nextLevelNavigatenotReplace(
                                 title: "404",
                                 routeName: Es404Error.routeName,
                                 onSelect: _onSelectedList[_currentIndex],
                                 index: _indexList[_currentIndex],
                                 isSelected: _isSelectedList[50]),
-                            nextLevelNavigate(
+                            nextLevelNavigatenotReplace(
                                 title: "404(2)",
                                 routeName: EsOther404.routeName,
                                 onSelect: _onSelectedList[_currentIndex],
                                 index: _indexList[_currentIndex],
                                 isSelected: _isSelectedList[51]),
-                            nextLevelNavigate(
+                            nextLevelNavigatenotReplace(
                                 title: AppLocalizations.of(context)!.repairs,
                                 routeName: EsRepairs.routeName,
                                 onSelect: _onSelectedList[_currentIndex],
@@ -556,11 +564,6 @@ class _DrawerPageState extends State<DrawerPage> {
                       ),
                     ]),
 
-                // buttonsInfo(
-                //     title:"Bill",
-                //     icon: Icons.circle,
-                //     page: PanelBillSample(),
-                //     pageRout: '/bill'),
               ],
             ),
           ),
@@ -629,16 +632,17 @@ class _DrawerPageState extends State<DrawerPage> {
         onSelect();
         routeName == null
             ? null
-             :Navigator.pushNamed(context, routeName);
+             :Navigator.pushReplacementNamed(context, routeName);
       },
     );
   }
 
-  Widget nextLevel(
+
+  Widget nextLevelNavigate(
       {required String title,
       required int index,
       required void Function() onSelect,
-      Widget? pageWidget,
+      String? routeName,
       bool? isSelected}) {
     return InkWell(
       hoverColor: StructureBuilder.styles!.primaryLightColor.withOpacity(.2),
@@ -650,7 +654,7 @@ class _DrawerPageState extends State<DrawerPage> {
         decoration: isSelected ?? false
             ? selectedBoxDecoration()
             : BoxDecoration(
-                // color: Colors.transparent,
+                color: Colors.transparent,
                 borderRadius: BorderRadius.all(
                     Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
         child: Container(
@@ -682,14 +686,17 @@ class _DrawerPageState extends State<DrawerPage> {
       ),
       onTap: () {
         onSelect();
-        pageWidget == null
+        routeName == null
             ? null
-            : CenterScreen.globalKey.currentState?.changePage(pageWidget);
+            :Navigator.pushReplacementNamed(context, routeName);
+            // : Navigator.push(
+            //     context,
+            //     MaterialPageRoute(builder: (context) => pageWidget),
+            //   );
       },
     );
   }
-
-  Widget nextLevelNavigate(
+  Widget nextLevelNavigatenotReplace(
       {required String title,
       required int index,
       required void Function() onSelect,
@@ -803,7 +810,7 @@ class _DrawerPageState extends State<DrawerPage> {
               color: Colors.transparent,
               borderRadius: BorderRadius.all(
                   Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
-          title: nextLevel(
+          title: nextLevelNavigate(
             index: 0,
             onSelect: () {},
             title: expansionTitle,

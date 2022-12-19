@@ -338,7 +338,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
               )),
           title: AppLocalizations.of(context)!.sliderinput,
           information:
-              "these are slider inputs in custom colors located in: \n es_flutter_component>lib/es_form/es_slider/es_slider.dart \n and is used as: \n "
+              "these are slider inputs in custom colors located in: \n es_flutter_component/lib/components/es_form/es_slider/es_slider.dart \n and is used as: \n "
               """EsSlider(
                 activeColor:
                     StructureBuilder.styles!.dangerColor().dangerRegular,
@@ -635,7 +635,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
           ),
           title: "disabled items",
           information: "these are disabled items in this panel by flutter code.  "
-              "Some of the components are located in: \n es_flutter_component>lib/es_form \n  ."),
+              "Some of the components are located in: \n es_flutter_component/lib/components/es_form \n  ."),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryDarkColor,
