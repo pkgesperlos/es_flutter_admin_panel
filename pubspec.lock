@@ -349,7 +349,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "155c918b13dd5329f356ea16d60a0cd7e24cc03c"
+      resolved-ref: "7bfcb827e592e6977782e3bbcf43b1370b5f7651"
       url: "git@github.com:pkgesperlos/es_flutter_component.git"
     source: git
     version: "1.0.0+1"
