@@ -11,6 +11,8 @@
 
   "adminMenu": "منوی ادمین",
 
+  "dashboard": "داشبورد",
+
   "charts": "نمودارها",
   "barChart": "نمودار میله ای",
   "circularChart": "نمودار دایروی",
@@ -328,7 +330,7 @@
   "lormshort": "لورم ایپسوم متن ساختگی",
   "theinputlengthistooshort": "ورودی با کاراکتر های بیشتری وارد کنید.",
   "theinputmustberepeated": "ورودی باید تکرار شود.",
-  "youshouldacceptthetermsandconditionsbeforeregister": "قبل از ثبت نام بایستی با قوانین و مقررات موافقت نمایید.",
+  "youshouldacceptthetermsandconditionsbeforeregister": "بایستی با قوانین و مقررات موافقت نمایید.",
   "acceptthetermsandconditions": "با قوانین و مقررات موافقم.",
   "pleaseselectoneitem": "لطفا یک مورد را انتخاب نمایید.",
   "pleaseselectavalue": "لطفا یک مقدار را انتخاب نمایید.",
@@ -467,7 +469,28 @@
   "primarydarkcolor": "رنگ اصلی تیره",
   "primarylightcolor": "رنگ اصلی روشن",
   "secondarycolor": "رنگ ثانویه",
-  "tritiarycolor": "رنگ سوم",
+  "secondarydarkcolor": "رنگ ثانویه تیره",
+  "secondarylightcolor": "رنگ ثانویه روشن",
+  "specificColor": "رنگ سوم",
+
+  "onprimarycolor": "رنگ مکمل اصلی",
+  "onsecondarycolor": "رنگ مکمل ثانویه",
+  "backgroundcolor": "رنگ پس زمینه",
+  "bordercolor": "رنگ حاشیه",
+  "hovercolor": "رنگ hover",
+  "buttonhovercolor": "رنگ hover دکمه",
+  "texthovercolor": "رنگ hover متن",
+  "cardcolor": "رنگ کارت",
+  "menucolor": "رنگ منو",
+  "shadowcolor": "رنگ سایه",
+  "dividercolor": "رنگ جدا کننده",
+  "iconcolor": "رنگ آیکن",
+
+  "primarycolors": "رنگ های اولیه",
+  "errorcolors": "رنگ های اخطار",
+  "successcolors": "رنگ ها ی موفقیت",
+  "warningcolors": "رنگ های هشدار",
+  "informationcolors": "رنگ های اطلاعات",
 
   "errorregularcolor": "رنگ معمولی خطر",
   "errorlightcolor": "رنگ روشن خطر",

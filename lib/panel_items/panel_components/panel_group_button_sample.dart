@@ -81,7 +81,7 @@ class PanelGroupButtonSample extends StatelessWidget {
                 widgetList: _widgetList2,
                 // onPressedList[]: ,
                 initialSelectedindex: 2,
-                unSelectedColor: StructureBuilder.styles!.tritiaryColor,
+                unSelectedColor: StructureBuilder.styles!.specificColor,
               ),
             ],
           )),
@@ -122,7 +122,7 @@ class PanelGroupButtonSample extends StatelessWidget {
                 widgetList: _widgetList1,
                 initialSelectedindex: 2,
                 // onPressedList[]: ,
-                unSelectedColor: StructureBuilder.styles!.tritiaryColor,
+                unSelectedColor: StructureBuilder.styles!.specificColor,
               ),
             ],
           )),
@@ -168,7 +168,7 @@ class PanelGroupButtonSample extends StatelessWidget {
                 // onPressedList[]: ,
                 maxSelected: 3,
                 initialSelectedindex: 2,
-                unSelectedColor: StructureBuilder.styles!.tritiaryColor,
+                unSelectedColor: StructureBuilder.styles!.specificColor,
               ),
             ],
           )),
@@ -212,7 +212,7 @@ class PanelGroupButtonSample extends StatelessWidget {
                 // onPressedList[]: ,
                 initialSelectedindex: 2,
                 isRadio: true,
-                unSelectedColor: StructureBuilder.styles!.tritiaryColor,
+                unSelectedColor: StructureBuilder.styles!.specificColor,
               ),
             ],
           )),
@@ -256,7 +256,7 @@ class PanelGroupButtonSample extends StatelessWidget {
                 // onPressedList[]: ,
                 disabledIndexes: [0, 3],
                 initialSelectedindex: 2,
-                unSelectedColor: StructureBuilder.styles!.tritiaryColor,
+                unSelectedColor: StructureBuilder.styles!.specificColor,
               ),
             ],
           )),
@@ -300,7 +300,7 @@ class PanelGroupButtonSample extends StatelessWidget {
                 // onPressedList[]: ,
                 direction: Axis.vertical,
                 initialSelectedindex: 2,
-                unSelectedColor: StructureBuilder.styles!.tritiaryColor,
+                unSelectedColor: StructureBuilder.styles!.specificColor,
               ),
             ],
           )),
@@ -323,9 +323,9 @@ class PanelGroupButtonSample extends StatelessWidget {
               """),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.primaryColor,
         child:  Scaffold(
-            backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+            backgroundColor: StructureBuilder.styles!.primaryColor,
             body: SingleChildScrollView(
             child: Column(
               children: [
@@ -336,7 +336,7 @@ class PanelGroupButtonSample extends StatelessWidget {
                     fluid: true,
                     padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

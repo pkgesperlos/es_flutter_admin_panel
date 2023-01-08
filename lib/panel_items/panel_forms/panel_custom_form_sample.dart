@@ -49,7 +49,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
 
   @override
   Widget build(BuildContext context) {
-    double _height = 700;
+    double _height = 500;
     List list = [
       ContainerItems(
           widget: Container(
@@ -64,7 +64,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                     runSpacing: StructureBuilder.dims!.h1Padding,
                     children: [
                       Checkbox(
-                          activeColor: StructureBuilder.styles!.primaryColor,
+                          activeColor: StructureBuilder.styles!.primaryDarkColor,
                           //The color to use when this checkbox is checked.
                           checkColor:
                               StructureBuilder.styles!.primaryLightColor,
@@ -210,7 +210,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
           information:
               "these are Checkbox in custom colors  and are used as: \n "
               """Checkbox(
-                          activeColor: StructureBuilder.styles!.primaryColor,
+                          activeColor: StructureBuilder.styles!.primaryDarkColor,
                           //The color to use when this checkbox is checked.
                           checkColor: StructureBuilder.styles!.primaryLightColor,
                           // The color to use for the check icon when this checkbox is checked.
@@ -361,7 +361,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                       Transform.scale(
                         scale: 0.7,
                         child: CupertinoSwitch(
-                          activeColor: StructureBuilder.styles!.primaryColor,
+                          activeColor: StructureBuilder.styles!.primaryDarkColor,
                           onChanged: (bool value) {
                             setState(() {
                               _value[6] = value;
@@ -638,9 +638,9 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
               "Some of the components are located in: \n es_flutter_component/lib/components/es_form \n  ."),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
         child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -652,7 +652,7 @@ class _PanelCustomFormSampleState extends State<PanelCustomFormSample> {
                     padding: EdgeInsets.symmetric(
                         horizontal: StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

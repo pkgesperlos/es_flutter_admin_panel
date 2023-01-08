@@ -38,7 +38,7 @@ class _PanelTabBarNavigationSampleState
   Widget build(BuildContext context) {
     int num=3;
     List<Widget> _tabList=List.generate(num, (index) => EsTitle("Tab${index+1}",
-      color: StructureBuilder.styles!.primaryColor,
+      color: StructureBuilder.styles!.primaryDarkColor,
     ));
 
     List<Widget> _complexTabList=List.generate(num, (index) {
@@ -65,11 +65,11 @@ class _PanelTabBarNavigationSampleState
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
-          color: StructureBuilder.styles!.primaryColor,
+          color: StructureBuilder.styles!.primaryDarkColor,
             size: StructureBuilder.dims!.h2IconSize,
           ),
           EsTitle("Page${index+1}",
-            color: StructureBuilder.styles!.primaryColor,
+            color: StructureBuilder.styles!.primaryDarkColor,
           ),
         ],
       ),
@@ -97,7 +97,7 @@ class _PanelTabBarNavigationSampleState
              \n   where \n
     int num=3;
     List<Widget> _tabList=List.generate(num, (index) => EsTitle("Tab\${index+1}",
-      color: StructureBuilder.styles!.primaryColor,
+      color: StructureBuilder.styles!.primaryDarkColor,
     ));
     List<Widget> _pageList=List.generate(num, (index) => Container(
       height: double.infinity,
@@ -106,11 +106,11 @@ class _PanelTabBarNavigationSampleState
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
-          color: StructureBuilder.styles!.primaryColor,
+          color: StructureBuilder.styles!.primaryDarkColor,
             size: StructureBuilder.dims!.h2IconSize,
           ),
           EsTitle("Page\${index+1}",
-            color: StructureBuilder.styles!.primaryColor,
+            color: StructureBuilder.styles!.primaryDarkColor,
           ),
         ],
       ),
@@ -131,7 +131,7 @@ class _PanelTabBarNavigationSampleState
                     );
                   },
                   selectedTabDecoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryColor,
+                    color: StructureBuilder.styles!.primaryDarkColor,
                     borderRadius: BorderRadius.all(Radius.circular(StructureBuilder.dims!.h1BorderRadius))
                   ),
                 )),
@@ -148,14 +148,14 @@ class _PanelTabBarNavigationSampleState
                     );
                   },
                   selectedTabDecoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryColor,
+                    color: StructureBuilder.styles!.primaryDarkColor,
                     borderRadius: BorderRadius.all(Radius.circular(StructureBuilder.dims!.h1BorderRadius))
                   ),
                 )
                     \n   where \n
     int num=3;
     List<Widget> _tabList=List.generate(num, (index) => EsTitle("Tab\${index+1}",
-      color: StructureBuilder.styles!.primaryColor,
+      color: StructureBuilder.styles!.primaryDarkColor,
     ));
     List<Widget> _pageList=List.generate(num, (index) => Container(
       height: double.infinity,
@@ -164,11 +164,11 @@ class _PanelTabBarNavigationSampleState
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
-          color: StructureBuilder.styles!.primaryColor,
+          color: StructureBuilder.styles!.primaryDarkColor,
             size: StructureBuilder.dims!.h2IconSize,
           ),
           EsTitle("Page\${index+1}",
-            color: StructureBuilder.styles!.primaryColor,
+            color: StructureBuilder.styles!.primaryDarkColor,
           ),
         ],
       ),
@@ -198,7 +198,7 @@ class _PanelTabBarNavigationSampleState
                     );
                   },
                   selectedTabDecoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryColor,
+                    color: StructureBuilder.styles!.primaryDarkColor,
                     borderRadius: BorderRadius.all(Radius.circular(StructureBuilder.dims!.h1BorderRadius))
                   ),
                 ),
@@ -226,11 +226,11 @@ class _PanelTabBarNavigationSampleState
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
-          color: StructureBuilder.styles!.primaryColor,
+          color: StructureBuilder.styles!.primaryDarkColor,
             size: StructureBuilder.dims!.h2IconSize,
           ),
           EsTitle("Page\${index+1}",
-            color: StructureBuilder.styles!.primaryColor,
+            color: StructureBuilder.styles!.primaryDarkColor,
           ),
         ],
       ),
@@ -296,9 +296,9 @@ class _PanelTabBarNavigationSampleState
 
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
         child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -311,7 +311,7 @@ class _PanelTabBarNavigationSampleState
                       horizontal: StructureBuilder.dims!.h0Padding,
                     ),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

@@ -4,15 +4,14 @@ import 'package:es_flutter_component/es_alert/es_alerts.dart';
 import 'package:es_flutter_component/es_button/es_icon_button.dart';
 import 'package:es_flutter_component/es_image/es_avatar_image.dart';
 import 'package:es_flutter_component/es_image/es_svg_icon.dart';
+import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-
 class PanelAlertSample extends StatelessWidget {
-
   static const routeName = '/panelAlertSample';
 
   const PanelAlertSample({Key? key}) : super(key: key);
@@ -23,10 +22,11 @@ class PanelAlertSample extends StatelessWidget {
       ContainerItems(
           widget: Container(
               child: Wrap(
-                spacing: StructureBuilder.dims!.h2Padding,
+            spacing: StructureBuilder.dims!.h2Padding,
             children: [
               EsIconButton(
-                EsSvgIcon("packages/es_flutter_component/assets/svgs/danger.svg",
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -39,7 +39,8 @@ class PanelAlertSample extends StatelessWidget {
                 },
               ),
               EsIconButton(
-                EsSvgIcon("packages/es_flutter_component/assets/svgs/CheckCircle.svg",
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -52,7 +53,8 @@ class PanelAlertSample extends StatelessWidget {
                 },
               ),
               EsIconButton(
-                EsSvgIcon("packages/es_flutter_component/assets/svgs/infocircle.svg",
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -65,7 +67,8 @@ class PanelAlertSample extends StatelessWidget {
                 },
               ),
               EsIconButton(
-                EsSvgIcon("packages/es_flutter_component/assets/svgs/Megaphone.svg",
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!
                       .informationColor()
@@ -100,10 +103,11 @@ class PanelAlertSample extends StatelessWidget {
       ContainerItems(
           widget: Container(
               child: Wrap(
-                spacing: StructureBuilder.dims!.h2Padding,
+            spacing: StructureBuilder.dims!.h2Padding,
             children: [
               EsIconButton(
-                EsSvgIcon("packages/es_flutter_component/assets/svgs/danger.svg",
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -121,7 +125,8 @@ class PanelAlertSample extends StatelessWidget {
                 },
               ),
               EsIconButton(
-                EsSvgIcon("packages/es_flutter_component/assets/svgs/CheckCircle.svg",
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -139,7 +144,8 @@ class PanelAlertSample extends StatelessWidget {
                 },
               ),
               EsIconButton(
-                EsSvgIcon("packages/es_flutter_component/assets/svgs/infocircle.svg",
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -157,7 +163,8 @@ class PanelAlertSample extends StatelessWidget {
                 },
               ),
               EsIconButton(
-                EsSvgIcon("packages/es_flutter_component/assets/svgs/Megaphone.svg",
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!
                       .informationColor()
@@ -200,10 +207,11 @@ class PanelAlertSample extends StatelessWidget {
       ContainerItems(
           widget: Container(
               child: Wrap(
-                spacing: StructureBuilder.dims!.h2Padding,
+            spacing: StructureBuilder.dims!.h2Padding,
             children: [
               EsIconButton(
-                EsSvgIcon("packages/es_flutter_component/assets/svgs/danger.svg",
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -213,7 +221,8 @@ class PanelAlertSample extends StatelessWidget {
                 },
               ),
               EsIconButton(
-                EsSvgIcon("packages/es_flutter_component/assets/svgs/CheckCircle.svg",
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -223,7 +232,8 @@ class PanelAlertSample extends StatelessWidget {
                 },
               ),
               EsIconButton(
-                EsSvgIcon("packages/es_flutter_component/assets/svgs/infocircle.svg",
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -260,7 +270,7 @@ class PanelAlertSample extends StatelessWidget {
       ContainerItems(
           widget: Container(
               child: Wrap(
-                spacing: StructureBuilder.dims!.h2Padding,
+            spacing: StructureBuilder.dims!.h2Padding,
             children: [
               EsIconButton(
                 EsSvgIcon(
@@ -371,7 +381,7 @@ class PanelAlertSample extends StatelessWidget {
       ContainerItems(
           widget: Container(
               child: Wrap(
-                spacing: StructureBuilder.dims!.h2Padding,
+            spacing: StructureBuilder.dims!.h2Padding,
             children: [
               EsIconButton(
                 EsSvgIcon(
@@ -487,7 +497,7 @@ class PanelAlertSample extends StatelessWidget {
       ContainerItems(
           widget: Container(
               child: Wrap(
-                spacing: StructureBuilder.dims!.h2Padding,
+            spacing: StructureBuilder.dims!.h2Padding,
             children: [
               EsIconButton(
                 EsSvgIcon(
@@ -501,19 +511,23 @@ class PanelAlertSample extends StatelessWidget {
                     context,
                     "message",
                     myContent: Column(
-
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         EsAvatarImage(
-                          path: "assets/images/img1.jpg",
-                          radius: StructureBuilder.dims!.h0Padding * 2,
+                          path: "assets/images/img2.jpg",
+                          radius: StructureBuilder.dims!.h0Padding,
+                        ),
+                        EsVSpacer(
+                          big: true,
+                          factor: 3,
                         ),
                         EsOrdinaryText(
                           AppLocalizations.of(context)!.lorm,
                           color: StructureBuilder.styles!.t1Color,
+                          align: TextAlign.start,
                         )
                       ],
                     ),
-
                   );
                 },
               ),
@@ -529,18 +543,23 @@ class PanelAlertSample extends StatelessWidget {
                     context,
                     "message",
                     myContent: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         EsAvatarImage(
-                          path: "assets/images/img1.jpg",
-                          radius: StructureBuilder.dims!.h0Padding * 2,
+                          path: "assets/images/img2.jpg",
+                          radius: StructureBuilder.dims!.h0Padding,
+                        ),
+                        EsVSpacer(
+                          big: true,
+                          factor: 3,
                         ),
                         EsOrdinaryText(
                           AppLocalizations.of(context)!.lorm,
                           color: StructureBuilder.styles!.t1Color,
+                          align: TextAlign.start,
                         )
                       ],
                     ),
-
                   );
                 },
               ),
@@ -556,18 +575,23 @@ class PanelAlertSample extends StatelessWidget {
                     context,
                     "message",
                     myContent: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         EsAvatarImage(
-                          path: "assets/images/img1.jpg",
-                          radius: StructureBuilder.dims!.h0Padding * 2,
+                          path: "assets/images/img2.jpg",
+                          radius: StructureBuilder.dims!.h0Padding,
+                        ),
+                        EsVSpacer(
+                          big: true,
+                          factor: 3,
                         ),
                         EsOrdinaryText(
                           AppLocalizations.of(context)!.lorm,
                           color: StructureBuilder.styles!.t1Color,
+                          align: TextAlign.start,
                         )
                       ],
                     ),
-
                   );
                 },
               ),
@@ -585,24 +609,28 @@ class PanelAlertSample extends StatelessWidget {
                     context,
                     "message",
                     myContent: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         EsAvatarImage(
-                          path: "assets/images/img1.jpg",
-                          radius: StructureBuilder.dims!.h0Padding * 2,
+                          path: "assets/images/img2.jpg",
+                          radius: StructureBuilder.dims!.h0Padding,
+                        ),
+                        EsVSpacer(
+                          big: true,
+                          factor: 3,
                         ),
                         EsOrdinaryText(
                           AppLocalizations.of(context)!.lorm,
                           color: StructureBuilder.styles!.t1Color,
+                          align: TextAlign.start,
                         )
                       ],
                     ),
-
                   );
                 },
               ),
             ],
           )),
-
           title: AppLocalizations.of(context)!.alertwithdesiredcontent,
           information:
               "these are alerts with desired content located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
@@ -636,121 +664,124 @@ class PanelAlertSample extends StatelessWidget {
       ContainerItems(
           widget: Container(
               child: Wrap(
-                spacing: StructureBuilder.dims!.h2Padding,
-                children: [
-                  EsIconButton(
-                    EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/danger.svg",
-                      size: StructureBuilder.dims!.h2IconSize,
-                      color: StructureBuilder.styles!.dangerColor().dangerDark,
-                    ),
-                    fillColor: StructureBuilder.styles!.alertColor().danger,
-                    onTap: () {
-                      EsAlerts.error(context, "message",
-                          hasClose: true,
-                          icon:  EsSvgIcon(
-                            "packages/es_flutter_component/assets/svgs/danger.svg",
-                            size: StructureBuilder.dims!.h2IconSize,
-                            color: StructureBuilder.styles!.dangerColor().dangerDark,
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(
-                                  StructureBuilder.dims!.h1BorderRadius)),
-
-                              border: Border.all(
-                                  color: StructureBuilder.styles!.dangerColor().dangerDark,
-                                  width: 2),
-
-                          ));
-                    },
-                  ),
-                  EsIconButton(
-                    EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
-                      size: StructureBuilder.dims!.h2IconSize,
-                      color: StructureBuilder.styles!.successColor().successDark,
-                    ),
-                    fillColor: StructureBuilder.styles!.alertColor().success,
-                    onTap: () {
-                      EsAlerts.success(context, "message",
-                          hasClose: true,
-                          icon:  EsSvgIcon(
-                            "packages/es_flutter_component/assets/svgs/danger.svg",
-                            size: StructureBuilder.dims!.h2IconSize,
-                            color: StructureBuilder.styles!.successColor().successDark,
-                          ),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(
-                                StructureBuilder.dims!.h1BorderRadius)),
-
-                            border: Border.all(
-                                color: StructureBuilder.styles!.successColor().successDark,
-                                width: 2),
-
-                          ));
-                    },
-                  ),
-                  EsIconButton(
-                    EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/infocircle.svg",
-                      size: StructureBuilder.dims!.h2IconSize,
-                      color: StructureBuilder.styles!.warningColor().warningDark,
-                    ),
-                    fillColor: StructureBuilder.styles!.alertColor().warning,
-                    onTap: () {
-                      EsAlerts.warning(context, "message",
-                          hasClose: true,
-                          icon:  EsSvgIcon(
-                            "packages/es_flutter_component/assets/svgs/infocircle.svg",
-                            size: StructureBuilder.dims!.h2IconSize,
-                            color: StructureBuilder.styles!.warningColor().warningDark,
-                          ),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(
-                                StructureBuilder.dims!.h1BorderRadius)),
-
-                            border: Border.all(
-                                color: StructureBuilder.styles!.warningColor().warningDark,
-                                width: 2),
-
-                          ));
-                    },
-                  ),
-                  EsIconButton(
-                    EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/Megaphone.svg",
-                      size: StructureBuilder.dims!.h2IconSize,
-                      color: StructureBuilder.styles!
-                          .informationColor()
-                          .informationDark,
-                    ),
-                    fillColor: StructureBuilder.styles!.alertColor().information,
-                    onTap: () {
-                      EsAlerts.information(context, "message",
-                          hasClose: true,
-                          icon:  EsSvgIcon(
-                            "packages/es_flutter_component/assets/svgs/Megaphone.svg",
-                            size: StructureBuilder.dims!.h2IconSize,
-                            color: StructureBuilder.styles!.informationColor().informationDark,
-                          ),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(
-                                StructureBuilder.dims!.h1BorderRadius)),
-
-                            border: Border.all(
-                                color: StructureBuilder.styles!.informationColor().informationDark,
-                                width: 2),
-
-                          )
-
-                      );
-                    },
-                  ),
-                ],
-              )),
+            spacing: StructureBuilder.dims!.h2Padding,
+            children: [
+              EsIconButton(
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/danger.svg",
+                  size: StructureBuilder.dims!.h2IconSize,
+                  color: StructureBuilder.styles!.dangerColor().dangerDark,
+                ),
+                fillColor: StructureBuilder.styles!.alertColor().danger,
+                onTap: () {
+                  EsAlerts.error(context, "message",
+                      hasClose: true,
+                      icon: EsSvgIcon(
+                        "packages/es_flutter_component/assets/svgs/danger.svg",
+                        size: StructureBuilder.dims!.h2IconSize,
+                        color:
+                            StructureBuilder.styles!.dangerColor().dangerDark,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(
+                            StructureBuilder.dims!.h1BorderRadius)),
+                        border: Border.all(
+                            color: StructureBuilder.styles!
+                                .dangerColor()
+                                .dangerDark,
+                            width: 2),
+                      ));
+                },
+              ),
+              EsIconButton(
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
+                  size: StructureBuilder.dims!.h2IconSize,
+                  color: StructureBuilder.styles!.successColor().successDark,
+                ),
+                fillColor: StructureBuilder.styles!.alertColor().success,
+                onTap: () {
+                  EsAlerts.success(context, "message",
+                      hasClose: true,
+                      icon: EsSvgIcon(
+                        "packages/es_flutter_component/assets/svgs/danger.svg",
+                        size: StructureBuilder.dims!.h2IconSize,
+                        color:
+                            StructureBuilder.styles!.successColor().successDark,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(
+                            StructureBuilder.dims!.h1BorderRadius)),
+                        border: Border.all(
+                            color: StructureBuilder.styles!
+                                .successColor()
+                                .successDark,
+                            width: 2),
+                      ));
+                },
+              ),
+              EsIconButton(
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
+                  size: StructureBuilder.dims!.h2IconSize,
+                  color: StructureBuilder.styles!.warningColor().warningDark,
+                ),
+                fillColor: StructureBuilder.styles!.alertColor().warning,
+                onTap: () {
+                  EsAlerts.warning(context, "message",
+                      hasClose: true,
+                      icon: EsSvgIcon(
+                        "packages/es_flutter_component/assets/svgs/infocircle.svg",
+                        size: StructureBuilder.dims!.h2IconSize,
+                        color:
+                            StructureBuilder.styles!.warningColor().warningDark,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(
+                            StructureBuilder.dims!.h1BorderRadius)),
+                        border: Border.all(
+                            color: StructureBuilder.styles!
+                                .warningColor()
+                                .warningDark,
+                            width: 2),
+                      ));
+                },
+              ),
+              EsIconButton(
+                EsSvgIcon(
+                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
+                  size: StructureBuilder.dims!.h2IconSize,
+                  color: StructureBuilder.styles!
+                      .informationColor()
+                      .informationDark,
+                ),
+                fillColor: StructureBuilder.styles!.alertColor().information,
+                onTap: () {
+                  EsAlerts.information(context, "message",
+                      hasClose: true,
+                      icon: EsSvgIcon(
+                        "packages/es_flutter_component/assets/svgs/Megaphone.svg",
+                        size: StructureBuilder.dims!.h2IconSize,
+                        color: StructureBuilder.styles!
+                            .informationColor()
+                            .informationDark,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(
+                            StructureBuilder.dims!.h1BorderRadius)),
+                        border: Border.all(
+                            color: StructureBuilder.styles!
+                                .informationColor()
+                                .informationDark,
+                            width: 2),
+                      ));
+                },
+              ),
+            ],
+          )),
           title: AppLocalizations.of(context)!.borderedalertwithicon,
           information:
-          "these are bordered alerts with icon located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
+              "these are bordered alerts with icon located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
               """EsIconButton(
                     EsSvgIcon(
                       "packages/es_flutter_component/assets/svgs/danger.svg",
@@ -778,21 +809,23 @@ class PanelAlertSample extends StatelessWidget {
                     },
                   ),"""),
     ];
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
+    return Material(
+        color: StructureBuilder.styles!.decorationColor().background,
         child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
                 PageTitleContainer(
                   title: AppLocalizations.of(context)!.alerttitle,
                 ),
+
                 BootstrapContainer(
                     fluid: true,
                     padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

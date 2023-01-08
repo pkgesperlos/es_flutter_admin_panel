@@ -47,7 +47,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                       "75%",
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                   EsVSpacer(
@@ -65,7 +65,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                       "75%",
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
-                    progressColor: StructureBuilder.styles!.tritiaryColor,
+                    progressColor: StructureBuilder.styles!.specificColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                   EsVSpacer(
@@ -103,9 +103,9 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                         percent: 75 / 100,
                         center: EsHeader(
                           "75%",
-                          color: StructureBuilder.styles!.primaryColor,
+                          color: StructureBuilder.styles!.primaryDarkColor,
                         ),
-                        progressColor: StructureBuilder.styles!.primaryColor,
+                        progressColor: StructureBuilder.styles!.primaryDarkColor,
                         backgroundColor: StructureBuilder.styles!.t2Color,
                       ),
                       CircularPercentIndicator(
@@ -116,9 +116,9 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                         percent: 75 / 100,
                         center: EsHeader(
                           "75%",
-                          color: StructureBuilder.styles!.primaryColor,
+                          color: StructureBuilder.styles!.primaryDarkColor,
                         ),
-                        progressColor: StructureBuilder.styles!.tritiaryColor,
+                        progressColor: StructureBuilder.styles!.specificColor,
                         backgroundColor: StructureBuilder.styles!.t2Color,
                       ),
                       CircularPercentIndicator(
@@ -129,7 +129,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                         percent: 75 / 100,
                         center: EsHeader(
                           "75%",
-                          color: StructureBuilder.styles!.primaryColor,
+                          color: StructureBuilder.styles!.primaryDarkColor,
                         ),
                         progressColor:
                             StructureBuilder.styles!.dangerColor().dangerDark,
@@ -149,7 +149,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                     lineHeight: StructureBuilder.dims!.h3IconSize*0.7,
                     percent:75/100,
                     center: EsLabelText("75%",color:StructureBuilder.styles!.primaryLightColor,),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),"""),
       ContainerItems(
@@ -168,7 +168,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                       "75%",
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                   LinearPercentIndicator(
@@ -180,7 +180,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                       "75%",
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                   LinearPercentIndicator(
@@ -192,7 +192,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                       "75%",
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                   LinearPercentIndicator(
@@ -205,7 +205,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                       "75%",
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                   LinearPercentIndicator(
@@ -218,7 +218,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                       "75%",
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                   LinearPercentIndicator(
@@ -231,7 +231,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                       "75%",
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                 ],
@@ -245,7 +245,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
             lineHeight: StructureBuilder.dims!.h3IconSize,
             percent:75/100,
             center: EsLabelText("75%",color:StructureBuilder.styles!.primaryLightColor,),
-            progressColor: StructureBuilder.styles!.primaryColor,
+            progressColor: StructureBuilder.styles!.primaryDarkColor,
             backgroundColor: StructureBuilder.styles!.t2Color,
           ),"""),
       ContainerItems(
@@ -262,9 +262,9 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                     percent: 75 / 100,
                     center: EsHeader(
                       "75%",
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                     ),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                   CircularPercentIndicator(
@@ -273,9 +273,9 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                     percent: 75 / 100,
                     center: EsHeader(
                       "75%",
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                     ),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                   CircularPercentIndicator(
@@ -284,9 +284,9 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                     percent: 75 / 100,
                     center: EsHeader(
                       "75%",
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                     ),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                   CircularPercentIndicator(
@@ -295,9 +295,9 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                     percent: 75 / 100,
                     center: EsHeader(
                       "75%",
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                     ),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                   CircularPercentIndicator(
@@ -306,9 +306,9 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                     percent: 75 / 100,
                     center: EsHeader(
                       "75%",
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                     ),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                   CircularPercentIndicator(
@@ -319,7 +319,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                       "75%",
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                 ],
@@ -332,8 +332,8 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
               radius: StructureBuilder.dims!.h0Padding,
               lineWidth: StructureBuilder.dims!.h3IconSize*0.2,
               percent: 75/100,
-              center: EsHeader("75%",color:StructureBuilder.styles!.primaryColor,),
-              progressColor: StructureBuilder.styles!.primaryColor,
+              center: EsHeader("75%",color:StructureBuilder.styles!.primaryDarkColor,),
+              progressColor: StructureBuilder.styles!.primaryDarkColor,
               backgroundColor: StructureBuilder.styles!.t2Color,
             ),"""),
       ContainerItems(
@@ -350,7 +350,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                       "75%",
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
-                    progressColor: StructureBuilder.styles!.primaryColor,
+                    progressColor: StructureBuilder.styles!.primaryDarkColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                   EsVSpacer(
@@ -366,7 +366,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                       "75%",
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
-                    progressColor: StructureBuilder.styles!.tritiaryColor,
+                    progressColor: StructureBuilder.styles!.specificColor,
                     backgroundColor: StructureBuilder.styles!.t2Color,
                   ),
                   EsVSpacer(
@@ -400,9 +400,9 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                         percent: 75 / 100,
                         center: EsHeader(
                           "75%",
-                          color: StructureBuilder.styles!.primaryColor,
+                          color: StructureBuilder.styles!.primaryDarkColor,
                         ),
-                        progressColor: StructureBuilder.styles!.primaryColor,
+                        progressColor: StructureBuilder.styles!.primaryDarkColor,
                         backgroundColor: StructureBuilder.styles!.t2Color,
                       ),
                       CircularPercentIndicator(
@@ -411,9 +411,9 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                         percent: 75 / 100,
                         center: EsHeader(
                           "75%",
-                          color: StructureBuilder.styles!.primaryColor,
+                          color: StructureBuilder.styles!.primaryDarkColor,
                         ),
-                        progressColor: StructureBuilder.styles!.tritiaryColor,
+                        progressColor: StructureBuilder.styles!.specificColor,
                         backgroundColor: StructureBuilder.styles!.t2Color,
                       ),
                       CircularPercentIndicator(
@@ -422,7 +422,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                         percent: 75 / 100,
                         center: EsHeader(
                           "75%",
-                          color: StructureBuilder.styles!.primaryColor,
+                          color: StructureBuilder.styles!.primaryDarkColor,
                         ),
                         progressColor:
                             StructureBuilder.styles!.dangerColor().dangerDark,
@@ -441,7 +441,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
             lineHeight: StructureBuilder.dims!.h3IconSize,
             percent:75/100,
             center: EsLabelText("75%",color:StructureBuilder.styles!.primaryLightColor,),
-            progressColor: StructureBuilder.styles!.primaryColor,
+            progressColor: StructureBuilder.styles!.primaryDarkColor,
             backgroundColor: StructureBuilder.styles!.t2Color,
           ),"""),
       ContainerItems(
@@ -459,11 +459,11 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
                     linearGradient: LinearGradient(colors: [
-                      StructureBuilder.styles!.primaryColor,
+                      StructureBuilder.styles!.primaryDarkColor,
                       StructureBuilder.styles!.t2Color,
-                      StructureBuilder.styles!.primaryColor,
+                      StructureBuilder.styles!.primaryDarkColor,
                       StructureBuilder.styles!.t2Color,
-                      StructureBuilder.styles!.primaryColor,
+                      StructureBuilder.styles!.primaryDarkColor,
                       StructureBuilder.styles!.t2Color,
                     ]),
                   ),
@@ -481,11 +481,11 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),
                     linearGradient: LinearGradient(colors: [
-                      StructureBuilder.styles!.tritiaryColor,
+                      StructureBuilder.styles!.specificColor,
                       StructureBuilder.styles!.t2Color,
-                      StructureBuilder.styles!.tritiaryColor,
+                      StructureBuilder.styles!.specificColor,
                       StructureBuilder.styles!.t2Color,
-                      StructureBuilder.styles!.tritiaryColor,
+                      StructureBuilder.styles!.specificColor,
                       StructureBuilder.styles!.t2Color,
                     ]),
                   ),
@@ -525,14 +525,14 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                         percent: 75 / 100,
                         center: EsHeader(
                           "75%",
-                          color: StructureBuilder.styles!.primaryColor,
+                          color: StructureBuilder.styles!.primaryDarkColor,
                         ),
                         linearGradient: LinearGradient(colors: [
-                          StructureBuilder.styles!.primaryColor,
+                          StructureBuilder.styles!.primaryDarkColor,
                           StructureBuilder.styles!.t2Color,
-                          StructureBuilder.styles!.primaryColor,
+                          StructureBuilder.styles!.primaryDarkColor,
                           StructureBuilder.styles!.t2Color,
-                          StructureBuilder.styles!.primaryColor,
+                          StructureBuilder.styles!.primaryDarkColor,
                           StructureBuilder.styles!.t2Color,
                         ]),
                       ),
@@ -542,14 +542,14 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                         percent: 75 / 100,
                         center: EsHeader(
                           "75%",
-                          color: StructureBuilder.styles!.primaryColor,
+                          color: StructureBuilder.styles!.primaryDarkColor,
                         ),
                         linearGradient: LinearGradient(colors: [
-                          StructureBuilder.styles!.tritiaryColor,
+                          StructureBuilder.styles!.specificColor,
                           StructureBuilder.styles!.t2Color,
-                          StructureBuilder.styles!.tritiaryColor,
+                          StructureBuilder.styles!.specificColor,
                           StructureBuilder.styles!.t2Color,
-                          StructureBuilder.styles!.tritiaryColor,
+                          StructureBuilder.styles!.specificColor,
                           StructureBuilder.styles!.t2Color,
                         ]),
                       ),
@@ -559,7 +559,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                         percent: 75 / 100,
                         center: EsHeader(
                           "75%",
-                          color: StructureBuilder.styles!.primaryColor,
+                          color: StructureBuilder.styles!.primaryDarkColor,
                         ),
                         linearGradient: LinearGradient(colors: [
                           StructureBuilder.styles!.dangerColor().dangerDark,
@@ -585,11 +585,11 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
 
                     linearGradient: LinearGradient(
                         colors: [
-                          StructureBuilder.styles!.primaryColor,
+                          StructureBuilder.styles!.primaryDarkColor,
                           StructureBuilder.styles!.t2Color,
-                          StructureBuilder.styles!.primaryColor,
+                          StructureBuilder.styles!.primaryDarkColor,
                           StructureBuilder.styles!.t2Color,
-                          StructureBuilder.styles!.primaryColor,
+                          StructureBuilder.styles!.primaryDarkColor,
                           StructureBuilder.styles!.t2Color,
                     ]),
                   ),"""),
@@ -597,9 +597,9 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
 
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
         child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -612,7 +612,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                       horizontal: StructureBuilder.dims!.h0Padding,
                     ),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

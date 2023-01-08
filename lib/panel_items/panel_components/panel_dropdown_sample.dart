@@ -56,13 +56,13 @@ class PanelDropDownSample extends StatelessWidget {
                 num: num,
                 buttonWidget: EsButton(
                   text: "Dropdown",
-                  borderColor: StructureBuilder.styles!.primaryColor,
-                  textColor: StructureBuilder.styles!.primaryColor,
+                  borderColor: StructureBuilder.styles!.primaryDarkColor,
+                  textColor: StructureBuilder.styles!.primaryDarkColor,
                   fillColor: StructureBuilder.styles!.primaryLightColor,
                   icon: EsSvgIcon(
                     "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
-                    color: StructureBuilder.styles!.primaryColor,
+                    color: StructureBuilder.styles!.primaryDarkColor,
                   ),
                   clickable: false,
                 ),
@@ -93,7 +93,7 @@ class PanelDropDownSample extends StatelessWidget {
                 num: num,
                 buttonWidget: EsButton(
                   text: "Dropdown",
-                  fillColor: StructureBuilder.styles!.tritiaryColor,
+                  fillColor: StructureBuilder.styles!.specificColor,
                   icon: EsSvgIcon(
                     "packages/es_flutter_component/assets/svgs/down.svg",
                     size: StructureBuilder.dims!.h3IconSize * 0.7,
@@ -266,13 +266,13 @@ class PanelDropDownSample extends StatelessWidget {
                 num: num,
                 buttonWidget: EsButton(
                   text: "Dropdown",
-                  borderColor: StructureBuilder.styles!.primaryColor,
-                  textColor: StructureBuilder.styles!.primaryColor,
+                  borderColor: StructureBuilder.styles!.primaryDarkColor,
+                  textColor: StructureBuilder.styles!.primaryDarkColor,
                   fillColor: StructureBuilder.styles!.primaryLightColor,
                   icon: EsSvgIcon(
                     "packages/es_flutter_component/assets/svgs/infocircle.svg",
                     size: StructureBuilder.dims!.h3IconSize,
-                    color: StructureBuilder.styles!.primaryColor,
+                    color: StructureBuilder.styles!.primaryDarkColor,
                   ),
                   clickable: false,
                 ),
@@ -298,7 +298,7 @@ class PanelDropDownSample extends StatelessWidget {
                 num: num,
                 buttonWidget: EsButton(
                   text: "Dropdown",
-                  fillColor: StructureBuilder.styles!.tritiaryColor,
+                  fillColor: StructureBuilder.styles!.specificColor,
                   icon: EsSvgIcon(
                     "packages/es_flutter_component/assets/svgs/infocircle.svg",
                     size: StructureBuilder.dims!.h3IconSize,
@@ -400,7 +400,7 @@ class PanelDropDownSample extends StatelessWidget {
               EsDropdownButton(
                 num: num,
                 dropdownDecoration: BoxDecoration(
-                  color: StructureBuilder.styles!.tritiaryColor,
+                  color: StructureBuilder.styles!.specificColor,
                   // borderRadius: BorderRadius.all(
                   //     Radius.circular(StructureBuilder.dims!.h1BorderRadius))
                 ),
@@ -685,9 +685,9 @@ class PanelDropDownSample extends StatelessWidget {
       ),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
         child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -699,7 +699,7 @@ class PanelDropDownSample extends StatelessWidget {
                     padding: EdgeInsets.symmetric(
                         horizontal: StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

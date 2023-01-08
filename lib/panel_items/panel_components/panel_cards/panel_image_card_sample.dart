@@ -57,12 +57,24 @@ class PanelImageCardSample extends StatelessWidget {
                     cardShow(EsImageCard5()),
                     cardShow(EsImageCard6()),
                     cardShow(EsImageCard7()),
-                  ],),),"""),
+                  ],),),
+                  
+                  \n where \n
+                   Widget cardShow(Widget widget) {
+      return BootstrapCol(
+          sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-4', child: widget);
+                   }
+                  
+                  """
+
+
+
+      ),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
         child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -73,7 +85,7 @@ class PanelImageCardSample extends StatelessWidget {
                     fluid: true,
                     padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

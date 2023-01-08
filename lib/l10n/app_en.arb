@@ -17,6 +17,8 @@
 
   "adminMenu": "Admin Menu",
 
+  "dashboard": "Dash board",
+
   "charts": "Charts",
   "barChart": "Bar chart",
   "circularChart": "Circular chart",
@@ -33,8 +35,8 @@
   "removableaccordion": "Removable accordion",
   "solidaccordion": "Solid accordion",
   "iconaccordion": "Icon accordion",
-  "accordionwithdesiredarrowicon": "Accardion with desired arrow icon",
-  "accordionwithbackgroundimage": "Accardion with background image",
+  "accordionwithdesiredarrowicon": "accordion with desired arrow icon",
+  "accordionwithbackgroundimage": "accordion with background image",
   "accordiontitle": "Different model of accordion are available in panel by flutter code.",
 
   "alert": "Alert",
@@ -43,7 +45,7 @@
   "removablealert": "Removable alert",
   "alertwithicon": "Alert with icon",
   "removablealertwithicon": "Removable alert with icon",
-  "alertwithdesiredcontent": "Alert with Ddesired content",
+  "alertwithdesiredcontent": "Alert with desired content",
   "borderedalertwithicon": "Bordered alert with icon",
   "alerttitle": "Different model of alert are available in panel by flutter code,click them !",
 
@@ -57,7 +59,7 @@
   "disabledbutton": "Disabled button",
   "socialnetworkbutton": "Social network button",
   "roundbutton": "Round button",
-  "buttonsindifferntsize": "Buttons in differnt size",
+  "buttonsindifferntsize": "Buttons in different size",
   "buttontitle": "Different model of button are available in panel by flutter code.",
 
   "groupbutton": "Group button",
@@ -88,7 +90,7 @@
   "labelondifferentwidgets": "Label on different widgets",
   "labelinsinglemode": "Label in unique mode",
   "labelwithdifferentcontents": "Label with different contents",
-  "labelwithsepratorborder": "Label with seprator border",
+  "labelwithsepratorborder": "Label with separator border",
   "labelindifferentcolors": "Label in different colors",
   "labelindifferentsizesandborderradiuss": "Label in different sizes and border radius's",
   "labeltitle": "Different kinds of label with various sizes and contents are available in panel by flutter code.",
@@ -155,7 +157,7 @@
   "simplelinearprogressbarindifferentsizes":  "Simple linear progress bar in different sizes",
   "simplecircularprogressbarindifferentsizes": "Simple circular progress bar in different sizes",
   "simpleprogressbarindifferentcolors": "Simple progress bar in different colors",
-  "gradiantprogressbar": "Gradiant  progress bar",
+  "gradiantprogressbar": "Gradient  progress bar",
   "progressbartitle": "Different kinds of progress bars  are available in panel by flutter code.",
 
   "waitingindicator": "Waiting indicator",
@@ -178,7 +180,7 @@
   "toptabbarnavigator": "Top tab bar navigator",
   "tabbarnavigatorwithdesiredtabdecoration": "Tab bar navigator with desired tab decoration",
   "tabbarnavigatorwithdesiredwidgetintabs": "Tab bar navigator with desired widget in tabs",
-  "bottomtabbarnavigator": "Botton tab bar navigator",
+  "bottomtabbarnavigator": "Bottom tab bar navigator",
   "leftsidetabbarnavigator": "Left side tab bar navigator",
   "rightsidebarnavigator": "Right side tab bar navigator",
   "tabbartitle": "Different kinds of tab bar navigators  are available in panel by flutter code.",
@@ -317,7 +319,7 @@
 
   "theinputlengthistooshort": "The input length is too short!",
   "theinputmustberepeated": "The input must be repeated",
-  "youshouldacceptthetermsandconditionsbeforeregister": "You should accept the Terms and Conditions before register.",
+  "youshouldacceptthetermsandconditionsbeforeregister": "You should accept the Terms and Conditions.",
   "acceptthetermsandconditions": "Accept the Terms and Conditions.",
 
   "pleaseselectoneitem": "Please select one item.",
@@ -461,8 +463,31 @@
   "primarycolor": "Primary color",
   "primarydarkcolor": "Primary dark color",
   "primarylightcolor": "Primary light color",
+
+
+  "onprimarycolor":"On primary color",
+  "onsecondarycolor": "On secondary color",
+  "backgroundcolor": "Background color",
+  "bordercolor": "Border color",
+  "hovercolor": "Hover color",
+  "buttonhovercolor": "Button hover color",
+  "texthovercolor": "Text hover color",
+  "hovercolor": "Hover color",
+  "cardcolor": "Card color",
+  "menucolor": "Menu color",
+  "shadowcolor": "Shadow color",
+  "dividercolor": "Divider color",
+  "iconcolor": "Icon color",
+
+  "specificColor": "Tritiary color",
   "secondarycolor": "Secondary color",
-  "tritiarycolor": "Tritiary color",
+  "secondarydarkcolor": "Secondary dark color",
+  "secondarylightcolor": "Secondary light color",
+  "primarycolors": "Primary colors",
+  "errorcolors": "Error colors",
+  "successcolors": "Success color",
+  "warningcolors": "Warning color",
+  "informationcolors": "Information color",
 
   "errorregularcolor": "Error regular color",
   "errorlightcolor": "Error light color",

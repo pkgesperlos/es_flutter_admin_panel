@@ -31,7 +31,7 @@ class EsBill extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               EsHeader(AppLocalizations.of(context)!.bill+"#114114314",
-                color: StructureBuilder.styles!.primaryColor,),
+                color: StructureBuilder.styles!.primaryDarkColor,),
               EsTitle(AppLocalizations.of(context)!.lormshort,
                 color: StructureBuilder.styles!.secondaryColor,),
 
@@ -86,7 +86,7 @@ class EsBill extends StatelessWidget {
           EsVSpacer(big: true,factor: 5,),
           EsSimpleTable(
             zebraMode: true,
-            headingColor: StructureBuilder.styles!.primaryColor,
+            headingColor: StructureBuilder.styles!.primaryDarkColor,
             rowsContent: [
               [
                 EsOrdinaryText("1"),
@@ -156,7 +156,7 @@ class EsBill extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               EsHeader(AppLocalizations.of(context)!.total,
-                color: StructureBuilder.styles!.primaryColor,)
+                color: StructureBuilder.styles!.primaryDarkColor,)
             ],
           ),
           EsVSpacer(big: true,factor: 5,),

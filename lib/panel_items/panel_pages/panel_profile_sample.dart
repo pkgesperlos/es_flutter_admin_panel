@@ -46,8 +46,8 @@ class _PanelProfileSampleState extends State<PanelProfileSample> {
       AppLocalizations.of(context)!.seo,];
     List<double> _percentList=[27,60,90];
     List<Color> _colorList=[
-      StructureBuilder.styles!.primaryColor,
-      StructureBuilder.styles!.tritiaryColor,
+      StructureBuilder.styles!.primaryDarkColor,
+      StructureBuilder.styles!.specificColor,
       StructureBuilder.styles!.dangerColor().dangerDark,
     ];
 
@@ -73,9 +73,7 @@ class _PanelProfileSampleState extends State<PanelProfileSample> {
               ),
                 fluid: true,
               children:[
-                _cardShow2(Container(
-                    height: StructureBuilder.dims!.h0Padding*30,
-                    child: EsProfileTabBarCard()),),
+
 
                 _cardShow(EsProfileCard(),),
                 _cardShow(Column(
@@ -96,7 +94,9 @@ class _PanelProfileSampleState extends State<PanelProfileSample> {
                     EsShareCard(),
                   ],
                 ),),
-
+                _cardShow2(Container(
+                    height: StructureBuilder.dims!.h0Padding*30,
+                    child: EsProfileTabBarCard()),),
 
               ]
             ),
@@ -142,12 +142,25 @@ class _PanelProfileSampleState extends State<PanelProfileSample> {
 
               ]
             ),
-          ),"""),
+          ),
+          \n where \n
+    Widget _cardShow(Widget widget) {
+      return BootstrapCol(
+          sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-4', child: widget);
+    }
+    Widget _cardShow2(Widget widget) {
+
+      return BootstrapCol(
+
+          sizes: 'col-sm-12 col-ml-12 col-lg-12 col-xl-12', child: widget);
+    }  
+          
+          """),
 
 
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.primaryColor,
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -159,7 +172,7 @@ class _PanelProfileSampleState extends State<PanelProfileSample> {
                   padding: EdgeInsets.symmetric(
                       horizontal: StructureBuilder.dims!.h0Padding),
                   decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
+                    color: StructureBuilder.styles!.primaryColor,
                   ),
                   children: List.generate(list.length, (index) {
 

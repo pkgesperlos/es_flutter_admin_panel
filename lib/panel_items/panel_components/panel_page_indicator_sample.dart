@@ -42,9 +42,11 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
 
   @override
   Widget build(BuildContext context) {
+    double _height=200;
     List list = [
       ContainerItems(
           widget: Container(
+            height: _height,
             child: Column(
               children: [
                 EsPageIndicator(
@@ -59,7 +61,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
                   controller: controller,
                   totalPage: totalPage,
                   normalColor: StructureBuilder.styles!.t2Color,
-                  selectedColor: StructureBuilder.styles!.primaryColor,
+                  selectedColor: StructureBuilder.styles!.primaryDarkColor,
                 ),
                 EsVSpacer(
                   big: true,
@@ -99,6 +101,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
   }"""),
       ContainerItems(
           widget: Container(
+            height: _height,
             child: Column(
               children: [
                 EsPageIndicator(
@@ -115,7 +118,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
                   totalPage: totalPage,
                   hasButton: true,
                   normalColor: StructureBuilder.styles!.t2Color,
-                  selectedColor: StructureBuilder.styles!.primaryColor,
+                  selectedColor: StructureBuilder.styles!.primaryDarkColor,
                 ),
                 EsVSpacer(
                   big: true,
@@ -157,6 +160,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
   }"""),
       ContainerItems(
           widget: Container(
+            height: _height,
             child: Column(
               children: [
                 EsNumberPageIndicator.simple(
@@ -170,7 +174,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
                 EsNumberPageIndicator.simple(
                   controller: controller,
                   totalPage: totalPage,
-                  fillColor: StructureBuilder.styles!.primaryColor,
+                  fillColor: StructureBuilder.styles!.primaryDarkColor,
                   textColor: StructureBuilder.styles!.primaryLightColor,
                 ),
                 EsVSpacer(
@@ -211,6 +215,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
   }"""),
       ContainerItems(
           widget: Container(
+              height: _height,
               child: Column(
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -227,7 +232,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
                 controller: controller,
                 totalPage: totalPage,
                 hasButton: true,
-                fillColor: StructureBuilder.styles!.primaryColor,
+                fillColor: StructureBuilder.styles!.primaryDarkColor,
                 textColor: StructureBuilder.styles!.primaryLightColor,
               ),
               EsVSpacer(
@@ -269,6 +274,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
   }"""),
       ContainerItems(
           widget: Container(
+            height: _height,
             child: Column(
               children: [
                 EsNumberPageIndicator.limited(
@@ -282,7 +288,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
                 EsNumberPageIndicator.limited(
                   controller: controller,
                   totalPage: totalPage,
-                  fillColor: StructureBuilder.styles!.primaryColor,
+                  fillColor: StructureBuilder.styles!.primaryDarkColor,
                   textColor: StructureBuilder.styles!.primaryLightColor,
                 ),
                 EsVSpacer(
@@ -326,9 +332,9 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
 
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
-        child: Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -363,7 +369,7 @@ class _PanelPageIndicatorSampleState extends State<PanelPageIndicatorSample> {
                     fluid: true,
                     padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index]))),

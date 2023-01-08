@@ -47,7 +47,7 @@
 //                    AppLocalizations.of(context)!.notificationsDescription,
 //                 ),
 //                 decoration: BoxDecoration(
-//                     color: StructureBuilder.styles!.primaryDarkColor,
+//                     color: StructureBuilder.styles!.primaryColor,
 //                     borderRadius: BorderRadius.all(
 //                         Radius.circular(StructureBuilder.dims!.h2FontSize))),
 //               ),
@@ -76,7 +76,7 @@
 //           decoration: BoxDecoration(
 //               borderRadius: BorderRadius.all(
 //                   Radius.circular(StructureBuilder.dims!.h0Padding)),
-//               color: StructureBuilder.styles!.primaryDarkColor),
+//               color: StructureBuilder.styles!.primaryColor),
 //           child: widget,
 //         ));
 //   }

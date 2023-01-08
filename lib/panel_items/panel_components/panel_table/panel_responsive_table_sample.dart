@@ -193,7 +193,7 @@ class _PanelResponsiveTableSampleState extends State<PanelResponsiveTableSample>
                   Container(
                     width: 85,
                     child: LinearProgressIndicator(
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                       backgroundColor: StructureBuilder.styles!.t3Color,
                       value: list.first / list.last,
                     ),
@@ -232,7 +232,7 @@ class _PanelResponsiveTableSampleState extends State<PanelResponsiveTableSample>
                           decoration: BoxDecoration(
 
                               borderRadius: BorderRadius.all(Radius.circular(StructureBuilder.dims!.h0BorderRadius*2)),
-                            border: Border.all(color: StructureBuilder.styles!.primaryColor)
+                            border: Border.all(color: StructureBuilder.styles!.primaryDarkColor)
                           ),
 
                           child: Container(
@@ -422,7 +422,7 @@ class _PanelResponsiveTableSampleState extends State<PanelResponsiveTableSample>
                                 )
                               ],
                               headerDecoration: BoxDecoration(
-                                  color: StructureBuilder.styles!.primaryColor,
+                                  color: StructureBuilder.styles!.primaryDarkColor,
                                   borderRadius: BorderRadius.only(
                                       topRight: Radius.circular(StructureBuilder.dims!.h0BorderRadius),
                                       topLeft: Radius.circular(StructureBuilder.dims!.h0BorderRadius),
@@ -626,7 +626,7 @@ class _PanelResponsiveTableSampleState extends State<PanelResponsiveTableSample>
                                 )
                               ],
                               headerDecoration: BoxDecoration(
-                                  color: StructureBuilder.styles!.primaryColor,
+                                  color: StructureBuilder.styles!.primaryDarkColor,
                                   borderRadius: BorderRadius.only(
                                       topRight: Radius.circular(StructureBuilder.dims!.h0BorderRadius),
                                       topLeft: Radius.circular(StructureBuilder.dims!.h0BorderRadius),
@@ -646,9 +646,9 @@ class _PanelResponsiveTableSampleState extends State<PanelResponsiveTableSample>
                             ),"""),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
         child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -660,7 +660,7 @@ class _PanelResponsiveTableSampleState extends State<PanelResponsiveTableSample>
                     padding: EdgeInsets.symmetric(
                         horizontal: StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

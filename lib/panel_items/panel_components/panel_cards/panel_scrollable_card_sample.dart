@@ -43,13 +43,19 @@ class PanelScrollableCardSample extends StatelessWidget {
               cardShow(EsScrollableCard2()),
               cardShow(EsScrollableCard3()),
             ],
-          )),"""),
+          )),  \n where \n
+                   Widget cardShow(Widget widget) {
+      return BootstrapCol(
+          sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-4', child: widget);
+                   }
+                  
+                  """),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
-        child: Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body:SingleChildScrollView(
             child: Column(
               children: [
@@ -60,7 +66,7 @@ class PanelScrollableCardSample extends StatelessWidget {
                     fluid: true,
                     padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

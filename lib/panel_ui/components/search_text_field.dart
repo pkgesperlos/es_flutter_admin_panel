@@ -24,7 +24,7 @@ class SearchTextField extends StatelessWidget {
         // horizontal: StructureBuilder.dims!.h3Padding,
       ),
       decoration: BoxDecoration(
-          color: StructureBuilder.styles!.primaryColor,
+          color: StructureBuilder.styles!.primaryDarkColor,
           borderRadius: BorderRadius.all(
               Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
       child: TextField(
@@ -42,15 +42,15 @@ class SearchTextField extends StatelessWidget {
             ),
             border: UnderlineInputBorder(
               borderSide:
-              BorderSide(color: StructureBuilder.styles!.primaryColor),
+              BorderSide(color: StructureBuilder.styles!.primaryDarkColor),
             ),
             focusedBorder: UnderlineInputBorder(
               borderSide:
-              BorderSide(color: StructureBuilder.styles!.primaryColor),
+              BorderSide(color: StructureBuilder.styles!.primaryDarkColor),
             ),
             enabledBorder: UnderlineInputBorder(
               borderSide:
-              BorderSide(color: StructureBuilder.styles!.primaryColor),
+              BorderSide(color: StructureBuilder.styles!.primaryDarkColor),
             )
         ),
 

@@ -48,7 +48,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
               BreadCrumbNavigator.shaped(
                 currentRoute: AppLocalizations.of(context)!.components,
                 breadButtonType: BreadButtonType.shaped,
-                backgroundColor: StructureBuilder.styles!.tritiaryColor,
+                backgroundColor: StructureBuilder.styles!.specificColor,
                 textColor: StructureBuilder.styles!.textColor().secondary,
               ),
             ],
@@ -162,7 +162,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
                 currentRoute: AppLocalizations.of(context)!.components,
                 suffix: EsHeader(
                   " > ",
-                  color: StructureBuilder.styles!.primaryColor,
+                  color: StructureBuilder.styles!.primaryDarkColor,
                 ),
               ),
               EsVSpacer(big: true,),
@@ -170,7 +170,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
                 currentRoute: AppLocalizations.of(context)!.components,
                 suffix: EsHeader(
                   "  ",
-                  color: StructureBuilder.styles!.primaryColor,
+                  color: StructureBuilder.styles!.primaryDarkColor,
                 ),
               ),
               EsVSpacer(big: true,),
@@ -178,7 +178,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
                 currentRoute: AppLocalizations.of(context)!.components,
                 suffix: EsHeader(
                   " | ",
-                  color: StructureBuilder.styles!.primaryColor,
+                  color: StructureBuilder.styles!.primaryDarkColor,
                 ),
               ),
             ],
@@ -195,7 +195,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
                 currentRoute: AppLocalizations.of(context)!.components,
                 suffix: EsHeader(
                   " > ",
-                  color: StructureBuilder.styles!.primaryColor,
+                  color: StructureBuilder.styles!.primaryDarkColor,
                 ),
               ), \n 
               and finally navigate to other pages by \n 
@@ -210,11 +210,11 @@ class PanelBreadCrumbSample extends StatelessWidget {
                 breadButtonType: BreadButtonType.icon,
                 rtlSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretLeft.svg",
                 size: StructureBuilder.dims!.h3IconSize,
-                  color: StructureBuilder.styles!.primaryColor,
+                  color: StructureBuilder.styles!.primaryDarkColor,
                 ),
                 ltrSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretRight.svg",
                   size: StructureBuilder.dims!.h3IconSize,
-                  color: StructureBuilder.styles!.primaryColor,),
+                  color: StructureBuilder.styles!.primaryDarkColor,),
 
               ),
               EsVSpacer(big: true,),
@@ -223,12 +223,12 @@ class PanelBreadCrumbSample extends StatelessWidget {
                 breadButtonType: BreadButtonType.icon,
                 rtlSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretCircleLeft.svg",
                 size: StructureBuilder.dims!.h3IconSize,
-                  color: StructureBuilder.styles!.primaryColor,
+                  color: StructureBuilder.styles!.primaryDarkColor,
                 ),
 
                 ltrSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretCircleRight.svg",
                   size: StructureBuilder.dims!.h3IconSize,
-                  color: StructureBuilder.styles!.primaryColor,),
+                  color: StructureBuilder.styles!.primaryDarkColor,),
 
               ),
               EsVSpacer(big: true,),
@@ -237,11 +237,11 @@ class PanelBreadCrumbSample extends StatelessWidget {
                 breadButtonType: BreadButtonType.icon,
                 rtlSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretDoubleLeft.svg",
                 size: StructureBuilder.dims!.h3IconSize,
-                  color: StructureBuilder.styles!.primaryColor,
+                  color: StructureBuilder.styles!.primaryDarkColor,
                 ),
                 ltrSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretDoubleRight.svg",
                   size: StructureBuilder.dims!.h3IconSize,
-                  color: StructureBuilder.styles!.primaryColor,),
+                  color: StructureBuilder.styles!.primaryDarkColor,),
 
               ),
             ],
@@ -260,11 +260,11 @@ class PanelBreadCrumbSample extends StatelessWidget {
                 breadButtonType: BreadButtonType.icon,
                 rtlSuffixIcon: EsSvgIcon('packages/es_flutter_component/assets/svgs/CaretLeft.svg",
                 size: StructureBuilder.dims!.h2IconSize,
-                  color: StructureBuilder.styles!.primaryColor,
+                  color: StructureBuilder.styles!.primaryDarkColor,
                 ),
                 ltrSuffixIcon: EsSvgIcon('packages/es_flutter_component/assets/svgs/CaretRight.svg",
                   size: StructureBuilder.dims!.h2IconSize,
-                  color: StructureBuilder.styles!.primaryColor,),
+                  color: StructureBuilder.styles!.primaryDarkColor,),
 
               ),\n 
               and finally navigate to other pages by \n 
@@ -272,9 +272,9 @@ class PanelBreadCrumbSample extends StatelessWidget {
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
-        child: Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -286,7 +286,7 @@ class PanelBreadCrumbSample extends StatelessWidget {
                     fluid: true,
                     padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

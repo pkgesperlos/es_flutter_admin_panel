@@ -48,44 +48,33 @@ class PanelPrimaryCardSample extends StatelessWidget {
           ),
           title: AppLocalizations.of(context)!.primarycard,
           information: "these are primary cards in panel:"
-              """Container(
-                    decoration: BoxDecoration(
-                        color: MyStyle.cardColor,
-                        borderRadius: BorderRadius.all(Radius.circular(
-                            StructureBuilder.dims!.h0BorderRadius))),
-                    margin: EdgeInsets.symmetric(
-                      vertical: StructureBuilder.dims!.h1Padding,
-                    ),
-                    padding: EdgeInsets.symmetric(
-                      horizontal: StructureBuilder.dims!.h0Padding,
-                      vertical: StructureBuilder.dims!.h0Padding,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        EsOrdinaryText(
-                          StructureBuilder.configs!.lorm,
-                          align: TextAlign.justify,
-                          overFlowTag: true,
-                          maxLine: 5,
-                        ),
-                        EsVSpacer(
-                          big: true,
-                          factor: 4,
-                        ),
-                        EsHDivider(),
-                        EsTitle(
-                          AppLocalizations.of(context)!.footer,
-                        ),
-                        EsVSpacer(),
-                      ],
-                    ),
+              """ Container(
+            child: BootstrapContainer(
+            fluid: true,
+                children: [
+                  cardShow(EsPrimaryCard1()),
+                  cardShow(EsPrimaryCard2()),
+                  cardShow(EsPrimaryCard3()),
+                  cardShow(EsPrimaryCard4()),
+                  cardShow(EsPrimaryCard5(
+                    stringList: _stringList,
+                  )),
+                  cardShow(EsPrimaryCard6()),
+                  cardShow(EsPrimaryCard7()),
+                ]),
+          ),
+                  \n where \n
+                   Widget cardShow(Widget widget) {
+      return BootstrapCol(
+          sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-4', child: widget);
+                   }
+                  
                   """),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
         child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -96,7 +85,7 @@ class PanelPrimaryCardSample extends StatelessWidget {
                     fluid: true,
                     padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

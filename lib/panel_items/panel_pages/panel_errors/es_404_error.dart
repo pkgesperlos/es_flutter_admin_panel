@@ -36,7 +36,7 @@ class _Es404Error extends State<Es404Error> {
 
 
     return Scaffold(
-        backgroundColor: StructureBuilder.styles!.primaryLightColor,
+        backgroundColor: StructureBuilder.styles!.decorationColor().background,
         resizeToAvoidBottomInset: false,
         body: Center(
           child: SingleChildScrollView(

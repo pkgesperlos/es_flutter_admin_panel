@@ -81,7 +81,7 @@ class EsProfileUsers extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         EsHeader(widgetNameList[index],
-                          color: StructureBuilder.styles!.primaryColor,),
+                          color: StructureBuilder.styles!.primaryDarkColor,),
                         EsVSpacer(),
                         EsOrdinaryText(widgetDescriptionList[index],
                           color: StructureBuilder.styles!.t4Color,
@@ -100,7 +100,7 @@ class EsProfileUsers extends StatelessWidget {
                         ?AppLocalizations.of(context)!.follower
                         :AppLocalizations.of(context)!.follow,
                     fillColor:widgetIsFollowingList[index]
-                    ?StructureBuilder.styles!.primaryColor
+                    ?StructureBuilder.styles!.primaryDarkColor
                         :StructureBuilder.styles!.t2Color,
                   ))
             ],

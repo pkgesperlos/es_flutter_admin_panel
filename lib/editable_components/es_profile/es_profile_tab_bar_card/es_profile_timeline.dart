@@ -38,7 +38,7 @@ class EsProfileTimeLine extends StatelessWidget {
           nodePosition: 0,
           connectorTheme: ConnectorThemeData(
             thickness: 1.0,
-            color:StructureBuilder.styles!.primaryColor,
+            color:StructureBuilder.styles!.primaryDarkColor,
           ),
           indicatorTheme: IndicatorThemeData(
             size: StructureBuilder.dims!.h0Padding,

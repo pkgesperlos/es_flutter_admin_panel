@@ -6,8 +6,7 @@ import 'package:flutter/material.dart';
 class RoutMaker extends StatelessWidget {
 
   Widget child;
-
-  RoutMaker({Key? key, required this.child});
+  RoutMaker({Key? key, required this.child, });
 
 
 
@@ -16,7 +15,7 @@ class RoutMaker extends StatelessWidget {
 
     double _width=MediaQuery.of(context).size.width;
 
-
+Widget _drawer=DrawerPage();
     return Scaffold(
         appBar: PreferredSize(
           preferredSize: Size(double.infinity, 100),
@@ -41,7 +40,11 @@ class RoutMaker extends StatelessWidget {
           computer: Row(
             children: [
 
-              Expanded(flex: _sidebarFlex(_width), child: DrawerPage()),
+              Expanded(flex: _sidebarFlex(_width),
+                  child: _drawer,
+                // child: _widget??Container()
+                  // child: drawerPageState!.widget??Container()
+              ),
               Expanded(flex: 40, child: child ,),
 
             ],
@@ -50,10 +53,10 @@ class RoutMaker extends StatelessWidget {
         drawer: SizedBox(
           width: 210,
           child: ResponsiveLayot(
-            tiny: DrawerPage(),
-            phone: DrawerPage(),
-            tablet: DrawerPage(),
-            largTablet: DrawerPage(),
+            tiny: _drawer,
+            phone: _drawer,
+            tablet: _drawer,
+            largTablet: _drawer,
             computer: Container(),
           ),
         ));

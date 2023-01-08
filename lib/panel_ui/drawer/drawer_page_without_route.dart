@@ -1,6 +1,6 @@
 
 import 'package:es_flutter_admin_panel/panel_items/panel_pages/panel_bill_sample.dart';
-import 'package:es_flutter_component/components/es_accardion/es_expansion_tile.dart';
+import 'package:es_flutter_component/components/es_accordion/es_expansion_tile.dart';
 import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/components/es_text/es_title.dart';
@@ -18,7 +18,7 @@ import '../../panel_items/panel_pages/panel_price_card_sample.dart';
 import '../../panel_items/panel_pages/panel_profile_sample.dart';
 import '../../panel_items/panel_pages/panel_search_result_sample.dart';
 import '../../panel_items/panel_pages/panel_timeline_sample.dart';
-import '../../panel_items/panel_components/panel_accardion_sample.dart';
+import '../../panel_items/panel_components/panel_accordion_sample.dart';
 import 'package:es_flutter_admin_panel/panel_ui/center_sceen/center_screen.dart';
 import 'package:es_flutter_admin_panel/panel_ui/structure_images/responsive_layout.dart';
 import '../../panel_items/panel_pages/panel_empty_screen_sample.dart';
@@ -104,7 +104,7 @@ class _DrawerPageState extends State<DrawerPage> {
     return Drawer(
       child: Container(
         decoration: BoxDecoration(
-          color: StructureBuilder.styles!.primaryDarkColor,
+          color: StructureBuilder.styles!.primaryColor,
         ),
         child: SingleChildScrollView(
           child: Padding(
@@ -128,7 +128,7 @@ class _DrawerPageState extends State<DrawerPage> {
                         )),
                     EsTitle(
                       AppLocalizations.of(context)!.adminMenu,
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                     ),
                   ],
                 ),
@@ -157,7 +157,7 @@ class _DrawerPageState extends State<DrawerPage> {
                   expansionWidgetList: [
                     nextLevel(
                         title: AppLocalizations.of(context)!.accordion,
-                        pageWidget: PanelAccardionSample(),
+                        pageWidget: PanelaccordionSample(),
                         index: _indexList[2],
                         onSelect: _onSelectedList[2],
                         isSelected: _isSelectedList[2]),
@@ -819,7 +819,7 @@ class _DrawerPageState extends State<DrawerPage> {
 
   BoxDecoration selectedBoxDecoration() {
     return BoxDecoration(
-      color: StructureBuilder.styles!.primaryColor,
+      color: StructureBuilder.styles!.primaryDarkColor,
       // color: Colors.transparent,
       borderRadius:
       BorderRadius.circular(StructureBuilder.dims!.h0BorderRadius),
@@ -833,9 +833,9 @@ class _DrawerPageState extends State<DrawerPage> {
         ),
       ],
       // gradient: LinearGradient(colors: [
-      //   StructureBuilder.styles!.primaryColor
+      //   StructureBuilder.styles!.primaryDarkColor
       //       .withOpacity(0.1),
-      //   StructureBuilder.styles!.primaryColor
+      //   StructureBuilder.styles!.primaryDarkColor
       //       .withOpacity(0.9),
       // ])
     );

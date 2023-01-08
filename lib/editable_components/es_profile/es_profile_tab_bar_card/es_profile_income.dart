@@ -41,14 +41,14 @@ class EsProfileIncome extends StatelessWidget {
         headingRowHeight: StructureBuilder.dims!.h0Padding * 4,
         dataRowHeight: StructureBuilder.dims!.h0Padding * 2,
         zebraMode: true,
-        headingColor: StructureBuilder.styles!.primaryColor,
+        headingColor: StructureBuilder.styles!.primaryDarkColor,
         rowsContent: [
           ...List.generate(_contentList.length, (index) {
             return [
               ...List.generate(
                   _contentList[index].length,
                   (index2) => EsTitle(_contentList[index][index2],
-                      color: StructureBuilder.styles!.primaryColor))
+                      color: StructureBuilder.styles!.primaryDarkColor))
             ];
           }),
         ],

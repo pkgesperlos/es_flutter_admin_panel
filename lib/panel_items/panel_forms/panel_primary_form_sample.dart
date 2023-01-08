@@ -566,7 +566,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                           borderRadius: BorderRadius.all(Radius.circular(
                               StructureBuilder.dims!.h1BorderRadius)),
                           border: Border.all(
-                              color: StructureBuilder.styles!.primaryColor)),
+                              color: StructureBuilder.styles!.primaryDarkColor)),
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
@@ -913,9 +913,9 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
 
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
         child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -927,7 +927,7 @@ class _PanelPrimaryFormSampleState extends State<PanelPrimaryFormSample> {
                     padding: EdgeInsets.symmetric(
                         horizontal: StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

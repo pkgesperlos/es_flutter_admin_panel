@@ -14,6 +14,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+
 class PanelModalSample extends StatelessWidget {
 
   static const routeName = '/panelModalSample';
@@ -144,7 +145,7 @@ class PanelModalSample extends StatelessWidget {
                 ),
                 EsTextField(
                   border: true,
-                  borderColor: StructureBuilder.styles!.primaryColor,
+                  borderColor: StructureBuilder.styles!.primaryDarkColor,
                 ),
                 EsVSpacer(
                   big: true,
@@ -223,6 +224,8 @@ class PanelModalSample extends StatelessWidget {
                 onTap: () {
                   EsModal.simple(
                     context,
+                    width: StructureBuilder.dims!.h0Padding * 20,
+                    height: StructureBuilder.dims!.h0Padding * 10,
                   );
                 },
               ),
@@ -232,8 +235,7 @@ class PanelModalSample extends StatelessWidget {
                 onTap: () {
                   EsModal.simple(
                     context,
-                    width: StructureBuilder.dims!.h0Padding * 20,
-                    height: StructureBuilder.dims!.h0Padding * 10,
+
                   );
                 },
               ),
@@ -437,7 +439,7 @@ class PanelModalSample extends StatelessWidget {
                 ),
                 EsTextField(
                   border: true,
-                  borderColor: StructureBuilder.styles!.primaryColor,
+                  borderColor: StructureBuilder.styles!.primaryDarkColor,
                 ),
                 EsVSpacer(
                   big: true,
@@ -517,6 +519,7 @@ class PanelModalSample extends StatelessWidget {
                   EsModal.bottom(
                     context,
                     barrierDismissible: false,
+                    contentHeight: StructureBuilder.dims!.h0Padding *10,
                   );
                 },
               ),
@@ -708,9 +711,9 @@ class PanelModalSample extends StatelessWidget {
       """),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
-        child: Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body:SingleChildScrollView(
             child: Column(
               children: [
@@ -721,7 +724,7 @@ class PanelModalSample extends StatelessWidget {
                     fluid: true,
                     padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

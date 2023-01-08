@@ -10,7 +10,6 @@ import '../../editable_components/es_price_card/es_complex_price_card.dart';
 import '../../editable_components/es_price_card/es_price_card.dart';
 
 class PanelPriceCardSample extends StatefulWidget {
-
   static const routeName = '/panelPriceCardSample';
 
   PanelPriceCardSample({Key? key}) : super(key: key);
@@ -60,8 +59,7 @@ class _PanelPriceCardSampleState extends State<PanelPriceCardSample> {
             ),
           ),
           title: AppLocalizations.of(context)!.pricecard,
-          information:
-              "It is price card "
+          information: "It is price card "
               "and located in:"
               " \n es_flutter_component/lib/components/es_price_card/es_price_card.dart "
               "\n and is used as: \n "
@@ -69,7 +67,14 @@ class _PanelPriceCardSampleState extends State<PanelPriceCardSample> {
               price: _priceList[0],
               titleList: _titleList,
               checkList: _checkList1,
-            ),"""),
+            ),
+            where
+            List<String> _titleList = List.generate(
+      6,
+      (index) => AppLocalizations.of(context)!.lormmid,
+    );
+    List<bool> _checkList1 = [true, true, false, false, false, false];
+            """),
       ContainerItems(
           widget: Container(
             width: double.infinity,
@@ -82,8 +87,7 @@ class _PanelPriceCardSampleState extends State<PanelPriceCardSample> {
             ),
           ),
           title: AppLocalizations.of(context)!.pricecard,
-          information:
-          "It is price card "
+          information: "It is price card "
               "and located in:"
               " \n es_flutter_component/lib/components/es_price_card/es_price_card.dart "
               "\n and is used as: \n "
@@ -92,7 +96,19 @@ class _PanelPriceCardSampleState extends State<PanelPriceCardSample> {
               price: _priceList[1],
               titleList: _titleList,
               checkList: _checkList2,
-            ),"""),
+            ),
+            where
+            List<String> _priceList = [
+      AppLocalizations.of(context)!.free,
+      "127000" + AppLocalizations.of(context)!.currencyunit,
+      "721000" + AppLocalizations.of(context)!.currencyunit,
+    ];
+    List<String> _titleList = List.generate(
+      6,
+      (index) => AppLocalizations.of(context)!.lormmid,
+    );
+    List<bool> _checkList2 = [true, true, true, true, false, false];
+            """),
       ContainerItems(
           widget: Container(
             width: double.infinity,
@@ -105,8 +121,7 @@ class _PanelPriceCardSampleState extends State<PanelPriceCardSample> {
             ),
           ),
           title: AppLocalizations.of(context)!.pricecard,
-          information:
-          "It is price card "
+          information: "It is price card "
               "and located in:"
               " \n es_flutter_component/lib/components/es_price_card/es_price_card.dart "
               "\n and is used as: \n "
@@ -115,7 +130,19 @@ class _PanelPriceCardSampleState extends State<PanelPriceCardSample> {
               price: _priceList[1],
               titleList: _titleList,
               checkList: _checkList2,
-            ),"""),
+            ),
+            where
+            List<String> _priceList = [
+      AppLocalizations.of(context)!.free,
+      "127000" + AppLocalizations.of(context)!.currencyunit,
+      "721000" + AppLocalizations.of(context)!.currencyunit,
+    ];
+    List<String> _titleList = List.generate(
+      6,
+      (index) => AppLocalizations.of(context)!.lormmid,
+    );
+    List<bool> _checkList2 = [true, true, true, true, false, false];
+            """),
       ContainerItems(
           widget: Container(
             width: double.infinity,
@@ -127,8 +154,7 @@ class _PanelPriceCardSampleState extends State<PanelPriceCardSample> {
             ),
           ),
           title: AppLocalizations.of(context)!.complexpricecard,
-          information:
-          "It is complex price card "
+          information: "It is complex price card "
               "and located in:"
               " \n es_flutter_component/lib/components/es_price_card/es_price_card.dart "
               "\n and is used as: \n "
@@ -136,10 +162,24 @@ class _PanelPriceCardSampleState extends State<PanelPriceCardSample> {
               priceList: _priceList,
               titleList: _titleList,
               checkList: _checkListTotal,
-            ),"""),
+            ),
+            where
+            List<String> _priceList = [
+      AppLocalizations.of(context)!.free,
+      "127000" + AppLocalizations.of(context)!.currencyunit,
+      "721000" + AppLocalizations.of(context)!.currencyunit,
     ];
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+    List<String> _titleList = List.generate(
+      6,
+      (index) => AppLocalizations.of(context)!.lormmid,
+    );
+     List<List<bool>> _checkListTotal = [_checkList1, _checkList2, _checkList3];
+
+            """),
+    ];
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
+    return Material(
+        color: StructureBuilder.styles!.primaryColor,
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -151,7 +191,7 @@ class _PanelPriceCardSampleState extends State<PanelPriceCardSample> {
                   padding: EdgeInsets.symmetric(
                       horizontal: StructureBuilder.dims!.h0Padding),
                   decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
+                    color: StructureBuilder.styles!.primaryColor,
                   ),
                   children: List.generate(list.length, (index) {
                     if (index == list.length - 1)

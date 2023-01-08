@@ -8,7 +8,7 @@ import 'package:es_flutter_admin_panel/panel_items/panel_authenticate/es_lock_sc
 import 'package:es_flutter_admin_panel/panel_items/panel_authenticate/es_login.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_authenticate/es_recover_password.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_authenticate/es_signin.dart';
-import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_accardion_sample.dart';
+import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_accordion_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_alert_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_avatar_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_bread_crumb_sample.dart';
@@ -19,6 +19,7 @@ import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_dialog
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_dropdown_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_group_button_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_group_list_sample.dart';
+import 'package:es_flutter_admin_panel/panel_items/panel_dashboard/panel_dashboard_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_forms/panel_html_text_editor_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_icons_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_cards/panel_image_card_sample.dart';
@@ -68,9 +69,6 @@ import 'package:provider/provider.dart';
 import 'panel_items/panel_advanced_components/panel_tree_list_sample.dart';
 
 void main() {
-
-
-
   runApp(MyApp());
 }
 
@@ -91,17 +89,17 @@ class _MyApp extends State<MyApp> {
       child: Builder(
           builder: (context) => StructureBuilder(
                 styles: InitialStyle(
-                  primaryColor: Color(0xff092640),
-                  secondaryColor: Color(0xff737373),
-                  tritiaryColor: Colors.pink,
-                  primaryDarkColor: Color(0xffF0F4F9),
-                  primaryLightColor: Colors.white,
-                ),
+                    primaryColor: Color(0xffF0F4F9),
+                    secondaryColor: Color(0xff737373),
+                    primaryDarkColor: Color(0xff092640),
+                    primaryLightColor: Color(0xFFffffff),
+                    specificColor: Colors.pink,),
                 dims: InitialDims(),
                 configs: InitialConfig(),
                 child: MaterialApp(
                   // locale: Locale("fa"),
-                  navigatorObservers: [AppNavigatorObserver()],//it is initialized for breadcrumb
+                  navigatorObservers: [AppNavigatorObserver()],
+                  //it is initialized for breadcrumb
                   locale:
                       Provider.of<LanguageChangeProvider>(context, listen: true)
                           .currentLocale,
@@ -114,73 +112,125 @@ class _MyApp extends State<MyApp> {
                     GlobalCupertinoLocalizations.delegate
                   ],
                   supportedLocales: [
-                    Locale('fa', ''),
+
                     Locale('en', ''), // English, no country code
-                    // Spanish, no country code
+                    Locale('fa', ''),// Persian, no country code
+
+
+
+
                   ],
 
                   initialRoute: '/',
                   routes: {
                     '/': (context) => WidgetTreePanel(),
-
-
-                      '/lockScreen': (context) => EsLockScreen(),
-                      '/esRecoverPassword': (context) => EsRecoverPassword(),
-                      '/esSignin': (context) => EsSignin(),
-                      '/esLogin': (context) => EsLogin(),
-                      '/es404Error': (context) => Es404Error(),
-                      '/esOther404': (context) => EsOther404(),
-                      '/esRepairs': (context) => EsRepairs(),
-                      '/panelProfileSample': (context) => RoutMaker(child: PanelProfileSample(),),
-                      '/panelBillSample': (context) => RoutMaker(child: PanelBillSample(),),
-                      '/panelTimelineSample': (context) => RoutMaker(child: PanelTimelineSample(),),
-                      '/panelPriceCardSample': (context) => RoutMaker(child: PanelPriceCardSample()),
-                      '/panelSearchResultSample': (context) => RoutMaker(child: PanelSearchResultSample()),
-                      '/panelMapSample': (context) => RoutMaker(child: PanelMapSample()),
-                      '/panelEmptyScreenSample': (context) => RoutMaker(child: PanelEmptyScreenSample()),
-                      '/panelTutorialSample': (context) => RoutMaker(child: PanelTutorialSample()),
-                      '/panelTreeListSample': (context) => RoutMaker(child: PanelTreeListSample()),
-                      '/panelTooltipSample': (context) => RoutMaker(child: PanelTooltipSample()),
-                      '/panelToastSample': (context) => RoutMaker(child: PanelToastSample()),
-                      '/panelSweetAlertSample': (context) => RoutMaker(child: PanelSweetAlertSample()),
-                      '/panelValidateFormSample': (context) => RoutMaker(child: PanelValidateFormSample()),
-                      '/panelStepperFormSample': (context) => RoutMaker(child: PanelStepperFormSample()),
-                      '/panelCustomFormSample': (context) => RoutMaker(child: PanelCustomFormSample()),
-                      '/panelPrimaryFormSample': (context) => RoutMaker(child: PanelPrimaryFormSample()),
-                      '/panelAdvancedFormSample': (context) => RoutMaker(child: PanelAdvancedFormSample()),
-                      '/panelTextEditorSample': (context) => RoutMaker(child: PanelTextEditorSample()),
-                      '/panelAccardionSample': (context) => RoutMaker(child: PanelAccardionSample()),
-                      '/panelAlertSample': (context) => RoutMaker(child: PanelAlertSample()),
-                      '/panelAvatarSample': (context) => RoutMaker(child: PanelAvatarSample()),
-                      '/panelBreadCrumbSample': (context) => RoutMaker(child: PanelBreadCrumbSample()),
-                      '/panelButtonSample': (context) => RoutMaker(child: PanelButtonSample()),
-                      '/panelChartSample': (context) => RoutMaker(child: PanelChartSample()),
-                      '/panelColorsSample': (context) => RoutMaker(child: PanelColorsSample()),
-                      '/panelDialogBox': (context) => RoutMaker(child: PanelDialogBox()),
-                      '/panelDropDownSample': (context) => RoutMaker(child: PanelDropDownSample()),
-                      '/panelGroupButtonSample': (context) => RoutMaker(child: PanelGroupButtonSample()),
-                      '/panelGroupListSample': (context) => RoutMaker(child: PanelGroupListSample()),
-                      '/panelIconsSample': (context) => RoutMaker(child: PanelIconsSample()),
-                      '/panelImageCardSample': (context) => RoutMaker(child: PanelImageCardSample()),
-                      '/panelLabelSample': (context) => RoutMaker(child: PanelLabelSample()),
-                      '/panelLightBoxSample': (context) => RoutMaker(child: PanelLightBoxSample()),
-                      '/panelModalSample': (context) => RoutMaker(child: PanelModalSample()),
-                      '/panelNavigationBarSample': (context) => RoutMaker(child: PanelNavigationBarSample()),
-                      '/panelPageIndicatorSample': (context) => RoutMaker(child: PanelPageIndicatorSample()),
-                      '/panelPrimaryCardSample': (context) => RoutMaker(child: PanelPrimaryCardSample()),
-                      '/panelProgressBarSample': (context) => RoutMaker(child: PanelProgressBarSample()),
-                      '/panelScrollableCardSample': (context) => RoutMaker(child: PanelScrollableCardSample()),
-                      '/panelSliderSample': (context) => RoutMaker(child: PanelSliderSample()),
-                      '/panelTabBarNavigationSample': (context) => RoutMaker(child: PanelTabBarNavigationSample()),
-                      '/panelTextSample': (context) => RoutMaker(child: PanelTextSample()),
-                      '/panelWaitingIndicatorSample': (context) => RoutMaker(child: PanelWaitingIndicatorSample()),
-                      '/panelZoomableImageSample': (context) => RoutMaker(child: PanelZoomableImageSample()),
-                      '/panelResponsiveTableSample': (context) => RoutMaker(child: PanelResponsiveTableSample()),
-                      '/panelSimpleTableSample': (context) => RoutMaker(child: PanelSimpleTableSample()),
-                      '/panelHtmlTextEditorSample': (context) => RoutMaker(child: PanelHtmlTextEditorSample()),
-
-
-
+                    '/lockScreen': (context) => EsLockScreen(),
+                    '/esRecoverPassword': (context) => EsRecoverPassword(),
+                    '/esSignin': (context) => EsSignin(),
+                    '/esLogin': (context) => EsLogin(),
+                    '/es404Error': (context) => Es404Error(),
+                    '/esOther404': (context) => EsOther404(),
+                    '/esRepairs': (context) => EsRepairs(),
+                    '/panelProfileSample': (context) => RoutMaker(
+                          child: PanelProfileSample(),
+                        ),
+                    '/panelDashboardSample': (context) => RoutMaker(
+                      child: PanelDashboardSample(),
+                    ),
+                    '/panelBillSample': (context) => RoutMaker(
+                          child: PanelBillSample(),
+                        ),
+                    '/panelTimelineSample': (context) => RoutMaker(
+                          child: PanelTimelineSample(),
+                        ),
+                    '/panelPriceCardSample': (context) =>
+                        RoutMaker(child: PanelPriceCardSample()),
+                    '/panelSearchResultSample': (context) =>
+                        RoutMaker(child: PanelSearchResultSample()),
+                    '/panelMapSample': (context) =>
+                        RoutMaker(child: PanelMapSample()),
+                    '/panelEmptyScreenSample': (context) =>
+                        RoutMaker(child: PanelEmptyScreenSample()),
+                    '/panelTutorialSample': (context) =>
+                        RoutMaker(child: PanelTutorialSample()),
+                    '/panelTreeListSample': (context) =>
+                        RoutMaker(child: PanelTreeListSample()),
+                    '/panelTooltipSample': (context) =>
+                        RoutMaker(child: PanelTooltipSample()),
+                    '/panelToastSample': (context) =>
+                        RoutMaker(child: PanelToastSample()),
+                    '/panelSweetAlertSample': (context) =>
+                        RoutMaker(child: PanelSweetAlertSample()),
+                    '/panelValidateFormSample': (context) =>
+                        RoutMaker(child: PanelValidateFormSample()),
+                    '/panelStepperFormSample': (context) =>
+                        RoutMaker(child: PanelStepperFormSample()),
+                    '/panelCustomFormSample': (context) =>
+                        RoutMaker(child: PanelCustomFormSample()),
+                    '/panelPrimaryFormSample': (context) =>
+                        RoutMaker(child: PanelPrimaryFormSample()),
+                    '/panelAdvancedFormSample': (context) =>
+                        RoutMaker(child: PanelAdvancedFormSample()),
+                    '/panelTextEditorSample': (context) =>
+                        RoutMaker(child: PanelTextEditorSample()),
+                    '/panelaccordionSample': (context) =>
+                        RoutMaker(child: PanelaccordionSample()),
+                    '/panelAlertSample': (context) =>
+                        RoutMaker(child: PanelAlertSample()),
+                    '/panelAvatarSample': (context) =>
+                        RoutMaker(child: PanelAvatarSample()),
+                    '/panelBreadCrumbSample': (context) =>
+                        RoutMaker(child: PanelBreadCrumbSample()),
+                    '/panelButtonSample': (context) =>
+                        RoutMaker(child: PanelButtonSample()),
+                    '/panelChartSample': (context) =>
+                        RoutMaker(child: PanelChartSample()),
+                    '/panelColorsSample': (context) =>
+                        RoutMaker(child: PanelColorsSample()),
+                    '/panelDialogBox': (context) =>
+                        RoutMaker(child: PanelDialogBox()),
+                    '/panelDropDownSample': (context) =>
+                        RoutMaker(child: PanelDropDownSample()),
+                    '/panelGroupButtonSample': (context) =>
+                        RoutMaker(child: PanelGroupButtonSample()),
+                    '/panelGroupListSample': (context) =>
+                        RoutMaker(child: PanelGroupListSample()),
+                    '/panelIconsSample': (context) =>
+                        RoutMaker(child: PanelIconsSample()),
+                    '/panelImageCardSample': (context) =>
+                        RoutMaker(child: PanelImageCardSample()),
+                    '/panelLabelSample': (context) =>
+                        RoutMaker(child: PanelLabelSample()),
+                    '/panelLightBoxSample': (context) =>
+                        RoutMaker(child: PanelLightBoxSample()),
+                    '/panelModalSample': (context) =>
+                        RoutMaker(child: PanelModalSample()),
+                    '/panelNavigationBarSample': (context) =>
+                        RoutMaker(child: PanelNavigationBarSample()),
+                    '/panelPageIndicatorSample': (context) =>
+                        RoutMaker(child: PanelPageIndicatorSample()),
+                    '/panelPrimaryCardSample': (context) =>
+                        RoutMaker(child: PanelPrimaryCardSample()),
+                    '/panelProgressBarSample': (context) =>
+                        RoutMaker(child: PanelProgressBarSample()),
+                    '/panelScrollableCardSample': (context) =>
+                        RoutMaker(child: PanelScrollableCardSample()),
+                    '/panelSliderSample': (context) =>
+                        RoutMaker(child: PanelSliderSample()),
+                    '/panelTabBarNavigationSample': (context) =>
+                        RoutMaker(child: PanelTabBarNavigationSample()),
+                    '/panelTextSample': (context) =>
+                        RoutMaker(child: PanelTextSample()),
+                    '/panelWaitingIndicatorSample': (context) =>
+                        RoutMaker(child: PanelWaitingIndicatorSample()),
+                    '/panelZoomableImageSample': (context) =>
+                        RoutMaker(child: PanelZoomableImageSample()),
+                    '/panelResponsiveTableSample': (context) =>
+                        RoutMaker(child: PanelResponsiveTableSample()),
+                    '/panelSimpleTableSample': (context) =>
+                        RoutMaker(child: PanelSimpleTableSample()),
+                    '/panelHtmlTextEditorSample': (context) =>
+                        RoutMaker(child: PanelHtmlTextEditorSample()),
                   },
                   // home:EsLogin(),
                 ),
@@ -192,13 +242,16 @@ class _MyApp extends State<MyApp> {
 class MyStyle extends StructureStyles {
   static const cardColor = Color(0xffF2F2F2);
 
-
   MyStyle(
       Color primaryColor,
+      Color secondaryColor,
+      Color specificColor,
       Color primaryDarkColor,
       Color primaryLightColor,
-      Color textPrimaryColor,
-      Color textSecondaryColor,
+      Color secondaryDarkColor,
+      Color secondaryLightColor,
+      Color onPrimaryColor,
+      Color onSecondaryColor,
       Color t1Color,
       Color t2Color,
       Color t3Color,
@@ -213,10 +266,14 @@ class MyStyle extends StructureStyles {
       Color t12Color)
       : super(
             primaryColor,
+            secondaryColor,
+            specificColor,
             primaryDarkColor,
             primaryLightColor,
-            textPrimaryColor,
-            textSecondaryColor,
+            secondaryDarkColor,
+            secondaryLightColor,
+            onPrimaryColor,
+            onSecondaryColor,
             t1Color,
             t2Color,
             t3Color,
@@ -229,12 +286,12 @@ class MyStyle extends StructureStyles {
             t10Color,
             t11Color,
             t12Color);
+
   @override
   AdditionalStyleModel additionalStyle() {
     // TODO: implement additionalStyle
 
     return super.additionalStyle();
-
   }
 }
 

@@ -37,7 +37,7 @@ class PanelAvatarSample extends StatelessWidget {
         path: _imagePath,
       ),
       EsAvatarWidget(
-          backGroundColor: StructureBuilder.styles!.tritiaryColor,
+          backGroundColor: StructureBuilder.styles!.specificColor,
           widget: EsTitle(
             "FA",
             color: StructureBuilder.styles!.primaryLightColor,
@@ -95,7 +95,7 @@ class PanelAvatarSample extends StatelessWidget {
                       ),
                       hasBorder: true,
                       widgetSize: StructureBuilder.dims!.h2IconSize * 0.1,
-                      color: StructureBuilder.styles!.primaryColor),
+                      color: StructureBuilder.styles!.primaryDarkColor),
                   EsLabel(
                     isUnique: false,
                     widget: EsAvatarImage(
@@ -145,7 +145,7 @@ class PanelAvatarSample extends StatelessWidget {
                   widget: EsAvatarImage(path: _imagePath,),
                   hasBorder: true,
                   widgetSize: StructureBuilder.dims!.h2IconSize * 0.2,
-                  color: StructureBuilder.styles!.primaryColor
+                  color: StructureBuilder.styles!.primaryDarkColor
               ),"""
               "\n   where \n"
               """
@@ -210,7 +210,7 @@ class PanelAvatarSample extends StatelessWidget {
                         color: StructureBuilder.styles!.primaryLightColor,
                       )),
                   EsAvatarWidget(
-                      backGroundColor: StructureBuilder.styles!.tritiaryColor,
+                      backGroundColor: StructureBuilder.styles!.specificColor,
                       widget: EsTitle(
                         "FA",
                         color: StructureBuilder.styles!.primaryLightColor,
@@ -253,7 +253,7 @@ class PanelAvatarSample extends StatelessWidget {
           information:
               "these are avatars with different background colors located in: \n es_flutter_component/lib/components/es_image/es_avatar_image.dart\n and is used as: \n "
               """ EsAvatarWidget(
-                backGroundColor: StructureBuilder.styles!.tritiaryColor,
+                backGroundColor: StructureBuilder.styles!.specificColor,
                   widget: EsTitle(
                 "FA",
                 color: StructureBuilder.styles!.primaryLightColor,
@@ -351,57 +351,40 @@ class PanelAvatarSample extends StatelessWidget {
           """),
       ContainerItems(
           widget: Container(
-              height: 100, child: EsAvatarGroup(avatarList: _avatarList)),
+              height: 100,
+              child: EsAvatarGroup(avatarList: _avatarList)),
           title: AppLocalizations.of(context)!.groupavatar,
           information:
               "It is group avatar located in: \n es_flutter_component/lib/components/es_image\n and is used as: \n "
-              """SizedBox(
-                    width: StructureBuilder.dims!.h0Padding*10,
-                    child: Stack(
-                      children: [
-                        Align(
-                          alignment: Alignment(0,0),
-                          child: EsAvatarImage(path:_imagePath,
-
-                          ),
-                        ),
-                        Align(
-                          alignment: Alignment(_alignFactor,0),
-                          child: EsAvatarWidget(
-                              widget: EsTitle(
-                                "FA",
-                                color: StructureBuilder.styles!.primaryLightColor,
-                              )),
-                        ),
-                        Align(
-                          alignment: Alignment(_alignFactor*2,0),
-                          child: EsAvatarImage(path:_imagePath,
-
-                          ),
-                        ),
-                        Align(
-                          alignment: Alignment(_alignFactor*3,0),
-                          child: EsAvatarWidget(
-                            backGroundColor: StructureBuilder.styles!.tritiaryColor,
-                              widget: EsTitle(
-                                "FA",
-                                color: StructureBuilder.styles!.primaryLightColor,
-                              )),
-                        ),
-
-                      ],
-                    ),
-                  ),"""
+              """EsAvatarGroup(avatarList: _avatarList)"""
               "\n   where \n"
               """
-      String _imagePath = "assets/images/img4.jpg";
+        List<Widget> _avatarList = [
+      EsAvatarImage(
+        path: _imagePath,
+      ),
+      EsAvatarWidget(
+          widget: EsTitle(
+        "FA",
+        color: StructureBuilder.styles!.primaryLightColor,
+      )),
+      EsAvatarImage(
+        path: _imagePath,
+      ),
+      EsAvatarWidget(
+          backGroundColor: StructureBuilder.styles!.specificColor,
+          widget: EsTitle(
+            "FA",
+            color: StructureBuilder.styles!.primaryLightColor,
+          )),
+    ];
           """),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
-        child: Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -412,7 +395,7 @@ class PanelAvatarSample extends StatelessWidget {
                     fluid: true,
                     padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

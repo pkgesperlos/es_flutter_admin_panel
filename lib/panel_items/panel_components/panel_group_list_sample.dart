@@ -92,7 +92,7 @@ class _PanelGroupListSampleState extends State<PanelGroupListSample> {
     });
     List<BoxDecoration> _decorationList = List.generate(4, (index) {
       if (index == 1) {
-        return BoxDecoration(color: StructureBuilder.styles!.tritiaryColor);
+        return BoxDecoration(color: StructureBuilder.styles!.specificColor);
       } else {
         return BoxDecoration(color: StructureBuilder.styles!.secondaryColor);
       }
@@ -109,7 +109,7 @@ class _PanelGroupListSampleState extends State<PanelGroupListSample> {
               )),
           title: AppLocalizations.of(context)!.grouplistwithsimplecontent,
           information:
-              "it is a group list with simple content located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
+              "It is a group list with simple content located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
               """EsGroupList(widgetList: _widgetList,)"""
                   "\n   where \n"
                   """
@@ -134,7 +134,7 @@ class _PanelGroupListSampleState extends State<PanelGroupListSample> {
               )),
           title: AppLocalizations.of(context)!.grouplistwithoutdivider,
           information:
-              "it is a group list without divider located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
+              "It is a group list without divider located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
               """EsGroupList(
                 widgetList: _widgetList,
               divider: Container(),
@@ -159,7 +159,7 @@ class _PanelGroupListSampleState extends State<PanelGroupListSample> {
               child: EsGroupList(
                 decoration: BoxDecoration(
                     border: Border.all(
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(
                         StructureBuilder.dims!.h0BorderRadius))),
@@ -167,7 +167,7 @@ class _PanelGroupListSampleState extends State<PanelGroupListSample> {
               )),
           title: AppLocalizations.of(context)!.grouplistwithborder,
           information:
-              "it is a group list with simple content located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
+              "It is a group list with simple content located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
               """EsGroupList(widgetList: _widgetList,)"""
                   "\n   where \n"
                   """
@@ -191,7 +191,7 @@ class _PanelGroupListSampleState extends State<PanelGroupListSample> {
               )),
           title: AppLocalizations.of(context)!.grouplistwithcomplexcontent,
           information:
-              "it is a group list with complex content located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
+              "It is a group list with complex content located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
               """ EsGroupList(widgetList: _complexWidgetList,)"""
                   "\n   where \n"
                   """
@@ -246,7 +246,7 @@ class _PanelGroupListSampleState extends State<PanelGroupListSample> {
           ),
           title: AppLocalizations.of(context)!.grouplistwithdesireditemscolor,
           information:
-              "it is a group list with desired items color located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
+              "It is a group list with desired items color located in: \n es_flutter_component/lib/components/es_group_list/es_group_list.dart' \n and is used as: \n "
               """EsGroupList(widgetList: _widgetList,)"""
                   "\n   where \n"
                   """
@@ -262,7 +262,7 @@ class _PanelGroupListSampleState extends State<PanelGroupListSample> {
     });
     List<BoxDecoration> _decorationList = List.generate(4, (index) {
       if (index == 1) {
-        return BoxDecoration(color: StructureBuilder.styles!.tritiaryColor);
+        return BoxDecoration(color: StructureBuilder.styles!.specificColor);
       } else {
         return BoxDecoration(color: StructureBuilder.styles!.secondaryColor);
       }
@@ -275,9 +275,9 @@ class _PanelGroupListSampleState extends State<PanelGroupListSample> {
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
-        child: Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -290,7 +290,7 @@ class _PanelGroupListSampleState extends State<PanelGroupListSample> {
                       horizontal: StructureBuilder.dims!.h0Padding,
                     ),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

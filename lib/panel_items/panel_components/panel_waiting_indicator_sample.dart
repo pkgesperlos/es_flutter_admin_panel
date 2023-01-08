@@ -62,7 +62,7 @@ class _PanelWaitingIndicatorSampleState
                     width: StructureBuilder.dims!.h0Padding,
                     height: StructureBuilder.dims!.h0Padding,
                     child: CircularProgressIndicator(
-                      color: StructureBuilder.styles!.tritiaryColor,
+                      color: StructureBuilder.styles!.specificColor,
                     ),
                   ),
                   EsBlinkWaitingIndicator(),
@@ -70,7 +70,7 @@ class _PanelWaitingIndicatorSampleState
                     color: StructureBuilder.styles!.secondaryColor,
                   ),
                   EsBlinkWaitingIndicator(
-                    color: StructureBuilder.styles!.tritiaryColor,
+                    color: StructureBuilder.styles!.specificColor,
                   ),
                   EsBlinkWaitingIndicator(
                     color: StructureBuilder.styles!.dangerColor().dangerDark,
@@ -81,7 +81,7 @@ class _PanelWaitingIndicatorSampleState
           information:
               "these are waiting indicators in different colors that blink type  located in: \n es_flutter_component/lib/components/es_waiting_indicator/es_blink_waiting_indicator.dart;' \n and is used as: \n "
               """EsBlinkWaitingIndicator(
-                    color: StructureBuilder.styles!.tritiaryColor,
+                    color: StructureBuilder.styles!.specificColor,
                   ),"""),
       ContainerItems(
           widget: Container(
@@ -94,21 +94,21 @@ class _PanelWaitingIndicatorSampleState
                     width: StructureBuilder.dims!.h0Padding * 3,
                     height: StructureBuilder.dims!.h0Padding * 3,
                     child: CircularProgressIndicator(
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                     ),
                   ),
                   SizedBox(
                     width: StructureBuilder.dims!.h0Padding * 2,
                     height: StructureBuilder.dims!.h0Padding * 2,
                     child: CircularProgressIndicator(
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                     ),
                   ),
                   SizedBox(
                     width: StructureBuilder.dims!.h0Padding,
                     height: StructureBuilder.dims!.h0Padding,
                     child: CircularProgressIndicator(
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                     ),
                   ),
                   SizedBox(
@@ -116,7 +116,7 @@ class _PanelWaitingIndicatorSampleState
                     height: StructureBuilder.dims!.h1Padding,
                     child: CircularProgressIndicator(
                       strokeWidth: StructureBuilder.dims!.h2Padding*0.5,
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                     ),
                   ),
                   SizedBox(
@@ -124,7 +124,7 @@ class _PanelWaitingIndicatorSampleState
                     height: StructureBuilder.dims!.h2Padding,
                     child: CircularProgressIndicator(
                       strokeWidth: StructureBuilder.dims!.h2Padding*0.5,
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                     ),
                   ),
                   EsBlinkWaitingIndicator(size: StructureBuilder.dims!.h0Padding*2.5,),
@@ -154,7 +154,7 @@ class _PanelWaitingIndicatorSampleState
                     width: StructureBuilder.dims!.h0Padding,
                     height: StructureBuilder.dims!.h0Padding,
                     child: EsBlinkWaitingIndicator(
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                     ),
                   ),),
                 ],
@@ -166,18 +166,18 @@ class _PanelWaitingIndicatorSampleState
                     width: StructureBuilder.dims!.h0Padding,
                     height: StructureBuilder.dims!.h0Padding,
                     child: EsBlinkWaitingIndicator(
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                     ),
                   ),),"""),
     ];
 
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
-        child: Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body:  Scaffold(
-            backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+            backgroundColor: StructureBuilder.styles!.primaryColor,
             body: SingleChildScrollView(
               child: Column(
                 children: [
@@ -190,7 +190,7 @@ class _PanelWaitingIndicatorSampleState
                         horizontal: StructureBuilder.dims!.h0Padding,
                       ),
                       decoration: BoxDecoration(
-                        color: StructureBuilder.styles!.primaryDarkColor,
+                        color: StructureBuilder.styles!.primaryColor,
                       ),
                       children: List.generate(
                           list.length, (index) => boxShow(list[index])))

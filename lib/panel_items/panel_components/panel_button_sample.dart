@@ -67,8 +67,8 @@ class PanelButtonSample extends StatelessWidget {
               EsButton(
                 text: AppLocalizations.of(context)!.primary,
                 fillColor: StructureBuilder.styles!.t4Color,
-                borderColor: StructureBuilder.styles!.primaryColor,
-                textColor: StructureBuilder.styles!.primaryColor,
+                borderColor: StructureBuilder.styles!.primaryDarkColor,
+                textColor: StructureBuilder.styles!.primaryDarkColor,
               ),
               EsButton(
                 text: AppLocalizations.of(context)!.success,
@@ -951,10 +951,11 @@ class PanelButtonSample extends StatelessWidget {
                 text: AppLocalizations.of(context)!.blocbutton,
               )"""),
     ];
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
+    return Material(
+        color: StructureBuilder.styles!.decorationColor().background,
         child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -965,7 +966,7 @@ class PanelButtonSample extends StatelessWidget {
                     fluid: true,
                     padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index)

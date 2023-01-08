@@ -45,7 +45,7 @@ class EsPriceCard extends StatelessWidget {
               children: [
                 EsOrdinaryText(
                     _title(_priceCardType,context),
-                    color: StructureBuilder.styles!.primaryColor),
+                    color: StructureBuilder.styles!.primaryDarkColor),
                 EsVSpacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

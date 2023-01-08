@@ -36,7 +36,7 @@ class PageTitleContainer extends StatelessWidget {
               Radius.circular(StructureBuilder.dims!.h2FontSize)),
         boxShadow: [
           BoxShadow(
-            color: StructureBuilder.styles!.primaryColor,
+            color: StructureBuilder.styles!.primaryDarkColor,
             // blurRadius: 2.0,
 
             offset: Offset(0, 1.5),

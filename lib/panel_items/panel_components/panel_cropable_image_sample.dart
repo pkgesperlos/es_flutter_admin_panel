@@ -65,7 +65,7 @@ import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.
 //
 //     ];
 //     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-//         color: StructureBuilder.styles!.primaryDarkColor,
+//         color: StructureBuilder.styles!.primaryColor,
 //         child: SingleChildScrollView(
 //           child: Column(
 //             children: [
@@ -77,7 +77,7 @@ import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.
 //                   padding: EdgeInsets.symmetric(
 //                       horizontal: StructureBuilder.dims!.h0Padding),
 //                   decoration: BoxDecoration(
-//                     color: StructureBuilder.styles!.primaryDarkColor,
+//                     color: StructureBuilder.styles!.primaryColor,
 //                   ),
 //                   children: List.generate(
 //                       list.length, (index) => boxShow(list[index])))

@@ -45,7 +45,7 @@ class EsProfileTabBarCard extends StatelessWidget {
         num,
             (index) => EsTitle(
           _titleList[index],
-          color: StructureBuilder.styles!.primaryColor,
+          color: StructureBuilder.styles!.primaryDarkColor,
         ));
 
     List<Widget> _indicatorList = [
@@ -88,7 +88,7 @@ class EsProfileTabBarCard extends StatelessWidget {
               EsOrdinaryText(
                 AppLocalizations.of(context)!.lorm,
                 align: TextAlign.justify,
-                color: StructureBuilder.styles!.primaryColor,
+                color: StructureBuilder.styles!.primaryDarkColor,
               ),
               EsVSpacer(),
               Row(
@@ -126,7 +126,7 @@ class EsProfileTabBarCard extends StatelessWidget {
               EsOrdinaryText(
                 AppLocalizations.of(context)!.lormmid,
                 align: TextAlign.justify,
-                color: StructureBuilder.styles!.primaryColor,
+                color: StructureBuilder.styles!.primaryDarkColor,
               ),
               EsVSpacer(),
               Row(

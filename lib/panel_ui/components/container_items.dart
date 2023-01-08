@@ -33,7 +33,7 @@ class ContainerItems extends StatelessWidget {
               Radius.circular(StructureBuilder.dims!.h0BorderRadius * 2)),
           boxShadow: [
             BoxShadow(
-              color: StructureBuilder.styles!.primaryColor,
+              color: StructureBuilder.styles!.primaryDarkColor,
               // blurRadius: 2.0,
               offset: Offset(-2, 0),
             ),
@@ -59,7 +59,7 @@ class ContainerItems extends StatelessWidget {
                       children: [
                         EsDottedText(
                           title,
-                          // size: 10, color: StructureBuilder.styles!.primaryColor,
+                          // size: 10, color: StructureBuilder.styles!.primaryDarkColor,
                           align: TextAlign.start,
                         ),
                       ],

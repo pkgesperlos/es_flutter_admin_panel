@@ -70,7 +70,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
     return Container(
       decoration: BoxDecoration(
         //set the color of app bar.
-        color: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.primaryColor,
       ),
       child: Row(
         children: [
@@ -110,7 +110,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
       ),
       decoration: BoxDecoration(
           color: StructureBuilder.styles!.primaryLightColor,
-          border: Border.all(color: StructureBuilder.styles!.primaryColor),
+          border: Border.all(color: StructureBuilder.styles!.primaryDarkColor),
           borderRadius: BorderRadius.all(
               Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
       child: Container(
@@ -131,9 +131,9 @@ class _AppBarWidgetState extends State<AppBarWidget> {
             //       // child: EsSearchTextField(
             //       //   borderRadius: BorderRadius.all(Radius.circular(
             //       //       StructureBuilder.dims!.h0BorderRadius * 0.7)),
-            //       //   fillColor: StructureBuilder.styles!.primaryColor,
+            //       //   fillColor: StructureBuilder.styles!.primaryDarkColor,
             //       //   border: true,
-            //       //   borderColor: StructureBuilder.styles!.primaryColor,
+            //       //   borderColor: StructureBuilder.styles!.primaryDarkColor,
             //       //   hint: AppLocalizations.of(context)!.search,
             //       //   hintStyle: TextStyle(
             //       //       color: StructureBuilder.styles!.primaryLightColor,
@@ -200,7 +200,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
       ),
       decoration: BoxDecoration(
           color: StructureBuilder.styles!.primaryLightColor,
-          border: Border.all(color: StructureBuilder.styles!.primaryColor),
+          border: Border.all(color: StructureBuilder.styles!.primaryDarkColor),
           borderRadius: BorderRadius.all(
               Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
       child: Container(
@@ -223,7 +223,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                     },
                     child: EsSvgIcon(
                       "assets/svgs/menu.svg",
-                      color: StructureBuilder.styles!.primaryColor,
+                      color: StructureBuilder.styles!.primaryDarkColor,
                       size: StructureBuilder.dims!.h2IconSize,
                     ),
                   ),
@@ -287,7 +287,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
       ),
       decoration: BoxDecoration(
           color: StructureBuilder.styles!.primaryLightColor,
-          border: Border.all(color: StructureBuilder.styles!.primaryColor),
+          border: Border.all(color: StructureBuilder.styles!.primaryDarkColor),
           borderRadius: BorderRadius.all(
               Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
       child: Container(
@@ -309,7 +309,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                   },
                   child: EsSvgIcon(
                     "assets/svgs/menu.svg",
-                    color: StructureBuilder.styles!.primaryColor,
+                    color: StructureBuilder.styles!.primaryDarkColor,
                     size: StructureBuilder.dims!.h2IconSize,
                   ),
                 ),
@@ -323,7 +323,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                   },
                   child: EsSvgIcon(
                     "assets/svgs/search.svg",
-                    color: StructureBuilder.styles!.primaryColor,
+                    color: StructureBuilder.styles!.primaryDarkColor,
                     size: StructureBuilder.dims!.h2IconSize,
                   ),
                 ),
@@ -384,7 +384,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
       ),
       decoration: BoxDecoration(
           color: StructureBuilder.styles!.primaryLightColor,
-          border: Border.all(color: StructureBuilder.styles!.primaryColor),
+          border: Border.all(color: StructureBuilder.styles!.primaryDarkColor),
           borderRadius: BorderRadius.all(
               Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
       child: Row(
@@ -403,7 +403,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
             //     )),
             //     boxShadow: [
             //       BoxShadow(
-            //           color: StructureBuilder.styles!.primaryColor,
+            //           color: StructureBuilder.styles!.primaryDarkColor,
             //           spreadRadius: StructureBuilder.dims!.h3Padding
             //           // spreadRadius: 0.5
             //           )
@@ -444,7 +444,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
             horizontal: StructureBuilder.dims!.h1Padding,
           ),
           decoration: BoxDecoration(
-              color: StructureBuilder.styles!.primaryColor,
+              color: StructureBuilder.styles!.primaryDarkColor,
               borderRadius: BorderRadius.all(
                   Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
           child: Row(
@@ -481,7 +481,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
         dropdownWidth: StructureBuilder.dims!.h0Padding * 4,
         dropdownPadding: EdgeInsets.symmetric(vertical: 6),
         dropdownDecoration: BoxDecoration(
-            color: StructureBuilder.styles!.primaryColor,
+            color: StructureBuilder.styles!.primaryDarkColor,
             borderRadius: BorderRadius.all(
                 Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
         // dropdownElevation: 10,

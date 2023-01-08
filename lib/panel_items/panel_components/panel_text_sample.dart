@@ -187,7 +187,7 @@ class PanelTextSample extends StatelessWidget {
                   ),
                   EsHeader(
                     "Header : " + AppLocalizations.of(context)!.sampleText,
-                    color: StructureBuilder.styles!.textColor().tritiary,
+                    color: StructureBuilder.styles!.textColor().titleText,
                   ),
                 ],
               ),
@@ -202,7 +202,7 @@ class PanelTextSample extends StatelessWidget {
                   ),
                   EsTitle(
                     "Title : " + AppLocalizations.of(context)!.sampleText,
-                    color: StructureBuilder.styles!.textColor().tritiary,
+                    color: StructureBuilder.styles!.textColor().titleText,
                   ),
                 ],
               ),
@@ -217,7 +217,7 @@ class PanelTextSample extends StatelessWidget {
                   ),
                   EsDottedText(
                     "DottedText : " + AppLocalizations.of(context)!.sampleText,
-                    color: StructureBuilder.styles!.textColor().tritiary,
+                    color: StructureBuilder.styles!.textColor().titleText,
                   ),
                 ],
               ),
@@ -244,9 +244,9 @@ class PanelTextSample extends StatelessWidget {
                   ),
                   EsIconText(
                     "IconText : " + AppLocalizations.of(context)!.sampleText,
-                    color: StructureBuilder.styles!.textColor().tritiary,
+                    color: StructureBuilder.styles!.textColor().titleText,
                     icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
-                        color: StructureBuilder.styles!.textColor().tritiary,
+                        color: StructureBuilder.styles!.textColor().titleText,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),
                 ],
@@ -262,7 +262,7 @@ class PanelTextSample extends StatelessWidget {
                   ),
                   EsMarkedText(
                     "MarkedText : " + AppLocalizations.of(context)!.sampleText,
-                    color: StructureBuilder.styles!.textColor().tritiary,
+                    color: StructureBuilder.styles!.textColor().titleText,
                   ),
                 ],
               ),
@@ -280,7 +280,7 @@ class PanelTextSample extends StatelessWidget {
                   EsOrdinaryText(
                     "OrdinaryText : " +
                         AppLocalizations.of(context)!.sampleText,
-                    color: StructureBuilder.styles!.textColor().tritiary,
+                    color: StructureBuilder.styles!.textColor().titleText,
                   ),
                 ],
               ),
@@ -295,7 +295,7 @@ class PanelTextSample extends StatelessWidget {
                   ),
                   EsSubtitle(
                     "Subtitle : " + AppLocalizations.of(context)!.sampleText,
-                    color: StructureBuilder.styles!.textColor().tritiary,
+                    color: StructureBuilder.styles!.textColor().titleText,
                   ),
                 ],
               ),
@@ -310,7 +310,7 @@ class PanelTextSample extends StatelessWidget {
                   ),
                   EsLabelText(
                     "LabelText : " + AppLocalizations.of(context)!.sampleText,
-                    color: StructureBuilder.styles!.textColor().tritiary,
+                    color: StructureBuilder.styles!.textColor().titleText,
                   ),
                 ],
               ),
@@ -326,7 +326,7 @@ class PanelTextSample extends StatelessWidget {
                       color: StructureBuilder.styles!.textColor().danger,
                       ),
                       EsHeader("Header : "+AppLocalizations.of(context)!.sampleText,
-                        color: StructureBuilder.styles!.textColor().tritiary,),
+                        color: StructureBuilder.styles!.textColor().titleText,),
                     ],
                   ),"""),
       ContainerItems(
@@ -620,9 +620,9 @@ class PanelTextSample extends StatelessWidget {
                       ),"""),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
         child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -633,7 +633,7 @@ class PanelTextSample extends StatelessWidget {
                     fluid: true,
                     padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

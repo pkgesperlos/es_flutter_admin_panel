@@ -136,7 +136,7 @@ class PanelDialogBox extends StatelessWidget {
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
         color: StructureBuilder.styles!.primaryLightColor,
         child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          backgroundColor: StructureBuilder.styles!.primaryColor,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -151,7 +151,7 @@ class PanelDialogBox extends StatelessWidget {
                     AppLocalizations.of(context)!.dialogeBoxDescription,
                   ),
                   decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                       borderRadius: BorderRadius.all(
                           Radius.circular(StructureBuilder.dims!.h2FontSize))),
                 ),
@@ -181,7 +181,7 @@ class PanelDialogBox extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
                   Radius.circular(StructureBuilder.dims!.h0Padding)),
-              color: StructureBuilder.styles!.primaryDarkColor),
+              color: StructureBuilder.styles!.primaryColor),
           child: widget,
         ));
   }

@@ -36,7 +36,7 @@ class EsComplexPriceCard extends StatelessWidget {
         headingRowHeight: StructureBuilder.dims!.h0Padding * 4,
         dataRowHeight: StructureBuilder.dims!.h0Padding * 2,
         zebraMode: true,
-        headingColor: StructureBuilder.styles!.primaryColor,
+        headingColor: StructureBuilder.styles!.primaryDarkColor,
         rowsContent: [
           ...List.generate(titleList.length, (index) => [
             EsOrdinaryText(titleList[index]),

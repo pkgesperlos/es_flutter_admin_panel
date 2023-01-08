@@ -78,7 +78,7 @@ class _EsLockScreen extends State<EsLockScreen> {
     ];
 
     return Scaffold(
-        backgroundColor: StructureBuilder.styles!.primaryLightColor,
+      backgroundColor: StructureBuilder.styles!.decorationColor().background,
         resizeToAvoidBottomInset: false,
         body: Center(
           child: SingleChildScrollView(
@@ -214,7 +214,7 @@ class _EsLockScreen extends State<EsLockScreen> {
             horizontal: StructureBuilder.dims!.h1Padding,
           ),
           decoration: BoxDecoration(
-              color: StructureBuilder.styles!.primaryColor,
+              color: StructureBuilder.styles!.primaryDarkColor,
               borderRadius: BorderRadius.all(
                   Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
           child: Row(
@@ -251,7 +251,7 @@ class _EsLockScreen extends State<EsLockScreen> {
         dropdownWidth: StructureBuilder.dims!.h0Padding * 4,
         dropdownPadding: EdgeInsets.symmetric(vertical: 6),
         dropdownDecoration: BoxDecoration(
-            color: StructureBuilder.styles!.primaryColor,
+            color: StructureBuilder.styles!.primaryDarkColor,
             borderRadius: BorderRadius.all(
                 Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
         // dropdownElevation: 10,

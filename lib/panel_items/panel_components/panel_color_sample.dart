@@ -35,7 +35,7 @@ class _PanelColorsSampleState extends State<PanelColorsSample> {
 
         ),
         EsVSpacer(big: true,),
-        EsTitle(title,color: StructureBuilder.styles!.primaryColor,)
+        EsTitle(title,color: StructureBuilder.styles!.primaryDarkColor,)
       ],
     );
   }
@@ -58,15 +58,58 @@ class _PanelColorsSampleState extends State<PanelColorsSample> {
                   AppLocalizations.of(context)!.primarylightcolor),
                 colorBox( StructureBuilder.styles!.primaryDarkColor,
                   AppLocalizations.of(context)!.primarydarkcolor,),
+                colorBox( StructureBuilder.styles!.secondaryDarkColor,
+                    AppLocalizations.of(context)!.secondarydarkcolor),
+                colorBox( StructureBuilder.styles!.secondaryLightColor,
+                  AppLocalizations.of(context)!.secondarylightcolor,),
                 colorBox( StructureBuilder.styles!.secondaryColor,
                   AppLocalizations.of(context)!.secondarycolor,),
-                colorBox( StructureBuilder.styles!.tritiaryColor,
-                  AppLocalizations.of(context)!.tritiarycolor,),
 
+                colorBox( StructureBuilder.styles!.specificColor,
+                  AppLocalizations.of(context)!.specificColor,),
+
+                colorBox( StructureBuilder.styles!.onPrimaryColor,
+                  AppLocalizations.of(context)!.onprimarycolor,
+                ),
+                colorBox( StructureBuilder.styles!.onSecondaryColor,
+                  AppLocalizations.of(context)!.onsecondarycolor,
+                ),
+                /////////////////////////DecorationColor
+                colorBox( StructureBuilder.styles!.decorationColor().background,
+                  AppLocalizations.of(context)!.backgroundcolor,
+                ),
+                colorBox( StructureBuilder.styles!.decorationColor().border,
+                  AppLocalizations.of(context)!.bordercolor,
+                ),
+                colorBox( StructureBuilder.styles!.decorationColor().hover,
+                  AppLocalizations.of(context)!.hovercolor,
+                ),
+                colorBox( StructureBuilder.styles!.decorationColor().buttonHover,
+                  AppLocalizations.of(context)!.buttonhovercolor,
+                ),
+                colorBox( StructureBuilder.styles!.decorationColor().textHover,
+                  AppLocalizations.of(context)!.texthovercolor,
+                ),
+                colorBox( StructureBuilder.styles!.decorationColor().card,
+                  AppLocalizations.of(context)!.cardcolor,
+                ),
+                colorBox( StructureBuilder.styles!.decorationColor().shadow,
+                  AppLocalizations.of(context)!.shadowcolor,
+                ),
+                colorBox( StructureBuilder.styles!.decorationColor().divider,
+                  AppLocalizations.of(context)!.dividercolor,
+                ),
+                colorBox( StructureBuilder.styles!.decorationColor().icon,
+                  AppLocalizations.of(context)!.iconcolor,
+                ),
+                colorBox( StructureBuilder.styles!.decorationColor().menu,
+                  AppLocalizations.of(context)!.menucolor,
+                ),
+/////////////////////////////////////////////
               ],
             ) ,
           ),
-          title: AppLocalizations.of(context)!.simplecarouselsliderwithoutanimation,
+          title:AppLocalizations.of(context)!.primarycolor,
           information:
               "these are main colors that are used in Panel"),
       ContainerItems(
@@ -88,9 +131,9 @@ class _PanelColorsSampleState extends State<PanelColorsSample> {
               ],
             ) ,
           ),
-          title: AppLocalizations.of(context)!.simplecarouselsliderwithoutanimation,
+          title:AppLocalizations.of(context)!.errorcolors,
           information:
-              "these are danger colors that are used in Panel"),
+              "these are error colors that are used in Panel"),
       ContainerItems(
           widget: Container(
 
@@ -112,7 +155,7 @@ class _PanelColorsSampleState extends State<PanelColorsSample> {
               ],
             ) ,
           ),
-          title: AppLocalizations.of(context)!.simplecarouselsliderwithoutanimation,
+          title:AppLocalizations.of(context)!.warningcolors,
           information:
               "these are warning colors that are used in Panel"),
       ContainerItems(
@@ -134,7 +177,7 @@ class _PanelColorsSampleState extends State<PanelColorsSample> {
               ],
             ) ,
           ),
-          title: AppLocalizations.of(context)!.simplecarouselsliderwithoutanimation,
+          title:AppLocalizations.of(context)!.successcolors,
           information:
               "these are success colors that are used in Panel"),
       ContainerItems(
@@ -146,25 +189,28 @@ class _PanelColorsSampleState extends State<PanelColorsSample> {
               children: [
                 colorBox( StructureBuilder.styles!.informationColor().informationRegular,
                   AppLocalizations.of(context)!.informationregularcolor,
-                ),  colorBox( StructureBuilder.styles!.informationColor().informationLight,
+                ),
+                colorBox( StructureBuilder.styles!.informationColor().informationLight,
                   AppLocalizations.of(context)!.informationlightcolor,
-                ),  colorBox( StructureBuilder.styles!.informationColor().informationDark,
+                ),
+                colorBox( StructureBuilder.styles!.informationColor().informationDark,
                   AppLocalizations.of(context)!.informationdarkcolor,
                 ),
+
 
 
               ],
             ) ,
           ),
-          title: AppLocalizations.of(context)!.simplecarouselsliderwithoutanimation,
+          title:AppLocalizations.of(context)!.informationcolors,
           information:
-              "these are success colors that are used in Panel"),
+              "these are information colors that are used in Panel"),
 
     ];
     return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
         child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -176,7 +222,7 @@ class _PanelColorsSampleState extends State<PanelColorsSample> {
                     padding: EdgeInsets.symmetric(
                         horizontal: StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

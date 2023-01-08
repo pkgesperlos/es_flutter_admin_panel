@@ -41,7 +41,7 @@ class EsProgressProfileCard extends StatelessWidget {
         children: [
           EsHeader( AppLocalizations.of(context)!.completetheprofile,
           isBold: true,
-            color: StructureBuilder.styles!.primaryColor,
+            color: StructureBuilder.styles!.primaryDarkColor,
           ),
           EsVSpacer(big: true,factor: 5,),
           Row(
@@ -62,7 +62,7 @@ class EsProgressProfileCard extends StatelessWidget {
                     _percent,
                     color: StructureBuilder.styles!.primaryLightColor,
                   ),
-                  progressColor: StructureBuilder.styles!.primaryColor,
+                  progressColor: StructureBuilder.styles!.primaryDarkColor,
                   backgroundColor: StructureBuilder.styles!.t2Color,
                 ),
               ),

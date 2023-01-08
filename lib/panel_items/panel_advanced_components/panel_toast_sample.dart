@@ -157,7 +157,8 @@ class _PanelToastSampleState extends State<PanelToastSample> {
           information:
               "these are toast messages that the custom type of them are used after adding \n"
               "fluttertoast package in pubspec.yaml 's dependencies and the EsCustomToastContainer located in: \n "
-              "es_flutter_component/es_toast/es_custom_toast_container.dart \n and is used as: \n "
+              "es_flutter_component/es_toast/es_custom_toast_container.dart \n and is used as:"
+                  " \n "
               """
                onTap: () {
                   fToast.showToast(
@@ -173,13 +174,26 @@ class _PanelToastSampleState extends State<PanelToastSample> {
                     toastDuration: Duration(seconds: 2),
                   );
                 },
+                
+                and the default type is used as:
+                
+                 onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text("This is flutter toast."),
+                    action: SnackBarAction(
+                        label: 'UNDO',
+                        onPressed:
+                            ScaffoldMessenger.of(context).hideCurrentSnackBar),
+                  ));
+                },
+                
               """),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
-        child: Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -191,7 +205,7 @@ class _PanelToastSampleState extends State<PanelToastSample> {
                     fluid: true,
                     padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

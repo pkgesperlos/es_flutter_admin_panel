@@ -17,7 +17,6 @@ import '../../editable_components/es-search_result/es_user_search_card.dart';
 import '../../panel_ui/components/search_text_field.dart';
 
 class PanelSearchResultSample extends StatefulWidget {
-
   static const routeName = '/panelSearchResultSample';
 
   PanelSearchResultSample({Key? key}) : super(key: key);
@@ -55,7 +54,7 @@ class _PanelSearchResultSampleState extends State<PanelSearchResultSample> {
         num,
         (index) => EsTitle(
               _titleList[index],
-              color: StructureBuilder.styles!.primaryColor,
+              color: StructureBuilder.styles!.primaryDarkColor,
             ));
 
     List<Widget> _articleCardList =
@@ -85,7 +84,6 @@ class _PanelSearchResultSampleState extends State<PanelSearchResultSample> {
         searchWord: AppLocalizations.of(context)!.lormshort,
         cardWidgetList: _iamgeCardList,
       ),
-
     ];
 
     List list = [
@@ -97,11 +95,13 @@ class _PanelSearchResultSampleState extends State<PanelSearchResultSample> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
-                  flex: 1,
+                    flex: 1,
                     child: SearchTextField(
                       width: StructureBuilder.dims!.h0Padding * 20,
                     )),
-                EsVSpacer(big: true,),
+                EsVSpacer(
+                  big: true,
+                ),
                 Expanded(
                   flex: 20,
                   child: EsTopTabBarNavigation(
@@ -116,11 +116,51 @@ class _PanelSearchResultSampleState extends State<PanelSearchResultSample> {
               " \n es_flutter_component/lib/components/es-search_result/es_search_result.dart "
               "\n and is used as: \n "
               """EsTopTabBarNavigation(
-                pageWidgets: _pageList, tabWidgets: _tabList),
-          ),"""),
+                pageWidgets: _pageList,
+                 tabWidgets: _tabList),
+          ),
+          where
+              List<Widget> _tabList = List.generate(
+        num,
+        (index) => EsTitle(
+              _titleList[index],
+              color: StructureBuilder.styles!.primaryDarkColor,
+            ));
+
+    List<Widget> _articleCardList =
+        List.generate(num2, (index) => EsArticleSearchCard());
+    List<Widget> _iamgeCardList =
+        List.generate(num2, (index) => EsImageSearchCard());
+    List<Widget> _userCardList =
+        List.generate(num2, (index) => EsUserSearchCard());
+
+    List<Widget> _pageList = [
+      EsSearchResult(
+        num: num2,
+        searchWord: AppLocalizations.of(context)!.lormshort,
+      ),
+      EsSearchResult(
+        num: num2,
+        searchWord: AppLocalizations.of(context)!.lormshort,
+        cardWidgetList: _articleCardList,
+      ),
+      EsSearchResult(
+        num: num2,
+        searchWord: AppLocalizations.of(context)!.lormshort,
+        cardWidgetList: _userCardList,
+      ),
+      EsSearchResult(
+        num: num2,
+        searchWord: AppLocalizations.of(context)!.lormshort,
+        cardWidgetList: _iamgeCardList,
+      ),
     ];
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+          
+          """),
+    ];
+    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
+    return Material(
+        color: StructureBuilder.styles!.primaryColor,
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -132,7 +172,7 @@ class _PanelSearchResultSampleState extends State<PanelSearchResultSample> {
                   padding: EdgeInsets.symmetric(
                       horizontal: StructureBuilder.dims!.h0Padding),
                   decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
+                    color: StructureBuilder.styles!.primaryColor,
                   ),
                   children: List.generate(list.length, (index) {
                     if (index == list.length - 1)

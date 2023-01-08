@@ -61,7 +61,7 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
               )),
           title: AppLocalizations.of(context)!.simpletable,
           information:
-              "it is simple table located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
+              "It is simple table located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
               """EsSimpleTable(
 
                 rowsContent: [
@@ -135,7 +135,7 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
               )),
           title: AppLocalizations.of(context)!.simpletablewithcustomwidgets,
           information:
-              "it is simple table with custom widgets located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
+              "It is simple table with custom widgets located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
               """EsSimpleTable(
 
                 dataRowHeight: StructureBuilder.dims!.h0Padding*3,
@@ -178,10 +178,10 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
               alignment: Alignment.topCenter,
               child: EsSimpleTable(
                 decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryColor,
+                    color: StructureBuilder.styles!.primaryDarkColor,
                     borderRadius: BorderRadius.all(Radius.circular(
                         StructureBuilder.dims!.h0BorderRadius * 2))),
-                headingColor: StructureBuilder.styles!.primaryColor,
+                headingColor: StructureBuilder.styles!.primaryDarkColor,
                 dataRowHeight: StructureBuilder.dims!.h0Padding * 2.5,
                 rowsContent: [
                   [
@@ -198,7 +198,7 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
                     ),
                     EsButton(
                       fillColor: StructureBuilder.styles!.secondaryColor,
-                      textColor: StructureBuilder.styles!.primaryColor,
+                      textColor: StructureBuilder.styles!.primaryDarkColor,
                       text: AppLocalizations.of(context)!.button,
                     ),
                   ],
@@ -216,7 +216,7 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
                     ),
                     EsButton(
                       fillColor: StructureBuilder.styles!.secondaryColor,
-                      textColor: StructureBuilder.styles!.primaryColor,
+                      textColor: StructureBuilder.styles!.primaryDarkColor,
                       text: AppLocalizations.of(context)!.button,
                     ),
                   ],
@@ -234,7 +234,7 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
                     ),
                     EsButton(
                       fillColor: StructureBuilder.styles!.secondaryColor,
-                      textColor: StructureBuilder.styles!.primaryColor,
+                      textColor: StructureBuilder.styles!.primaryDarkColor,
                       text: AppLocalizations.of(context)!.button,
                     ),
                   ],
@@ -257,13 +257,13 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
           title: AppLocalizations.of(context)!
               .simpletablewithcustomwidgetsindesiredcolor,
           information:
-              "it is simple table with custom widgets in desired color located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
+              "It is simple table with custom widgets in desired color located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
               """EsSimpleTable(
                 decoration: BoxDecoration(
-                  color: StructureBuilder.styles!.primaryColor,
+                  color: StructureBuilder.styles!.primaryDarkColor,
                   borderRadius: BorderRadius.all(Radius.circular(StructureBuilder.dims!.h0BorderRadius))
                 ),
-                headingColor: StructureBuilder.styles!.primaryColor,
+                headingColor: StructureBuilder.styles!.primaryDarkColor,
                 dataRowHeight: StructureBuilder.dims!.h0Padding * 3,
                 rowsContent: [
                   [
@@ -280,7 +280,7 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
                     ),
                     EsButton(
                       fillColor: StructureBuilder.styles!.secondaryColor,
-                      textColor: StructureBuilder.styles!.primaryColor,
+                      textColor: StructureBuilder.styles!.primaryDarkColor,
                       text: AppLocalizations.of(context)!.button,
                     ),
                   ],
@@ -298,7 +298,7 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
                     ),
                     EsButton(
                       fillColor: StructureBuilder.styles!.secondaryColor,
-                      textColor: StructureBuilder.styles!.primaryColor,
+                      textColor: StructureBuilder.styles!.primaryDarkColor,
                       text: AppLocalizations.of(context)!.button,
                     ),
                   ],
@@ -316,7 +316,7 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
                     ),
                     EsButton(
                       fillColor: StructureBuilder.styles!.secondaryColor,
-                      textColor: StructureBuilder.styles!.primaryColor,
+                      textColor: StructureBuilder.styles!.primaryDarkColor,
                       text: AppLocalizations.of(context)!.button,
                     ),
                   ],
@@ -341,7 +341,7 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
               height: _height,
               alignment: Alignment.topCenter,
               child: EsSimpleTable(
-                headingColor: StructureBuilder.styles!.primaryDarkColor,
+                headingColor: StructureBuilder.styles!.primaryColor,
                 rowsContent: [
                   [
                     EsOrdinaryText("ID1"),
@@ -368,9 +368,9 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
           title:
               AppLocalizations.of(context)!.simpletablewithdesiredheadingcolor,
           information:
-              "it is simple table with desired heading color located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
+              "It is simple table with desired heading color located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
               """EsSimpleTable(
-                headingColor:  StructureBuilder.styles!.primaryDarkColor,
+                headingColor:  StructureBuilder.styles!.primaryColor,
                 rowsContent: [
                   [
                     EsOrdinaryText("ID1"),
@@ -395,8 +395,8 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
               height: _height,
               alignment: Alignment.topCenter,
               child: EsSimpleTable(
-                headingColor: StructureBuilder.styles!.primaryDarkColor,
-                // zebraColor:  StructureBuilder.styles!.primaryDarkColor,
+                headingColor: StructureBuilder.styles!.primaryColor,
+                // zebraColor:  StructureBuilder.styles!.primaryColor,
                 zebraMode: true,
                 rowsContent: [
                   [
@@ -428,10 +428,10 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
               )),
           title: AppLocalizations.of(context)!.simpletableinzebramode,
           information:
-              "it is simple table in zebra mode located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
+              "It is simple table in zebra mode located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
               """EsSimpleTable(
-                headingColor:  StructureBuilder.styles!.primaryDarkColor,
-                // zebraColor:  StructureBuilder.styles!.primaryDarkColor,
+                headingColor:  StructureBuilder.styles!.primaryColor,
+                // zebraColor:  StructureBuilder.styles!.primaryColor,
                 zebraMode: true,
                 rowsContent: [
                   [
@@ -461,8 +461,8 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
               height: _height,
               alignment: Alignment.topCenter,
               child: EsSimpleTable(
-                headingColor: StructureBuilder.styles!.primaryColor,
-                zebraColor: StructureBuilder.styles!.primaryColor,
+                headingColor: StructureBuilder.styles!.primaryDarkColor,
+                zebraColor: StructureBuilder.styles!.primaryDarkColor,
                 zebraMode: true,
                 decoration: BoxDecoration(
                     color: StructureBuilder.styles!.secondaryColor,
@@ -543,10 +543,10 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
               )),
           title: AppLocalizations.of(context)!.simpletableindarkzebramode,
           information:
-              "it is simple table in dark zebra mode located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
+              "It is simple table in dark zebra mode located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
               """EsSimpleTable(
-                headingColor: StructureBuilder.styles!.primaryColor,
-                zebraColor: StructureBuilder.styles!.primaryColor,
+                headingColor: StructureBuilder.styles!.primaryDarkColor,
+                zebraColor: StructureBuilder.styles!.primaryDarkColor,
                 zebraMode: true,
                 decoration: BoxDecoration(
                   color: StructureBuilder.styles!.secondaryColor,
@@ -622,7 +622,7 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
               child: Container(
                 decoration: BoxDecoration(
                     border: Border.all(
-                        color: StructureBuilder.styles!.primaryColor),
+                        color: StructureBuilder.styles!.primaryDarkColor),
                     borderRadius: BorderRadius.all(Radius.circular(
                         StructureBuilder.dims!.h0BorderRadius))),
                 child: EsSimpleTable(
@@ -652,11 +652,11 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
               )),
           title: AppLocalizations.of(context)!.simpletablewithlineframe,
           information:
-              "it is simple table with line frame located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
+              "It is simple table with line frame located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
               """Container(
                 decoration: BoxDecoration(
                     border:
-                    Border.all(color: StructureBuilder.styles!.primaryColor),
+                    Border.all(color: StructureBuilder.styles!.primaryDarkColor),
                     borderRadius: BorderRadius.all(Radius.circular(StructureBuilder.dims!.h0BorderRadius))
 
                 ),
@@ -718,7 +718,7 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
               )),
           title: AppLocalizations.of(context)!.nolinetable,
           information:
-              "it is noline table located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
+              "It is noline table located in: \n es_flutter_component/lib/components/es_table/es_simple_table.dart' \n and is used as: \n "
               """EsSimpleTable(
                 dividerThickness: 0.000001,
                 rowsContent: [
@@ -747,10 +747,10 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
     ];
 
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
-    bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+    return Material(
+        color: StructureBuilder.styles!.decorationColor().background,
         child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -763,7 +763,7 @@ class _PanelSimpleTableSampleState extends State<PanelSimpleTableSample> {
                       horizontal: StructureBuilder.dims!.h0Padding,
                     ),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

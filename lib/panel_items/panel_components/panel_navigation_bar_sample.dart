@@ -47,7 +47,7 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
         num,
         (index) => EsTitle(
               "Tab${index + 1}",
-              color: StructureBuilder.styles!.primaryColor,
+              color: StructureBuilder.styles!.primaryDarkColor,
             ));
     List<Widget> _buttonTabList = List.generate(
         num,
@@ -132,7 +132,7 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
          num,
             (index) => EsTitle(
           "Tab\${index + 1}",
-          color: StructureBuilder.styles!.primaryColor,
+          color: StructureBuilder.styles!.primaryDarkColor,
         ));"""),
       ContainerItems(
           widget: Center(
@@ -170,7 +170,7 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
         num,
             (index) => EsTitle(
           "Tab\${index + 1}",
-          color: StructureBuilder.styles!.primaryColor,
+          color: StructureBuilder.styles!.primaryDarkColor,
         ));
     
 
@@ -392,9 +392,9 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
 
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
-        child: Scaffold(
-          backgroundColor: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.decorationColor().background,
+        child:  Scaffold(
+          backgroundColor: StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             controller: _controller,
             child: Column(
@@ -408,7 +408,7 @@ class _PanelNavigationBarSampleState extends State<PanelNavigationBarSample> {
                       horizontal: StructureBuilder.dims!.h0Padding,
                     ),
                     decoration: BoxDecoration(
-                      color: StructureBuilder.styles!.primaryDarkColor,
+                      color: StructureBuilder.styles!.primaryColor,
                     ),
                     children: List.generate(
                         list.length, (index) => boxShow(list[index])))

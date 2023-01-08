@@ -85,7 +85,7 @@ class _PanelTimelineSampleState extends State<PanelTimelineSample> {
               EsOrdinaryText(
                 AppLocalizations.of(context)!.lorm,
                 align: TextAlign.justify,
-                color: StructureBuilder.styles!.primaryColor,
+                color: StructureBuilder.styles!.primaryDarkColor,
               ),
               EsVSpacer(),
               Row(
@@ -123,7 +123,7 @@ class _PanelTimelineSampleState extends State<PanelTimelineSample> {
               EsOrdinaryText(
                 AppLocalizations.of(context)!.lormmid,
                 align: TextAlign.justify,
-                color: StructureBuilder.styles!.primaryColor,
+                color: StructureBuilder.styles!.primaryDarkColor,
               ),
               EsVSpacer(),
               Row(
@@ -227,7 +227,172 @@ class _PanelTimelineSampleState extends State<PanelTimelineSample> {
               """EsCustomTimeLine(
                 indicatorList: _indicatorList,
                 contentList: _contentList,
-              )"""),
+              )
+              where
+                 List<Widget> _indicatorList = [
+      EsAvatarImage(
+        path: "assets/images/img4.jpg",
+        radius: StructureBuilder.dims!.h0Padding,
+      ),
+      EsAvatarWidget(
+          backGroundColor: StructureBuilder.styles!.dangerColor().dangerRegular,
+          widget: EsTitle(
+            "SA",
+            color: StructureBuilder.styles!.primaryLightColor,
+          )),
+      EsAvatarWidget(
+          widget: EsSvgIcon(
+        "packages/es_flutter_component/assets/svgs/gallery.svg",
+        size: StructureBuilder.dims!.h3IconSize,
+        color: StructureBuilder.styles!.primaryLightColor,
+      )),
+      EsAvatarWidget(
+          backGroundColor:
+              StructureBuilder.styles!.warningColor().warningRegular,
+          widget: EsTitle(
+            "HH",
+            color: StructureBuilder.styles!.primaryLightColor,
+          )),
+    ];
+    Widget _content1() {
+      return Container(
+        padding: EdgeInsets.symmetric(
+          vertical: StructureBuilder.dims!.h0Padding,
+          horizontal: StructureBuilder.dims!.h0Padding,
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              EsTitle(AppLocalizations.of(context)!.lormshort),
+              EsOrdinaryText(
+                AppLocalizations.of(context)!.lorm,
+                align: TextAlign.justify,
+                color: StructureBuilder.styles!.primaryDarkColor,
+              ),
+              EsVSpacer(),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    Icons.access_time,
+                    size: StructureBuilder.dims!.h3IconSize / 2,
+                    color: StructureBuilder.styles!.secondaryColor,
+                  ),
+                  EsHSpacer(),
+                  EsLabelText(
+                    AppLocalizations.of(context)!.yesterday,
+                    color: StructureBuilder.styles!.secondaryColor,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget _content2() {
+      return Container(
+        padding: EdgeInsets.symmetric(
+          vertical: StructureBuilder.dims!.h0Padding,
+          horizontal: StructureBuilder.dims!.h0Padding,
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              EsTitle(AppLocalizations.of(context)!.lormshort),
+              EsOrdinaryText(
+                AppLocalizations.of(context)!.lormmid,
+                align: TextAlign.justify,
+                color: StructureBuilder.styles!.primaryDarkColor,
+              ),
+              EsVSpacer(),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    Icons.access_time,
+                    size: StructureBuilder.dims!.h3IconSize / 2,
+                    color: StructureBuilder.styles!.secondaryColor,
+                  ),
+                  EsHSpacer(),
+                  EsLabelText(
+                    "20.10.2018",
+                    color: StructureBuilder.styles!.secondaryColor,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget _content3() {
+      return Container(
+        padding: EdgeInsets.symmetric(
+          vertical: StructureBuilder.dims!.h0Padding,
+          horizontal: StructureBuilder.dims!.h0Padding,
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Image.asset(
+                    "assets/images/img1.jpg",
+                    width: StructureBuilder.dims!.h0Padding * 5,
+                    height: StructureBuilder.dims!.h0Padding * 5,
+                    fit: BoxFit.cover,
+                  ),
+                  EsHSpacer(),
+                  Image.asset(
+                    "assets/images/img2.jpg",
+                    width: StructureBuilder.dims!.h0Padding * 5,
+                    height: StructureBuilder.dims!.h0Padding * 5,
+                    fit: BoxFit.cover,
+                  ),
+                  EsHSpacer(),
+                  Image.asset(
+                    "assets/images/img3.jpg",
+                    width: StructureBuilder.dims!.h0Padding * 5,
+                    height: StructureBuilder.dims!.h0Padding * 5,
+                    fit: BoxFit.cover,
+                  ),
+                ],
+              ),
+              EsVSpacer(),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    Icons.access_time,
+                    size: StructureBuilder.dims!.h3IconSize / 2,
+                    color: StructureBuilder.styles!.secondaryColor,
+                  ),
+                  EsHSpacer(),
+                  EsLabelText(
+                    "20.10.2018",
+                    color: StructureBuilder.styles!.secondaryColor,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+      );
+    }
+
+    List<Widget> _contentList = [
+      _content1(),
+      _content2(),
+      _content3(),
+      _content2(),
+    ];
+              """),
       ContainerItems(
           widget: Container(
               width: double.infinity,
@@ -263,7 +428,7 @@ class _PanelTimelineSampleState extends State<PanelTimelineSample> {
               """TimelineStatusPage()"""),
     ];
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);return Material(
-        color: StructureBuilder.styles!.primaryDarkColor,
+        color: StructureBuilder.styles!.primaryColor,
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -275,7 +440,7 @@ class _PanelTimelineSampleState extends State<PanelTimelineSample> {
                   padding: EdgeInsets.symmetric(
                       horizontal: StructureBuilder.dims!.h0Padding),
                   decoration: BoxDecoration(
-                    color: StructureBuilder.styles!.primaryDarkColor,
+                    color: StructureBuilder.styles!.primaryColor,
                   ),
                   children: List.generate(list.length, (index) {
                     if (index == 0)

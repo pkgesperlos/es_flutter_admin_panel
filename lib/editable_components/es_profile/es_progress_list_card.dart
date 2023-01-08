@@ -35,7 +35,7 @@ class EsProgressListCard extends StatelessWidget {
         , (index) => (_percentList[index]).toString()+"%");
 
     List<Color> _colorList=colorList??List.generate(_titleList.length,
-          (index) => StructureBuilder.styles!.primaryColor,);
+          (index) => StructureBuilder.styles!.primaryDarkColor,);
 
     return Container(
       padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
@@ -51,7 +51,7 @@ class EsProgressListCard extends StatelessWidget {
         children: [
           EsHeader( title??AppLocalizations.of(context)!.skills,
           isBold: true,
-            color: StructureBuilder.styles!.primaryColor,
+            color: StructureBuilder.styles!.primaryDarkColor,
           ),
           EsVSpacer(big: true,factor: 5,),
           ...List.generate(_titleList.length, (index) =>
@@ -60,7 +60,7 @@ class EsProgressListCard extends StatelessWidget {
                 children: [
                   EsVSpacer(big: true,factor: 3,),
                   EsOrdinaryText(_titleList[index],
-                   color: StructureBuilder.styles!.primaryColor,
+                   color: StructureBuilder.styles!.primaryDarkColor,
                   ),
                   EsVSpacer(big: true,),
                   Row(
