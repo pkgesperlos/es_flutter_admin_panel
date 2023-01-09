@@ -4,7 +4,7 @@ import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.
 import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/components/es_tab_bar/es_top_tab_bar_navigation.dart';
 import 'package:es_flutter_component/components/es_text/es_title.dart';
-import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

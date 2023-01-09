@@ -16,9 +16,9 @@ import 'package:es_flutter_component/components/es_form/es_radio_button/es_radio
 import 'package:es_flutter_component/components/es_form/es_slider/es_slider_form.dart';
 import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field_form.dart';
 import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/es_button/es_button.dart';
-import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/es_text/es_title.dart';
+import 'package:es_flutter_component/components/es_button/es_button.dart';
+import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_component/components/es_text/es_title.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

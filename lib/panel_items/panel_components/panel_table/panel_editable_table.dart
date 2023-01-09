@@ -1,5 +1,5 @@
 //
-// import 'package:es_flutter_component/es_table/es_editable_table.dart';
+// import 'package:es_flutter_component/components/es_table/es_editable_table.dart';
 // import 'package:es_flutter_component/resources/structure_builder.dart';
 //
 // import 'package:flutter/material.dart';

@@ -1,21 +1,14 @@
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/components/es-chart/es_bar_chart.dart';
+import 'package:es_flutter_admin_panel/editable_components//es-chart/es_bar_chart.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
-import '../../../editable_components/es_card/es_image_card/es_image_card_1.dart';
-import '../../../editable_components/es_card/es_image_card/es_image_card_2.dart';
-import '../../../editable_components/es_card/es_image_card/es_image_card_3.dart';
-import '../../../editable_components/es_card/es_image_card/es_image_card_4.dart';
-import '../../../editable_components/es_card/es_image_card/es_image_card_5.dart';
-import '../../../editable_components/es_card/es_image_card/es_image_card_6.dart';
-import '../../../editable_components/es_card/es_image_card/es_image_card_7.dart';
 import '../../editable_components/es-search_result/es-linear-chart.dart';
 import '../../editable_components/es_dashboard_card/es_statistic_card_1.dart';
 import '../../editable_components/es_dashboard_card/es_statistic_card_2.dart';
+import '../../editable_components/es_dashboard_card/es_ticket_card.dart';
 
 class PanelDashboardSample extends StatelessWidget {
 
@@ -27,6 +20,26 @@ class PanelDashboardSample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+    List<String> _nameList=["Steve","Mark","John","David","Jack"];
+    List<Color> _colorList=[
+      Colors.amber,
+      Colors.lightGreen,
+      Colors.indigo,
+      Colors.pink,
+      Colors.purple,
+
+
+    ];
+    List<TicketStatus> _statusList=[
+      TicketStatus.successfull,
+      TicketStatus.successfull,
+      TicketStatus.unSuccessful,
+      TicketStatus.pending,
+      TicketStatus.pending,
+    ];
+
 
     Widget cardShow(Widget widget) {
       return BootstrapCol(
@@ -97,6 +110,11 @@ class PanelDashboardSample extends StatelessWidget {
                       number: "5543",
                       description: "عضویت آنلاین",
                     )),
+                    EsTicketCard(
+                      nameList: _nameList,
+                    statusList: _statusList,
+                    avatarColor: _colorList,
+                    )
 
 
 
@@ -108,13 +126,7 @@ class PanelDashboardSample extends StatelessWidget {
                   fluid: true,
                   // padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),
                   children: [
-                    cardShow(EsImageCard1()),
-                    cardShow(EsImageCard2()),
-                    cardShow(EsImageCard3()),
-                    cardShow(EsImageCard4()),
-                    cardShow(EsImageCard5()),
-                    cardShow(EsImageCard6()),
-                    cardShow(EsImageCard7()),
+              
                   ],),),
                   
                   \n where \n

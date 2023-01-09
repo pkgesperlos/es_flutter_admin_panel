@@ -610,26 +610,10 @@
 
 
   "notifications": "Notifications",
-  "simpleNotifications": "Ordinary Notifications"
+  "simpleNotifications": "Ordinary Notifications",
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  "pending": "Pending...",
+  "unsuccessful": "unSuccessful",
+  "successful": "Successful",
+  "status": "status"
 }

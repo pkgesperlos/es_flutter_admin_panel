@@ -7,14 +7,14 @@ import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart'
 
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
 
-import 'package:es_flutter_component/components/es-chart/es_bar_chart_sample1.dart';
-import 'package:es_flutter_component/components/es-chart/es_bar_chart_sample2.dart';
-import 'package:es_flutter_component/components/es-chart/es_bar_chart_sample3.dart';
-import 'package:es_flutter_component/components/es-chart/es-circular_chart.dart';
-import 'package:es_flutter_component/components/es-chart/es-linear-chart.dart';
-import 'package:es_flutter_component/components/es-chart/es_bar_chart.dart';
-import 'package:es_flutter_component/components/es-chart/es_radar_chart_sample.dart';
-import 'package:es_flutter_component/components/es-chart/es_scatter_chart_sample.dart';
+import 'package:es_flutter_admin_panel/editable_components/es-chart/es_bar_chart_sample1.dart';
+import 'package:es_flutter_admin_panel/editable_components/es-chart/es_bar_chart_sample2.dart';
+import 'package:es_flutter_admin_panel/editable_components/es-chart/es_bar_chart_sample3.dart';
+import 'package:es_flutter_admin_panel/editable_components/es-chart/es-circular_chart.dart';
+import 'package:es_flutter_admin_panel/editable_components/es-chart/es-linear-chart.dart';
+import 'package:es_flutter_admin_panel/editable_components/es-chart/es_bar_chart.dart';
+import 'package:es_flutter_admin_panel/editable_components/es-chart/es_radar_chart_sample.dart';
+import 'package:es_flutter_admin_panel/editable_components/es-chart/es_scatter_chart_sample.dart';
 
 
 class PanelChartSample extends StatefulWidget {

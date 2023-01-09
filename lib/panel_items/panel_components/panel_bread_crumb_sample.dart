@@ -4,8 +4,8 @@ import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.
 import 'package:es_flutter_component/components/es_bread_crumb/bread_crumb_navigator.dart';
 import 'package:es_flutter_component/components/es_bread_crumb/static_bread_crumb_navigator.dart';
 import 'package:es_flutter_component/components/es_text/es_header.dart';
-import 'package:es_flutter_component/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';

@@ -13,11 +13,11 @@ import 'package:es_flutter_component/components/es_form/es_label_input/es_label_
 import 'package:es_flutter_component/components/es_form/es_slider/es_range_slider.dart';
 import 'package:es_flutter_component/components/es_form/es_slider/es_slider.dart';
 import 'package:es_flutter_component/components/es_form/es_text_field/es_masked_input_textfield/es_masked_input_text_field.dart';
-import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
 
-import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/es_text/es_title.dart';
+import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_component/components/es_text/es_title.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

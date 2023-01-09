@@ -606,8 +606,10 @@
 
 
   "notifications": "اعلان ها",
-  "simpleNotifications": "اعلان های معمولی"
+  "simpleNotifications": "اعلان های معمولی",
 
-
-
+  "pending": "در حال بررسی",
+  "unsuccessful": "ناموفق",
+  "successful": "موفق",
+  "status": "وضعیت"
 }

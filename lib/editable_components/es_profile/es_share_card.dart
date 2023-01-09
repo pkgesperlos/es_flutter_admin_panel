@@ -2,8 +2,8 @@ import 'package:es_flutter_component/components/es_button/es_icon_button.dart';
 import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field_form.dart';
 import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/components/es_text/es_header.dart';
-import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -63,11 +63,9 @@ class EsShareCard extends StatelessWidget {
                   EsIconButton(
 
                     EsSvgIcon(
-                        // "packages/es_flutter_component/"
                         "packages/es_flutter_component/assets/svgs/video.svg",
                         color: StructureBuilder.styles!.primaryLightColor,
                         size: StructureBuilder.dims!.h3IconSize),
-                    fillColor:StructureBuilder.styles!.buttonColor().primary,
                     onTap: onaddVideoFunction,
                   ),
                   EsHSpacer(
@@ -75,11 +73,9 @@ class EsShareCard extends StatelessWidget {
                   ),
                   EsIconButton(
                     EsSvgIcon(
-                        // "packages/es_flutter_component/"
                         "packages/es_flutter_component/assets/svgs/image.svg",
                         color: StructureBuilder.styles!.primaryLightColor,
                         size: StructureBuilder.dims!.h3IconSize),
-                    fillColor:StructureBuilder.styles!.buttonColor().primary,
                     onTap: onaddPictureFunction,
                   ),
                   EsHSpacer(
@@ -87,22 +83,18 @@ class EsShareCard extends StatelessWidget {
                   ),
                   EsIconButton(
                     EsSvgIcon(
-                        // "packages/es_flutter_component/"
                         "packages/es_flutter_component/assets/svgs/document.svg",
                         color: StructureBuilder.styles!.primaryLightColor,
                         size: StructureBuilder.dims!.h3IconSize),
-                    fillColor:StructureBuilder.styles!.buttonColor().primary,
                     onTap: onaddFileFunction,
                   ),
                 ],
               ),
               EsIconButton(
                 EsSvgIcon(
-                  // "packages/es_flutter_component/"
                     "packages/es_flutter_component/assets/svgs/send.svg",
                     color: StructureBuilder.styles!.primaryLightColor,
                     size: StructureBuilder.dims!.h3IconSize),
-                fillColor:StructureBuilder.styles!.buttonColor().primary,
               ),
 
             ],

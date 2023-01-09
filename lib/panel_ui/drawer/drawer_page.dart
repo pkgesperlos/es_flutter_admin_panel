@@ -3,8 +3,8 @@ import 'package:es_flutter_component/components/es_accordion/es_expansion_tile.d
 import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
 import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/components/es_text/es_title.dart';
-import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 

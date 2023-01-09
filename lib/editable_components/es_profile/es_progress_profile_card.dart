@@ -1,8 +1,8 @@
 import 'package:es_flutter_component/components/es_text/es_header.dart';
 import 'package:es_flutter_component/components/es_text/es_label_text.dart';
-import 'package:es_flutter_component/es_button/es_icon_button.dart';
-import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_component/components/es_button/es_icon_button.dart';
+import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
@@ -75,7 +75,7 @@ class EsProgressProfileCard extends StatelessWidget {
 
                     Icon(Icons.edit,
                       color: StructureBuilder.styles!.primaryLightColor,
-                      size: StructureBuilder.dims!.h3IconSize / 2,
+                      size: StructureBuilder.dims!.h3IconSize /2,
                     ),
                     onTap: editFunction,
                   ),

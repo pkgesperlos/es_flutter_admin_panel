@@ -1,12 +1,10 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field.dart';
-import 'package:es_flutter_component/es_form/es_text_field/es_search_text_field.dart';
-import 'package:es_flutter_component/es_image/es_avatar_image.dart';
+import 'package:es_flutter_component/components/es_image/es_avatar_image.dart';
 import 'package:es_flutter_admin_panel/language_change_provider.dart';
-import 'package:es_flutter_component/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/es_text/es_label_text.dart';
-import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_component/components/es_text/es_label_text.dart';
+import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
 import 'package:es_flutter_component/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
