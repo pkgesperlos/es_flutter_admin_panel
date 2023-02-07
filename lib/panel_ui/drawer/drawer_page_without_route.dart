@@ -1,12 +1,12 @@
 
 import 'package:es_flutter_admin_panel/panel_items/panel_pages/panel_bill_sample.dart';
-import 'package:es_flutter_component/components/es_accordion/es_expansion_tile.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/components/es_text/es_title.dart';
-import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_accordion/es_expansion_tile.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/components/es_text/es_title.dart';
+import 'package:es_flutter_components/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 
 import '../../panel_items/panel_advanced_components/panel_tutorial_sample.dart';
@@ -145,7 +145,7 @@ class _DrawerPageState extends State<DrawerPage> {
                   onSelect: _onSelectedList[0],
                   isSelected: _isSelectedList[0],
                   iconPath:
-                  "packages/es_flutter_component/assets/svgs/chart.svg",
+                  "packages/es_flutter_components/assets/svgs/chart.svg",
                   title: AppLocalizations.of(context)!.charts,
                   pageWidget: PanelChartSample(),
                 ),
@@ -153,7 +153,7 @@ class _DrawerPageState extends State<DrawerPage> {
                 firstLevelExpandedComplex(
                   expansionTitle: AppLocalizations.of(context)!.components,
                   iconPath:
-                  "packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+                  "packages/es_flutter_components/assets/svgs/GraduationCap.svg",
                   expansionWidgetList: [
                     nextLevel(
                         title: AppLocalizations.of(context)!.accordion,
@@ -322,7 +322,7 @@ class _DrawerPageState extends State<DrawerPage> {
                     expansionTitle:
                     AppLocalizations.of(context)!.advancedcomponents,
                     iconPath:
-                    "packages/es_flutter_component/assets/svgs/advanced.svg",
+                    "packages/es_flutter_components/assets/svgs/advanced.svg",
                     expansionWidgetList: [
                       nextLevel(
                           title: AppLocalizations.of(context)!.toastmessage,
@@ -359,7 +359,7 @@ class _DrawerPageState extends State<DrawerPage> {
                 firstLevelExpandedComplex(
                     expansionTitle: AppLocalizations.of(context)!.form,
                     iconPath:
-                    "packages/es_flutter_component/assets/svgs/form.svg",
+                    "packages/es_flutter_components/assets/svgs/form.svg",
                     expansionWidgetList: [
                       nextLevel(
                           title: AppLocalizations.of(context)!.primaryform,
@@ -407,7 +407,7 @@ class _DrawerPageState extends State<DrawerPage> {
                   onSelect: _onSelectedList[38],
                   isSelected: _isSelectedList[38],
                   iconPath:
-                  "packages/es_flutter_component/assets/svgs/emojihappy.svg",
+                  "packages/es_flutter_components/assets/svgs/emojihappy.svg",
                   title: AppLocalizations.of(context)!.icons,
                   pageWidget: PanelIconsSample(),
                 ),
@@ -415,7 +415,7 @@ class _DrawerPageState extends State<DrawerPage> {
                     expansionTitle:
                     AppLocalizations.of(context)!.authentication,
                     iconPath:
-                    "packages/es_flutter_component/assets/svgs/profilecircle.svg",
+                    "packages/es_flutter_components/assets/svgs/profilecircle.svg",
                     expansionWidgetList: [
                       nextLevelNavigate(
                           title: AppLocalizations.of(context)!.signin,
@@ -446,7 +446,7 @@ class _DrawerPageState extends State<DrawerPage> {
                 firstLevelExpandedComplex(
                     expansionTitle: AppLocalizations.of(context)!.pages,
                     iconPath:
-                    "packages/es_flutter_component/assets/svgs/pages.svg",
+                    "packages/es_flutter_components/assets/svgs/pages.svg",
                     expansionWidgetList: [
                       nextLevel(
                           title: "Profile",
@@ -517,7 +517,7 @@ class _DrawerPageState extends State<DrawerPage> {
                 firstLevelExpandedComplex(
                     expansionTitle: AppLocalizations.of(context)!.menulevel,
                     iconPath:
-                    "packages/es_flutter_component/assets/svgs/layer.svg",
+                    "packages/es_flutter_components/assets/svgs/layer.svg",
                     expansionWidgetList: [
                       nextLevelExpandedComplex(
                         expansionTitle: AppLocalizations.of(context)!.menulevel,

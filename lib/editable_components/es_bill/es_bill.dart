@@ -1,14 +1,14 @@
 import 'dart:math';
 
-import 'package:es_flutter_component/components/es_button/es_button.dart';
-import 'package:es_flutter_component/components/es_table/es_simple_table.dart';
-import 'package:es_flutter_component/components/es_text/es_header.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/components/es_text/es_title.dart';
-import 'package:es_flutter_component/components/es_spacer/es_h_divider.dart';
-import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_button/es_button.dart';
+import 'package:es_flutter_components/components/es_table/es_simple_table.dart';
+import 'package:es_flutter_components/components/es_text/es_header.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/components/es_text/es_title.dart';
+import 'package:es_flutter_components/components/es_spacer/es_h_divider.dart';
+import 'package:es_flutter_components/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -182,7 +182,7 @@ class EsBill extends StatelessWidget {
                   ,size: StructureBuilder.dims!.h3IconSize/2,
                 ),),
               /*   EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/search.svg"
+                  "packages/es_flutter_components/assets/svgs/search.svg"
                   ,size: StructureBuilder.dims!.h3IconSize,
                      color: StructureBuilder.styles!.primaryLightColor,
                 ) ,*/
@@ -192,7 +192,7 @@ class EsBill extends StatelessWidget {
                   color: StructureBuilder.styles!.primaryLightColor
                   ,size: StructureBuilder.dims!.h3IconSize/2,),
                 /* EsSvgIcon(
-                         "packages/es_flutter_component/assets/svgs/search.svg"
+                         "packages/es_flutter_components/assets/svgs/search.svg"
                          ,size: StructureBuilder.dims!.h3IconSize,
                          color: StructureBuilder.styles!.primaryLightColor,
                        )*/

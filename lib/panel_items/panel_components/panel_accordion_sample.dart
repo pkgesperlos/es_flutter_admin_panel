@@ -1,10 +1,10 @@
 
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/components/es_accordion/es_accordion.dart';
-import 'package:es_flutter_component/components/es_accordion/es_scrollable_accordion.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_accordion/es_accordion.dart';
+import 'package:es_flutter_components/components/es_accordion/es_scrollable_accordion.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -114,7 +114,7 @@ class PanelaccordionSample extends StatelessWidget {
               child: Esaccordion(
             items: _items,
             icon: EsSvgIcon(
-              "packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+              "packages/es_flutter_components/assets/svgs/GraduationCap.svg",
               size: StructureBuilder.dims!.h3IconSize,
               color: StructureBuilder.styles!.primaryDarkColor,
             ),
@@ -126,7 +126,7 @@ class PanelaccordionSample extends StatelessWidget {
               """Esaccordion(
             items: _items,
             icon: EsSvgIcon(
-              "packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+              "packages/es_flutter_components/assets/svgs/GraduationCap.svg",
               size: StructureBuilder.dims!.h3IconSize,
               color: StructureBuilder.styles!.primaryDarkColor,
             ),
@@ -149,17 +149,17 @@ class PanelaccordionSample extends StatelessWidget {
               child: Esaccordion(
             items: _items,
             icon: EsSvgIcon(
-              "packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+              "packages/es_flutter_components/assets/svgs/GraduationCap.svg",
               size: StructureBuilder.dims!.h3IconSize,
               color: StructureBuilder.styles!.primaryDarkColor,
             ),
                 openIcon: EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/menu.svg",
+                  "packages/es_flutter_components/assets/svgs/menu.svg",
                   size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryDarkColor,
                 ),
                 closeIcon: EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/menu.svg",
+                  "packages/es_flutter_components/assets/svgs/menu.svg",
                   size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryDarkColor,
                 ),
@@ -170,17 +170,17 @@ class PanelaccordionSample extends StatelessWidget {
               """Esaccordion(
             items: _items,
             icon: EsSvgIcon(
-              "packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+              "packages/es_flutter_components/assets/svgs/GraduationCap.svg",
               size: StructureBuilder.dims!.h3IconSize,
               color: StructureBuilder.styles!.primaryDarkColor,
             ),
                 openIcon: EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/menu.svg",
+                  "packages/es_flutter_components/assets/svgs/menu.svg",
                   size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryDarkColor,
                 ),
                 closeIcon: EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/menu.svg",
+                  "packages/es_flutter_components/assets/svgs/menu.svg",
                   size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryDarkColor,
                 ),

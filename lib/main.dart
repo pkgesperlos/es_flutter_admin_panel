@@ -19,7 +19,7 @@ import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_dialog
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_dropdown_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_group_button_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_group_list_sample.dart';
-import 'package:es_flutter_admin_panel/panel_items/panel_dashboard/panel_dashboard_sample.dart';
+import 'package:es_flutter_admin_panel/panel_items/panel_dashboard_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_forms/panel_html_text_editor_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_icons_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_components/panel_cards/panel_image_card_sample.dart';
@@ -56,11 +56,11 @@ import 'package:es_flutter_admin_panel/panel_items/panel_pages/panel_search_resu
 import 'package:es_flutter_admin_panel/panel_items/panel_pages/panel_timeline_sample.dart';
 import 'package:es_flutter_admin_panel/panel_ui/drawer/route_maker.dart';
 import 'package:es_flutter_admin_panel/panel_ui/structure_images/widget_tree_panel.dart';
-import 'package:es_flutter_component/components/es_bread_crumb/app_navigator_observer.dart';
-import 'package:es_flutter_component/resources/constants/structure_config.dart';
-import 'package:es_flutter_component/resources/constants/structure_dims.dart';
-import 'package:es_flutter_component/resources/constants/structure_styles.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_bread_crumb/app_navigator_observer.dart';
+import 'package:es_flutter_components/resources/constants/structure_config.dart';
+import 'package:es_flutter_components/resources/constants/structure_dims.dart';
+import 'package:es_flutter_components/resources/constants/structure_styles.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -241,6 +241,13 @@ class _MyApp extends State<MyApp> {
 
 class MyStyle extends StructureStyles {
   static const cardColor = Color(0xffF2F2F2);
+
+  static var dashboardCardDecoration =BoxDecoration(
+      color: StructureBuilder.styles.t5Color,
+      border: Border.all(color: StructureBuilder.styles.t3Color,width: 1),
+
+      borderRadius: BorderRadius.all(Radius.circular(
+          StructureBuilder.dims.h0BorderRadius)));
 
   MyStyle(
       Color primaryColor,

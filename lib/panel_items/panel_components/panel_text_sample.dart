@@ -1,18 +1,18 @@
 
-import 'package:es_flutter_component/components/es_text/es_dotted_text.dart';
-import 'package:es_flutter_component/components/es_text/es_header.dart';
-import 'package:es_flutter_component/components/es_text/es_icon_text.dart';
-import 'package:es_flutter_component/components/es_text/es_label_text.dart';
-import 'package:es_flutter_component/components/es_text/es_marked_text.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/components/es_text/es_subtitle.dart';
-import 'package:es_flutter_component/components/es_text/es_title.dart';
+import 'package:es_flutter_components/components/es_text/es_dotted_text.dart';
+import 'package:es_flutter_components/components/es_text/es_header.dart';
+import 'package:es_flutter_components/components/es_text/es_icon_text.dart';
+import 'package:es_flutter_components/components/es_text/es_label_text.dart';
+import 'package:es_flutter_components/components/es_text/es_marked_text.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/components/es_text/es_subtitle.dart';
+import 'package:es_flutter_components/components/es_text/es_title.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/resources/Constants/styles.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/resources/Constants/styles.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -93,7 +93,7 @@ class PanelTextSample extends StatelessWidget {
                 children: [
                   EsIconText(
                     AppLocalizations.of(context)!.sampleText,
-                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+                    icon: EsSvgIcon("packages/es_flutter_components/assets/svgs/GraduationCap.svg",
                         color: StructureBuilder.styles!.textColor().primary,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),
@@ -102,7 +102,7 @@ class PanelTextSample extends StatelessWidget {
                   ),
                   EsIconText(
                     AppLocalizations.of(context)!.sampleText,
-                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+                    icon: EsSvgIcon("packages/es_flutter_components/assets/svgs/GraduationCap.svg",
                         color: StructureBuilder.styles!.textColor().primary,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),
@@ -111,7 +111,7 @@ class PanelTextSample extends StatelessWidget {
                   ),
                   EsIconText(
                     AppLocalizations.of(context)!.sampleText,
-                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+                    icon: EsSvgIcon("packages/es_flutter_components/assets/svgs/GraduationCap.svg",
                         color: StructureBuilder.styles!.textColor().primary,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),
@@ -120,7 +120,7 @@ class PanelTextSample extends StatelessWidget {
                   ),
                   EsIconText(
                     AppLocalizations.of(context)!.sampleText,
-                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+                    icon: EsSvgIcon("packages/es_flutter_components/assets/svgs/GraduationCap.svg",
                         color: StructureBuilder.styles!.textColor().primary,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),
@@ -225,7 +225,7 @@ class PanelTextSample extends StatelessWidget {
                 children: [
                   EsIconText(
                     "IconText : " + AppLocalizations.of(context)!.sampleText,
-                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+                    icon: EsSvgIcon("packages/es_flutter_components/assets/svgs/GraduationCap.svg",
                         color: StructureBuilder.styles!.textColor().primary,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),
@@ -235,7 +235,7 @@ class PanelTextSample extends StatelessWidget {
                   EsIconText(
                     "IconText : " + AppLocalizations.of(context)!.sampleText,
                     color: StructureBuilder.styles!.textColor().danger,
-                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+                    icon: EsSvgIcon("packages/es_flutter_components/assets/svgs/GraduationCap.svg",
                         color: StructureBuilder.styles!.textColor().danger,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),
@@ -245,7 +245,7 @@ class PanelTextSample extends StatelessWidget {
                   EsIconText(
                     "IconText : " + AppLocalizations.of(context)!.sampleText,
                     color: StructureBuilder.styles!.textColor().titleText,
-                    icon: EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+                    icon: EsSvgIcon("packages/es_flutter_components/assets/svgs/GraduationCap.svg",
                         color: StructureBuilder.styles!.textColor().titleText,
                         size: StructureBuilder.dims!.h0FontSize),
                   ),

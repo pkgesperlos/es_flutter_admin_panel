@@ -1,11 +1,11 @@
 
-import 'package:es_flutter_component/components/es_image/es_light_box/src/image_type.dart';
-import 'package:es_flutter_component/components/es_image/es_light_box/src/light_box_unique.dart';
-import 'package:es_flutter_component/components/es_image/es_light_box/src/lightbox_group.dart';
-import 'package:es_flutter_component/components/es_image/es_light_box/src/lightbox_route.dart';
+import 'package:es_flutter_components/components/es_image/es_light_box/src/image_type.dart';
+import 'package:es_flutter_components/components/es_image/es_light_box/src/light_box_unique.dart';
+import 'package:es_flutter_components/components/es_image/es_light_box/src/lightbox_group.dart';
+import 'package:es_flutter_components/components/es_image/es_light_box/src/lightbox_route.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';

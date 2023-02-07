@@ -1,13 +1,13 @@
 
-import 'package:es_flutter_component/components/es_button/es_button.dart';
-import 'package:es_flutter_component/components/es_image/es_avatar_image.dart';
-import 'package:es_flutter_component/components/es_label/es_label.dart';
-import 'package:es_flutter_component/components/es_tooltip/es_tooltip.dart';
+import 'package:es_flutter_components/components/es_button/es_button.dart';
+import 'package:es_flutter_components/components/es_image/es_avatar_image.dart';
+import 'package:es_flutter_components/components/es_label/es_label.dart';
+import 'package:es_flutter_components/components/es_tooltip/es_tooltip.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
 
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';

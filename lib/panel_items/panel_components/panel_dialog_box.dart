@@ -1,15 +1,15 @@
 
-import 'package:es_flutter_component/components/es_dialog/es_awesome_dialog/es_autohide_dialog.dart';
-import 'package:es_flutter_component/components/es_dialog/es_awesome_dialog/es_body_dialog.dart';
-import 'package:es_flutter_component/components/es_dialog/es_awesome_dialog/es_error_dialog.dart';
-import 'package:es_flutter_component/components/es_dialog/es_awesome_dialog/es_info_dialog.dart';
-import 'package:es_flutter_component/components/es_dialog/es_awesome_dialog/es_input_dialog.dart';
-import 'package:es_flutter_component/components/es_dialog/es_awesome_dialog/es_success_dialog.dart';
-import 'package:es_flutter_component/components/es_dialog/es_awesome_dialog/es_warning_dialog.dart';
-import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/components/es_dialog/es_awesome_dialog/es_autohide_dialog.dart';
+import 'package:es_flutter_components/components/es_dialog/es_awesome_dialog/es_body_dialog.dart';
+import 'package:es_flutter_components/components/es_dialog/es_awesome_dialog/es_error_dialog.dart';
+import 'package:es_flutter_components/components/es_dialog/es_awesome_dialog/es_info_dialog.dart';
+import 'package:es_flutter_components/components/es_dialog/es_awesome_dialog/es_input_dialog.dart';
+import 'package:es_flutter_components/components/es_dialog/es_awesome_dialog/es_success_dialog.dart';
+import 'package:es_flutter_components/components/es_dialog/es_awesome_dialog/es_warning_dialog.dart';
+import 'package:es_flutter_components/components/es_form/es_text_field/es_text_field.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
 
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';

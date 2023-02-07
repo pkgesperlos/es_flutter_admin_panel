@@ -1,10 +1,10 @@
 
-import 'package:es_flutter_component/components/es_text/es_header.dart';
+import 'package:es_flutter_components/components/es_text/es_header.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/components/es_text/es_label_text.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/components/es_text/es_label_text.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';

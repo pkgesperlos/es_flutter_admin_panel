@@ -1,6 +1,6 @@
 
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 

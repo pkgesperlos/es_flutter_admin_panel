@@ -1,17 +1,17 @@
 import 'dart:math';
 
-import 'package:es_flutter_component/components/es_button/es_button.dart';
-import 'package:es_flutter_component/components/es_image/es_avatar_image.dart';
-import 'package:es_flutter_component/components/es_image/es_avatar_widget.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/components/es_tab_bar/es_top_tab_bar_navigation.dart';
-import 'package:es_flutter_component/components/es_text/es_label_text.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/components/es_text/es_subtitle.dart';
-import 'package:es_flutter_component/components/es_text/es_title.dart';
-import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_button/es_button.dart';
+import 'package:es_flutter_components/components/es_image/es_avatar_image.dart';
+import 'package:es_flutter_components/components/es_image/es_avatar_widget.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/components/es_tab_bar/es_top_tab_bar_navigation.dart';
+import 'package:es_flutter_components/components/es_text/es_label_text.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/components/es_text/es_subtitle.dart';
+import 'package:es_flutter_components/components/es_text/es_title.dart';
+import 'package:es_flutter_components/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../../main.dart';
@@ -61,7 +61,7 @@ class EsProfileTabBarCard extends StatelessWidget {
           )),
       EsAvatarWidget(
           widget: EsSvgIcon(
-            "packages/es_flutter_component/assets/svgs/gallery.svg",
+            "packages/es_flutter_components/assets/svgs/gallery.svg",
             size: StructureBuilder.dims!.h3IconSize,
             color: StructureBuilder.styles!.primaryLightColor,
           )),

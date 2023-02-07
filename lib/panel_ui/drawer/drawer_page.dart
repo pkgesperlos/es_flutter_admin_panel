@@ -1,16 +1,17 @@
+import 'package:es_flutter_admin_panel/panel_items/panel_authenticate/es_login.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_pages/panel_bill_sample.dart';
-import 'package:es_flutter_component/components/es_accordion/es_expansion_tile.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/components/es_text/es_title.dart';
-import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_accordion/es_expansion_tile.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/components/es_text/es_title.dart';
+import 'package:es_flutter_components/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 
 import '../../panel_items/panel_advanced_components/panel_tutorial_sample.dart';
 import '../../panel_items/panel_authenticate/es_lock_screen.dart';
-import '../../panel_items/panel_dashboard/panel_dashboard_sample.dart';
+import '../../panel_items/panel_dashboard_sample.dart';
 import '../../panel_items/panel_forms/panel_html_text_editor_sample.dart';
 import '../../panel_items/panel_pages/panel_errors/es_404_error.dart';
 import '../../panel_items/panel_pages/panel_errors/es_other_404.dart';
@@ -23,11 +24,10 @@ import '../../panel_items/panel_components/panel_accordion_sample.dart';
 import 'package:es_flutter_admin_panel/panel_ui/center_sceen/center_screen.dart';
 import 'package:es_flutter_admin_panel/panel_ui/structure_images/responsive_layout.dart';
 import '../../panel_items/panel_pages/panel_empty_screen_sample.dart';
-import '../../panel_items/panel_authenticate/es_login.dart';
+
 import '../../panel_items/panel_authenticate/es_recover_password.dart';
 import '../../panel_items/panel_authenticate/es_signin.dart';
 import '../../panel_items/panel_icons_sample.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../panel_items/panel_forms/panel_advanced_form_sample.dart';
 import '../../panel_items/panel_components/panel_alert_sample.dart';
@@ -57,7 +57,6 @@ import '../../panel_items/panel_components/panel_slider_sample.dart';
 import '../../panel_items/panel_forms/panel_stepper_form_sample.dart';
 import '../../panel_items/panel_advanced_components/panel_sweet_alert_sample.dart';
 import '../../panel_items/panel_components/panel_tab_bar_navigation_sample.dart';
-import '../../panel_items/panel_forms/panel_text_editor_sample.dart';
 import '../../panel_items/panel_components/panel_text_sample.dart';
 import '../../panel_items/panel_advanced_components/panel_toast_sample.dart';
 import '../../panel_items/panel_advanced_components/panel_tooltip_sample.dart';
@@ -66,62 +65,68 @@ import '../../panel_items/panel_forms/panel_validate_form_sample.dart';
 import '../../panel_items/panel_components/panel_waiting_indicator_sample.dart';
 import '../../panel_items/panel_components/panel_zoomable_image_sample.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 class DrawerPage extends StatefulWidget {
-
-   DrawerPage({Key? key,
-   }) : super(key: key);
-
-
+  DrawerPage({
+    Key? key,
+  }) : super(key: key);
 
   @override
-   DrawerPageState createState() => DrawerPageState();
+  DrawerPageState createState() => DrawerPageState();
 }
 
 class DrawerPageState extends State<DrawerPage> {
-
   static int _currentIndex = 0;
-  static int _currentExpandedIndex = 1000;
-  int num=63;
+  static int _currentExpandedIndex = 0;
+  int num = 70;
   List<int> _indexList = [];
   List<bool> _isSelectedList = [];
   List<void Function()> _onSelectedList = [];
 
-  int _expandedIndex(index){
-    if(index>=11 && index<=36){
+  int _expandedIndex(index) {
+    if (index >= 12 && index <= 36) {
       return 1;
     }
-    if(index>=37 && index<=41){
+    if (index >= 37 && index <= 41) {
       return 2;
     }
-    if(index>42 && index<=47){
+    if (index > 42 && index <= 47) {
       return 3;
     }
-    if(index>=49 && index<=52){
+    if (index >= 49 && index <= 52) {
       return 4;
     }
-    if(index>=53 && index<=62){
+    if (index >= 53 && index <= 62) {
       return 5;
     }
-    else return 0;
-
+    if (index >= 65 && index <= 69) {
+      return 6;
+    }
+    else
+      return 0;
   }
 
   //////////////define isExpanded flag for subMenus:
-  bool _cardExpandedState(index){
-    if(index>=24 && index<=26){
+  bool _cardExpandedState(index) {
+    if (index >= 24 && index <= 26) {
       return true;
-    }
-
-    else return false;
-
+    } else
+      return false;
   }
-  bool _tableExpandedState(index){
-    if(index>=13 && index<=14){
+
+  bool _tableExpandedState(index) {
+    if (index >= 13 && index <= 14) {
       return true;
-    }
+    } else
+      return false;
+  }
 
-    else return false;
-
+  bool _myExpandedState(index) {
+    if (index >= 67 && index <= 69) {
+      return true;
+    } else
+      return false;
   }
 
   @override
@@ -137,18 +142,15 @@ class DrawerPageState extends State<DrawerPage> {
         (index) => () {
               setState(() {
                 _currentIndex = index;
-                _currentExpandedIndex=_expandedIndex(_currentIndex);
+                _currentExpandedIndex = _expandedIndex(_currentIndex);
                 _isSelectedList = List.generate(num, (index) => false);
                 _isSelectedList[_currentIndex] = true;
-
               });
             });
   }
 
-
   @override
   Widget build(BuildContext context) {
-
     return Drawer(
       child: Container(
         decoration: BoxDecoration(
@@ -175,7 +177,7 @@ class DrawerPageState extends State<DrawerPage> {
                               color: Colors.black54,
                             )),
                     EsTitle(
-                      AppLocalizations.of(context)!.adminMenu,
+                      AppLocalizations.of(context)!.adminpaneltitle,
                       color: StructureBuilder.styles!.primaryDarkColor,
                     ),
                   ],
@@ -184,7 +186,42 @@ class DrawerPageState extends State<DrawerPage> {
                   big: true,
                 ),
                 //creating list items of drawer
-
+               /* firstLevelNavigate(
+                    iconPath: "assets/svgs/menu.svg",
+                    title: "First level navigate",
+                    index: _indexList[64],
+                    onSelect: _onSelectedList[64],
+                    routeName: PanelDashboardSample.routeName,
+                    tilePadding: EdgeInsets.symmetric(
+                      vertical: StructureBuilder.dims!.h1Padding * 1.7,
+                      horizontal: StructureBuilder.dims!.h1Padding,
+                    )),
+                firstLevelExpandedComplex(
+                  initialyExpanded: _currentExpandedIndex==6,
+                    iconPath: "assets/svgs/menu.svg",
+                    expansionTitle: "First level Expanded",
+                    expansionWidgetList: [
+                      nextLevelNavigate(title: "Next level navigate 1",
+                          routeName: PanelChartSample.routeName,
+                          index: _indexList[65], onSelect: _onSelectedList[65]),
+                      nextLevelNavigate(title: "Next level navigate 2",
+                          routeName: PanelTextSample.routeName,
+                          index: _indexList[66], onSelect: _onSelectedList[66]),
+                      nextLevelExpandedComplex(
+                        initialyExpanded: _myExpandedState(_currentIndex),
+                          expansionTitle: "Next level expanded",
+                          expansionWidgetList: [
+                            nextLevelNavigate(title: "Next level navigate 3",
+                                routeName: PanelTextSample.routeName,
+                                index: _indexList[67], onSelect: _onSelectedList[67]),
+                            nextLevelNavigate(title: "Next level navigate 4",
+                                routeName: PanelTextSample.routeName,
+                                index: _indexList[68], onSelect: _onSelectedList[68]),
+                            nextLevelNavigate(title: "Next level navigate 5",
+                                routeName: PanelTextSample.routeName,
+                                index: _indexList[69], onSelect: _onSelectedList[69]),
+                          ])
+                    ]),*/
                 firstLevelNavigate(
                   tilePadding: EdgeInsets.symmetric(
                     vertical: StructureBuilder.dims!.h1Padding * 1.7,
@@ -194,12 +231,11 @@ class DrawerPageState extends State<DrawerPage> {
                   onSelect: _onSelectedList[10],
                   isSelected: _isSelectedList[10],
                   iconPath:
-                  // "packages/es_flutter_component/"
+                      // "packages/es_flutter_component/"
                       "assets/svgs/homehashtag.svg",
                   title: AppLocalizations.of(context)!.dashboard,
                   routeName: PanelDashboardSample.routeName,
                 ),
-
 
                 firstLevelNavigate(
                   tilePadding: EdgeInsets.symmetric(
@@ -210,16 +246,16 @@ class DrawerPageState extends State<DrawerPage> {
                   onSelect: _onSelectedList[11],
                   isSelected: _isSelectedList[11],
                   iconPath:
-                      "packages/es_flutter_component/assets/svgs/chart.svg",
+                      "packages/es_flutter_components/assets/svgs/chart.svg",
                   title: AppLocalizations.of(context)!.charts,
                   routeName: PanelChartSample.routeName,
                 ),
 
                 firstLevelExpandedComplex(
-                  initialyExpanded: _currentExpandedIndex==1,
+                  initialyExpanded: _currentExpandedIndex == 1,
                   expansionTitle: AppLocalizations.of(context)!.components,
                   iconPath:
-                      "packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+                      "packages/es_flutter_components/assets/svgs/GraduationCap.svg",
                   expansionWidgetList: [
                     nextLevelNavigate(
                         title: AppLocalizations.of(context)!.accordion,
@@ -387,11 +423,11 @@ class DrawerPageState extends State<DrawerPage> {
                   ],
                 ),
                 firstLevelExpandedComplex(
-                    initialyExpanded: _currentExpandedIndex==2,
+                    initialyExpanded: _currentExpandedIndex == 2,
                     expansionTitle:
                         AppLocalizations.of(context)!.advancedcomponents,
                     iconPath:
-                        "packages/es_flutter_component/assets/svgs/advanced.svg",
+                        "packages/es_flutter_components/assets/svgs/advanced.svg",
                     expansionWidgetList: [
                       nextLevelNavigate(
                           title: AppLocalizations.of(context)!.toastmessage,
@@ -426,10 +462,10 @@ class DrawerPageState extends State<DrawerPage> {
                     ]),
 
                 firstLevelExpandedComplex(
-                    initialyExpanded: _currentExpandedIndex==3,
+                    initialyExpanded: _currentExpandedIndex == 3,
                     expansionTitle: AppLocalizations.of(context)!.form,
                     iconPath:
-                        "packages/es_flutter_component/assets/svgs/form.svg",
+                        "packages/es_flutter_components/assets/svgs/form.svg",
                     expansionWidgetList: [
                       nextLevelNavigate(
                           title: AppLocalizations.of(context)!.primaryform,
@@ -467,7 +503,6 @@ class DrawerPageState extends State<DrawerPage> {
                           onSelect: _onSelectedList[47],
                           index: _indexList[47],
                           isSelected: _isSelectedList[47]),
-
                     ]),
                 firstLevelNavigate(
                   tilePadding: EdgeInsets.symmetric(
@@ -478,16 +513,16 @@ class DrawerPageState extends State<DrawerPage> {
                   onSelect: _onSelectedList[48],
                   isSelected: _isSelectedList[48],
                   iconPath:
-                      "packages/es_flutter_component/assets/svgs/emojihappy.svg",
+                      "packages/es_flutter_components/assets/svgs/emojihappy.svg",
                   title: AppLocalizations.of(context)!.icons,
                   routeName: PanelIconsSample.routeName,
                 ),
                 firstLevelExpandedComplex(
-                    initialyExpanded: _currentExpandedIndex==4,
+                    initialyExpanded: _currentExpandedIndex == 4,
                     expansionTitle:
                         AppLocalizations.of(context)!.authentication,
                     iconPath:
-                        "packages/es_flutter_component/assets/svgs/profilecircle.svg",
+                        "packages/es_flutter_components/assets/svgs/profilecircle.svg",
                     expansionWidgetList: [
                       nextLevelNavigatenotReplace(
                           title: AppLocalizations.of(context)!.signin,
@@ -516,10 +551,10 @@ class DrawerPageState extends State<DrawerPage> {
                     ]),
 
                 firstLevelExpandedComplex(
-                    initialyExpanded: _currentExpandedIndex==5,
+                    initialyExpanded: _currentExpandedIndex == 5,
                     expansionTitle: AppLocalizations.of(context)!.pages,
                     iconPath:
-                        "packages/es_flutter_component/assets/svgs/pages.svg",
+                        "packages/es_flutter_components/assets/svgs/pages.svg",
                     expansionWidgetList: [
                       nextLevelNavigate(
                           title: "Profile",
@@ -588,10 +623,9 @@ class DrawerPageState extends State<DrawerPage> {
                     ]),
 
                 firstLevelExpandedComplex(
-
                     expansionTitle: AppLocalizations.of(context)!.menulevel,
                     iconPath:
-                        "packages/es_flutter_component/assets/svgs/layer.svg",
+                        "packages/es_flutter_components/assets/svgs/layer.svg",
                     expansionWidgetList: [
                       nextLevelExpandedComplex(
                         expansionTitle: AppLocalizations.of(context)!.menulevel,
@@ -630,7 +664,6 @@ class DrawerPageState extends State<DrawerPage> {
                         ],
                       ),
                     ]),
-
               ],
             ),
           ),
@@ -699,11 +732,10 @@ class DrawerPageState extends State<DrawerPage> {
         onSelect();
         routeName == null
             ? null
-             :Navigator.pushReplacementNamed(context, routeName);
+            : Navigator.pushReplacementNamed(context, routeName);
       },
     );
   }
-
 
   Widget nextLevelNavigate(
       {required String title,
@@ -755,11 +787,11 @@ class DrawerPageState extends State<DrawerPage> {
         onSelect();
         routeName == null
             ? null
-            :Navigator.pushReplacementNamed(context, routeName);
-            // : Navigator.push(
-            //     context,
-            //     MaterialPageRoute(builder: (context) => pageWidget),
-            //   );
+            : Navigator.pushReplacementNamed(context, routeName);
+        // : Navigator.push(
+        //     context,
+        //     MaterialPageRoute(builder: (context) => pageWidget),
+        //   );
       },
     );
   }
@@ -812,13 +844,11 @@ class DrawerPageState extends State<DrawerPage> {
       ),
       onTap: () {
         onSelect();
-        routeName == null
-            ? null
-            :Navigator.pushNamed(context, routeName);
-            // : Navigator.push(
-            //     context,
-            //     MaterialPageRoute(builder: (context) => pageWidget),
-            //   );
+        routeName == null ? null : Navigator.pushNamed(context, routeName);
+        // : Navigator.push(
+        //     context,
+        //     MaterialPageRoute(builder: (context) => pageWidget),
+        //   );
       },
     );
   }
@@ -840,7 +870,6 @@ class DrawerPageState extends State<DrawerPage> {
         child: EsExpansionTile(
           initialyExpanded: initialyExpanded,
           margin: EdgeInsets.all(0),
-
           tilePadding: tilePadding ??
               EdgeInsets.symmetric(
                   vertical: 0, horizontal: StructureBuilder.dims!.h1Padding),

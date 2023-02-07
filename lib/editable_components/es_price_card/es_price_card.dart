@@ -1,12 +1,12 @@
-import 'package:es_flutter_component/components/es_button/es_button.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/components/es_text/es_header.dart';
-import 'package:es_flutter_component/components/es_text/es_label_text.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/components/es_text/es_title.dart';
-import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_button/es_button.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/components/es_text/es_header.dart';
+import 'package:es_flutter_components/components/es_text/es_label_text.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/components/es_text/es_title.dart';
+import 'package:es_flutter_components/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -76,14 +76,14 @@ class EsPriceCard extends StatelessWidget {
                                 flex: 1,
                                 child: checkList[index]
                                     ? Image.asset(
-                                  "packages/es_flutter_component/assets/images/tick.png",
+                                  "packages/es_flutter_components/assets/images/tick.png",
                                   width:
                                   StructureBuilder.dims!.h3IconSize,
                                   height:
                                   StructureBuilder.dims!.h3IconSize,
                                 )
                                     : Image.asset(
-                                  "packages/es_flutter_component/assets/images/cross.png",
+                                  "packages/es_flutter_components/assets/images/cross.png",
                                   width:
                                   StructureBuilder.dims!.h3IconSize,
                                   height:

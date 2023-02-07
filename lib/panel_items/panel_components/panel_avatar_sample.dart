@@ -1,17 +1,17 @@
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/components/es_image/es_avatar_image.dart';
-import 'package:es_flutter_component/components/es_image/es_avatar_widget.dart';
-import 'package:es_flutter_component/components/es_label/es_content_label.dart';
-import 'package:es_flutter_component/components/es_label/es_label.dart';
-import 'package:es_flutter_component/components/es_text/es_title.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_image/es_avatar_image.dart';
+import 'package:es_flutter_components/components/es_image/es_avatar_widget.dart';
+import 'package:es_flutter_components/components/es_label/es_content_label.dart';
+import 'package:es_flutter_components/components/es_label/es_label.dart';
+import 'package:es_flutter_components/components/es_text/es_title.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'package:es_flutter_component/components/es_image/es_avatar_group.dart';
+import 'package:es_flutter_components/components/es_image/es_avatar_group.dart';
 
 class PanelAvatarSample extends StatelessWidget {
 
@@ -166,7 +166,7 @@ class PanelAvatarSample extends StatelessWidget {
                   )),
                   EsAvatarWidget(
                       widget: EsSvgIcon(
-                    "packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+                    "packages/es_flutter_components/assets/svgs/GraduationCap.svg",
                     size: StructureBuilder.dims!.h2IconSize,
                     color: StructureBuilder.styles!.primaryLightColor,
                   )),
@@ -175,7 +175,7 @@ class PanelAvatarSample extends StatelessWidget {
                     isUnique: true,
                     size: StructureBuilder.dims!.h3IconSize,
                     labelContent: EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/Gift.svg",
+                      "packages/es_flutter_components/assets/svgs/Gift.svg",
                       size: StructureBuilder.dims!.h3IconSize,
                       color: StructureBuilder.styles!.primaryLightColor,
                     ),

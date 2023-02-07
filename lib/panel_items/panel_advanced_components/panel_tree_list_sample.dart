@@ -1,12 +1,12 @@
 import 'dart:math';
 
 
-import 'package:es_flutter_component/components/es_tree_list/tree_list_view.dart';
+import 'package:es_flutter_components/components/es_tree_list/tree_list_view.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -51,10 +51,10 @@ class _PanelTreeListSampleState extends State<PanelTreeListSample> {
               height: 500,
               child: TreeListView(
                 favoriteIcon:  EsSvgIcon(
-                "packages/es_flutter_component/assets/svgs/ticksquare.svg",
+                "packages/es_flutter_components/assets/svgs/ticksquare.svg",
                 size: StructureBuilder.dims!.h3IconSize,
               ),indicatorIcon:  EsSvgIcon(
-                "packages/es_flutter_component/assets/svgs/square.svg",
+                "packages/es_flutter_components/assets/svgs/square.svg",
                 size: StructureBuilder.dims!.h3IconSize,
               ),
               )),
@@ -66,10 +66,10 @@ class _PanelTreeListSampleState extends State<PanelTreeListSample> {
               """
               TreeListView(
                 favoriteIcon:  EsSvgIcon(
-                "packages/es_flutter_component/assets/svgs/ticksquare.svg",
+                "packages/es_flutter_components/assets/svgs/ticksquare.svg",
                 size: StructureBuilder.dims!.h3IconSize,
               ),indicatorIcon:  EsSvgIcon(
-                "packages/es_flutter_component/assets/svgs/square.svg",
+                "packages/es_flutter_components/assets/svgs/square.svg",
                 size: StructureBuilder.dims!.h3IconSize,
               ),
               )

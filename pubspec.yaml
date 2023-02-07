@@ -32,53 +32,22 @@ dependencies:
   flutter:
     sdk: flutter
 
-#  es_flutter_component:
+  es_flutter_components:
+    path: ./packages/es_flutter_components
+
+
+    #  es_flutter_component:
 #    git:
 #      url: ssh://git@gitlab.com/haniehhojjatzadeh/es_flutter_component.git
 #      ref: main # branch name
-  es_flutter_component:
-    git: git@github.com:pkgesperlos/es_flutter_component.git
+
+#  es_flutter_component:
+#    git: git@github.com:pkgesperlos/es_flutter_component.git
+
 
   flutter_localizations:
     sdk: flutter
-  provider: 6.0.3
-  intl: ^0.17.0
-  validators: ^3.0.0
-  http: ^0.13.4
-  photo_view: ^0.14.0
-  flutter_html: ^2.2.1
-  webview_flutter: ^2.0.7
-  wakelock: ^0.6.2
-  shared_preferences_web: ^2.0.4
-  cached_network_image: ^3.2.3
-  image_picker_for_web: ^2.1.10
 
-  #  Optional admin panel packages//////////////////////////////////////////////////
-
-  dropdown_button2: ^1.7.2
-  image_cropper: ^3.0.1
-  art_sweetalert: ^0.0.2
-  fluttertoast: ^8.1.1
-  tutorial_coach_mark: ^1.2.4
-  list_treeview: ^0.3.1
-  flutter_colorpicker: ^1.0.3
-  flutter_quill: 6.0.0
-  delta_markdown: ^0.8.0
-  markdown: ^6.0.1
-  timelines: ^0.1.0
-  font_awesome_flutter: ^10.2.1
-  syncfusion_flutter_maps: ^20.3.50
-  html_editor_enhanced: ^2.5.0
-  flutter_bootstrap: ^2.0.0
-  percent_indicator: ^4.2.2
-  carousel_slider: ^4.1.1
-  responsive_table: ^0.2.0+2
-  mask_text_input_formatter: ^2.3.0
-  flutter_svg: ^0.23.0
-  pattern_formatter: ^2.0.0
-  fl_chart: ^0.55.2
-  awesome_dialog: ^3.0.2
-  flutter_datetime_picker: ^1.5.1
 
 
 
@@ -90,6 +59,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  lint: ^2.0.1
   mockito: ^5.2.0
   build_runner: ^2.1.11
 

@@ -1,16 +1,14 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:es_flutter_component/components/es_image/es_avatar_image.dart';
 import 'package:es_flutter_admin_panel/language_change_provider.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/components/es_text/es_label_text.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_image/es_avatar_image.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_components/components/es_text/es_label_text.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
+import 'package:provider/provider.dart';
 import 'package:es_flutter_admin_panel/panel_ui/structure_images/responsive_layout.dart';
 import '../components/search_text_field.dart';
 import 'menu_drop_down_items.dart';
@@ -35,8 +33,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
 
   @override
   Widget build(BuildContext context) {
-
-    double _width=MediaQuery.of(context).size.width;
+    double _width = MediaQuery.of(context).size.width;
     items = [
       DropdownMenuItem(
         child: MenuDropdownItems(
@@ -73,7 +70,6 @@ class _AppBarWidgetState extends State<AppBarWidget> {
       child: Row(
         children: [
           ResponsiveLayot.isComputer(context)
-
               ? Expanded(flex: _sidebarFlex(_width), child: profileAppBarCard())
               : Container(),
           Expanded(flex: 40, child: mainAppBarCard()),
@@ -81,12 +77,20 @@ class _AppBarWidgetState extends State<AppBarWidget> {
       ),
     );
   }
-  int _sidebarFlex(double width){
-    if(width>1400){return 7;}
-    if(width<=1400 && width>=1300){return 8;}
-    if(width<=1300 && width>=1200){return 9;}
-    if(width<=1200){return 10;}
-    else
+
+  int _sidebarFlex(double width) {
+    if (width > 1400) {
+      return 7;
+    }
+    if (width <= 1400 && width >= 1300) {
+      return 8;
+    }
+    if (width <= 1300 && width >= 1200) {
+      return 9;
+    }
+    if (width <= 1200) {
+      return 10;
+    } else
       return 7;
   }
 
@@ -104,7 +108,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
     return Container(
       margin: EdgeInsets.symmetric(
         vertical: StructureBuilder.dims!.h0Padding,
-        horizontal: StructureBuilder.dims!.h0Padding*1.3,
+        horizontal: StructureBuilder.dims!.h0Padding * 1.3,
       ),
       decoration: BoxDecoration(
           color: StructureBuilder.styles!.primaryLightColor,
@@ -141,15 +145,18 @@ class _AppBarWidgetState extends State<AppBarWidget> {
             //     )
             //   ],
             // ),
-            Expanded(child: Padding(
-              padding:  EdgeInsets.symmetric(horizontal: StructureBuilder.dims!.h1Padding),
-              child: SearchTextField(),
-            ),),
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: StructureBuilder.dims!.h1Padding),
+                child: SearchTextField(),
+              ),
+            ),
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 InkWell(
-                  onTap: (){},
+                  onTap: () {},
                   child: EsSvgIcon(
                     "assets/svgs/setting.svg",
                     size: StructureBuilder.dims!.h2IconSize,
@@ -160,7 +167,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                   factor: 2,
                 ),
                 InkWell(
-                  onTap: (){},
+                  onTap: () {},
                   child: EsSvgIcon(
                     "assets/svgs/ChatsCircle.svg",
                     size: StructureBuilder.dims!.h2IconSize * 0.9,
@@ -171,7 +178,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                   factor: 2,
                 ),
                 InkWell(
-                  onTap: (){},
+                  onTap: () {},
                   child: EsSvgIcon(
                     "assets/svgs/notificationbing.svg",
                     size: StructureBuilder.dims!.h2IconSize,
@@ -194,7 +201,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
     return Container(
       margin: EdgeInsets.symmetric(
         vertical: StructureBuilder.dims!.h0Padding,
-        horizontal: StructureBuilder.dims!.h0Padding*1.3,
+        horizontal: StructureBuilder.dims!.h0Padding * 1.3,
       ),
       decoration: BoxDecoration(
           color: StructureBuilder.styles!.primaryLightColor,
@@ -203,9 +210,8 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
       child: Container(
         padding: EdgeInsets.symmetric(
-            vertical: StructureBuilder.dims!.h1Padding ,
-            horizontal: StructureBuilder.dims!.h1Padding
-        ),
+            vertical: StructureBuilder.dims!.h1Padding,
+            horizontal: StructureBuilder.dims!.h1Padding),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -214,10 +220,8 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   InkWell(
-                    onTap: (){
-
+                    onTap: () {
                       Scaffold.of(context).openDrawer();
-
                     },
                     child: EsSvgIcon(
                       "assets/svgs/menu.svg",
@@ -228,10 +232,13 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                   EsHSpacer(
                     big: true,
                   ),
-                  Expanded(child: Padding(
-                    padding:  EdgeInsets.symmetric(horizontal: StructureBuilder.dims!.h1Padding),
-                    child: SearchTextField(),
-                  ),),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: StructureBuilder.dims!.h1Padding),
+                      child: SearchTextField(),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -239,7 +246,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 InkWell(
-                  onTap: (){},
+                  onTap: () {},
                   child: EsSvgIcon(
                     "assets/svgs/setting.svg",
                     size: StructureBuilder.dims!.h2IconSize,
@@ -260,7 +267,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                 //   factor: 2,
                 // ),
                 InkWell(
-                  onTap: (){},
+                  onTap: () {},
                   child: EsSvgIcon(
                     "assets/svgs/notificationbing.svg",
                     size: StructureBuilder.dims!.h2IconSize,
@@ -277,11 +284,12 @@ class _AppBarWidgetState extends State<AppBarWidget> {
       ),
     );
   }
+
   Widget _phoneMainAppBarCard() {
     return Container(
       margin: EdgeInsets.symmetric(
         vertical: StructureBuilder.dims!.h0Padding,
-        horizontal: StructureBuilder.dims!.h0Padding*1.3,
+        horizontal: StructureBuilder.dims!.h0Padding * 1.3,
       ),
       decoration: BoxDecoration(
           color: StructureBuilder.styles!.primaryLightColor,
@@ -290,9 +298,8 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               Radius.circular(StructureBuilder.dims!.h1BorderRadius))),
       child: Container(
         padding: EdgeInsets.symmetric(
-            vertical: StructureBuilder.dims!.h1Padding ,
-            horizontal: StructureBuilder.dims!.h1Padding
-        ),
+            vertical: StructureBuilder.dims!.h1Padding,
+            horizontal: StructureBuilder.dims!.h1Padding),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -300,10 +307,8 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 InkWell(
-                  onTap: (){
-
+                  onTap: () {
                     Scaffold.of(context).openDrawer();
-
                   },
                   child: EsSvgIcon(
                     "assets/svgs/menu.svg",
@@ -315,10 +320,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                   big: true,
                 ),
                 InkWell(
-                  onTap: (){
-
-
-                  },
+                  onTap: () {},
                   child: EsSvgIcon(
                     "assets/svgs/search.svg",
                     color: StructureBuilder.styles!.primaryDarkColor,
@@ -331,7 +333,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 InkWell(
-                  onTap: (){},
+                  onTap: () {},
                   child: EsSvgIcon(
                     "assets/svgs/setting.svg",
                     size: StructureBuilder.dims!.h2IconSize,
@@ -352,7 +354,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                 //   factor: 2,
                 // ),
                 InkWell(
-                  onTap: (){},
+                  onTap: () {},
                   child: EsSvgIcon(
                     "assets/svgs/notificationbing.svg",
                     size: StructureBuilder.dims!.h2IconSize,
@@ -391,6 +393,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
         children: [
           EsHSpacer(),
           Container(
+
             child: EsAvatarImage(
               path: "assets/images/img4.jpg",
               radius: StructureBuilder.dims!.h0BorderRadius * 1.5,
@@ -416,7 +419,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
             ),
             child: Column(
               children: [
-                EsLabelText("سجاد آروین"),
+                EsLabelText(AppLocalizations.of(context)!.sajjadarvin,),
                 Icon(
                   Icons.edit,
                   size: StructureBuilder.dims!.h3IconSize,
@@ -448,7 +451,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
           child: Row(
             children: [
               EsSvgIcon(
-                "packages/es_flutter_component/assets/svgs/down.svg",
+                "packages/es_flutter_components/assets/svgs/down.svg",
                 color: StructureBuilder.styles!.primaryLightColor,
                 size: StructureBuilder.dims!.h3IconSize * 0.5,
               ),
@@ -487,6 +490,4 @@ class _AppBarWidgetState extends State<AppBarWidget> {
       ),
     );
   }
-
-
 }

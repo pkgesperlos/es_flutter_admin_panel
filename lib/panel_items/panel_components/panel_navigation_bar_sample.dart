@@ -1,16 +1,16 @@
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/components/es_button/es_button.dart';
-import 'package:es_flutter_component/components/es_label/es_content_label.dart';
-import 'package:es_flutter_component/components/es_label/es_label.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/components/es_text/es_title.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_button/es_button.dart';
+import 'package:es_flutter_components/components/es_label/es_content_label.dart';
+import 'package:es_flutter_components/components/es_label/es_label.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/components/es_text/es_title.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'package:es_flutter_component/components/es_navigation_bar/es_navigation_bar.dart';
+import 'package:es_flutter_components/components/es_navigation_bar/es_navigation_bar.dart';
 
 class PanelNavigationBarSample extends StatefulWidget {
 

@@ -1,12 +1,12 @@
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/components/es_alert/es_alerts.dart';
-import 'package:es_flutter_component/components/es_button/es_icon_button.dart';
-import 'package:es_flutter_component/components/es_image/es_avatar_image.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_alert/es_alerts.dart';
+import 'package:es_flutter_components/components/es_button/es_icon_button.dart';
+import 'package:es_flutter_components/components/es_image/es_avatar_image.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -26,7 +26,7 @@ class PanelAlertSample extends StatelessWidget {
             children: [
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/danger.svg",
+                  "packages/es_flutter_components/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -40,7 +40,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_components/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -54,7 +54,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
+                  "packages/es_flutter_components/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -68,7 +68,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_components/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!
                       .informationColor()
@@ -88,7 +88,7 @@ class PanelAlertSample extends StatelessWidget {
           information:
               "these are confidence alerts located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
               """EsIconButton(
-                EsSvgIcon("packages/es_flutter_component/assets/svgs/danger.svg",
+                EsSvgIcon("packages/es_flutter_components/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.errorColor().errorDark,),
 
@@ -107,7 +107,7 @@ class PanelAlertSample extends StatelessWidget {
             children: [
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/danger.svg",
+                  "packages/es_flutter_components/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -126,7 +126,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_components/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -145,7 +145,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
+                  "packages/es_flutter_components/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -164,7 +164,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_components/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!
                       .informationColor()
@@ -189,7 +189,7 @@ class PanelAlertSample extends StatelessWidget {
           information:
               "these are bordered alerts located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
               """EsIconButton(
-                EsSvgIcon("packages/es_flutter_component/assets/svgs/danger.svg",
+                EsSvgIcon("packages/es_flutter_components/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.errorColor().errorDark,),
 
@@ -211,7 +211,7 @@ class PanelAlertSample extends StatelessWidget {
             children: [
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/danger.svg",
+                  "packages/es_flutter_components/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -222,7 +222,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_components/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -233,7 +233,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
+                  "packages/es_flutter_components/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -244,7 +244,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_components/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!
                       .informationColor()
@@ -274,7 +274,7 @@ class PanelAlertSample extends StatelessWidget {
             children: [
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/danger.svg",
+                  "packages/es_flutter_components/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -284,7 +284,7 @@ class PanelAlertSample extends StatelessWidget {
                     context,
                     "message",
                     icon: EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/danger.svg",
+                      "packages/es_flutter_components/assets/svgs/danger.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color: StructureBuilder.styles!.dangerColor().dangerDark,
                     ),
@@ -293,7 +293,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_components/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -303,7 +303,7 @@ class PanelAlertSample extends StatelessWidget {
                     context,
                     "message",
                     icon: EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
+                      "packages/es_flutter_components/assets/svgs/CheckCircle.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color:
                           StructureBuilder.styles!.successColor().successDark,
@@ -313,7 +313,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
+                  "packages/es_flutter_components/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -323,7 +323,7 @@ class PanelAlertSample extends StatelessWidget {
                     context,
                     "message",
                     icon: EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/infocircle.svg",
+                      "packages/es_flutter_components/assets/svgs/infocircle.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color:
                           StructureBuilder.styles!.warningColor().warningDark,
@@ -333,7 +333,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_components/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!
                       .informationColor()
@@ -345,7 +345,7 @@ class PanelAlertSample extends StatelessWidget {
                     context,
                     "message",
                     icon: EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/Megaphone.svg",
+                      "packages/es_flutter_components/assets/svgs/Megaphone.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color: StructureBuilder.styles!
                           .informationColor()
@@ -361,7 +361,7 @@ class PanelAlertSample extends StatelessWidget {
               "these are alerts with icon located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/danger.svg",
+                  "packages/es_flutter_components/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.errorColor().errorDark,
                 ),
@@ -371,7 +371,7 @@ class PanelAlertSample extends StatelessWidget {
                     context,
                     "message",
                     icon:EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/danger.svg",
+                      "packages/es_flutter_components/assets/svgs/danger.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color: StructureBuilder.styles!.errorColor().errorDark,
                     ),
@@ -385,7 +385,7 @@ class PanelAlertSample extends StatelessWidget {
             children: [
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/danger.svg",
+                  "packages/es_flutter_components/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -396,7 +396,7 @@ class PanelAlertSample extends StatelessWidget {
                     "message",
                     hasClose: true,
                     icon: EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/danger.svg",
+                      "packages/es_flutter_components/assets/svgs/danger.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color: StructureBuilder.styles!.dangerColor().dangerDark,
                     ),
@@ -405,7 +405,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_components/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -416,7 +416,7 @@ class PanelAlertSample extends StatelessWidget {
                     "message",
                     hasClose: true,
                     icon: EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
+                      "packages/es_flutter_components/assets/svgs/CheckCircle.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color:
                           StructureBuilder.styles!.successColor().successDark,
@@ -426,7 +426,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
+                  "packages/es_flutter_components/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -437,7 +437,7 @@ class PanelAlertSample extends StatelessWidget {
                     "message",
                     hasClose: true,
                     icon: EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/infocircle.svg",
+                      "packages/es_flutter_components/assets/svgs/infocircle.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color:
                           StructureBuilder.styles!.warningColor().warningDark,
@@ -447,7 +447,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_components/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!
                       .informationColor()
@@ -460,7 +460,7 @@ class PanelAlertSample extends StatelessWidget {
                     "message",
                     hasClose: true,
                     icon: EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/Megaphone.svg",
+                      "packages/es_flutter_components/assets/svgs/Megaphone.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color: StructureBuilder.styles!
                           .informationColor()
@@ -476,7 +476,7 @@ class PanelAlertSample extends StatelessWidget {
               "these are removable alerts with icon located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/danger.svg",
+                  "packages/es_flutter_components/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.errorColor().errorDark,
                 ),
@@ -487,7 +487,7 @@ class PanelAlertSample extends StatelessWidget {
                     "message",
                     hasClose: true,
                     icon: EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/danger.svg",
+                      "packages/es_flutter_components/assets/svgs/danger.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color: StructureBuilder.styles!.errorColor().errorDark,
                     ),
@@ -501,7 +501,7 @@ class PanelAlertSample extends StatelessWidget {
             children: [
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/danger.svg",
+                  "packages/es_flutter_components/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -533,7 +533,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_components/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -565,7 +565,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
+                  "packages/es_flutter_components/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -597,7 +597,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_components/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!
                       .informationColor()
@@ -636,7 +636,7 @@ class PanelAlertSample extends StatelessWidget {
               "these are alerts with desired content located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
               """EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/danger.svg",
+                  "packages/es_flutter_components/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.errorColor().errorDark,
                 ),
@@ -668,7 +668,7 @@ class PanelAlertSample extends StatelessWidget {
             children: [
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/danger.svg",
+                  "packages/es_flutter_components/assets/svgs/danger.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.dangerColor().dangerDark,
                 ),
@@ -677,7 +677,7 @@ class PanelAlertSample extends StatelessWidget {
                   EsAlerts.error(context, "message",
                       hasClose: true,
                       icon: EsSvgIcon(
-                        "packages/es_flutter_component/assets/svgs/danger.svg",
+                        "packages/es_flutter_components/assets/svgs/danger.svg",
                         size: StructureBuilder.dims!.h2IconSize,
                         color:
                             StructureBuilder.styles!.dangerColor().dangerDark,
@@ -695,7 +695,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/CheckCircle.svg",
+                  "packages/es_flutter_components/assets/svgs/CheckCircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.successColor().successDark,
                 ),
@@ -704,7 +704,7 @@ class PanelAlertSample extends StatelessWidget {
                   EsAlerts.success(context, "message",
                       hasClose: true,
                       icon: EsSvgIcon(
-                        "packages/es_flutter_component/assets/svgs/danger.svg",
+                        "packages/es_flutter_components/assets/svgs/danger.svg",
                         size: StructureBuilder.dims!.h2IconSize,
                         color:
                             StructureBuilder.styles!.successColor().successDark,
@@ -722,7 +722,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/infocircle.svg",
+                  "packages/es_flutter_components/assets/svgs/infocircle.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!.warningColor().warningDark,
                 ),
@@ -731,7 +731,7 @@ class PanelAlertSample extends StatelessWidget {
                   EsAlerts.warning(context, "message",
                       hasClose: true,
                       icon: EsSvgIcon(
-                        "packages/es_flutter_component/assets/svgs/infocircle.svg",
+                        "packages/es_flutter_components/assets/svgs/infocircle.svg",
                         size: StructureBuilder.dims!.h2IconSize,
                         color:
                             StructureBuilder.styles!.warningColor().warningDark,
@@ -749,7 +749,7 @@ class PanelAlertSample extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                  "packages/es_flutter_component/assets/svgs/Megaphone.svg",
+                  "packages/es_flutter_components/assets/svgs/Megaphone.svg",
                   size: StructureBuilder.dims!.h2IconSize,
                   color: StructureBuilder.styles!
                       .informationColor()
@@ -760,7 +760,7 @@ class PanelAlertSample extends StatelessWidget {
                   EsAlerts.information(context, "message",
                       hasClose: true,
                       icon: EsSvgIcon(
-                        "packages/es_flutter_component/assets/svgs/Megaphone.svg",
+                        "packages/es_flutter_components/assets/svgs/Megaphone.svg",
                         size: StructureBuilder.dims!.h2IconSize,
                         color: StructureBuilder.styles!
                             .informationColor()
@@ -784,7 +784,7 @@ class PanelAlertSample extends StatelessWidget {
               "these are bordered alerts with icon located in: \n es_flutter_component/lib/components/es_alert/es_alerts.dart \n and is used as: \n "
               """EsIconButton(
                     EsSvgIcon(
-                      "packages/es_flutter_component/assets/svgs/danger.svg",
+                      "packages/es_flutter_components/assets/svgs/danger.svg",
                       size: StructureBuilder.dims!.h2IconSize,
                       color: StructureBuilder.styles!.errorColor().errorDark,
                     ),
@@ -793,7 +793,7 @@ class PanelAlertSample extends StatelessWidget {
                       EsAlerts.error(context, "message",
                           hasClose: true,
                           icon:  EsSvgIcon(
-                            "packages/es_flutter_component/assets/svgs/danger.svg",
+                            "packages/es_flutter_components/assets/svgs/danger.svg",
                             size: StructureBuilder.dims!.h2IconSize,
                             color: StructureBuilder.styles!.errorColor().errorDark,
                           ),
@@ -812,15 +812,15 @@ class PanelAlertSample extends StatelessWidget {
     bootstrapGridParameters(gutterSize: StructureBuilder.dims!.h0Padding);
     return Material(
         color: StructureBuilder.styles!.decorationColor().background,
-        child:  Scaffold(
-          backgroundColor: StructureBuilder.styles!.decorationColor().background,
+        child: Scaffold(
+          backgroundColor:
+              StructureBuilder.styles!.decorationColor().background,
           body: SingleChildScrollView(
             child: Column(
               children: [
                 PageTitleContainer(
                   title: AppLocalizations.of(context)!.alerttitle,
                 ),
-
                 BootstrapContainer(
                     fluid: true,
                     padding: EdgeInsets.all(StructureBuilder.dims!.h0Padding),

@@ -8,10 +8,11 @@
   "warning": "اضطرار",
   "information": "اطلاع رسانی",
   "confidence": "اطمینان از انجام کار",
-
+  "sajjadarvin": "سجاد آروین",
   "adminMenu": "منوی ادمین",
 
   "dashboard": "داشبورد",
+  "dashboardtitle":"مدل های متفاوت کارت های داشبورد با استفاده از کد های فلاتر در پنل موجود است.",
 
   "charts": "نمودارها",
   "barChart": "نمودار میله ای",
@@ -315,7 +316,7 @@
   "username": "نام کاربری",
   "password": "رمزعبور",
   "repeatthepassword": "تکرار رمز عبور",
-  "signin": "ثبت نام",
+  "signin": "ورود",
   "usernamehint": "نام کاربری خود را وارد نمایید:",
   "passwordhint": "رمزعبور خود را وارد نمایید:",
   "createaccount": "ایجاد حساب",
@@ -463,6 +464,7 @@
   "maptitle": " نمایش موقعیت با استفاده از کدهای فلاتر در پنل در دسترس است",
 
   "colors": "رنگ ها",
+  "color": "رنگ",
   "primarycolor": "رنگ اصلی",
   "colorstitle": " انواع مدل های رنگ های متفاوت  با استفاده از کدهای فلاتر در پنل تعریف شده است.",
 
@@ -611,5 +613,31 @@
   "pending": "در حال بررسی",
   "unsuccessful": "ناموفق",
   "successful": "موفق",
-  "status": "وضعیت"
+  "status": "وضعیت",
+  "online": "آنلاین",
+  "offline": "آفلاین",
+  "show": "نمایش",
+  "newusers": "کاربران جدید",
+  "taskslist": "لیست کارهای مورد انجام",
+
+  "memberbenefits": "سود اعضا",
+  "payments": "پرداخت ها",
+  "logistics": "تدارکات",
+  "tickets": "تیکت ها",
+  "newvisitorstoday": "بازدید کنندگان جدید امروز",
+  "totalmonthlyorders": "مجموع سفارشات ماهانه",
+  "totalincomethisyear": "درآمد کل امسال",
+  "onlinemembership": "عضویت آنلاین",
+
+  "socialnetworksatistic": "آمار شبکه های اجتماعی",
+  "platformstatus": "وضعیت پلتفرم",
+  "growthrate": "نرخ رشد",
+
+  "participationrate": "نرخ مشارکت",
+  "adaccess": "دستیابی به آگهی",
+  "userengagement": "جذب کاربر",
+  "saleschart": "نمودار فروش",
+
+
+  "adminpaneltitle": "عنوان پنل ادمین"
 }

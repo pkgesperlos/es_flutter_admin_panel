@@ -1,79 +1,111 @@
-
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/components/es_text/es_header.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-
-
-class EsLinearChart extends StatefulWidget {
-  const EsLinearChart({Key? key}) : super(key: key);
+class EsPlatformLinearChart extends StatefulWidget {
+  const EsPlatformLinearChart({Key? key}) : super(key: key);
 
   @override
-  _EsLinearChartState createState() => _EsLinearChartState();
+  _EsPlatformLinearChartState createState() => _EsPlatformLinearChartState();
 }
 
-class _EsLinearChartState extends State<EsLinearChart> {
-  List<Color> gradientColors = [
-    StructureBuilder.styles!.primaryLightColor,
-    StructureBuilder.styles!.dangerColor().dangerDark,
-  ];
+class _EsPlatformLinearChartState extends State<EsPlatformLinearChart> {
+  Color _color2 =
+      StructureBuilder.styles!.dangerColor().dangerRegular.withOpacity(0.3);
+  Color _color1 = StructureBuilder.styles!.primaryLightColor;
 
   bool showAvg = false;
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1.66,
-      child: Center(
-        child: Padding(
-          padding: EdgeInsets.only(
-            left: StructureBuilder.dims!.h1Padding,
-            right: StructureBuilder.dims!.h1Padding,
-            top: StructureBuilder.dims!.h0Padding,
-            bottom: StructureBuilder.dims!.h0Padding,
+    return Container(
+      decoration: BoxDecoration(
+        color: StructureBuilder.styles!.primaryDarkColor,
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+      ),
+
+      child: Column(
+        children: [
+          EsVSpacer(
+            big: true,
+            factor: 3,
           ),
-        child:Card(
-          color: StructureBuilder.styles!.primaryDarkColor,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-
-
-          child: Stack(
-            children: <Widget>[
-              Container(
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(18),
-                  ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              vertical: StructureBuilder.dims!.h1Padding,
+              horizontal: StructureBuilder.dims!.h0Padding,
+            ),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    EsHeader(
+                      AppLocalizations.of(context)!.platformstatus,
+                      color: StructureBuilder.styles!.primaryLightColor,
+                    ),
+                  ],
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      right: 18.0, left: 12.0, top: 24, bottom: 12),
-                  child: LineChart(
-                    showAvg ? avgData() : mainData(),
+                EsVSpacer(
+                  big: true,
+                  factor: 2,
+                ),
+                Row(
+                  children: <Widget>[
+                    Indicator(
+                      color:
+                          StructureBuilder.styles!.dangerColor().dangerRegular,
+                      text: "Desktop",
+                      isSquare: true,
+                    ),
+                    EsHSpacer(),
+                    Indicator(
+                      color: _color1,
+                      text: 'Mobile',
+                      isSquare: true,
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          EsVSpacer(),
+          AspectRatio(
+            aspectRatio: 1.66,
+            child: Center(
+              child: Padding(
+                padding: EdgeInsets.only(
+                  left: StructureBuilder.dims!.h1Padding,
+                  right: StructureBuilder.dims!.h1Padding,
+                  top: StructureBuilder.dims!.h0Padding,
+                  bottom: StructureBuilder.dims!.h0Padding,
+                ),
+                child: Container(
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(18),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        right: 18.0, left: 12.0, top: 24, bottom: 12),
+                    child: LineChart(
+                      showAvg ? avgData() : mainData(),
+                    ),
                   ),
                 ),
               ),
-              // SizedBox(
-              //   width: 60,
-              //   height: 34,
-              //   child: TextButton(
-              //     onPressed: () {
-              //       setState(() {
-              //         showAvg = !showAvg;
-              //       });
-              //     },
-              //     child: Text(
-              //       'avg',
-              //       style: TextStyle(
-              //           fontSize: 12,
-              //           color:
-              //           showAvg ? Colors.white.withOpacity(0.5) : Colors.white),
-              //     ),
-              //   ),
-              // ),
-            ],
-          ) ,
-        ),),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -195,11 +227,7 @@ class _EsLinearChartState extends State<EsLinearChart> {
             FlSpot(11, 4),
           ],
           isCurved: true,
-          gradient: LinearGradient(
-            colors: gradientColors,
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-          ),
+          color: _color1,
           barWidth: 5,
           isStrokeCapRound: true,
           dotData: FlDotData(
@@ -207,18 +235,11 @@ class _EsLinearChartState extends State<EsLinearChart> {
           ),
           belowBarData: BarAreaData(
             show: true,
-            gradient: LinearGradient(
-              colors: gradientColors
-                  .map((color) => color.withOpacity(0.3))
-                  .toList(),
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-            ),
+            color: _color1,
           ),
         ),
         LineChartBarData(
           spots: const [
-
             FlSpot(0, 4),
             FlSpot(2.6, 3),
             FlSpot(4.9, 4),
@@ -226,14 +247,9 @@ class _EsLinearChartState extends State<EsLinearChart> {
             FlSpot(8, 5),
             FlSpot(9.5, 2),
             FlSpot(11, 3),
-
           ],
           isCurved: true,
-          gradient: LinearGradient(
-            colors: gradientColors,
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-          ),
+          color: _color2,
           barWidth: 5,
           isStrokeCapRound: true,
           dotData: FlDotData(
@@ -241,13 +257,7 @@ class _EsLinearChartState extends State<EsLinearChart> {
           ),
           belowBarData: BarAreaData(
             show: true,
-            gradient: LinearGradient(
-              colors: gradientColors
-                  .map((color) => color.withOpacity(0.3))
-                  .toList(),
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-            ),
+            color: _color2,
           ),
         ),
       ],
@@ -264,7 +274,7 @@ class _EsLinearChartState extends State<EsLinearChart> {
         horizontalInterval: 1,
         getDrawingVerticalLine: (value) {
           return FlLine(
-            color:StructureBuilder.styles!.primaryLightColor,
+            color: StructureBuilder.styles!.primaryLightColor,
             strokeWidth: 1,
           );
         },
@@ -319,16 +329,6 @@ class _EsLinearChartState extends State<EsLinearChart> {
             FlSpot(11, 3.44),
           ],
           isCurved: true,
-          gradient: LinearGradient(
-            colors: [
-              ColorTween(begin: gradientColors[0], end: gradientColors[1])
-                  .lerp(0.2)!,
-              ColorTween(begin: gradientColors[0], end: gradientColors[1])
-                  .lerp(0.2)!,
-            ],
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-          ),
           barWidth: 5,
           isStrokeCapRound: true,
           dotData: FlDotData(
@@ -336,20 +336,45 @@ class _EsLinearChartState extends State<EsLinearChart> {
           ),
           belowBarData: BarAreaData(
             show: true,
-            gradient: LinearGradient(
-              colors: [
-                ColorTween(begin: gradientColors[0], end: gradientColors[1])
-                    .lerp(0.2)!
-                    .withOpacity(0.1),
-                ColorTween(begin: gradientColors[0], end: gradientColors[1])
-                    .lerp(0.2)!
-                    .withOpacity(0.1),
-              ],
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-            ),
           ),
         ),
+      ],
+    );
+  }
+}
+
+class Indicator extends StatelessWidget {
+  final Color color;
+  final String text;
+  final bool isSquare;
+  final double size;
+  final Color textColor;
+
+  const Indicator({
+    Key? key,
+    required this.color,
+    required this.text,
+    required this.isSquare,
+    this.size = 16,
+    this.textColor = const Color(0xffF2F2F2),
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        Container(
+          width: size,
+          height: size,
+          decoration: BoxDecoration(
+            shape: isSquare ? BoxShape.rectangle : BoxShape.circle,
+            color: color,
+          ),
+        ),
+        const SizedBox(
+          width: 4,
+        ),
+        EsOrdinaryText(text, color: textColor)
       ],
     );
   }

@@ -1,10 +1,10 @@
 
-import 'package:es_flutter_component/components/es_group_button/group_button.dart';
+import 'package:es_flutter_components/components/es_group_button/group_button.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -19,27 +19,27 @@ class PanelGroupButtonSample extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Widget> _iconList = [
       EsSvgIcon(
-        "packages/es_flutter_component/assets/svgs/home.svg",
+        "packages/es_flutter_components/assets/svgs/home.svg",
         color: StructureBuilder.styles!.t6Color,
         size: StructureBuilder.dims!.h2IconSize,
       ),
       EsSvgIcon(
-        "packages/es_flutter_component/assets/svgs/bookmarks.svg",
+        "packages/es_flutter_components/assets/svgs/bookmarks.svg",
         color: StructureBuilder.styles!.t6Color,
         size: StructureBuilder.dims!.h2IconSize,
       ),
       EsSvgIcon(
-        "packages/es_flutter_component/assets/svgs/Gift.svg",
+        "packages/es_flutter_components/assets/svgs/Gift.svg",
         color: StructureBuilder.styles!.t6Color,
         size: StructureBuilder.dims!.h2IconSize,
       ),
       EsSvgIcon(
-        "packages/es_flutter_component/assets/svgs/setting2.svg",
+        "packages/es_flutter_components/assets/svgs/setting2.svg",
         color: StructureBuilder.styles!.t6Color,
         size: StructureBuilder.dims!.h2IconSize,
       ),
       EsSvgIcon(
-        "packages/es_flutter_component/assets/svgs/exit.svg",
+        "packages/es_flutter_components/assets/svgs/exit.svg",
         color: StructureBuilder.styles!.t6Color,
         size: StructureBuilder.dims!.h2IconSize,
       ),

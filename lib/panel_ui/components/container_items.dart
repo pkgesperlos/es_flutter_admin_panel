@@ -1,8 +1,8 @@
-import 'package:es_flutter_component/components/es_button/es_information_button.dart';
-import 'package:es_flutter_component/components/es_text/es_dotted_text.dart';
-import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_button/es_information_button.dart';
+import 'package:es_flutter_components/components/es_text/es_dotted_text.dart';
+import 'package:es_flutter_components/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 
 class ContainerItems extends StatelessWidget {

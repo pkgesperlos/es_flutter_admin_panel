@@ -1,0 +1,132 @@
+import 'package:es_flutter_components/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/components/es_text/es_label_text.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
+import 'package:flutter/material.dart';
+import '../../es_label/es_content_label.dart';
+import '../es_drop_down/es_drop_down.dart';
+
+class EsLabelInput extends StatefulWidget {
+  List labelList;
+  ValueChanged<List<String>>? onChanged;
+  Widget? subTitleWidget;
+
+
+  EsLabelInput({Key? key, required this.labelList,this.onChanged,this.subTitleWidget}) : super(key: key);
+
+  @override
+  _EsLabelInputState createState() => _EsLabelInputState();
+}
+//
+
+String _value1 = "";
+List<String> _List = [];
+
+List<String> stringList(list) {
+  List<String> _stringList = [];
+  for (int i = 0; i < list.length; i++) {
+    _stringList.add(list[i]["title"]);
+  }
+  return _stringList;
+}
+
+int findIndexOfValue(List list, String value) {
+  int _i = 0;
+  for (int i = 0; i < list.length; i++) {
+    if (list[i]["_id"] == value) {
+      _i = i;
+    }
+  }
+  return _i;
+}
+
+class _EsLabelInputState extends State<EsLabelInput> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _List = stringList(widget.labelList);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        EsDropDown(
+          buttonWidget: Container(
+            padding: EdgeInsets.symmetric(
+              vertical: StructureBuilder.dims!.h1Padding,
+              horizontal: StructureBuilder.dims!.h1Padding,
+            ),
+            // width: MediaQuery.of(context).size.width/3.5,
+            height: StructureBuilder.dims!.h0Padding * 2,
+            decoration: BoxDecoration(
+              border:
+              Border.all(color: StructureBuilder.styles!.primaryDarkColor),
+              borderRadius: BorderRadius.all(
+                  Radius.circular(StructureBuilder.dims!.h1BorderRadius)),
+            ),
+            child: Wrap(
+                spacing: StructureBuilder.dims!.h1Padding,
+                runSpacing: StructureBuilder.dims!.h1Padding,
+                children: List.generate(
+                  _List.length,
+                      (index) => IntrinsicWidth(
+                    child: EsContentLabel(
+                      isUnique: true,
+                      size: StructureBuilder.dims!.h3IconSize,
+                      color: StructureBuilder.styles!.primaryDarkColor,
+                      labelContent: Row(
+                        children: [
+                          EsLabelText(
+                            _List[index],
+                            color: StructureBuilder.styles!.primaryLightColor,
+                          ),
+                          EsHSpacer(),
+                          InkWell(
+                            child: Icon(
+                              Icons.close,
+                              size: StructureBuilder.dims!.h3IconSize / 2,
+                              color:
+                              StructureBuilder.styles!.primaryLightColor,
+                            ),
+                            onTap: () {
+                              setState(() {
+                                _List.remove(_List[index]);
+                              });
+                            },
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                )),
+          ),
+          initialTitle: "Select",
+          list: widget.labelList,
+          value: _value1,
+          buttonPadding: EdgeInsets.symmetric(
+            vertical: StructureBuilder.dims!.h2Padding,
+            horizontal: StructureBuilder.dims!.h1Padding,
+          ),
+          onChanged: (value) {
+            setState(() {
+              // _value1 = value;
+              if (!(_List.contains(
+                  widget.labelList[findIndexOfValue(widget.labelList, value)]
+                  ["title"]))) {
+                _List.add(widget
+                    .labelList[findIndexOfValue(widget.labelList, value)]
+                ["title"]);
+              }
+            });
+            widget.onChanged!(_List);
+          },
+        ),
+        EsVSpacer(),
+        widget.subTitleWidget??Container()
+
+      ],
+    );
+  }
+}

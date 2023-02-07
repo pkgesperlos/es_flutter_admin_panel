@@ -1,10 +1,10 @@
-import 'package:es_flutter_component/components/es_button/es_icon_button.dart';
-import 'package:es_flutter_component/components/es_form/es_text_field/es_text_field_form.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/components/es_text/es_header.dart';
-import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_button/es_icon_button.dart';
+import 'package:es_flutter_components/components/es_form/es_text_field/es_text_field_form.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/components/es_text/es_header.dart';
+import 'package:es_flutter_components/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -63,7 +63,7 @@ class EsShareCard extends StatelessWidget {
                   EsIconButton(
 
                     EsSvgIcon(
-                        "packages/es_flutter_component/assets/svgs/video.svg",
+                        "packages/es_flutter_components/assets/svgs/video.svg",
                         color: StructureBuilder.styles!.primaryLightColor,
                         size: StructureBuilder.dims!.h3IconSize),
                     onTap: onaddVideoFunction,
@@ -73,7 +73,7 @@ class EsShareCard extends StatelessWidget {
                   ),
                   EsIconButton(
                     EsSvgIcon(
-                        "packages/es_flutter_component/assets/svgs/image.svg",
+                        "packages/es_flutter_components/assets/svgs/image.svg",
                         color: StructureBuilder.styles!.primaryLightColor,
                         size: StructureBuilder.dims!.h3IconSize),
                     onTap: onaddPictureFunction,
@@ -83,7 +83,7 @@ class EsShareCard extends StatelessWidget {
                   ),
                   EsIconButton(
                     EsSvgIcon(
-                        "packages/es_flutter_component/assets/svgs/document.svg",
+                        "packages/es_flutter_components/assets/svgs/document.svg",
                         color: StructureBuilder.styles!.primaryLightColor,
                         size: StructureBuilder.dims!.h3IconSize),
                     onTap: onaddFileFunction,
@@ -92,7 +92,7 @@ class EsShareCard extends StatelessWidget {
               ),
               EsIconButton(
                 EsSvgIcon(
-                    "packages/es_flutter_component/assets/svgs/send.svg",
+                    "packages/es_flutter_components/assets/svgs/send.svg",
                     color: StructureBuilder.styles!.primaryLightColor,
                     size: StructureBuilder.dims!.h3IconSize),
               ),

@@ -14,10 +14,12 @@
   "warning": "Warning",
   "confidence": "Confidence",
   "information": "Information",
+  "sajjadarvin": "Sajjad Arvin",
 
   "adminMenu": "Admin Menu",
 
   "dashboard": "Dash board",
+  "dashboardtitle": "Different model of dashboard cards are available in panel by flutter code.",
 
   "charts": "Charts",
   "barChart": "Bar chart",
@@ -615,5 +617,34 @@
   "pending": "Pending...",
   "unsuccessful": "unSuccessful",
   "successful": "Successful",
-  "status": "status"
+  "status": "status",
+  "online": "Online",
+  "offline": "Offline",
+  "show": "Show",
+  "newusers": "New users",
+  "taskslist": "tasks list",
+
+  "memberbenefits": "Member benefits",
+  "payments": "Payments",
+  "logistics": "Logistics",
+  "tickets": "Tickets",
+
+  "newvisitorstoday": "New visitors today",
+  "totalmonthlyorders": "Total monthly orders",
+  "totalincomethisyear": "Total income this year",
+  "onlinemembership": "Online membership",
+
+
+
+  "socialnetworksatistic": "Social network satistic",
+  "platformstatus": "Platform status",
+  "growthrate": "Growth rate",
+
+  "participationrate": "Participation rate",
+  "adaccess": "Ad access",
+  "userengagement": "User engagement",
+  "saleschart": "Sales chart",
+
+  "adminpaneltitle": "Admin panel title"
+
 }

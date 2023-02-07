@@ -1,16 +1,16 @@
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/editable_components/es_timeline/showcase/timeline_status.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/components/es_image/es_avatar_image.dart';
-import 'package:es_flutter_component/components/es_image/es_avatar_widget.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/components/es_text/es_title.dart';
-import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/components/es_text/es_label_text.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/components/es_image/es_avatar_image.dart';
+import 'package:es_flutter_components/components/es_image/es_avatar_widget.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/components/es_text/es_title.dart';
+import 'package:es_flutter_components/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/components/es_text/es_label_text.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
 
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
@@ -59,7 +59,7 @@ class _PanelTimelineSampleState extends State<PanelTimelineSample> {
           )),
       EsAvatarWidget(
           widget: EsSvgIcon(
-        "packages/es_flutter_component/assets/svgs/gallery.svg",
+        "packages/es_flutter_components/assets/svgs/gallery.svg",
         size: StructureBuilder.dims!.h3IconSize,
         color: StructureBuilder.styles!.primaryLightColor,
       )),
@@ -242,7 +242,7 @@ class _PanelTimelineSampleState extends State<PanelTimelineSample> {
           )),
       EsAvatarWidget(
           widget: EsSvgIcon(
-        "packages/es_flutter_component/assets/svgs/gallery.svg",
+        "packages/es_flutter_components/assets/svgs/gallery.svg",
         size: StructureBuilder.dims!.h3IconSize,
         color: StructureBuilder.styles!.primaryLightColor,
       )),

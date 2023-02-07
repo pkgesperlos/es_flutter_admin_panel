@@ -2,12 +2,12 @@ import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:es_flutter_admin_panel/panel_ui/structure_images/responsive_layout.dart';
 import 'package:es_flutter_admin_panel/language_change_provider.dart';
 import 'package:es_flutter_admin_panel/panel_ui/app_bar/menu_drop_down_items.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/components/es_text/es_header.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/components/es_spacer/es_h_spacer.dart';
-import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/components/es_text/es_header.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/components/es_spacer/es_h_spacer.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -177,7 +177,7 @@ class _EsRepairs extends State<EsRepairs> {
           child: Row(
             children: [
               EsSvgIcon(
-                "packages/es_flutter_component/assets/svgs/down.svg",
+                "packages/es_flutter_components/assets/svgs/down.svg",
                 color: StructureBuilder.styles!.primaryLightColor,
                 size: StructureBuilder.dims!.h3IconSize * 0.5,
               ),

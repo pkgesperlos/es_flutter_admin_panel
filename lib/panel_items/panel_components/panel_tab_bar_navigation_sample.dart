@@ -1,15 +1,15 @@
 
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/components/es_label/es_content_label.dart';
-import 'package:es_flutter_component/components/es_label/es_label.dart';
-import 'package:es_flutter_component/components/es_tab_bar/es_bottom_tab_bar_navigation.dart';
-import 'package:es_flutter_component/components/es_tab_bar/es_side_tab_bar_navigation.dart';
-import 'package:es_flutter_component/components/es_tab_bar/es_top_tab_bar_navigation.dart';
-import 'package:es_flutter_component/components/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_component/components/es_text/es_title.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_label/es_content_label.dart';
+import 'package:es_flutter_components/components/es_label/es_label.dart';
+import 'package:es_flutter_components/components/es_tab_bar/es_bottom_tab_bar_navigation.dart';
+import 'package:es_flutter_components/components/es_tab_bar/es_side_tab_bar_navigation.dart';
+import 'package:es_flutter_components/components/es_tab_bar/es_top_tab_bar_navigation.dart';
+import 'package:es_flutter_components/components/es_text/es_ordinary_text.dart';
+import 'package:es_flutter_components/components/es_text/es_title.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -64,7 +64,7 @@ class _PanelTabBarNavigationSampleState
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+          EsSvgIcon("packages/es_flutter_components/assets/svgs/GraduationCap.svg",
           color: StructureBuilder.styles!.primaryDarkColor,
             size: StructureBuilder.dims!.h2IconSize,
           ),
@@ -105,7 +105,7 @@ class _PanelTabBarNavigationSampleState
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+          EsSvgIcon("packages/es_flutter_components/assets/svgs/GraduationCap.svg",
           color: StructureBuilder.styles!.primaryDarkColor,
             size: StructureBuilder.dims!.h2IconSize,
           ),
@@ -163,7 +163,7 @@ class _PanelTabBarNavigationSampleState
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+          EsSvgIcon("packages/es_flutter_components/assets/svgs/GraduationCap.svg",
           color: StructureBuilder.styles!.primaryDarkColor,
             size: StructureBuilder.dims!.h2IconSize,
           ),
@@ -225,7 +225,7 @@ class _PanelTabBarNavigationSampleState
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          EsSvgIcon("packages/es_flutter_component/assets/svgs/GraduationCap.svg",
+          EsSvgIcon("packages/es_flutter_components/assets/svgs/GraduationCap.svg",
           color: StructureBuilder.styles!.primaryDarkColor,
             size: StructureBuilder.dims!.h2IconSize,
           ),

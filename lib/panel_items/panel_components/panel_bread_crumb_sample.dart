@@ -1,12 +1,12 @@
 
 import 'package:es_flutter_admin_panel/panel_ui/components/container_items.dart';
 import 'package:es_flutter_admin_panel/panel_ui/components/page_title_container.dart';
-import 'package:es_flutter_component/components/es_bread_crumb/bread_crumb_navigator.dart';
-import 'package:es_flutter_component/components/es_bread_crumb/static_bread_crumb_navigator.dart';
-import 'package:es_flutter_component/components/es_text/es_header.dart';
-import 'package:es_flutter_component/components/es_image/es_svg_icon.dart';
-import 'package:es_flutter_component/components/es_spacer/es_v_spacer.dart';
-import 'package:es_flutter_component/resources/structure_builder.dart';
+import 'package:es_flutter_components/components/es_bread_crumb/bread_crumb_navigator.dart';
+import 'package:es_flutter_components/components/es_bread_crumb/static_bread_crumb_navigator.dart';
+import 'package:es_flutter_components/components/es_text/es_header.dart';
+import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
+import 'package:es_flutter_components/components/es_spacer/es_v_spacer.dart';
+import 'package:es_flutter_components/resources/structure_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -208,11 +208,11 @@ class PanelBreadCrumbSample extends StatelessWidget {
               BreadCrumbNavigator.icon(
                 currentRoute: AppLocalizations.of(context)!.components,
                 breadButtonType: BreadButtonType.icon,
-                rtlSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretLeft.svg",
+                rtlSuffixIcon: EsSvgIcon("packages/es_flutter_components/assets/svgs/CaretLeft.svg",
                 size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryDarkColor,
                 ),
-                ltrSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretRight.svg",
+                ltrSuffixIcon: EsSvgIcon("packages/es_flutter_components/assets/svgs/CaretRight.svg",
                   size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryDarkColor,),
 
@@ -221,12 +221,12 @@ class PanelBreadCrumbSample extends StatelessWidget {
               BreadCrumbNavigator.icon(
                 currentRoute: AppLocalizations.of(context)!.components,
                 breadButtonType: BreadButtonType.icon,
-                rtlSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretCircleLeft.svg",
+                rtlSuffixIcon: EsSvgIcon("packages/es_flutter_components/assets/svgs/CaretCircleLeft.svg",
                 size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryDarkColor,
                 ),
 
-                ltrSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretCircleRight.svg",
+                ltrSuffixIcon: EsSvgIcon("packages/es_flutter_components/assets/svgs/CaretCircleRight.svg",
                   size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryDarkColor,),
 
@@ -235,11 +235,11 @@ class PanelBreadCrumbSample extends StatelessWidget {
               BreadCrumbNavigator.icon(
                 currentRoute: AppLocalizations.of(context)!.components,
                 breadButtonType: BreadButtonType.icon,
-                rtlSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretDoubleLeft.svg",
+                rtlSuffixIcon: EsSvgIcon("packages/es_flutter_components/assets/svgs/CaretDoubleLeft.svg",
                 size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryDarkColor,
                 ),
-                ltrSuffixIcon: EsSvgIcon("packages/es_flutter_component/assets/svgs/CaretDoubleRight.svg",
+                ltrSuffixIcon: EsSvgIcon("packages/es_flutter_components/assets/svgs/CaretDoubleRight.svg",
                   size: StructureBuilder.dims!.h3IconSize,
                   color: StructureBuilder.styles!.primaryDarkColor,),
 
