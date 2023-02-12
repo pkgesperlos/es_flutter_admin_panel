@@ -45,6 +45,7 @@ import 'package:es_flutter_admin_panel/panel_items/panel_forms/panel_stepper_for
 import 'package:es_flutter_admin_panel/panel_items/panel_forms/panel_text_editor_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_forms/panel_validate_form_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_pages/panel_bill_sample.dart';
+import 'package:es_flutter_admin_panel/panel_items/panel_pages/panel_block_theory_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_pages/panel_empty_screen_sample.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_pages/panel_errors/es_404_error.dart';
 import 'package:es_flutter_admin_panel/panel_items/panel_pages/panel_errors/es_other_404.dart';
@@ -115,6 +116,7 @@ class _MyApp extends State<MyApp> {
 
                     Locale('en', ''), // English, no country code
                     Locale('fa', ''),// Persian, no country code
+                    Locale('ar', ''),// Arabic, no country code
 
 
 
@@ -143,6 +145,8 @@ class _MyApp extends State<MyApp> {
                     '/panelTimelineSample': (context) => RoutMaker(
                           child: PanelTimelineSample(),
                         ),
+                    '/panelBlockTheorySample': (context) =>
+                        RoutMaker(child: PanelBlockTheorySample()),
                     '/panelPriceCardSample': (context) =>
                         RoutMaker(child: PanelPriceCardSample()),
                     '/panelSearchResultSample': (context) =>

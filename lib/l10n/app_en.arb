@@ -1,7 +1,7 @@
 {
   "helloWorld": "Hello World!",
   "@helloWorld": {
-    "description": "The conventional newborn programmer greeting"
+    "description": "The conventional greeting"
   },
 
   "lorm": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -203,7 +203,7 @@
 
   "lightbox": "Light box",
   "gallerylightboxshowingimage": "Gallery light box showing image",
-  "singlelightboxshowingimage": "single light box showing image",
+  "singlelightboxshowingimage": "Single light box showing image",
   "lightboxtitle": "Light boxs in two mode  are available in panel by flutter code.",
 
   "modal": "Modal",
@@ -213,7 +213,7 @@
   "seriesofmodals": "Series of modals",
   "modaltitle": "Different kinds of modals  are available in panel by flutter code.",
 
-  "smallmodal": "smallmodal",
+  "smallmodal": "Small modal",
   "mediummodal": "Medium modal",
   "fullscreenmodal": "Full screen modal",
   "informationmodal": "Information modal",
@@ -509,13 +509,7 @@
 
 
   "dialogeBoxDescription": "different kinds of dialog box with various function are available in panel.",
-  "buttonDescription": "different kinds of button(Ordinary,with Icon,Loading) with various size are available in panel.",
-  "formDescription": "different kinds of forms with various function for giving data from user are available in panel.",
-  "imageDescription":  "different kinds of  function for image display for user are available in panel.",
-  "progressBarDescription":  "different kinds of  progress bar(linear and Circular) are available in panel.",
-  "sliderDescription":  "different kinds of  Slider are available in panel.",
-  "notificationsDescription":  "different kinds of  notifications are avaiable in panel.",
-  "chartDescription":   "different kinds of  charts are available in panel.",
+
 
 
 
@@ -589,7 +583,7 @@
 
   "checkBoxTitle": "CheckBox title",
   "checkBoxWithValidator": "CheckBox with validator",
-  "animatedCheckBoxTitle": "AnimatedCheckBox",
+  "animatedCheckBoxTitle": "Animated checkBox",
   "checkBoxErrorText": "CheckBox error text",
   "checkBoxButtonText": "Save",
 

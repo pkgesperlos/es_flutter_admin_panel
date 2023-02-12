@@ -19,7 +19,7 @@ class EsImageSearchCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.antiAlias,
-      width:StructureBuilder.dims!.h0Padding*7,
+      width:StructureBuilder.dims!.h0Padding*8,
       margin: EdgeInsets.symmetric(
         vertical: StructureBuilder.dims!.h1Padding,
       ),

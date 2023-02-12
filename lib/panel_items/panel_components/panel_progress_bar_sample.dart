@@ -139,7 +139,7 @@ class _PanelProgressBarSampleState extends State<PanelProgressBarSample> {
                   ),
                 ],
               )),
-          title: "Animated  progress bar from zero",
+          title: AppLocalizations.of(context)!.animatedprogressbarfromzero,
           information:
               "It is a animated  progress bar from zero in different sizes that the percent_indicator package is added in pubspec.yaml 's dependencies \n and is used as: \n "
               """LinearPercentIndicator(

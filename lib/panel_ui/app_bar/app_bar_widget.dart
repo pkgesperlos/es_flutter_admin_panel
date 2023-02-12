@@ -1,5 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:es_flutter_admin_panel/language_change_provider.dart';
+import 'package:es_flutter_admin_panel/main.dart';
 import 'package:es_flutter_components/components/es_image/es_avatar_image.dart';
 import 'package:es_flutter_components/components/es_image/es_svg_icon.dart';
 import 'package:es_flutter_components/components/es_spacer/es_h_spacer.dart';
@@ -61,11 +62,25 @@ class _AppBarWidgetState extends State<AppBarWidget> {
         ),
         value: "EN",
       ),
+      DropdownMenuItem(
+        child: MenuDropdownItems(
+          title: "AR",
+          onTap: () {
+            Navigator.pop(dropdownKey.currentContext!);
+            context.read<LanguageChangeProvider>().changLocale("ar");
+            setState(() {
+              selectedValue = "AR";
+            });
+          },
+        ),
+        value: "AR",
+      ),
     ];
     return Container(
       decoration: BoxDecoration(
         //set the color of app bar.
         color: StructureBuilder.styles!.primaryColor,
+
       ),
       child: Row(
         children: [

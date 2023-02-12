@@ -13,6 +13,7 @@ import '../../panel_items/panel_advanced_components/panel_tutorial_sample.dart';
 import '../../panel_items/panel_authenticate/es_lock_screen.dart';
 import '../../panel_items/panel_dashboard_sample.dart';
 import '../../panel_items/panel_forms/panel_html_text_editor_sample.dart';
+import '../../panel_items/panel_pages/panel_block_theory_sample.dart';
 import '../../panel_items/panel_pages/panel_errors/es_404_error.dart';
 import '../../panel_items/panel_pages/panel_errors/es_other_404.dart';
 import '../../panel_items/panel_pages/panel_errors/es_repairs.dart';
@@ -79,7 +80,7 @@ class DrawerPage extends StatefulWidget {
 class DrawerPageState extends State<DrawerPage> {
   static int _currentIndex = 0;
   static int _currentExpandedIndex = 0;
-  int num = 70;
+  int num = 71;
   List<int> _indexList = [];
   List<bool> _isSelectedList = [];
   List<void Function()> _onSelectedList = [];
@@ -620,8 +621,23 @@ class DrawerPageState extends State<DrawerPage> {
                                 index: _indexList[_currentIndex],
                                 isSelected: _isSelectedList[62]),
                           ]),
-                    ]),
 
+
+
+                    ]),
+                firstLevelNavigate(
+                  tilePadding: EdgeInsets.symmetric(
+                    vertical: StructureBuilder.dims!.h1Padding * 1.7,
+                    horizontal: StructureBuilder.dims!.h1Padding,
+                  ),
+                  index: _indexList[70],
+                  onSelect: _onSelectedList[70],
+                  isSelected: _isSelectedList[70],
+                  iconPath:
+                  "assets/svgs/directinbox.svg",
+                  title: "Block theory",
+                  routeName: PanelBlockTheorySample.routeName,
+                ),
                 firstLevelExpandedComplex(
                     expansionTitle: AppLocalizations.of(context)!.menulevel,
                     iconPath:
